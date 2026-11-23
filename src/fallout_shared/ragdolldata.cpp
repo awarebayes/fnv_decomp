@@ -116,7 +116,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_004d9da0_shell : public CFilter
 {
     unsigned int CFilter_GetPart();

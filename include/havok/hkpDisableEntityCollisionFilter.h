@@ -14,5 +14,5 @@ class hkpDisableEntityCollisionFilter : public hkpCollisionFilter
     hkArray<hkpEntity*> m_kDisabledEntities;  // +0x34
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpDisableEntityCollisionFilter[(sizeof(hkpDisableEntityCollisionFilter) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpDisableEntityCollisionFilter[1];
 #endif

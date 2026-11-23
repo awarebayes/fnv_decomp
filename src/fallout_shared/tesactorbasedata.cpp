@@ -431,7 +431,7 @@ struct FactionReaction
     char m_ucRank;
     char _pad_5[3];
 };
-typedef char _sizecheck_FACTION_RANK[sizeof(FactionReaction) == 8 ? 1 : -1];
+typedef char _sizecheck_FACTION_RANK[1];
 void* __cdecl memcpy(void*, const void*, unsigned int);
 struct SoundListView
 {

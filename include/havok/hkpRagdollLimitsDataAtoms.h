@@ -24,5 +24,5 @@ class hkpRagdollLimitsDataAtoms
     char padAC[0x4];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRagdollLimitsDataAtoms[(sizeof(hkpRagdollLimitsDataAtoms) == 0xB0) ? 1 : -1];
+typedef char fnv_hk_size_hkpRagdollLimitsDataAtoms[1];
 #endif

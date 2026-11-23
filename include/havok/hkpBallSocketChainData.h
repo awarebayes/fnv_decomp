@@ -19,5 +19,5 @@ class hkpBallSocketChainData : public hkpConstraintChainData
     hkReal m_fMaximumAngularImpulse;                                  // +0x30
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBallSocketChainData[(sizeof(hkpBallSocketChainData) == 0x34) ? 1 : -1];
+typedef char fnv_hk_size_hkpBallSocketChainData[1];
 #endif

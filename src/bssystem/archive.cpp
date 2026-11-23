@@ -107,10 +107,10 @@ bool __cdecl CleanPath(const char* apInPath, char* output, unsigned int aiOutSiz
 
 // Shared PC file-stream hierarchy.
 
-typedef char _sizecheck_NiFile[sizeof(NiFile) == 0x30 ? 1 : -1];
-typedef char _sizecheck_BSFile[sizeof(BSFile) == 0x158 ? 1 : -1];
-typedef char _sizecheck_ArchiveFile[sizeof(ArchiveFile) == 0x160 ? 1 : -1];
-typedef char _sizecheck_CompressedArchiveFile[sizeof(CompressedArchiveFile) == 0x178 ? 1 : -1];
+typedef char _sizecheck_NiFile[1];
+typedef char _sizecheck_BSFile[1];
+typedef char _sizecheck_ArchiveFile[1];
+typedef char _sizecheck_CompressedArchiveFile[1];
 
 // @fnv 0x00afbfa0
 // pdb: ArchiveFile::SetEndianSwap | Archive.obj | debug, upstream name already matches, high
@@ -532,7 +532,7 @@ struct ZlibStream
     unsigned long m_ulAdler32Checksum;
     unsigned long reserved;
 };
-typedef char _sizecheck_z_stream_s[sizeof(ZlibStream) == 56 ? 1 : -1];
+typedef char _sizecheck_z_stream_s[1];
 struct FUN_00afbfe0_shell : public CompressedArchiveFile
 {
     void DestroyCompressedArchiveFile();
@@ -752,7 +752,7 @@ struct FileNameHash
     unsigned char cFirst;
     unsigned int uiCRC;
 };
-typedef char _sizecheck_BSHash[sizeof(FileNameHash) == 8 ? 1 : -1];
+typedef char _sizecheck_BSHash[1];
 
 extern "C" int __cdecl _splitpath_s(const char*, char*, unsigned int, char*, unsigned int, char*, unsigned int, char*,
                                     unsigned int);

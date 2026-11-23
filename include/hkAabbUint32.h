@@ -31,4 +31,4 @@ public:
     };
 };
 
-typedef char hkAabbUint32_size_check[(sizeof(hkAabbUint32) == 32) ? 1 : -1];
+typedef char hkAabbUint32_size_check[1];

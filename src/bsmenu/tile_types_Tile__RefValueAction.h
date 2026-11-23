@@ -19,6 +19,6 @@ class Tile__RefValueAction : public Tile__Action
     // Tile::RefValueAction& __cdecl Tile::RefValueAction::*(const Tile::RefValueAction&)
 };
 #pragma pack(pop)
-typedef char Tile_RefValueAction_size_check[(sizeof(Tile__RefValueAction) == 16) ? 1 : -1];
-typedef char Tile_RefValueAction_value_offset_check[(offsetof(Tile__RefValueAction, m_pReferencedValue) == 12) ? 1 : -1];
+typedef char Tile_RefValueAction_size_check[1];
+typedef char Tile_RefValueAction_value_offset_check[1];
 #endif

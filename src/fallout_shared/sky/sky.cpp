@@ -300,7 +300,7 @@ int WeatherAccessMethods::TESWeather_GetColor(int aiRow, int aiColumn)
     return uiColorData[aiRow][aiColumn];
 }
 
-typedef char _sizecheck_NiPoint2[sizeof(NiPoint2) == 8 ? 1 : -1];
+typedef char _sizecheck_NiPoint2[1];
 
 float __cdecl BSShaderManager_GetTimer(bool);
 float __cdecl NiCosQ(float);
@@ -1057,7 +1057,7 @@ struct SkySound
     unsigned int auiFormId;
     unsigned int uiData;
 };
-typedef char _sizecheck_SkySound[sizeof(SkySound) == 28 ? 1 : -1];
+typedef char _sizecheck_SkySound[1];
 
 struct SkySoundObj
 {

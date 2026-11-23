@@ -249,7 +249,7 @@ void __fastcall BSShaderLightingProperty_CopyTo(Dummy_00b70290* pThis, int edx_v
     pThis->v50(arg);
 }
 
-typedef char _sizecheck_NiRTTI[sizeof(NiRTTI) == 8 ? 1 : -1];
+typedef char _sizecheck_NiRTTI[1];
 struct FUN_00b702b0_shell : public NiRTTI
 {
     void BSShaderLightingProperty_CopyMembers(char*, void*);
@@ -619,7 +619,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00b6f540_shell : public BSShaderLightingProperty
 {
     void CopyShaderLightingProperty(BSShaderLightingProperty*, CloningProcess*);

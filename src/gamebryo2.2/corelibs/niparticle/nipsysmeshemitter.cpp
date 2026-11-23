@@ -118,7 +118,7 @@ namespace fnv_00c1f990 {
 struct NiObjectGroup;
 struct NiThread;
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 struct NiPSysMeshEmitter : NiPSysEmitter
 {

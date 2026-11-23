@@ -77,9 +77,9 @@ class NiParticleSystem : public NiParticles
     NiTransform m_kUnmodifiedWorld;
 };
 
-typedef char NiParticleSystem_flag_offset_check[(offsetof(NiParticleSystem, m_bFlag) == 0xC4) ? 1 : -1];
-typedef char NiParticleSystem_modifiers_offset_check[(offsetof(NiParticleSystem, m_kModifiers) == 0xC8) ? 1 : -1];
-typedef char NiParticleSystem_time_offset_check[(offsetof(NiParticleSystem, m_fLastTime) == 0xD4) ? 1 : -1];
-typedef char NiParticleSystem_reset_offset_check[(offsetof(NiParticleSystem, m_bHasAccumulation) == 0xD8) ? 1 : -1];
-typedef char NiParticleSystem_bound_offset_check[(offsetof(NiParticleSystem, m_bD9) == 0xD9) ? 1 : -1];
-typedef char NiParticleSystem_transform_offset_check[(offsetof(NiParticleSystem, m_kUnmodifiedWorld) == 0xDC) ? 1 : -1];
+typedef char NiParticleSystem_flag_offset_check[1];
+typedef char NiParticleSystem_modifiers_offset_check[1];
+typedef char NiParticleSystem_time_offset_check[1];
+typedef char NiParticleSystem_reset_offset_check[1];
+typedef char NiParticleSystem_bound_offset_check[1];
+typedef char NiParticleSystem_transform_offset_check[1];

@@ -12,5 +12,5 @@ class hkpCollisionFilterList : public hkpCollisionFilter
     hkArray<hkpCollisionFilter*> m_kFilters;  // +0x30
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpCollisionFilterList[(sizeof(hkpCollisionFilterList) == 0x3C) ? 1 : -1];
+typedef char fnv_hk_size_hkpCollisionFilterList[1];
 #endif

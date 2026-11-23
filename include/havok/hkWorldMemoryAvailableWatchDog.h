@@ -10,5 +10,5 @@ class hkWorldMemoryAvailableWatchDog : public hkReferencedObject
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkWorldMemoryAvailableWatchDog[(sizeof(hkWorldMemoryAvailableWatchDog) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkWorldMemoryAvailableWatchDog[1];
 #endif

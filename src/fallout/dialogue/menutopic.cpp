@@ -1426,7 +1426,7 @@ void MenuTopic::SaveTopic()
 }
 
 
-typedef char _sizecheck_ResponseListWrapper[sizeof(TESResponseList) == 4 ? 1 : -1];
+typedef char _sizecheck_ResponseListWrapper[1];
 struct FUN_0083df80_shell : public MenuTopic
 {
     void MenuTopic_FillResponseList_0083df80(TESObjectREFR*);

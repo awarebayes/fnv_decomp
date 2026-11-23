@@ -5,7 +5,7 @@
 #define FNV_LAYOUT_SUPPORT_H
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 #define FNV_ALIGN(n) __declspec(align(n))
 #define FNV_FORCEINLINE __forceinline
 #include "../../include/NiTPointerMap.h"

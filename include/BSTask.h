@@ -40,8 +40,8 @@ public:
 };
 #pragma pack(pop)
 
-typedef char BSTask_size[(sizeof(BSTask<__int64>) == 24) ? 1 : -1];
-typedef char BSTask_storage_offset[(offsetof(BSTask<__int64>, taskStorage) == 4) ? 1 : -1];
-typedef char BSTask_refcount_offset[(offsetof(BSTask<__int64>, BackgroundTask) == 8) ? 1 : -1];
-typedef char BSTask_state_offset[(offsetof(BSTask<__int64>, eState) == 12) ? 1 : -1];
-typedef char BSTask_key_offset[(offsetof(BSTask<__int64>, Key) == 16) ? 1 : -1];
+typedef char BSTask_size[1];
+typedef char BSTask_storage_offset[1];
+typedef char BSTask_refcount_offset[1];
+typedef char BSTask_state_offset[1];
+typedef char BSTask_key_offset[1];

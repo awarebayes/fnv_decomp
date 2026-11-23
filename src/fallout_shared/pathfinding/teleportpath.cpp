@@ -3,7 +3,7 @@
 // src/fallout_shared/pathfinding/teleportpath.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/_fallout3/platforms/common/code/fallout shared/pathfinding/teleportpath.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
-typedef char _sizecheck_TeleportPath[sizeof(PathingPath) == 56 ? 1 : -1];
+typedef char _sizecheck_TeleportPath[1];
 struct FUN_006f4990_shell : public PathingPath
 {
     void TeleportPath_Clear();

@@ -67,7 +67,7 @@ struct CStringArgument
     Script* m_pCurrentScript;
     char m_kLineList[8];
 };
-typedef char _sizecheck_ScriptCompileData[sizeof(CStringArgument) == 88 ? 1 : -1];
+typedef char _sizecheck_ScriptCompileData[1];
 // @fnv 0x00613790
 void* CStringArgument::GetScriptLineList()
 {

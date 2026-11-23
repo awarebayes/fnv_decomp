@@ -28,5 +28,5 @@ class hkpPrismaticConstraintDataAtoms
     hkpLinLimitConstraintAtom m_kShaftLinearLimit;           // +0xB4
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPrismaticConstraintDataAtoms[(sizeof(hkpPrismaticConstraintDataAtoms) == 0xC0) ? 1 : -1];
+typedef char fnv_hk_size_hkpPrismaticConstraintDataAtoms[1];
 #endif

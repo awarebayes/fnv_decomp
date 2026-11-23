@@ -15,5 +15,5 @@ class hkpRotationalConstraintDataAtoms
     char pad74[0xC];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpRotationalConstraintDataAtoms[(sizeof(hkpRotationalConstraintDataAtoms) == 0x80) ? 1 : -1];
+typedef char fnv_hk_size_hkpRotationalConstraintDataAtoms[1];
 #endif

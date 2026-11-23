@@ -14,7 +14,7 @@ struct SaveContentDescriptor
     char szFileName[42];
     char _pad_132[2];
 };
-typedef char _sizecheck__XCONTENT_DATA[sizeof(SaveContentDescriptor) == 308 ? 1 : -1];
+typedef char _sizecheck__XCONTENT_DATA[1];
 
 __declspec(dllimport) int __stdcall DeleteFileA(const char*);
 

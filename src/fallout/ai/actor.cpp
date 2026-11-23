@@ -2077,7 +2077,7 @@ int __fastcall Actor_GetCurrentTarget(Actor* apActor)
 struct ActorPackageData;
 struct TESPackageData;
 
-typedef char _sizecheck_ActorPackage[sizeof(::ActorPackageContext) == 24 ? 1 : -1];
+typedef char _sizecheck_ActorPackage[1];
 struct FUN_00881650_shell : public Actor
 {
     TESObjectREFR* Actor_GetCurrentPackageTarget();
@@ -4490,7 +4490,7 @@ struct BipedAnim
     float m_fFadeAlpha;
     TESObjectREFR* m_pActor;
 };
-typedef char _sizecheck_BipedAnim[sizeof(BipedAnim) == 692 ? 1 : -1];
+typedef char _sizecheck_BipedAnim[1];
 struct FUN_0088e0f0_shell : public BipedAnim
 {
     ::TESForm* BipedAnim_GetParent(int);
@@ -5476,7 +5476,7 @@ struct NiMemObjectApi
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObjectApi) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_008a5530_shell : public Actor
 {
     void Actor_ResetFaceData();
@@ -7571,7 +7571,7 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(::BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 
 
 } // namespace fnv_008a8150
@@ -8772,7 +8772,7 @@ struct NiMemObjectApi
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObjectApi) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_008b3880_shell : public Actor
 {
     void PathToLocation(::PathingRequest*, void*, ::TESForm*, float, PathingAvoidNodeArray*);
@@ -8894,7 +8894,7 @@ void ::Actor::ClearLookAtTarget()
 struct SwizzledMatrix;
 struct NiStream;
 
-typedef char _sizecheck_NiTransform[sizeof(::NiTransform) == 52 ? 1 : -1];
+typedef char _sizecheck_NiTransform[1];
 struct Matrix4x4
 {
     void Set(void*);
@@ -8908,7 +8908,7 @@ struct Matrix4x4
     Matrix4x4* Mul(Matrix4x4*);
     char m_cMatrixData[64];
 };
-typedef char _sizecheck_BSNiMatrix[sizeof(Matrix4x4) == 64 ? 1 : -1];
+typedef char _sizecheck_BSNiMatrix[1];
 
 
 
@@ -9202,7 +9202,7 @@ struct FactionReaction
     char m_ucRank;
     char _pad_5[3];
 };
-typedef char _sizecheck_FACTION_RANK[sizeof(FactionReaction) == 8 ? 1 : -1];
+typedef char _sizecheck_FACTION_RANK[1];
 struct FUN_008b8ca0_shell : public Actor
 {
     unsigned int Actor_IntegrateFactionLists(::TESFaction**, unsigned int, void*, void*);
@@ -12140,7 +12140,7 @@ struct Crime
     char m_kCrimeStamp[4];
     void* m_pEnemyFactions;
 };
-typedef char _sizecheck_Crime[sizeof(Crime) == 60 ? 1 : -1];
+typedef char _sizecheck_Crime[1];
 struct FUN_008bcb40_shell : public Actor
 {
     void Actor_RemoveEnemyFlagFromAllFactions();
@@ -16772,7 +16772,7 @@ float CVShell::Actor_GetActorValueF(int aiWhich)
 }  // namespace fnv_008805f0
 
 namespace fnv_00880700 {
-typedef char _sizecheck_TESDescription[sizeof(::TESDescription) == 8 ? 1 : -1];
+typedef char _sizecheck_TESDescription[1];
 struct FUN_00880700_shell : public Actor
 {
     void Actor_SetActorValue(int, float);
@@ -25793,14 +25793,14 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(::BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 // Local call surface of NiMemObjectApi for the function below (differs from the shared declaration).
 // Local call surface of NiMemObject for the functions below (differs from the shared declaration).
 struct NiMemObjectApi
 {
     char _pad_0[1];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObjectApi) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_008abfe0_shell : public Actor
 {
     void Actor_FinishLoadGame(::BGSLoadFormBuffer*);

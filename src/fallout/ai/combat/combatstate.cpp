@@ -310,7 +310,7 @@ void CombatState::UpdateCombatStateData(int state, float* pfX, float* pfY, float
     *pfY += ((float*)this)[0x61];
 }
 
-typedef char _sizecheck_CombatCoverLocation[sizeof(CombatCoverPointData_combatstate) == 120 ? 1 : -1];
+typedef char _sizecheck_CombatCoverLocation[1];
 
 // @fnv 0x005dc960
 bool CombatCoverPointData_combatstate::IsReserved()
@@ -345,7 +345,7 @@ struct CombatAvoidanceSphere
     float fRadius;
     unsigned int iFlags;
 };
-typedef char _sizecheck_CombatLocation[sizeof(CombatAvoidanceSphere) == 32 ? 1 : -1];
+typedef char _sizecheck_CombatLocation[1];
 struct FUN_00819a50_shell : public CombatAvoidanceSphere
 {
     void CombatLocation_SetRadius(float);

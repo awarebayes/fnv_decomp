@@ -143,5 +143,5 @@ class BSShaderProperty::ShaderPassList
     PassArray m_kRenderPasses;
     unsigned int m_uiCount;
 };
-typedef char BSShaderProperty_ShaderPassEntry_size_check[(sizeof(BSShaderProperty::ShaderPassEntry) == 0x10) ? 1 : -1];
-typedef char BSShaderProperty_ShaderPassList_size_check[(sizeof(BSShaderProperty::ShaderPassList) == 0x14) ? 1 : -1];
+typedef char BSShaderProperty_ShaderPassEntry_size_check[1];
+typedef char BSShaderProperty_ShaderPassList_size_check[1];

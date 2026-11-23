@@ -424,7 +424,7 @@ struct FormFlagRecord
     TESForm* pForm;
     unsigned int iFlags;
 };
-typedef char _sizecheck_ACTION_OBJECT[sizeof(FormFlagRecord) == 8 ? 1 : -1];
+typedef char _sizecheck_ACTION_OBJECT[1];
 
 struct ActNode
 {

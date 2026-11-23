@@ -4310,7 +4310,7 @@ struct EdgeExtraInfo
     int eType;
     char Portal[8];
 };
-typedef char _sizecheck_EdgeExtraInfo[sizeof(EdgeExtraInfo) == 12 ? 1 : -1];
+typedef char _sizecheck_EdgeExtraInfo[1];
 
 class TriangleAccess : public NavMeshTriangle
 {

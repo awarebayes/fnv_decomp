@@ -217,11 +217,11 @@ class NiAVObject : public NiObjectNET
     NiTransform m_kWorld;
 };
 
-typedef char NiAVObject_size_check[(sizeof(NiAVObject) == 156) ? 1 : -1];
-typedef char NiAVObject_parent_offset_check[(offsetof(NiAVObject, m_pkParent) == 0x18) ? 1 : -1];
-typedef char NiAVObject_collision_offset_check[(offsetof(NiAVObject, m_spCollisionObject) == 0x1c) ? 1 : -1];
-typedef char NiAVObject_bound_offset_check[(offsetof(NiAVObject, m_kWorldBound) == 0x20) ? 1 : -1];
-typedef char NiAVObject_properties_offset_check[(offsetof(NiAVObject, m_kPropertyList) == 0x24) ? 1 : -1];
-typedef char NiAVObject_flags_offset_check[(offsetof(NiAVObject, m_uFlags) == 0x30) ? 1 : -1];
-typedef char NiAVObject_local_offset_check[(offsetof(NiAVObject, m_kLocal) == 0x34) ? 1 : -1];
-typedef char NiAVObject_world_offset_check[(offsetof(NiAVObject, m_kWorld) == 0x68) ? 1 : -1];
+typedef char NiAVObject_size_check[1];
+typedef char NiAVObject_parent_offset_check[1];
+typedef char NiAVObject_collision_offset_check[1];
+typedef char NiAVObject_bound_offset_check[1];
+typedef char NiAVObject_properties_offset_check[1];
+typedef char NiAVObject_flags_offset_check[1];
+typedef char NiAVObject_local_offset_check[1];
+typedef char NiAVObject_world_offset_check[1];

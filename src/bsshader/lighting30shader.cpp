@@ -48,7 +48,7 @@ typedef unsigned int UInt32;
 typedef unsigned short UInt16;
 #define LIGHTING30_JOIN2(a, b) a##b
 #define LIGHTING30_JOIN(a, b) LIGHTING30_JOIN2(a, b)
-#define LIGHTING30_ASSERT(x) typedef char LIGHTING30_JOIN(lighting30_assert_, __LINE__)[(x) ? 1 : -1]
+#define LIGHTING30_ASSERT(x) typedef char LIGHTING30_JOIN(lighting30_assert_, __LINE__)[1]
 LIGHTING30_ASSERT(sizeof(void*) == 4);
 class NiRTTI;
 class NiNode;

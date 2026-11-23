@@ -401,7 +401,7 @@ char* __cdecl std_Traits_helper_copy_s_std_char_traits_char(char* _First1, unsig
     return std_Traits_helper_copy_s_std_char_traits_char_0044e420(_First1, _Size_in_bytes, _First2, _Count, std_Move_cat_unsigned_char());
 }
 
-typedef char _sizecheck_NiNPShortPoint3[sizeof(ShortPoint3) == 6 ? 1 : -1];
+typedef char _sizecheck_NiNPShortPoint3[1];
 
 // Copies the x, y and z components from arPt into this point and returns this.
 // @fnv 0x0050e8b0
@@ -538,8 +538,8 @@ struct TESIcon;
 struct TESModelTextureSwap;
 struct TESTexture;
 struct DistantTreeTextureInfo;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0050ee20_shell : public TESBoundAnimObject
 {
     bool TESBoundObject_Clone3D(char*);

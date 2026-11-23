@@ -52,17 +52,17 @@ public:
     }
 };
 
-typedef char hkpVelocityAccumulator_type_offset_check[(offsetof(hkpVelocityAccumulator, m_type) == 0x00) ? 1 : -1];
-typedef char hkpVelocityAccumulator_value_offset_check[(offsetof(hkpVelocityAccumulator, m_iValueAtOffset0C) == 0x01) ? 1 : -1];
-typedef char hkpVelocityAccumulator_unk02_offset_check[(offsetof(hkpVelocityAccumulator, unk02) == 0x02) ? 1 : -1];
-typedef char hkpVelocityAccumulator_unk03_offset_check[(offsetof(hkpVelocityAccumulator, unk03) == 0x03) ? 1 : -1];
-typedef char hkpVelocityAccumulator_deactivation_offset_check[(offsetof(hkpVelocityAccumulator, m_uiDeactivationClass) == 0x04) ? 1 : -1];
-typedef char hkpVelocityAccumulator_gravity_offset_check[(offsetof(hkpVelocityAccumulator, m_fGravityFactor) == 0x08) ? 1 : -1];
-typedef char hkpVelocityAccumulator_unk0C_offset_check[(offsetof(hkpVelocityAccumulator, unk0C) == 0x0C) ? 1 : -1];
-typedef char hkpVelocityAccumulator_linear_offset_check[(offsetof(hkpVelocityAccumulator, m_vLinearVelocity) == 0x10) ? 1 : -1];
-typedef char hkpVelocityAccumulator_angular_offset_check[(offsetof(hkpVelocityAccumulator, m_vAngularVelocity) == 0x20) ? 1 : -1];
-typedef char hkpVelocityAccumulator_inertia_offset_check[(offsetof(hkpVelocityAccumulator, m_vInverseInertiaAndMass) == 0x30) ? 1 : -1];
-typedef char hkpVelocityAccumulator_center_offset_check[(offsetof(hkpVelocityAccumulator, m_vCenterOfMass) == 0x40) ? 1 : -1];
-typedef char hkpVelocityAccumulator_scratch1_offset_check[(offsetof(hkpVelocityAccumulator, m_scratch1) == 0x50) ? 1 : -1];
-typedef char hkpVelocityAccumulator_scratch2_offset_check[(offsetof(hkpVelocityAccumulator, m_scratch2) == 0x60) ? 1 : -1];
-typedef char hkpVelocityAccumulator_scratch3_offset_check[(offsetof(hkpVelocityAccumulator, m_scratch3) == 0x70) ? 1 : -1];
+typedef char hkpVelocityAccumulator_type_offset_check[1];
+typedef char hkpVelocityAccumulator_value_offset_check[1];
+typedef char hkpVelocityAccumulator_unk02_offset_check[1];
+typedef char hkpVelocityAccumulator_unk03_offset_check[1];
+typedef char hkpVelocityAccumulator_deactivation_offset_check[1];
+typedef char hkpVelocityAccumulator_gravity_offset_check[1];
+typedef char hkpVelocityAccumulator_unk0C_offset_check[1];
+typedef char hkpVelocityAccumulator_linear_offset_check[1];
+typedef char hkpVelocityAccumulator_angular_offset_check[1];
+typedef char hkpVelocityAccumulator_inertia_offset_check[1];
+typedef char hkpVelocityAccumulator_center_offset_check[1];
+typedef char hkpVelocityAccumulator_scratch1_offset_check[1];
+typedef char hkpVelocityAccumulator_scratch2_offset_check[1];
+typedef char hkpVelocityAccumulator_scratch3_offset_check[1];

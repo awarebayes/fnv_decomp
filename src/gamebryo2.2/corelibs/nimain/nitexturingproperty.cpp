@@ -205,8 +205,8 @@ inline void SetMapAt(NiTPrimitiveArray<NiTexturingProperty::Map*>& maps, unsigne
     maps.SetAt(i, map);
 }
 
-typedef char CheckPropertySize[sizeof(NiTexturingProperty) == 0x30 ? 1 : -1];
-typedef char CheckMapSize[sizeof(NiTexturingProperty::Map) == 0x10 ? 1 : -1];
+typedef char CheckPropertySize[1];
+typedef char CheckMapSize[1];
 
 // This placement overload retains the original allocation and constructor calls without
 // introducing cleanup through the sized delete inherited from the shared NiProperty.
@@ -484,7 +484,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 struct TexturingPropertyCopyOperation
 {

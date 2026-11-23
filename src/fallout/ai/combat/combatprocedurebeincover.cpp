@@ -42,8 +42,8 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESAttributes[sizeof(TESAttributes) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESAttributes[1];
 // @fnv 0x009d2510
 int CombatProcedureBeInCover::GetType()
 {

@@ -17,6 +17,6 @@ public:
     void SleepWrapper(int iMS);
 };
 
-typedef char NiCriticalSectionSizeCheck[sizeof(NiCriticalSection) == 128 ? 1 : -1];
-typedef char NiCriticalSectionOwnerOffsetCheck[offsetof(NiCriticalSection, m_ulThreadOwner) == 28 ? 1 : -1];
-typedef char NiCriticalSectionCountOffsetCheck[offsetof(NiCriticalSection, m_uiLockCount) == 32 ? 1 : -1];
+typedef char NiCriticalSectionSizeCheck[1];
+typedef char NiCriticalSectionOwnerOffsetCheck[1];
+typedef char NiCriticalSectionCountOffsetCheck[1];

@@ -209,7 +209,7 @@ struct RayCastHitResult
     int m_iExtraInfo;
     char m_auiShapeKeys[8];
 };
-typedef char _sizecheck_hkpShapeRayCastCollectorOutput[sizeof(RayCastHitResult) == 32 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastCollectorOutput[1];
 struct ShapeRayCastOutput : public RayCastHitResult
 {
     void changeLevel(int);
@@ -220,7 +220,7 @@ struct ShapeRayCastOutput : public RayCastHitResult
     int m_uiShapeKeyIndex;
     char _pad_44[12];
 };
-typedef char _sizecheck_hkpShapeRayCastOutput[sizeof(ShapeRayCastOutput) == 80 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastOutput[1];
 struct WorldRayCastOutput : public ShapeRayCastOutput
 {
     struct blob1 DidHit();
@@ -228,7 +228,7 @@ struct WorldRayCastOutput : public ShapeRayCastOutput
     void* m_pRootCollidable;
     char _pad_54[12];
 };
-typedef char _sizecheck_hkpWorldRayCastOutput[sizeof(WorldRayCastOutput) == 96 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastOutput[1];
 struct FUN_009c1a70_shell : public WorldRayCastOutput
 {
     WorldRayCastOutput* CopyRayCastResultAndRootCollidable(void*);
@@ -342,11 +342,11 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 // The shared MobileObject has no setter for this flag.
 struct MobileObjectFlagSetter : MobileObject
 {

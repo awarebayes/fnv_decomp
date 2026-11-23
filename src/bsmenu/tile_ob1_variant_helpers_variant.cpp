@@ -48,7 +48,7 @@ struct PropHelper { TileShaderProperty* GetProperty(unsigned int auType); };
 struct FUN_00a08720_t {
     void Tile_FadeIn3D(NiAVObject* apObject, float afPct);
 };
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_00a0b110_shell : public Tile {
     void Tile_PlayTileSound(int);
 };

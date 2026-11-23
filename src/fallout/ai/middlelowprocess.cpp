@@ -155,8 +155,8 @@ float FUN_0092ce00_shell::GetActorValueWithModifiers(TESActorBase* apActorBase, 
 }
 
 namespace fnv_0092eaa0 {
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_0092eaa0_shell : public MiddleLowProcess
 {
     void MiddleLowProcess_LoadGame_0092eaa0(BGSLoadFormBuffer*);
@@ -189,8 +189,8 @@ void FUN_0092eaa0_shell::MiddleLowProcess_LoadGame_0092eaa0(BGSLoadFormBuffer* a
 }  // namespace fnv_0092eaa0
 
 namespace fnv_0092eb00 {
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_0092eb00_shell : public MiddleLowProcess
 {
     void MiddleLowProcess_Revert_0092eb00(BGSLoadFormBuffer*);

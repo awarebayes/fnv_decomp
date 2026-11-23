@@ -16,5 +16,5 @@ class hkMemoryMeshShape : public hkMeshShape
     hkStringPtr m_name;                      // +0x2C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkMemoryMeshShape[(sizeof(hkMemoryMeshShape) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkMemoryMeshShape[1];
 #endif

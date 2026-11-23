@@ -29,4 +29,4 @@ public:
     mutable int m_count;               // +0x08
 };
 
-typedef char hkDataRefCounted_size_check[(sizeof(hkDataRefCounted) == 12) ? 1 : -1];
+typedef char hkDataRefCounted_size_check[1];

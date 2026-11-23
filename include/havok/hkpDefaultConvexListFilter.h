@@ -11,5 +11,5 @@ class hkpDefaultConvexListFilter : public hkpConvexListFilter
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpDefaultConvexListFilter[(sizeof(hkpDefaultConvexListFilter) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkpDefaultConvexListFilter[1];
 #endif

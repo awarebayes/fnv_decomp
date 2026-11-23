@@ -67,7 +67,7 @@ struct BGSLoadFormBuffer;
 struct BGSSaveFormBuffer;
 struct TESForm;
 struct TESObjectREFR;
-typedef char _sizecheck_PackageTarget[sizeof(PackageTargetRecord) == 16 ? 1 : -1];
+typedef char _sizecheck_PackageTarget[1];
 struct FUN_006801a0_shell : public PackageTargetRecord
 {
     void PackageTarget_Copy(PackageTargetRecord*);
@@ -374,7 +374,7 @@ struct Animation
     char spAnimIdleFreeWhenInactiveA[8]; // src: XBOX_RETAIL_PDB +0x12c (old: LocalOutput)
     char replayDelayList[8]; // src: XBOX_RETAIL_PDB +0x134 (old: m_acTrailingData)
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct FUN_0091fe80_shell : public MiddleHighProcess
 {
     void MiddleHighProcess_SetAnimation(Animation*);

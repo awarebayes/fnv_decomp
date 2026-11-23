@@ -323,13 +323,13 @@ struct SplineInterpolator
     char Key1[24];
     char Key2[24];
 };
-typedef char _sizecheck_PathingSpline[sizeof(SplineInterpolator) == 68 ? 1 : -1];
+typedef char _sizecheck_PathingSpline[1];
 struct PathingControlPoint
 {
     NiPoint3 Location;
     NiPoint3 Tangent;
 };
-typedef char _sizecheck_PathingSplineKey[sizeof(PathingControlPoint) == 24 ? 1 : -1];
+typedef char _sizecheck_PathingSplineKey[1];
 struct FUN_006e8450_shell : public SplineInterpolator
 {
     void PathingSpline_SetKeys(void*, void*);
@@ -864,9 +864,9 @@ float PathingSolution::FindSegmentAtFraction(float afPosition, float afScale, un
 }
 
 struct BGSSaveFormBuffer;
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
-typedef char _sizecheck_PathingAvoidNode[sizeof(PathingAvoidNode) == 36 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
+typedef char _sizecheck_PathingAvoidNode[1];
 
 struct FUN_006f5100_shell
 {

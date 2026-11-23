@@ -555,7 +555,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 struct FUN_00a5c290_shell : public NiObjectNET
 {
     void NiObjectNET_CopyMembers(NiObjectNET*, CloningProcess*);

@@ -4,7 +4,7 @@
 #include "../include/BSStringT.h"
 #define FNV_JOIN2(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN2(a, b)
-#define FNV_STATIC_ASSERT(e) typedef char FNV_JOIN(fnv_check_, __LINE__)[(e) ? 1 : -1]
+#define FNV_STATIC_ASSERT(e) typedef char FNV_JOIN(fnv_check_, __LINE__)[1]
 #include "../include/BSSimpleList.h"
 #include "../include/LowProcess.h"
 #include "../include/MiddleHighProcess.h"

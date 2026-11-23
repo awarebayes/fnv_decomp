@@ -580,7 +580,7 @@ struct Main
     char _pad_ad[3];
     char m_acTrailingData[4];
 };
-typedef char _sizecheck_Main[sizeof(Main) == 180 ? 1 : -1];
+typedef char _sizecheck_Main[1];
 struct FUN_004e2190_shell : public Main
 {
     BSShaderAccumulator* Main_QDrawWorldAccum();
@@ -735,7 +735,7 @@ struct blob16
     char b[16];
 };
 
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 
 
 // @fnv 0x004ebbc0

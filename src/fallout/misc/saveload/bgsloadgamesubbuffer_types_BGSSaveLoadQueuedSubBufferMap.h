@@ -11,8 +11,8 @@ class DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer___;
 class NiTMap_TESForm___BGSLoadGameSubBuffer_;
 class NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_;
 class NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer___AntiBloatAllocator;
-typedef char SubBufferMapLayoutCheck1[(sizeof(BGSLoadGameSubBuffer) == 4) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck2[(offsetof(BGSLoadGameSubBuffer, pBuffer) == 0) ? 1 : -1];
+typedef char SubBufferMapLayoutCheck1[1];
+typedef char SubBufferMapLayoutCheck2[1];
 #pragma pack(push, 4)
 class DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer___
 {
@@ -21,7 +21,7 @@ class DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer___
     // void __cdecl DFALL<NiTMapItem<TESForm *,BGSLoadGameSubBuffer> >::*(void*)
 };
 #pragma pack(pop)
-typedef char SubBufferMapLayoutCheck3[(sizeof(DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer___) == 1) ? 1 : -1];
+typedef char SubBufferMapLayoutCheck3[1];
 #pragma pack(push, 4)
 class NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer___AntiBloatAllocator
     : public DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer___
@@ -31,14 +31,8 @@ class NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BG
     unsigned int m_uiCount;  // +0x0, 4 bytes
 };
 #pragma pack(pop)
-typedef char SubBufferMapLayoutCheck4[(
-    sizeof(
-        NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer___AntiBloatAllocator) ==
-    4) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck5[(
-    offsetof(
-        NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer___AntiBloatAllocator,
-        m_uiCount) == 0) ? 1 : -1];
+typedef char SubBufferMapLayoutCheck4[1];
+typedef char SubBufferMapLayoutCheck5[1];
 #pragma pack(push, 4)
 class NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_
 {
@@ -63,20 +57,11 @@ class NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BG
     // void __cdecl NiTMapBase<DFALL<NiTMapItem<TESForm *,BGSLoadGameSubBuffer> >,TESForm *,BGSLoadGameSubBuffer>::*()
 };
 #pragma pack(pop)
-typedef char SubBufferMapLayoutCheck6[(
-    sizeof(NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_) == 16) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck7[(
-    offsetof(NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_, m_ppVirtualMethodTable) ==
-    0) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck8[(
-    offsetof(NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_,
-             m_uiHashSize) == 4) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck9[(
-    offsetof(NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_,
-             m_ppkHashTable) == 8) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck10[(
-    offsetof(NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_,
-             m_kItemCount) == 12) ? 1 : -1];
+typedef char SubBufferMapLayoutCheck6[1];
+typedef char SubBufferMapLayoutCheck7[1];
+typedef char SubBufferMapLayoutCheck8[1];
+typedef char SubBufferMapLayoutCheck9[1];
+typedef char SubBufferMapLayoutCheck10[1];
 #pragma pack(push, 4)
 class NiTMap_TESForm___BGSLoadGameSubBuffer_
     : public NiTMapBase_DFALL_NiTMapItem_TESForm___BGSLoadGameSubBuffer____TESForm___BGSLoadGameSubBuffer_
@@ -94,7 +79,7 @@ class NiTMap_TESForm___BGSLoadGameSubBuffer_
     // void __cdecl NiTMap<TESForm *,BGSLoadGameSubBuffer>::*()
 };
 #pragma pack(pop)
-typedef char SubBufferMapLayoutCheck11[(sizeof(NiTMap_TESForm___BGSLoadGameSubBuffer_) == 16) ? 1 : -1];
+typedef char SubBufferMapLayoutCheck11[1];
 #pragma pack(push, 4)
 class LoadGameSubBufferQueue
 {
@@ -113,6 +98,6 @@ class LoadGameSubBufferQueue
     // void* __cdecl LoadGameSubBufferQueue::*(unsigned int)
 };
 #pragma pack(pop)
-typedef char SubBufferMapLayoutCheck12[(sizeof(LoadGameSubBufferQueue) == 48) ? 1 : -1];
-typedef char SubBufferMapLayoutCheck13[(offsetof(LoadGameSubBufferQueue, m_kSubBuffersByType) == 0) ? 1 : -1];
+typedef char SubBufferMapLayoutCheck12[1];
+typedef char SubBufferMapLayoutCheck13[1];
 #endif

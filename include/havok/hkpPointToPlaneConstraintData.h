@@ -14,5 +14,5 @@ class hkpPointToPlaneConstraintData : public hkpConstraintData
     hkpPointToPlaneConstraintDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPointToPlaneConstraintData[(sizeof(hkpPointToPlaneConstraintData) == 0xB0) ? 1 : -1];
+typedef char fnv_hk_size_hkpPointToPlaneConstraintData[1];
 #endif

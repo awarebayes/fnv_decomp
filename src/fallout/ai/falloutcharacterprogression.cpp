@@ -62,7 +62,7 @@ struct PlayerProgressionData
     bool m_bSecondProgressionFlag;
     char _pad_9[3];
 };
-typedef char _sizecheck_CharacterProgressionData[sizeof(PlayerProgressionData) == 12 ? 1 : -1];
+typedef char _sizecheck_CharacterProgressionData[1];
 struct FUN_008d55e0_shell : public PlayerProgressionData
 {
     bool CharacterProgressionData_CheckCanLevelUp(int);

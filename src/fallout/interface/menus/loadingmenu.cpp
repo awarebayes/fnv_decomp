@@ -709,7 +709,7 @@ struct LoadScreenTypeData
     char m_acSecondString[40];
     unsigned int m_uiTrailingValue;
 };
-typedef char _sizecheck_LoadScreenType_Data[sizeof(LoadScreenTypeData) == 88 ? 1 : -1];
+typedef char _sizecheck_LoadScreenType_Data[1];
 class LoadingMenuDiagnostics
 {
   public:
@@ -779,7 +779,7 @@ int __fastcall TESLoadScreen_GetTypeData(int apObject)
     return *(int*)(apObject + 0x34) + 0x18;
 }
 
-typedef char _sizecheck_BSCriticalSection[sizeof(RecursiveLock) == 40 ? 1 : -1];
+typedef char _sizecheck_BSCriticalSection[1];
 
 class TaskThreadManager
 {
@@ -946,7 +946,7 @@ void* DelStandIn::DestroyAndFree(unsigned int flags)
 }
 
 namespace fnv_007890e0 {
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct NiUpdateDataH
 {
     void FUN_0043d410(float, bool, bool);

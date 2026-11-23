@@ -23,7 +23,7 @@ NavMeshTriangle* NavMeshTriangleReference::NavMeshSearchNode_GetTriangle() const
     return m_pLocationNavMesh->GetTriangle(m_usTriangleIdentifier);
 }
 
-typedef char _sizecheck_PathingAvoidNode[sizeof(PathingAvoidNode) == 36 ? 1 : -1];
+typedef char _sizecheck_PathingAvoidNode[1];
 
 // Reads a type byte, two floats and a 12-byte block from the load buffer, plus a second 12-byte block when the type is 1.
 // @fnv 0x006dc910

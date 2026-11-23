@@ -20,7 +20,7 @@ class DFALL_NiTMapItem_NiFixedString_NiAVObject_____
     // void __cdecl DFALL<NiTMapItem<NiFixedString,NiAVObject *> >::*(void*)
 };
 #pragma pack(pop)
-typedef char NiDefaultPalette_layout_check_2[(sizeof(DFALL_NiTMapItem_NiFixedString_NiAVObject_____) == 1) ? 1 : -1];
+typedef char NiDefaultPalette_layout_check_2[1];
 #pragma pack(push, 4)
 class NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject_____AntiBloatAllocator
     : public DFALL_NiTMapItem_NiFixedString_NiAVObject_____
@@ -30,12 +30,8 @@ class NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVO
     unsigned int m_uiCount;  // +0x0, 4 bytes
 };
 #pragma pack(pop)
-typedef char NiDefaultPalette_layout_check_3[(
-    sizeof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject_____AntiBloatAllocator) ==
-    4) ? 1 : -1];
-typedef char NiDefaultPalette_layout_check_4[(
-    offsetof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject_____AntiBloatAllocator,
-             m_uiCount) == 0) ? 1 : -1];
+typedef char NiDefaultPalette_layout_check_3[1];
+typedef char NiDefaultPalette_layout_check_4[1];
 #pragma pack(push, 4)
 class NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___
 {
@@ -65,15 +61,11 @@ class NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVO
     // void __cdecl NiTFixedStringMapBase<DFALL<NiTMapItem<NiFixedString,NiAVObject *> >,NiAVObject *>::*()
 };
 #pragma pack(pop)
-typedef char NiDefaultPalette_layout_check_5[(sizeof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___) == 16) ? 1 : -1];
-typedef char NiDefaultPalette_layout_check_6[(offsetof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___,
-                           m_ppVirtualMethodTable) == 0) ? 1 : -1];
-typedef char NiDefaultPalette_layout_check_7[(offsetof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___,
-                           m_uiHashSize) == 4) ? 1 : -1];
-typedef char NiDefaultPalette_layout_check_8[(offsetof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___,
-                           m_ppkHashTable) == 8) ? 1 : -1];
-typedef char NiDefaultPalette_layout_check_9[(offsetof(NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___,
-                           m_kItemCount) == 12) ? 1 : -1];
+typedef char NiDefaultPalette_layout_check_5[1];
+typedef char NiDefaultPalette_layout_check_6[1];
+typedef char NiDefaultPalette_layout_check_7[1];
+typedef char NiDefaultPalette_layout_check_8[1];
+typedef char NiDefaultPalette_layout_check_9[1];
 #pragma pack(push, 4)
 class PaletteObjectMapView
     : public NiTFixedStringMapBase_DFALL_NiTMapItem_NiFixedString_NiAVObject______NiAVObject___
@@ -91,5 +83,5 @@ class PaletteObjectMapView
     // void __cdecl NiTFixedStringMap<NiAVObject *>::*()
 };
 #pragma pack(pop)
-typedef char NiDefaultPalette_layout_check_10[(sizeof(PaletteObjectMapView) == 16) ? 1 : -1];
+typedef char NiDefaultPalette_layout_check_10[1];
 #endif

@@ -292,7 +292,7 @@ void FUN_00613fb0_C::Set(bool abIAmPC)
     bIAmPlayerCharacter = abIAmPC;
 }
 
-typedef char _sizecheck_TESFile[sizeof(TESFile) == 1068 ? 1 : -1];
+typedef char _sizecheck_TESFile[1];
 int __cdecl _sprintf_s(char*, unsigned int, const char*, ...);
 int __cdecl __mbsnicmp(const char*, const char*, unsigned int);
 

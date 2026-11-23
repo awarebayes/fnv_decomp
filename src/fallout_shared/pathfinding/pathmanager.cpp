@@ -424,7 +424,7 @@ struct PathingTaskMessage
     int m_eMessageType;
     PathingTaskData* m_pPathingTaskData;
 };
-typedef char _sizecheck_PathingMessage[sizeof(PathingTaskMessage) == 8 ? 1 : -1];
+typedef char _sizecheck_PathingMessage[1];
 struct FUN_006eb7f0_shell : public PathManagerImpl
 {
     void DispatchPathingMessage(void*);

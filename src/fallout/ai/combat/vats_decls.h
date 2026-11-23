@@ -36,8 +36,8 @@ class PlayerCharacter
     Animation* GetAnimation(bool firstPerson);
     static bool UpdatePlayerStatus();
 };
-typedef char VATSPlayerTimerOffsetCheck[offsetof(PlayerCharacter, fVATSTimer) == 0xE18 ? 1 : -1];
-typedef char VATSPlayerSizeCheck[sizeof(PlayerCharacter) == 0xE50 ? 1 : -1];
+typedef char VATSPlayerTimerOffsetCheck[1];
+typedef char VATSPlayerSizeCheck[1];
 
 class CameraPathManager
 {

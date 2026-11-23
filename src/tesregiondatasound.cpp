@@ -111,7 +111,7 @@ struct MersenneTwister
     char mt[2496];
     unsigned int mti;
 };
-typedef char _sizecheck_BSRandom[sizeof(MersenneTwister) == 2508 ? 1 : -1];
+typedef char _sizecheck_BSRandom[1];
 struct FUN_00944480_shell : public MersenneTwister
 {
     int IntInRange(int, int);

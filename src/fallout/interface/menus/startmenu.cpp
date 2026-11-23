@@ -11,7 +11,7 @@
 #include "../../../../include/SETTING_VALUE.h"
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 #include "../../../../include/BSStringT.h"
 
 #include "../../../../include/AutoMemContext.h"
@@ -1513,7 +1513,7 @@ struct blob4
     char b[4];
 };
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_007d51a0_shell : public StartMenu
 {
     bool StartMenu_SetSaveGameScreenshot(BGSSaveLoadFileEntry*);

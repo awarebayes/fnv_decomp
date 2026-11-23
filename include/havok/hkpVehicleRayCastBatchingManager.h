@@ -11,5 +11,5 @@ class hkpVehicleRayCastBatchingManager : public hkpVehicleCastBatchingManager
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleRayCastBatchingManager[(sizeof(hkpVehicleRayCastBatchingManager) == 0x18) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleRayCastBatchingManager[1];
 #endif

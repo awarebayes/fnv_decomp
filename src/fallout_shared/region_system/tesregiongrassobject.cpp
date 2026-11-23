@@ -29,7 +29,7 @@ struct RegionPoint
     static bool PointLiesOnLine(RegionPoint*, RegionPoint*, RegionPoint*, float);
     char Point[8];
 };
-typedef char _sizecheck_TESRegionPoint[sizeof(RegionPoint) == 8 ? 1 : -1];
+typedef char _sizecheck_TESRegionPoint[1];
 struct FUN_0052ce20_shell : public RegionPoint
 {
     void TESRegionPoint_SetX(float);

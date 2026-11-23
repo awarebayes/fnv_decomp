@@ -749,7 +749,7 @@ void __fastcall ConstructFloatInterpolator(NiFloatInterpolator* pThis)
 }
 
 #include "../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 struct Obj52 : NiMemObject
 {

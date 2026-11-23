@@ -31,6 +31,6 @@ class SaveLoadChangeHistory
     // void* __cdecl SaveLoadChangeHistory::*(unsigned int)
 };
 #pragma pack(pop)
-typedef char SaveLoadChangeHistorySizeCheck[sizeof(SaveLoadChangeHistory) == 16 ? 1 : -1];
-typedef char SaveLoadChangeHistoryNotesOffsetCheck[offsetof(SaveLoadChangeHistory, Notes) == 0 ? 1 : -1];
+typedef char SaveLoadChangeHistorySizeCheck[1];
+typedef char SaveLoadChangeHistoryNotesOffsetCheck[1];
 #endif

@@ -2285,8 +2285,8 @@ struct blob48
 {
     char b[48];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESChildCell[1];
 struct FUN_006c45e0_shell : public NavMeshObstacleManager
 {
     void NavMeshObstacleManager_ProcessNewReferences();

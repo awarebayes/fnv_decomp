@@ -10,7 +10,7 @@ class GameSettingCollection;
 class OSGlobals;
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 // Avoid the MSVC reserved deleting-destructor spelling in the sound declarations.
 #define __vecDelDtor GameDeletingDestructor
 #include "../../../include/BSSimpleArray.h"

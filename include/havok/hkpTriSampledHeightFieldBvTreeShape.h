@@ -18,5 +18,5 @@ class hkpTriSampledHeightFieldBvTreeShape
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpTriSampledHeightFieldBvTreeShape[(sizeof(hkpTriSampledHeightFieldBvTreeShape) == 0x30) ? 1 : -1];
+    fnv_hk_size_hkpTriSampledHeightFieldBvTreeShape[1];
 #endif

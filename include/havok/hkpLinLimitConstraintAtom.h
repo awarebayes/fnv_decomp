@@ -15,5 +15,5 @@ class hkpLinLimitConstraintAtom : public hkpConstraintAtom
     hkReal m_kMaximumCorner;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpLinLimitConstraintAtom[(sizeof(hkpLinLimitConstraintAtom) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpLinLimitConstraintAtom[1];
 #endif

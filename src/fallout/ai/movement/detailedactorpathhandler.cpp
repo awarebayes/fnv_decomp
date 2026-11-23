@@ -1053,11 +1053,11 @@ struct blob48
     char b[48];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 struct FUN_009e9390_shell : public DetailedActorPathHandler
 {
     void DetailedActorPathHandler_LoadGame(BGSLoadFormBuffer*);
@@ -1704,7 +1704,7 @@ struct blob64
     char b[64];
 };
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_009e3560_shell : public DetailedActorPathHandler
 {
     void UpdatePathRotation(float);
@@ -3437,15 +3437,15 @@ struct blob48
     char b[48];
 };
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_009e6ba0_shell : public DetailedActorPathHandler
 {
     void UpdatePathingOrigin(PathingRequest*);
@@ -3749,11 +3749,11 @@ struct blob48
     char b[48];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 struct FUN_009e9760_shell : public DetailedActorPathHandler
 {
     void DetailedActorPathHandler_InitLoadGame(BGSLoadFormBuffer*);

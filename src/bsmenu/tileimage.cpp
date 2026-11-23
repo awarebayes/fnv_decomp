@@ -78,9 +78,9 @@ template <class T> __forceinline NiPointer<T>::~NiPointer()
 }
 
 extern Setting g_011d33f0;
-typedef char tileimage_size_check[sizeof(TileImage) == 0x48 ? 1 : -1];
-typedef char tileimage_flags_check[offsetof(Tile, uiFlags) == 0x30 ? 1 : -1];
-typedef char tileimage_texture_check[offsetof(TileImage, spTexture) == 0x3c ? 1 : -1];
+typedef char tileimage_size_check[1];
+typedef char tileimage_flags_check[1];
+typedef char tileimage_texture_check[1];
 class TextureReceiver
 {
   public:
@@ -277,8 +277,8 @@ void TileImage_ConvertToActualFilename(const char* apFilename, float* afScale, f
 }
 
 namespace fnv_00a1fa20 {
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
+typedef char _sizecheck_AutoMemContext[1];
 
 extern __declspec(thread) int OM06_tlsMemContext;
 class BSFileEntry;

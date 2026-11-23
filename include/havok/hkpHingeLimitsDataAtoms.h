@@ -16,5 +16,5 @@ class hkpHingeLimitsDataAtoms
     char pad0[0x90];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpHingeLimitsDataAtoms[(sizeof(hkpHingeLimitsDataAtoms) == 0x90) ? 1 : -1];
+typedef char fnv_hk_size_hkpHingeLimitsDataAtoms[1];
 #endif

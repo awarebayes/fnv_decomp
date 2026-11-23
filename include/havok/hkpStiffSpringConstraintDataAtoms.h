@@ -16,5 +16,5 @@ class hkpStiffSpringConstraintDataAtoms
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpStiffSpringConstraintDataAtoms[(sizeof(hkpStiffSpringConstraintDataAtoms) == 0x40) ? 1 : -1];
+    fnv_hk_size_hkpStiffSpringConstraintDataAtoms[1];
 #endif

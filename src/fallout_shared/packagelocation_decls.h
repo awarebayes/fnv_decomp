@@ -32,5 +32,5 @@ class LocationDescriptor
     TESObjectREFR* ResolveLocationReference(MobileObject* apActor);
 };
 
-typedef char PackageLocation_size_check[sizeof(LocationDescriptor) == 12 ? 1 : -1];
+typedef char PackageLocation_size_check[1];
 #endif

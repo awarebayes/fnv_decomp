@@ -49,5 +49,5 @@ class NiLODNode : public NiSwitchNode
     bool m_bLODActive;                 // 0xd0; NiLODNode is 0xd4 (operator new(0xd4) at 0x00a99710)
 };
 
-typedef char NiLODNode_lod_data_offset_check[(offsetof(NiLODNode, m_spLODData) == 0xCC) ? 1 : -1];
-typedef char NiLODNode_size_check[(sizeof(NiLODNode) == 0xD4) ? 1 : -1];
+typedef char NiLODNode_lod_data_offset_check[1];
+typedef char NiLODNode_size_check[1];

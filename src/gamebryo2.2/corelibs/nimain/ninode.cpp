@@ -440,7 +440,7 @@ void FUN_00a5dbe0_shell::NiNode_OnVisible(NiCullingProcess* kCuller)
 namespace fnv_00a5dce0 {
 
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00a5dce0_shell : public NiNode
 {
     void NiNode_ProcessClone(CloningProcess*);

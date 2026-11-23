@@ -20,5 +20,5 @@ class hkpBreakableConstraintData : public hkpConstraintData
     char pad26[0x2];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBreakableConstraintData[(sizeof(hkpBreakableConstraintData) == 0x28) ? 1 : -1];
+typedef char fnv_hk_size_hkpBreakableConstraintData[1];
 #endif

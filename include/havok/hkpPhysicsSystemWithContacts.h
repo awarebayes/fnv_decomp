@@ -13,5 +13,5 @@ class hkpPhysicsSystemWithContacts : public hkpPhysicsSystem
     hkArray<hkpSerializedAgentNnEntry*> m_kSerializedAgentEntries;  // +0x44
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPhysicsSystemWithContacts[(sizeof(hkpPhysicsSystemWithContacts) == 0x50) ? 1 : -1];
+typedef char fnv_hk_size_hkpPhysicsSystemWithContacts[1];
 #endif

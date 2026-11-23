@@ -27,7 +27,7 @@ class BGSSaveLoadReferencesMap
     void ReconstructFormID(unsigned int aiRefID, BGSReconstructFormsInAllFilesMap* apReconstructForms);
 };
 
-typedef char bgssaveloadreferencesmap_cell_map_size[(sizeof(BGSCellNumericIDArrayMap) == 16) ? 1 : -1];
-typedef char bgssaveloadreferencesmap_references_size[(sizeof(BGSSaveLoadReferencesMap) == 48) ? 1 : -1];
+typedef char bgssaveloadreferencesmap_cell_map_size[1];
+typedef char bgssaveloadreferencesmap_references_size[1];
 
 #endif

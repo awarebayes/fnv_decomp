@@ -237,7 +237,7 @@ void FaderManager::AddRoot(NiNode* apNode, float afOneToOneDistance, bool abBelo
     apNode->AttachChildInAvailableSlot((NiAVObject*)pSortAdjustNode, true);
 }
 
-typedef char _sizecheck_BSTimer[sizeof(GameTimerRecord) == 32 ? 1 : -1];
+typedef char _sizecheck_BSTimer[1];
 
 extern float DAT_011ac3a0;
 

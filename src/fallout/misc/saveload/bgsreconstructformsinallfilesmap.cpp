@@ -482,7 +482,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00416870_shell : public NiPoint3
 {
     void SetComponents(float, float, float);

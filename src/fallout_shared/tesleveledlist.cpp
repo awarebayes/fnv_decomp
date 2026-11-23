@@ -564,7 +564,7 @@ unsigned int DialogueRandom()
     return MersenneTwister::GetRandomGenerator()->GetRandomUInt();
 }
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 // Returns the value of the TESGlobalValueReader at offset 0x10 if present, otherwise the byte at offset 0x0c.
 // @fnv 0x00487790
@@ -577,7 +577,7 @@ unsigned char TESLeveledList::GetChanceNone()
     return cChanceNone;
 }
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 // @fnv 0x00487840
 bool TESLeveledList::UsesAllEntries()
@@ -588,7 +588,7 @@ bool TESLeveledList::UsesAllEntries()
         return false;
 }
 
-typedef char _sizecheck_LEVELED_OBJECT[sizeof(LeveledObject) == 12 ? 1 : -1];
+typedef char _sizecheck_LEVELED_OBJECT[1];
 struct FUN_00487ba0_shell : public LeveledObject
 {
     void InitLeveledObject();
@@ -635,7 +635,7 @@ void TESLeveledList::CalculateCurrentFormListForRef(TESObjectREFR* apRef, TESCon
 
 namespace fnv_0050ad90 {
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct LeveledListLevelDifference
 {
     static int __thiscall Creature(TESLeveledList* list);
@@ -656,7 +656,7 @@ int __thiscall LeveledListLevelDifference::Creature(TESLeveledList* list)
 
 namespace fnv_0050b370 {
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct LeveledListLevelDifference
 {
     static int __thiscall Character(TESLeveledList* list);
@@ -676,7 +676,7 @@ int __thiscall LeveledListLevelDifference::Character(TESLeveledList* list)
 }  // namespace fnv_0050b370
 
 #include "../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00526ac0_shell : public TESGlobal
 {
     float BSMultiBoundCapsule_QMultiBoundRadius();

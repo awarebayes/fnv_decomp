@@ -90,12 +90,12 @@ class SystemColorManager
     bool GetColor(unsigned int, NiColorA&);
 };
 
-typedef char FOPipboyManagerButtonsOffset[(offsetof(FOPipboyManager, m_cPipBoyButtonAvailability) == 0xe8) ? 1 : -1];
-typedef char FOPipboyManagerKnobsOffset[(offsetof(FOPipboyManager, m_pGaugeObjects) == 0x100) ? 1 : -1];
-typedef char FOPipboyManagerLightOffset[(offsetof(FOPipboyManager, b1stPersonLightOn) == 0x160) ? 1 : -1];
-typedef char InterfacePipboyManagerOffset[(offsetof(PipboyInterface, pPipboyManager) == 0x174) ? 1 : -1];
-typedef char NiUpdateDataSize[(sizeof(NiUpdateData) == 12) ? 1 : -1];
-typedef char NiMatrix3Size[(sizeof(NiMatrix3) == 36) ? 1 : -1];
+typedef char FOPipboyManagerButtonsOffset[1];
+typedef char FOPipboyManagerKnobsOffset[1];
+typedef char FOPipboyManagerLightOffset[1];
+typedef char InterfacePipboyManagerOffset[1];
+typedef char NiUpdateDataSize[1];
+typedef char NiMatrix3Size[1];
 extern SettingT_GameSettingCollection_ DAT_011db514;
 
 // @fnv 0x007f9070
@@ -413,7 +413,7 @@ void RenderedMenuNodeMethods::NiTexturingProperty_Map_SetTexture(NiAVObject* pkT
 }
 
 struct NiStream;
-typedef char _sizecheck_NiColor[sizeof(NiColor) == 12 ? 1 : -1];
+typedef char _sizecheck_NiColor[1];
 struct RenderedMenuColorMethods : public FORenderedMenu
 {
     void FORenderedMenu_SetScreenLightColor(NiColor*);

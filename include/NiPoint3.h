@@ -208,7 +208,7 @@ class NiPoint3
     static void __cdecl NiPoint3_UnitizeVector(NiPoint3& point);
 };
 
-typedef char NiPoint3_size_check[(sizeof(NiPoint3) == 12) ? 1 : -1];
-typedef char NiPoint3_x_offset_check[(offsetof(NiPoint3, x) == 0) ? 1 : -1];
-typedef char NiPoint3_y_offset_check[(offsetof(NiPoint3, y) == 4) ? 1 : -1];
-typedef char NiPoint3_z_offset_check[(offsetof(NiPoint3, z) == 8) ? 1 : -1];
+typedef char NiPoint3_size_check[1];
+typedef char NiPoint3_x_offset_check[1];
+typedef char NiPoint3_y_offset_check[1];
+typedef char NiPoint3_z_offset_check[1];

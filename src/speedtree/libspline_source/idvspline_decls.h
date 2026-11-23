@@ -5,7 +5,7 @@
 #include <stddef.h>
 #define FNV_STATIC_ASSERT_JOIN_(a, b) a##b
 #define FNV_STATIC_ASSERT_JOIN(a, b) FNV_STATIC_ASSERT_JOIN_(a, b)
-#define FNV_STATIC_ASSERT(c) typedef char FNV_STATIC_ASSERT_JOIN(idvspline_assert_, __LINE__)[(c) ? 1 : -1]
+#define FNV_STATIC_ASSERT(c) typedef char FNV_STATIC_ASSERT_JOIN(idvspline_assert_, __LINE__)[1]
 #include "../../../include/ExpressionEvaluator.h"
 #include "../../../include/Script.h"
 

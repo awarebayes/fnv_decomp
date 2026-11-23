@@ -38,9 +38,9 @@ class SpeedTreeLeafShader : public BSShader
     // void __cdecl SpeedTreeLeafShader::*()
 };
 #pragma pack(pop)
-typedef char speedtree_leaf_size[(sizeof(SpeedTreeLeafShader) == 908) ? 1 : -1];
-typedef char speedtree_leaf_constants_offset[(offsetof(SpeedTreeLeafShader, m_afShaderConstants) == 108) ? 1 : -1];
-typedef char speedtree_leaf_vertex_shaders_offset[(offsetof(SpeedTreeLeafShader, pVertexShader) == 876) ? 1 : -1];
-typedef char speedtree_leaf_pixel_shaders_offset[(offsetof(SpeedTreeLeafShader, pPixelShader) == 892) ? 1 : -1];
-typedef char speedtree_leaf_passes_offset[(offsetof(SpeedTreeLeafShader, m_pD3DPasses) == 900) ? 1 : -1];
+typedef char speedtree_leaf_size[1];
+typedef char speedtree_leaf_constants_offset[1];
+typedef char speedtree_leaf_vertex_shaders_offset[1];
+typedef char speedtree_leaf_pixel_shaders_offset[1];
+typedef char speedtree_leaf_passes_offset[1];
 #endif

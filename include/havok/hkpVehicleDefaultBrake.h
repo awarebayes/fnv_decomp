@@ -15,5 +15,5 @@ class hkpVehicleDefaultBrake : public hkpVehicleBrake
     hkReal m_wheelsMinTimeToBlock;                                                         // +0x14 // src: XBOX_RETAIL_PDB +0x14 (old: m_fWheelBlockTime)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleDefaultBrake[(sizeof(hkpVehicleDefaultBrake) == 0x18) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleDefaultBrake[1];
 #endif

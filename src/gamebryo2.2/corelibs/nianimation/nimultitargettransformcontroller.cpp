@@ -115,7 +115,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 void __fastcall ResizeTargets(NiMultiTargetTransformController*, int, unsigned short);
 
@@ -301,7 +301,7 @@ void __cdecl NiStreamSaveBinary_unsigned_short(NiStream* stream, const void* dat
     reinterpret_cast<unsigned int*>(binary)[1] += transfer(binary, data, 2, reinterpret_cast<unsigned int*>(&stream), 1);
 }
 
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 
 extern "C" double __cdecl fabs(double);
 

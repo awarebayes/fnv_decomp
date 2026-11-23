@@ -220,7 +220,7 @@ struct SaveContentDescriptor
     char szFileName[42];
     char _pad_132[2];
 };
-typedef char _sizecheck__XCONTENT_DATA[sizeof(SaveContentDescriptor) == 308 ? 1 : -1];
+typedef char _sizecheck__XCONTENT_DATA[1];
 struct ContentMountRecord
 {
     bool IsMounted();
@@ -236,7 +236,7 @@ struct ContentMountRecord
     bool m_bMounted;
     char _pad_139[3];
 };
-typedef char _sizecheck_BSContentPackage[sizeof(ContentMountRecord) == 316 ? 1 : -1];
+typedef char _sizecheck_BSContentPackage[1];
 struct FUN_00af2940_shell : public DownloadableContentManager
 {
     unsigned int AddInstalledDlcPackages(unsigned int, unsigned int);

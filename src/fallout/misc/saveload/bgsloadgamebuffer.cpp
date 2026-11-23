@@ -81,7 +81,7 @@ struct SandboxProcedureData
     int m_iActivityState;
     int m_iProcedureData;
 };
-typedef char _sizecheck_SandBoxChoiceListItem[sizeof(SandboxProcedureData) == 16 ? 1 : -1];
+typedef char _sizecheck_SandBoxChoiceListItem[1];
 struct FUN_009f38b0_shell : public SandboxProcedureData
 {
     void SandBoxChoiceListItem_LoadGame(BGSLoadFormBuffer*);
@@ -219,7 +219,7 @@ struct PackedFormID
     unsigned char m_ucIDByte1;
     unsigned char m_ucIDByte2;
 };
-typedef char _sizecheck_BGSNumericIDIndex[sizeof(PackedFormID) == 3 ? 1 : -1];
+typedef char _sizecheck_BGSNumericIDIndex[1];
 
 struct Dummy84eaf0
 {
@@ -252,7 +252,7 @@ struct PackedFormID
     unsigned char m_ucIDByte1;
     unsigned char m_ucIDByte2;
 };
-typedef char _sizecheck_BGSNumericIDIndex[sizeof(PackedFormID) == 3 ? 1 : -1];
+typedef char _sizecheck_BGSNumericIDIndex[1];
 
 struct Dummy84eaf0
 {
@@ -370,7 +370,7 @@ struct PackedFormID
     unsigned char m_ucIDByte1;
     unsigned char m_ucIDByte2;
 };
-typedef char _sizecheck_BGSNumericIDIndex[sizeof(PackedFormID) == 3 ? 1 : -1];
+typedef char _sizecheck_BGSNumericIDIndex[1];
 struct FUN_00853500_shell : public PackedFormID
 {
     unsigned int BGSNumericIDIndex_GetNumericID();

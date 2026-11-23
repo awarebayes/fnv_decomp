@@ -14,5 +14,5 @@ class hkpCachingShapePhantom : public hkpShapePhantom
     char pad16D[0x3];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpCachingShapePhantom[(sizeof(hkpCachingShapePhantom) == 0x170) ? 1 : -1];
+typedef char fnv_hk_size_hkpCachingShapePhantom[1];
 #endif

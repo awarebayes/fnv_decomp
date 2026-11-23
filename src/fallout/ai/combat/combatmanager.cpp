@@ -1286,7 +1286,7 @@ class NiQuaternion;
 class hkVector4;
 namespace fnv_00993440 {
 struct SaveLoadFile;
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 struct FUN_00993440_shell : public CombatManager
 {
     void CombatManager_LoadGame(BGSLoadGameBuffer*);

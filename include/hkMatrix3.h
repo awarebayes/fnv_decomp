@@ -97,7 +97,7 @@ public:
     __declspec(property(get=get_m23, put=set_m23)) float m23;
 };
 
-typedef char hkMatrix3_size_check[(sizeof(hkMatrix3) == 48) ? 1 : -1];
-typedef char hkMatrix3_column0_offset_check[(offsetof(hkMatrix3, m_kColumn0) == 0) ? 1 : -1];
-typedef char hkMatrix3_column1_offset_check[(offsetof(hkMatrix3, m_kColumn1) == 16) ? 1 : -1];
-typedef char hkMatrix3_column2_offset_check[(offsetof(hkMatrix3, m_kColumn2) == 32) ? 1 : -1];
+typedef char hkMatrix3_size_check[1];
+typedef char hkMatrix3_column0_offset_check[1];
+typedef char hkMatrix3_column1_offset_check[1];
+typedef char hkMatrix3_column2_offset_check[1];

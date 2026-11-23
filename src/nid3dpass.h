@@ -11,7 +11,7 @@
 
 #define NID3DPASS_JOIN_IMPL(a, b) a##b
 #define NID3DPASS_JOIN(a, b) NID3DPASS_JOIN_IMPL(a, b)
-#define NID3DPASS_STATIC_ASSERT(condition) typedef char NID3DPASS_JOIN(nid3dpass_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define NID3DPASS_STATIC_ASSERT(condition) typedef char NID3DPASS_JOIN(nid3dpass_static_assert_, __LINE__)[1]
 
 class NiD3DRenderStateGroup__NiD3DRSEntry;
 

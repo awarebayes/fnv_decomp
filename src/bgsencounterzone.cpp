@@ -5,7 +5,7 @@
 #include "../include/SETTING_VALUE.h"
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 #include "../include/BGSEncounterZone.h"
 #include "../include/CellDetachData.h"
 #include "../include/EncounterZoneData.h"

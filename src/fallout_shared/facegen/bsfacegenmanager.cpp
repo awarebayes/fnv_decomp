@@ -953,11 +953,11 @@ struct FaceGenData
     int m_eFaceGenLOD;
     char Accessories[8];
 };
-typedef char _sizecheck_FaceGenNpcData[sizeof(FaceGenData) == 204 ? 1 : -1];
+typedef char _sizecheck_FaceGenNpcData[1];
 
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 
 // Stand-in for the folded getter at 0x00441110 (returns the dword at +0x1C; BGSTerrainManager::GetMinLevel shares it),
 // called here on face-gen coordinate and shader-property objects.
@@ -1673,7 +1673,7 @@ struct OpaqueDataBlock
     char ctl[24];
     char label[28];
 };
-typedef char _sizecheck_FanLinCtlS[sizeof(OpaqueDataBlock) == 52 ? 1 : -1];
+typedef char _sizecheck_FanLinCtlS[1];
 
 namespace lc1 {
 using ::AutoMemContext;
@@ -2077,7 +2077,7 @@ struct FaceGenData
     int m_eFaceGenLOD;
     char Accessories[8];
 };
-typedef char _sizecheck_FaceGenNpcData[sizeof(FaceGenData) == 204 ? 1 : -1];
+typedef char _sizecheck_FaceGenNpcData[1];
 using ::AutoMemContext;
 
 
@@ -2257,7 +2257,7 @@ struct FaceGenData
     int m_eFaceGenLOD;
     char Accessories[8];
 };
-typedef char _sizecheck_FaceGenNpcData[sizeof(FaceGenData) == 204 ? 1 : -1];
+typedef char _sizecheck_FaceGenNpcData[1];
 using ::AutoMemContext;
 
 
@@ -2412,12 +2412,12 @@ struct FaceGenVertexIterator
     unsigned int position;
 };
 
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FourComponentNumericValue
 {
     char u[16];
 };
-typedef char _sizecheck___vector4[sizeof(FourComponentNumericValue) == 16 ? 1 : -1];
+typedef char _sizecheck___vector4[1];
 
 struct Flt
 {

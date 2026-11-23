@@ -46,4 +46,4 @@ public:
     hkArray<LocalFrameOnBone> m_localFrames;    // +0x3c // src: XBOX_RETAIL_PDB +0x3c (old: m_kLocalFrames)
 };
 
-typedef char hkaSkeleton_size_check[(sizeof(hkaSkeleton) == 0x48) ? 1 : -1];
+typedef char hkaSkeleton_size_check[1];

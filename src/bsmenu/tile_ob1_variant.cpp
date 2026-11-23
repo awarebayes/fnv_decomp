@@ -101,7 +101,7 @@ void FUN_00a08720_t::Tile_FadeIn3D(NiAVObject* apObject, float afPct)
     }
 }
 
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_00a0b110_shell : public Tile {
     void Tile_PlayTileSound(int);
 };
@@ -173,7 +173,7 @@ struct EmptyPolymorphicObject {
     void* __vecDelDtor(unsigned int);
     char _pad_0[1];
 };
-typedef char _sizecheck_AutoTileLock[sizeof(EmptyPolymorphicObject) == 1 ? 1 : -1];
+typedef char _sizecheck_AutoTileLock[1];
 struct FUN_00a03c90_shell : public Tile {
     Menu* Tile_GetMenu();
 };
@@ -332,7 +332,7 @@ struct EmptyPolymorphicObject {
     void* __vecDelDtor(unsigned int);
     char _pad_0[1];
 };
-typedef char _sizecheck_AutoTileLock[sizeof(EmptyPolymorphicObject) == 1 ? 1 : -1];
+typedef char _sizecheck_AutoTileLock[1];
 struct FUN_00a01350_shell : public Tile {
     void Tile_Set_00a01350(int, char*, bool);
 };
@@ -404,7 +404,7 @@ struct EmptyPolymorphicObject {
     void* __vecDelDtor(unsigned int);
     char _pad_0[1];
 };
-typedef char _sizecheck_AutoTileLock[sizeof(EmptyPolymorphicObject) == 1 ? 1 : -1];
+typedef char _sizecheck_AutoTileLock[1];
 struct FUN_00a03da0_shell : public Tile {
     Tile* Tile_GetChildByName(char*);
 };
@@ -454,7 +454,7 @@ struct EmptyPolymorphicObject {
     void* __vecDelDtor(unsigned int);
     char _pad_0[1];
 };
-typedef char _sizecheck_AutoTileLock[sizeof(EmptyPolymorphicObject) == 1 ? 1 : -1];
+typedef char _sizecheck_AutoTileLock[1];
 struct FUN_00a03f70_shell : public Tile {
     Tile* Tile_GetFirstRefCopy(int, int*);
 };

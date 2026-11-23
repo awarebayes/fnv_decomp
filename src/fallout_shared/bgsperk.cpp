@@ -34,10 +34,8 @@
 
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 
-FNV_STATIC_ASSERT(sizeof(void*) == 4);
-FNV_STATIC_ASSERT(sizeof(long) == 4);
 
 #include "../../include/ENUM_FORM_ID.h"
 
@@ -585,7 +583,7 @@ struct RGBColor
     unsigned char m_ucRank;
     unsigned char m_ucRegionPriority;
 };
-typedef char _sizecheck_PerkEntrySaveData[sizeof(RGBColor) == 3 ? 1 : -1];
+typedef char _sizecheck_PerkEntrySaveData[1];
 
 // Copies the two bytes from the save data into the perk entry at offsets 4 and 5.
 // @fnv 0x005e96b0

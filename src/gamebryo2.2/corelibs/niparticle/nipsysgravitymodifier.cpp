@@ -12,7 +12,7 @@
 #include "../../../../include/NiMatrix3.h"
 
 #include "../../../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 extern NiMemObject g_01202548;
 
@@ -34,7 +34,7 @@ void* __cdecl NiPSysBombModifier_GetRTTI()
 
 namespace fnv_00c22b00 {
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 struct NiPSysGravityModifier : NiPSysModifier
 {

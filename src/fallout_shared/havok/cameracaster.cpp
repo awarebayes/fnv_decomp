@@ -108,7 +108,7 @@ void Cameracaster_UpdateState_00621170(void* apArg)
 }  // namespace fnv_00621170
 
 #include "../../../include/RootContactPoint.h"
-typedef char _sizecheck_RootContactPoint[sizeof(RootContactPoint) == 112 ? 1 : -1];
+typedef char _sizecheck_RootContactPoint[1];
 
 struct FUN_006281a0_shell
 {

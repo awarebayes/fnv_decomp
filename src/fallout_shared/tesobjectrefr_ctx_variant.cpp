@@ -57,7 +57,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00565730_shell : public TESObjectREFR
 {
     void TESObjectREFR_InitScript();

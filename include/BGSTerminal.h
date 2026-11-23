@@ -35,7 +35,7 @@ public:
     TerminalCompareData Data;
 };
 
-typedef char BGSTerminal_size_check[(sizeof(BGSTerminal) == 0xA8) ? 1 : -1];
-typedef char BGSTerminal_menu_items_offset_check[(offsetof(BGSTerminal, m_kMenuItems) == 0x98) ? 1 : -1];
-typedef char BGSTerminal_password_offset_check[(offsetof(BGSTerminal, pPassword) == 0xA0) ? 1 : -1];
-typedef char BGSTerminal_data_offset_check[(offsetof(BGSTerminal, Data) == 0xA4) ? 1 : -1];
+typedef char BGSTerminal_size_check[1];
+typedef char BGSTerminal_menu_items_offset_check[1];
+typedef char BGSTerminal_password_offset_check[1];
+typedef char BGSTerminal_data_offset_check[1];

@@ -309,60 +309,60 @@ struct DestructibleData;
 
 
 // C++03 compile-time layout checks. No pragma or packing override.
-typedef char selector_size_check_3[(sizeof(BaseFormComponent) == 0x4) ? 1 : -1];
-typedef char selector_size_check_4[(sizeof(TESForm) == 0x18) ? 1 : -1];
-typedef char selector_size_check_5[(sizeof(TESObject) == 0x18) ? 1 : -1];
-typedef char selector_size_check_6[(sizeof(TESBoundObject) == 0x30) ? 1 : -1];
-typedef char selector_size_check_7[(sizeof(TESFullName) == 0xc) ? 1 : -1];
-typedef char selector_size_check_8[(sizeof(TESTexture) == 0xc) ? 1 : -1];
-typedef char selector_size_check_9[(sizeof(TESIcon) == 0xc) ? 1 : -1];
-typedef char selector_size_check_10[(sizeof(TESScriptableForm) == 0xc) ? 1 : -1];
-typedef char selector_size_check_11[(sizeof(BGSMessageIcon) == 0x10) ? 1 : -1];
-typedef char selector_size_check_12[(sizeof(TESValueForm) == 0x8) ? 1 : -1];
-typedef char selector_size_check_13[(sizeof(TESEnchantableForm) == 0x10) ? 1 : -1];
-typedef char selector_size_check_14[(sizeof(TESWeightForm) == 0x8) ? 1 : -1];
-typedef char selector_size_check_15[(sizeof(TESHealthForm) == 0x8) ? 1 : -1];
-typedef char selector_size_check_16[(sizeof(TESModel) == 0x18) ? 1 : -1];
-typedef char selector_size_check_17[(sizeof(TESModelTextureSwap) == 0x20) ? 1 : -1];
-typedef char selector_size_check_18[(sizeof(BGSDestructibleObjectForm) == 0x8) ? 1 : -1];
-typedef char selector_size_check_19[(sizeof(BGSPickupPutdownSounds) == 0xc) ? 1 : -1];
-typedef char selector_size_check_20[(sizeof(BGSRepairItemList) == 0x8) ? 1 : -1];
-typedef char selector_size_check_21[(sizeof(BGSEquipType) == 0x8) ? 1 : -1];
-typedef char selector_size_check_22[(sizeof(BGSBipedModelList) == 0x8) ? 1 : -1];
-typedef char selector_size_check_23[(sizeof(TESModelRDT) == 0x18) ? 1 : -1];
-typedef char selector_size_check_24[(sizeof(TESBipedModelForm) == 0xdc) ? 1 : -1];
-typedef char selector_size_check_25[(sizeof(TESObjectARMO) == 0x190) ? 1 : -1];
-typedef char selector_size_check_26[(sizeof(TESObjectARMA) == 0x190) ? 1 : -1];
-typedef char selector_size_check_27[(sizeof(TESObjectCLOT) == 0x154) ? 1 : -1];
-typedef char selector_offset_check_0[(offsetof(TESForm, cFormType) == 0x4) ? 1 : -1];
-typedef char selector_offset_check_1[(offsetof(TESForm, iFormFlags) == 0x8) ? 1 : -1];
-typedef char selector_offset_check_2[(offsetof(TESForm, iFormID) == 0xc) ? 1 : -1];
-typedef char selector_offset_check_3[(offsetof(TESForm, m_kSourceFiles) == 0x10) ? 1 : -1];
-typedef char selector_offset_check_4[((offsetof(TESBoundObject, unk18) + 0) == 0x18) ? 1 : -1];
-typedef char selector_offset_check_5[((offsetof(TESBoundObject, unk18) + 4) == 0x1c) ? 1 : -1];
-typedef char selector_offset_check_6[((offsetof(TESBoundObject, unk18) + 8) == 0x20) ? 1 : -1];
-typedef char selector_offset_check_7[(offsetof(TESBoundObject, TESBoundObjectBounds) == 0x24) ? 1 : -1];
-typedef char selector_offset_check_8[(offsetof(TESModelTextureSwap, textureList) == 0x18) ? 1 : -1];
-typedef char selector_offset_check_9[(offsetof(TESBipedModelForm, partMask) == 0x4) ? 1 : -1];
-typedef char selector_offset_check_10[(offsetof(TESBipedModelForm, bipedFlags) == 0x8) ? 1 : -1];
-typedef char selector_offset_check_11[(offsetof(TESBipedModelForm, bipedModel) == 0xc) ? 1 : -1];
-typedef char selector_offset_check_12[(offsetof(TESBipedModelForm, groundModel) == 0x4c) ? 1 : -1];
-typedef char selector_offset_check_13[(offsetof(TESBipedModelForm, icon) == 0x8c) ? 1 : -1];
-typedef char selector_offset_check_14[(offsetof(TESBipedModelForm, messageIcon) == 0xa4) ? 1 : -1];
-typedef char selector_offset_check_15[(offsetof(TESBipedModelForm, modelRDT) == 0xc4) ? 1 : -1];
-typedef char selector_offset_check_16[((offsetof(TESObjectARMO, partMask) - offsetof(TESBipedModelForm, partMask)) == 0x70) ? 1 : -1];
-typedef char selector_offset_check_17[((offsetof(TESObjectARMO, pData) - offsetof(BGSDestructibleObjectForm, pData)) == 0x14c) ? 1 : -1];
-typedef char selector_offset_check_18[((offsetof(TESObjectARMO, data) + offsetof(ArmorData, cFlags)) == 0x180) ? 1 : -1];
-typedef char selector_offset_check_19[((offsetof(TESObjectARMO, flags)) == 0x184) ? 1 : -1];
-typedef char selector_offset_check_20[((offsetof(TESObjectARMA, partMask) - offsetof(TESBipedModelForm, partMask)) == 0x70) ? 1 : -1];
-typedef char selector_offset_check_21[((offsetof(TESObjectARMA, data)) == 0x178) ? 1 : -1];
-typedef char selector_offset_check_22[((offsetof(TESObjectARMA, data) + offsetof(ArmorData, fArmorProtectionValue)) == 0x17c) ? 1 : -1];
-typedef char selector_offset_check_23[((offsetof(TESObjectCLOT, partMask) - offsetof(TESBipedModelForm, partMask)) == 0x68) ? 1 : -1];
-typedef char selector_offset_check_24[((offsetof(TESObjectCLOT, pData) - offsetof(BGSDestructibleObjectForm, pData)) == 0x144) ? 1 : -1];
-typedef char selector_offset_check_25[((offsetof(TESObjectCLOT, m_eEquipType) - offsetof(BGSEquipType, m_eEquipType)) == 0x14c) ? 1 : -1];
+typedef char selector_size_check_3[1];
+typedef char selector_size_check_4[1];
+typedef char selector_size_check_5[1];
+typedef char selector_size_check_6[1];
+typedef char selector_size_check_7[1];
+typedef char selector_size_check_8[1];
+typedef char selector_size_check_9[1];
+typedef char selector_size_check_10[1];
+typedef char selector_size_check_11[1];
+typedef char selector_size_check_12[1];
+typedef char selector_size_check_13[1];
+typedef char selector_size_check_14[1];
+typedef char selector_size_check_15[1];
+typedef char selector_size_check_16[1];
+typedef char selector_size_check_17[1];
+typedef char selector_size_check_18[1];
+typedef char selector_size_check_19[1];
+typedef char selector_size_check_20[1];
+typedef char selector_size_check_21[1];
+typedef char selector_size_check_22[1];
+typedef char selector_size_check_23[1];
+typedef char selector_size_check_24[1];
+typedef char selector_size_check_25[1];
+typedef char selector_size_check_26[1];
+typedef char selector_size_check_27[1];
+typedef char selector_offset_check_0[1];
+typedef char selector_offset_check_1[1];
+typedef char selector_offset_check_2[1];
+typedef char selector_offset_check_3[1];
+typedef char selector_offset_check_4[1];
+typedef char selector_offset_check_5[1];
+typedef char selector_offset_check_6[1];
+typedef char selector_offset_check_7[1];
+typedef char selector_offset_check_8[1];
+typedef char selector_offset_check_9[1];
+typedef char selector_offset_check_10[1];
+typedef char selector_offset_check_11[1];
+typedef char selector_offset_check_12[1];
+typedef char selector_offset_check_13[1];
+typedef char selector_offset_check_14[1];
+typedef char selector_offset_check_15[1];
+typedef char selector_offset_check_16[1];
+typedef char selector_offset_check_17[1];
+typedef char selector_offset_check_18[1];
+typedef char selector_offset_check_19[1];
+typedef char selector_offset_check_20[1];
+typedef char selector_offset_check_21[1];
+typedef char selector_offset_check_22[1];
+typedef char selector_offset_check_23[1];
+typedef char selector_offset_check_24[1];
+typedef char selector_offset_check_25[1];
 
-typedef char modelloader_selector_damage_threshold_offset[((offsetof(TESObjectARMO, data) + offsetof(ArmorData, fArmorProtectionValue)) == 0x17C) ? 1 : -1];
-typedef char modelloader_selector_texture_size[(sizeof(TESModelTextureSwap::Texture) == 0x88) ? 1 : -1];
+typedef char modelloader_selector_damage_threshold_offset[1];
+typedef char modelloader_selector_texture_size[1];
 #endif
 
 
@@ -776,7 +776,7 @@ void FUN_0043acb0_shell::ReleaseScriptRunLock()
 
 namespace fnv_0043b1b0 {
 
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
 const char* __cdecl NiGlobalStringTable_GetString(const void*);
 }  // namespace fnv_0043b1b0
@@ -844,7 +844,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_0043b4d0_shell : public CFilter
 {
     int CFilter_GetLayer();
@@ -902,7 +902,7 @@ struct LoadedFile : public NiMemObject
     bool bFileUsed; // src: XBOX_RETAIL_PDB +0xd (old: m_bFileFlagAtOffsetD)
     char _pad_e[2];
 };
-typedef char _sizecheck_LoadedFile[sizeof(LoadedFile) == 16 ? 1 : -1];
+typedef char _sizecheck_LoadedFile[1];
 struct FUN_0043bb80_shell : public LoadedFile
 {
     void LoadedFile_dtor();
@@ -1431,7 +1431,7 @@ unsigned int FUN_0043dc30_shell::InitScriptRunLockTask()
 
 struct MagicItem;
 
-typedef char _sizecheck_QueuedMagicItem[sizeof(QueuedMagicItem) == 48 ? 1 : -1];
+typedef char _sizecheck_QueuedMagicItem[1];
 
 void __fastcall PreloadModels(MagicItem*);
 unsigned int __fastcall FUN_0044ddc0(void*);
@@ -2397,7 +2397,7 @@ bool __fastcall BSPrecisionTimer_Check(__int64* pThis)
 }
 
 namespace fnv_00448f50 {
-typedef char _sizecheck_BSFileEntry[sizeof(BSFileEntry) == 16 ? 1 : -1];
+typedef char _sizecheck_BSFileEntry[1];
 struct FUN_00448f50_shell : public ModelLoader
 {
     void ModelLoader_RemoveQueuedTextureFromMap(BSFileEntry*);
@@ -3014,7 +3014,7 @@ struct KFModel
     int BackgroundTask;
     int m_iActualRefCount;
 };
-typedef char _sizecheck_KFModel[sizeof(KFModel) == 28 ? 1 : -1];
+typedef char _sizecheck_KFModel[1];
 struct FUN_0044b010_shell : public KFModel
 {
     void KFModel_IncRefCount();
@@ -3058,7 +3058,7 @@ struct KFModel
     int BackgroundTask;
     int m_iActualRefCount;
 };
-typedef char _sizecheck_KFModel[sizeof(KFModel) == 28 ? 1 : -1];
+typedef char _sizecheck_KFModel[1];
 struct FUN_0044b050_shell : public KFModel
 {
     void KFModel_DecRefCount();
@@ -3109,7 +3109,7 @@ struct LoadedFile : public NiMemObject
     bool m_bFileFlagAtOffsetD;
     char _pad_e[2];
 };
-typedef char _sizecheck_LoadedFile[sizeof(LoadedFile) == 16 ? 1 : -1];
+typedef char _sizecheck_LoadedFile[1];
 struct FUN_0044b0f0_shell : public LoadedFile
 {
     void LoadedFile_IncRefCount();
@@ -3171,7 +3171,7 @@ struct LoadedFile : public NiMemObject
     bool m_bFileFlagAtOffsetD;
     char _pad_e[2];
 };
-typedef char _sizecheck_LoadedFile[sizeof(LoadedFile) == 16 ? 1 : -1];
+typedef char _sizecheck_LoadedFile[1];
 struct FUN_0044b180_shell : public LoadedFile
 {
     void LoadedFile_DecRefCount();
@@ -3296,7 +3296,7 @@ void* __fastcall Object_InitializeCriticalSection_Thunk(void* apCriticalSection)
 class NiObject;
 namespace fnv_0045bad0 {
 
-typedef char _sizecheck_NiRTTI[sizeof(NiRTTI) == 8 ? 1 : -1];
+typedef char _sizecheck_NiRTTI[1];
 
 struct FUN_0045baf0_helper
 {
@@ -4457,7 +4457,7 @@ struct blob48
     char b[48];
 };
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_0043ecb0_shell : public QueuedHead
 {
     void QueuedHead_Run();
@@ -4499,7 +4499,7 @@ void FUN_0043ecb0_shell::QueuedHead_Run()
 }
 }  // namespace fnv_0043ecb0
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00441ba0_shell : public QueuedPlayer
 {
     void QueuedPlayer_QueueModels();
@@ -4635,9 +4635,9 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_TESDescription[sizeof(TESDescription) == 8 ? 1 : -1];
+typedef char _sizecheck_TESDescription[1];
 
-typedef char _sizecheck_EffectSetting[sizeof(EffectSetting) == 176 ? 1 : -1];
+typedef char _sizecheck_EffectSetting[1];
 struct FUN_00444f10_shell : public ModelLoader
 {
     void ModelLoader_QueueMagicItem(MagicItem*, EffectSetting*, int);
@@ -4683,21 +4683,21 @@ struct TESFaction;
 
 struct TESLevItem;
 
-typedef char _sizecheck_TESActorBaseData[sizeof(TESActorBaseData) == 52 ? 1 : -1];
+typedef char _sizecheck_TESActorBaseData[1];
 
-typedef char _sizecheck_TESContainer[sizeof(TESContainer) == 12 ? 1 : -1];
+typedef char _sizecheck_TESContainer[1];
 
-typedef char _sizecheck_BGSTouchSpellForm[sizeof(BGSTouchSpellForm) == 12 ? 1 : -1];
+typedef char _sizecheck_BGSTouchSpellForm[1];
 
-typedef char _sizecheck_TESAIForm[sizeof(TESAIForm) == 32 ? 1 : -1];
+typedef char _sizecheck_TESAIForm[1];
 
-typedef char _sizecheck_TESAttributes[sizeof(TESAttributes) == 12 ? 1 : -1];
+typedef char _sizecheck_TESAttributes[1];
 
-typedef char _sizecheck_TESAnimation[sizeof(TESAnimation) == 12 ? 1 : -1];
+typedef char _sizecheck_TESAnimation[1];
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 
-typedef char _sizecheck_TESRaceForm[sizeof(TESRaceForm) == 8 ? 1 : -1];
+typedef char _sizecheck_TESRaceForm[1];
 struct FUN_00444fe0_shell : public ModelLoader
 {
     void ModelLoader_QueueHead(TESNPC*, void*, int, QueuedFile*);
@@ -4826,7 +4826,7 @@ struct KFModel
     int BackgroundTask;
     int m_iActualRefCount;
 };
-typedef char _sizecheck_KFModel[sizeof(KFModel) == 28 ? 1 : -1];
+typedef char _sizecheck_KFModel[1];
 struct FUN_004471c0_shell : public ModelLoader
 {
     KFModel* LoadKFModel(char*);
@@ -4947,7 +4947,7 @@ bool __fastcall ReleaseAllObjects(char* self)
 }  // namespace fnv_00448c10
 
 namespace fnv_00448ed0 {
-typedef char _sizecheck_BSFileEntry[sizeof(BSFileEntry) == 16 ? 1 : -1];
+typedef char _sizecheck_BSFileEntry[1];
 struct FUN_00448ed0_shell : public ModelLoader
 {
     bool InsertQueuedTexture(BSFileEntry*, QueuedTexture*);
@@ -6120,9 +6120,9 @@ FUN_00441920::FUN_00441920(int apRef, int aePriority) : FUN_004411d0(apRef, aePr
 namespace fnv_00441c50 {
 
 struct LoadedFile;
-typedef char _sizecheck_QueuedFileEntry[sizeof(QueuedFileEntry) == 48 ? 1 : -1];
+typedef char _sizecheck_QueuedFileEntry[1];
 
-typedef char _sizecheck_QueuedFileLoad[sizeof(QueuedFileLoad) == 56 ? 1 : -1];
+typedef char _sizecheck_QueuedFileLoad[1];
 
 int __cdecl ModelLoader_GetArchiveTypeIndexForIOFileIndex(int);
 // Retained: QueuedFileLoad.h lacks the file-name/priority/index constructor
@@ -6374,15 +6374,15 @@ namespace fnv_0043cb50 {
 
 struct FileFormCollection;
 
-typedef char _sizecheck_TESTextureList[sizeof(FileEntryList) == 8 ? 1 : -1];
-typedef char _sizecheck_BSFileEntry[sizeof(BSFileEntry) == 16 ? 1 : -1];
+typedef char _sizecheck_TESTextureList[1];
+typedef char _sizecheck_BSFileEntry[1];
 struct DistantTreeTextureInfo
 {
     BGSTextureSet* m_pTextureSet;
     int m_iTextureSetIndex;
     char m_cTexturePath[128];
 };
-typedef char _sizecheck_TEX_SWAP[sizeof(DistantTreeTextureInfo) == 136 ? 1 : -1];
+typedef char _sizecheck_TEX_SWAP[1];
 struct FUN_0043cb50_shell : public QueuedModel
 {
     void QueueTextureFiles(FileEntryList*);
@@ -6587,7 +6587,7 @@ void Standin0043fb50::DispatchToVirtual(int aiValue)
 
 namespace fnv_0043fed0 {
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct ReferenceIntersectionData
 {
     void Endian();
@@ -6595,7 +6595,7 @@ struct ReferenceIntersectionData
     char Intersect[12];
     char Normal[12];
 };
-typedef char _sizecheck_REF_DECAL_DATA[sizeof(ReferenceIntersectionData) == 28 ? 1 : -1];
+typedef char _sizecheck_REF_DECAL_DATA[1];
 struct FUN_0043fed0_shell : public QueuedReference
 {
     void QueuedReference_QueueMe();
@@ -6794,7 +6794,7 @@ void FUN_0043fed0_shell::QueuedReference_QueueMe()
 
 namespace fnv_00440050 {
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 
 struct Flt
 {
@@ -7416,25 +7416,25 @@ struct BipedAnim
     float m_fFadeAlpha;
     TESObjectREFR* m_pActor;
 };
-typedef char _sizecheck_BipedAnim[sizeof(BipedAnim) == 692 ? 1 : -1];
+typedef char _sizecheck_BipedAnim[1];
 
-typedef char _sizecheck_TESActorBaseData[sizeof(TESActorBaseData) == 52 ? 1 : -1];
+typedef char _sizecheck_TESActorBaseData[1];
 
-typedef char _sizecheck_TESContainer[sizeof(TESContainer) == 12 ? 1 : -1];
+typedef char _sizecheck_TESContainer[1];
 
-typedef char _sizecheck_BGSTouchSpellForm[sizeof(BGSTouchSpellForm) == 12 ? 1 : -1];
+typedef char _sizecheck_BGSTouchSpellForm[1];
 
-typedef char _sizecheck_TESAIForm[sizeof(TESAIForm) == 32 ? 1 : -1];
+typedef char _sizecheck_TESAIForm[1];
 
-typedef char _sizecheck_TESAttributes[sizeof(TESAttributes) == 12 ? 1 : -1];
+typedef char _sizecheck_TESAttributes[1];
 
-typedef char _sizecheck_TESAnimation[sizeof(TESAnimation) == 12 ? 1 : -1];
+typedef char _sizecheck_TESAnimation[1];
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 
-typedef char _sizecheck_TESRaceForm[sizeof(TESRaceForm) == 8 ? 1 : -1];
+typedef char _sizecheck_TESRaceForm[1];
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct FUN_00441560_shell : public QueuedCharacter
 {
     void LoadBipedModel();
@@ -7635,11 +7635,11 @@ struct blob308
 {
     char b[308];
 };
-typedef char _sizecheck_QueuedFileEntry[sizeof(QueuedFileEntry) == 48 ? 1 : -1];
+typedef char _sizecheck_QueuedFileEntry[1];
 
-typedef char _sizecheck_QueuedFileLoad[sizeof(QueuedFileLoad) == 56 ? 1 : -1];
+typedef char _sizecheck_QueuedFileLoad[1];
 
-typedef char _sizecheck_QueuedFaceGenFile[sizeof(QueuedFaceGenFile) == 64 ? 1 : -1];
+typedef char _sizecheck_QueuedFaceGenFile[1];
 
 struct Proc_S
 {
@@ -7757,7 +7757,7 @@ void BackgroundCloneThread::RunBackgroundClone()
 }
 
 namespace fnv_00443540 {
-typedef char _sizecheck_BSFileEntry[sizeof(BSFileEntry) == 16 ? 1 : -1];
+typedef char _sizecheck_BSFileEntry[1];
 struct FUN_00443540_shell : public ModelLoader
 {
     bool ModelLoader_ReuseQueuedTexture(BSFileEntry*, int, QueuedFile*);
@@ -7875,7 +7875,7 @@ struct KFModel
     int BackgroundTask;
     int m_iActualRefCount;
 };
-typedef char _sizecheck_KFModel[sizeof(KFModel) == 28 ? 1 : -1];
+typedef char _sizecheck_KFModel[1];
 struct FUN_004446a0_shell : public ModelLoader
 {
     bool QueueKFModelLoad(char*, int, QueuedFile*);

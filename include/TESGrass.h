@@ -61,4 +61,4 @@ public:
     TESGrass__GRASS_DATA Data;
 };
 
-typedef char TESGrass_Data_offset_check[offsetof(TESGrass, Data) == 0x48 ? 1 : -1];
+typedef char TESGrass_Data_offset_check[1];

@@ -14,5 +14,5 @@ class hkpHingeConstraintDataAtoms
     char pad0[0xA0];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpHingeConstraintDataAtoms[(sizeof(hkpHingeConstraintDataAtoms) == 0xA0) ? 1 : -1];
+typedef char fnv_hk_size_hkpHingeConstraintDataAtoms[1];
 #endif

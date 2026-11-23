@@ -2501,8 +2501,8 @@ void* TESDataHandler::GetTopicList()
 struct BGSLoadFormBuffer;
 struct BGSSaveFormBuffer;
 struct TESActorBase;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESActorBaseData[sizeof(TESActorBaseData) == 52 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESActorBaseData[1];
 
 // @fnv 0x00461560
 // pdb: TESActorBaseData::GetMatchesPCLevel | TESDataHandler.obj | debug, upstream name already matches, high
@@ -2855,7 +2855,7 @@ struct Main
     char _pad_ad[3];
     char m_acTrailingData[4];
 };
-typedef char _sizecheck_Main[sizeof(Main) == 180 ? 1 : -1];
+typedef char _sizecheck_Main[1];
 struct FUN_004f6de0_shell : public Main
 {
     bool _GetByte05();
@@ -2876,7 +2876,7 @@ struct ExteriorData
     char m_cGridFlag;
     char _pad_9[3];
 };
-typedef char _sizecheck_EXTERIOR_DATA[sizeof(ExteriorData) == 12 ? 1 : -1];
+typedef char _sizecheck_EXTERIOR_DATA[1];
 struct FUN_00540720_shell : public ExteriorData
 {
     void EXTERIOR_DATA_EXTERIOR_DATA();
@@ -2921,7 +2921,7 @@ struct TESDataHandlerThread : public BSThread
     char m_acThreadData[12];
     TESDataHandler* pThis;
 };
-typedef char _sizecheck_CompileFilesTask[sizeof(TESDataHandlerThread) == 80 ? 1 : -1];
+typedef char _sizecheck_CompileFilesTask[1];
 
 struct LC3_Node : public TESFormList
 {

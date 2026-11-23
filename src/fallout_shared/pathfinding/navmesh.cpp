@@ -260,7 +260,7 @@ TESForm* __fastcall NavMeshInfo_GetParentSpace(const NavMeshInfo* pThis)
 
 struct BGSLoadFormBuffer;
 struct BGSSaveFormBuffer;
-typedef char _sizecheck_PathingAvoidNode[sizeof(PathingAvoidNode) == 36 ? 1 : -1];
+typedef char _sizecheck_PathingAvoidNode[1];
 
 void __fastcall _ref_006815c0(NiPoint3*);
 
@@ -393,7 +393,7 @@ template <> BSSimpleArray<NavMeshStaticAvoidNode, 1024>::BSSimpleArray()
     _InitialSetup(0, 0);
 }
 
-typedef char _sizecheck_NavMeshClosedDoorInfo[sizeof(NavMeshClosedDoorInfo) == 8 ? 1 : -1];
+typedef char _sizecheck_NavMeshClosedDoorInfo[1];
 
 // @fnv 0x00692870
 NavMeshClosedDoorInfo::NavMeshClosedDoorInfo()

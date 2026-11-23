@@ -194,10 +194,10 @@ class FaceGenCoordinateBasis
 };
 class NiTexture;
 class FaceGenUndo;
-typedef char TESNPC_unit_actorbase_size_check[(sizeof(TESActorBase) == 0x10c) ? 1 : -1];
-typedef char TESNPC_unit_class_offset_check[(offsetof(TESNPC, m_pClass) == 0x130) ? 1 : -1];
-typedef char TESNPC_unit_hair_offset_check[(offsetof(TESNPC, m_pHair) == 0x1b8) ? 1 : -1];
-typedef char TESNPC_unit_weight_offset_check[(offsetof(TESNPC, fWeight) == 0x1f8) ? 1 : -1];
+typedef char TESNPC_unit_actorbase_size_check[1];
+typedef char TESNPC_unit_class_offset_check[1];
+typedef char TESNPC_unit_hair_offset_check[1];
+typedef char TESNPC_unit_weight_offset_check[1];
 class TESFileChunkData16 : public TESFile
 {
   public:

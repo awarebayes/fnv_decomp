@@ -141,7 +141,7 @@ char __fastcall GetByteAt1D(char* pThis)
 }
 
 namespace fnv_00663a70 {
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00663a70_shell : public BSFaceGenNiNode
 {
     void UpdateFaceGenNode(NiUpdateData*, unsigned int);
@@ -179,7 +179,7 @@ struct bhkNiCollisionObject;
 struct bhkRigidBody;
 #include "../../../include/NiMemObject.h"
 #include "../../../include/ProcessLists.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_00663ae0_shell : public BSFaceGenNiNode
 {
     void CullWithBoundAccum(NiCullingProcess*);

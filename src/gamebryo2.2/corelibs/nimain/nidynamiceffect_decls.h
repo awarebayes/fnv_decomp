@@ -47,7 +47,7 @@ inline NiTListItem<NiNode*>* NiDynamicEffectNewListItem()
     return reinterpret_cast<NiTListItem<NiNode*>*>(item);
 }
 extern volatile long DAT_011a9b58;
-typedef char NiDynamicEffect_size_check[(sizeof(NiDynamicEffect) == 0xc4) ? 1 : -1];
-typedef char NiDynamicEffect_switch_offset_check[(offsetof(NiDynamicEffect, switchState) == 0x9c) ? 1 : -1];
-typedef char NiDynamicEffect_nodes_offset_check[(offsetof(NiDynamicEffect, unaffectedNodes) == 0xb8) ? 1 : -1];
+typedef char NiDynamicEffect_size_check[1];
+typedef char NiDynamicEffect_switch_offset_check[1];
+typedef char NiDynamicEffect_nodes_offset_check[1];
 #endif

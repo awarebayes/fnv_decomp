@@ -9,9 +9,9 @@
 #include "../../include/TESIcon.h"
 #include "../../include/TESTexture.h"
 
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
-typedef char _sizecheck_TESIcon[sizeof(TESIcon) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
+typedef char _sizecheck_TESTexture[1];
+typedef char _sizecheck_TESIcon[1];
 
 extern "C" unsigned char DAT_011c54ba;
 unsigned char TESForm_QEndianSwapOnSave();

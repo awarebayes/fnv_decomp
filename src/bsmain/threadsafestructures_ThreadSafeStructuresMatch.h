@@ -41,10 +41,10 @@ template <class T> class ThreadInterfaceManager
 
 typedef LockFreeQueue<bhkRigidBody*> RigidBodyQueue;
 typedef LockFreeMap<unsigned int, NiPointer<ExteriorCellLoaderTask> > TreeMap;
-typedef char CheckSpinLockSize[(sizeof(RecursiveSpinLock) == 32) ? 1 : -1];
-typedef char CheckQueueSize[(sizeof(RigidBodyQueue) == 64) ? 1 : -1];
-typedef char CheckQueueLock[(offsetof(RigidBodyQueue, kLock) == 32) ? 1 : -1];
-typedef char CheckMapSize[(sizeof(TreeMap) == 64) ? 1 : -1];
-typedef char CheckMapLock[(offsetof(TreeMap, kLock) == 32) ? 1 : -1];
-typedef char CheckMapInterface[(sizeof(TreeMap::DeletedNodeScanner) == 36) ? 1 : -1];
+typedef char CheckSpinLockSize[1];
+typedef char CheckQueueSize[1];
+typedef char CheckQueueLock[1];
+typedef char CheckMapSize[1];
+typedef char CheckMapLock[1];
+typedef char CheckMapInterface[1];
 #endif

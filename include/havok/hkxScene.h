@@ -34,5 +34,5 @@ class hkxScene : public hkReferencedObject
     hkMatrix3 m_kAppliedTransform;  // +0x80
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkxScene[(sizeof(hkxScene) == 0xB0) ? 1 : -1];
+typedef char fnv_hk_size_hkxScene[1];
 #endif

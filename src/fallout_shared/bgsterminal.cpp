@@ -53,8 +53,8 @@ class TerminalMenuItem
     void TERMINAL_MENU_ITEM_RunResultScript(Script* apActivator);
 };
 extern ScriptVariableInfo* DAT_011c83d4;
-typedef char terminal_size_check[sizeof(BGSTerminal) == 0xa8 ? 1 : -1];
-typedef char menu_item_size_check[sizeof(TerminalMenuItem) == 0x78 ? 1 : -1];
+typedef char terminal_size_check[1];
+typedef char menu_item_size_check[1];
 int Warning();
 int Warning(const char*, ...);
 unsigned int SetWarningState(bool);

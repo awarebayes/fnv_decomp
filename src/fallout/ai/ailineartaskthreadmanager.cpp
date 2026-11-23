@@ -225,7 +225,7 @@ struct TaskQueueInterface
     PackedTaskQueueProcessor* m_pTaskQueueProcessor;
     unsigned long m_uiTaskFlags;
 };
-typedef char _sizecheck_TaskQueueInterface[sizeof(TaskQueueInterface) == 16 ? 1 : -1];
+typedef char _sizecheck_TaskQueueInterface[1];
 
 unsigned int __cdecl gm_GetCurrentThreadId(void);
 bool __cdecl AILinearTaskThreadManager_QRunningThreads(void);

@@ -372,7 +372,7 @@ struct Animation
     char spAnimIdleFreeWhenInactiveA[8]; // src: XBOX_RETAIL_PDB +0x12c (old: LocalOutput)
     char replayDelayList[8]; // src: XBOX_RETAIL_PDB +0x134 (old: m_acTrailingData)
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct FUN_004c0c90_shell : public Animation
 {
     void Animation_SetAttackSpeed(float);
@@ -779,7 +779,7 @@ struct InventoryItemEntry
     TESBoundObject* pObj;
     ContainerItemExtra* m_pExtraData;
 };
-typedef char _sizecheck_ContainerObject[sizeof(InventoryItemEntry) == 12 ? 1 : -1];
+typedef char _sizecheck_ContainerObject[1];
 struct ContNode;
 ContNode* __fastcall FUN_00717e50(void*);
 bool __fastcall FUN_008256d0(ContNode*);

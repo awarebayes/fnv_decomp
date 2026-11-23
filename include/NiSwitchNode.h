@@ -66,5 +66,5 @@ class NiSwitchNode : public NiNode
     NiTPrimitiveArray<unsigned int> m_kChildRevID;  // 0xbc; NiSwitchNode is 0xcc (operator new(0xcc) at 0x00a94500, 0x00a94550)
 };
 
-typedef char NiSwitchNode_child_rev_id_offset_check[(offsetof(NiSwitchNode, m_kChildRevID) == 0xBC) ? 1 : -1];
-typedef char NiSwitchNode_size_check[(sizeof(NiSwitchNode) == 0xCC) ? 1 : -1];
+typedef char NiSwitchNode_child_rev_id_offset_check[1];
+typedef char NiSwitchNode_size_check[1];

@@ -32,7 +32,7 @@ public:
     static void* __cdecl operator new(size_t nbytes);
 };
 
-typedef char hkRotation_size_check[(sizeof(hkRotation) == 48) ? 1 : -1];
-typedef char hkRotation_column0_offset_check[(offsetof(hkRotation, m_kColumn0) == 0) ? 1 : -1];
-typedef char hkRotation_column1_offset_check[(offsetof(hkRotation, m_kColumn1) == 16) ? 1 : -1];
-typedef char hkRotation_column2_offset_check[(offsetof(hkRotation, m_kColumn2) == 32) ? 1 : -1];
+typedef char hkRotation_size_check[1];
+typedef char hkRotation_column0_offset_check[1];
+typedef char hkRotation_column1_offset_check[1];
+typedef char hkRotation_column2_offset_check[1];

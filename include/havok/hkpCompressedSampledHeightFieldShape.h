@@ -19,5 +19,5 @@ class hkpCompressedSampledHeightFieldShape : public hkpSampledHeightFieldShape
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpCompressedSampledHeightFieldShape[(sizeof(hkpCompressedSampledHeightFieldShape) == 0x80) ? 1 : -1];
+    fnv_hk_size_hkpCompressedSampledHeightFieldShape[1];
 #endif

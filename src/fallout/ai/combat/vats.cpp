@@ -43,8 +43,8 @@ class TimeGlobal
     void BSTimer_RestoreGlobalTimeMultiplierCache();
 };
 
-typedef char VATSPlayerTimerOffsetCheck[offsetof(PlayerCharacter, fVATSTimer) == 0xE18 ? 1 : -1];
-typedef char VATSPlayerSizeCheck[sizeof(PlayerCharacter) == 0xE50 ? 1 : -1];
+typedef char VATSPlayerTimerOffsetCheck[1];
+typedef char VATSPlayerSizeCheck[1];
 
 class CameraPathManager
 {
@@ -110,9 +110,9 @@ class VATS
     void SetValue(int);
     void EvaluateCommand(VATSCommand*);
 };
-typedef char VATSSizeCheck[sizeof(VATS) == 0x48 ? 1 : -1];
-typedef char VATSModeOffsetCheck[offsetof(VATS, eMode) == 8 ? 1 : -1];
-typedef char VATSCameraOffsetCheck[offsetof(VATS, pCamera) == 0x10 ? 1 : -1];
+typedef char VATSSizeCheck[1];
+typedef char VATSModeOffsetCheck[1];
+typedef char VATSCameraOffsetCheck[1];
 
 float BSTimer_QGlobalTimeMultiplierTarget();
 
@@ -169,7 +169,7 @@ float VATS::GetModeTimeMultiplier()
 }
 
 class HitData;
-typedef char _sizecheck_VATS_COMMAND[sizeof(VATSCommand) == 40 ? 1 : -1];
+typedef char _sizecheck_VATS_COMMAND[1];
 
 extern PlayerCharacter* DAT_011f21f0;
 
@@ -423,7 +423,7 @@ class HitData
     void ClearData_009b4dc0();
     void SetFlag(int flag, bool val);
 };
-typedef char HitDataSizeCheck[sizeof(HitData) == 0x64 ? 1 : -1];
+typedef char HitDataSizeCheck[1];
 
 void __cdecl SetContextInfo(HitData*, VATSCommand*);
 

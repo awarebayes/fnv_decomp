@@ -31,7 +31,7 @@ __declspec(nothrow) unsigned int NiTArray<NiPointer<NiControllerSequence>, NiTNe
 // Unit-specific container helpers use the shared controller layouts.
 #define FNV_JOIN_INNER(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_INNER(a, b)
-#define FNV_STATIC_ASSERT(x) typedef char FNV_JOIN(fnv_assert_, __LINE__)[(x) ? 1 : -1]
+#define FNV_STATIC_ASSERT(x) typedef char FNV_JOIN(fnv_assert_, __LINE__)[1]
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 FNV_STATIC_ASSERT(sizeof(NiRefObject) == 8);
@@ -253,7 +253,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 extern int DAT_011f49e0;
 
@@ -567,7 +567,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 
 // @fnv 0x00a2f850

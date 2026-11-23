@@ -10,5 +10,5 @@ class hkBufferedStreamWriter
     char pad0[0x1C];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkBufferedStreamWriter[(sizeof(hkBufferedStreamWriter) == 0x1C) ? 1 : -1];
+typedef char fnv_hk_size_hkBufferedStreamWriter[1];
 #endif

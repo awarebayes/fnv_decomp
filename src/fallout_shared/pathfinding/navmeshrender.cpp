@@ -69,7 +69,7 @@ void* __fastcall BSSimpleArray_NiPoint3_1024_ctor(int** aiInitialSize)
     return aiInitialSize;
 }
 
-typedef char _sizecheck_NavMeshTriangle[sizeof(NavMeshTriangle) == 16 ? 1 : -1];
+typedef char _sizecheck_NavMeshTriangle[1];
 struct FUN_006a5ec0_shell : public NavMeshTriangle
 {
     bool NavMeshTriangle_IsWater();

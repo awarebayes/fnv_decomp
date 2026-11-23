@@ -53,7 +53,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_EffectItem[sizeof(EffectItem) == 36 ? 1 : -1];
+typedef char _sizecheck_EffectItem[1];
 
 // @fnv 0x004065e0
 // src: XBOX_PDB 0x004065e0

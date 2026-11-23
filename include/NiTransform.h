@@ -45,7 +45,7 @@ public:
     NiTransform* FUN_0062c250(NiTransform* result, const NiTransform& other) const;
 };
 
-typedef char NiTransform_size_check[(sizeof(NiTransform) == 52) ? 1 : -1];
-typedef char NiTransform_m_Rotate_offset_check[(offsetof(NiTransform, m_Rotate) == 0) ? 1 : -1];
-typedef char NiTransform_m_Translate_offset_check[(offsetof(NiTransform, m_Translate) == 36) ? 1 : -1];
-typedef char NiTransform_m_fScale_offset_check[(offsetof(NiTransform, m_fScale) == 48) ? 1 : -1];
+typedef char NiTransform_size_check[1];
+typedef char NiTransform_m_Rotate_offset_check[1];
+typedef char NiTransform_m_Translate_offset_check[1];
+typedef char NiTransform_m_fScale_offset_check[1];

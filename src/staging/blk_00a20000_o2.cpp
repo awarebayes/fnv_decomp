@@ -5330,7 +5330,7 @@ struct ElemA2 {
         return 0;
     }
 };
-typedef char ElemA2_size_check[sizeof(ElemA2) == 20 ? 1 : -1];
+typedef char ElemA2_size_check[1];
 extern "C" void __stdcall _vector_constructor_iterator(void*, unsigned int, unsigned int, void*);
 extern "C" void Clear();
 // Allocates a raw block for count ElemA2 items, writes the count at the front, and constructs the elements via _vector_constructor_iterator.

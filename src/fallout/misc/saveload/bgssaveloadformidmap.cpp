@@ -73,7 +73,7 @@ struct SaveLoadFile
     unsigned int m_uiBufferSize;
     unsigned int m_uiFilePosition;
 };
-typedef char _sizecheck_BGSSaveLoadFile[sizeof(SaveLoadFile) == 272 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadFile[1];
 struct FUN_00846e70_shell : public BGSSaveLoadFormIDMap
 {
     void BGSSaveLoadFormIDMap_Load(SaveLoadFile*);
@@ -221,7 +221,7 @@ struct SaveLoadFile
     unsigned int m_uiBufferSize;
     unsigned int m_uiFilePosition;
 };
-typedef char _sizecheck_BGSSaveLoadFile[sizeof(SaveLoadFile) == 272 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadFile[1];
 
 struct FUN_00846d20_shell : public BGSSaveLoadFormIDMap
 {

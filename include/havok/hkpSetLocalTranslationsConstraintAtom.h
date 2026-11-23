@@ -16,5 +16,5 @@ class hkpSetLocalTranslationsConstraintAtom : public hkpConstraintAtom
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpSetLocalTranslationsConstraintAtom[(sizeof(hkpSetLocalTranslationsConstraintAtom) == 0x30) ? 1 : -1];
+    fnv_hk_size_hkpSetLocalTranslationsConstraintAtom[1];
 #endif

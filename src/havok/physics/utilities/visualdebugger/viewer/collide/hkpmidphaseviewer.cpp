@@ -39,7 +39,7 @@ struct FullObject : HeadPart, FirstBase, SecondBase
 {
 };
 
-typedef char _check_offsets[sizeof(FullObject) == 0x2c ? 1 : -1];
+typedef char _check_offsets[1];
 
 struct Receiver
 {

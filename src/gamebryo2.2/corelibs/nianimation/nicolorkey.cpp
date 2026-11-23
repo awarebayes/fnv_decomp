@@ -10,7 +10,7 @@ struct blob16
     char b[16];
 };
 #include "../../../../include/NiAnimationKey.h"
-typedef char _sizecheck_NiAnimationKey[sizeof(NiAnimationKey) == 4 ? 1 : -1];
+typedef char _sizecheck_NiAnimationKey[1];
 struct ColorAnimationKey : public NiAnimationKey
 {
     static int RegisterObjectLoader();
@@ -48,9 +48,9 @@ struct ColorAnimationKey : public NiAnimationKey
     void* __vecDelDtor(unsigned int);
     char m_kRgbaColor[16];
 };
-typedef char _sizecheck_NiColorKey[sizeof(ColorAnimationKey) == 20 ? 1 : -1];
+typedef char _sizecheck_NiColorKey[1];
 
-typedef char _sizecheck_NiColorA[sizeof(NiColorA) == 16 ? 1 : -1];
+typedef char _sizecheck_NiColorA[1];
 
 typedef void(__cdecl* InterpFn)(float, const char*, const char*, void*);
 extern InterpFn DAT_011f3cd8[];

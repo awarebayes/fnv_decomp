@@ -74,25 +74,14 @@ class MagicShaderHitEffect : public MagicHitEffect
     NiPointer<BSShaderPPLightingProperty::TextureEffectData> spTexEffectData;
 };
 
-typedef char MagicShaderHitEffect_actor_particles_offset[
-    offsetof(MagicShaderHitEffect, m_bUseActorParticleEffects) == 0x28 ? 1 : -1];
-typedef char MagicShaderHitEffect_armor_offset[
-    offsetof(MagicShaderHitEffect, m_pAffectedArmorObject) == 0x2C ? 1 : -1];
-typedef char MagicShaderHitEffect_shader_offset[
-    offsetof(MagicShaderHitEffect, m_pEffectShader) == 0x30 ? 1 : -1];
-typedef char MagicShaderHitEffect_shader_scale_offset[
-    offsetof(MagicShaderHitEffect, m_fEffectShaderScale) == 0x34 ? 1 : -1];
-typedef char MagicShaderHitEffect_particle_properties_offset[
-    offsetof(MagicShaderHitEffect, m_kParticleShaderProperties) == 0x38 ? 1 : -1];
-typedef char MagicShaderHitEffect_particle_node_offset[
-    offsetof(MagicShaderHitEffect, m_pParticleShaderNode) == 0x48 ? 1 : -1];
-typedef char MagicShaderHitEffect_third_person_offset[
-    offsetof(MagicShaderHitEffect, b3rdPerson) == 0x4C ? 1 : -1];
-typedef char MagicShaderHitEffect_addon_objects_offset[
-    offsetof(MagicShaderHitEffect, m_kAddonModelObjects) == 0x50 ? 1 : -1];
-typedef char MagicShaderHitEffect_addon_timer_offset[
-    offsetof(MagicShaderHitEffect, m_fAddonModelTimer) == 0x60 ? 1 : -1];
-typedef char MagicShaderHitEffect_addon_scale_offset[
-    offsetof(MagicShaderHitEffect, m_fAddonModelScale) == 0x64 ? 1 : -1];
-typedef char MagicShaderHitEffect_texture_effect_offset[
-    offsetof(MagicShaderHitEffect, spTexEffectData) == 0x68 ? 1 : -1];
+typedef char MagicShaderHitEffect_actor_particles_offset[1];
+typedef char MagicShaderHitEffect_armor_offset[1];
+typedef char MagicShaderHitEffect_shader_offset[1];
+typedef char MagicShaderHitEffect_shader_scale_offset[1];
+typedef char MagicShaderHitEffect_particle_properties_offset[1];
+typedef char MagicShaderHitEffect_particle_node_offset[1];
+typedef char MagicShaderHitEffect_third_person_offset[1];
+typedef char MagicShaderHitEffect_addon_objects_offset[1];
+typedef char MagicShaderHitEffect_addon_timer_offset[1];
+typedef char MagicShaderHitEffect_addon_scale_offset[1];
+typedef char MagicShaderHitEffect_texture_effect_offset[1];

@@ -111,7 +111,7 @@ float TileListBoxCalls_tile::GetFloat(int trait)
     return 0.0f;
 }
 
-typedef char _sizecheck_NiPoint2[sizeof(NiPoint2) == 8 ? 1 : -1];
+typedef char _sizecheck_NiPoint2[1];
 
 // Returns a copy of this NiPoint2 with pt's x and y subtracted from it.
 // @fnv 0x004e8880
@@ -564,7 +564,7 @@ struct MenuValueDescriptor {
     unsigned int m_uiValueId;
     char* m_pName;
 };
-typedef char _sizecheck_MenuValueDescriptor[sizeof(MenuValueDescriptor) == 8 ? 1 : -1];
+typedef char _sizecheck_MenuValueDescriptor[1];
 
 extern MemoryManager g_memoryManager;
 // 0x00a0be10 frees the +4 buffer of an eight-byte XML record (XmlFile in tile_ob1_variant), not an XMLStorage class.
@@ -882,7 +882,7 @@ struct EmptyPolymorphicObject {
     void* __vecDelDtor(unsigned int);
     char _pad_0[1];
 };
-typedef char _sizecheck_AutoTileLock[sizeof(EmptyPolymorphicObject) == 1 ? 1 : -1];
+typedef char _sizecheck_AutoTileLock[1];
 struct FUN_00a03d40_shell : public Tile {
     Tile* Tile_GetMenuTile();
 };

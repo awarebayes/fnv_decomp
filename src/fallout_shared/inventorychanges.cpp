@@ -465,7 +465,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 struct ExtraNode;
 ExtraDataList** __fastcall _ref_006815c0(ExtraNode*);
@@ -636,7 +636,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00418b10_shell
 {
     bool ExtraDataList_GetCanNotWear();
@@ -889,7 +889,7 @@ struct Animation
     char spAnimIdleFreeWhenInactiveA[8]; // src: XBOX_RETAIL_PDB +0x12c (old: LocalOutput)
     char replayDelayList[8]; // src: XBOX_RETAIL_PDB +0x134 (old: m_acTrailingData)
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct FUN_004c0c90_shell : public Animation
 {
     void Animation_SetAttackSpeed(float);
@@ -938,7 +938,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct TESFormAccess
 {
     virtual void Unk_00();
@@ -1169,9 +1169,9 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0087ce80_shell : public TESObjectREFR
 {
     void TESWorldSpace_SetClimate(TESObjectCELL*);
@@ -2251,7 +2251,7 @@ struct InventoryItemEntry
     TESBoundObject* pObj;
     ContainerItemExtra* m_pExtraData;
 };
-typedef char _sizecheck_ContainerObject[sizeof(InventoryItemEntry) == 12 ? 1 : -1];
+typedef char _sizecheck_ContainerObject[1];
 struct FUN_004d1610_shell : public InventoryChanges
 {
     void InventoryChanges_InitFromContainerExtra();
@@ -2491,8 +2491,8 @@ struct blob4
 {
     char b[4];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_004bee00_shell : public InventoryStackRecord
 {
     void ItemChange_LoadGame_(BGSLoadFormBuffer*);

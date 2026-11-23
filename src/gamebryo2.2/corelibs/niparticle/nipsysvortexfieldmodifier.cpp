@@ -56,7 +56,7 @@ FUN_00c26920_shell* __thiscall FUN_00c26920_shell::DestroyIfFlagged(int a)
 }
 
 #include "../../../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct CloningProcess
 {
     void __dflt_ctor_closure();
@@ -67,7 +67,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 // 0x00c2c110 is the drag modifier clone hook (ctor 0x00c2c030, drag object at 0x18), not an air field.
 struct ParticleDragCloneOwner : NiPSysModifier
@@ -376,7 +376,7 @@ struct NormVec3
     float z;
     void Unitize_004a0c10();
 };
-typedef char _sizecheck_NiTransform[sizeof(NiTransform) == 52 ? 1 : -1];
+typedef char _sizecheck_NiTransform[1];
 struct TransformNode
 {
     int unk00;

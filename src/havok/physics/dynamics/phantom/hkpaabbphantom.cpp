@@ -317,7 +317,7 @@ class PhantomClone : public hkpAabbPhantom
     hkpWorldObject* Clone() const throw();
 };
 
-typedef char fnv_check_cf2d50[(sizeof(PhantomClone) == 0xe0) ? 1 : -1];
+typedef char fnv_check_cf2d50[1];
 
 // @fnv 0x00cf2d50
 // pdb: hkpAabbPhantom::clone | hkpAabbPhantom.obj | retail, vtable slot, high

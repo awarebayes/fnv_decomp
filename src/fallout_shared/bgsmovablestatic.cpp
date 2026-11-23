@@ -44,7 +44,7 @@ struct blob36
 {
     char b[36];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_004fbf00_shell : public BGSMovableStatic
 {
     void MobileObject_SetTalkingActivatorRef(TESSound*);

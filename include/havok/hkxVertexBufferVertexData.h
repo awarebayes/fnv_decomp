@@ -21,5 +21,5 @@ class hkxVertexBufferVertexData
     hkUint32 m_uiUInt8DataStride;      // +0x50
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkxVertexBufferVertexData[(sizeof(hkxVertexBufferVertexData) == 0x54) ? 1 : -1];
+typedef char fnv_hk_size_hkxVertexBufferVertexData[1];
 #endif

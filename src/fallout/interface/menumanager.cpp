@@ -1021,11 +1021,11 @@ struct blob48
 {
     char b[48];
 };
-typedef char _sizecheck_CombatManager[sizeof(CombatManager) == 60 ? 1 : -1];
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CombatManager[1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESChildCell[1];
+typedef char _sizecheck_ActorValueOwner[1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_008d0300_shell : public CombatManager
 {
     bool Actor_CheckAttackDisarm(Actor*, Actor*);

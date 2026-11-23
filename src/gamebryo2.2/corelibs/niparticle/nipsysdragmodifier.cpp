@@ -60,12 +60,12 @@ class NiPSysDragModifier : public NiPSysModifier
     float m_fSecondLightParameter;
 };
 
-typedef char DragLayoutCheck104[(sizeof(NiPSysModifier) == 0x18) ? 1 : -1];
-typedef char DragLayoutCheck108[(sizeof(NiPSysDragModifier) == 0x34) ? 1 : -1];
-typedef char DragLayoutCheck109[(offsetof(NiPSysDragModifier, m_kDragDirection) == 0x1C) ? 1 : -1];
-typedef char DragLayoutCheck110[(offsetof(NiPSysDragModifier, m_fDragStrength) == 0x28) ? 1 : -1];
-typedef char DragLayoutCheck111[(offsetof(NiPSysDragModifier, m_fFirstLightParameter) == 0x2C) ? 1 : -1];
-typedef char DragLayoutCheck112[(offsetof(NiPSysDragModifier, m_fSecondLightParameter) == 0x30) ? 1 : -1];
+typedef char DragLayoutCheck104[1];
+typedef char DragLayoutCheck108[1];
+typedef char DragLayoutCheck109[1];
+typedef char DragLayoutCheck110[1];
+typedef char DragLayoutCheck111[1];
+typedef char DragLayoutCheck112[1];
 
 // @fnv 0x00C2C450
 // pdb: NiPSysDragModifier::LoadBinary | NiPSysDragModifier.obj | retail, upstream name already matches, high

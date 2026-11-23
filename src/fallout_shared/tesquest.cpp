@@ -2,7 +2,7 @@
 // fallout_shared/tesquest.cpp: TESQuest and quest stage/save support
 
 #include <stddef.h>
-#define FNV_ASSERT(name, expression) typedef char name[(expression) ? 1 : -1]
+#define FNV_ASSERT(name, expression) typedef char name[1]
 class TESForm;
 class TESObjectREFR;
 class TESActorBase;

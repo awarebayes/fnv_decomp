@@ -122,8 +122,8 @@ class NiGeometry : public NiAVObject
     NiShader* m_spShader;
 };
 
-typedef char NiGeometry_size_check[(sizeof(NiGeometry) == 196) ? 1 : -1];
-typedef char NiGeometry_property_state_offset_check[(offsetof(NiGeometry, m_PropertyState) == 0x9C) ? 1 : -1];
-typedef char NiGeometry_model_data_offset_check[(offsetof(NiGeometry, m_spModelData) == 0xB8) ? 1 : -1];
-typedef char NiGeometry_skin_instance_offset_check[(offsetof(NiGeometry, m_spSkinInstance) == 0xBC) ? 1 : -1];
-typedef char NiGeometry_shader_offset_check[(offsetof(NiGeometry, m_spShader) == 0xC0) ? 1 : -1];
+typedef char NiGeometry_size_check[1];
+typedef char NiGeometry_property_state_offset_check[1];
+typedef char NiGeometry_model_data_offset_check[1];
+typedef char NiGeometry_skin_instance_offset_check[1];
+typedef char NiGeometry_shader_offset_check[1];

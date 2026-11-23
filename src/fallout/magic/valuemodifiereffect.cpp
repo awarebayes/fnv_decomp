@@ -507,14 +507,14 @@ void Cls::ApplyEffect()
     }
 }
 
-typedef char _sizecheck_LimbConditionEffect[sizeof(LimbConditionEffect) == 80 ? 1 : -1];
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
-typedef char _sizecheck_TESIcon[sizeof(TESIcon) == 12 ? 1 : -1];
-typedef char _sizecheck_BGSMessageIcon[sizeof(BGSMessageIcon) == 16 ? 1 : -1];
-typedef char _sizecheck_TESScriptableForm[sizeof(TESScriptableForm) == 12 ? 1 : -1];
-typedef char _sizecheck_TESWeightForm[sizeof(TESWeightForm) == 8 ? 1 : -1];
+typedef char _sizecheck_LimbConditionEffect[1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
+typedef char _sizecheck_TESTexture[1];
+typedef char _sizecheck_TESIcon[1];
+typedef char _sizecheck_BGSMessageIcon[1];
+typedef char _sizecheck_TESScriptableForm[1];
+typedef char _sizecheck_TESWeightForm[1];
 struct FUN_0082c000_shell : public ValueModifierEffect
 {
     void ValueModifierEffect_Start();

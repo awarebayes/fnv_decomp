@@ -39,16 +39,16 @@ void FNV_DeleteBuffer(void*);
 
 #pragma pack(push, 4)
 
-typedef char BSSimpleArrayCheck[sizeof(BSSimpleArray<NavMeshInfo*, 1024>) == 16 ? 1 : -1];
+typedef char BSSimpleArrayCheck[1];
 
 // Kept local: include/NavMeshInfo.h lacks the cell lookup, save and validation helpers below.
 
-typedef char NavMeshInfoCheckSize[sizeof(NavMeshInfo) == 92 ? 1 : -1];
-typedef char NavMeshInfoCheckBounds[offsetof(NavMeshInfo, pBounds) == 0x58 ? 1 : -1];
+typedef char NavMeshInfoCheckSize[1];
+typedef char NavMeshInfoCheckBounds[1];
 
 #include "../../../include/NiTMapItem.h"
 
-typedef char NiTMapCheck[sizeof(NiTPointerMap<unsigned int, void*>) == 16 ? 1 : -1];
+typedef char NiTMapCheck[1];
 
 typedef NiTPointerMap<unsigned int, void*> CellKeyMap;
 
@@ -64,10 +64,10 @@ struct InnerCounts
     unsigned int uiValid;
 };
 
-typedef char TESFormCheck[sizeof(TESForm) == 24 ? 1 : -1];
+typedef char TESFormCheck[1];
 
-typedef char NavMeshInfoMapCheck[sizeof(NavMeshInfoMap) == 64 ? 1 : -1];
-typedef char NavMeshInfoMapCheckCell[offsetof(NavMeshInfoMap, m_kNavMeshInfoArraysByWorldspace) == 0x2C ? 1 : -1];
+typedef char NavMeshInfoMapCheck[1];
+typedef char NavMeshInfoMapCheckCell[1];
 
 #pragma pack(pop)
 

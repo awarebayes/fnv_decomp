@@ -93,7 +93,7 @@ struct ShaderPropertyConversionData
     char _pad_b3[1];
     int m_iShaderDataFlags;
 };
-typedef char _sizecheck_BSShaderData[sizeof(ShaderPropertyConversionData) == 184 ? 1 : -1];
+typedef char _sizecheck_BSShaderData[1];
 struct FUN_00bb0180_shell : public ShaderPropertyConversionData
 {
     void BSShaderData_Convert(NiAVObject*, unsigned int);

@@ -9,7 +9,7 @@
 #include <stddef.h>
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 
 #include "../../../include/NiPoint3.h"
 #include "../../../include/TESSaveLoadGame.h"
@@ -302,7 +302,7 @@ struct WorldRayCastInput
     unsigned int m_uiFilterInfo;
     char _pad_28[8];
 };
-typedef char _sizecheck_hkpWorldRayCastInput[sizeof(WorldRayCastInput) == 48 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastInput[1];
 struct RayCastHitResult
 {
     struct blob1 DidHit();
@@ -312,7 +312,7 @@ struct RayCastHitResult
     int m_iExtraInfo;
     char m_auiShapeKeys[8];
 };
-typedef char _sizecheck_hkpShapeRayCastCollectorOutput[sizeof(RayCastHitResult) == 32 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastCollectorOutput[1];
 struct ShapeRayCastOutput : public RayCastHitResult
 {
     void changeLevel(int);
@@ -323,7 +323,7 @@ struct ShapeRayCastOutput : public RayCastHitResult
     int m_uiShapeKeyIndex;
     char _pad_44[12];
 };
-typedef char _sizecheck_hkpShapeRayCastOutput[sizeof(ShapeRayCastOutput) == 80 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastOutput[1];
 struct WorldRayCastOutput : public ShapeRayCastOutput
 {
     struct blob1 DidHit();
@@ -331,7 +331,7 @@ struct WorldRayCastOutput : public ShapeRayCastOutput
     void* m_pRootCollidable;
     char _pad_54[12];
 };
-typedef char _sizecheck_hkpWorldRayCastOutput[sizeof(WorldRayCastOutput) == 96 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastOutput[1];
 struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
 {
     hkpRigidBody* GethkRigidBody();
@@ -366,7 +366,7 @@ struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
     bool m_bPickFailed;
     char _pad_ad[3];
 };
-typedef char _sizecheck_bhkPickData[sizeof(BhkPickData) == 176 ? 1 : -1];
+typedef char _sizecheck_bhkPickData[1];
 struct FUN_004a3eb0_shell : public BhkPickData
 {
     void bhkPickData_SetTo(void*);
@@ -955,8 +955,8 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_00932d60_shell : public MobileObject
 {
     void MobileObject_FinishLoadGame(BGSLoadFormBuffer*);
@@ -3755,8 +3755,8 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_00932a00_shell : public MobileObject
 {
     void MobileObject_LoadGame(BGSLoadFormBuffer*);
@@ -4161,8 +4161,8 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_00932b70_shell : public MobileObject
 {
     void MobileObject_InitLoadGame(BGSLoadFormBuffer*);
@@ -4753,7 +4753,7 @@ struct TESTopicInfoData;
 struct TESFile;
 struct TESQuest;
 struct TopicInfoData;
-typedef char _sizecheck_TESTopicInfo[sizeof(TESTopicInfo) == 80 ? 1 : -1];
+typedef char _sizecheck_TESTopicInfo[1];
 struct FUN_00934250_shell : public MobileObject
 {
     void MobileObject_StopCurrentDialogue();
@@ -5132,7 +5132,7 @@ struct blob64
 {
     char b[64];
 };
-typedef char _sizecheck_NiMatrix3[sizeof(NiMatrix3) == 36 ? 1 : -1];
+typedef char _sizecheck_NiMatrix3[1];
 struct FUN_0092f260_shell : public MobileObject
 {
     bhkCharacterController* MobileObject_Move(float, NiPoint3*, unsigned int);

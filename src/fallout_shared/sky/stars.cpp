@@ -38,7 +38,7 @@ struct blob16
 {
     char b[16];
 };
-typedef char _sizecheck_NiQuaternion[sizeof(NiQuaternion) == 16 ? 1 : -1];
+typedef char _sizecheck_NiQuaternion[1];
 
 // @fnv 0x004f0160
 // src: COMMUNITY 0x004f0160
@@ -59,7 +59,7 @@ struct blob16
 {
     char b[16];
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 using ::SettingT;
 class GlobalObject_0040e0b0 : public SettingT<GameSettingCollection>

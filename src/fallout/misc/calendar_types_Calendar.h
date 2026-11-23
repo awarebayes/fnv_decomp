@@ -53,11 +53,11 @@ class Calendar
     // void* __cdecl Calendar::*(unsigned int)
 };
 #pragma pack(pop)
-typedef char Calendar_m_pYearGlobal_offset[(offsetof(Calendar, m_pYearGlobal) == 0) ? 1 : -1];
-typedef char Calendar_m_pMonthGlobal_offset[(offsetof(Calendar, m_pMonthGlobal) == 4) ? 1 : -1];
-typedef char Calendar_m_pDayGlobal_offset[(offsetof(Calendar, m_pDayGlobal) == 8) ? 1 : -1];
-typedef char Calendar_m_pHourGlobal_offset[(offsetof(Calendar, m_pHourGlobal) == 12) ? 1 : -1];
-typedef char Calendar_m_pGameDaysPassedGlobal_offset[(offsetof(Calendar, m_pGameDaysPassedGlobal) == 16) ? 1 : -1];
-typedef char Calendar_pHourGlobal_offset[(offsetof(Calendar, pHourGlobal) == 20) ? 1 : -1];
-typedef char Calendar_m_uiDaysPassed_offset[(offsetof(Calendar, m_uiDaysPassed) == 24) ? 1 : -1];
+typedef char Calendar_m_pYearGlobal_offset[1];
+typedef char Calendar_m_pMonthGlobal_offset[1];
+typedef char Calendar_m_pDayGlobal_offset[1];
+typedef char Calendar_m_pHourGlobal_offset[1];
+typedef char Calendar_m_pGameDaysPassedGlobal_offset[1];
+typedef char Calendar_pHourGlobal_offset[1];
+typedef char Calendar_m_uiDaysPassed_offset[1];
 #endif

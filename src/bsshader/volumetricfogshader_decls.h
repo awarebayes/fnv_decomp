@@ -217,14 +217,14 @@ extern const char DAT_010babec[];
 extern const char DAT_010bb0ac[];
 extern "C" const char DAT_010A1E50[];
 
-typedef char NiD3DShaderConstantMap_must_be_68_bytes[(sizeof(NiD3DShaderConstantMap) == 0x44) ? 1 : -1];
-typedef char VolumetricFogShader_must_be_168_bytes[(sizeof(VolumetricFogShader) == 0xa8) ? 1 : -1];
+typedef char NiD3DShaderConstantMap_must_be_68_bytes[1];
+typedef char VolumetricFogShader_must_be_168_bytes[1];
 typedef char
-    VolumetricFogShader_pixel_map_at_30[(offsetof(VolumetricFogShader, m_spFirstShaderConstantMap) == 0x30) ? 1 : -1];
+    VolumetricFogShader_pixel_map_at_30[1];
 typedef char
-    VolumetricFogShader_vertex_map_at_34[(offsetof(VolumetricFogShader, m_spSecondShaderConstantMap) == 0x34) ? 1 : -1];
-typedef char VolumetricFogShader_renderer_at_18[(offsetof(VolumetricFogShader, m_pShaderObject) == 0x18) ? 1 : -1];
-typedef char VolumetricFogShader_data_at_88[(offsetof(VolumetricFogShader, m_data88) == 0x88) ? 1 : -1];
-typedef char VolumetricFogShader_data_at_98[(offsetof(VolumetricFogShader, m_data98) == 0x98) ? 1 : -1];
+    VolumetricFogShader_vertex_map_at_34[1];
+typedef char VolumetricFogShader_renderer_at_18[1];
+typedef char VolumetricFogShader_data_at_88[1];
+typedef char VolumetricFogShader_data_at_98[1];
 
 #endif

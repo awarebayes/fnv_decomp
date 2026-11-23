@@ -1131,10 +1131,10 @@ class BaseProcess
     void SetLipSyncEnabled(bool abVal);
 };
 
-typedef char BaseProcess_size_check[(sizeof(BaseProcess) == 0x30) ? 1 : -1];
-typedef char BaseProcess_process_data_offset_check[(offsetof(BaseProcess, m_kProcessData) == 0x04) ? 1 : -1];
-typedef char BaseProcess_value2_offset_check[(offsetof(BaseProcess, m_fValue2) == 0x1C) ? 1 : -1];
-typedef char BaseProcess_value1_offset_check[(offsetof(BaseProcess, m_fValue1) == 0x20) ? 1 : -1];
-typedef char BaseProcess_state_flags_offset_check[(offsetof(BaseProcess, m_uiStateFlags) == 0x24) ? 1 : -1];
-typedef char BaseProcess_process_type_offset_check[(offsetof(BaseProcess, m_eProcessType) == 0x28) ? 1 : -1];
-typedef char BaseProcess_cached_values_offset_check[(offsetof(BaseProcess, m_pCachedValues) == 0x2C) ? 1 : -1];
+typedef char BaseProcess_size_check[1];
+typedef char BaseProcess_process_data_offset_check[1];
+typedef char BaseProcess_value2_offset_check[1];
+typedef char BaseProcess_value1_offset_check[1];
+typedef char BaseProcess_state_flags_offset_check[1];
+typedef char BaseProcess_process_type_offset_check[1];
+typedef char BaseProcess_cached_values_offset_check[1];

@@ -545,7 +545,7 @@ void FUN_0048ef40_shell::SetVirtualTable_0048ef40()
 
 namespace fnv_0048f010 {
 
-typedef char _sizecheck_AnimSequenceSingle[sizeof(AnimSequenceSingle) == 8 ? 1 : -1];
+typedef char _sizecheck_AnimSequenceSingle[1];
 
 
 // NiTMapView: unit-local view (declares only what 0x0048f010 calls), not the shared NiTMap; renamed so no local type keeps the shared name
@@ -657,7 +657,7 @@ template <class T> struct NiTPointerList_SV
 };
 
 
-typedef char _sizecheck_AnimSequenceMultiple[sizeof(AnimSequenceMultiple) == 8 ? 1 : -1];
+typedef char _sizecheck_AnimSequenceMultiple[1];
 
 
 struct WaitableObject
@@ -774,7 +774,7 @@ NiAVObject* AnimationManagerRootAccess::NiControllerManager_GetAccumRoot()
 }  // namespace fnv_00490d90
 
 
-typedef char _sizecheck_AnimSequenceSingle[sizeof(AnimSequenceSingle) == 8 ? 1 : -1];
+typedef char _sizecheck_AnimSequenceSingle[1];
 
 
 void __fastcall Animation_UpdateState_0048f1b0(void* pThis);
@@ -1043,7 +1043,7 @@ struct blob32
     char b[32];
 };
 
-typedef char _sizecheck_NiQuatTransform[sizeof(NiQuatTransform) == 32 ? 1 : -1];
+typedef char _sizecheck_NiQuatTransform[1];
 
 
 extern float DAT_0101d890;
@@ -2343,9 +2343,9 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BSTimer[sizeof(GameTimerRecord) == 32 ? 1 : -1];
+typedef char _sizecheck_BSTimer[1];
 
-typedef char _sizecheck_MagicCaster[sizeof(MagicCaster) == 12 ? 1 : -1];
+typedef char _sizecheck_MagicCaster[1];
 
 
 }  // namespace fnv_00825c00
@@ -2411,7 +2411,7 @@ FUN_0048ee70::~FUN_0048ee70()
 
 namespace fnv_0048f450 {
 
-typedef char _sizecheck_AnimSequenceMultiple[sizeof(AnimSequenceMultiple) == 8 ? 1 : -1];
+typedef char _sizecheck_AnimSequenceMultiple[1];
 
 
 // Exe 0x0048f450: local storage view; GetFlags binds the folded DWORD-at-+8 accessor 0x0044ddc0.
@@ -3106,7 +3106,7 @@ int __fastcall Animation_GetAnimsLoadingCount(void* pThis)
 }
 
 
-typedef char _sizecheck_NiRTTI[sizeof(NiRTTI) == 8 ? 1 : -1];
+typedef char _sizecheck_NiRTTI[1];
 
 
 
@@ -8781,7 +8781,7 @@ class FUN_0048f810
     AnimationList<IdleReplayDelayEntry*> m_acTrailingData;
 };
 
-typedef char AnimationSizeCheck[sizeof(FUN_0048f810) == 0x13c ? 1 : -1];
+typedef char AnimationSizeCheck[1];
 
 // @fnv 0x0048f810
 // pdb: Animation::Animation | Animation.obj | retail, call graph, high

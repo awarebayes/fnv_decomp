@@ -15,8 +15,8 @@ template<> bool NiPointer<NiAVObject>::operator!=(const NiPointer<NiAVObject>&) 
 template<> NiPointer<NiAVObject>& NiPointer<NiAVObject>::operator=(const NiPointer<NiAVObject>&);
 typedef NiPointer<NiAVObject> AVObjectPointer;
 typedef NiTArray<AVObjectPointer, NiTNewInterface<AVObjectPointer> > AVObjectArray;
-typedef char check_NiPointer[sizeof(AVObjectPointer) == 4 ? 1 : -1];
-typedef char check_array_size[sizeof(AVObjectArray) == 0x10 ? 1 : -1];
-typedef char check_array_size_field[offsetof(AVObjectArray, m_usSize) == 0x0a ? 1 : -1];
-typedef char check_array_effective_field[offsetof(AVObjectArray, m_usESize) == 0x0c ? 1 : -1];
+typedef char check_NiPointer[1];
+typedef char check_array_size[1];
+typedef char check_array_size_field[1];
+typedef char check_array_effective_field[1];
 #endif

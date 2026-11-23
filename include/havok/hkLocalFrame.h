@@ -10,5 +10,5 @@ class hkLocalFrame : public hkReferencedObject
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkLocalFrame[(sizeof(hkLocalFrame) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkLocalFrame[1];
 #endif

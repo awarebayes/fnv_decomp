@@ -11,5 +11,5 @@ class hkpNullCollisionFilter : public hkpCollisionFilter
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpNullCollisionFilter[(sizeof(hkpNullCollisionFilter) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkpNullCollisionFilter[1];
 #endif

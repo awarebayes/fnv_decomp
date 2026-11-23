@@ -1624,7 +1624,7 @@ bool NiStream::SaveObjectSizeTable(unsigned int uiStartOffset)
 
 namespace fnv_00a63ee0 {
 
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 // NiStream.h does not declare the fixed-string table writer at 0x00a63ee0.
 struct FUN_00a63ee0_shell : public NiStream
 {

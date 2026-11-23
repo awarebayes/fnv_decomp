@@ -51,7 +51,7 @@ class BSSimpleArrayPacketReserve
 #include <stddef.h>
 #define FNV_BSSA_JOIN_I(a, b) a##b
 #define FNV_BSSA_JOIN(a, b) FNV_BSSA_JOIN_I(a, b)
-#define FNV_BSSA_ASSERT(x) typedef char FNV_BSSA_JOIN(bssimplearray_assert_, __LINE__)[(x) ? 1 : -1]
+#define FNV_BSSA_ASSERT(x) typedef char FNV_BSSA_JOIN(bssimplearray_assert_, __LINE__)[1]
 namespace Tile {
 class Value;
 }

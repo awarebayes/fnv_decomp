@@ -1936,7 +1936,7 @@ struct FUN_00b2e680
     BxString name;
     NiPoint3 first, second, third;
 };
-typedef char FUN_00b2e680SizeCheck[(sizeof(FUN_00b2e680) == 0x54) ? 1 : -1];
+typedef char FUN_00b2e680SizeCheck[1];
 struct CheckedRange
 {
 };

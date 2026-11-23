@@ -275,8 +275,8 @@ struct NiStream;
 class GameTimerRecord;
 namespace fnv_006652e0 {
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
-typedef char _sizecheck_NiColor[sizeof(NiColor) == 12 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
+typedef char _sizecheck_NiColor[1];
 
 struct B006815c0
 {

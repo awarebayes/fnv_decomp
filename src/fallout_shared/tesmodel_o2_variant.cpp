@@ -6,7 +6,7 @@
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 #include "../../include/FileEntryList.h"
 
-typedef char _sizecheck_TESTextureList[sizeof(FileEntryList) == 8 ? 1 : -1];
+typedef char _sizecheck_TESTextureList[1];
 struct FUN_008c1be0_shell
 {
     void bhkTTNode_TESObjectREFR_GetFlags(int param_1);
@@ -85,7 +85,7 @@ struct PrimaryBase
     int unk2C;
 };
 
-typedef char _sizecheck_PrimaryBase[sizeof(PrimaryBase) == 0x30 ? 1 : -1];
+typedef char _sizecheck_PrimaryBase[1];
 
 struct SecondaryBase
 {

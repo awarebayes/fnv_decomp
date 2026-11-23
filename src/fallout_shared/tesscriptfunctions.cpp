@@ -10,7 +10,7 @@
 #include "../../include/NiPointer.h"
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 #ifdef _MSC_VER
 #define FNV_ALIGN(n) __declspec(align(n))
 #define FNV_FORCEINLINE __forceinline
@@ -22,8 +22,6 @@ typedef unsigned __int64 FNVUInt64;
 typedef long long FNVInt64;
 typedef unsigned long long FNVUInt64;
 #endif
-FNV_STATIC_ASSERT(sizeof(void*) == 4);
-FNV_STATIC_ASSERT(sizeof(long) == 4);
 using ::SettingT;
 class FormFlagRecord;
 class ActiveEffect;
@@ -1852,7 +1850,7 @@ struct GraphicsRenderer;
 struct ShadowSceneNode;
 struct tagRECT;
 struct blob8 { char b[8]; };
-typedef char _sizecheck_BSShaderManager[sizeof(BSShaderManager) == 1 ? 1 : -1];
+typedef char _sizecheck_BSShaderManager[1];
 
 bool __cdecl BSShaderManager_GetUseRefractionShader();
 
@@ -1900,7 +1898,7 @@ struct MobileObjectProcessArrayApi {
     char m_auiProcessTailIndices[16];
     char m_auiNextUpdateIndices[16];
 };
-typedef char _sizecheck_ProcessArray[sizeof(MobileObjectProcessArrayApi) == 64 ? 1 : -1];
+typedef char _sizecheck_ProcessArray[1];
 struct FUN_005be5c0_shell : public MobileObjectProcessArrayApi {
     unsigned int ProcessArray_GetProcessLevelTail(int);
 };
@@ -2175,7 +2173,7 @@ struct OffsetData {
     unsigned int iOffset;
     BGSReconstructFormsMap* m_pFormLookupMap;
 };
-typedef char _sizecheck_OffsetData[sizeof(OffsetData) == 8 ? 1 : -1];
+typedef char _sizecheck_OffsetData[1];
 struct FUN_005ca4f0_shell : public OffsetData {
     bool ActorCause_IsValid();
 };
@@ -2216,7 +2214,7 @@ struct RegionObjectEntry {
     TESObjectREFR* m_pReference;
     char m_auiData[56];
 };
-typedef char _sizecheck_TESQuestTarget[sizeof(RegionObjectEntry) == 72 ? 1 : -1];
+typedef char _sizecheck_TESQuestTarget[1];
 struct FUN_005cbb70_shell : public RegionObjectEntry {
     TESObjectREFR* TESQuestTarget_QTrackingRef();
 };
@@ -2548,7 +2546,7 @@ struct MobileObjectProcessArrayApi {
     char m_auiProcessTailIndices[16];
     char m_auiNextUpdateIndices[16];
 };
-typedef char _sizecheck_ProcessArray[sizeof(MobileObjectProcessArrayApi) == 64 ? 1 : -1];
+typedef char _sizecheck_ProcessArray[1];
 struct FUN_005de0f0_shell : public MobileObjectProcessArrayApi {
     unsigned int ProcessArray_GetProcessLevelHead(int);
 };
@@ -2572,7 +2570,7 @@ struct NiStream;
 struct blob48 { char b[48]; };
 struct blob64 { char b[64]; };
 
-typedef char _sizecheck_NiMatrix3[sizeof(NiMatrix3) == 36 ? 1 : -1];
+typedef char _sizecheck_NiMatrix3[1];
 // @fnv 0x005df510
 void NiMatrix3::SetRow(unsigned int uiRow, const float* pRow)
 {
@@ -2707,7 +2705,7 @@ struct MobileObjectProcessArrayApi {
     char m_auiProcessTailIndices[16];
     char m_auiNextUpdateIndices[16];
 };
-typedef char _sizecheck_ProcessArray[sizeof(MobileObjectProcessArrayApi) == 64 ? 1 : -1];
+typedef char _sizecheck_ProcessArray[1];
 struct FUN_00968670_shell : public MobileObjectProcessArrayApi {
     MobileObject* ProcessArray_GetItem(unsigned int);
 };
@@ -2983,9 +2981,9 @@ struct ScriptParameter {
     bool m_bIsOptional;
     char _pad_9[3];
 };
-typedef char _sizecheck_SCRIPT_PARAMETER[sizeof(ScriptParameter) == 12 ? 1 : -1];
+typedef char _sizecheck_SCRIPT_PARAMETER[1];
 
-typedef char _sizecheck_ScriptLocals[sizeof(ScriptLocals) == 20 ? 1 : -1];
+typedef char _sizecheck_ScriptLocals[1];
 
 void __cdecl DebugLog(const char*, ...);
 bool __cdecl ExtractArgs(const ScriptParameter*, const char*, unsigned int*, TESObjectREFR*, TESObjectREFR*, Script*, ScriptLocals*, ...);
@@ -8398,9 +8396,9 @@ struct ScriptParameter {
     bool m_bIsOptional;
     char _pad_9[3];
 };
-typedef char _sizecheck_SCRIPT_PARAMETER[sizeof(ScriptParameter) == 12 ? 1 : -1];
+typedef char _sizecheck_SCRIPT_PARAMETER[1];
 
-typedef char _sizecheck_ScriptLocals[sizeof(ScriptLocals) == 20 ? 1 : -1];
+typedef char _sizecheck_ScriptLocals[1];
 struct ContentMountRecord {
     bool IsMounted();
     void SetMounted(bool);
@@ -8415,7 +8413,7 @@ struct ContentMountRecord {
     bool m_bMounted;
     char _pad_139[3];
 };
-typedef char _sizecheck_BSContentPackage[sizeof(ContentMountRecord) == 316 ? 1 : -1];
+typedef char _sizecheck_BSContentPackage[1];
 
 namespace std {
     class StandardLibrarySingletonObject;

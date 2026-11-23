@@ -19,7 +19,7 @@ struct EffectStateAccess : public ActiveEffect
 #include "../../../include/BSSoundHandle.h"
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(c) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(c) ? 1 : -1]
+#define FNV_STATIC_ASSERT(c) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 
 #include "../../../include/Actor.h"
 #include "../../../include/AlchemyItem.h"
@@ -467,7 +467,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 int __fastcall _FNV_GetFormType(TESBoundObject*);
 

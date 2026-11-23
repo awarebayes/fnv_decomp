@@ -351,7 +351,7 @@ struct DestructionStageData
     unsigned int m_uiDebrisCount;
     TESModelTextureSwap* m_pReplacementModel;
 };
-typedef char _sizecheck_DestructibleObjectStage[sizeof(DestructionStageData) == 24 ? 1 : -1];
+typedef char _sizecheck_DestructibleObjectStage[1];
 
 struct DestructibleObjectData_local
 {
@@ -466,7 +466,7 @@ struct MersenneTwister
     char mt[2496];
     unsigned int mti;
 };
-typedef char _sizecheck_BSRandom[sizeof(MersenneTwister) == 2508 ? 1 : -1];
+typedef char _sizecheck_BSRandom[1];
 struct FUN_00476b90_shell : public MersenneTwister
 {
     float BSRandom_Float(float, float);

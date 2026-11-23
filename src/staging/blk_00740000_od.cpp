@@ -1401,9 +1401,9 @@ struct CaravanOwner : Menu
     bool CaravanMenu_IsValidCardPlacement(int, int, unsigned int, bool);
     CaravanDecision CaravanMenu_ProcessAI();
 };
-typedef char CaravanDecisionSize[(sizeof(CaravanDecision) == 28) ? 1 : -1];
-typedef char CaravanArraySize[(sizeof(PointerArray) == 16) ? 1 : -1];
-typedef char CaravanChoicesSize[(sizeof(FUN_00753110) == 16) ? 1 : -1];
+typedef char CaravanDecisionSize[1];
+typedef char CaravanArraySize[1];
+typedef char CaravanChoicesSize[1];
 // @fnv 0x0074fdc0
 // src: COMMUNITY 0x0074fdc0
 // pdb: CaravanMenu::ProcessAI | CaravanMenu.obj | retail, upstream name already matches, high

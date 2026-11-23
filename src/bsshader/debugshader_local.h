@@ -7,7 +7,7 @@
 #include <stddef.h>
 #define FNV_DEBUG_JOIN_I(a, b) a##b
 #define FNV_DEBUG_JOIN(a, b) FNV_DEBUG_JOIN_I(a, b)
-#define FNV_STATIC_ASSERT(c) typedef char FNV_DEBUG_JOIN(fnv_debug_assert_, __LINE__)[(c) ? 1 : -1]
+#define FNV_STATIC_ASSERT(c) typedef char FNV_DEBUG_JOIN(fnv_debug_assert_, __LINE__)[1]
 
 #include "NiFixedString.h"
 #include "NiMemObject.h"

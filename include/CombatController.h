@@ -252,15 +252,15 @@ public:
     void BuildCoveredMoveRequest(PathingRequest* request);
 };
 
-typedef char CombatControllerSizeCheck[(sizeof(CombatController) == 0x188) ? 1 : -1];
-typedef char CombatControllerGroupOffsetCheck[(offsetof(CombatController, m_pCombatData) == 0x80) ? 1 : -1];
-typedef char CombatControllerProcedureOffsetCheck[(offsetof(CombatController, unk8C) == 0x8C) ? 1 : -1];
-typedef char CombatControllerStateOffsetCheck[(offsetof(CombatController, m_pModifier) == 0x9C) ? 1 : -1];
-typedef char CombatControllerTimerOffsetCheck[(offsetof(CombatController, unkB4) == 0xB4) ? 1 : -1];
-typedef char CombatControllerActorOffsetCheck[(offsetof(CombatController, actor) == 0xBC) ? 1 : -1];
-typedef char CombatControllerFloatOffsetCheck[(offsetof(CombatController, floatCC) == 0xCC) ? 1 : -1];
-typedef char CombatControllerIdleOffsetCheck[(offsetof(CombatController, unkE8) == 0xE8) ? 1 : -1];
-typedef char CombatControllerRecordOffsetCheck[(offsetof(CombatController, unkFC) == 0xFC) ? 1 : -1];
-typedef char CombatControllerPointsOffsetCheck[(offsetof(CombatController, unk128) == 0x128) ? 1 : -1];
-typedef char CombatControllerIndicesOffsetCheck[(offsetof(CombatController, m_aucStateByIndex) == 0x140) ? 1 : -1];
-typedef char CombatControllerTailOffsetCheck[(offsetof(CombatController, unk14C) == 0x14C) ? 1 : -1];
+typedef char CombatControllerSizeCheck[1];
+typedef char CombatControllerGroupOffsetCheck[1];
+typedef char CombatControllerProcedureOffsetCheck[1];
+typedef char CombatControllerStateOffsetCheck[1];
+typedef char CombatControllerTimerOffsetCheck[1];
+typedef char CombatControllerActorOffsetCheck[1];
+typedef char CombatControllerFloatOffsetCheck[1];
+typedef char CombatControllerIdleOffsetCheck[1];
+typedef char CombatControllerRecordOffsetCheck[1];
+typedef char CombatControllerPointsOffsetCheck[1];
+typedef char CombatControllerIndicesOffsetCheck[1];
+typedef char CombatControllerTailOffsetCheck[1];

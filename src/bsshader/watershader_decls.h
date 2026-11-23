@@ -23,7 +23,7 @@
 #include <stddef.h>
 #define WATER_JOIN_IMPL(a, b) a##b
 #define WATER_JOIN(a, b) WATER_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char WATER_JOIN(water_layout_check_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char WATER_JOIN(water_layout_check_, __LINE__)[1]
 
 template <class T> inline NiPointer<T>::NiPointer() : m_pObject(0) {}
 template <class T> inline NiPointer<T>::~NiPointer()

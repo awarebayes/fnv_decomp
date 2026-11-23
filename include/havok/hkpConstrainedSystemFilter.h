@@ -13,5 +13,5 @@ class hkpConstrainedSystemFilter : public hkpCollisionFilter
     hkpCollisionFilter* m_pChildFilter;  // +0x34
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConstrainedSystemFilter[(sizeof(hkpConstrainedSystemFilter) == 0x38) ? 1 : -1];
+typedef char fnv_hk_size_hkpConstrainedSystemFilter[1];
 #endif

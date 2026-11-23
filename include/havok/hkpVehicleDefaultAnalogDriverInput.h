@@ -17,5 +17,5 @@ class hkpVehicleDefaultAnalogDriverInput : public hkpVehicleDriverInput
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpVehicleDefaultAnalogDriverInput[(sizeof(hkpVehicleDefaultAnalogDriverInput) == 0x18) ? 1 : -1];
+    fnv_hk_size_hkpVehicleDefaultAnalogDriverInput[1];
 #endif

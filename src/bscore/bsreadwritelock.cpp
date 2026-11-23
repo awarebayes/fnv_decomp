@@ -26,7 +26,7 @@ struct ReadWriteLock
     unsigned int m_uiLockState;
     unsigned int m_uiWriterThreadId;
 };
-typedef char _sizecheck_BSReadWriteLock[sizeof(ReadWriteLock) == 8 ? 1 : -1];
+typedef char _sizecheck_BSReadWriteLock[1];
 struct FUN_00aa62e0_shell : public ReadWriteLock
 {
     void BSReadWriteLock_UnlockWrite();

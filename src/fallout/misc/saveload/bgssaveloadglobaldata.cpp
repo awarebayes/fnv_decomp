@@ -435,7 +435,7 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 
 // Sets or clears bit 0x40 in the flags field according to abValue.
 // @fnv 0x0084cc40

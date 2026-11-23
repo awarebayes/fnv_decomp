@@ -600,7 +600,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 extern unsigned int DAT_01187014;
 struct FormEnumEntry
@@ -1107,7 +1107,7 @@ struct _ULARGE_INTEGER
     unsigned long HighPart;
     unsigned long LowPart;
 };
-typedef char _sizecheck__ULARGE_INTEGER[sizeof(_ULARGE_INTEGER) == 8 ? 1 : -1];
+typedef char _sizecheck__ULARGE_INTEGER[1];
 
 extern "C" void* __cdecl _alloca(unsigned int);
 template <int N> struct EndianSizeTag

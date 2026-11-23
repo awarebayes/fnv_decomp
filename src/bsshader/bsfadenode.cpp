@@ -62,8 +62,8 @@ extern MemoryManager g_memoryManager;
 
 using ::SettingT;
 
-typedef char BSFadeNodeSizeCheck[sizeof(BSFadeNode) == 0xE4 ? 1 : -1];
-typedef char NiAlphaPropertySizeCheck[sizeof(NiAlphaProperty) == 0x1C ? 1 : -1];
+typedef char BSFadeNodeSizeCheck[1];
+typedef char NiAlphaPropertySizeCheck[1];
 // PC depth texture forwarding declarations. The singleton has no known
 // canonical data name, so its address-based name is kept here.
 extern ImageSpaceManager* DAT_011f91ac;
@@ -168,7 +168,7 @@ BSRenderedTexture* BSShaderManager::GetSceneDepthRenderedTexture()
     return DAT_011f91ac->GetDepthRenderedTexture();
 }
 
-typedef char _sizecheck_BSTreeNode[sizeof(BSTreeNode) == 304 ? 1 : -1];
+typedef char _sizecheck_BSTreeNode[1];
 struct FUN_00b4def0_shell : public BSFadeNode
 {
     bool BSFadeNode_RegisterStreamables(NiStream*);

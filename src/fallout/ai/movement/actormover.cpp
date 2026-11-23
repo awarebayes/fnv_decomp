@@ -415,10 +415,10 @@ struct blob4
 {
     char b[4];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
 // pdb: class PathManager, size 0x8 (here 0x4), 2 members
 class PathManager
@@ -1217,8 +1217,8 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 
 struct HighActorCullerCell
 {

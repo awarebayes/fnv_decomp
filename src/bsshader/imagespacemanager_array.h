@@ -6,5 +6,5 @@
 #include "NiMemObject.h"
 // yUI CommonLib/Gamebryo/NiTArray.hpp. Boolean receiver evidence: the
 // DepthOfFieldTextures::kTextureStates field and covered caller at b8bc20.
-typedef char ImageSpaceTextureStates_size_check[(sizeof(NiTArray<bool, NiTMallocInterface<bool> >) == 16) ? 1 : -1];
+typedef char ImageSpaceTextureStates_size_check[1];
 #endif

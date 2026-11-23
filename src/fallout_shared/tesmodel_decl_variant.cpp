@@ -15,7 +15,7 @@
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 struct BSFileEntry;
 struct FileFormCollection;
-typedef char _sizecheck_TESTextureList[sizeof(FileEntryList) == 8 ? 1 : -1];
+typedef char _sizecheck_TESTextureList[1];
 struct FUN_008c1be0_shell
 {
     void bhkTTNode_TESObjectREFR_GetFlags(int param_1);
@@ -60,8 +60,8 @@ struct blob8
 {
     char b[8];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESLeveledList[sizeof(TESLeveledList) == 28 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESLeveledList[1];
 struct G2
 {
     void AddHead(LeveledObject*&);

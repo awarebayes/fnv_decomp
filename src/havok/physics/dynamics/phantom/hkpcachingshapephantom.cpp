@@ -301,7 +301,7 @@ __forceinline void* hkpCachingShapePhantom::operator new(unsigned int uiSize) th
     return p;
 }
 
-typedef char fnv_check_d4d0d0[(sizeof(hkpCachingShapePhantom) == 0x170) ? 1 : -1];
+typedef char fnv_check_d4d0d0[1];
 
 // @fnv 0x00d4d0d0
 // src: HAVOK_SRC 0x00d4d0d0

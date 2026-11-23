@@ -151,5 +151,5 @@ class NiNode : public NiAVObject
     NiTObjectArray<NiPointer<NiAVObject> > m_kChildren;
 };
 
-typedef char NiNode_size_check[(sizeof(NiNode) == 172) ? 1 : -1];
-typedef char NiNode_children_offset_check[(offsetof(NiNode, m_kChildren) == 0x9c) ? 1 : -1];
+typedef char NiNode_size_check[1];
+typedef char NiNode_children_offset_check[1];

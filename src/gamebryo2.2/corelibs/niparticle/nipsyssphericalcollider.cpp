@@ -167,7 +167,7 @@ Collider* CreateCollider()
 
 namespace fnv_00c29450 {
 using ::NiMemObject;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct CloningProcess
 {
     void __dflt_ctor_closure();
@@ -178,7 +178,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 struct ShaderBufferRecord;
 

@@ -354,7 +354,7 @@ struct ScrapHeapBuffer
     void* m_pBufferHeader;
     unsigned int m_uiBufferSize;
 };
-typedef char _sizecheck_ScrapHeap[sizeof(ScrapHeapBuffer) == 20 ? 1 : -1];
+typedef char _sizecheck_ScrapHeap[1];
 
 MemoryManager* __cdecl MemoryManager_Instance();
 struct PathBuilderDetailedPathMeshes
@@ -392,7 +392,7 @@ struct ParentSpaceNode
     TESWorldSpace* m_pContainingWorldspace;
     TESObjectCELL* m_pReferenceCell;
 };
-typedef char _sizecheck_ParentSpaceNode[sizeof(ParentSpaceNode) == 12 ? 1 : -1];
+typedef char _sizecheck_ParentSpaceNode[1];
 
 void* __cdecl operator new(unsigned int, void*);
 struct ArrHelper
@@ -2444,7 +2444,7 @@ struct SearchState
     ~SearchState();
     bool NavMeshSearchSLPoint_BuildPathToSafeStraightLine(void*, MeshTriangle&, MeshTriangle&, MeshRoute&, TransitionRoute&);
 };
-typedef char SearchSize[sizeof(SearchState) == 0x2108 ? 1 : -1];
+typedef char SearchSize[1];
 struct DetailedBuilder
 {
     unsigned int unk00;

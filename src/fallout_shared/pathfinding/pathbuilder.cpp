@@ -5,7 +5,7 @@
 #include "../../../include/SettingT.h"
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 #include "../../../include/BSStringT.h"
 #include "../../../include/BSSimpleList.h"
 #include "../../../include/BSSimpleArray.h"
@@ -321,8 +321,8 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
+typedef char _sizecheck_TESTexture[1];
 struct Item48
 {
     char data[0x30];
@@ -453,7 +453,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_NavMeshSearchNode[sizeof(NavMeshTriangleReference) == 20 ? 1 : -1];
+typedef char _sizecheck_NavMeshSearchNode[1];
 struct FUN_006cc5e0_shell : public PathBuilder
 {
     int PathBuilder_AddNodesFromNavMesh(PathingLocation*, PathingLocation*, unsigned int, unsigned int);

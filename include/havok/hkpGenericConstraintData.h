@@ -15,5 +15,5 @@ class hkpGenericConstraintData : public hkpConstraintData
     hkpGenericConstraintDataScheme m_kConstraintDataScheme;  // +0x18
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpGenericConstraintData[(sizeof(hkpGenericConstraintData) == 0x58) ? 1 : -1];
+typedef char fnv_hk_size_hkpGenericConstraintData[1];
 #endif

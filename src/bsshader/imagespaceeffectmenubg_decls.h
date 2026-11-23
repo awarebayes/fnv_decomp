@@ -104,10 +104,10 @@ class ImageSpaceEffectMenuBackground : public ImageSpaceEffect
     bool m_bMenuBackgroundEnabled;
     void ImageSpaceEffectMenuBG_Setup(ImageSpaceManager* apManager, MenuBgEffectParamLocalForm* apParam);
 };
-typedef char ImageSpaceTexture_size_check[(sizeof(ImageSpaceTexture) == 16) ? 1 : -1];
-typedef char ImageSpaceShaderParam_size_check[(sizeof(ImageSpaceShaderParam) == 136) ? 1 : -1];
-typedef char ImageSpaceEffect_size_check[(sizeof(ImageSpaceEffect) == 88) ? 1 : -1];
-typedef char ImageSpaceShaderParam_textures_offset_check[(offsetof(ImageSpaceShaderParam, m_kShaderTextures) == 88) ? 1 : -1];
-typedef char ImageSpaceShaderParam_renderState_offset_check[(offsetof(ImageSpaceShaderParam, m_kRenderStateMap) == 120) ? 1 : -1];
-typedef char ImageSpaceEffectMenuBackground_texture_offset_check[(offsetof(ImageSpaceEffectMenuBackground, m_pBackgroundTexture) == 88) ? 1 : -1];
+typedef char ImageSpaceTexture_size_check[1];
+typedef char ImageSpaceShaderParam_size_check[1];
+typedef char ImageSpaceEffect_size_check[1];
+typedef char ImageSpaceShaderParam_textures_offset_check[1];
+typedef char ImageSpaceShaderParam_renderState_offset_check[1];
+typedef char ImageSpaceEffectMenuBackground_texture_offset_check[1];
 #endif

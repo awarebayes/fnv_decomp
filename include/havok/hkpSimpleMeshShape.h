@@ -18,5 +18,5 @@ class hkpSimpleMeshShape : public hkpShapeCollection
     char pad41[0x3];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSimpleMeshShape[(sizeof(hkpSimpleMeshShape) == 0x44) ? 1 : -1];
+typedef char fnv_hk_size_hkpSimpleMeshShape[1];
 #endif

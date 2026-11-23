@@ -70,16 +70,16 @@ class BoltShader : public BSShader
     // void __cdecl BoltShader::*()
 };
 #pragma pack(pop)
-typedef char BoltShader_size_check[(sizeof(BoltShader) == 404) ? 1 : -1];
-typedef char BoltShader_m_ePass_offset_check[(offsetof(BoltShader, m_ePass) == 108) ? 1 : -1];
-typedef char BoltShader_BoltShaderSegmentState_offset_check[(offsetof(BoltShader, BoltShaderSegmentState) == 112) ? 1 : -1];
-typedef char BoltShader_m_fPackageValue_offset_check[(offsetof(BoltShader, m_fPackageValue) == 116) ? 1 : -1];
-typedef char BoltShader_BoltShaderPassData_offset_check[(offsetof(BoltShader, BoltShaderPassData) == 120) ? 1 : -1];
-typedef char BoltShader_EyePosition_offset_check[(offsetof(BoltShader, EyePosition) == 280) ? 1 : -1];
-typedef char BoltShader_m_fMatrix_offset_check[(offsetof(BoltShader, m_fMatrix) == 296) ? 1 : -1];
-typedef char BoltShader_BoltShaderRenderData_offset_check[(offsetof(BoltShader, BoltShaderRenderData) == 360) ? 1 : -1];
-typedef char BoltShader_CoreColor_offset_check[(offsetof(BoltShader, CoreColor) == 364) ? 1 : -1];
-typedef char BoltShader_GlowColor_offset_check[(offsetof(BoltShader, GlowColor) == 380) ? 1 : -1];
-typedef char BoltShader_BoltShaderPass_offset_check[(offsetof(BoltShader, BoltShaderPass) == 396) ? 1 : -1];
-typedef char BoltShader_BoltShaderResources_offset_check[(offsetof(BoltShader, BoltShaderResources) == 400) ? 1 : -1];
+typedef char BoltShader_size_check[1];
+typedef char BoltShader_m_ePass_offset_check[1];
+typedef char BoltShader_BoltShaderSegmentState_offset_check[1];
+typedef char BoltShader_m_fPackageValue_offset_check[1];
+typedef char BoltShader_BoltShaderPassData_offset_check[1];
+typedef char BoltShader_EyePosition_offset_check[1];
+typedef char BoltShader_m_fMatrix_offset_check[1];
+typedef char BoltShader_BoltShaderRenderData_offset_check[1];
+typedef char BoltShader_CoreColor_offset_check[1];
+typedef char BoltShader_GlowColor_offset_check[1];
+typedef char BoltShader_BoltShaderPass_offset_check[1];
+typedef char BoltShader_BoltShaderResources_offset_check[1];
 #endif

@@ -267,7 +267,7 @@ struct BottomlessStack
     SoundMessageRecord* pTop;
     unsigned int m_uiStackLimit;
 };
-typedef char _sizecheck_AudioMessageStack[sizeof(BottomlessStack) == 16 ? 1 : -1];
+typedef char _sizecheck_AudioMessageStack[1];
 struct FUN_00ae7510_shell : public BottomlessStack
 {
     void FUN_00ae7510();

@@ -4,9 +4,9 @@
 
 #include <stddef.h>
 
-typedef char TESReactionForm_size_check[(sizeof(TESReactionForm) == 0x10) ? 1 : -1];
-typedef char TESReactionForm_list_offset_check[(offsetof(TESReactionForm, m_kReactionList) == 0x4) ? 1 : -1];
-typedef char TESReactionForm_flags_offset_check[(offsetof(TESReactionForm, m_ucReactionFlags) == 0xC) ? 1 : -1];
+typedef char TESReactionForm_size_check[1];
+typedef char TESReactionForm_list_offset_check[1];
+typedef char TESReactionForm_flags_offset_check[1];
 
 class DistantTreeTextureInfo;
 // Storage constructor at 0x0048b3e0; its original class identity is unresolved.

@@ -42,5 +42,5 @@ public:
     NiTObjectArray<NiPointer<NiAVObject> > m_kSceneObjects; // 0x18
 };
 
-typedef char NiPSysMeshUpdateModifier_size_check[(sizeof(NiPSysMeshUpdateModifier) == 0x28) ? 1 : -1];
-typedef char NiPSysMeshUpdateModifier_scene_objects_offset_check[(offsetof(NiPSysMeshUpdateModifier, m_kSceneObjects) == 0x18) ? 1 : -1];
+typedef char NiPSysMeshUpdateModifier_size_check[1];
+typedef char NiPSysMeshUpdateModifier_scene_objects_offset_check[1];

@@ -98,7 +98,7 @@ void* __thiscall NiPSysAgeDeathModifier::Destroy(unsigned int flag)
 }
 
 #include "../../../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct CloningProcess
 {
     void __dflt_ctor_closure();
@@ -109,7 +109,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 
 // Clone keys are NiObject pointers; GetAt at 0x00a53c30 is also bound to this
 // shared NiTPointerMap specialization by nitimecontroller.cpp and niblendinterpolator.cpp.

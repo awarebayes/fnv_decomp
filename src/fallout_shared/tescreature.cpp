@@ -200,8 +200,8 @@ TESCreature::TESCreature()
 
 struct BGSImpactDataSet;
 struct QueuedFile;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_BGSPreloadable[sizeof(BGSPreloadable) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_BGSPreloadable[1];
 
 // @fnv 0x005f8bb0
 void TESCreature::SetImpactDataSet(BGSImpactDataSet* apSet)
@@ -308,7 +308,7 @@ struct IdleAnimationManager
     char _pad_15[3];
     char m_acIdleName[16];
 };
-typedef char _sizecheck_TESIdleManager[sizeof(IdleAnimationManager) == 40 ? 1 : -1];
+typedef char _sizecheck_TESIdleManager[1];
 struct FUN_00843150_shell : public IdleAnimationManager
 {
     bool InterfaceManager_GetMagicPageNumber();

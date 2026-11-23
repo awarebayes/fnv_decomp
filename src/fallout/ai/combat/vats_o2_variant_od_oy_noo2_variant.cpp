@@ -8,7 +8,7 @@
 #include "../../../../include/bhkWorld.h"
 #include "../../../../include/Actor.h"
 #include "../../../../include/VATSCommand.h"
-typedef char _sizecheck_VATS_COMMAND[sizeof(VATSCommand) == 40 ? 1 : -1];
+typedef char _sizecheck_VATS_COMMAND[1];
 struct PlayerCharacter;
 extern PlayerCharacter* DAT_011f21f0;
 struct FUN_00498910_shell

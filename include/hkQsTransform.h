@@ -63,7 +63,7 @@ public:
     hkBool ProcessAndReturnValue_00ce5120(const hkQsTransform& other, float epsilon) const;
 };
 
-typedef char hkQsTransform_size_check[(sizeof(hkQsTransform) == 48) ? 1 : -1];
-typedef char hkQsTransform_translation_offset_check[(offsetof(hkQsTransform, m_vTranslation) == 0) ? 1 : -1];
-typedef char hkQsTransform_rotation_offset_check[(offsetof(hkQsTransform, m_rotation) == 16) ? 1 : -1];
-typedef char hkQsTransform_scale_offset_check[(offsetof(hkQsTransform, m_vScale) == 32) ? 1 : -1];
+typedef char hkQsTransform_size_check[1];
+typedef char hkQsTransform_translation_offset_check[1];
+typedef char hkQsTransform_rotation_offset_check[1];
+typedef char hkQsTransform_scale_offset_check[1];

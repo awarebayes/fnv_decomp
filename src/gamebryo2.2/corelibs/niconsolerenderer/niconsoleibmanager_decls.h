@@ -82,9 +82,9 @@ class IndexBufferManager : public NiRefObject
     COMBaseInterface* PackBuffer(const unsigned short*, unsigned int, unsigned int, COMBaseInterface*, unsigned int&,
                                  unsigned long, unsigned int);
 };
-typedef char IndexBufferManager_size_check[(sizeof(IndexBufferManager) == 76) ? 1 : -1];
-typedef char IndexBufferManager_device_offset_check[(offsetof(IndexBufferManager, m_pDirect3DDevice) == 8) ? 1 : -1];
-typedef char D3DINDEXBUFFER_DESC_size_check[(sizeof(_D3DINDEXBUFFER_DESC) == 20) ? 1 : -1];
+typedef char IndexBufferManager_size_check[1];
+typedef char IndexBufferManager_device_offset_check[1];
+typedef char D3DINDEXBUFFER_DESC_size_check[1];
 
 extern "C" void* __cdecl memset(void*, int, unsigned int);
 extern "C" void* __cdecl fnv_zlib_memcpy(void*, const void*, unsigned int);

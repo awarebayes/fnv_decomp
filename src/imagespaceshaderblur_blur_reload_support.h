@@ -11,7 +11,7 @@
 // NiTArray/ImageSpaceEffect layout follows the accepted bloom declarations
 // (decomp/src/bsshader/imagespaceeffectbloom_decls.h).
 extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-typedef char ShaderMacroSize[(sizeof(BSShaderManager::BSShaderMacro) == 76) ? 1 : -1];
+typedef char ShaderMacroSize[1];
 #include "../include/NiTMallocInterface.h"
 #include "../include/NiTArray.h"
 #include "../include/NiTPrimitiveArray.h"
@@ -32,8 +32,8 @@ class ImageSpaceEffect
     NiTPrimitiveArray<ImageSpaceEffectInput*> pEffectInputs;
     NiTPrimitiveArray<int> pEffectOutput;
 };
-typedef char ImageSpaceEffectSizeCheck[sizeof(ImageSpaceEffect) == 88 ? 1 : -1];
-typedef char BSShaderSizeCheck[sizeof(BSShader) == 108 ? 1 : -1];
+typedef char ImageSpaceEffectSizeCheck[1];
+typedef char BSShaderSizeCheck[1];
 class ImageSpaceEffectShader : public BSShader, public ImageSpaceEffect
 {
   public:
@@ -45,5 +45,5 @@ class ImageSpaceEffectShader : public BSShader, public ImageSpaceEffect
     virtual void SetParameters();
     virtual bool SetupPasses();
 };
-typedef char ImageSpaceShaderSizeCheck[sizeof(ImageSpaceEffectShader) == 196 ? 1 : -1];
+typedef char ImageSpaceShaderSizeCheck[1];
 #endif

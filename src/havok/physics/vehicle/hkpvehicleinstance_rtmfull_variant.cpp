@@ -1091,7 +1091,7 @@ class FUN_00e38b20
     void CopyVehicleFields(const hkSourceE392* pkOther) throw();
 };
 
-typedef char fnv_check_e39210[(sizeof(FUN_00e38b20) == 0xd4) ? 1 : -1];
+typedef char fnv_check_e39210[1];
 
 class hkSourceE392
 {

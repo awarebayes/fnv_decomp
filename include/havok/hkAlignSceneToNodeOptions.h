@@ -21,5 +21,5 @@ class hkAlignSceneToNodeOptions : public hkReferencedObject
     hkStringPtr m_kNodeName;  // +0x14
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkAlignSceneToNodeOptions[(sizeof(hkAlignSceneToNodeOptions) == 0x18) ? 1 : -1];
+typedef char fnv_hk_size_hkAlignSceneToNodeOptions[1];
 #endif

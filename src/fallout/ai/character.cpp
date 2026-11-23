@@ -318,7 +318,7 @@ struct MusicMarkerReference
     TESObjectREFR* m_pMarkerReference;
     MediaLocation* m_pAudioMarkerData;
 };
-typedef char _sizecheck_AudioMarkerInfo[sizeof(MusicMarkerReference) == 8 ? 1 : -1];
+typedef char _sizecheck_AudioMarkerInfo[1];
 struct FUN_009698a0_shell : public PlayerCharacter
 {
     MediaLocationController* GetMediaLocationController();

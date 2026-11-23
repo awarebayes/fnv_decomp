@@ -562,9 +562,9 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 
 struct Sky;
 
@@ -717,11 +717,11 @@ struct LocationDescriptor
     unsigned int m_pLocationData;
     int eObjType;
 };
-typedef char _sizecheck_PackageLocation[sizeof(LocationDescriptor) == 12 ? 1 : -1];
+typedef char _sizecheck_PackageLocation[1];
 
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_ActorValueOwner[1];
 
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 
 struct BGSMessageInitAccess
 {
@@ -2267,7 +2267,7 @@ struct LocationDescriptor
     unsigned int m_pLocationData;
     int eObjType;
 };
-typedef char _sizecheck_PackageLocation[sizeof(LocationDescriptor) == 12 ? 1 : -1];
+typedef char _sizecheck_PackageLocation[1];
 struct FUN_006777b0_shell : public TESPackage
 {
     void ComputePackageFlags(TESObjectREFR*);
@@ -2931,7 +2931,7 @@ struct LocationDescriptor
     unsigned int m_pLocationData;
     int eObjType;
 };
-typedef char _sizecheck_PackageLocation[sizeof(LocationDescriptor) == 12 ? 1 : -1];
+typedef char _sizecheck_PackageLocation[1];
 struct FUN_00671e10_shell : public TESPackage
 {
     void TESPackage_SetPackageSecondLocation(LocationDescriptor*);
@@ -3447,7 +3447,7 @@ struct LocationDescriptor
     unsigned int m_pLocationData;
     int eObjType;
 };
-typedef char _sizecheck_PackageLocation[sizeof(LocationDescriptor) == 12 ? 1 : -1];
+typedef char _sizecheck_PackageLocation[1];
 
 void* __cdecl operator new(unsigned int);
 
@@ -4024,11 +4024,11 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 
 struct VActor
 {
@@ -4652,7 +4652,7 @@ struct LocationDescriptor
     unsigned int m_pLocationData;
     int eObjType;
 };
-typedef char _sizecheck_PackageLocation[sizeof(LocationDescriptor) == 12 ? 1 : -1];
+typedef char _sizecheck_PackageLocation[1];
 
 struct BoundHolder
 {

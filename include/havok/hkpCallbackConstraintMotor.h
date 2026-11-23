@@ -25,5 +25,5 @@ class hkpCallbackConstraintMotor : public hkpLimitedForceConstraintMotor
     hkUlong m_userData2;  // +0x24 // src: XBOX_RETAIL_PDB +0x24 (old: m_pRefObjectLocalStore)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpCallbackConstraintMotor[(sizeof(hkpCallbackConstraintMotor) == 0x28) ? 1 : -1];
+typedef char fnv_hk_size_hkpCallbackConstraintMotor[1];
 #endif

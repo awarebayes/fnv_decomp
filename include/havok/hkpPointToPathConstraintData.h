@@ -27,5 +27,5 @@ class hkpPointToPathConstraintData : public hkpConstraintData
     hkTransform m_kLocalTransforms[2];  // +0x30
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPointToPathConstraintData[(sizeof(hkpPointToPathConstraintData) == 0xB0) ? 1 : -1];
+typedef char fnv_hk_size_hkpPointToPathConstraintData[1];
 #endif

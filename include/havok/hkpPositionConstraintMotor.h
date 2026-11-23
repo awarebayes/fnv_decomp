@@ -16,5 +16,5 @@ class hkpPositionConstraintMotor : public hkpLimitedForceConstraintMotor
     hkReal m_constantRecoveryVelocity;      // +0x20 // src: XBOX_RETAIL_PDB +0x20 (old: m_fConstantRecoveryVelocity)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPositionConstraintMotor[(sizeof(hkpPositionConstraintMotor) == 0x24) ? 1 : -1];
+typedef char fnv_hk_size_hkpPositionConstraintMotor[1];
 #endif

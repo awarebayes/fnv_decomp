@@ -10,7 +10,7 @@
 
 #define GETHIT_JOIN_IMPL(a, b) a##b
 #define GETHIT_JOIN(a, b) GETHIT_JOIN_IMPL(a, b)
-#define GETHIT_STATIC_ASSERT(condition) typedef char GETHIT_JOIN(gethit_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define GETHIT_STATIC_ASSERT(condition) typedef char GETHIT_JOIN(gethit_static_assert_, __LINE__)[1]
 #include "../../include/NiObject.h"
 class ImageSpaceEffect__EffectInput;
 class ImageSpaceManager;

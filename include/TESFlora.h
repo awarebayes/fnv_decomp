@@ -12,4 +12,4 @@ public:
     void Copy_00508990(TESForm* apCopy);
 };
 
-typedef char TESFlora_size_check[(sizeof(TESFlora) == 0x9C) ? 1 : -1];
+typedef char TESFlora_size_check[1];

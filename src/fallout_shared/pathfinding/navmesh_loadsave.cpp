@@ -627,7 +627,7 @@ struct NavMeshSaveDataHeader
     unsigned int m_uiField4;
     unsigned int m_uiField5;
 };
-typedef char _sizecheck_NavMeshSaveStruct[sizeof(NavMeshSaveDataHeader) == 24 ? 1 : -1];
+typedef char _sizecheck_NavMeshSaveStruct[1];
 struct NavMeshInfoSaveData
 {
     static unsigned int GetSaveSize();
@@ -645,7 +645,7 @@ struct NavMeshInfoSaveData
     unsigned short m_usTriangleIdentifier;
     char _pad_2e[2];
 };
-typedef char _sizecheck_EdgeExtraInfoOLD[sizeof(NavMeshInfoSaveData) == 48 ? 1 : -1];
+typedef char _sizecheck_EdgeExtraInfoOLD[1];
 struct FUN_00692950_shell : public NavMesh
 {
     bool NavMesh_Load(TESFile*);

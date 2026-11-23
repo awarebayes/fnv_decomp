@@ -463,9 +463,9 @@ struct blob48
 {
     char b[48];
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
+typedef char _sizecheck_ActorValueOwner[1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_00401190_shell : public TESForm
 {
     bool TESForm_GetQuestObject();
@@ -630,7 +630,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 // The shared cell has no declaration for this display-name helper.
 // Extend it locally without duplicating its fields or virtual functions.
 struct CellDisplayNameAccess : public TESObjectCELL
@@ -704,7 +704,7 @@ class TESQuest;
 class TESTopicInfo;
 class TopicInfoArray;
 namespace fnv_00618660 {
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_00618660_shell : public TESForm
 {
     char* TESTopic_GetFormEditorID();

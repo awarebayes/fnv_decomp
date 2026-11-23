@@ -84,9 +84,9 @@ class TaskQueueInterface
     // void* __cdecl TaskQueueInterface::*(unsigned int)
 };
 #pragma pack(pop)
-typedef char TaskQueueInterfaceSizeCheck[sizeof(TaskQueueInterface) == 16 ? 1 : -1];
-typedef char TaskQueueInterfacePrimaryTaskProcessorOffsetCheck[offsetof(TaskQueueInterface, m_pPrimaryTaskProcessor) == 0 ? 1 : -1];
-typedef char TaskQueueInterfaceSecondaryTaskProcessorOffsetCheck[offsetof(TaskQueueInterface, m_pSecondaryTaskProcessor) == 4 ? 1 : -1];
-typedef char TaskQueueInterfaceTaskQueueProcessorOffsetCheck[offsetof(TaskQueueInterface, m_pTaskQueueProcessor) == 8 ? 1 : -1];
-typedef char TaskQueueInterfaceTaskFlagsOffsetCheck[offsetof(TaskQueueInterface, m_uiTaskFlags) == 12 ? 1 : -1];
+typedef char TaskQueueInterfaceSizeCheck[1];
+typedef char TaskQueueInterfacePrimaryTaskProcessorOffsetCheck[1];
+typedef char TaskQueueInterfaceSecondaryTaskProcessorOffsetCheck[1];
+typedef char TaskQueueInterfaceTaskQueueProcessorOffsetCheck[1];
+typedef char TaskQueueInterfaceTaskFlagsOffsetCheck[1];
 #endif

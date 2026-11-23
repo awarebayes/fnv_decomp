@@ -22,5 +22,5 @@ class hkpVehicleDefaultEngine : public hkpVehicleEngine
     hkReal m_clutchSlipRPM;             // +0x2C // src: XBOX_RETAIL_PDB +0x2c (old: m_fClutchSlipRPM)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleDefaultEngine[(sizeof(hkpVehicleDefaultEngine) == 0x30) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleDefaultEngine[1];
 #endif

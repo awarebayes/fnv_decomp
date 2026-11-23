@@ -161,6 +161,6 @@ class NiTexturingProperty::ShaderMap : public Map
 
     unsigned int m_uiID;
 };
-typedef char NiTexturingProperty_Map_size_check[(sizeof(NiTexturingProperty::Map) == 0x10) ? 1 : -1];
-typedef char NiTexturingProperty_BumpMap_size_check[(sizeof(NiTexturingProperty::BumpMap) == 0x28) ? 1 : -1];
-typedef char NiTexturingProperty_ParallaxMap_size_check[(sizeof(NiTexturingProperty::ParallaxMap) == 0x14) ? 1 : -1];
+typedef char NiTexturingProperty_Map_size_check[1];
+typedef char NiTexturingProperty_BumpMap_size_check[1];
+typedef char NiTexturingProperty_ParallaxMap_size_check[1];

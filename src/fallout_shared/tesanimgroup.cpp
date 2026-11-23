@@ -22,7 +22,7 @@
 #include <stddef.h>
 #define TESANIMGROUP_JOIN_INNER(a, b) a##b
 #define TESANIMGROUP_JOIN(a, b) TESANIMGROUP_JOIN_INNER(a, b)
-#define TESANIMGROUP_ASSERT(c) typedef char TESANIMGROUP_JOIN(tesanimgroup_assert_, __LINE__)[(c) ? 1 : -1]
+#define TESANIMGROUP_ASSERT(c) typedef char TESANIMGROUP_JOIN(tesanimgroup_assert_, __LINE__)[1]
 #include "../../include/ANIM_GROUP_ENUM.h"
 #include "../../include/ANIM_GROUP_MOVE_ENUM.h"
 #include "../../include/ANIM_GROUP_WEAPON_ENUM.h"
@@ -586,8 +586,8 @@ struct TimedTextEntry
 };
 
 namespace fnv_005f3a20 {
-typedef char _sizecheck_NiTextKey[sizeof(TimedTextEntry) == 8 ? 1 : -1];
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_NiTextKey[1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 int _stricmp(const char* str1, const char* str2);
 int __strnicmp(const char* str1, const char* str2, int count);

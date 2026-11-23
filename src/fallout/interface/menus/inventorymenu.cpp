@@ -23,7 +23,7 @@
 #include "../../../../include/InventoryMenu.h"
 #define FNV_CTOR_JOIN_(a, b) a##b
 #define FNV_CTOR_JOIN(a, b) FNV_CTOR_JOIN_(a, b)
-#define FNV_STATIC_ASSERT(c) typedef char FNV_CTOR_JOIN(fnv_layout_check_, __LINE__)[(c) ? 1 : -1]
+#define FNV_STATIC_ASSERT(c) typedef char FNV_CTOR_JOIN(fnv_layout_check_, __LINE__)[1]
 
 // The shared class lacks the 0x006e4ba0 entry; its only argument is this in ECX.
 int __fastcall GetHotkeySlotCount(HotkeyWheelDisplay*);

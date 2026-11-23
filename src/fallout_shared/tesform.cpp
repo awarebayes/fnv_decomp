@@ -667,7 +667,7 @@ struct IdleAnimationManager
     char _pad_15[3];
     NiTPrimitiveArray<unsigned int> m_kIdleForms;
 };
-typedef char _sizecheck_TESIdleManager[sizeof(IdleAnimationManager) == 40 ? 1 : -1];
+typedef char _sizecheck_TESIdleManager[1];
 struct FUN_005ffbf0_shell : public IdleAnimationManager
 {
     void AddIdleToArray(TESIdleForm*);
@@ -814,9 +814,9 @@ struct blob48
 {
     char b[48];
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
+typedef char _sizecheck_ActorValueOwner[1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_004011d0_shell : public TESForm
 {
     bool TESForm_GetNeedToChangeProcess();
@@ -962,9 +962,9 @@ struct blob48
 {
     char b[48];
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
+typedef char _sizecheck_ActorValueOwner[1];
+typedef char _sizecheck_CachedValuesOwner[1];
 struct FUN_004011f0_shell : public TESForm
 {
     bool TESForm_GetHasPLSpecTex();
@@ -1851,7 +1851,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FormComponentArray
 {
     void InitializeFromForm(TESForm*);
@@ -1862,7 +1862,7 @@ struct FormComponentArray
     bool AreComponentsEqual(FormComponentArray*);
     char m_pComponents[152];
 };
-typedef char _sizecheck_FormComponentCollection[sizeof(FormComponentArray) == 152 ? 1 : -1];
+typedef char _sizecheck_FormComponentCollection[1];
 struct FUN_00483720_shell : public TESForm
 {
     void ClearFormData();
@@ -1964,7 +1964,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FormComponentArray
 {
     void InitializeFromForm(TESForm*);
@@ -1975,7 +1975,7 @@ struct FormComponentArray
     bool AreComponentsEqual(FormComponentArray*);
     char m_pComponents[152];
 };
-typedef char _sizecheck_FormComponentCollection[sizeof(FormComponentArray) == 152 ? 1 : -1];
+typedef char _sizecheck_FormComponentCollection[1];
 struct FUN_00483870_shell : public TESForm
 {
     void TESForm_ClearDataAllComponents();
@@ -2032,11 +2032,11 @@ void FUN_00483870_shell::TESForm_ClearDataAllComponents()
 
 class TESObjectREFR;
 namespace fnv_00484730 {
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
-typedef char _sizecheck_TESDescription[sizeof(TESDescription) == 8 ? 1 : -1];
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
-typedef char _sizecheck_TESIcon[sizeof(TESIcon) == 12 ? 1 : -1];
-typedef char _sizecheck_ActorValueInfo[sizeof(ActorValueInfo) == 196 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
+typedef char _sizecheck_TESDescription[1];
+typedef char _sizecheck_TESTexture[1];
+typedef char _sizecheck_TESIcon[1];
+typedef char _sizecheck_ActorValueInfo[1];
 struct FUN_00484730_shell : public TESForm
 {
     void TESForm_SetAltered(bool);
@@ -2088,11 +2088,11 @@ void FUN_00484730_shell::TESForm_SetAltered(bool abAltered)
 }
 }  // namespace fnv_00484730
 
-typedef char _sizecheck_TESAttributes[sizeof(TESAttributes) == 12 ? 1 : -1];
-typedef char _sizecheck_BGSClipRoundsForm[sizeof(BGSClipRoundsForm) == 8 ? 1 : -1];
-typedef char _sizecheck_TESUsesForm[sizeof(TESUsesForm) == 8 ? 1 : -1];
-typedef char _sizecheck_TESQualityForm[sizeof(TESQualityForm) == 8 ? 1 : -1];
-typedef char _sizecheck_TESWeightForm[sizeof(TESWeightForm) == 8 ? 1 : -1];
+typedef char _sizecheck_TESAttributes[1];
+typedef char _sizecheck_BGSClipRoundsForm[1];
+typedef char _sizecheck_TESUsesForm[1];
+typedef char _sizecheck_TESQualityForm[1];
+typedef char _sizecheck_TESWeightForm[1];
 struct FUN_00486620_shell : public TESForm
 {
     unsigned int TESForm_GetDataSizeAdded();

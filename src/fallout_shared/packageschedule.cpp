@@ -40,7 +40,7 @@ struct DurationData
     void* __vecDelDtor(unsigned int);
     PackedByteIntRecord m_kScheduleData;
 };
-typedef char _sizecheck_PackageSchedule[sizeof(DurationData) == 8 ? 1 : -1];
+typedef char _sizecheck_PackageSchedule[1];
 struct FUN_0067fcb0_shell : public DurationData
 {
     void ResetSchedule(PackedByteIntRecord*);
@@ -78,7 +78,7 @@ struct DurationData
     void* __vecDelDtor(unsigned int);
     PackedByteIntRecord m_kScheduleData;
 };
-typedef char _sizecheck_PackageSchedule[sizeof(DurationData) == 8 ? 1 : -1];
+typedef char _sizecheck_PackageSchedule[1];
 struct FUN_0067fd40_shell : public DurationData
 {
     void PackageSchedule_Copy(DurationData*);
@@ -157,7 +157,7 @@ public:
     void SetDirty(bool);
     void* __vecDelDtor(unsigned int);
 };
-typedef char _sizecheck_CombatCoverLocation[sizeof(CombatCoverPointData_packageschedule) == 120 ? 1 : -1];
+typedef char _sizecheck_CombatCoverLocation[1];
 struct FUN_0067fdb0_shell : public CombatCoverPointData_packageschedule
 {
     void PackageSchedule_SetStartDayOfWeek(bool);

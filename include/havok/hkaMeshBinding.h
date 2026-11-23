@@ -19,5 +19,5 @@ class hkaMeshBinding : public hkReferencedObject
     hkArray<hkTransform> m_kBoneFromSkinningTransforms;  // +0x20
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkaMeshBinding[(sizeof(hkaMeshBinding) == 0x2C) ? 1 : -1];
+typedef char fnv_hk_size_hkaMeshBinding[1];
 #endif

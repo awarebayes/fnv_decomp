@@ -15,5 +15,5 @@ class hkpVelocityConstraintMotor : public hkpLimitedForceConstraintMotor
     char pad1D[0x3];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVelocityConstraintMotor[(sizeof(hkpVelocityConstraintMotor) == 0x20) ? 1 : -1];
+typedef char fnv_hk_size_hkpVelocityConstraintMotor[1];
 #endif

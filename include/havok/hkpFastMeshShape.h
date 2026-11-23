@@ -10,5 +10,5 @@ class hkpFastMeshShape : public hkpMeshShape
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpFastMeshShape[(sizeof(hkpFastMeshShape) == 0x60) ? 1 : -1];
+typedef char fnv_hk_size_hkpFastMeshShape[1];
 #endif

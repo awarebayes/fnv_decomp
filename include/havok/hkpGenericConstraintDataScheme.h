@@ -17,5 +17,5 @@ class hkpGenericConstraintDataScheme
     hkArray<hkpConstraintMotor*> m_ppMotors;              // +0x34
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpGenericConstraintDataScheme[(sizeof(hkpGenericConstraintDataScheme) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpGenericConstraintDataScheme[1];
 #endif

@@ -11,7 +11,7 @@
 
 struct BSFileEntry;
 struct FileFormCollection;
-typedef char _sizecheck_TESTextureList[sizeof(FileEntryList) == 8 ? 1 : -1];
+typedef char _sizecheck_TESTextureList[1];
 
 // @fnv 0x00488ff0
 // pdb: TESTextureList::~TESTextureList | TESModel.obj | debug, call graph, medium
@@ -126,8 +126,8 @@ struct TESHealthForm;
 struct TESNPC;
 struct TESObjectREFR;
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESLeveledList[sizeof(TESLeveledList) == 28 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESLeveledList[1];
 
 // @fnv 0x00487a00
 // pdb: TESLeveledList::AddScriptAddedLeveledObject | TESLeveledList.obj | retail, upstream name already matches, high

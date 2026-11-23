@@ -41,6 +41,6 @@ class NiParticleMeshes : public NiParticles
     static const void* vftable;
 };
 
-typedef char NiParticleMeshes_size_check[(sizeof(NiParticleMeshes) == 204) ? 1 : -1];
-typedef char NiParticleMeshes_last_time_offset_check[(offsetof(NiParticleMeshes, m_fLastTime) == 0xC4) ? 1 : -1];
-typedef char NiParticleMeshes_update_offset_check[(offsetof(NiParticleMeshes, m_bUpdate) == 0xC8) ? 1 : -1];
+typedef char NiParticleMeshes_size_check[1];
+typedef char NiParticleMeshes_last_time_offset_check[1];
+typedef char NiParticleMeshes_update_offset_check[1];

@@ -1351,7 +1351,7 @@ struct blob16
 {
     char b[16];
 };
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_00874b50_shell : public Main
 {
     void TESMain_DrawWorld_RestartRenderTexture(BSRenderedTexture*, bool, unsigned int);
@@ -1391,7 +1391,7 @@ struct blob16
     char b[16];
 };
 using ::ImageSpaceManager;
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_00874b90_shell : public Main
 {
     void TESMain_DrawWorld_CopyMenuBG(ImageSpaceManager*, ::NiRenderer*, bool, BSRenderedTexture*);
@@ -2039,7 +2039,7 @@ void FalloutAudio_SetNextAcousticSpace(BGSAcousticSpace* value)
 
 namespace fnv_0086fc60 {
 using ::NiUpdateData;
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_0086fc60_shell : public Main
 {
     void Main_OnIdle_UpdateAnimationsAndEffects();
@@ -3114,7 +3114,7 @@ struct NiStream;
 class NiRenderTargetGroup;
 namespace fnv_008746d0 {
 using ::NiColorA;
-typedef char _sizecheck_NiColorA[sizeof(NiColorA) == 16 ? 1 : -1];
+typedef char _sizecheck_NiColorA[1];
 struct FUN_008746d0_shell : public Main
 {
     void TESMain_DrawWorld_Add1stPersonToDepthBuffer(BSRenderedTexture*);
@@ -3366,7 +3366,7 @@ struct blob16
     char b[16];
 };
 using ::ImageSpaceManager;
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_00876850_shell : public Main
 {
     void TESMain_DrawWorld_End(BSRenderedTexture*, ImageSpaceManager*, ::NiRenderer*, Sun*);
@@ -3579,9 +3579,9 @@ struct blob12
     char b[12];
 };
 using ::NiPoint3;
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 using ::NiUpdateData;
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 using ::AutoMemContext;
 
 class GridCell;

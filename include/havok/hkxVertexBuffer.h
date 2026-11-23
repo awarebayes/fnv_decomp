@@ -15,5 +15,5 @@ class hkxVertexBuffer : public hkReferencedObject
     hkxVertexDescription m_kCreateDesc;  // +0x5C
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkxVertexBuffer[(sizeof(hkxVertexBuffer) == 0x68) ? 1 : -1];
+typedef char fnv_hk_size_hkxVertexBuffer[1];
 #endif

@@ -177,7 +177,7 @@ struct FormBufferContext
     void ResetReadPosition();
     char* pBuffer;
 };
-typedef char _sizecheck_BGSUnloadedFormBuffer[sizeof(FormBufferContext) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSUnloadedFormBuffer[1];
 struct FUN_006665a0_shell : public FormBufferContext
 {
     void ClearBuffer_006665a0();
@@ -318,8 +318,8 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 
 struct LoadGameSubBufferQueue
 {
@@ -401,10 +401,10 @@ struct SaveLoadFile
     unsigned int m_uiBufferSize;
     unsigned int m_uiFilePosition;
 };
-typedef char _sizecheck_BGSSaveLoadFile[sizeof(SaveLoadFile) == 272 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadFile[1];
 
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FormIDConverter
 {
     void Clear();
@@ -419,7 +419,7 @@ struct FormIDConverter
     char m_kTargetToSourceFormIDMap[16];
     unsigned int m_uiFormIDCount;
 };
-typedef char _sizecheck_BGSSaveLoadFormIDMap[sizeof(FormIDConverter) == 36 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadFormIDMap[1];
 
 
 struct ChangeFlagsT

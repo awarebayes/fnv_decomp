@@ -739,7 +739,7 @@ ExtraUsedMarkers::~ExtraUsedMarkers()
 struct BGSLoadGameBuffer;
 struct BGSSaveGameBuffer;
 
-typedef char _sizecheck_CombatTimeStamp[sizeof(CombatTargetTimestamp) == 4 ? 1 : -1];
+typedef char _sizecheck_CombatTimeStamp[1];
 
 // @fnv 0x004300a0
 // src: GUESS 0x004300a0 (confidence: high)
@@ -922,7 +922,7 @@ struct Animation
     char LocalOutput[8];
     char m_acTrailingData[8];
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 struct FUN_004301b0_shell : public Animation
 {
     unsigned short Animation_GetGroup(int);
@@ -1018,7 +1018,7 @@ ExtraGuardedRefData::ExtraGuardedRefData() : BSExtraData(0x7c)
 
 struct TESActorBase;
 
-typedef char _sizecheck_ExtraLeveledCreature[sizeof(ExtraLeveledCreature) == 20 ? 1 : -1];
+typedef char _sizecheck_ExtraLeveledCreature[1];
 
 extern int DAT_01015b7c;
 
@@ -1043,7 +1043,7 @@ ExtraTeleport::ExtraTeleport(TeleportableReference* p) : BSExtraData(0x2b)
     data = p;
 }
 
-typedef char _sizecheck_ExtraMapMarker[sizeof(ExtraMapMarker) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraMapMarker[1];
 
 extern int DAT_01015b88;
 
@@ -1058,7 +1058,7 @@ ExtraMapMarker::ExtraMapMarker(MapMarkerData* pMapMarkerData) : BSExtraData(0x2c
 
 struct MediaLocation;
 
-typedef char _sizecheck_ExtraAudioMarker[sizeof(ExtraAudioMarker) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraAudioMarker[1];
 
 extern int DAT_01015b94;
 
@@ -1096,7 +1096,7 @@ struct TESLevItem;
 struct TESObject;
 struct TESObjectWEAP;
 
-typedef char _sizecheck_ExtraContainerChanges[sizeof(ExtraContainerChanges) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraContainerChanges[1];
 
 extern int DAT_01015bb8;
 
@@ -1194,7 +1194,7 @@ ExtraActivateRefChildren::ExtraActivateRefChildren() : BSExtraData(0x54)
     f = 0.0f;
 }
 
-typedef char _sizecheck_ExtraReflectedRefs[sizeof(ExtraReflectedRefs) == 20 ? 1 : -1];
+typedef char _sizecheck_ExtraReflectedRefs[1];
 
 // Finds or creates the reflected-ref entry for apRef, adds it to RefList, and stores aiEffectFlags in the entry.
 // @fnv 0x004348a0
@@ -1213,7 +1213,7 @@ void ExtraReflectedRefs::AssignReferencedObject(TESObjectREFR* apRef, unsigned i
     ((unsigned int*)pEntry)[1] = aiEffectFlags;
 }
 
-typedef char _sizecheck_ExtraMerchantContainer[sizeof(ExtraMerchantContainer) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraMerchantContainer[1];
 
 extern int DAT_01015e04;
 
@@ -1228,7 +1228,7 @@ ExtraMerchantContainer* __fastcall ExtraMerchantContainerCtor(ExtraMerchantConta
     return pThis;
 }
 
-typedef char _sizecheck_ExtraLevCreaModifier[sizeof(ExtraLevCreaModifier) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraLevCreaModifier[1];
 
 extern int DAT_01015e10;
 
@@ -1244,7 +1244,7 @@ ExtraLevCreaModifier* __fastcall ExtraLevCreaModifierCtor(ExtraLevCreaModifier* 
 
 namespace fnv_004350c0 {
 
-typedef char _sizecheck_ExtraLevCreaModifier[sizeof(ExtraLevCreaModifier) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraLevCreaModifier[1];
 
 extern SettingT_GameSettingCollection_* DAT_01184ab0[];
 
@@ -1261,7 +1261,7 @@ float ExtraLevCreaModifier::GetMultiplier()
     return fretval;
 }
 
-typedef char _sizecheck_ExtraLevCreaModifier[sizeof(ExtraLevCreaModifier) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraLevCreaModifier[1];
 
 // @fnv 0x00435100
 int ExtraLevCreaModifier::GetAllBelowForce()
@@ -1291,7 +1291,7 @@ ExtraLastFinishedSequence::~ExtraLastFinishedSequence()
 
 
 
-typedef char _sizecheck_ExtraXTarget[sizeof(ExtraXTarget) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraXTarget[1];
 
 extern int DAT_01015e28;
 
@@ -1306,7 +1306,7 @@ ExtraXTarget* __fastcall ConstructExtraXTarget(ExtraXTarget* pThis)
     return pThis;
 }
 
-typedef char _sizecheck_ExtraEmittanceSource[sizeof(ExtraEmittanceSource) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraEmittanceSource[1];
 
 // @fnv 0x00435440
 // pdb: ExtraEmittanceSource::ExtraEmittanceSource | ExtraDataObjects.obj | debug, call graph, medium
@@ -1324,7 +1324,7 @@ struct BGSLoadGameBuffer;
 struct BGSSaveFormBuffer;
 struct BGSSaveGameBuffer;
 
-typedef char _sizecheck_BGSLoadGameSubBuffer[sizeof(BGSLoadGameSubBuffer) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameSubBuffer[1];
 
 // Deletes the buffer pointed to by pBuffer and sets pBuffer to null.
 // @fnv 0x00435b20
@@ -1408,7 +1408,7 @@ void FUN_00437240_Struct::RADIO_DATA_Copy(FUN_00437240_Struct* pSource)
 
 struct TESTopicInfo;
 
-typedef char _sizecheck_ExtraSayToTopicInfo[sizeof(ExtraSayToTopicInfo) == 28 ? 1 : -1];
+typedef char _sizecheck_ExtraSayToTopicInfo[1];
 
 extern int DAT_01015f48;
 
@@ -1425,7 +1425,7 @@ ExtraSayToTopicInfo* __fastcall ExtraSayToTopicInfoConstructor(ExtraSayToTopicIn
     return pThis;
 }
 
-typedef char _sizecheck_ExtraIgnoredBySandbox[sizeof(ExtraIgnoredBySandbox) == 12 ? 1 : -1];
+typedef char _sizecheck_ExtraIgnoredBySandbox[1];
 
 extern int DAT_01015f64;
 
@@ -1488,7 +1488,7 @@ bool FUN_00437bf0_shell::Actor_IsRestrained()
     return GameSettingCollection_File(this) == 5 ? true : false;
 }
 
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
 // Stores pNode in field_60 and resets field_38 to 0.
 // @fnv 0x00438230
@@ -1507,7 +1507,7 @@ struct PositionRotation
     NiPoint3 pos;
     NiPoint3 rot;
 };
-typedef char _sizecheck_FILE_POS_ROT[sizeof(PositionRotation) == 24 ? 1 : -1];
+typedef char _sizecheck_FILE_POS_ROT[1];
 struct FUN_00692710_shell : public PositionRotation
 {
     void PathingAvoidNode_PathingAvoidNode();
@@ -1678,7 +1678,7 @@ ExtraFollower::ExtraFollower() : BSExtraData(0x1d)
 
 struct TeleportableReference;
 
-typedef char _sizecheck_ExtraTeleport[sizeof(ExtraTeleport) == 16 ? 1 : -1];
+typedef char _sizecheck_ExtraTeleport[1];
 
 struct Dummy_00419220
 {

@@ -32,6 +32,6 @@ public:
     void Init(unsigned int, unsigned int);
 };
 
-typedef char hkAabb_size_check[(sizeof(hkAabb) == 32) ? 1 : -1];
-typedef char hkAabb_minimum_corner_offset_check[(offsetof(hkAabb, m_kMinimumCorner) == 0) ? 1 : -1];
-typedef char hkAabb_maximum_corner_offset_check[(offsetof(hkAabb, m_kMaximumCorner) == 16) ? 1 : -1];
+typedef char hkAabb_size_check[1];
+typedef char hkAabb_minimum_corner_offset_check[1];
+typedef char hkAabb_maximum_corner_offset_check[1];

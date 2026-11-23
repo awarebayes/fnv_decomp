@@ -12,5 +12,5 @@ class hkpDefaultWorldMemoryWatchDog : public hkWorldMemoryAvailableWatchDog
     hkInt32 m_iMemoryLimit;  // +0x8
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpDefaultWorldMemoryWatchDog[(sizeof(hkpDefaultWorldMemoryWatchDog) == 0xC) ? 1 : -1];
+typedef char fnv_hk_size_hkpDefaultWorldMemoryWatchDog[1];
 #endif

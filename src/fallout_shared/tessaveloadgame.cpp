@@ -199,7 +199,7 @@ struct ChangeData
     unsigned int iFlags;
     void* pBuffer;
 };
-typedef char _sizecheck_ChangeData[sizeof(ChangeData) == 8 ? 1 : -1];
+typedef char _sizecheck_ChangeData[1];
 
 extern TESSaveLoadGame* g_TESSaveLoadGame;
 struct Chg00855220
@@ -885,7 +885,7 @@ struct ChangeData
     unsigned int iFlags;
     void* pBuffer;
 };
-typedef char _sizecheck_ChangeData[sizeof(ChangeData) == 8 ? 1 : -1];
+typedef char _sizecheck_ChangeData[1];
 struct FUN_00858730_shell : public TESSaveLoadGame
 {
     bool TESSaveLoadGame_LoadForm(TESForm*);

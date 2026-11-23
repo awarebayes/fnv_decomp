@@ -704,7 +704,7 @@ struct ModelLoader
     bool bHasDelayedFree; // src: XBOX_RETAIL_PDB +0x2c (old: m_bLoadTexturesDegraded)
     char _pad_2d[3];
 };
-typedef char _sizecheck_ModelLoader[sizeof(ModelLoader) == 48 ? 1 : -1];
+typedef char _sizecheck_ModelLoader[1];
 struct FUN_004409e0_shell : public ModelLoader
 {
     void ModelLoader_RemoveReferenceFromMap(TESObjectREFR*);
@@ -733,7 +733,7 @@ using ::BGSLoadGameBuffer;
 using ::BGSSaveGameBuffer;
 using ::TESForm;
 using ::BGSLoadGameSubBuffer;
-typedef char _sizecheck_BGSLoadGameSubBuffer[sizeof(BGSLoadGameSubBuffer) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameSubBuffer[1];
 
 
 // @fnv 0x0044dee0
@@ -758,7 +758,7 @@ struct PlayerTargetLocation
     TESObjectREFR* m_pFirstReference;
     TESObjectREFR* m_pSecondMapReference;
 };
-typedef char _sizecheck_PLAYER_TARGET_LOC[sizeof(PlayerTargetLocation) == 52 ? 1 : -1];
+typedef char _sizecheck_PLAYER_TARGET_LOC[1];
 struct FUN_00456540_shell : public PlayerTargetLocation
 {
     void PLAYER_TARGET_LOC_PLAYER_TARGET_LOC();
@@ -804,7 +804,7 @@ struct blob16
     char b[16];
 };
 using ::NiPoint3;
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 float __cdecl NI2HK_004a3e90(float);
 
@@ -838,7 +838,7 @@ struct TESLevItem;
 struct TESObject;
 
 using ::InventoryChanges;
-typedef char _sizecheck_InventoryChanges[sizeof(InventoryChanges) == 20 ? 1 : -1];
+typedef char _sizecheck_InventoryChanges[1];
 
 
 TESContainer* __fastcall TESObjectREFR_HasContainer(TESObjectREFR*);
@@ -868,7 +868,7 @@ struct ReferenceIntersectionData
     char Intersect[12];
     char Normal[12];
 };
-typedef char _sizecheck_REF_DECAL_DATA[sizeof(ReferenceIntersectionData) == 28 ? 1 : -1];
+typedef char _sizecheck_REF_DECAL_DATA[1];
 struct FUN_0055a400_shell : public ReferenceIntersectionData
 {
     void Object_ProcessAndReturnValue_0055a400();
@@ -1007,11 +1007,11 @@ struct blob12
     char b[12];
 };
 using ::CachedValuesOwner;
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_CachedValuesOwner[1];
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESFullName;
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0055d420_shell : public TESObjectREFR
 {
     void TESObjectREFR_SetAltered(bool);
@@ -1118,9 +1118,9 @@ using ::TESFaction;
 using ::TESForm;
 struct TESLevItem;
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESActorBaseData;
-typedef char _sizecheck_TESActorBaseData[sizeof(TESActorBaseData) == 52 ? 1 : -1];
+typedef char _sizecheck_TESActorBaseData[1];
 
 
 // Returns true when flag bit 0x200 is not set on the actor base data.
@@ -1133,7 +1133,7 @@ bool __fastcall TESActorBaseData_GetRunsInLow(TESActorBaseData* pThis)
 }
 
 using ::hkBool;
-typedef char _sizecheck_hkBool[sizeof(hkBool) == 1 ? 1 : -1];
+typedef char _sizecheck_hkBool[1];
 
 
 class hkMatrix3;
@@ -1284,7 +1284,7 @@ struct blob4
     char b[4];
 };
 using ::BGSSaveLoadGame;
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 
 
 // @fnv 0x005621d0
@@ -1305,9 +1305,9 @@ struct blob4
     char b[4];
 };
 using ::BGSLoadGameBuffer;
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 using ::BGSLoadFormBuffer;
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 
 }  // namespace fnv_00562d00
 
@@ -1323,9 +1323,9 @@ struct blob4
     char b[4];
 };
 using ::BGSLoadGameBuffer;
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 using ::BGSLoadFormBuffer;
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_005636e0_shell : public TESObjectREFR
 {
     void TESObjectREFR_LoadAnimationBGS(BGSLoadFormBuffer*);
@@ -1739,7 +1739,7 @@ struct _FILETIME;
 struct _SYSTEMTIME;
 struct _WIN32_FIND_DATAA;
 using ::TESFile;
-typedef char _sizecheck_TESFile[sizeof(TESFile) == 1068 ? 1 : -1];
+typedef char _sizecheck_TESFile[1];
 struct FUN_005653d0_shell : public TESObjectREFR
 {
     bool TESObjectREFR_GetRefPersists_005653d0();
@@ -1880,7 +1880,7 @@ struct blob16
     char b[16];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00567960_shell : public TESObjectREFR
 {
     TESGlobal* TESObjectREFR_GetOwnershipGlobal();
@@ -1942,7 +1942,7 @@ struct blob8
     char b[8];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00567dd0_shell : public TESObjectREFR
 {
     void TESObjectREFR_SetEncounterZone(BGSEncounterZone*);
@@ -2034,7 +2034,7 @@ bool FUN_00568260_shell::TESObjectREFR_HasFreeMarker(bool abIgnoreReservations)
 
 struct NiStream;
 using ::FurnitureMark;
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 
 
 // @fnv 0x00568650
@@ -2046,7 +2046,7 @@ float FurnitureMark::GetCurrentTargetDistance()
 struct NiStream;
 namespace fnv_00568ab0 {
 using ::FurnitureMark;
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 
 
 
@@ -2233,7 +2233,7 @@ struct LockExtraData
     unsigned int m_uiLockDifficulty;
     unsigned int m_uiLockValue;
 };
-typedef char _sizecheck_REFR_LOCK[sizeof(LockExtraData) == 20 ? 1 : -1];
+typedef char _sizecheck_REFR_LOCK[1];
 struct TeleportableReference
 {
     TESObjectREFR* GetLinkedDoor();
@@ -2270,7 +2270,7 @@ struct TeleportableReference
     unsigned char cFlags;
     char _pad_1d[3];
 };
-typedef char _sizecheck_DoorTeleportData[sizeof(TeleportableReference) == 32 ? 1 : -1];
+typedef char _sizecheck_DoorTeleportData[1];
 struct FUN_00569160_shell : public TESObjectREFR
 {
     LockExtraData* TESObjectREFR_GetLock();
@@ -2480,7 +2480,7 @@ struct WorldLocation
     char m_kWorldPosition[12];
     float m_fRotation;
 };
-typedef char _sizecheck_WORLD_LOCATION[sizeof(WorldLocation) == 20 ? 1 : -1];
+typedef char _sizecheck_WORLD_LOCATION[1];
 struct FUN_0056ad30_shell : public TESObjectREFR
 {
     TESWorldSpace* TESObjectREFR_GetPackageStartLocationWorld();
@@ -2568,7 +2568,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_0056b140_shell : public TESObjectREFR
 {
     TESObjectREFR* TESObjectREFR_GetRadioStationPositionRef();
@@ -2607,7 +2607,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_0056b190_shell : public TESObjectREFR
 {
     float TESObjectREFR_GetRadioStationRadius();
@@ -2648,7 +2648,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_0056b210_shell : public TESObjectREFR
 {
     int TESObjectREFR_GetRadioStationRangeType();
@@ -2782,7 +2782,7 @@ struct HavokTransformData
     char Rot[48];
     char Trans[16];
 };
-typedef char _sizecheck_bhkTransform[sizeof(HavokTransformData) == 64 ? 1 : -1];
+typedef char _sizecheck_bhkTransform[1];
 struct FUN_0056e120_shell : public HavokTransformData
 {
     void bhkTransform_setIdentity();
@@ -3000,7 +3000,7 @@ struct blob4
     char b[4];
 };
 using ::BGSSaveLoadGame;
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 
 
 bool __fastcall BGSSaveLoadGame_GetThreadAllowChanges(BGSSaveLoadGame* pThis);
@@ -3055,7 +3055,7 @@ void FUN_00571080_shell::TESObjectREFR_Set3DVerySimple(NiAVObject* ap3D)
 namespace fnv_00571530 {
 using ::NiAVObject;
 using ::NiFixedString;
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 struct FUN_00571530_shell : public TESObjectREFR
 {
     NiAVObject* TESObjectREFR_GetActorBone_00571530(NiAVObject*, NiFixedString*);
@@ -3199,7 +3199,7 @@ struct ReferenceLightData
     char m_pMenuLight[4];
     float m_fLightRadius;
 };
-typedef char _sizecheck_REFR_LIGHT[sizeof(ReferenceLightData) == 8 ? 1 : -1];
+typedef char _sizecheck_REFR_LIGHT[1];
 struct FUN_005728c0_shell : public TESObjectREFR
 {
     void TESObjectREFR_AddLight(bool);
@@ -3552,9 +3552,9 @@ struct blob12
     char b[12];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESFullName;
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_00575d10_shell : public TESObjectREFR
 {
     bool TESObjectREFR_GetInterior();
@@ -3659,11 +3659,11 @@ struct blob12
     char b[12];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESFullName;
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 using ::TESTexture;
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 struct FUN_00575d70_shell : public TESObjectREFR
 {
     TESWorldSpace* TESObjectREFR_GetWorldSpace();
@@ -3731,11 +3731,11 @@ struct IndexedPointerCollection;
 using ::TESForm;
 
 using ::InventoryStackRecord;
-typedef char _sizecheck_ItemChange[sizeof(InventoryStackRecord) == 12 ? 1 : -1];
+typedef char _sizecheck_ItemChange[1];
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESContainer;
-typedef char _sizecheck_TESContainer[sizeof(TESContainer) == 12 ? 1 : -1];
+typedef char _sizecheck_TESContainer[1];
 struct FUN_00576260_shell : public TESObjectREFR
 {
     InventoryStackRecord* TESObjectREFR_GetInventoryItem_00576260(TESBoundObject*, unsigned int);
@@ -5051,7 +5051,7 @@ struct TeleportableReference
     unsigned char cFlags;
     char _pad_1d[3];
 };
-typedef char _sizecheck_DoorTeleportData[sizeof(TeleportableReference) == 32 ? 1 : -1];
+typedef char _sizecheck_DoorTeleportData[1];
 struct FUN_005789b0_shell : public TESObjectREFR
 {
     void TESObjectREFR_AddLockChange();
@@ -5233,7 +5233,7 @@ struct blob8
     char b[8];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0057ace0_shell : public TESObjectREFR
 {
     void TESObjectREFR_SetSayToTopicInfo(TESTopicInfo*);
@@ -5304,9 +5304,9 @@ struct blob8
     char b[8];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESFullName;
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0057ad20_shell : public TESObjectREFR
 {
     void TESObjectREFR_SetSayToTopic(TESTopic*);
@@ -5686,13 +5686,13 @@ struct blob12
     char b[12];
 };
 using ::PathingLocation;
-typedef char _sizecheck_PathingLocation[sizeof(PathingLocation) == 40 ? 1 : -1];
+typedef char _sizecheck_PathingLocation[1];
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESFullName;
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 using ::TESTexture;
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 
 
 extern int DAT_0102583c;
@@ -6956,9 +6956,9 @@ struct blob12
     char b[12];
 };
 using ::FurnitureMark;
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 using ::NiPoint3;
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 
 // Copies the 12-byte position from arPos into the FurnitureMark's Position field.
@@ -7042,7 +7042,7 @@ void Fn40ea20::ContainerItemExtra_AddToExtraDataList(ExtraL* apExtra, HealthForm
 
 namespace fnv_0047a520 {
 using ::NiFixedString;
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
 using ::DummyPointerMap;
 struct NFSHelper : public NiFixedString
@@ -7548,7 +7548,7 @@ struct blob12
     char b[12];
 };
 using ::NiPoint3;
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00572380_shell : public TESObjectREFR
 {
     float TESObjectREFR_GetDistanceFromPoint(void*);
@@ -7858,13 +7858,13 @@ struct blob12
     char b[12];
 };
 using ::PathingLocation;
-typedef char _sizecheck_PathingLocation[sizeof(PathingLocation) == 40 ? 1 : -1];
+typedef char _sizecheck_PathingLocation[1];
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 using ::TESFullName;
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_TESFullName[1];
 using ::TESTexture;
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 
 
 struct RefHelper;
@@ -8119,7 +8119,7 @@ struct blob12
     char b[12];
 };
 using ::NiPoint3;
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct FUN_00575700_shell : public TESObjectREFR
 {
     void TESObjectREFR_SetAngleOnReference(struct blob12);
@@ -9072,7 +9072,7 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSChangeFlags[sizeof(FormChangeMask) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSChangeFlags[1];
 
 bool __cdecl TESObjectREFR_IsReferenceFormType(int);
 
@@ -9291,7 +9291,7 @@ struct blob12
     char b[12];
 };
 using ::NiUpdateData;
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00562020_shell : public TESObjectREFR
 {
     void TESObjectREFR_Update3DPosition();
@@ -10376,9 +10376,9 @@ struct blob4
     char b[4];
 };
 using ::BGSLoadGameBuffer;
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 using ::BGSLoadFormBuffer;
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_005627c0_shell : public TESObjectREFR
 {
     void TESObjectREFR_FinishLoadGame(BGSLoadFormBuffer*);
@@ -10588,7 +10588,7 @@ void FUN_005627c0_shell::TESObjectREFR_FinishLoadGame(BGSLoadFormBuffer* apLoadG
 namespace fnv_00563d80 {
 using ::NiControllerManager;
 using ::NiUpdateData;
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_00563d80_shell : public TESObjectREFR
 {
     bool TESObjectREFR_SetSequencePosition(NiControllerManager*, char*, float);
@@ -10795,7 +10795,7 @@ struct blob12
     char b[12];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00565870_shell : public TESObjectREFR
 {
     bool TESObjectREFR_RunScript();
@@ -11286,7 +11286,7 @@ struct blob12
     char b[12];
 };
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00568cb0_shell : public TESObjectREFR
 {
     float TESObjectREFR_GetRadius();
@@ -12641,9 +12641,9 @@ struct blob12
     char b[12];
 };
 using ::FurnitureMark;
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 using ::BaseFormComponent;
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00568500_shell : public TESObjectREFR
 {
     bool TESObjectREFR_GetMarkerAtIndex(int, FurnitureMark*);

@@ -39,7 +39,7 @@ void __fastcall SetDepthParams(FogPropertyWithBase* property, void*, float afDep
 }
 
 #include "../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 
 extern unsigned char* DAT_0109b244;

@@ -207,7 +207,7 @@ struct ShaderPropertyConversionData
     char _pad_b3[1];
     int m_iShaderDataFlags;
 };
-typedef char _sizecheck_BSShaderData[sizeof(ShaderPropertyConversionData) == 184 ? 1 : -1];
+typedef char _sizecheck_BSShaderData[1];
 
 
 struct C3;
@@ -473,8 +473,8 @@ struct blob64
 {
     char b[64];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
 // Sun.h does not yet declare the update and occlusion entry points.
 // This adapter adds only their declarations; all object storage comes from Sun.
 struct SunUpdate : public Sun

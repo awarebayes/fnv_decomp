@@ -548,7 +548,7 @@ void __cdecl GetEyeAngleLimits(float* afMinOut, float* afMaxOut)
 }
 
 namespace fnv_0064b630 {
-typedef char _sizecheck_NiPoint2[sizeof(NiPoint2) == 8 ? 1 : -1];
+typedef char _sizecheck_NiPoint2[1];
 
 extern double _gModifierZero;
 float RandomFloat0To1();

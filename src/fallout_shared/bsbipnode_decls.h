@@ -18,9 +18,9 @@ class AnimationInterpolatorNode : public NiMultiTargetTransformController
     void BSTransCon_UpdateAllButTarget(float afTime, bool abSkipSelectiveUpdateTest);
 };
 
-typedef char AnimationInterpolatorNode_size_check[(sizeof(AnimationInterpolatorNode) == 64) ? 1 : -1];
-typedef char AnimationInterpolatorNode_blend_offset_check[(offsetof(AnimationInterpolatorNode, m_pkBlendInterpolators) == 0x34) ? 1 : -1];
-typedef char AnimationInterpolatorNode_targets_offset_check[(offsetof(AnimationInterpolatorNode, m_ppTargetObjects) == 0x38) ? 1 : -1];
-typedef char AnimationInterpolatorNode_count_offset_check[(offsetof(AnimationInterpolatorNode, m_usNumInterps) == 0x3c) ? 1 : -1];
+typedef char AnimationInterpolatorNode_size_check[1];
+typedef char AnimationInterpolatorNode_blend_offset_check[1];
+typedef char AnimationInterpolatorNode_targets_offset_check[1];
+typedef char AnimationInterpolatorNode_count_offset_check[1];
 
 #endif

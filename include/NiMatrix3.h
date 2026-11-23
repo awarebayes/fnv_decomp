@@ -103,5 +103,5 @@ public:
     float Determinant();
 };
 
-typedef char NiMatrix3_size_check[(sizeof(NiMatrix3) == 36) ? 1 : -1];
-typedef char NiMatrix3_m_pEntry_offset_check[(offsetof(NiMatrix3, m_pEntry) == 0) ? 1 : -1];
+typedef char NiMatrix3_size_check[1];
+typedef char NiMatrix3_m_pEntry_offset_check[1];

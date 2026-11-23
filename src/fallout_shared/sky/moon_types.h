@@ -3,7 +3,7 @@
 #define FNV_MOON_PRIVATE_TYPES_H
 
 #include <stddef.h>
-#define MOON_ASSERT_I(x, y) typedef char moon_assert_##y[(x) ? 1 : -1]
+#define MOON_ASSERT_I(x, y) typedef char moon_assert_##y[1]
 #define MOON_ASSERT_II(x, y) MOON_ASSERT_I(x, y)
 #define MOON_ASSERT(x) MOON_ASSERT_II(x, __LINE__)
 // BSStringT, NiPoint3, AutoMemContext/MEM_CONTEXT come from canonical headers (explicit ../../../include/ path: src/fallout_shared shadows it).

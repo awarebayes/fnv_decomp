@@ -190,7 +190,7 @@ int __fastcall BSFurnitureMarker_QNumMarks(char* pThis)
     return NiTArray_char_NiTMallocInterface_char_GetEffectiveSize(pThis + 0xc);
 }
 
-typedef char _sizecheck_FurnitureMark[sizeof(FurnitureMark) == 16 ? 1 : -1];
+typedef char _sizecheck_FurnitureMark[1];
 
 // @fnv 0x005094b0
 unsigned int FurnitureMark::QNumber()

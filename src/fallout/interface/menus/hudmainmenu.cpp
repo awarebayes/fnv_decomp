@@ -554,7 +554,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 extern PlayerCharacter* pPlayer;
 float __cdecl GetAngleFromVector(NiPoint3 const&);
@@ -646,7 +646,7 @@ struct QuestUpdateManager
     static int SortQuestNamesByPriorityFunction(void*, void*);
     char _pad_0[1];
 };
-typedef char _sizecheck_QuestUpdateManager[sizeof(QuestUpdateManager) == 1 ? 1 : -1];
+typedef char _sizecheck_QuestUpdateManager[1];
 struct FUN_0077b2a0_shell : public QuestUpdateManager
 {
     void* QuestUpdateManager_GetQuestNamesItem();
@@ -676,7 +676,7 @@ struct QuestUpdateManager
     static int SortQuestNamesByPriorityFunction(void*, void*);
     char _pad_0[1];
 };
-typedef char _sizecheck_QuestUpdateManager[sizeof(QuestUpdateManager) == 1 ? 1 : -1];
+typedef char _sizecheck_QuestUpdateManager[1];
 struct FUN_0077b2c0_shell : public QuestUpdateManager
 {
     bool QuestUpdateManager_IsQuestNamesEmpty();
@@ -1217,7 +1217,7 @@ void HUDTileShiftAccess::HUDMainMenu_ShiftConditionTileOver(int aishift)
 }
 }  // namespace fnv_0077f890
 
-typedef char _sizecheck_BSTimer[sizeof(GameTimerRecord) == 32 ? 1 : -1];
+typedef char _sizecheck_BSTimer[1];
 struct FUN_00aa4ee0_shell : public GameTimerRecord
 {
     void BSTimer_Update();

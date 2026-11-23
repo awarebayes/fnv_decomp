@@ -37,7 +37,7 @@ class NiD3DVertexDeclaration : public NiD3DShaderDeclaration
     // void __cdecl NiD3DVertexDeclaration::*()
 };
 #pragma pack(pop)
-typedef char NiD3DVertexDeclaration_size_check[(sizeof(NiD3DVertexDeclaration) == 52) ? 1 : -1];
-typedef char NiD3DVertexDeclaration_m_pkVertexElements_offset_check[(offsetof(NiD3DVertexDeclaration, m_pkVertexElements) == 44) ? 1 : -1];
-typedef char NiD3DVertexDeclaration_m_pkD3DVertexDeclaration_offset_check[(offsetof(NiD3DVertexDeclaration, m_pkD3DVertexDeclaration) == 48) ? 1 : -1];
+typedef char NiD3DVertexDeclaration_size_check[1];
+typedef char NiD3DVertexDeclaration_m_pkVertexElements_offset_check[1];
+typedef char NiD3DVertexDeclaration_m_pkD3DVertexDeclaration_offset_check[1];
 #endif

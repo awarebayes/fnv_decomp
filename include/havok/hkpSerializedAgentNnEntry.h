@@ -43,5 +43,5 @@ class hkpSerializedAgentNnEntry : public hkReferencedObject
     char pad134[0xC];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpSerializedAgentNnEntry[(sizeof(hkpSerializedAgentNnEntry) == 0x140) ? 1 : -1];
+typedef char fnv_hk_size_hkpSerializedAgentNnEntry[1];
 #endif

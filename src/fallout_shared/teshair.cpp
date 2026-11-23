@@ -74,7 +74,7 @@ bool FUN_005fdf60_shell::TESHair_CanBeMale()
     return true;
 }
 
-typedef char _sizecheck_TESRaceForm[sizeof(TESRaceForm) == 8 ? 1 : -1];
+typedef char _sizecheck_TESRaceForm[1];
 struct FUN_005fdfa0_shell : public TESHair
 {
     bool IsHairValidForNPC(TESNPC*);

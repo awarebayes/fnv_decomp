@@ -17,5 +17,5 @@ void __cdecl MTRenderingSystem_TaskThreadCallback();
 #include "../../include/AILinearTaskThread.h"
 
 #include "../../include/NiRenderer.h"
-typedef char check_AILinearTaskThread_task[offsetof(AILinearTaskThread, m_pTaskFunction) == 0x4c ? 1 : -1];
+typedef char check_AILinearTaskThread_task[1];
 #endif

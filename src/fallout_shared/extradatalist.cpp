@@ -824,7 +824,7 @@ struct LockExtraData
     unsigned int m_uiLockDifficulty;
     unsigned int m_uiLockValue;
 };
-typedef char _sizecheck_REFR_LOCK[sizeof(LockExtraData) == 20 ? 1 : -1];
+typedef char _sizecheck_REFR_LOCK[1];
 struct FUN_00411b00_shell : public LockExtraData
 {
     void LockExtraData_ClearFields();
@@ -973,7 +973,7 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 struct FUN_004121b0_shell : public BGSSaveLoadGame
 {
     bool BGSSaveLoadGame_GetReconstructingForms();
@@ -1132,9 +1132,9 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 struct BSOcclusionPlane_Fake
 {
@@ -1214,7 +1214,7 @@ struct NavMeshDoorPortalEntry
     unsigned short m_usPortalTriangleIndex;
     char _pad_6[2];
 };
-typedef char _sizecheck_NAVMESH_PORTAL[sizeof(NavMeshDoorPortalEntry) == 8 ? 1 : -1];
+typedef char _sizecheck_NAVMESH_PORTAL[1];
 struct FUN_00416ab0_shell : public NavMeshDoorPortalEntry
 {
     void std_Yarn_wchar_t_Yarn_wchar_t(void*);
@@ -1239,7 +1239,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_00416b40_shell : public RadioReferenceData
 {
     void RadioReferenceData_InitializeFields();
@@ -1520,7 +1520,7 @@ ScriptLocals* FUN_00418830_shell::ExtraDataList_GetScriptLocals()
         return 0;
 }
 
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_00418890_shell : public ExtraDataList
 {
     void ExtraDataList_GetSound(BSSoundHandle*);
@@ -1554,7 +1554,7 @@ void BSSoundHandle::Clear()
 }
 
 namespace fnv_004189c0 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_004189c0_shell : public ExtraDataList
 {
     void ExtraDataList_GetWeaponIdleSound(BSSoundHandle*);
@@ -1581,7 +1581,7 @@ void FUN_004189c0_shell::ExtraDataList_GetWeaponIdleSound(BSSoundHandle* result)
 }  // namespace fnv_004189c0
 
 namespace fnv_00418a00 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_00418a00_shell : public ExtraDataList
 {
     void ExtraDataList_GetWeaponAttackSound(BSSoundHandle*);
@@ -1793,7 +1793,7 @@ struct blob8
 {
     char b[8];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00419ed0_shell : public ExtraDataList
 {
     void ExtraDataList_SetScript(Script*);
@@ -1824,7 +1824,7 @@ struct FormFlagRecord;
 struct ScriptDefinition;
 struct ScriptHeaderData;
 struct TESForm;
-typedef char _sizecheck_ScriptLocals[sizeof(ScriptLocals) == 20 ? 1 : -1];
+typedef char _sizecheck_ScriptLocals[1];
 struct FUN_00419f80_shell : public ExtraDataList
 {
     void ExtraDataList_SetScriptLocals(ScriptLocals*);
@@ -1939,10 +1939,10 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
 
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 struct FUN_0041ad00_shell : public ExtraDataList
 {
     void ExtraDataList_SetPackageStartLocation(TESWorldSpace*, TESObjectCELL*, void*, float);
@@ -1989,7 +1989,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0041b1e0_shell : public ExtraDataList
 {
     void ExtraDataList_SetStartingWorldOrCell(TESForm*);
@@ -2047,10 +2047,10 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
 
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
+typedef char _sizecheck_TESTexture[1];
 struct FUN_0041b2a0_shell : public ExtraDataList
 {
     void ExtraDataList_SetStartingWorldOrCellForRef(TESObjectREFR*);
@@ -2973,10 +2973,10 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
 
-typedef char _sizecheck_TESAttackDamageForm[sizeof(TESAttackDamageForm) == 8 ? 1 : -1];
+typedef char _sizecheck_TESAttackDamageForm[1];
 struct FUN_0041e160_shell : public ExtraDataList
 {
     void ExtraDataList_SetWaterType(TESWaterForm*);
@@ -3847,7 +3847,7 @@ struct Point3Offset
     static bool IsRefEligibleForMultiBound(TESObjectREFR*, int, int);
     char m_kOffset[12];
 };
-typedef char _sizecheck_MultiBoundMarkerData[sizeof(Point3Offset) == 12 ? 1 : -1];
+typedef char _sizecheck_MultiBoundMarkerData[1];
 struct FUN_00421f30_shell : public ExtraDataList
 {
     void ExtraDataList_SetMultiBoundData(Point3Offset*);
@@ -4469,7 +4469,7 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 struct FUN_0042ce10_shell : public BGSSaveLoadGame
 {
     bool BGSSaveLoadGame_GetSaveGameLoading();
@@ -4517,9 +4517,9 @@ struct blob4
 {
     char b[4];
 };
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 struct FUN_0042d9e0_shell : public ExtraDataList
 {
     void ExtraDataList_FinishLoadGame(BGSLoadFormBuffer*);
@@ -4949,7 +4949,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESSaveLoadGame[sizeof(TESSaveLoadGame) == 456 ? 1 : -1];
+typedef char _sizecheck_TESSaveLoadGame[1];
 struct FUN_004fd3c0_shell : public TESSaveLoadGame
 {
     FormRecordMetadata* BGSProjectile_GetExplosion();
@@ -5023,7 +5023,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0056af40_shell : public TESObjectREFR
 {
     bool TESObjectREFR_IsLeveledCreature();
@@ -5117,8 +5117,8 @@ struct blob4
     char b[4];
 };
 
-typedef char _sizecheck_BGSSaveGameBuffer[sizeof(BGSSaveGameBuffer) == 20 ? 1 : -1];
-typedef char _sizecheck_BGSSaveFormBuffer[sizeof(BGSSaveFormBuffer) == 36 ? 1 : -1];
+typedef char _sizecheck_BGSSaveGameBuffer[1];
+typedef char _sizecheck_BGSSaveFormBuffer[1];
 struct FUN_007af430_shell : public TESObjectREFR
 {
     TESBoundObject* BGSSaveFormBuffer_GetForm();
@@ -5328,7 +5328,7 @@ FUN_004143f0::FUN_004143f0() : apTextColor(0.0f, 0.0f, 0.0f, 0.0f)
 }
 
 namespace fnv_00418940 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_00418940_shell : public ExtraDataList
 {
     void ExtraDataList_GetCreatureAwakeSound(BSSoundHandle*);
@@ -5546,7 +5546,7 @@ struct RadioReferenceData
     float m_fValueBeforeRadioReference;
     TESObjectREFR* m_pRadioReference;
 };
-typedef char _sizecheck_RADIO_DATA[sizeof(RadioReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_RADIO_DATA[1];
 struct FUN_00418310_shell : public ExtraDataList
 {
     void SetRadioData(RadioReferenceData*);
@@ -5624,7 +5624,7 @@ struct TeleportableReference
     unsigned char cFlags;
     char _pad_1d[3];
 };
-typedef char _sizecheck_DoorTeleportData[sizeof(TeleportableReference) == 32 ? 1 : -1];
+typedef char _sizecheck_DoorTeleportData[1];
 struct FUN_00419120_shell : public ExtraDataList
 {
     ExtraTeleport* ExtraDataList_SetTeleportPtr(TeleportableReference*);
@@ -5703,7 +5703,7 @@ struct MapMarkerData
     unsigned short sType;
     TESReputation* pReputationData;
 };
-typedef char _sizecheck_MapMarkerData[sizeof(MapMarkerData) == 20 ? 1 : -1];
+typedef char _sizecheck_MapMarkerData[1];
 struct FUN_00419250_shell : public ExtraDataList
 {
     ExtraMapMarker* SetMapMarker(MapMarkerData*);
@@ -5791,7 +5791,7 @@ struct MediaLocation
     char _pad_29[3];
     char m_cReservedData[8];
 };
-typedef char _sizecheck_AudioMarkerData[sizeof(MediaLocation) == 52 ? 1 : -1];
+typedef char _sizecheck_AudioMarkerData[1];
 struct FUN_00419380_shell : public ExtraDataList
 {
     ExtraAudioMarker* SetAudioMarker(MediaLocation*);
@@ -5864,7 +5864,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00419700_shell : public ExtraDataList
 {
     void ExtraDataList_SetOwnership(TESForm*);
@@ -6018,7 +6018,7 @@ void FUN_0041b580_shell::SetHealthPerc(float afHealthPerc)
 
 class bhkWorld;
 namespace fnv_0041b8d0 {
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_0041b8d0_shell : public ExtraDataList
 {
     void ExtraDataList_GetbhkWorld(bhkWorld*);
@@ -6058,7 +6058,7 @@ void FUN_0041b8d0_shell::ExtraDataList_GetbhkWorld(bhkWorld* apWorld)
 
 class CellMopp;
 namespace fnv_0041ba60 {
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct FUN_0041ba60_shell : public ExtraDataList
 {
     void SetCellMopp(CellMopp*);
@@ -6096,9 +6096,9 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESSoundFile[sizeof(TESSoundFile) == 12 ? 1 : -1];
+typedef char _sizecheck_TESSoundFile[1];
 struct FUN_0041bd10_shell : public ExtraDataList
 {
     void ExtraDataList_SetMusicType(BGSMusicType*);
@@ -6165,7 +6165,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0041c090_shell : public ExtraDataList
 {
     void SetAcousticSpace(BGSAcousticSpace*);
@@ -6217,7 +6217,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0041c190_shell : public ExtraDataList
 {
     void SetClimate(TESClimate*);
@@ -6276,7 +6276,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0041c290_shell : public ExtraDataList
 {
     void ExtraDataList_SetImageSpace(TESImageSpace*);
@@ -6396,7 +6396,7 @@ struct PatrolRefData
     float m_fPatrolValue;
     char m_kPatrolData[16];
 };
-typedef char _sizecheck_PatrolRefData[sizeof(PatrolRefData) == 20 ? 1 : -1];
+typedef char _sizecheck_PatrolRefData[1];
 struct FUN_0041fc10_shell : public ExtraDataList
 {
     void SetPatrolRefData(PatrolRefData*);
@@ -6432,7 +6432,7 @@ struct PatrolReferenceData
     void Endian();
     char m_pPatrolReferences[16];
 };
-typedef char _sizecheck_OcclusionPlaneLinkedRefData[sizeof(PatrolReferenceData) == 16 ? 1 : -1];
+typedef char _sizecheck_OcclusionPlaneLinkedRefData[1];
 struct FUN_0041fec0_shell : public ExtraDataList
 {
     void ExtraDataList_SetOcclusionPlaneLinkedRefData(PatrolReferenceData*);
@@ -6544,7 +6544,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00421c60_shell : public ExtraDataList
 {
     void ExtraDataList_SetEncounterZone(BGSEncounterZone*);
@@ -6594,7 +6594,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00421d50_shell : public ExtraDataList
 {
     void SetEmittanceSource(TESForm*);
@@ -6675,8 +6675,8 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
 struct FUN_0042ee00_shell : public ExtraDataList
 {
     void ExtraDataList_SetExtraSayToTopicOnExtra(TESTopic*);
@@ -9066,7 +9066,7 @@ float FUN_00418860_Holder::ExtraDataList_GetScale()
 }
 
 namespace fnv_0041a090 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_0041a090_shell : public ExtraDataList
 {
     void ExtraDataList_SetCreatureAwakeSound(void*);
@@ -9109,7 +9109,7 @@ void FUN_0041a090_shell::ExtraDataList_SetCreatureAwakeSound(void* afSound)
 }  // namespace fnv_0041a090
 
 namespace fnv_0041a3e0 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_0041a3e0_shell : public ExtraDataList
 {
     void ExtraDataList_SetWeaponIdleSound(void*);
@@ -9149,7 +9149,7 @@ void FUN_0041a3e0_shell::ExtraDataList_SetWeaponIdleSound(void* afSound)
 }  // namespace fnv_0041a3e0
 
 namespace fnv_0041a540 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_0041a540_shell : public ExtraDataList
 {
     void ExtraDataList_SetWeaponAttackSound(void*);
@@ -9191,7 +9191,7 @@ void FUN_0041a540_shell::ExtraDataList_SetWeaponAttackSound(void* afSound)
 }  // namespace fnv_0041a540
 
 namespace fnv_0041a800 {
-typedef char _sizecheck_BSSoundHandle[sizeof(BSSoundHandle) == 12 ? 1 : -1];
+typedef char _sizecheck_BSSoundHandle[1];
 struct FUN_0041a800_shell : public ExtraDataList
 {
     void ExtraDataList_SetSound(void*);

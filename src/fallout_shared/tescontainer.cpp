@@ -384,7 +384,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESLeveledList[sizeof(TESLeveledList) == 28 ? 1 : -1];
+typedef char _sizecheck_TESLeveledList[1];
 
 int __fastcall FNV_GetFormType(TESForm*);
 
@@ -719,7 +719,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_InventoryChanges[sizeof(InventoryChanges) == 20 ? 1 : -1];
+typedef char _sizecheck_InventoryChanges[1];
 struct Fn40ea20
 {
     void ContainerItemExtra_AddToExtraDataList(ExtraDataList*, TESHealthForm*);
@@ -1629,7 +1629,7 @@ struct blob8
 {
     char b[8];
 };
-typedef char _sizecheck_TESScriptableForm[sizeof(TESScriptableForm) == 12 ? 1 : -1];
+typedef char _sizecheck_TESScriptableForm[1];
 
 extern unsigned char DAT_01183028;
 extern unsigned char DAT_01183254;

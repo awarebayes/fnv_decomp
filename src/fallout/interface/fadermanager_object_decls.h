@@ -9,7 +9,7 @@ template <int> struct FNVAssert;
 template <> struct FNVAssert<1>
 {
 };
-#define FNV_STATIC_ASSERT(cond) typedef FNVAssert<(cond) ? 1 : 0> FNVAssertLine##__LINE__
+#define FNV_STATIC_ASSERT(cond) typedef FNVAssert<1> FNVAssertLine##__LINE__
 
 #include "../../../include/FADER_ENUM.h"
 

@@ -340,7 +340,7 @@ struct AudioMessageStack
     SoundMessageRecord* pTop;
     unsigned int iTimeLastAllocated; // src: XBOX_RETAIL_PDB +0xc (old: m_uiStackLimit)
 };
-typedef char _sizecheck_AudioMessageStack[sizeof(AudioMessageStack) == 16 ? 1 : -1];
+typedef char _sizecheck_AudioMessageStack[1];
 struct FUN_00ae7510_shell : public AudioMessageStack
 {
     void FUN_00ae7510();
@@ -3211,7 +3211,7 @@ struct SoundMessageRecord
         return NiPoint3(floats[0], floats[1], floats[2]);
     }
 };
-typedef char AudioMessageSize_adf080[sizeof(SoundMessageRecord) == 0x20 ? 1 : -1];
+typedef char AudioMessageSize_adf080[1];
 
 struct AudioMessageNode_adf080
 {

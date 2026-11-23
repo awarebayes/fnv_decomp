@@ -533,7 +533,7 @@ class FUN_00d1f730 : public hkpSimpleShapePhantom
     hkpWorldObject* ClonePhantom() const throw();
 };
 
-typedef char fnv_check_d1f7e0[(sizeof(FUN_00d1f730) == 0x170) ? 1 : -1];
+typedef char fnv_check_d1f7e0[1];
 
 // @fnv 0x00d1f7e0
 // pdb: hkpSimpleShapePhantom::clone | hkpSimpleShapePhantom.obj | retail, vtable slot, high

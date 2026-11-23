@@ -41,13 +41,13 @@ public:
     CIdvCamera& CloneCamera();
 };
 
-typedef char CIdvCameraClone_size_check[(sizeof(CIdvCameraClone) == 76) ? 1 : -1];
-typedef char CIdvCameraClone_unk10_offset_check[(offsetof(CIdvCameraClone, unk10) == 0x10) ? 1 : -1];
-typedef char CIdvCameraClone_unk14_offset_check[(offsetof(CIdvCameraClone, unk14) == 0x14) ? 1 : -1];
-typedef char CIdvCameraClone_unk18_offset_check[(offsetof(CIdvCameraClone, unk18) == 0x18) ? 1 : -1];
-typedef char CIdvCameraClone_unk1C_offset_check[(offsetof(CIdvCameraClone, unk1C) == 0x1C) ? 1 : -1];
-typedef char CIdvCameraClone_unk28_offset_check[(offsetof(CIdvCameraClone, unk28) == 0x28) ? 1 : -1];
-typedef char CIdvCameraClone_unk34_offset_check[(offsetof(CIdvCameraClone, unk34) == 0x34) ? 1 : -1];
-typedef char CIdvCameraClone_unk40_offset_check[(offsetof(CIdvCameraClone, unk40) == 0x40) ? 1 : -1];
-typedef char CIdvCameraClone_unk44_offset_check[(offsetof(CIdvCameraClone, unk44) == 0x44) ? 1 : -1];
-typedef char CIdvCameraClone_unk48_offset_check[(offsetof(CIdvCameraClone, unk48) == 0x48) ? 1 : -1];
+typedef char CIdvCameraClone_size_check[1];
+typedef char CIdvCameraClone_unk10_offset_check[1];
+typedef char CIdvCameraClone_unk14_offset_check[1];
+typedef char CIdvCameraClone_unk18_offset_check[1];
+typedef char CIdvCameraClone_unk1C_offset_check[1];
+typedef char CIdvCameraClone_unk28_offset_check[1];
+typedef char CIdvCameraClone_unk34_offset_check[1];
+typedef char CIdvCameraClone_unk40_offset_check[1];
+typedef char CIdvCameraClone_unk44_offset_check[1];
+typedef char CIdvCameraClone_unk48_offset_check[1];

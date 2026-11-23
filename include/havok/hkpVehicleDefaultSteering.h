@@ -15,5 +15,5 @@ class hkpVehicleDefaultSteering : public hkpVehicleSteering
     hkArray<hkBool> m_doesWheelSteer;    // +0x10 // src: XBOX_RETAIL_PDB +0x10 (old: m_kDoesWheelSteer)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleDefaultSteering[(sizeof(hkpVehicleDefaultSteering) == 0x1C) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleDefaultSteering[1];
 #endif

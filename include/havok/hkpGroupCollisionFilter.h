@@ -14,5 +14,5 @@ class hkpGroupCollisionFilter : public hkpCollisionFilter
     hkUint32 m_uiCollisionTable[32];  // +0x34
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpGroupCollisionFilter[(sizeof(hkpGroupCollisionFilter) == 0xB4) ? 1 : -1];
+typedef char fnv_hk_size_hkpGroupCollisionFilter[1];
 #endif

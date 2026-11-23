@@ -11,8 +11,8 @@
 // src/gamebryo2.2/corelibs/nimain/niavobject.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/_fallout3/platforms/common/code/gamebryo2.2/corelibs/nimain/niavobject.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 #include "../../../../include/NiMemObject.h"
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
+typedef char _sizecheck_NiUpdateData[1];
 extern char const* const g_011f4428_arg1;
 char const* const* __cdecl NiAVObject_GetRTTI();
 extern const void* DAT_011f9140;

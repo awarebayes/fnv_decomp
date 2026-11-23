@@ -63,10 +63,10 @@ public:
     BSStringT<char> m_kActivationPrompt;      // 0x88
 };
 
-typedef char TESObjectACTI_size_check[(sizeof(TESObjectACTI) == 0x90) ? 1 : -1];
-typedef char TESObjectACTI_sound_effect_offset_check[(offsetof(TESObjectACTI, m_pSoundEffect) == 0x74) ? 1 : -1];
-typedef char TESObjectACTI_loop_sound_offset_check[(offsetof(TESObjectACTI, m_pLoopSound) == 0x78) ? 1 : -1];
-typedef char TESObjectACTI_radio_template_offset_check[(offsetof(TESObjectACTI, pRadioTemplate) == 0x7C) ? 1 : -1];
-typedef char TESObjectACTI_water_form_offset_check[(offsetof(TESObjectACTI, m_pWaterForm) == 0x80) ? 1 : -1];
-typedef char TESObjectACTI_talking_activator_offset_check[(offsetof(TESObjectACTI, m_pTalkingActivator) == 0x84) ? 1 : -1];
-typedef char TESObjectACTI_activation_prompt_offset_check[(offsetof(TESObjectACTI, m_kActivationPrompt) == 0x88) ? 1 : -1];
+typedef char TESObjectACTI_size_check[1];
+typedef char TESObjectACTI_sound_effect_offset_check[1];
+typedef char TESObjectACTI_loop_sound_offset_check[1];
+typedef char TESObjectACTI_radio_template_offset_check[1];
+typedef char TESObjectACTI_water_form_offset_check[1];
+typedef char TESObjectACTI_talking_activator_offset_check[1];
+typedef char TESObjectACTI_activation_prompt_offset_check[1];

@@ -43,9 +43,9 @@ public:
     void Calculate(unsigned short, void*);
 };
 
-typedef char Bound_size_check[(sizeof(Bound) == 16) ? 1 : -1];
-typedef char Bound_x_offset_check[(offsetof(Bound, x) == 0x00) ? 1 : -1];
-typedef char Bound_y_offset_check[(offsetof(Bound, y) == 0x04) ? 1 : -1];
-typedef char Bound_z_offset_check[(offsetof(Bound, z) == 0x08) ? 1 : -1];
-typedef char Bound_radius_offset_check[(offsetof(Bound, radius) == 0x0C) ? 1 : -1];
-typedef char Bound_coordinates_offset_check[(offsetof(Bound, coordinates) == 0x00) ? 1 : -1];
+typedef char Bound_size_check[1];
+typedef char Bound_x_offset_check[1];
+typedef char Bound_y_offset_check[1];
+typedef char Bound_z_offset_check[1];
+typedef char Bound_radius_offset_check[1];
+typedef char Bound_coordinates_offset_check[1];

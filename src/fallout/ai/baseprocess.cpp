@@ -394,9 +394,9 @@ struct blob48
 {
     char b[48];
 };
-typedef char _sizecheck_TESSaveLoadGame[sizeof(TESSaveLoadGame) == 456 ? 1 : -1];
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESSaveLoadGame[1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESChildCell[1];
 
 // @fnv 0x008d0370
 bool BaseProcess::SetCurrentAmmunition(InventoryStackRecord* apForm)

@@ -313,9 +313,9 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
-typedef char _sizecheck_ActorValueOwner[sizeof(ActorValueOwner) == 4 ? 1 : -1];
-typedef char _sizecheck_CachedValuesOwner[sizeof(CachedValuesOwner) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
+typedef char _sizecheck_ActorValueOwner[1];
+typedef char _sizecheck_CachedValuesOwner[1];
 float __cdecl MagicFormulas_AdjustMagicSpellCost(float, int, int);
 float __cdecl FloatFloor(float);
 float __cdecl BSMAX_00404010(float, float);

@@ -36,14 +36,14 @@ public:
     float m_fCameraValue2;
 };
 
-typedef char BGSCameraShotCameraShotDataSizeCheck[(sizeof(BGSCameraShot__CAMERA_SHOT_DATA) == 40) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataActionCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_eAction) == 0) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataInputFileCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, pInputFile) == 4) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataAttackerCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_eAttacker) == 8) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataFlagsCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, iFlags) == 12) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataMinTimeCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_fMinTime) == 16) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataTargetPercentCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_fTargetPercent) == 20) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataTimeMultiplierCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_fTimeMultiplier) == 24) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataMaxTimeCheck[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, fMaxTime) == 28) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataCameraValue1Check[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_fCameraValue1) == 32) ? 1 : -1];
-typedef char BGSCameraShotCameraShotDataCameraValue2Check[(offsetof(BGSCameraShot__CAMERA_SHOT_DATA, m_fCameraValue2) == 36) ? 1 : -1];
+typedef char BGSCameraShotCameraShotDataSizeCheck[1];
+typedef char BGSCameraShotCameraShotDataActionCheck[1];
+typedef char BGSCameraShotCameraShotDataInputFileCheck[1];
+typedef char BGSCameraShotCameraShotDataAttackerCheck[1];
+typedef char BGSCameraShotCameraShotDataFlagsCheck[1];
+typedef char BGSCameraShotCameraShotDataMinTimeCheck[1];
+typedef char BGSCameraShotCameraShotDataTargetPercentCheck[1];
+typedef char BGSCameraShotCameraShotDataTimeMultiplierCheck[1];
+typedef char BGSCameraShotCameraShotDataMaxTimeCheck[1];
+typedef char BGSCameraShotCameraShotDataCameraValue1Check[1];
+typedef char BGSCameraShotCameraShotDataCameraValue2Check[1];

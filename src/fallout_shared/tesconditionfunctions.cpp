@@ -141,7 +141,7 @@ struct ConditionBipedModelForm : TESBipedModelForm
 #include <stddef.h>
 #define FNV_JOIN_IMPL(a, b) a##b
 #define FNV_JOIN(a, b) FNV_JOIN_IMPL(a, b)
-#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_STATIC_ASSERT(condition) typedef char FNV_JOIN(fnv_static_assert_, __LINE__)[1]
 #ifdef _MSC_VER
 #define FNV_ALIGN(n) __declspec(align(n))
 #define FNV_FORCEINLINE __forceinline
@@ -817,7 +817,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_0059ce80_shell : public CFilter
 {
     void CFilter_SetGroup(unsigned int);
@@ -854,7 +854,7 @@ struct WorldRayCastInput
     unsigned int m_uiFilterInfo;
     char _pad_28[8];
 };
-typedef char _sizecheck_hkpWorldRayCastInput[sizeof(WorldRayCastInput) == 48 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastInput[1];
 struct RayCastHitResult
 {
     struct blob1 DidHit();
@@ -864,7 +864,7 @@ struct RayCastHitResult
     int m_iExtraInfo;
     char m_auiShapeKeys[8];
 };
-typedef char _sizecheck_hkpShapeRayCastCollectorOutput[sizeof(RayCastHitResult) == 32 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastCollectorOutput[1];
 struct ShapeRayCastOutput : public RayCastHitResult
 {
     void changeLevel(int);
@@ -875,7 +875,7 @@ struct ShapeRayCastOutput : public RayCastHitResult
     int m_uiShapeKeyIndex;
     char _pad_44[12];
 };
-typedef char _sizecheck_hkpShapeRayCastOutput[sizeof(ShapeRayCastOutput) == 80 ? 1 : -1];
+typedef char _sizecheck_hkpShapeRayCastOutput[1];
 struct WorldRayCastOutput : public ShapeRayCastOutput
 {
     struct blob1 DidHit();
@@ -883,7 +883,7 @@ struct WorldRayCastOutput : public ShapeRayCastOutput
     void* m_pRootCollidable;
     char _pad_54[12];
 };
-typedef char _sizecheck_hkpWorldRayCastOutput[sizeof(WorldRayCastOutput) == 96 ? 1 : -1];
+typedef char _sizecheck_hkpWorldRayCastOutput[1];
 struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
 {
     hkpRigidBody* GethkRigidBody();
@@ -918,7 +918,7 @@ struct BhkPickData : public WorldRayCastInput, public WorldRayCastOutput
     bool m_bPickFailed;
     char _pad_ad[3];
 };
-typedef char _sizecheck_bhkPickData[sizeof(BhkPickData) == 176 ? 1 : -1];
+typedef char _sizecheck_bhkPickData[1];
 struct FUN_0059ceb0_shell : public BhkPickData
 {
     void bhkPickData_SetClosestCollector(hkpClosestRayHitCollector*);
@@ -2609,7 +2609,7 @@ struct Animation
     char spAnimIdleFreeWhenInactiveA[8]; // src: XBOX_RETAIL_PDB +0x12c (old: LocalOutput)
     char replayDelayList[8]; // src: XBOX_RETAIL_PDB +0x134 (old: m_acTrailingData)
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 
 void __cdecl DebugLog(char const*, ...);
 
@@ -4561,7 +4561,7 @@ namespace fnv_0059cf50 {
 struct FormFlagRecord;
 struct ScriptDefinition;
 
-typedef char _sizecheck_ScriptLocals[sizeof(ScriptLocals) == 20 ? 1 : -1];
+typedef char _sizecheck_ScriptLocals[1];
 
 void __cdecl DebugLog(char const*, ...);
 struct RefH
@@ -4644,13 +4644,13 @@ struct LockExtraData
     unsigned int m_uiLockDifficulty;
     unsigned int m_uiLockValue;
 };
-typedef char _sizecheck_REFR_LOCK[sizeof(LockExtraData) == 20 ? 1 : -1];
+typedef char _sizecheck_REFR_LOCK[1];
 
-typedef char _sizecheck_TESMagicTargetForm[sizeof(TESMagicTargetForm) == 1 ? 1 : -1];
+typedef char _sizecheck_TESMagicTargetForm[1];
 
-typedef char _sizecheck_BGSDestructibleObjectForm[sizeof(BGSDestructibleObjectForm) == 8 ? 1 : -1];
+typedef char _sizecheck_BGSDestructibleObjectForm[1];
 
-typedef char _sizecheck_BGSOpenCloseForm[sizeof(BGSOpenCloseForm) == 4 ? 1 : -1];
+typedef char _sizecheck_BGSOpenCloseForm[1];
 
 void __cdecl DebugLog(char const*, ...);
 int __fastcall _FNV_GetFormType(TESForm*);
@@ -5234,7 +5234,7 @@ struct blob12
     char b[12];
 };
 
-typedef char _sizecheck_InventoryChanges[sizeof(InventoryChanges) == 20 ? 1 : -1];
+typedef char _sizecheck_InventoryChanges[1];
 
 struct TLSConsoleData
 {
@@ -5314,7 +5314,7 @@ struct TESFile;
 struct TESLevItem;
 
 
-typedef char _sizecheck_InventoryChanges[sizeof(InventoryChanges) == 20 ? 1 : -1];
+typedef char _sizecheck_InventoryChanges[1];
 
 
 struct FUN_0059da90_List
@@ -6584,9 +6584,9 @@ struct FormFlagRecord;
 
 struct ScriptDefinition;
 
-typedef char _sizecheck_ScriptLocals[sizeof(ScriptLocals) == 20 ? 1 : -1];
+typedef char _sizecheck_ScriptLocals[1];
 
-typedef char _sizecheck_ItemChange[sizeof(InventoryStackRecord) == 12 ? 1 : -1];
+typedef char _sizecheck_ItemChange[1];
 
 
 

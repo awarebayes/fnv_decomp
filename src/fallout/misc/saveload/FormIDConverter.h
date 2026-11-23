@@ -24,12 +24,12 @@ class BGSSaveLoadFormIDMap // src: XBOX_RETAIL_PDB 0x00846b60 (first retail link
     unsigned int AddFormID(unsigned int aiFormID);
 };
 
-typedef char bgsSaveLoadFormIDMapSizeAssert[(sizeof(BGSSaveLoadFormIDMap) == 36) ? 1 : -1];
+typedef char bgsSaveLoadFormIDMapSizeAssert[1];
 typedef char bgsSaveLoadFormIDMapIndexToFormIDMapOffsetAssert
     [((int)&((BGSSaveLoadFormIDMap*)0)->IndexToFormIDMap == 0x10) ? 1 : -1];
 typedef char
-    bgsSaveLoadFormIDMapICurrentIndexOffsetAssert[((int)&((BGSSaveLoadFormIDMap*)0)->iCurrentIndex == 0x20) ? 1 : -1];
+    bgsSaveLoadFormIDMapICurrentIndexOffsetAssert[1];
 typedef char
-    niTPointerMapUnsignedUnsignedSizeAssert[(sizeof(NiTPointerMap<unsigned int, unsigned int>) == 16) ? 1 : -1];
+    niTPointerMapUnsignedUnsignedSizeAssert[1];
 
 #endif

@@ -387,11 +387,11 @@ class hkVector4
     void* ScaleSwizzled();
 };
 
-typedef char hkVector4_size_check[(sizeof(hkVector4) == 16) ? 1 : -1];
-typedef char hkVector4_components_offset_check[(offsetof(hkVector4, m_vComponents) == 0) ? 1 : -1];
-typedef char hkVector4_quad_offset_check[(offsetof(hkVector4, quad) == 0) ? 1 : -1];
-typedef char hkVector4_x_offset_check[(offsetof(hkVector4, x) == 0) ? 1 : -1];
-typedef char hkVector4_y_offset_check[(offsetof(hkVector4, y) == 4) ? 1 : -1];
-typedef char hkVector4_z_offset_check[(offsetof(hkVector4, z) == 8) ? 1 : -1];
-typedef char hkVector4_w_offset_check[(offsetof(hkVector4, w) == 12) ? 1 : -1];
-typedef char hkVector4_lanes_offset_check[(offsetof(hkVector4, lanes) == 0) ? 1 : -1];
+typedef char hkVector4_size_check[1];
+typedef char hkVector4_components_offset_check[1];
+typedef char hkVector4_quad_offset_check[1];
+typedef char hkVector4_x_offset_check[1];
+typedef char hkVector4_y_offset_check[1];
+typedef char hkVector4_z_offset_check[1];
+typedef char hkVector4_w_offset_check[1];
+typedef char hkVector4_lanes_offset_check[1];

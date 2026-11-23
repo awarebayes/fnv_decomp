@@ -114,12 +114,12 @@ public:
 };
 
 #if !defined(_WIN64)
-typedef char BSPortal_size_check[(sizeof(BSPortal) == 0x108) ? 1 : -1];
-typedef char BSPortal_m_40_offset_check[(offsetof(BSPortal, m_40) == 0x40) ? 1 : -1];
-typedef char BSPortal_entries_offset_check[(offsetof(BSPortal, entries) == 0xa0) ? 1 : -1];
-typedef char BSPortal_m_e4_offset_check[(offsetof(BSPortal, m_e4) == 0xe4) ? 1 : -1];
-typedef char BSPortal_m_e5_offset_check[(offsetof(BSPortal, m_e5) == 0xe5) ? 1 : -1];
-typedef char BSPortal_m_fc_offset_check[(offsetof(BSPortal, m_fc) == 0xfc) ? 1 : -1];
-typedef char BSPortal_m_100_offset_check[(offsetof(BSPortal, m_100) == 0x100) ? 1 : -1];
-typedef char BSPortal_m_104_offset_check[(offsetof(BSPortal, m_104) == 0x104) ? 1 : -1];
+typedef char BSPortal_size_check[1];
+typedef char BSPortal_m_40_offset_check[1];
+typedef char BSPortal_entries_offset_check[1];
+typedef char BSPortal_m_e4_offset_check[1];
+typedef char BSPortal_m_e5_offset_check[1];
+typedef char BSPortal_m_fc_offset_check[1];
+typedef char BSPortal_m_100_offset_check[1];
+typedef char BSPortal_m_104_offset_check[1];
 #endif

@@ -8,7 +8,7 @@
 #include "../../../../include/NiPixelFormat.h"
 #define FNV_PIXELFORMAT_JOIN_(a, b) a##b
 #define FNV_PIXELFORMAT_JOIN(a, b) FNV_PIXELFORMAT_JOIN_(a, b)
-#define FNV_PIXELFORMAT_ASSERT(x) typedef char FNV_PIXELFORMAT_JOIN(fnv_pixelformat_assert_, __LINE__)[(x) ? 1 : -1]
+#define FNV_PIXELFORMAT_ASSERT(x) typedef char FNV_PIXELFORMAT_JOIN(fnv_pixelformat_assert_, __LINE__)[1]
 
 // Microsoft D3DFORMAT (D3D9Types.h), legacy PC D3D9 values.
 // https://learn.microsoft.com/en-us/windows/win32/direct3d9/d3dformat

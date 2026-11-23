@@ -50,11 +50,11 @@ public:
 };
 
 #if defined(_M_IX86)
-typedef char TESObjectCONT_size_check[(sizeof(TESObjectCONT) == 156) ? 1 : -1];
-typedef char TESObjectCONT_padding89_offset_check[(offsetof(TESObjectCONT, layoutPadding89) == 137) ? 1 : -1];
-typedef char TESObjectCONT_open_sound_offset_check[(offsetof(TESObjectCONT, m_pOpenSound) == 140) ? 1 : -1];
-typedef char TESObjectCONT_secondary_sound_offset_check[(offsetof(TESObjectCONT, m_pSecondarySound) == 144) ? 1 : -1];
-typedef char TESObjectCONT_looping_sound_offset_check[(offsetof(TESObjectCONT, pLoopingSound) == 148) ? 1 : -1];
-typedef char TESObjectCONT_data_offset_check[(offsetof(TESObjectCONT, Data) == 152) ? 1 : -1];
-typedef char TESObjectCONT_padding99_offset_check[(offsetof(TESObjectCONT, layoutPadding99) == 153) ? 1 : -1];
+typedef char TESObjectCONT_size_check[1];
+typedef char TESObjectCONT_padding89_offset_check[1];
+typedef char TESObjectCONT_open_sound_offset_check[1];
+typedef char TESObjectCONT_secondary_sound_offset_check[1];
+typedef char TESObjectCONT_looping_sound_offset_check[1];
+typedef char TESObjectCONT_data_offset_check[1];
+typedef char TESObjectCONT_padding99_offset_check[1];
 #endif

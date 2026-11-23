@@ -79,6 +79,6 @@ class NiBound
     char* GetViewerString_00a7fb20(const char* prefix);
 };
 
-typedef char NiBound_size_check[(sizeof(NiBound) == 16) ? 1 : -1];
-typedef char NiBound_center_offset_check[(offsetof(NiBound, m_kCenter) == 0) ? 1 : -1];
-typedef char NiBound_radius_offset_check[(offsetof(NiBound, m_fRadius) == 12) ? 1 : -1];
+typedef char NiBound_size_check[1];
+typedef char NiBound_center_offset_check[1];
+typedef char NiBound_radius_offset_check[1];

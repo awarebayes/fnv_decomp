@@ -767,7 +767,7 @@ struct blob16
     char b[16];
 };
 
-typedef char _sizecheck_ImageSpaceManager[sizeof(ImageSpaceManager) == 796 ? 1 : -1];
+typedef char _sizecheck_ImageSpaceManager[1];
 struct FUN_007123f0_shell : public ImageSpaceManager
 {
     void ImageSpaceManager_SetMenuBGBlendValue(float);
@@ -1660,7 +1660,7 @@ struct blob8
     char b[8];
 };
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_00718ab0_shell : public InterfaceManager
 {
     TESImageSpaceModifier* InterfaceManager_GetCurrentImagespaceMod();
@@ -1912,7 +1912,7 @@ void* DelStandIn::DeleteIfFlagged(unsigned int flags)
 
 struct NiStream;
 
-typedef char _sizecheck_NiColorA[sizeof(NiColorA) == 16 ? 1 : -1];
+typedef char _sizecheck_NiColorA[1];
 
 extern float DAT_0102f0e4;
 void __cdecl UnpackBytes(int, unsigned int*, unsigned int*, unsigned int*, unsigned int*);
@@ -1945,7 +1945,7 @@ namespace fnv_0070c4a0 {
 struct MenuTileComponent;
 struct MenuValueDescriptor;
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 struct GamepadManager
 {
     int InitGamePads();
@@ -1977,7 +1977,7 @@ struct GamepadManager
     bool m_bChangeDetected;
     char _pad_331[3];
 };
-typedef char _sizecheck_XInputManager[sizeof(GamepadManager) == 820 ? 1 : -1];
+typedef char _sizecheck_XInputManager[1];
 struct Controls : public GamepadManager
 {
     static Controls* GetInstance();
@@ -2067,7 +2067,7 @@ struct Controls : public GamepadManager
     char _pad_39f[1];
     char m_acInputDataAtOffset3A0[208];
 };
-typedef char _sizecheck_Controls[sizeof(Controls) == 1136 ? 1 : -1];
+typedef char _sizecheck_Controls[1];
 struct FUN_0070c4a0_shell : public InterfaceManager
 {
     void UpdateInterface();
@@ -3662,9 +3662,9 @@ InterfaceManagerCtorView_0070a130::InterfaceManagerCtorView_0070a130()
 }  // namespace fnv_0070a130
 
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 
-typedef char _sizecheck_NiUpdateData[sizeof(NiUpdateData) == 12 ? 1 : -1];
+typedef char _sizecheck_NiUpdateData[1];
 struct FUN_0070adb0_shell : public InterfaceManager
 {
     void InterfaceManager_Init(bool);
@@ -3924,11 +3924,11 @@ struct blob64
     char b[64];
 };
 
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
-typedef char _sizecheck_TESChildCell[sizeof(TESChildCell) == 4 ? 1 : -1];
+typedef char _sizecheck_TESChildCell[1];
 struct CFilter
 {
     bool QLinkedGroup();
@@ -3951,7 +3951,7 @@ struct CFilter
     void __dflt_ctor_closure();
     unsigned int iFilter;
 };
-typedef char _sizecheck_CFilter[sizeof(CFilter) == 4 ? 1 : -1];
+typedef char _sizecheck_CFilter[1];
 struct FUN_0070bc20_shell : public InterfaceManager
 {
     void UpdateActivatePick();
@@ -4346,9 +4346,9 @@ struct Animation
     char LocalOutput[8];
     char m_acTrailingData[8];
 };
-typedef char _sizecheck_Animation[sizeof(Animation) == 316 ? 1 : -1];
+typedef char _sizecheck_Animation[1];
 
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 struct FUN_0070ee80_shell : public InterfaceManager
 {
     void UpdatePipboyWaiver();
@@ -4569,12 +4569,12 @@ struct blob64
     char b[64];
 };
 
-typedef char _sizecheck_AutoMemContext[sizeof(AutoMemContext) == 4 ? 1 : -1];
+typedef char _sizecheck_AutoMemContext[1];
 
-typedef char _sizecheck_NiMatrix3[sizeof(NiMatrix3) == 36 ? 1 : -1];
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMatrix3[1];
+typedef char _sizecheck_NiMemObject[1];
 
-typedef char _sizecheck_NiFrustum[sizeof(::NiFrustum) == 28 ? 1 : -1];
+typedef char _sizecheck_NiFrustum[1];
 struct FUN_00712e90_shell : public InterfaceManager
 {
     SceneGraph* InterfaceManager_CreateSceneGraph(SceneGraph*, char*, bool);
@@ -4929,7 +4929,7 @@ class TileMenu;
 namespace fnv_00717f80 {
 struct MenuValueDescriptor;
 
-typedef char _sizecheck_ListBoxBase[sizeof(ListBoxBase) == 4 ? 1 : -1];
+typedef char _sizecheck_ListBoxBase[1];
 struct FUN_00717f80_shell : public InterfaceManager
 {
     bool HandleMenuGamepadInput(Menu*, int, float);

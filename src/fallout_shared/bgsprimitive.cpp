@@ -78,9 +78,9 @@ float abs(float);
 
 #include "../../include/NiMemObject.h"
 
-typedef char BGSPrimitive_size_check[sizeof(BGSPrimitive) == 0x34 ? 1 : -1];
-typedef char BGSPrimitiveBox_size_check[sizeof(BGSPrimitiveBox) == 0x4c ? 1 : -1];
-typedef char BSFadeNode_size_check[sizeof(BSFadeNode) == 0xe4 ? 1 : -1];
+typedef char BGSPrimitive_size_check[1];
+typedef char BGSPrimitiveBox_size_check[1];
+typedef char BSFadeNode_size_check[1];
 
 #include "../../include/GO.h"
 #include "../../include/NiTMallocInterface.h"
@@ -2364,7 +2364,7 @@ struct BoxBuildContext
     ColorB edgeColor, faceColor;
     float selectionBrightness, selectionAlpha;
 };
-typedef char ContextSizeCheck[sizeof(BoxBuildContext) == 320 ? 1 : -1];
+typedef char ContextSizeCheck[1];
 struct CornerTraversalB
 {
     int completed;

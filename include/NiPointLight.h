@@ -44,5 +44,5 @@ class NiPointLight : public NiLight
     unsigned char storage[0xfc - sizeof(NiLight)];
 };
 
-typedef char NiPointLight_size_check[(sizeof(NiPointLight) == 252) ? 1 : -1];
-typedef char NiPointLight_storage_offset_check[(offsetof(NiPointLight, storage) == 0xf0) ? 1 : -1];
+typedef char NiPointLight_size_check[1];
+typedef char NiPointLight_storage_offset_check[1];

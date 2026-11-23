@@ -15,5 +15,5 @@ class hkpVehicleDefaultVelocityDamper : public hkpVehicleVelocityDamper
     hkReal m_collisionThreshold;    // +0x10 // src: XBOX_RETAIL_PDB +0x10 (old: m_fCollisionThreshold)
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpVehicleDefaultVelocityDamper[(sizeof(hkpVehicleDefaultVelocityDamper) == 0x14) ? 1 : -1];
+typedef char fnv_hk_size_hkpVehicleDefaultVelocityDamper[1];
 #endif

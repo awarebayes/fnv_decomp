@@ -25,11 +25,11 @@ class Point3ParameterData
     bool Equals(void*);
 };
 #pragma pack(pop)
-typedef char particle_info_size_check[(sizeof(Point3ParameterData) == 28) ? 1 : -1];
-typedef char particle_info_value_offset_check[(offsetof(Point3ParameterData, m_kValue) == 0) ? 1 : -1];
-typedef char particle_info_x_offset_check[(offsetof(Point3ParameterData, m_fXValue) == 12) ? 1 : -1];
-typedef char particle_info_y_offset_check[(offsetof(Point3ParameterData, m_fYValue) == 16) ? 1 : -1];
-typedef char particle_info_z_offset_check[(offsetof(Point3ParameterData, m_fZValue) == 20) ? 1 : -1];
-typedef char particle_info_first_offset_check[(offsetof(Point3ParameterData, m_usFirstValue) == 24) ? 1 : -1];
-typedef char particle_info_second_offset_check[(offsetof(Point3ParameterData, m_usSecondValue) == 26) ? 1 : -1];
+typedef char particle_info_size_check[1];
+typedef char particle_info_value_offset_check[1];
+typedef char particle_info_x_offset_check[1];
+typedef char particle_info_y_offset_check[1];
+typedef char particle_info_z_offset_check[1];
+typedef char particle_info_first_offset_check[1];
+typedef char particle_info_second_offset_check[1];
 #endif

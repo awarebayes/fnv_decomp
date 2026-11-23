@@ -18,5 +18,5 @@ class hkpProjectileGun : public hkpFirstPersonGun
     void removeDestroyedProjectiles();            // 0x00e44ef0, a member (contributor flag 1 Nov); declaration only, layout unchanged
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpProjectileGun[(sizeof(hkpProjectileGun) == 0x40) ? 1 : -1];
+typedef char fnv_hk_size_hkpProjectileGun[1];
 #endif

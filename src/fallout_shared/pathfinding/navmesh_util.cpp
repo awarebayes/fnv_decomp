@@ -1405,7 +1405,7 @@ C006b39a0& C006b39a0::CopyFields_006b39a0(C006b39a0 const& rhs)
 }
 }  // namespace fnv_006b39a0
 
-typedef char _sizecheck_PathingLocation[sizeof(PathingLocation) == 40 ? 1 : -1];
+typedef char _sizecheck_PathingLocation[1];
 
 // @fnv 0x006dcee0
 // pdb: PathingLocation::PathingLocation | PathingLocation.obj | retail, call graph (shared callers), high

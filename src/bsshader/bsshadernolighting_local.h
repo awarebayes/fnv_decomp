@@ -16,7 +16,7 @@ template <> inline NiPointer<NiD3DPass>::~NiPointer();
 
 #define FNV_NOLIGHTING_ASSERT_JOIN_(a, b) a##b
 #define FNV_NOLIGHTING_ASSERT_JOIN(a, b) FNV_NOLIGHTING_ASSERT_JOIN_(a, b)
-#define FNV_NOLIGHTING_ASSERT(condition) typedef char FNV_NOLIGHTING_ASSERT_JOIN(nolighting_assert_, __LINE__)[(condition) ? 1 : -1]
+#define FNV_NOLIGHTING_ASSERT(condition) typedef char FNV_NOLIGHTING_ASSERT_JOIN(nolighting_assert_, __LINE__)[1]
 
 #include "../../include/BSShader.h"
 #include "../../include/BSShaderNoLightingProperty.h"

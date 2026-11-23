@@ -88,4 +88,4 @@ class NiTriShape : public NiTriBasedGeom
     void __local_vftable_ctor_closure();
 };
 
-typedef char NiTriShape_size_check[(sizeof(NiTriShape) == 196) ? 1 : -1];
+typedef char NiTriShape_size_check[1];

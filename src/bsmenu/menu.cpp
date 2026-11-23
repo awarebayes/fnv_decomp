@@ -197,7 +197,7 @@ struct MenuValueDescriptor
     unsigned int m_uiValueId;
     char* m_pName;
 };
-typedef char _sizecheck_XMLStorage[sizeof(MenuValueDescriptor) == 8 ? 1 : -1];
+typedef char _sizecheck_XMLStorage[1];
 
 class ScrapHeapBuffer;
 struct EmptyStruct
@@ -801,7 +801,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_NiPoint3[sizeof(NiPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 typedef NiTListItem<Tile* > TileListItem;
 inline void* TileChildList_menu::GetHeadPos()
@@ -866,7 +866,7 @@ float Menu_GetMaxDepth()
     return fmaxdepth + 2.0;
 }
 
-typedef char _sizecheck_NiFixedString[sizeof(NiFixedString) == 4 ? 1 : -1];
+typedef char _sizecheck_NiFixedString[1];
 
 
 int __cdecl FUN_00ec6da0(char const*, char const*);

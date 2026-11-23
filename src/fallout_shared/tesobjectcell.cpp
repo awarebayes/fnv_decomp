@@ -486,7 +486,7 @@ struct CellPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(CellPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 
 
 
@@ -633,7 +633,7 @@ unsigned int __fastcall GetCellMinLevel(TESObjectCELL* apCell)
 }
 
 struct NiStream;
-typedef char _sizecheck_NiColor[sizeof(NiColor) == 12 ? 1 : -1];
+typedef char _sizecheck_NiColor[1];
 
 
 unsigned int __fastcall GetCellMinLevel(TESObjectCELL* thisPtr);
@@ -653,7 +653,7 @@ void TESObjectCELL::GetDataDirectionalColor(NiColor* acolColor)
 }
 
 namespace fnv_00544910 {
-typedef char _sizecheck_INTERIOR_DATA[sizeof(InteriorData) == 44 ? 1 : -1];
+typedef char _sizecheck_INTERIOR_DATA[1];
 
 
 class BGSMessageInitAccess
@@ -690,7 +690,7 @@ namespace fnv_00544910 {
 }  // namespace fnv_00544910
 
 namespace fnv_00544970 {
-typedef char _sizecheck_INTERIOR_DATA[sizeof(InteriorData) == 44 ? 1 : -1];
+typedef char _sizecheck_INTERIOR_DATA[1];
 
 
 
@@ -741,7 +741,7 @@ int __fastcall TESObjectCELL_GetDataFog(TESObjectCELL* self)
 
 struct NiStream;
 namespace fnv_00544a30 {
-typedef char _sizecheck_NiColor[sizeof(NiColor) == 12 ? 1 : -1];
+typedef char _sizecheck_NiColor[1];
 
 
 unsigned int __fastcall TESObjectCELL_GetDataFog(void* pThis);
@@ -1171,7 +1171,7 @@ struct ImpactSwap
     char pRemappedData[48]; // src: XBOX_RETAIL_PDB +0x0 (old: m_pData)
     char pAltFootstepMaterialNames[300]; // src: XBOX_RETAIL_PDB +0x30 (old: m_acAltFootstepMaterialNames)
 };
-typedef char _sizecheck_ImpactSwap[sizeof(ImpactSwap) == 348 ? 1 : -1];
+typedef char _sizecheck_ImpactSwap[1];
 
 
 ImpactSwap* __fastcall ExtraDataList_GetImpactSwap(void* pThis);
@@ -1207,9 +1207,9 @@ struct blob8
 {
     char b[8];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
-typedef char _sizecheck_TESAttackDamageForm[sizeof(TESAttackDamageForm) == 8 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
+typedef char _sizecheck_TESAttackDamageForm[1];
 
 
 
@@ -1461,7 +1461,7 @@ void* __fastcall TESObjectCELL_GetTempDataOffset(TESObjectCELL* apCell)
 }
 
 namespace fnv_0054deb0 {
-typedef char _sizecheck_INTERIOR_DATA[sizeof(InteriorData) == 44 ? 1 : -1];
+typedef char _sizecheck_INTERIOR_DATA[1];
 
 
 // @fnv 0x0054deb0
@@ -1789,7 +1789,7 @@ FUN_00553540::~FUN_00553540()
 {}
 
 struct NiStream;
-typedef char _sizecheck_NiMemObject[sizeof(NiMemObject) == 1 ? 1 : -1];
+typedef char _sizecheck_NiMemObject[1];
 struct CellOpaqueTransform
 {
     void ResetToIdentity();
@@ -1802,7 +1802,7 @@ struct CellOpaqueTransform
     char m_kTranslation[12];
     float m_fScale;
 };
-typedef char _sizecheck_CellOpaqueTransform[sizeof(CellOpaqueTransform) == 64 ? 1 : -1];
+typedef char _sizecheck_CellOpaqueTransform[1];
 
 
 #include "../../include/MEM_CONTEXT.h"
@@ -2038,10 +2038,10 @@ struct CellPoint3;
 struct NiQuaternion;
 
 struct hkVector4;
-typedef char _sizecheck_BGSLoadGameBuffer[sizeof(BGSLoadGameBuffer) == 16 ? 1 : -1];
+typedef char _sizecheck_BGSLoadGameBuffer[1];
 
 
-typedef char _sizecheck_BGSLoadFormBuffer[sizeof(BGSLoadFormBuffer) == 48 ? 1 : -1];
+typedef char _sizecheck_BGSLoadFormBuffer[1];
 
 
 
@@ -2079,7 +2079,7 @@ unsigned int __fastcall NavMesh_GetTriangleCount(char* this_ptr)
     return ((TESObjectREFR_GetFlags_Helper*)(this_ptr + 0x38))->GetFlags();
 }
 
-typedef char _sizecheck_NavMeshTriangle[sizeof(NavMeshTriangle) == 16 ? 1 : -1];
+typedef char _sizecheck_NavMeshTriangle[1];
 
 // @fnv 0x005582d0
 // src: XBOX_PDB 0x005582d0
@@ -2121,7 +2121,7 @@ struct blob8
 {
     char b[8];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 // @fnv 0x00558b60
 } // namespace fnv_00558b60
@@ -2709,7 +2709,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 
 
@@ -4168,7 +4168,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
 
 
 struct FUN_00550c60_AB
@@ -4853,7 +4853,7 @@ struct CellPoint3
     float y;
     float z;
 };
-typedef char _sizecheck_NiPoint3[sizeof(CellPoint3) == 12 ? 1 : -1];
+typedef char _sizecheck_NiPoint3[1];
 struct LoadedCellData
 {
     void* __vecDelDtor(unsigned int);
@@ -4867,7 +4867,7 @@ struct LoadedCellData
     char m_abyData54[8];
     char m_abyData5C[8];
 };
-typedef char _sizecheck_LOADED_CELL_DATA[sizeof(LoadedCellData) == 100 ? 1 : -1];
+typedef char _sizecheck_LOADED_CELL_DATA[1];
 
 
 

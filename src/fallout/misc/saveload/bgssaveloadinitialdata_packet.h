@@ -5,7 +5,7 @@
 #include <stddef.h>
 #define INITIAL_DATA_JOIN_IMPL(a, b) a##b
 #define INITIAL_DATA_JOIN(a, b) INITIAL_DATA_JOIN_IMPL(a, b)
-#define INITIAL_DATA_ASSERT(condition) typedef char INITIAL_DATA_JOIN(InitialDataAssert, __LINE__)[(condition) ? 1 : -1]
+#define INITIAL_DATA_ASSERT(condition) typedef char INITIAL_DATA_JOIN(InitialDataAssert, __LINE__)[1]
 #include "../../../../include/ENUM_FORM_ID.h"
 
 #ifndef FNV_INITIAL_DATA_TYPE_H

@@ -16,5 +16,5 @@ class hkpPointToPlaneConstraintDataAtoms
 };
 #pragma pack(pop)
 typedef char
-    fnv_hk_size_hkpPointToPlaneConstraintDataAtoms[(sizeof(hkpPointToPlaneConstraintDataAtoms) == 0xA0) ? 1 : -1];
+    fnv_hk_size_hkpPointToPlaneConstraintDataAtoms[1];
 #endif

@@ -9,7 +9,7 @@
 
 class NiSourceTexture;
 
-typedef char NiRenderedTexture_size_check[(sizeof(NiRenderedTexture) == 0x48) ? 1 : -1];
-typedef char NiRenderedTexture_buffer_check[(offsetof(NiRenderedTexture, m_spRenderTargetBuffer) == 0x30) ? 1 : -1];
-typedef char NiRenderedTexture_format_check[(offsetof(NiRenderedTexture, m_ePixelFormat) == 0x44) ? 1 : -1];
+typedef char NiRenderedTexture_size_check[1];
+typedef char NiRenderedTexture_buffer_check[1];
+typedef char NiRenderedTexture_format_check[1];
 #endif

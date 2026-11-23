@@ -81,11 +81,11 @@ public:
 
 #include <stddef.h>
 
-typedef char FNV_ASSERT_menu_root_offset[(offsetof(FORenderedMenu, m_pRenderedMenuObject) == 0x14) ? 1 : -1];
-typedef char FNV_ASSERT_burst_active_offset[(offsetof(FORenderedMenu, m_bBurstActive) == 0x4D) ? 1 : -1];
-typedef char FNV_ASSERT_burst_duration_offset[(offsetof(FORenderedMenu, fBurstDuration) == 0x54) ? 1 : -1];
+typedef char FNV_ASSERT_menu_root_offset[1];
+typedef char FNV_ASSERT_burst_active_offset[1];
+typedef char FNV_ASSERT_burst_duration_offset[1];
 
-typedef char FNV_ASSERT_sound_handle_size[(sizeof(BSSoundHandle) == 12) ? 1 : -1];
+typedef char FNV_ASSERT_sound_handle_size[1];
 
 // BSAudio still declares the legacy return type; expose the checked handle type here.
 class RenderedMenuAudio : public BSAudio

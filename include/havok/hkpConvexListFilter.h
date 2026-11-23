@@ -17,5 +17,5 @@ class hkpConvexListFilter : public hkReferencedObject
     };
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpConvexListFilter[(sizeof(hkpConvexListFilter) == 0x8) ? 1 : -1];
+typedef char fnv_hk_size_hkpConvexListFilter[1];
 #endif

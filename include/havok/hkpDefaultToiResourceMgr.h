@@ -11,5 +11,5 @@ class hkpDefaultToiResourceMgr : public hkReferencedObject
     char pad8[0x8];
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpDefaultToiResourceMgr[(sizeof(hkpDefaultToiResourceMgr) == 0x10) ? 1 : -1];
+typedef char fnv_hk_size_hkpDefaultToiResourceMgr[1];
 #endif

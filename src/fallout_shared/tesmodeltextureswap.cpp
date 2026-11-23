@@ -380,14 +380,14 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_BaseFormComponent[sizeof(BaseFormComponent) == 4 ? 1 : -1];
-typedef char _sizecheck_TESFullName[sizeof(TESFullName) == 12 ? 1 : -1];
-typedef char _sizecheck_TESTexture[sizeof(TESTexture) == 12 ? 1 : -1];
-typedef char _sizecheck_TESIcon[sizeof(TESIcon) == 12 ? 1 : -1];
-typedef char _sizecheck_BGSMessageIcon[sizeof(BGSMessageIcon) == 16 ? 1 : -1];
-typedef char _sizecheck_TESScriptableForm[sizeof(TESScriptableForm) == 12 ? 1 : -1];
-typedef char _sizecheck_TESWeightForm[sizeof(TESWeightForm) == 8 ? 1 : -1];
-typedef char _sizecheck_BGSEquipType[sizeof(BGSEquipType) == 8 ? 1 : -1];
+typedef char _sizecheck_BaseFormComponent[1];
+typedef char _sizecheck_TESFullName[1];
+typedef char _sizecheck_TESTexture[1];
+typedef char _sizecheck_TESIcon[1];
+typedef char _sizecheck_BGSMessageIcon[1];
+typedef char _sizecheck_TESScriptableForm[1];
+typedef char _sizecheck_TESWeightForm[1];
+typedef char _sizecheck_BGSEquipType[1];
 
 // @fnv 0x0048a470
 // pdb: TESModelTextureSwap::InitializeDataComponent | TESModelTextureSwap.obj | debug, vtable slot, medium

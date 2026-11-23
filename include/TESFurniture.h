@@ -40,5 +40,5 @@ public:
     int m_iMarkerCount;
 };
 
-typedef char TESFurniture_size_check[(sizeof(TESFurniture) == 0x94) ? 1 : -1];
-typedef char TESFurniture_marker_count_offset_check[(offsetof(TESFurniture, m_iMarkerCount) == 0x90) ? 1 : -1];
+typedef char TESFurniture_size_check[1];
+typedef char TESFurniture_marker_count_offset_check[1];

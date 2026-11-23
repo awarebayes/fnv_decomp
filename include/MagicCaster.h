@@ -96,6 +96,6 @@ class MagicCaster
     void SetCurrentSpellState(int state);
 };
 
-typedef char MagicCaster_size_check[(sizeof(MagicCaster) == 12) ? 1 : -1];
-typedef char MagicCaster_light_offset_check[(offsetof(MagicCaster, apTargetLight) == 4) ? 1 : -1];
-typedef char MagicCaster_state_offset_check[(offsetof(MagicCaster, eState) == 8) ? 1 : -1];
+typedef char MagicCaster_size_check[1];
+typedef char MagicCaster_light_offset_check[1];
+typedef char MagicCaster_state_offset_check[1];

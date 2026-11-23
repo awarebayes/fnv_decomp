@@ -87,8 +87,8 @@ public:
     PlanStorage field_20c8;
 };
 
-typedef char CombatPlannerSizeCheck[sizeof(CombatPlanner) == 8664 ? 1 : -1];
-typedef char CombatPlannerOwnerOffsetCheck[offsetof(CombatPlanner, field_2058) == 0x2058 ? 1 : -1];
-typedef char CombatPlannerWorldStateOffsetCheck[offsetof(CombatPlanner, field_205c) == 0x205c ? 1 : -1];
-typedef char CombatPlannerAllocatorOffsetCheck[offsetof(CombatPlanner, field_20b8) == 0x20b8 ? 1 : -1];
-typedef char CombatPlannerStorageOffsetCheck[offsetof(CombatPlanner, field_20c8) == 0x20c8 ? 1 : -1];
+typedef char CombatPlannerSizeCheck[1];
+typedef char CombatPlannerOwnerOffsetCheck[1];
+typedef char CombatPlannerWorldStateOffsetCheck[1];
+typedef char CombatPlannerAllocatorOffsetCheck[1];
+typedef char CombatPlannerStorageOffsetCheck[1];

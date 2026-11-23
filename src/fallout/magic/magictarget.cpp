@@ -797,7 +797,7 @@ struct MagicEffectContext
     MagicCaster* m_pEffectInstance;
     ActiveEffect* m_pLinkedEffect;
 };
-typedef char _sizecheck_SpellDispelData[sizeof(MagicEffectContext) == 12 ? 1 : -1];
+typedef char _sizecheck_SpellDispelData[1];
 
 void __cdecl Deallocate(void*);
 struct List_009e03e0

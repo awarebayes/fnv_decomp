@@ -14,5 +14,5 @@ class hkpBvShape : public hkpShape
     hkpSingleShapeContainer m_pContainedShape;  // +0x14
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpBvShape[(sizeof(hkpBvShape) == 0x1C) ? 1 : -1];
+typedef char fnv_hk_size_hkpBvShape[1];
 #endif

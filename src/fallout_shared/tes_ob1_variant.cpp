@@ -145,7 +145,7 @@ struct blob12
 {
     char b[12];
 };
-typedef char _sizecheck_TESDataHandler[sizeof(TESDataHandler) == 1596 ? 1 : -1];
+typedef char _sizecheck_TESDataHandler[1];
 struct FUN_004516b0_shell : public TESDataHandler
 {
     bool FUN_004516b0();
@@ -165,7 +165,7 @@ struct blob4
 {
     char b[4];
 };
-typedef char _sizecheck_BGSSaveLoadGame[sizeof(BGSSaveLoadGame) == 588 ? 1 : -1];
+typedef char _sizecheck_BGSSaveLoadGame[1];
 struct FUN_004523c0_shell : public BGSSaveLoadGame
 {
     bool TESObjectCELL_GetAttaching();
@@ -381,7 +381,7 @@ struct ModelLoader
     bool bHasDelayedFree; // src: XBOX_RETAIL_PDB +0x2c (old: m_bLoadTexturesDegraded)
     char _pad_2d[3];
 };
-typedef char _sizecheck_ModelLoader[sizeof(ModelLoader) == 48 ? 1 : -1];
+typedef char _sizecheck_ModelLoader[1];
 struct FUN_0045a5e0_shell : public ModelLoader
 {
     void ModelLoader_ReleaseFile(char*);

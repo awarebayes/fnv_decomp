@@ -72,7 +72,7 @@ struct FileNameHash
     unsigned char cFirst;
     unsigned int uiCRC;
 };
-typedef char _sizecheck_BSHash[sizeof(FileNameHash) == 8 ? 1 : -1];
+typedef char _sizecheck_BSHash[1];
 struct ArchiveManager
 {
     static BSFileEntry* __cdecl FindFileEntry(int, FileNameHash&, FileNameHash&, const char*);

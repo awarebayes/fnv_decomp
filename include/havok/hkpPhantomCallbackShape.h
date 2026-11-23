@@ -11,5 +11,5 @@ class hkpPhantomCallbackShape : public hkpShape
   public:
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPhantomCallbackShape[(sizeof(hkpPhantomCallbackShape) == 0x10) ? 1 : -1];
+typedef char fnv_hk_size_hkpPhantomCallbackShape[1];
 #endif

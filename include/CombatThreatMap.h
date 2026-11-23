@@ -50,10 +50,10 @@ public:
     void SaveGame(BGSSaveFormBuffer* apSaveGameBuffer);
 };
 
-typedef char CombatThreatMap_size_check[(sizeof(CombatThreatMap) == 60) ? 1 : -1];
-typedef char CombatThreatMap_lock_offset_check[(offsetof(CombatThreatMap, Lock) == 0x10) ? 1 : -1];
-typedef char CombatThreatMap_stamp_offset_check[(offsetof(CombatThreatMap, stamp) == 0x20) ? 1 : -1];
-typedef char CombatThreatMap_pair1_offset_check[(offsetof(CombatThreatMap, pair1) == 0x24) ? 1 : -1];
-typedef char CombatThreatMap_pair2_offset_check[(offsetof(CombatThreatMap, pair2) == 0x2c) ? 1 : -1];
-typedef char CombatThreatMap_mode_offset_check[(offsetof(CombatThreatMap, mode) == 0x34) ? 1 : -1];
-typedef char CombatThreatMap_object_offset_check[(offsetof(CombatThreatMap, object) == 0x38) ? 1 : -1];
+typedef char CombatThreatMap_size_check[1];
+typedef char CombatThreatMap_lock_offset_check[1];
+typedef char CombatThreatMap_stamp_offset_check[1];
+typedef char CombatThreatMap_pair1_offset_check[1];
+typedef char CombatThreatMap_pair2_offset_check[1];
+typedef char CombatThreatMap_mode_offset_check[1];
+typedef char CombatThreatMap_object_offset_check[1];

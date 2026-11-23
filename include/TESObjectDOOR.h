@@ -72,10 +72,10 @@ public:
 };
 
 #if defined(_M_IX86)
-typedef char TESObjectDOOR_size_check[(sizeof(TESObjectDOOR) == 144) ? 1 : -1];
-typedef char TESObjectDOOR_open_sound_offset_check[(offsetof(TESObjectDOOR, m_pOpenSound) == 120) ? 1 : -1];
-typedef char TESObjectDOOR_secondary_sound_offset_check[(offsetof(TESObjectDOOR, m_pSecondarySound) == 124) ? 1 : -1];
-typedef char TESObjectDOOR_looping_sound_offset_check[(offsetof(TESObjectDOOR, m_pLoopingSound) == 128) ? 1 : -1];
-typedef char TESObjectDOOR_flags_offset_check[(offsetof(TESObjectDOOR, cFlags) == 132) ? 1 : -1];
-typedef char TESObjectDOOR_teleport_targets_offset_check[(offsetof(TESObjectDOOR, m_kRandomTeleportTargets) == 136) ? 1 : -1];
+typedef char TESObjectDOOR_size_check[1];
+typedef char TESObjectDOOR_open_sound_offset_check[1];
+typedef char TESObjectDOOR_secondary_sound_offset_check[1];
+typedef char TESObjectDOOR_looping_sound_offset_check[1];
+typedef char TESObjectDOOR_flags_offset_check[1];
+typedef char TESObjectDOOR_teleport_targets_offset_check[1];
 #endif

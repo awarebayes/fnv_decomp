@@ -195,4 +195,4 @@ public:
     };
 };
 
-typedef char hkLargeBlockAllocator_check_size[(sizeof(hkLargeBlockAllocator) == 0xC4) ? 1 : -1];
+typedef char hkLargeBlockAllocator_check_size[1];

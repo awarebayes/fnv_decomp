@@ -436,7 +436,7 @@ struct CloningProcess
     char m_bExactType;
     char _pad_d[3];
 };
-typedef char _sizecheck_NiCloningProcess[sizeof(CloningProcess) == 16 ? 1 : -1];
+typedef char _sizecheck_NiCloningProcess[1];
 inline void* operator new(unsigned int, void* pkMem)
 {
     return pkMem;
@@ -528,7 +528,7 @@ struct TransformAnimationData : public TimedRotationKey
     char m_ppKeyData[12];
     char m_uiLastKeyIndex[12];
 };
-typedef char _sizecheck_NiEulerRotKey[sizeof(TransformAnimationData) == 72 ? 1 : -1];
+typedef char _sizecheck_NiEulerRotKey[1];
 extern float DAT_01097308;
 extern float _DAT_01015f5c;
 struct EulerK

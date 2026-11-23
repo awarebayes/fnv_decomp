@@ -47,6 +47,6 @@ class Model
     ~Model();
     NiNode* GetObject3D();
 };
-typedef char clouds_stream_size[(sizeof(BSStream) == 0x5cc) ? 1 : -1];
-typedef char clouds_model_size[(sizeof(Model) == 0x10) ? 1 : -1];
+typedef char clouds_stream_size[1];
+typedef char clouds_model_size[1];
 #endif

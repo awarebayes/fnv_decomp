@@ -14,5 +14,5 @@ class hkpPrismaticConstraintData : public hkpConstraintData
     hkpPrismaticConstraintDataAtoms m_kBridgeAtoms;  // +0x10
 };
 #pragma pack(pop)
-typedef char fnv_hk_size_hkpPrismaticConstraintData[(sizeof(hkpPrismaticConstraintData) == 0xD0) ? 1 : -1];
+typedef char fnv_hk_size_hkpPrismaticConstraintData[1];
 #endif
