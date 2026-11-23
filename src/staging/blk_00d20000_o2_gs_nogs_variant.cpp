@@ -999,10 +999,7 @@ unsigned short* hkCapsuleTriangleAgent3_process(Agent3ProcessInput* input,Header
  if(event<profile->end) {
   event->name=DAT_010ceeec;
   unsigned int ticks;
-  __asm {
-   rdtsc
-   mov dword ptr[ticks], eax
-  }
+  ;
   event->ticks=ticks;
   profile->next=event+1;
  }
@@ -1076,10 +1073,7 @@ unsigned short* hkCapsuleTriangleAgent3_process(Agent3ProcessInput* input,Header
  if(event<profile->end) {
    event->name=DAT_010c41f8;
    unsigned int ticks;
-   __asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-   }
+   ;
   event->ticks=ticks;
    profile->next=event+1;
  }

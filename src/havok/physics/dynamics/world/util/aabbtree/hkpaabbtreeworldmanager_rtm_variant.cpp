@@ -659,10 +659,7 @@ __forceinline void S00d094a0_beginList(const char* name, const char* detail)
         p->m_detail = detail;
         _ReadWriteBarrier();
         unsigned stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         p->m_uiCommandId = stamp;
         t->m_end.m_storage = (char*)p + 16;
     }
@@ -675,10 +672,7 @@ __forceinline void S00d094a0_timer(const char* name)
         p->m_name = name;
         _ReadWriteBarrier();
         unsigned stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         p->m_uiCommandId = stamp;
         t->m_end.m_storage = (char*)p + 12;
     }

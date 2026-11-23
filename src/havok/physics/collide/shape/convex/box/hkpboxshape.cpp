@@ -236,10 +236,7 @@ inline void hkMonitorStream::TimerCommand::setTime()
 {
     _ReadWriteBarrier();
     hkUint32 ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 
@@ -262,10 +259,7 @@ struct BRMonitorStream
             h->m_commandAndMonitor=name;
             _ReadWriteBarrier();
             hkUint32 ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             _ReadWriteBarrier();
             h->m_time0=ticks;
             m_kRayEnd=(char*)(h+1);

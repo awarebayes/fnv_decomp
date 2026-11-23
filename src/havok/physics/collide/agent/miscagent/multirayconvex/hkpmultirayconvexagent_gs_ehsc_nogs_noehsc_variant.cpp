@@ -295,10 +295,7 @@ inline void timer378(const char* tag) {
         Event378* e = timer->current;
         e->tag = tag;
         unsigned time;
-        __asm {
-            rdtsc
-            mov dword ptr[time], eax
-        }
+        ;
         e->time = time;
         timer->current = e + 1;
     }

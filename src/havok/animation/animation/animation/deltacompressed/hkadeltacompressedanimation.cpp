@@ -858,10 +858,7 @@ static __forceinline void TimerBeginList(const char* name, const char* first)
         h->m_commandAndMonitor = name;
         h->m_nameOfFirstSplit = first;
         DWORD t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         _ReadWriteBarrier();
         h->m_time0 = t;
         s->m_end = p + sizeof(hkMonitorStream::TimerBeginListCommand);
@@ -876,10 +873,7 @@ static __forceinline void TimerSplit(const char* name)
         hkMonitorStream::TimerCommand* h = (hkMonitorStream::TimerCommand*)p;
         h->m_commandAndMonitor = name;
         DWORD t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         _ReadWriteBarrier();
         h->m_time0 = t;
         s->m_end.m_storage = p + sizeof(hkMonitorStream::TimerCommand);

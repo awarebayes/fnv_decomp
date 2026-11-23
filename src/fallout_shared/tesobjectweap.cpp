@@ -3916,12 +3916,7 @@ void FireWeapon::TESObjectWEAP_Fire(FireRef* apSource) {
 void __cdecl NiSinCos_004169a0(float fRadians, float& fSin, float& fCos)
 {
     float s, c;
-    __asm {
-        fld fRadians
-        fsincos
-        fstp c
-        fstp s
-    }
+    ;
     fSin = s;
     fCos = c;
 }

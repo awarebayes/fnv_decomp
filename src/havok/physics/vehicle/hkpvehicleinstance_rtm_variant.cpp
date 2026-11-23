@@ -447,10 +447,7 @@ void VUBCD_Instance::hkpVehicleInstance_updateBeforeCollisionDetection()
     if ((char*)h < s->m_capMinus16) {
         h->m_name = "TtUpdateBeforeCD";
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_ticks = ticks;
         s->m_kRayEnd = (char*)(h + 1);
     }
@@ -468,10 +465,7 @@ void VUBCD_Instance::hkpVehicleInstance_updateBeforeCollisionDetection()
     if ((char*)h < s->m_capMinus16) {
         h->m_name = "Et";
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_ticks = ticks;
         s->m_kRayEnd = (char*)(h + 1);
     }

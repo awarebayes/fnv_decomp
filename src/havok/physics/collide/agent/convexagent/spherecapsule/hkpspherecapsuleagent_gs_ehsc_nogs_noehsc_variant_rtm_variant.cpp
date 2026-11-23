@@ -134,8 +134,7 @@ __forceinline void __cdecl hkMonitorStream::setEnd(char* ptr) { m_end = ptr; }
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
     unsigned int ticks;
-    __asm { rdtsc
-        mov dword ptr[ticks],eax }
+    ;
     m_time0 = ticks;
 }
 inline hkSimdReal::hkSimdReal(const hkQuadReal& x) : m_vValue(x) {}

@@ -658,10 +658,7 @@ void TargetAgent_Cand::hkpSphereTriangleAgent_processCollision(const CdBody* bod
         cur->name = DAT_010cf0d4;
         unsigned int ticks;
         _ReadWriteBarrier();
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         cur->timestamp = ticks;
         stream->m_end.m_storage = (char*)(cur + 1);
     }
@@ -710,10 +707,7 @@ void TargetAgent_Cand::hkpSphereTriangleAgent_processCollision(const CdBody* bod
         curEnd->name = DAT_010c41f8;
         unsigned int ticks;
         _ReadWriteBarrier();
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         curEnd->timestamp = ticks;
         streamEnd->m_end.m_storage = (char*)(curEnd + 1);
     }

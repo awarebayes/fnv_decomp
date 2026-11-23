@@ -712,10 +712,7 @@ __forceinline void __cdecl hkMonitorStream::setEnd(char* ptr) { m_end = ptr; }
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
 hkUint32_S ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_time0=ticks;
 }
 class ScopedTimer

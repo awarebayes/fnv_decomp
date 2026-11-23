@@ -1112,10 +1112,7 @@ struct POwner:PBase,PEntityListener,PPhantomListener {
 };
 struct PTimer {const char* tag;unsigned time,time1;__forceinline void stamp() throw(){
 unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 time=ticks;
 }};
 struct PTimerList:PTimer {const char* first;};

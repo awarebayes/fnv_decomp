@@ -949,10 +949,7 @@ void CollisionAgent::hkpCapsuleTriangleAgent_getClosestPoints(const BodyRecord& 
             MonitorRecord* rec=(MonitorRecord*)stream->m_end.m_storage;
             rec->name="TtCapsTriangle";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             rec->time=ticks;
             stream->m_end.m_storage=(char*)(rec+1);
         }
@@ -1000,10 +997,7 @@ done:
             MonitorRecord* rec=(MonitorRecord*)stream->m_end.m_storage;
             rec->name="Et";
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             rec->time=ticks;
             stream->m_end.m_storage=(char*)(rec+1);
         }

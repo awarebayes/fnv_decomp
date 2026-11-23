@@ -1467,10 +1467,7 @@ __forceinline void stamp(const char* name, volatile unsigned int& clockSlot) {
  if (reinterpret_cast<char*>(e) < t->m_capacityMinus16.m_storage) {
   e->m_commandAndMonitor = name;
   unsigned int ticks;
-  __asm {
-      rdtsc
-      mov dword ptr[ticks], eax
-  }
+  ;
   e->m_time0 = ticks;
   t->m_end.m_storage = reinterpret_cast<char*>(e + 1);
  }
@@ -1593,10 +1590,7 @@ __forceinline void stampN(const char* name) {
  if (reinterpret_cast<char*>(e) < t->m_capacityMinus16.m_storage) {
   e->m_commandAndMonitor = name;
   unsigned int ticks;
-  __asm {
-      rdtsc
-      mov dword ptr[ticks], eax
-  }
+  ;
   e->m_time0 = ticks;
   t->m_end.m_storage = reinterpret_cast<char*>(e + 1);
  }
@@ -1607,10 +1601,7 @@ __forceinline void stampEnd() {
  if (reinterpret_cast<char*>(e) < t->m_capacityMinus16.m_storage) {
   e->m_commandAndMonitor = str_010c41f8;
   unsigned int ticks;
-  __asm {
-      rdtsc
-      mov dword ptr[ticks], eax
-  }
+  ;
   e->m_time0 = ticks;
   t->m_end.m_storage = reinterpret_cast<char*>(e + 1);
  }

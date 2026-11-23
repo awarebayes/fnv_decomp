@@ -3500,10 +3500,7 @@ struct TraceCmd {
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         time0=ticks;
     }
 };
@@ -3586,10 +3583,7 @@ static __forceinline void WriteClock(const char* name) {
         h->m_name = name;
         _ReadWriteBarrier();
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_uiCommandId = ticks;
         s->m_kRayEnd = (char*)(h + 1);
     }

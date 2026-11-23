@@ -24084,10 +24084,7 @@ void PickSelf::hkpCachingShapePhantomRay_castRay(RayArg *arInput, BestOut *arOut
     {
         rec->m_commandAndMonitor = DAT_010c9544;
         unsigned int stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         rec->m_time0 = stamp;
         buf->m_end.m_storage = reinterpret_cast<char*>(rec + 1);
     }
@@ -24146,10 +24143,7 @@ void PickSelf::hkpCachingShapePhantomRay_castRay(RayArg *arInput, BestOut *arOut
         {
             rec2->m_commandAndMonitor = DAT_010c41f8;
             unsigned int stamp;
-            __asm {
-                rdtsc
-                mov dword ptr[stamp], eax
-            }
+            ;
             rec2->m_time0 = stamp;
             buf2->m_end.m_storage = reinterpret_cast<char*>(rec2 + 1);
         }

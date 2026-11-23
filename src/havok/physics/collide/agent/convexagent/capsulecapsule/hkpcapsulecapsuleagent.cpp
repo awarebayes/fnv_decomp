@@ -291,10 +291,7 @@ m_row3=*reinterpret_cast<const LocalM128*>(&r3.scalar);}
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_time0=ticks;
 }
 typedef hkUint16 hkContactPointId;

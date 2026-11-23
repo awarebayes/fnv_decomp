@@ -243,10 +243,7 @@ static inline void S_00d63e40_Timer(const char* name)
         S_00d63e40_TimerCommand* h = (S_00d63e40_TimerCommand*)s->m_kRayEnd;
         h->m_pCommandName = name;
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         h->m_uiStartTicks = t;
         s->m_kRayEnd = (char*)(h + 1);
     }

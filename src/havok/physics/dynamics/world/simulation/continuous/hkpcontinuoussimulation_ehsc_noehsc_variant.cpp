@@ -2554,10 +2554,7 @@ struct TraceCmd {
     __forceinline void setTime()
     {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         time0=ticks;
     }
 };
@@ -2640,10 +2637,7 @@ static __forceinline void WriteClock(const char* name) {
         h->m_commandAndMonitor = name;
         _ReadWriteBarrier();
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         h->m_time0 = ticks;
         s->m_end.m_storage = (char*)(h + 1);
     }
@@ -3152,10 +3146,7 @@ void __cdecl hkString_memSet(void* dst, int value, int size);
 struct SolTimerRecord : TimerCommand_ctsim {
     __forceinline void stamp() {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         m_time0 = ticks;
     }
 };
@@ -3619,10 +3610,7 @@ __forceinline void hkMonitorStream::setEnd(char* ptr) { m_end = ptr; }
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_time0=ticks;
 }
 struct MonitorStreamOperationState

@@ -253,10 +253,7 @@ __forceinline __m128 hkSimdReal::broadcast() const
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_time0=ticks;
 }
 class ScopedTimer

@@ -320,10 +320,7 @@ void hkpSphereCapsuleAgent_staticGetPenetrations(const S_00d3ef70_CdBody& bodyA,
             SphCap_Timer* t = (SphCap_Timer*)pos;
             t->m_name = str_010cf158;
             { unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 t->m_ticks = ticks; }
             mon->m_kRayEnd = pos + sizeof(SphCap_Timer);
         }
@@ -383,10 +380,7 @@ t->m_ticks = ticks; }
             SphCap_Timer* t = (SphCap_Timer*)pos;
             t->m_name = str_010c41f8;
             { unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 t->m_ticks = ticks; }
             mon->m_kRayEnd = pos + sizeof(SphCap_Timer);
         }

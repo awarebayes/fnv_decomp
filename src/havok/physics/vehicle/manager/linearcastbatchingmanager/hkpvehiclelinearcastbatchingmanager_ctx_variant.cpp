@@ -434,10 +434,7 @@ static inline void E430B0Timer(hkMonitorStream* mon, const char* name)
 	{
 		cur->m_commandAndMonitor = name;
 		unsigned int stamp;
-		__asm {
-		    rdtsc
-		    mov dword ptr[stamp], eax
-		}
+		;
 		cur->m_time0 = stamp;
 		mon->m_end.m_storage = reinterpret_cast<char*>(cur + 1);
 	}

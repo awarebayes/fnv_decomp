@@ -159,7 +159,7 @@ int FUN_00d52640_c::hkpConstraintConstructionKit_setAngularMotor(bool axis, cons
 {
     // A leading assembly label suppresses MSVC /GS parameter copies for the shared vector's union.
     // It emits no instructions and preserves the original stack layout.
-    __asm { vector_start: }
+    ;
     m_pStreamWriter->m_commands.pushBack(0xe);
     m_pStreamWriter->m_commands.pushBack(axis);
 

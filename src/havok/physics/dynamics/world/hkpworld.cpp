@@ -10209,10 +10209,7 @@ void World::hkpWorld_getPenetrations(Collidable* collA, const QueryCollisionInpu
         ((MonitorCommand*)pos1)->m_category = str_010c6748;
         _ReadWriteBarrier();
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         ((MonitorCommand*)pos1)->m_ticks = t;
         ms1.m_end.m_storage = pos1 + 16;
     }
@@ -10235,10 +10232,7 @@ void World::hkpWorld_getPenetrations(Collidable* collA, const QueryCollisionInpu
         ((MonitorCommand*)pos2)->m_name = str_010c68dc;
         _ReadWriteBarrier();
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         ((MonitorCommand*)pos2)->m_ticks = t;
         ms2.m_end.m_storage = pos2 + 12;
     }
@@ -10268,10 +10262,7 @@ void World::hkpWorld_getPenetrations(Collidable* collA, const QueryCollisionInpu
         ((MonitorCommand*)pos3)->m_name = str_01076f38;
         _ReadWriteBarrier();
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         ((MonitorCommand*)pos3)->m_ticks = t;
         ms3.m_end.m_storage = pos3 + 12;
     }
@@ -10309,10 +10300,7 @@ struct S96_WorldShell : hkpWorld {
    S96_TimerEntry* entry=timer->unk04;
    entry->name=name;
    unsigned tick;
-   __asm {
-    rdtsc
-    mov dword ptr[tick], eax
-   }
+   ;
    entry->tick=tick;
    timer->unk04=entry+1;
   }
@@ -10323,10 +10311,7 @@ struct S96_WorldShell : hkpWorld {
    S96_TimerEntry* entry=timer->unk04;
    entry->name=str_010c41f8;
    unsigned tick;
-   __asm {
-    rdtsc
-    mov dword ptr[tick], eax
-   }
+   ;
    entry->tick=tick;
    timer->unk04=entry+1;
   }
@@ -11352,10 +11337,7 @@ __forceinline char*__cdecl hkMonitorStream::getCapacityMinus16(){ return m_capac
 __forceinline hkBool __cdecl hkMonitorStream::memoryAvailable(){ return getEnd()<getCapacityMinus16(); }
 __forceinline void __cdecl hkMonitorStream::setEnd(char*ptr){ m_end=ptr; }
  __forceinline void hkMonitorStream::TimerCommand::setTime(){ unsigned int ticks;
-__asm {
-rdtsc
-mov dword ptr[ticks], eax
-}
+;
  m_time0=ticks; } class TTFH; class TWMAWD;
 class TCB; struct TCI; class TCLF; class TC2;
 class TCCF{ public:virtual~TCCF()throw(); virtual void vs47()const throw(); }
@@ -11746,10 +11728,7 @@ static __forceinline void doShift(Sbp_World* self,const LocalM128& rawShift, Loc
         if (entry < timer->unk0C) {
             entry->name = str_010c68c8;
             unsigned int openingTick;
-            __asm {
-                rdtsc
-                mov dword ptr[openingTick], eax
-            }
+            ;
             entry->tick = openingTick;
             timer->unk04 = entry + 1;
         }
@@ -11811,10 +11790,7 @@ static __forceinline void doShift(Sbp_World* self,const LocalM128& rawShift, Loc
         if (entry < timer->unk0C) {
             entry->name = str_010c41f8;
             unsigned int closingTick;
-            __asm {
-                rdtsc
-                mov dword ptr[closingTick], eax
-            }
+            ;
             entry->tick = closingTick;
             timer->unk04 = entry + 1;
         }

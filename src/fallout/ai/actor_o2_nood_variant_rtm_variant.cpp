@@ -2805,10 +2805,7 @@ __forceinline hkBool hkMonitorStream::memoryAvailable() { return getEnd() < getC
 __forceinline void hkMonitorStream::setEnd(char* ptr) { m_end = ptr; }
 __forceinline void hkMonitorStream::TimerCommand::setTime() {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 // src: GUESS 0x00ce2a50 (confidence: low)

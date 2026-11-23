@@ -633,10 +633,7 @@ void createBuildJacobianAndSolveJacobianTaskCollection(SceneInput island, FlagBy
             hkMonitorStream::TimerCommand* event=(hkMonitorStream::TimerCommand*)bytesCopy(stream.getEnd());
             event->m_commandAndMonitor=str_010d3f1c; _ReadWriteBarrier();
             DWORD ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->m_time0=ticks;
             stream.setEnd((char*)(event+1));
         }
@@ -803,10 +800,7 @@ void createBuildJacobianAndSolveJacobianTaskCollection(SceneInput island, FlagBy
             hkMonitorStream::TimerCommand* event=(hkMonitorStream::TimerCommand*)stream.getEnd();
             event->m_commandAndMonitor=str_010c41f8; _ReadWriteBarrier();
             DWORD ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->m_time0=ticks;
             stream.setEnd((char*)(event+1));
         }
@@ -816,10 +810,7 @@ void createBuildJacobianAndSolveJacobianTaskCollection(SceneInput island, FlagBy
 
 __forceinline void hkMonitorStream::TimerCommand::setTime() {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 

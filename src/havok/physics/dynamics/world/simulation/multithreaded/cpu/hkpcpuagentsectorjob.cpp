@@ -221,10 +221,7 @@ struct Globals {
 };
 struct Queue { int ProcessCallback(Job *, Job *, int); };
 struct MonitorRecord { const char *name; unsigned int time, field08; __forceinline void sample() { unsigned int stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         time = stamp;
     } };
 struct Monitor { int field00; MonitorRecord *end; int field08; MonitorRecord *limit; };

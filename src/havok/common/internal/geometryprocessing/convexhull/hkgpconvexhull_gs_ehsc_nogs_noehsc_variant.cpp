@@ -6880,10 +6880,7 @@ struct EnumerationTimer {
     unsigned int clock0,clock1;
     __forceinline void sample() {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         clock0=ticks;
     }
 };

@@ -80,10 +80,7 @@ struct TraceEntry {
     const char* label; unsigned long tick; unsigned long unused;
     __forceinline void setTime() {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         tick=ticks;
     }
 };

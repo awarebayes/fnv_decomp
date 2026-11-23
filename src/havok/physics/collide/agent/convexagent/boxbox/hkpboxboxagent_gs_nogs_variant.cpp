@@ -232,10 +232,7 @@ extern "C" void __cdecl hkpBoxBoxAgent_staticGetClosestPoints(void* bodyA, void*
             TimerEntry70* r = stream->top;
             r->name = "TtBoxBox";
             unsigned int stamp;
-            __asm {
-                rdtsc
-                mov dword ptr[stamp], eax
-            }
+            ;
             r->ticks = stamp;
             stream->top = r + 1;
         }
@@ -275,10 +272,7 @@ extern "C" void __cdecl hkpBoxBoxAgent_staticGetClosestPoints(void* bodyA, void*
             TimerEntry70* r = stream->top;
             r->name = "Et";
             unsigned int stamp;
-            __asm {
-                rdtsc
-                mov dword ptr[stamp], eax
-            }
+            ;
             r->ticks = stamp;
             stream->top = r + 1;
         }

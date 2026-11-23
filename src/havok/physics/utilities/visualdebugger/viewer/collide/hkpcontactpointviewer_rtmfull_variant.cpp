@@ -594,10 +594,7 @@ static inline void markContactArrowProfile67(const char* name)
 
         p->name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         p->tsc = ticks;
 
         s->m_end.m_storage = (char*)(p + 1);

@@ -291,10 +291,7 @@ __forceinline void ProfMark(const char* pName)
         hkMonitorStream::TimerCommand* pRec = (hkMonitorStream::TimerCommand*)pBuf->m_end.m_storage;
         pRec->m_commandAndMonitor = pName;
         { unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 pRec->m_time0 = ticks; }
         pBuf->m_end.m_storage = reinterpret_cast<char*>((hkMonitorStream::TimerCommand*)(pRec + 1));
     }
@@ -308,10 +305,7 @@ __forceinline void ProfMark2(const char* pName, const char* pName2)
         pRec->m_commandAndMonitor = pName;
         pRec->m_pName2 = pName2;
         { unsigned int ticks;
-__asm {
-    rdtsc
-    mov dword ptr[ticks], eax
-}
+;
 pRec->m_time0 = ticks; }
         pBuf->m_end.m_storage = reinterpret_cast<char*>((hkMonitorStream::TimerCommand*)(pRec + 1));
     }

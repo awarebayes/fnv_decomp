@@ -1177,10 +1177,7 @@ struct ClockX {
             ClockEventX* event=(ClockEventX*)current;
             event->tag=tag;
             unsigned ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->stamp=ticks;
             current=(char*)(event+1);
         }
@@ -1190,10 +1187,7 @@ struct ClockX {
             ClockListX* event=(ClockListX*)current;
             event->tag=tag; event->split=split;
             unsigned ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->stamp=ticks;
             current=(char*)(event+1);
         }
@@ -1248,10 +1242,7 @@ void __cdecl MapperX::hkaSkeletonMapper_mapPoseLocalSpace(const PoseX* poseALoca
             event->tag="LtMapPoseLocalSpace";
             event->split="Stinit";
             unsigned ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->stamp=ticks;
             timer.current=(char*)(event+1);
         }
@@ -1263,10 +1254,7 @@ void __cdecl MapperX::hkaSkeletonMapper_mapPoseLocalSpace(const PoseX* poseALoca
             event->tag="StsimpleMappings";
             
             unsigned ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->stamp=ticks;
             timer.current=(char*)(event+1);
         }
@@ -1294,10 +1282,7 @@ void __cdecl MapperX::hkaSkeletonMapper_mapPoseLocalSpace(const PoseX* poseALoca
             event->tag="StchainMappings";
             
             unsigned ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->stamp=ticks;
             timer.current=(char*)(event+1);
         }
@@ -1348,10 +1333,7 @@ void __cdecl MapperX::hkaSkeletonMapper_mapPoseLocalSpace(const PoseX* poseALoca
             event->tag="lt";
             
             unsigned ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             event->stamp=ticks;
             timer.current=(char*)(event+1);
         }

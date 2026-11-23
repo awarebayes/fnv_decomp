@@ -746,10 +746,7 @@ inline void recordEvent(const char* name) {
     if (event < stream->end) {
         event->name = name;
         unsigned int tick;
-        __asm {
-            rdtsc
-            mov dword ptr[tick], eax
-        }
+        ;
         event->timestamp = tick;
         stream->current = event + 1;
     }

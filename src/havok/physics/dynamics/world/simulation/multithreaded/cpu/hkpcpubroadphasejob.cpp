@@ -65,10 +65,7 @@ struct S93ba0_Cmd {
     const char* extra;
     __forceinline void setTime() {
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         time=ticks;
     }
 };

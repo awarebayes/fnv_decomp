@@ -5145,10 +5145,7 @@ extern "C" const ::LocalM128 DAT_010c7170; // 1.0 splat
 extern "C" const float DAT_01012068;
 extern "C" __declspec(dllimport) int __stdcall IsBadWritePtr(void*,unsigned int);
 static __forceinline void StoreTimer(DWORD& out) { DWORD stamp; __assume(!IsBadWritePtr(&stamp,sizeof(stamp)));
-__asm {
-rdtsc
-mov dword ptr[stamp], eax
-}
+;
  out=stamp; }
 static __forceinline void TimerLayer0(DWORD& out) { StoreTimer(out); }
 static __forceinline void TimerLayer1(DWORD& out) { TimerLayer0(out); }

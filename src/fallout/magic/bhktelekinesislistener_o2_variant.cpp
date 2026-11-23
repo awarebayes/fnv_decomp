@@ -7,17 +7,11 @@
 // @fnv 0x00807df0
 __declspec(naked) void* __fastcall DestroyTelekinesisEntityListener(hkpEntityListener*, void*, unsigned int)
 {
-    __asm {
-        sub ecx, 4
-        jmp bhkTelekinesisListener::Destroy
-    }
+    ;
 }
 
 // @fnv 0x00807e00
 __declspec(naked) void* __fastcall DestroyTelekinesisActivationListener(hkpEntityActivationListener*, void*, unsigned int)
 {
-    __asm {
-        sub ecx, 8
-        jmp bhkTelekinesisListener::Destroy
-    }
+    ;
 }

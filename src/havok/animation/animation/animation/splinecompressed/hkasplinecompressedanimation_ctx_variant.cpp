@@ -29,10 +29,7 @@ static __forceinline void S00e340e0_timer(const char* name)
     {
         e->name = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         e->ticks = ticks;
         mon->m_kRayEnd = e + 1;
     }

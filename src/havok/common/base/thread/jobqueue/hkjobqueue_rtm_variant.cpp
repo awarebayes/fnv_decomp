@@ -1103,10 +1103,7 @@ static __forceinline void CaptureMarker(void* marker)
     if (entry < s->m_kRayEnd) {
         entry->name = marker;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         entry->tick = ticks;
         s->m_cur=entry+1;
     }

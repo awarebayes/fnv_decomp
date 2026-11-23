@@ -169,10 +169,7 @@ __forceinline void StringCursor_hkpheightfieldagent_rtm_variant::timerBegin(cons
             cmd->name = name1;
             cmd->subName = name2;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             cmd->time = ticks;
             m_end.m_storage = (char*)(cmd + 1);
         }
@@ -182,10 +179,7 @@ __forceinline void StringCursor_hkpheightfieldagent_rtm_variant::timerSplit(cons
             MonitorCommand* cmd = (MonitorCommand*)m_end.m_storage;
             cmd->name = name;
             unsigned int ticks;
-            __asm {
-                rdtsc
-                mov dword ptr[ticks], eax
-            }
+            ;
             cmd->time = ticks;
             m_end.m_storage = (char*)cmd + 12;
         }

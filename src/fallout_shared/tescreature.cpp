@@ -1111,11 +1111,7 @@ void TESCreature::SaveForm()
         CreatureSounds* sounds = GetCreatureSounds();
         if (sounds)
         {
-            __asm
-            {
-                mov ecx, sounds
-                call SaveCreatureSounds
-            }
+            ;
         }
     }
     else

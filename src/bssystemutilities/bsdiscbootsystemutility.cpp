@@ -30,11 +30,7 @@ extern "C" void BSDiscBootSystemUtility_ResetVtable();
 // pdb: BSDiscBootSystemUtility::`scalar deleting destructor' | BSDiscBootSystemUtility.obj | debug, object-file run extension, low
 void* BSDiscBootSystemUtility::vf00(unsigned int flags)
 {
-    __asm
-    {
-        mov ecx, this
-        call BSDiscBootSystemUtility_ResetVtable
-    }
+    ;
     if (flags & 1)
         g_memoryManager.Deallocate(this);
     return this;

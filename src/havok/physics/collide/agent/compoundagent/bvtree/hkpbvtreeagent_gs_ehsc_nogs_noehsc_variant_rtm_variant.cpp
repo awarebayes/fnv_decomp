@@ -1409,10 +1409,7 @@ class MonitorD3
 inline void MonitorD3::TimerCommandD3::setTime()
 {
 	UInt32D3 ticks;
-	__asm {
-		rdtsc
-		mov dword ptr[ticks], eax
-	}
+	;
 	m_uiStartTicks = ticks;
 }
 

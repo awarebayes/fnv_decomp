@@ -4791,10 +4791,7 @@ void HostMesh53::TESObjectLAND_DrawLandBorder(bool bShow) {
 int __cdecl FloatToInt(float fValue)
 {
     int iValue;
-    __asm {
-        fld fValue
-        fistp iValue
-    }
+    ;
     return iValue;
 }
 

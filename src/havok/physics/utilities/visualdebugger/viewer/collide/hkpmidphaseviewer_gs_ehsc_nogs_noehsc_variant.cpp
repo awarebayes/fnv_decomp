@@ -55,10 +55,7 @@ static __forceinline void TimerMark(char* marker)
     if (next < s->m_pFreeList) {
         next->marker = marker;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         next->tick = ticks;
         s->m_next = next + 1;
     }

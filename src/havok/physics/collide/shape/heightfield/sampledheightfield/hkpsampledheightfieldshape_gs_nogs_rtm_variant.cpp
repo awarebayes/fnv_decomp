@@ -205,10 +205,7 @@ __forceinline void __cdecl hkMonitorStream::setEnd(char* ptr) { m_end = ptr; }
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
 hkUint32 ticks;
-__asm{
-rdtsc
-mov dword ptr[ticks],eax
-}
+;
 m_time0=ticks;
 }
 class Vector4WithInt24W:public hkVector4_

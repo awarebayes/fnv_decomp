@@ -117,10 +117,7 @@ struct hkpAabbTreeWorldManager { // src: XBOX_RETAIL_PDB 0x00d08800 (first retai
 };
 __forceinline void hkMonitorStream::TimerCommand::setTime() {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 // A unit-local view: the original inlines a differently shaped variant of this Havok accessor.

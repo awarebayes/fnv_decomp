@@ -231,10 +231,7 @@ return reinterpret_cast<const hkRotation&>(m_row0);
 __forceinline void hkMonitorStream::TimerCommand::setTime()
 {
 hkUint32 ticks;
-__asm {
-rdtsc
-mov dword ptr[ticks], eax
-}
+;
 m_time0=ticks;
 }
 typedef hkUint16 hkContactPointId;

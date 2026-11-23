@@ -723,10 +723,7 @@ extern const unsigned int DAT_010c44d0[4];
 static __forceinline void ReadTimerTicks(hkMonitorStream::TimerCommand& command)
 {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     command.m_time0 = ticks;
 }
 

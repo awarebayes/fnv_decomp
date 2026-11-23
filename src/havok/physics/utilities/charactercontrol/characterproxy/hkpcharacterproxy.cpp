@@ -3197,10 +3197,7 @@ public:
 };
 __forceinline void hkMonitorStream::TimerCommand::setTime() {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 

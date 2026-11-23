@@ -4811,10 +4811,7 @@ struct S96_WorldShell : hkpWorld {
    S96_TimerEntry* entry=timer->unk04;
    entry->name=name;
    unsigned tick;
-   __asm {
-    rdtsc
-    mov dword ptr[tick], eax
-   }
+   ;
    entry->tick=tick;
    timer->unk04=entry+1;
   }
@@ -4825,10 +4822,7 @@ struct S96_WorldShell : hkpWorld {
    S96_TimerEntry* entry=timer->unk04;
    entry->name=str_010c41f8;
    unsigned tick;
-   __asm {
-    rdtsc
-    mov dword ptr[tick], eax
-   }
+   ;
    entry->tick=tick;
    timer->unk04=entry+1;
   }
@@ -5645,10 +5639,7 @@ struct TTD;
 inline void hkMonitorStream::TimerCommand::setTime()
 {
     unsigned int ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 class TTFH;

@@ -250,7 +250,7 @@ void TESPackage::AddRef()
 {
     unsigned int newRefCount = InitScriptRunLock(&uiRefCount);
     // The original leaves the updated count in EAX, despite the shared void return.
-    __asm mov eax, newRefCount
+    ;
 }
 
 // @fnv 0x008c6130

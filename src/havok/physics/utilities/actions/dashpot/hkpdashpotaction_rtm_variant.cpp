@@ -41,10 +41,7 @@ void hkpDashpotAction::applyAction_00d4da60(hkPadSpu<const hkStepInfo*> stepInfo
             pRec->m_commandAndMonitor = "TtDashpot";
             _ReadWriteBarrier();
             unsigned int tick;
-            __asm {
-                rdtsc
-                mov dword ptr[tick], eax
-            }
+            ;
             pRec->m_time0 = tick;
             pBuf->m_end.m_storage = reinterpret_cast<char*>(pRec + 1);
         }
@@ -85,10 +82,7 @@ void hkpDashpotAction::applyAction_00d4da60(hkPadSpu<const hkStepInfo*> stepInfo
             pRec->m_commandAndMonitor = "Et";
             _ReadWriteBarrier();
             unsigned int tick;
-            __asm {
-                rdtsc
-                mov dword ptr[tick], eax
-            }
+            ;
             pRec->m_time0 = tick;
             pBuf->m_end.m_storage = reinterpret_cast<char*>(pRec + 1);
         }

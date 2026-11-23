@@ -167,10 +167,7 @@ inline void hkMonitorStream::TimerCommand::setTime()
 {
     _ReadWriteBarrier();
     hkUint32 ticks;
-    __asm {
-        rdtsc
-        mov dword ptr[ticks], eax
-    }
+    ;
     m_time0 = ticks;
 }
 

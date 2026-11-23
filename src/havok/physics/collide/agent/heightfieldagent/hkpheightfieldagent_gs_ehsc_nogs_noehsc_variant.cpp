@@ -203,10 +203,7 @@ static __forceinline void event(TimerStream* stream,const char* name) {
     if(e<stream->end) {
         e->name=name;
         unsigned int stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         e->time=stamp;
         stream->current=(TimerEvent*)((unsigned char*)e+12);
     }
@@ -223,10 +220,7 @@ extern "C" void __cdecl hkpHeightFieldAgent_ProcessSphereQueries(void* arg0,void
         e->name="LtHeightField";
         e->first="StClosestPoints";
         unsigned int stamp;
-        __asm {
-            rdtsc
-            mov dword ptr[stamp], eax
-        }
+        ;
         e->time=stamp;
         stream->current=e+1;
     }
@@ -313,10 +307,7 @@ static __forceinline void timer(const char* tag) {
     if (p < s->end) {
         p->tag = tag;
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         p->time = t;
         s->next = p + 1;
     }

@@ -3977,11 +3977,7 @@ int hkpCollectionAgent3_process(A1Rec* input, int entry, int agentData, int sepa
     {
         unsigned char* cur = (unsigned char*)(*(unsigned int*)((char*)tlsblk + 4));
         *(const char**)cur = DAT_010ced28;
-        __asm
-        {
-            rdtsc
-            mov dword ptr[stamped], eax
-        }
+        ;
         *(unsigned int*)(cur + 4) = stamped;
         *(unsigned int*)((char*)tlsblk + 4) = (unsigned int)cur + 0xc;
     }
@@ -4025,11 +4021,7 @@ int hkpCollectionAgent3_process(A1Rec* input, int entry, int agentData, int sepa
     {
         unsigned char* cur2 = (unsigned char*)(*(unsigned int*)((char*)tlsblk2 + 4));
         *(const char**)cur2 = DAT_010c41f8;
-        __asm
-        {
-            rdtsc
-            mov dword ptr[stamped], eax
-        }
+        ;
         *(unsigned int*)(cur2 + 4) = stamped;
         *(unsigned int*)((char*)tlsblk2 + 4) = (unsigned int)cur2 + 0xc;
     }

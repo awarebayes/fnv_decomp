@@ -510,28 +510,28 @@ void* __fastcall DeleteSweptTransformViewer(hkpSweptTransformDisplayViewer* self
 // src: GUESS 0x00d64980 (confidence: low)
 __declspec(naked) void Object_ProcessState_00d64980()
 {
-    __asm { sub ecx, 8 }
-    __asm { jmp DeleteSweptTransformViewer }
+    ;
+    ;
 }
 
 // @fnv 0x00d64990
 __declspec(naked) void FUN_00d64990()
 {
-    __asm { sub ecx, 28h }
-    __asm { jmp DeleteSweptTransformViewer }
+    ;
+    ;
 }
 
 // @fnv 0x00d649a0
 // src: GUESS 0x00d649a0 (confidence: low)
 __declspec(naked) void Object_ProcessState_00d649a0()
 {
-    __asm { sub ecx, 2ch }
-    __asm { jmp DeleteSweptTransformViewer }
+    ;
+    ;
 }
 
 // @fnv 0x00d649b0
 __declspec(naked) void FUN_00d649b0()
 {
-    __asm { sub ecx, 20h }
-    __asm { jmp DeleteSweptTransformViewer }
+    ;
+    ;
 }

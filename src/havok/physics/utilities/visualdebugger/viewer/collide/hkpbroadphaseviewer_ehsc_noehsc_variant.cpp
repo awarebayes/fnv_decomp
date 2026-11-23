@@ -294,10 +294,7 @@ static inline void S00d6a9b0_Mark(const char* name)
     {
         r->m_pName = name;
         unsigned int t;
-        __asm {
-            rdtsc
-            mov dword ptr[t], eax
-        }
+        ;
         r->m_uTick = t;
         p->m_pCur = r + 1;
     }

@@ -541,10 +541,7 @@ static __declspec(noinline) void hkToiContactPointViewer_displayArrow(Handler* h
             TimerCmd* h = s->m_kRayEnd;
             h->m_pCommandName = "TtToiDisplayArrow";
             unsigned t1;
-            __asm {
-                rdtsc
-                mov dword ptr[t1], eax
-            }
+            ;
             h->m_uiStartTicks = t1;
             s->m_kRayEnd = h + 1;
         } }
@@ -587,10 +584,7 @@ static __declspec(noinline) void hkToiContactPointViewer_displayArrow(Handler* h
             TimerCmd* h = s->m_kRayEnd;
             h->m_pCommandName = "Et";
             unsigned t2;
-            __asm {
-                rdtsc
-                mov dword ptr[t2], eax
-            }
+            ;
             h->m_uiStartTicks = t2;
             s->m_kRayEnd = h + 1;
         } }

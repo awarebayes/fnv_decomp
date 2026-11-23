@@ -1937,23 +1937,7 @@ void FUN_00528bb0_class::LockFreeMap_TESObjectREFR_NiPointer_QueuedReference_Loc
 {
     // This queue object's slot 9 takes two arguments, unlike NiObject::IsTriShape.
     // Preserve the original call ABI until that queue interface is shared.
-    __asm
-    {
-        mov eax, arg
-        push eax
-        mov ecx, arg
-        push ecx
-        mov edx, this
-        mov eax, [edx]
-        mov ecx, this
-        mov ecx, [ecx]
-        mov edx, [eax]
-        mov eax, [edx + 24h]
-        call eax
-        push eax
-        mov ecx, this
-        call NiObject::LockFreeMap_TESObjectREFR_NiPointer_QueuedReference_LockFreeMapInterface_RemoveAt_00528ce0
-    }
+    ;
 }
 
 namespace QueueReconstruction528be0 {

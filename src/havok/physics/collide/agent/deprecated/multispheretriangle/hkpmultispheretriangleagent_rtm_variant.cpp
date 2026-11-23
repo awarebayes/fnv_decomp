@@ -226,10 +226,7 @@ struct ProcessTimerRecord {
     unsigned ticks, extra;
     __forceinline void setTime() {
         unsigned ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         this->ticks = ticks;
     }
 };

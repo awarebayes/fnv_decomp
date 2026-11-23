@@ -1608,7 +1608,7 @@ bool MagicShaderHitEffect::Update(float afTimeDelta)
         {
             // The shared declaration for slot 0x420 is void; preserve its x87 float result.
             static_cast<Actor*>(pTarget)->Unk_108();
-            __asm fstp multiplier
+            ;
         }
         float actorScale = static_cast<Actor*>(pTarget)->GetAlphaMult();
         if (actorScale > ParticleUpdate::DAT_01012060)

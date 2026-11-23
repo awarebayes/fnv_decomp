@@ -1253,10 +1253,7 @@ static inline void MonBeginE30(const char* name, const char* sub)
         r->m_pCommandName = name;
         r->object = sub;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         r->m_ticks = ticks;
         s->m_end.m_storage = p + 16;
     }
@@ -1269,10 +1266,7 @@ static inline void MonSplitE30(const char* name)
         hkTimerCommand_hkawaveletcompressedanimation* r = (hkTimerCommand_hkawaveletcompressedanimation*)p;
         r->m_pCommandName = name;
         unsigned int ticks;
-        __asm {
-            rdtsc
-            mov dword ptr[ticks], eax
-        }
+        ;
         r->m_ticks = ticks;
         s->m_end.m_storage = p + 12;
     }
