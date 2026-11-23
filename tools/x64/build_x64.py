@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Compile every translation unit of this tree as x64 with MSVC 19.16 (/O2), on Windows.
+
+usage: python build_x64.py --msvc <dir holding VC/Tools/MSVC/<ver> and Windows Kits/10> [--jobs 6]
+                           [--out build-x64] [--only TEXT] [--limit N] [--max-lines N]
+
+This is a port experiment, not a byte-matching build: the sources were written for a 32-bit
+compiler, and include/x64_compat.h (force-included) absorbs what x64 cannot express. Only the
+compile step runs; objects land under --out. The flags are the ones the Skyrim SE reconstruction
+recipe uses so the generated code is comparable: /O2 /MD /GS- /EHsc /GR /fp:precise /Gy.
+"""
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+
+FLAGS = ['/nologo', '/c', '/O2', '/MD', '/GS-', '/EHsc', '/GR', '/fp:precise', '/Gy', '/w']
+
+
+def find_toolchain(root):
+    msvc = sorted((root / 'VC' / 'Tools' / 'MSVC').iterdir())[-1]
+    kits = root / 'Windows Kits' / '10'
+    sdk = sorted((kits / 'Include').iterdir())[-1].name
+    inc = [msvc / 'include'] + [kits / 'Include' / sdk / d for d in ('ucrt', 'um', 'shared')]
+    cl = msvc / 'bin' / 'Hostx64' / 'x64' / 'cl.exe'
+    return cl, inc, msvc
+
+
+def compile_unit(cl, env, repo, out, unit, timeout):
+    src = Path(unit['source'])
+    stem = re.sub(r'[^A-Za-z0-9_]', '_', str(src.with_suffix('')))
+    obj = out / 'obj' / (stem + '.obj')
+    cmd = [str(cl)] + FLAGS + ['/FI', str(repo / 'include' / 'x64_compat.h'),
+                               '/I', str(repo / 'include'), '/I', str(repo / src.parent), '/I', str(repo / 'src'),
+                               '/Fo' + str(obj), str(repo / src)]
+    start = time.time()
+    try:
+        p = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=timeout, stdin=subprocess.DEVNULL)
+        text, rc = p.stdout + p.stderr, p.returncode
+    except subprocess.TimeoutExpired:
+        text, rc = 'TIMEOUT', 99
+    (out / 'logs' / (stem + '.log')).write_text(text)
+    errors = [l.strip() for l in text.splitlines() if re.search(r'error C\d+|fatal error', l)]
+    return {'source': unit['source'], 'ok': rc == 0 and obj.exists(), 'seconds': round(time.time() - start, 1),
+            'errors': errors[:5], 'nerrors': len(errors)}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--msvc', required=True, type=Path)
+    ap.add_argument('--jobs', type=int, default=6)
+    ap.add_argument('--out', type=Path, default=Path('build-x64'))
+    ap.add_argument('--only', default='')
+    ap.add_argument('--limit', type=int, default=0)
+    ap.add_argument('--max-lines', type=int, default=0)
+    ap.add_argument('--timeout', type=int, default=600)
+    a = ap.parse_args()
+    repo = Path(__file__).resolve().parent.parent.parent
+    cl, inc, msvc = find_toolchain(a.msvc)
+    env = dict(os.environ, INCLUDE=os.pathsep.join(map(str, inc)))
+    out = a.out.resolve()
+    for d in ('obj', 'logs'):
+        (out / d).mkdir(parents=True, exist_ok=True)
+    units = json.load(open(repo / 'build' / 'units.json'))['units']
+    units = [u for u in units if a.only in u['source'] and (repo / u['source']).exists()]
+    if a.max_lines:
+        units = [u for u in units if sum(1 for _ in open(repo / u['source'], errors='replace')) <= a.max_lines]
+    if a.limit:
+        units = units[:a.limit]
+    results = []
+    with ThreadPoolExecutor(a.jobs) as ex:
+        for r in ex.map(lambda u: compile_unit(cl, env, repo, out, u, a.timeout), units):
+            results.append(r)
+            print('OK ' if r['ok'] else 'ERR', r['source'], r['seconds'], (r['errors'] or [''])[0][:160], flush=True)
+    (out / 'build_results.json').write_text(json.dumps(results, indent=1))
+    ok = sum(r['ok'] for r in results)
+    print('built %d of %d units' % (ok, len(results)))
+    return 0 if ok == len(results) else 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())
