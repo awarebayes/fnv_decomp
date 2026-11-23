@@ -49,7 +49,6 @@ struct NiTexturePtr
 bool fnv_NiStreamGetTexture(char*, L::NiTexturePtr*);
 void TileImage_ConvertToActualFilename(const char* apFilename, float* afScale, float afZoom, char* axOut);
 
-typedef unsigned int size_t;
 extern "C" int __cdecl strcmp(const char*, const char*);
 extern "C" size_t __cdecl strlen(const char*);
 extern "C" char* __cdecl strrchr(const char*, int);

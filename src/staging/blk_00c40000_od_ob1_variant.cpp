@@ -11389,7 +11389,6 @@ void S00c4db20_Self::BSPolygon2D_StoreConcaveVertices()
 }
 
 // Reconstruction of 0x00c4e1e0
-typedef unsigned int size_t;
 extern "C" void* memmove(void*, const void*, size_t);
 void* __cdecl NiMalloc(unsigned int);
 

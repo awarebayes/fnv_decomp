@@ -12036,7 +12036,6 @@ FUN_00b06090::FUN_00b06090(const char* data, int size) : unk00(0)
 namespace fnv_00b09960 {
 extern int DAT_010173f0;
 extern unsigned char DAT_011f8b79;
-typedef unsigned int size_t;
 struct HeapQ
 {
     void* Game_DoHeapAlloc(size_t n);

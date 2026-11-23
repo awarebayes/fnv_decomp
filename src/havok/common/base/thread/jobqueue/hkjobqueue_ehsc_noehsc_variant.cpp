@@ -1160,7 +1160,7 @@ struct RTL_CRITICAL_SECTION_
 typedef signed char hkInt8;
 typedef unsigned char hkUint8;
 typedef unsigned short hkUint16;
-typedef unsigned int hk_size_t;
+typedef size_t hk_size_t;
 
 
 

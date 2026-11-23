@@ -393,7 +393,6 @@ void Object_BuildBonePairMapping(const void* data, const hkaSkeleton* skelA, con
 }
 }  // namespace fnv_00ce5fe0
 
-typedef unsigned int size_t;
 
 inline void* operator new(size_t, void* p)
 {

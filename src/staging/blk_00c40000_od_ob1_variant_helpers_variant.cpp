@@ -6741,7 +6741,6 @@ struct S00c4db20_Self {
     int GetPointSide(S00c4db20_Pt curr, S00c4db20_Pt prev, S00c4db20_Pt next);
 };
 // Reconstruction of 0x00c4e1e0
-typedef unsigned int size_t;
 extern "C" void* memmove(void*, const void*, size_t);
 void* __cdecl NiMalloc(unsigned int);
 struct MMgr { void* __thiscall Allocate(unsigned int); };

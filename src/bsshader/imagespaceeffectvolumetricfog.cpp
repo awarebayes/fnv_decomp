@@ -5,7 +5,6 @@
 #include "../../include/MemoryManager.h"
 #include "../../include/ImageSpaceEffectParam.h"
 
-typedef unsigned int size_t;
 
 struct ImageSpaceTexture;
 

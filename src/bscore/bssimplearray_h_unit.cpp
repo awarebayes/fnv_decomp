@@ -3,7 +3,6 @@
 #include "bssimplearray.h"
 #include "../../include/TESForm.h"
 
-typedef unsigned int size_t;
 
 inline void* operator new(size_t, void* p)
 {

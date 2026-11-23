@@ -1899,7 +1899,6 @@ void ShapeHost::CIndexedGeometry_ComputeExtents(BoundsBox* cExtents)
     }
 }
 
-typedef unsigned int size_t;
 typedef int ptrdiff_t;
 unsigned int FUN_00ec7c56();
 void* __cdecl operator new(size_t);
