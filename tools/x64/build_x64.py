@@ -35,7 +35,9 @@ def compile_unit(cl, env, repo, out, unit, timeout):
     src = Path(unit['source'])
     stem = re.sub(r'[^A-Za-z0-9_]', '_', str(src.with_suffix('')))
     obj = out / 'obj' / (stem + '.obj')
-    cmd = [str(cl)] + FLAGS + ['/FI', str(repo / 'include' / 'x64_compat.h'),
+    # preprocessor defines are part of what a unit means (zlib units rename the CRT copies); other flags are replaced
+    defines = [f for f in unit.get('flags', []) if f.startswith('/D')]
+    cmd = [str(cl)] + FLAGS + defines + ['/FI', str(repo / 'include' / 'x64_compat.h'),
                                '/I', str(repo / 'include'), '/I', str(repo / src.parent), '/I', str(repo / 'src'),
                                '/Fo' + str(obj), str(repo / src)]
     start = time.time()
