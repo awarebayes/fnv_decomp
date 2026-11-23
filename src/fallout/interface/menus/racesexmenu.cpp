@@ -822,8 +822,6 @@ struct GlobalObject_0045cf30
     unsigned char* Bool();
 };
 extern GlobalObject_0045cf30 g_011db620;
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct FUN_007ac9f0
 {
     int unk000;

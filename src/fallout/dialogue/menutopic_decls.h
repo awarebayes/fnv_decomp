@@ -9,8 +9,6 @@ class PlayerCharacter;
 #include "menutopic_layout.h"
 #include "../../../include/TESTopic.h"
 #include "../../../include/TESTopicInfo.h"
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern PlayerCharacter* g_thePlayer;
 int __cdecl Warning(const char*, ...);
 class MenuTopicText

@@ -2433,7 +2433,6 @@ SpawnedItem_b10003** FUN_00478e90_This::AllocateSpawnedItemArray(unsigned char c
     return pItemArray;
 }
 
-void* __cdecl operator new(size_t size);
 struct FUN_0048a3d0;
 typedef void(__thiscall* CopyMethod)(FUN_0048a3d0*, const FUN_0048a3d0*);
 typedef void*(__thiscall* ReleaseMethod)(FUN_0048a3d0*, int);

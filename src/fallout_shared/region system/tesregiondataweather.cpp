@@ -47,7 +47,6 @@ void TESRegionDataWeather::Save()
     static_cast<WeatherListAccess*>(&weatherList)->TESWeatherList_Save(0x54574452);
 }
 
-void* __cdecl operator new(size_t);
 // @fnv 0x004f5260
 // pdb: TESRegionDataWeather::Copy | TESRegionDataWeather.obj | retail, vtable slot, high
 // pdb locals: pdata

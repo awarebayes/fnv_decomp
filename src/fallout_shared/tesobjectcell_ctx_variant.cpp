@@ -4,7 +4,6 @@
 #include "tesobjectcell_packet.h"
 #include "../../include/BGSSaveLoadGame.h"
 #include "../../include/TESForm.h"
-void __cdecl operator delete(void* pointer);
 const char kTESObjectCELLCellRefLockEnter[] = "TESObjectCELL::CellRefLockEnter()";
 unsigned int TESTerrainLODManager_GetGrassNode();
 NiAVObject* TESMain_GetWeatherRoot();

@@ -673,7 +673,6 @@ inline void* operator new[](size_t size)
 {
     return DAT_011f6238.Game_DoHeapAlloc(size);
 }
-void operator delete[](void* memory);
 // The original's point type here is NiPoint3: operator- 0x439ef0, Cross 0x4b3800, Unitize 0x4a0c10 and operator+
 // 0x439e90 are called; the constructor, operator+ and operator*(float) are expanded inline under /Ob1.
 __forceinline NiPoint3::NiPoint3(float a, float b, float c) : x(a), y(b), z(c)

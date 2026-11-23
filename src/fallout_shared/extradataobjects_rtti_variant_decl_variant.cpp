@@ -34,8 +34,6 @@
 #include "../../include/TESObjectREFR.h"
 #include "../../include/TESTopic.h"
 #include "../../include/ExtraDataList.h"
-void* __cdecl operator new[](size_t size);
-void __cdecl operator delete[](void* pointer);
 extern "C" void* __cdecl memcpy(void* destination, const void* source, size_t size);
 // @fnv 0x00877a30
 // pdb: NiTArray<NiTexturingProperty::Map *,NiTMallocInterface<NiTexturingProperty::Map *> >::GetAt | TESDataHandler.obj | debug, call graph, medium
@@ -85,7 +83,6 @@ struct ReflectReference554
 void ResolveFormID(unsigned int*, TESFile*);
 TESForm* TESForm_GetFormByNumericID(unsigned int);
 void Warning_005b5e40(const char*, ...);
-void __cdecl operator delete(void*);
 struct ReflectReferences554 : BSExtraData
 {
     BSSimpleList<ReflectReference554*> references;

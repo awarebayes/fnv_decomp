@@ -465,8 +465,6 @@ struct GO45CFE0
     char* FUN_004503f0();
 };
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 
 void __fastcall BSFaceGenModelMap_RemoveAllUnusedModels(void*);
@@ -4410,7 +4408,7 @@ extern FG547TextureLoader* DAT_011dea10;
 struct FUN_00a75650 : NiExtraData
 {
     // Preserve the complete extra-data allocation represented by the original local base.
-    char faceGenExtraDataStorage[0x4c - sizeof(NiExtraData)];
+    char faceGenExtraDataStorage[((0x4c) > sizeof(NiExtraData)) ? ((0x4c) - sizeof(NiExtraData)) : 1];
     FUN_00a75650();
     static void operator delete(void*, size_t);
 };

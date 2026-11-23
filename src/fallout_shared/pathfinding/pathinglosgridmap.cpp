@@ -83,7 +83,6 @@ void* __thiscall PathingLOSGridMap::FUN_006e0270(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 // Calls FUN_006e04b0, frees this with operator delete when flags has bit 0 set, and returns this.
 // @fnv 0x006e0480
 // pdb: PathingLOSGrid::`scalar deleting destructor' | PathingLOSGridMap.obj | debug, object-file gap fill, medium
@@ -186,7 +185,6 @@ void __thiscall PathingLOSGridMap::Reset()
     Initialize_006e0320(&m_1C, fRadius);
 }
 
-void* __cdecl operator new(size_t);
 struct SetAtHelper
 {
     void SetAt(unsigned int, unsigned int);
@@ -738,7 +736,6 @@ struct LockX
     void Unlock();
 };
 
-void* __cdecl operator new(size_t);
 
 // Local PathingLOSGridMap fallback: the shared header lacks this update method and the lock at +0x4c.
 struct LOSGridUpdateState

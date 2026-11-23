@@ -82,8 +82,6 @@ struct PerkOperations
 
 BGSPerkEntry* CreatePerkEntry(unsigned char type);
 
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete[](void*);
 BGSEntryPointFunctionData* BGSEntryPointFunctionData_CreateFunctionDataOfType(unsigned char);
 int Warning(const char*, ...);
 

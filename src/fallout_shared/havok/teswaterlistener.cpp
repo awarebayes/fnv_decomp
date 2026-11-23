@@ -1231,7 +1231,6 @@ struct EventWater
     void* reference;
 };
 extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
-void* __cdecl operator new(size_t);
 struct WaterManager
 {
     int unk00;

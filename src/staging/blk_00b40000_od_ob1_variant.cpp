@@ -22,7 +22,6 @@ struct FUN_00b42980
     int b;
     FUN_00b42980& Set(unsigned int v, FUN_00b42980 const& src);
 };
-void* operator new(size_t);
 void FUN_00ec7c56();
 struct FUN_00b40800_t
 {
@@ -218,7 +217,6 @@ class FUN_00b420a0_cls
     FUN_00b42980 m_obj;
     int CompareAndGetDelta(FUN_00b42980 const& arg);
 };
-void* operator new(size_t);
 extern char DAT_010176f8[];
 extern char DAT_01140ef8[];
 struct FnvThrowObj
@@ -428,7 +426,6 @@ inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;
 }
-void __cdecl operator delete(void*) throw();
 
 namespace stl {
 
@@ -1228,7 +1225,6 @@ void Matcher::ProcessEntries_00b41110(stl::vector<MatchNode*> nodes)
     }
 }
 
-void __cdecl operator delete(void*) throw();
 
 struct VbAux
 {
@@ -2416,8 +2412,6 @@ BoolIteratorB42& BoolIteratorB42::ProcessAndReturnValue_00b42a60(int _Off)
     return *this;
 }
 
-void operator delete(void*) throw();
-void* operator new(size_t);
 inline void operator delete(void*, void*) throw()
 {}
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, void* hint);
@@ -3043,8 +3037,6 @@ EUMB* __cdecl Object_ProcessAndReturnValue_00b42da0(EUMB* _First, EUMB* _Last, E
 namespace fnv_00b40b30 {
 #include <string.h>
 
-void operator delete(void*) throw();
-void* operator new(size_t);
 inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;

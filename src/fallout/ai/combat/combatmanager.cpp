@@ -97,7 +97,6 @@ void CombatManager::FinishLoadGame(BGSLoadGameBuffer* apLoadGameBuffer)
     pThreatMap->ProcessAllProjectiles(apLoadGameBuffer);
 }
 
-void* __cdecl operator new(size_t);
 
 extern TESWorldSpace* BGSSaveLoadGlobalDataWorldspacePtr;
 
@@ -904,7 +903,6 @@ void _FNV_Warning(const char*, ...);
 struct FUN_00985d10
 {
     char pad[0x15c];
-    void* operator new(size_t size);
     FUN_00985d10(unsigned int);
 };
 

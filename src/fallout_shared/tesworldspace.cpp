@@ -333,7 +333,6 @@ void TESWorldSpace::RemovePersistentRef(TESObjectREFR* apRef)
     }
 }
 
-void* __cdecl operator new(size_t);
 extern float const DAT_01015f5c;
 
 struct OFFSET_DATA_24
@@ -467,7 +466,6 @@ template <class T> struct WorldReferenceList
     T item;
     WorldReferenceList<T>* next;
     ~WorldReferenceList();
-    void operator delete(void*);
 };
 struct ATM
 {
@@ -3060,8 +3058,6 @@ bool WorldSpacePointQueryMethods::ContainsPoint(const NiPoint3* position)
 
 namespace fnv_00583560 {
 extern "C" void* _alloca(size_t);
-void* operator new(size_t);
-void operator delete(void*);
 struct B006815c0
 {
     float x, y;

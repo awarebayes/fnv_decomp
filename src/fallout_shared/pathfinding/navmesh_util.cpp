@@ -43,8 +43,6 @@ public:
 #include "../../../include/PathingLocation.h"
 #include "../../../include/TwoIntRecord.h"
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 namespace std {
 float abs(float);
 }

@@ -356,8 +356,6 @@ unsigned int BSSimpleArray<NiFixedString, 1024>::ReserveIndex()
     return iSize - 1;
 }
 
-void* __cdecl operator new(size_t size, void* where);
-void __cdecl operator delete(void* p, void* where);
 
 // Placement-constructs count fixed strings into the array.
 // @fnv 0x00761630
@@ -877,7 +875,6 @@ struct WeatherEntry
     int subtitleFont;
     char icon[260];
 };
-void* __cdecl operator new(size_t);
 int __cdecl strcpy_s(char*, unsigned int, const char*);
 void __cdecl Warning_005b5e40(int, const char*, ...);
 void __cdecl QuestUpdateManager_AddQuestNamesTail(char*);

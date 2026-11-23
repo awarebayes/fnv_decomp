@@ -352,7 +352,6 @@ void __thiscall FUN_00559ff0_class::SetVtableAndProcessState_00559ff0()
 }
 }  // namespace fnv_00559ff0
 
-void __cdecl operator delete(void*);
 struct FUN_005407d0_Class
 {
     void FUN_005409b0();
@@ -518,7 +517,6 @@ struct FUN_005422b0Class
     void NiTPrimitiveArray_TESObjectREFR_dtor();
     void* FUN_00559970(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 // @fnv 0x00559970
 // pdb: NiTPrimitiveArray<TESObjectREFR *>::`scalar deleting destructor' | TESObjectCELL.obj | debug, vtable slot, medium
 void* __thiscall FUN_005422b0Class::FUN_00559970(unsigned int flags)
@@ -1206,7 +1204,6 @@ void __thiscall FUN_00558600_Class::BSShaderAccumulator_GetDebugStats(int* a, in
     *k = DAT_011f9fec;
 }
 
-void* __cdecl operator new(size_t);
 extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int value, size_t count);
 extern int DAT_0102f3e8;
 struct FUN_00559b40
@@ -2317,8 +2314,6 @@ void Cell::TESObjectCELL_UpdateSeenData(const NiPoint3* aCoord)
 }
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct Result556ef0
 {
     void ExtraDataList_SetSeenData(IntSeenData*);

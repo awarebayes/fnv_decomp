@@ -183,7 +183,6 @@ FUN_008c8830_shell* FUN_008c8830_shell::Construct(int p)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008c8860_shell
 {
     void SetVtableAndProcessState_008c8890();
@@ -274,7 +273,6 @@ FUN_008c89a0::FUN_008c89a0(int aiValue) : FUN_008c82e0(aiValue)
     field38 = 0;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008c89d0_shell
 {
     void SetVirtualTableAndProcessState_008c8a00();
@@ -340,7 +338,6 @@ void FUN_008c8a50_shell::ActorUpdateTaskData_HandleEndMessage(int aiThread)
 }
 }  // namespace fnv_008c8a50
 
-void __cdecl operator delete(void*);
 struct FUN_008c8b20_shell
 {
     void SetVtableAndProcessState_008c8b50();
@@ -429,7 +426,6 @@ FUN_008c9020::FUN_008c9020(int a) : FUN_008c82e0(a)
 }
 }  // namespace fnv_008c9020
 
-void __cdecl operator delete(void*);
 struct FUN_008c9050_shell
 {
     void SetVirtualTableAndProcessState_008c9080();
@@ -506,7 +502,6 @@ FUN_008c9170::FUN_008c9170(int a) : FUN_008c82e0(a)
 }
 }  // namespace fnv_008c9170
 
-void __cdecl operator delete(void*);
 struct FUN_008c91a0_shell
 {
     void UpdateState_008c91d0();
@@ -621,7 +616,6 @@ void Obj_008c9a80::PushItem(int aiValue)
     }
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008c9ec0_shell
 {
     void FUN_008c9ef0();
@@ -740,7 +734,6 @@ void __fastcall Object_SetVirtualTable_008ca3c0(void* thisPtr)
     *static_cast<void**>(thisPtr) = &DAT_0108583c;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008ca3e0_shell
 {
     void Object_SetVirtualTable_008ca3c0();
@@ -757,7 +750,6 @@ void* FUN_008ca3e0_shell::FUN_008ca3e0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008ca410_shell
 {
     void FUN_008ca350();
@@ -829,7 +821,6 @@ void FUN_008ca520_shell::InitVtbl()
 }
 }  // namespace fnv_008ca520
 
-void __cdecl operator delete(void*);
 struct FUN_008ca540_shell
 {
     void BSTCommonMessageQueue_MobileObjectMessage_dtor();
@@ -846,7 +837,6 @@ void* FUN_008ca540_shell::FUN_008ca540(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008ca570_shell
 {
     void InitVtbl();
@@ -1024,7 +1014,6 @@ FUN_008c9a20_shell* FUN_008c9a20_shell::MobileObjectMessage_MobileObjectMessage(
     return this;
 }
 
-void* __cdecl operator new(size_t);
 struct FUN_008c9bd0 : BSThread
 {
     char e[0x48];
@@ -1223,7 +1212,6 @@ FUN_008ca680::FUN_008ca680()
 }
 }  // namespace fnv_008ca680
 
-void __cdecl operator delete(void*);
 struct FUN_008ca710_shell
 {
     void FUN_008ca480();

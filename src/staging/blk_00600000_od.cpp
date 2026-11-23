@@ -493,7 +493,6 @@ struct FUN_005ffbd0_cls
     void ForwardCall_005ffbd0();
     void* __thiscall FUN_00600fa0(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 // Calls FUN_005ffbd0, then deletes this if flags has bit 0 set, and returns this.
 // @fnv 0x00600fa0
 // pdb: NiTPrimitiveArray<TESIdleForm *>::`scalar deleting destructor' | TESIdleManager.obj | debug, vtable slot, medium
@@ -777,7 +776,6 @@ FUN_00618890_cls* __thiscall FUN_00618890_cls::FUN_00618890(unsigned int flags)
 }
 
 void __fastcall UpdateState_0061bcf0(void*);
-void __cdecl operator delete(void*);
 struct FUN_0061c090_class
 {
     void* __thiscall FUN_0061c090(unsigned int flags);
@@ -793,7 +791,6 @@ void* __thiscall FUN_0061c090_class::FUN_0061c090(unsigned int flags)
 }
 
 void __fastcall Object_ForwardCall_00618940(void*);
-void __cdecl operator delete(void*);
 struct FUN_0061c0c0_class
 {
     void* __thiscall FUN_0061c0c0(unsigned int flags);

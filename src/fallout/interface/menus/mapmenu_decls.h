@@ -3,8 +3,6 @@
 #define MAPMENU_DECLS_H
 
 #include <stddef.h>
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 class NiNode;
 class Tile;
 class TileMenu;

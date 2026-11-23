@@ -113,7 +113,6 @@ void __thiscall NiD3DShaderProgram::SetCreator_00eea540(NiD3DShaderProgramCreato
     m_pkCreator = pkCreator;
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 void __cdecl RemoveDeviceAndClearShader();
 
 
@@ -127,7 +126,6 @@ void* __fastcall DestroyVertexShader(NiD3DVertexShader* shader, void*, unsigned 
     return shader;
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 // Calls FUN_00e96c90, frees this with operator delete when flags has bit 0 set, and returns this.
 // @fnv 0x00e95cd0

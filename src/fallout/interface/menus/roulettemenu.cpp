@@ -154,7 +154,7 @@ struct B006815c0
 struct FUN_007b8fa0
 {
     SL s;
-    unsigned char layoutPadding[0x10 - sizeof(SL)];
+    unsigned char layoutPadding[((0x10) > sizeof(SL)) ? ((0x10) - sizeof(SL)) : 1];
     B006815c0 b;
     FUN_007b8fa0();
 };
@@ -1629,7 +1629,7 @@ extern int DAT_011daf5c;
 extern int DAT_011daf70;
 struct FUN_007e6780 : Menu
 {
-    unsigned char layoutExtension[0x54 - sizeof(Menu)];
+    unsigned char layoutExtension[((0x54) > sizeof(Menu)) ? ((0x54) - sizeof(Menu)) : 1];
     Member08 member54;
     List08 list84;
     FUN_007e6780();

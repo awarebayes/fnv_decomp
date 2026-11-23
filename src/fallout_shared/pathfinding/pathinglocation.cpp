@@ -101,8 +101,6 @@ void* PathingLocation::GetAssociatedNavMesh()
         return 0;
 }
 
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*, void*);
 // Placement-constructs count PathingLocation objects in the items array.
 // @fnv 0x006d00a0
 // pdb: BSSimpleArray<PathingLocation,1024>::_ConstructItems | PathBuilder.obj | debug, call graph (shared callers), high

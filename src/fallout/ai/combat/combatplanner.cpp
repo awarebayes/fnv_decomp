@@ -20,8 +20,6 @@ bool CombatPlanner::IsGoalNode_00995800(const AStarNode<CombatPlanNode*, CombatP
     return false;
 }
 
-void* operator new(size_t uiSize, void* pvWhere);
-void operator delete(void* pvMem, void* pvWhere);
 
 extern unsigned int DAT_010a2720;
 extern const float DAT_0108dbf0;  // FLT_MAX

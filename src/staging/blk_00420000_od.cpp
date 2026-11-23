@@ -1614,7 +1614,6 @@ struct FUN_00420c10_Class : public FUN_004207e0Class
     void ExtraDataList_AddRoomLinkedRoomRef(int apRef);
 };
 
-void* __cdecl operator new(size_t size);
 
 // Ensures the object exists when value is nonzero, then adds value to the list at offset 8 if it is not already present.
 // @fnv 0x00420c10
@@ -1962,8 +1961,6 @@ void FUN_0042e060_class::ExtraDataList_SetTalkingActorExtra(unsigned int apTalkA
     BaseExtraList_AddExtra(pEntry);
 }
 
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct B42FA60Entry
 {
@@ -1998,8 +1995,6 @@ NiTMap<TESObjectREFR*, bool>::~NiTMap()
     RemoveAll();
 }
 
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*, void*);
 // Default-constructs count timestamps in place at data.
 // @fnv 0x00430000
 // pdb: BSSimpleArray<CombatTimeStamp,1024>::_ConstructItems | ExtraDataList.obj | debug, call graph (shared callers), low

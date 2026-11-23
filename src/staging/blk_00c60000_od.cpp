@@ -572,7 +572,6 @@ struct FUN_00c613a0_Class
 {
     void __thiscall FUN_00c613a0();
     void* __thiscall FUN_00c617e0(unsigned int flags);
-    void operator delete(void* p, size_t size);
 };
 // @fnv 0x00c617e0
 // pdb: BSWArray::`scalar deleting destructor' | BSWArray.obj | debug, object-file run extension, low
@@ -610,7 +609,6 @@ struct FUN_00c632f0_class
 {
     void* __thiscall FUN_00c632f0(unsigned int flags);
 };
-void __cdecl operator delete(void*, int);
 // @fnv 0x00c632f0
 void* __thiscall FUN_00c632f0_class::FUN_00c632f0(unsigned int flags)
 {
@@ -652,7 +650,6 @@ void __thiscall FUN_00c63970_class::BSParentVelocityModifier_SaveBinary(void* ar
 }
 
 void __cdecl FUN_00c63b40(void* p);
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64610_Class
 {
     void __thiscall FUN_00c63b40();
@@ -1114,7 +1111,6 @@ bool FUN_00c60a10_Class::BSPSysSimpleColorModifier_IsEqual(NiObject* pkObject)
 }
 
 void __cdecl FUN_00c31750(void);
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c60d10_Class
 {
@@ -1227,7 +1223,6 @@ void FUN_00c63900_class::LoadModifierData(NiStream& arStream)
     ReadBinaryValue<unsigned int>(arStream, *reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x20));
 }
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c31750_Class
 {
@@ -1377,7 +1372,6 @@ FUN_0043ba10_shell* FUN_00c64dc0_Class::BSAttachPointPair_SetChild(unsigned int 
     return m_iWordAt04.AssignInternedString(arChild);
 }
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c64e70_Class
 {
@@ -1761,7 +1755,7 @@ namespace fnv_00c637b0 {
 extern "C" void* __cdecl Object_DispatchCommandFour(unsigned int size);
 struct ParticlePositionClone : ParticlePositionModifierConstruction
 {
-    unsigned char data[0x3c - sizeof(ParticlePositionModifierConstruction)];
+    unsigned char data[((0x3c) > sizeof(ParticlePositionModifierConstruction)) ? ((0x3c) - sizeof(ParticlePositionModifierConstruction)) : 1];
 
     static __forceinline void* __cdecl operator new(size_t size)
     {
@@ -2228,7 +2222,7 @@ void FUN_00c615a0_class::AppendGlobalAndFormatValues(NiTPrimitiveArray<unsigned 
 
 struct C639a0Cls : NiPSysModifier
 {
-    char pad[0x20 - sizeof(NiPSysModifier)];
+    char pad[((0x20) > sizeof(NiPSysModifier)) ? ((0x20) - sizeof(NiPSysModifier)) : 1];
     float m_20;
     bool __thiscall BSParentVelocityModifier_IsEqual(NiObject* apObject);
 };
@@ -2622,7 +2616,7 @@ void S_00c648a0::BSReference_LoadBinary(ObjectLinkStream* arStream)
 
 struct FUN_00c64de0 : BSFaceGenMorphData
 {
-    unsigned char data[0x1c - sizeof(BSFaceGenMorphData)];
+    unsigned char data[((0x1c) > sizeof(BSFaceGenMorphData)) ? ((0x1c) - sizeof(BSFaceGenMorphData)) : 1];
     FUN_00c64de0();
 };
 

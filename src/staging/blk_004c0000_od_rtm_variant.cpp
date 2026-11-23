@@ -1049,8 +1049,6 @@ struct FUN_0066b0d0_Helper
     void FUN_0066b0d0(int);
 };
 void Object_ProcessEntries_004def20();
-void* __cdecl operator new(size_t uiSize);
-void __cdecl operator delete(void* pvMem);
 class C4DF040Object
 {
   public:

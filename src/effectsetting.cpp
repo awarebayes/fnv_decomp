@@ -433,7 +433,6 @@ TESSound* EffectSetting::GetAreaSound()
     return data.m_pAreaEffectSound;
 }
 
-void __cdecl operator delete(void*);
 // A word-sized aggregate keeps this legacy stack argument beside ECX's object.
 struct EffectDestroyFlags
 {

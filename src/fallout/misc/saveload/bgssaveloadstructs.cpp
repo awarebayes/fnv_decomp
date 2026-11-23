@@ -250,7 +250,6 @@ void __thiscall FUN_00853670_shell::BGSSaveLoadFormInfo_SetFormType(int aeFormTy
     m0 = (m0 & ~0x3F) | type;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_00853880_shell
 {
     void __thiscall FUN_008538b0();
@@ -385,7 +384,6 @@ void __thiscall FormNameEntry::BuildFormName(char* apName, unsigned int aiNameSi
     }
 }
 
-void* operator new(size_t);
 
 int __cdecl Object_CompareSumsDescending(FUN_008547f0_shell*, FUN_008547f0_shell*);
 

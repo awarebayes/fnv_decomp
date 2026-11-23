@@ -311,8 +311,6 @@ float PlayerCharacter::GetActorValueModifierAmount(ModifierGroup modifier, Actor
     return value;
 }
 
-void* operator new(size_t) throw();
-void operator delete(void*);
 
 struct IntSetting
 {
@@ -2496,7 +2494,6 @@ void* FUN_00939880_t::ClearFieldAtOffset198_00939880()
     return this;
 }
 
-void __cdecl operator delete(void* p);
 
 struct FUN_009398a0_Class
 {
@@ -21347,7 +21344,6 @@ class GarbageCollectorDeleteB
   public:
     ~GarbageCollectorDeleteB();
 };
-void __cdecl operator delete(void*);
 struct OSState
 {
     bool FUN_005dc960();
@@ -25171,14 +25167,14 @@ float B50610Player::PlayerCharacter_SetFOV(float afFOV)
 class FUN_00906dc0 : public BaseProcess
 {
   public:
-    char processTail[0xb4 - sizeof(BaseProcess)];
+    char processTail[((0xb4) > sizeof(BaseProcess)) ? ((0xb4) - sizeof(BaseProcess)) : 1];
     FUN_00906dc0();
 };
 
 class FUN_008d7510 : public BaseProcess
 {
   public:
-    char processTail[0x46c - sizeof(BaseProcess)];
+    char processTail[((0x46c) > sizeof(BaseProcess)) ? ((0x46c) - sizeof(BaseProcess)) : 1];
     FUN_008d7510();
 };
 
@@ -41124,7 +41120,6 @@ VTableTarget116* FUN_00963730_cls::PlayerCharacter_GetAutoAimActor()
     return (m_0D2C != 0 && m_0D2C->v116() != 0) ? m_0D2C : 0;
 }
 
-void* __cdecl operator new(size_t);
 void __cdecl StatsMenu_UpdatePerks(void);
 
 struct FUN_005eb6a0_Class

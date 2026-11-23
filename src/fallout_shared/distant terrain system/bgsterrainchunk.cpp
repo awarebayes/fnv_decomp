@@ -368,7 +368,7 @@ class BSSoundHandle;
 extern IOManager* DAT_01202d98;
 struct FUN_006f7140_shell : IOTask
 {
-    char _pad[0x30 - sizeof(IOTask)];
+    char _pad[((0x30) > sizeof(IOTask)) ? ((0x30) - sizeof(IOTask)) : 1];
     bool b30;
     void ProcessTask();
 };

@@ -31,7 +31,6 @@ struct SomeClass
     void* FUN_00ee90b0(unsigned int);
 };
 void __cdecl FUN_00ee9a60();
-void __cdecl operator delete(void*, size_t);
 void* __cdecl NiStandardAllocator::operator new(size_t n)
 {
     return g_memoryManager.Game_DoHeapAlloc(n);

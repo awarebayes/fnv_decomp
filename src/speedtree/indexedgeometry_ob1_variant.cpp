@@ -426,8 +426,6 @@ struct TargetClass
 
 // Based on another contributor's triangle-strip reconstruction supplied in packet.json.
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
@@ -486,7 +484,6 @@ struct FUN_00b39460
 
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
-void* __cdecl operator new[](size_t);
 
 template <class T> struct ValueBase : FUN_00b39460
 {
@@ -1901,8 +1898,6 @@ void ShapeHost::CIndexedGeometry_ComputeExtents(BoundsBox* cExtents)
 
 typedef int ptrdiff_t;
 unsigned int FUN_00ec7c56();
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 inline void __cdecl operator delete(void*, void*)
 {}
 extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
@@ -3705,7 +3700,6 @@ int* FUN_00b30730_Tree::CIndexedGeometry_GetStripsPointer(unsigned short nLodLev
 
 typedef unsigned short U16;
 typedef unsigned int U32;
-void* __cdecl operator new[](U32 bytes);
 unsigned int __cdecl FUN_00ec7c56();
 void* __cdecl FUN_00ec44d0(void* dest, const void* src, U32 length);
 extern unsigned char* DAT_011f8d88;
@@ -4407,7 +4401,6 @@ void Target::CTreeEngine_Compute(float fLeafSizeIncreaseFactor)
 namespace fnv_00b2c890 {
 #include <string.h>
 
-void* operator new(size_t);
 void FormHeapFreeAndLog_00401030(void*);
 namespace std {
 class exception

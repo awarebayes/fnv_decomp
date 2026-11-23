@@ -6,7 +6,6 @@
 #include "../../include/NavMeshPtr.h"
 #include "../../include/SL.h"
 #include "../../include/TESObjectLAND.h"
-void __cdecl operator delete(void* pointer);
 const char kTESObjectCELLCellRefLockEnter[] = "TESObjectCELL::CellRefLockEnter()";
 unsigned int TESTerrainLODManager_GetGrassNode();
 NiAVObject* TESMain_GetWeatherRoot();

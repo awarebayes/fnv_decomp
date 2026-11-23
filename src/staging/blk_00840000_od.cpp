@@ -366,7 +366,6 @@ void FUN_0084ba70_Cls::NiTMap_int64_int_DeleteItem(void* arg)
     reinterpret_cast<Unk6b*>(reinterpret_cast<char*>(this) + 0xc)->FreeMemory(arg);
 }
 
-void* __cdecl operator new(size_t size);
 
 struct FUN_0084bb30_class
 {
@@ -2364,7 +2363,6 @@ FUN_00857280::FUN_00857280(int x, int y, int z, char f)
     d = f;
 }
 
-void* __cdecl operator new(size_t size);
 void* __cdecl __memcpy(void* dst, const void* src, unsigned int count);
 // Allocates value + 2 bytes, copies the 2-byte value to the start of the block, and returns the block.
 // @fnv 0x0085ef80
@@ -3523,8 +3521,6 @@ void FUN_0085fe80_cls::SetPair(FUN_0085fe80_pair aPair)
     m_158 = 1;
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 void* __cdecl memset(void*, int, unsigned int);
 struct SaveMemberA
 {
@@ -5958,7 +5954,6 @@ void TESObjectREFR_MoveRefToNewSpace(Actor*, TESObjectCELL*, int);
 Node3d* TESObjectCELL_ExteriorWorld();
 void TallGrassShaderProperty_SetUseBackgroundLoading(int);
 void TESTerrainLODManager_UpdateGrass(NiPoint3, NiPoint3, float);
-void __cdecl operator delete(void*);
 
 struct ActorList2
 {

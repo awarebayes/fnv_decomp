@@ -123,7 +123,6 @@ struct FUN_005eefc0_class
 {
     FUN_005eefc0_class* __thiscall FUN_005eefc0();
 };
-void* __cdecl operator new(size_t);
 struct FUN_005ef150_class
 {
     void* __thiscall FUN_005ef150(int a);
@@ -265,7 +264,6 @@ struct FUN_005e03a0_Class
 {
     void __thiscall NiTArray_TESTexture_NiTMallocInterface_TESTexture_dtor();
 };
-void __cdecl operator delete(void*);
 struct FUN_005e06e0_Class
 {
     void* __thiscall FUN_005e06e0(unsigned int flags);
@@ -287,7 +285,6 @@ struct FUN_005e0740_class : FUN_005e0460_class
 {
     void* __thiscall FUN_005e0740(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 struct FUN_005dd7f0_class
 {
     void NiTPrimitiveArray_char_const_dtor();
@@ -301,7 +298,6 @@ struct _Mem_20a4
     ~_Mem_20a4();
     _Mem_20a4* __thiscall FUN_005e07a0(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 struct FUN_005e0590_shell
 {
     void BSSimpleArray_TESNPC_1024_dtor();
@@ -365,7 +361,6 @@ struct GlobalObject_00869f00_Deleting : GlobalObject_00869f00
 {
     GlobalObject_00869f00* __thiscall FUN_005ef590(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 struct FUN_005eeff0_shell
 {
     void __thiscall FUN_005eeff0();
@@ -378,12 +373,10 @@ struct FUN_005ef1d0_class
 {
     void __thiscall FUN_005ef1d0();
 };
-void __cdecl operator delete(void*);
 struct FUN_005ef5f0_class
 {
     void* __thiscall FUN_005ef5f0(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 struct FUN_005efa40_class
 {
     short m0;
@@ -1097,8 +1090,6 @@ struct FUN_005efa80_cls
     void Finish();
     void BSSimpleArray_PathingLocation_1024_ReallocateBuffer(void* a1, unsigned int a2);
 };
-void* operator new(size_t uiSize, void* pvMem);
-void operator delete(void* pvMem, void* pvPlace);
 struct EFBC0Item
 {
     EFBC0Item();
@@ -1796,7 +1787,6 @@ struct Target005ed1e0
     EntryArray005ed1e0 entries_14;
     bool BGSRagdoll_GrabIK_Compare(Target005ed1e0* arData);
 };
-void* __cdecl operator new(size_t, void*);
 struct SpawnItem : FUN_005ef7f0_Data
 {
     int unk20;
@@ -1807,8 +1797,6 @@ struct SpawnItem : FUN_005ef7f0_Data
     int unk34;
     SpawnItem();
 };
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 struct E5EF9A0Entry
 {
     int unk00;
@@ -2331,7 +2319,6 @@ struct IntegerShortPairEndianRecord
 
     void SwapMemberByteOrder();
 };
-void __cdecl operator delete(void*);
 struct DeletingObject
 {
     void FUN_005e4bc0();

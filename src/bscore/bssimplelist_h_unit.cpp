@@ -854,7 +854,6 @@ FUN_0083dec0::~FUN_0083dec0()
     }
 }
 
-void* __cdecl operator new(size_t);
 
 struct Item_009b1630
 {

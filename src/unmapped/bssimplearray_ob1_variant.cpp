@@ -183,7 +183,6 @@ struct FUN_006cfcb0_Class
 {
     void* __thiscall FUN_006cfcb0(unsigned int flags);
 };
-void __cdecl operator delete(void* p);
 struct FUN_006cfd40_Class
 {
     void __thiscall FUN_006cf610();
@@ -260,7 +259,6 @@ struct FUN_006d0450_Class
 {
     int __thiscall GetNextIndex();
 };
-void* __cdecl operator new(size_t, void*);
 struct EightByteData
 {
     unsigned char m_data[8];
@@ -532,8 +530,6 @@ struct FUN_006cfe70_Class : public FUN_006d0540_shell
 {
     void __thiscall BSSimpleArray_VirtualPathingNode_1024_ReallocateBuffer(int aiNewSize, int aiCopyCount);
 };
-void* __cdecl operator new(size_t size, void* place);
-void __cdecl operator delete(void* p, void* place);
 struct SpawnedObject9
 {
     int m_00;

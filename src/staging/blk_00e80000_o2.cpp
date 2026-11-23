@@ -394,7 +394,6 @@ void __thiscall FUN_00e891f0_Class::NiD3DTextureStageGroup_RemoveAllStageStates(
     *(int*)((char*)this + 4) = 0;
 }
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 extern int DAT_010efc34;
 void __cdecl FUN_00e68830();
 
@@ -897,7 +896,6 @@ FUN_00e941d0_Node* __fastcall RemoveFirstNodeAtLeast(FUN_00e941d0_This* self, in
     return node;
 }
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00e98610_Node {
     void* m_next;
@@ -1226,7 +1224,6 @@ void __cdecl _NiFree(void*);
 
 
 
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00e8ceb0_Class {
     void __thiscall ReleaseStorage_00e8ceb0();
     void* __thiscall FUN_00e8d200(bool flag);
@@ -1521,7 +1518,6 @@ void __thiscall FUN_00e96c90_Class::UpdateState_00e96c90()
     FUN_00e89970();
 }
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 void __cdecl FUN_00e989c0();
 extern int DAT_010f1550;
 
@@ -9170,7 +9166,6 @@ struct FUN_00e940a0_Class {
     void __thiscall ReleaseGlobalSlot();
 };
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 
 // If the global object exists and holds a pointer in unk_48, clears that slot, nulls m_00 when it matches, and deletes the pointer.
 // @fnv 0x00e940a0

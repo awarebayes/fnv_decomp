@@ -898,7 +898,6 @@ void __thiscall FUN_006f4b90_Class::UpdateState_006f4b90()
 }
 }  // namespace fnv_006f4b90
 
-void* __cdecl operator new(size_t);
 
 struct FUN_006f4bb0_Class
 {
@@ -1389,7 +1388,6 @@ void* __thiscall FUN_006e1250_Class::FUN_006e1250(unsigned int auiFlags)
     return this;
 }
 
-void* __cdecl operator new(size_t, void*);
 struct FUN_006e1280_Class
 {
     void __thiscall VisitPlacementAddresses(char* a1, unsigned int a2);
@@ -1726,7 +1724,6 @@ bool FUN_006ec390_Class::BSTCommonMessageQueue_MobileObjectMessage_TryPop(int aM
     return result;
 }
 
-void __cdecl operator delete(void*);
 
 struct FUN_006ec410_Helper
 {
@@ -4628,8 +4625,6 @@ struct Child80_s
     void SetChild(Child84_s* a1);
 };
 void* __cdecl HeapAlloc_s(unsigned int acAlignment, unsigned int aSize);
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*, void*);
 
 struct PathObj_s
 {
@@ -4935,8 +4930,6 @@ FUN_006e9570_cls& FUN_006e9570_cls::operator=(const FUN_006e9570_cls& kOther)
     return *this;
 }
 
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*, void*);
 struct FUN_006f4cd0
 {
     int unk00;
@@ -5068,8 +5061,6 @@ bool FUN_006ec2e0_Class::PopHead(FUN_006ec2e0_Out* aMessage)
     return bPopped;
 }
 
-void* operator new(size_t size, void* where);
-void operator delete(void* p, void* where);
 
 class FUN_006ec4b0_item
 {
@@ -5414,8 +5405,6 @@ void FUN_006edd30_shell::UpdateState_006edd30(const NiPoint3* start, const NiPoi
 }
 
 extern unsigned int DAT_010a2720;
-void* __cdecl operator new(size_t size, void* place);
-void __cdecl operator delete(void* ptr, void* place);
 struct FUN_006ee050_Size28 : public FUN_006ee050_Class
 {
     int extra18;
@@ -5455,8 +5444,6 @@ struct Heap_006ee070
     void* __thiscall Allocate(unsigned int size, unsigned int flags);
 };
 
-void* __cdecl operator new(size_t size, void* where);
-void __cdecl operator delete(void* p, void* where);
 
 struct FUN_006ee070_obj
 {
@@ -6948,8 +6935,6 @@ int S_006f9c20::AddElement(const S_006f9c20_Elem* pElem)
     return iIndex;
 }
 
-void* __cdecl operator new(size_t size, void* place);
-void __cdecl operator delete(void* p, void* place);
 
 class BoundArrayElement
 {
@@ -11087,8 +11072,6 @@ void PathSmoother::BuildInternalArrays()
 }
 
 extern unsigned int DAT_010a2720;
-void* __cdecl operator new(size_t size, void* place);
-void __cdecl operator delete(void* object, void* place);
 
 struct Allocator_006edc40
 {
@@ -11504,7 +11487,6 @@ struct Derived : PrimaryBase, SecondaryBase
 Derived::Derived()
 {}
 
-void __cdecl operator delete(void*, void*);
 
 // Places a2 instances of FUN_006e2210 into the memory block at a1 by calling the constructor at each offset.
 // @fnv 0x006e9700

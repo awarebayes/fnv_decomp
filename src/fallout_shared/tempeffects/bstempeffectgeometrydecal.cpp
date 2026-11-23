@@ -301,7 +301,6 @@ struct DtorOwner00685e80
 };
 typedef void (__thiscall DtorOwner00685e80::*DtorMemberPointer)();
 extern void __stdcall FUN_0065ee50_Helper(void* object, unsigned int size, int count, DtorMemberPointer destructor);
-void __cdecl operator delete(void* p);
 struct FUN_00685e80_Class
 {
     void* DestroyOrFree(unsigned int flags);
@@ -1604,8 +1603,6 @@ void __cdecl NiMatrix3_TransformVertices(DMatrix*, DPoint*, int, DPoint*, DPoint
 float __cdecl BSMAX_00404010(float, float);
 float __cdecl DecalPower(float, int);
 float __cdecl FloatAbs(float);
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete[](void*);
 void* __cdecl NiMalloc(unsigned int);
 void* __cdecl memcpy(void*, const void*, unsigned int);
 void* __cdecl memset(void*, int, unsigned int);

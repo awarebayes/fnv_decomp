@@ -1888,7 +1888,6 @@ struct VectorBadAlloc
     bool ownsMessage;
     VectorBadAlloc(const char*);
 };
-void* __cdecl operator new(size_t);
 // src: GUESS 0x0065f9e0 (confidence: medium)
 extern "C" inline ShortPoint* __cdecl Object_AllocateElementStorage_0065f9e0(unsigned int _Count, int)
 {
@@ -7425,7 +7424,6 @@ struct AllocationFailure : AllocationExceptionBase
     AllocationFailure(const char* _Message) throw() : AllocationExceptionBase(_Message)
     {}
 };
-void* __cdecl operator new(size_t);
 extern "C" inline char* __cdecl AllocateChecked(unsigned int _Count, int)
 {
     if (_Count <= 0)
@@ -8782,7 +8780,7 @@ struct VecB_ab5ce0
 struct Cls_ab5ce0
 {
     VecA_ab5ce0 kVec;
-    char pad[0x90 - sizeof(VecA_ab5ce0)];
+    char pad[((0x90) > sizeof(VecA_ab5ce0)) ? ((0x90) - sizeof(VecA_ab5ce0)) : 1];
     VecB_ab5ce0 kIdx;
     void ProcessEntries_00ab5ce0(VecA_ab5ce0& out);
 };
@@ -9160,7 +9158,6 @@ extern unsigned int DAT_010173f0;
 void __cdecl FUN_00ec7c56();
 extern "C" size_t __cdecl strlen(const char*);
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
-void __cdecl operator delete(void*);
 template <class T> struct StdAllocator
 {
     StdAllocator() throw()
@@ -11719,7 +11716,6 @@ struct AllocationError
     int ownsMessage;
     AllocationError(const char* = 0);
 };
-void* __cdecl operator new(size_t);
 // src: GUESS 0x0065e310 (confidence: medium)
 inline Vec3Item* __cdecl Array_AllocateElements12Checked(unsigned int _Count, int)
 {
@@ -17888,7 +17884,6 @@ extern unsigned int DAT_010173f0;
 void __cdecl FUN_00ec7c56();
 extern "C" size_t __cdecl strlen(const char*);
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
-void __cdecl operator delete(void*);
 template <class T> struct StdAllocator
 {
     StdAllocator() throw()
@@ -19318,8 +19313,6 @@ __forceinline void* operator new[](size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
-void operator delete(void*);
-void operator delete[](void*);
 extern "C" __declspec(dllimport) void* __stdcall CreateSemaphoreA(void*, long, long, const char*);
 struct IOSemaphore
 {
@@ -19541,7 +19534,6 @@ void ReworkModel::ProcessEntries_00aad140(int idx, ReworkPair* bases)
     }
 }
 
-void __cdecl operator delete(void*);
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 struct SecureTraitsTag
@@ -20249,7 +20241,6 @@ void EntryVector::InsertFilledElements(int owner_ai, Entry* where_tmoy, unsigned
     }
 }
 
-void __cdecl operator delete(void*);
 namespace Ab2e70Detail {
 struct SecureTag
 {

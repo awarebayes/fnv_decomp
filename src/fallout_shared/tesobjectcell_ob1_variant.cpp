@@ -9,7 +9,6 @@
 #include "tesobjectcell_packet.h"
 #include "../../include/NiPoint3.h"
 #include "../../include/NiRefObject.h"
-void __cdecl operator delete(void* pointer);
 const char kTESObjectCELLCellRefLockEnter[] = "TESObjectCELL::CellRefLockEnter()";
 unsigned int TESTerrainLODManager_GetGrassNode();
 NiAVObject* TESMain_GetWeatherRoot();

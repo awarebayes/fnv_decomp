@@ -215,7 +215,6 @@ struct FUN_00c3a130_Class
 {
     char __thiscall BSMultiBoundRoom_RegisterStreamables(void* arg);
 };
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c3a140_Class
 {
     void __thiscall FUN_00c39770();
@@ -324,7 +323,6 @@ extern char const g_01204390_arg0[];
 extern char const g_01202e84_arg0[];
 extern char const g_01204388_arg0[];
 void BSStream_InitLoaders();
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c3ba80_Class
 {
     void __thiscall FUN_00c3bab0();

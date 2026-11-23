@@ -364,7 +364,6 @@ struct FUN_00c613a0_Class
 {
     void __thiscall FUN_00c613a0();
     void* __thiscall FUN_00c617e0(unsigned int flags);
-    void operator delete(void* p, size_t size);
 };
 extern "C" void NiFree(void*);
 extern MemoryManager g_memoryManager;
@@ -378,7 +377,6 @@ struct FUN_00c632f0_class
 {
     void* __thiscall FUN_00c632f0(unsigned int flags);
 };
-void __cdecl operator delete(void*, int);
 struct CloningProcess;
 struct FUN_00c63840_Class : NiPSysModifier
 {
@@ -392,7 +390,6 @@ struct FUN_00c63970_class : NiPSysModifier
     void __thiscall BSParentVelocityModifier_SaveBinary(void* arStream);
 };
 void __cdecl FUN_00c63b40(void* p);
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64930_Class
 {
     void BSReference_LinkObject(int a);
@@ -528,7 +525,6 @@ struct FUN_00c60a10_Class
     bool __thiscall BSPSysSimpleColorModifier_IsEqual(NiObject*);
 };
 void __cdecl FUN_00c31750(void);
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c60d10_Class
 {
     void FUN_00c31750();
@@ -567,7 +563,6 @@ struct FUN_00c63900_class : NiPSysModifier
 {
     void LoadModifierData(NiStream& arStream);
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c31750_Class
 {
     void __thiscall FUN_00c31750();
@@ -601,7 +596,6 @@ struct FUN_00c64dc0_Class
     int m_10;
     FUN_0043ba10_shell* BSAttachPointPair_SetChild(unsigned int arChild);
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64e70_Class
 {
     void __thiscall FUN_00c64e70();

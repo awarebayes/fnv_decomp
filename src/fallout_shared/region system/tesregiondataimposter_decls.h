@@ -17,7 +17,5 @@ template <int N> struct EndianSizeTag
 {
 };
 void BSEndian(unsigned int* value, EndianSizeTag<4>);
-void* __cdecl operator new[](size_t size);
-void __cdecl operator delete[](void* data);
 
 #endif

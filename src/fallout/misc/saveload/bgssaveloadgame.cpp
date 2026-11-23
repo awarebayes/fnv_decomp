@@ -699,7 +699,6 @@ void __thiscall BGSLoadFormBuffer::SetSkipForm_00848d90(bool abSet)
         iFlags &= ~1;
 }
 
-void* __cdecl operator new(size_t);
 // The shared game has no ordinary destructor declaration. This API-only view
 // preserves its destruction calls without duplicating the game layout.
 struct SaveLoadGameMemberDestruction

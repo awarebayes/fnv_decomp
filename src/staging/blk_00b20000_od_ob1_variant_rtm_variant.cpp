@@ -3555,7 +3555,6 @@ struct FUN_00b311b0 : FUN_00b326e0
     void UpdateFields_00b32600(unsigned int n, void* const& v);
     explicit FUN_00b311b0(unsigned int n);
 };
-void __cdecl operator delete(void*) throw();
 struct ScalarTag31
 {
 };

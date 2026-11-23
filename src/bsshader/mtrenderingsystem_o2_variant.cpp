@@ -419,7 +419,6 @@ struct RenderTaskThread : BSLinearTaskThread
     {
         return g_memoryManager.Allocate(s);
     }
-    void operator delete(void*);
 };
 struct ThreadOwner
 {

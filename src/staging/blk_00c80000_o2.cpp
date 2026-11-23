@@ -256,7 +256,6 @@ void FUN_00c87670_Class::bhkSerializable_LinkObject(NiStream& arStream)
             reinterpret_cast<void**>(this)[0])[44])(this, m_field_0xc);
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c88a20_cls
 {
     void __thiscall FUN_00c88930();
@@ -10871,7 +10870,6 @@ struct FUN_00c87dc0_class
     unsigned int __thiscall FUN_00c87dc0(unsigned char param_2);
 };
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 // Calls FUN_00c87d20, then deletes this (0xC bytes) when bit 0 of param_2 is set, and returns this as an unsigned int.
 // @fnv 0x00c87dc0

@@ -617,7 +617,6 @@ struct FUN_00420c10_Class : public FUN_004207e0Class
 {
     void ExtraDataList_AddRoomLinkedRoomRef(int apRef);
 };
-void* __cdecl operator new(size_t size);
 struct FUN_0042cca0 : public BSExtraData
 {
     void* vtbl;
@@ -743,8 +742,6 @@ struct FUN_0042e060_class
     void __thiscall BaseExtraList_AddExtra(void* extra);
     void __thiscall ExtraDataList_SetTalkingActorExtra(unsigned int apTalkAct, unsigned int apRef);
 };
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 struct B42FA60Entry
 {
     int unk00;
@@ -770,8 +767,6 @@ class FUN_0042fe80_Map : public B42FE80MapBase
     virtual ~FUN_0042fe80_Map();
     void RemoveAll();
 };
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*, void*);
 struct FUN_004300a0
 {
     void* m_uiFilterValue;

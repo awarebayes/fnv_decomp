@@ -5477,7 +5477,6 @@ struct Message86
     int x;
     int y;
 };
-void* __cdecl operator new(size_t);
 extern Receiver86* g_dataHandler;
 extern Receiver86* g_TESSaveLoadGame;
 extern Receiver86* g_BGSSaveLoadGame;

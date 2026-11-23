@@ -142,7 +142,6 @@ void ReanimateEffect::SaveGame_008274a0(Actor* apActor)
     g_TESSaveLoadGame->TESSaveLoadGame_SaveGameDataOLD(StartRot, 16);
 }
 
-void* __cdecl operator new(size_t);
 extern int _data_011c16bc;
 
 struct FUN_008266a0_copy54

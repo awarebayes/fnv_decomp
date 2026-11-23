@@ -90,7 +90,6 @@ struct FUN_00c87670_Class : NiObject
     void* m_pad_0x8;
     void* m_field_0xc;
 };
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c88a20_cls
 {
     void __thiscall FUN_00c88930();
@@ -6863,7 +6862,6 @@ struct FUN_00c87dc0_class
     void __thiscall FUN_00c87d20();
     unsigned int __thiscall FUN_00c87dc0(unsigned char param_2);
 };
-extern "C" void __cdecl operator delete(void*, size_t);
 void __cdecl DispatchToTarget();
 void __cdecl bhkCollisionObject_RegisterStreamables();
 void bhkNiCollisionObject_IsEqual();

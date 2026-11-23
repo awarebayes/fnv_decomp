@@ -265,7 +265,6 @@ class FUN_005a7b60_cls
 
     bool TESRecipeCategory_Compare(TESForm* apCompare);
 };
-void __cdecl operator delete(void*);
 struct DeletingObject
 {
     void FUN_005a7d40();

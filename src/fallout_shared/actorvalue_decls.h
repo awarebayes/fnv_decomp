@@ -135,7 +135,5 @@ class GlobalObject_0066ef90
     GlobalObject_0066ef90();
 };
 extern GlobalObject_0066ef90 g_011d61c8;
-void* __cdecl operator new(size_t) throw();
-void __cdecl operator delete(void*);
 bool ActorValue_IsResistance(ActorValue::Index);
 #endif

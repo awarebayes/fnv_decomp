@@ -3,10 +3,6 @@
 #define FNV_THREAD_SAFE_STRUCTURES_MATCH_H
 
 #include <stddef.h>
-void* __cdecl operator new(size_t);
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete(void*);
-void __cdecl operator delete[](void*);
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern "C" const char kThreadSafeStructuresSourceFile[];
 unsigned int __cdecl _TlsAlloc();

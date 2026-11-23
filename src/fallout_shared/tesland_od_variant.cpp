@@ -348,7 +348,6 @@ const char* const* FUN_00537ca0_class::NiAdditionalGeometryData_GetRTTI()
 }
 
 struct FUN_00a73080_holder { void NiAdditionalGeometryData_dtor(); };
-void __cdecl operator delete(void* p, size_t size);
 
 // @fnv 0x00537cb0
 // pdb: NiAdditionalGeometryData::`scalar deleting destructor' | TESLand.obj | retail, vtable slot, high
@@ -598,7 +597,6 @@ GlobalObjectO2_00a7b610* FUN_00539fc0_Class::NiBinaryExtraData_GetRTTI()
     return &g_011f4ab8;
 }
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_0053a000 {
     void __thiscall Destruct();
@@ -3204,7 +3202,6 @@ bool CleanupOwner::TESObjectLAND_UnLoadVertices() {
     return true;
 }
 
-void* __cdecl operator new(size_t);
 void __cdecl ourMemset(void*, int, unsigned int);
 
 extern NiPoint3 DAT_011f426c;

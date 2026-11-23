@@ -210,7 +210,6 @@ unsigned int Arr16::AppendValue(int aValue)
     return index;
 }
 
-void __cdecl operator delete(void*);
 
 // Runs the destructor, deletes this when flags has bit 0 set, and returns this.
 // @fnv 0x006c7910

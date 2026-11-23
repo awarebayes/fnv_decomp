@@ -191,7 +191,6 @@ bool ObsList::BSSimpleList_NiRefObjectPtr_IsEmpty()
     return (m_pkNext == 0 && *reinterpret_cast<NiPointer<NiNode>*>(this) == 0) ? 1 : 0;
 }
 
-void* __cdecl operator new(size_t);
 
 struct B006815c0
 {
@@ -366,7 +365,6 @@ FUN_00513d60::FUN_00513d60()
     c = 0;
 }
 
-void* __cdecl operator new(size_t);
 
 struct FUN_006317f0
 {
@@ -522,7 +520,6 @@ FUN_00619740::FUN_00619740()
 }
 
 namespace fnv_00631540 {
-void* __cdecl operator new(size_t);
 
 struct FUN_006317f0
 {

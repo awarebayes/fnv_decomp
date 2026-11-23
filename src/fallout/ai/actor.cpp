@@ -13110,7 +13110,6 @@ void __fastcall Actor_CleanUpPointersOnDisable(char* pThis)
 }
 
 namespace fnv_008c1470 {
-void* __cdecl operator new(size_t);
 
 struct FUN_008c1c00
 {
@@ -14740,8 +14739,6 @@ struct FUN_00964190_shell : public Actor
     void ResetMover();
 };
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 struct DummyMover;
 DummyMover* __fastcall FUN_009e9d00(DummyMover* pThis, int, void* actor);
@@ -54183,7 +54180,6 @@ class ExtraDataList;
 class TESBoundObject;
 class Actor;
 namespace fnv_0088c830 {
-void* operator new(size_t, void*);
 void* FormHeap_Allocate(unsigned int);
 bool __fastcall TESObjectWEAP_IsThrownWeapon(::TESObjectWEAP*);
 
@@ -60313,7 +60309,6 @@ struct DeferredDeath
     void TaskQueueInterface_QueueActorKill();
 };
 DeferredDeath* __stdcall FUN_004537b0(HealthActor*, float*, bool);
-void* operator new(size_t);
 struct HealthActor : Actor
 {
     bool FUN_00566950();
@@ -132581,7 +132576,6 @@ extern DataHandler* DAT_011c3f2c;
 
 int __cdecl Warning_005b5e40(const char* s1, ...);
 
-void* __cdecl operator new(size_t size);
 
 struct FUN_008d3310_shell : public Actor
 {

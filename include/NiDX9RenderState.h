@@ -13,7 +13,7 @@ public:
         unsigned int unk;
     };
 
-    char _pad[0xE20 - sizeof(NiD3DRenderState)];
+    char _pad[((0xE20) > sizeof(NiD3DRenderState)) ? ((0xE20) - sizeof(NiD3DRenderState)) : 1];
     Entry mState[8][5];
 
     unsigned int GetStateValue(unsigned int, unsigned int);

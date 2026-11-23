@@ -8,7 +8,6 @@
 #include "../../include/MemoryManager.h"
 #include "../../include/NiRenderTargetGroup.h"
 #include "../../include/NiRenderer.h"
-void operator delete(void*);
 class ImageSpaceEffect;
 class HdrEffectParamLocalForm;
 class ImageSpaceManager;

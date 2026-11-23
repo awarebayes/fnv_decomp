@@ -11,7 +11,6 @@ inline void* BSShaderProperty::ShaderPassEntry::operator new(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
-void __cdecl operator delete(void*);
 class NiGeometry;
 class ShadowSceneLight;
 

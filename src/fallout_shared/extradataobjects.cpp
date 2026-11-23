@@ -4005,7 +4005,6 @@ struct FUN_00432da0_object
     void FreeAndClear();
     void* FUN_00432da0(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 // Calls FreeAndClear, then deletes this object when flags has bit 0 set, and returns this.
 // @fnv 0x00432da0
 // pdb: RagDollData::`scalar deleting destructor' | ExtraDataObjects.obj | debug, object-file gap fill, medium
@@ -4095,7 +4094,6 @@ FUN_00433ca0::FUN_00433ca0() : BSExtraData(0x57), kList()
 struct FUN_00433d10_shell
 {
     void FUN_00433d40();
-    void operator delete(void*);
     FUN_00433d10_shell* FUN_00433d10(unsigned int flags);
 };
 
@@ -5631,7 +5629,6 @@ FUN_0081dd00::FUN_0081dd00(OwnerForm* owner, int arg2, int arg3, int arg4, NiPoi
 struct ContNode;
 bool __fastcall FUN_008256d0(ContNode*);
 void* __fastcall FUN_006815c0(void*);
-void __cdecl operator delete(void*);
 // Exe 0x00433750: unit-local ListNode view; declarations and layout are preserved.
 struct ExtradataobjectsListNodeView
 {

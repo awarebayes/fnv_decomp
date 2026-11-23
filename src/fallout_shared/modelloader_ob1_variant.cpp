@@ -920,7 +920,6 @@ struct FUN_00a5d3a0 : RefY
 };
 struct Z : FUN_00a5d3a0
 {
-    void* operator new(size_t n);
     void* m8;
     Z(void* p)
     {
@@ -2130,7 +2129,6 @@ bool C3B270_Owner::BSStream_SaveStream()
 }
 
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
-void __cdecl operator delete(void*);
 struct Aade20SecureCopy
 {
 };

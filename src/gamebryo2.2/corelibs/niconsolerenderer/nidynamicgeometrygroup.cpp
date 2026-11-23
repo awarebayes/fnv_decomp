@@ -108,7 +108,6 @@ void* __fastcall DestroySetArray(DynamicSetArray* array, void*, unsigned int aui
     return array;
 }
 
-void __cdecl operator delete(void*, size_t);
 // Destroys the group, frees it when bit 0 of uiFlags is set, and returns its address.
 // @fnv 0x00e95b40
 void* __fastcall DestroyIfFlagged(NiDynamicGeometryGroup* group, void*, unsigned int uiFlags)

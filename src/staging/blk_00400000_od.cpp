@@ -411,7 +411,6 @@ void* __thiscall FUN_00405370_Class::FUN_004053a0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 void FUN_00405310();
 struct FUN_004053d0_class
 {

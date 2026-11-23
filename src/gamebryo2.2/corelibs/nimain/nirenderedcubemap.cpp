@@ -32,7 +32,6 @@ void* __cdecl NiRenderedCubeMap_GetRTTI()
     return &NiRenderedCubeMap_ms_RTTI;
 }
 
-void __cdecl operator delete(void* p, size_t size);
 
 // @fnv 0x00ee8440
 void* __fastcall FUN_00ee8440(NiRenderedCubeMap* cubeMap, void*, unsigned int flags)

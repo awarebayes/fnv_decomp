@@ -34,7 +34,7 @@ public:
     void SetVtableAndProcessState_0043d8f0();
     void* FUN_0043d8c0(unsigned int flags);
 
-    unsigned char padding[0x48 - sizeof(QueuedModel)];
+    unsigned char padding[((0x48) > sizeof(QueuedModel)) ? ((0x48) - sizeof(QueuedModel)) : 1];
     TESObjectREFR* pRef;
     TESObjectTREE* pTree;
 };

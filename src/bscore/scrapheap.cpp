@@ -375,7 +375,6 @@ struct FUN_00aa5860
     {
         return g_memoryManager.Allocate(uiSize);
     }
-    void operator delete(void*);
 };
 
 extern FUN_00aa5860* DAT_011f63b4;

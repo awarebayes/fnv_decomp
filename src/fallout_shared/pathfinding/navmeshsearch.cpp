@@ -463,7 +463,6 @@ void FUN_006a8490_class::UnlinkNode(FUN_006a8490_node* pNode)
 
 struct A83A0ScrapHeap;
 
-void* operator new(size_t uiSize, A83A0ScrapHeap* pkHeap);
 
 struct A83A0Node
 {

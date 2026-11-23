@@ -715,7 +715,6 @@ Iterator470& Iterator470::ProcessEntries_00b0eb30()
     return *this;
 }
 
-void __cdecl operator delete(void*);
 void FUN_00ec7c56();
 struct FUN_00b10e90;
 struct TreeEntry
@@ -1219,7 +1218,6 @@ void FUN_00b0dc10_Vector::ClearAllElements()
 struct DceAux;
 
 DceAux* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, DceAux* hint);
-void __cdecl operator delete(void* p);
 
 inline void* __cdecl operator new(size_t, void* where) throw()
 {
@@ -1983,8 +1981,6 @@ ItQ_ab9bc0 VecQ_ab9bc0::ProcessAndReturnValue_00b0e880(CItQ_ab9bc0 _Where, const
 }
 }  // namespace fnv_00b0e880
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 namespace std {
 class exception
 {
@@ -2704,13 +2700,10 @@ template <class T> inline T* __cdecl AllocateChecked(unsigned int _Count, T*)
 }
 
 namespace fnv_00b0f410 {
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
-void __cdecl operator delete(void*, void*);
 void allocationError();
 void lengthError();
 namespace std {
@@ -4566,7 +4559,6 @@ struct BadAllocB160 : ExceptionB160
     inline virtual ~BadAllocB160() throw()
     {}
 };
-void* __cdecl operator new(size_t);
 // src: GUESS 0x00b16b00 (confidence: medium)
 inline unsigned int* __cdecl Object_AllocateElementStorage_00b16b00(unsigned int _Count, unsigned int)
 {
@@ -7964,7 +7956,6 @@ void __cdecl Runtime_ProcessEntries_00b17d10(NodeD10** _First, int _Hole, int _T
 
 namespace fnv_00b17db0 {
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, int hint);
-void __cdecl operator delete(void*);
 inline void* __cdecl operator new(size_t, void* place)
 {
     return place;
@@ -14338,13 +14329,10 @@ bool FUN_00b00bc0_cls::BSTaskletManager_CloseTaskGroup(void** aGroup)
 }
 
 namespace fnv_00b0e730 {
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
-void __cdecl operator delete(void*, void*);
 void allocationError();
 void lengthError();
 namespace std {

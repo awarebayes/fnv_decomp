@@ -103,7 +103,6 @@ struct S_00e7ec00
 };
 extern void(__stdcall* DAT_00fdf05c)(void*);
 extern void(__stdcall* DAT_00fdf100)(void*);
-void __cdecl operator delete(void* pv, int iSize);
 void __cdecl NiMemObject_ReleaseStorage_00aa1490(void* pv, unsigned int uiSize);
 
 extern "C" void* __cdecl FUN_00aa1420(unsigned int size);

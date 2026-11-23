@@ -27,7 +27,6 @@ int CombatProcedureSearch::GetType()
     return SEARCH;
 }
 
-void __cdecl operator delete(void*);
 
 // Calls FUN_009d8c40, frees this with operator delete when flags has bit 0 set, and returns this.
 // @fnv 0x009d8c10

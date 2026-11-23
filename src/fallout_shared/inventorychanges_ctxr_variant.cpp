@@ -737,7 +737,6 @@ struct FUN_004c0cd0_Arg
     int val;
 };
 void __fastcall SetField1F0(FUN_004c0cd0_This* pThis, FUN_004c0cd0_Arg arg);
-void* __cdecl operator new(size_t);
 void __fastcall InventoryChanges_ResetCachedWeights(InventoryChanges*);
 struct QEntry1
 {
@@ -1074,7 +1073,6 @@ struct Placement
 {
     PlacedRef* InventoryChanges_DropItemIntoWorld(PlacedRef*, void*, int, int, NiPoint3*, NiPoint3*);
 };
-void* __cdecl operator new(size_t);
 struct Weapon;
 struct Extra;
 struct Item;
@@ -1582,7 +1580,6 @@ struct Target
 unsigned int __cdecl FUN_004873d0(Weapon*);
 float __cdecl ComputeWeaponDamage(ActorStand*, Weapon*, float, int, InventoryStackRecord*, InventoryStackRecord*);
 float __cdecl ScaleByGameSetting(float, int, int);
-void* __cdecl operator new(size_t);
 struct ContainerView
 {
     unsigned int TESContainer_GetFilteredList();
@@ -2764,8 +2761,6 @@ struct W20Inventory
     void InventoryChanges_AddItem(W20Form*, int, int);
     void InventoryChanges_AddItem_0(W20Ref*, int, int, bool);
 };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 void FNV_Warning(const char*, ...);
 int FUN_004873d0(W20Form*);
 unsigned int FUN_0042f5a0(unsigned int, unsigned int);
@@ -5514,7 +5509,6 @@ struct InvHost
     void PlayerCharacter_AddRockItAmmo(void* apObj, InvExtra* apExtra, int aiNumAdded);
 };
 extern const char g_inventoryChangesSourceFilename[];
-void* operator new(size_t);
 struct Transfer4c37C37Form
 {
     virtual void Pad48_0();

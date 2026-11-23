@@ -10,8 +10,6 @@ struct P;
 struct Proc;
 struct Target;
 struct Loc;
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct P : TESPackage
 {
     int GetPackType();

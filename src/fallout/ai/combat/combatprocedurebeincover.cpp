@@ -50,7 +50,6 @@ int CombatProcedureBeInCover::GetType()
     return 7;
 }
 
-void __cdecl operator delete(void*);
 
 extern "C" float __cdecl RandomFloat(float, float);
 

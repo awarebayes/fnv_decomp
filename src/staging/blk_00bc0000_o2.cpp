@@ -379,7 +379,6 @@ void __cdecl BoltShader_ClearSegmentIndexArray()
     DAT_01201f4c = 0;
 }
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00bc1fa0_class
 {
@@ -419,7 +418,6 @@ void __cdecl Object_UpdateFields_00bc2960()
 
 extern int DAT_010ba730;
 void __cdecl FUN_00c5faa0();
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bc2c20_class
 {
@@ -525,7 +523,6 @@ void __thiscall FUN_00bc4980_class::ParticleShader_SetCurrentPass(void* p, char 
 
 void __cdecl FUN_00bc5320();
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00bc5980_cls
 {
@@ -562,7 +559,6 @@ void* __thiscall FUN_00bd0440_class::FUN_00bd0440(int aiFlags)
 }
 
 void __cdecl FUN_00bd2c40();
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bd2fd0_class
 {
     void* __thiscall SpeedTreeFrondShader_ScalarDtor(int flags);
@@ -583,7 +579,6 @@ struct FUN_00bd4570_t
     void __thiscall FUN_00bd4570();
 };
 
-void __cdecl operator delete(void* p, size_t n);
 
 struct FUN_00bd4d00_class
 {
@@ -623,7 +618,6 @@ int FUN_00bd6ab0_Class::ImageSpaceEffectDepthOfField_IsActive()
 }
 
 void __cdecl FUN_00bd74a0();
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bd8480_Class
 {

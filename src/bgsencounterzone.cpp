@@ -44,7 +44,6 @@ void BGSEncounterZone::ResetFormData()
 
 #include <malloc.h>
 #include "../include/ExtraDataList.h"
-void* __cdecl operator new(size_t);
 extern TESDataHandler* g_dataHandler;
 int __cdecl Warning(const char*, ...);
 

@@ -1052,7 +1052,6 @@ bool AudioMarkerData::Load(TESFile* apFile)
     return true;
 }
 
-void* __cdecl operator new(size_t size);
 void __cdecl _fnv_zlib_memset(void* dst, int val, unsigned int count);
 // pdb: class ContainerItemExtra, size 0xc (here 0x10), 5 members
 struct ContainerItemExtra

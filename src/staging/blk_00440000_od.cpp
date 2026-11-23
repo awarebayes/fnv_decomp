@@ -1512,7 +1512,6 @@ void* __thiscall FUN_0044ed50_Class::FUN_0044ed50(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_0044f200_Class
 {
     void __thiscall DrainFilteredQueue_0044f200();
@@ -2008,7 +2007,6 @@ struct FUN_0043bb80_shell
 {
     void LoadedFile_dtor();
 };
-void __cdecl operator delete(void* p, size_t sz);
 struct FUN_0044b1f0_class
 {
     void* FUN_0044b1f0(unsigned int flags);
@@ -5710,8 +5708,6 @@ struct FUN_0058b770
     int unk24;
     FUN_0058b770();
 };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern FUN_005ffaf0* DAT_011cb6a0;
 extern FUN_0058b770* DAT_011ca700;
 void __cdecl ourMemset(void*, int, unsigned int);

@@ -1971,8 +1971,6 @@ extern float DAT_01016970;
 extern double DAT_01072310, DAT_010356b0, DAT_01021928;
 void* ourMemset(void*, int, unsigned int);
 int FUN_00406d50(char*, unsigned int, const char*);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 // @fnv 0x0075e8c0
 // src: XBOX_RETAIL_PDB 0x0075e8c0
 // pdb: ContainerMenu::SetContainerTitle | ContainerMenu.obj | retail, call graph (shared callers), high

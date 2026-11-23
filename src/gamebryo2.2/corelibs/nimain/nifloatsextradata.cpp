@@ -75,7 +75,6 @@ void __thiscall NiFloatsExtraData::CopyFloatsExtraData(NiFloatsExtraData* pDest,
 
 void __cdecl _NiFreeAlias(void*);
 extern int DAT_0109ec0c;
-void __cdecl operator delete(void*, size_t);
 // Releases the float array, resets the vtable, runs base cleanup, and optionally frees the object when flags has bit 0 set.
 // @fnv 0x00a891d0
 // pdb: NiFloatsExtraData::`scalar deleting destructor' | NiFloatsExtraData.obj | retail, object-file run extension, low

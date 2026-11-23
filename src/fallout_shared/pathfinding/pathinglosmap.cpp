@@ -19,7 +19,6 @@
 // src/fallout_shared/pathfinding/pathinglosmap.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/_fallout3/platforms/common/code/fallout shared/pathfinding/pathinglosmap.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
-extern "C" void __cdecl operator delete(void* p, size_t size);
 
 // Runs the destructor and, when flags has bit 0 set, frees the object with operator delete, then returns this.
 // @fnv 0x006e1440

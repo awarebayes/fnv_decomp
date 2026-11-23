@@ -1358,8 +1358,6 @@ GlobalObject_0087d420* __thiscall GlobalObject_0087d420::FUN_0087d450(unsigned i
     return this;
 }
 
-void* __cdecl operator new(size_t size);
-void __cdecl operator delete(void* p);
 extern BGSSaveLoadManager* DAT_011de134;
 void* __cdecl __memcpy(void* dest, const void* src, unsigned int count);
 struct FUN_008660b0_shell
@@ -2731,7 +2729,6 @@ struct FUN_00866ff0_cls
     FUN_00866ff0_cls();
 };
 
-void* operator new(size_t size) throw();
 
 ScopeGuardCtx::~ScopeGuardCtx()
 {}

@@ -86,8 +86,6 @@ struct ArmorDataEndian
 #include "../include/TESFile.h"
 extern "C" void* __cdecl _alloca(size_t);
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 class TESFileFormVersion
 {
   public:
@@ -598,8 +596,6 @@ void ArmorSerializer::Save()
     ((FUN_004855a0_shell*)this)->FinishFormRecord();
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct ArmorCopy : TESObjectARMO
 {
     void CopyBase(TESForm*);

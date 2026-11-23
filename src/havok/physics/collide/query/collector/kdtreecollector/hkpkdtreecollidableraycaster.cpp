@@ -166,7 +166,6 @@ FUN_00d979f0_cls* FUN_00d979f0_cls::ResetFields() throw()
 
 // Scalar deleting destructor of a small polymorphic Havok helper with an empty destructor.
 
-void __cdecl operator delete(void* pvMem);
 
 class FUN_00d979a0
 {

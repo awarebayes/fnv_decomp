@@ -289,7 +289,7 @@ struct BSFixedString_Local {
 
 struct FUN_00a0c190 : Tile__TileTemplate {
     BSFixedString_Local m_str;
-    char pad[8 - sizeof(BSFixedString_Local)];
+    char pad[((8) > sizeof(BSFixedString_Local)) ? ((8) - sizeof(BSFixedString_Local)) : 1];
     ItemList m_items;
 
     ~FUN_00a0c190();
@@ -1534,8 +1534,6 @@ void TileWork::Tile_ApplyRotationOnChildren() {
 
 inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b) { return a > b ? a : b; }
 void* __cdecl memcpy(void*, const void*, unsigned int);
-void* operator new(size_t size);
-void operator delete(void* memory);
 template <class T> inline BSStringT<T>::BSStringT() { Init(); }
 template <class T> inline void BSStringT<T>::Init() { pString = 0; SetLength(0); SetMaxLength(0); }
 template <class T> inline void BSStringT<T>::SetLength(unsigned int n) { sLen = n <= 65535 ? (unsigned short)n : 65535; }
@@ -1589,7 +1587,6 @@ struct ReuseNode {
     }
 };
 inline void* operator new(size_t size) { return g_mm.Allocate(size); }
-void operator delete(void* memory);
 // @fnv 0x00a0b950
 // src: COMMUNITY 0x00a0b950
 // pdb: Tile::TileTemplate::GetItem | Tile.obj | retail, upstream name already matches, high

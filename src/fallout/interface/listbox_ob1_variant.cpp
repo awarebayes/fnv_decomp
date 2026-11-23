@@ -928,8 +928,6 @@ struct FUN_007a6310_Elem8
     int b;
     FUN_007a6310_Elem8();
 };
-void* __cdecl operator new(size_t size, void* where);
-void __cdecl operator delete(void* p, void* where);
 struct FUN_007a6310_cls
 {
     int unk00;

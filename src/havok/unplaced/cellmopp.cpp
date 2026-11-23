@@ -260,7 +260,6 @@ void CellMopp::Kill()
     }
 }
 
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00ca4da0
 {
     ~FUN_00ca4da0();

@@ -162,7 +162,6 @@ struct FUN_009ae0f0
     void __thiscall hkUnaryActionCinfo_hkUnaryActionCinfo();
     FUN_009ae0f0();
 };
-void* __cdecl operator new(size_t);
 TESForm* GetFormByID(unsigned int);
 ActorCause* ActorCause_GetActorCauseByID(int);
 struct FUN_00825ad0

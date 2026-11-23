@@ -787,7 +787,6 @@ template <typename T> struct S_00d7a010_Array
 struct S_00d7a010_Obj
 {
     virtual ~S_00d7a010_Obj() throw();
-    void operator delete(void* p) throw();
 };
 void __cdecl hkgpConvexHull_createVoronoiFeatures(int a, int b, S_00d7a010_Array<S_00d7a010_Obj*>& out, int c, float f) throw();
 void __cdecl DeleteCollectedObjects(int a, int b, int c, float f);

@@ -7,12 +7,6 @@ class ConvexContactManifold
 public:
     struct AlignedPairData
     {
-        void* __cdecl operator new(std::size_t nbytes);
-        void __cdecl operator delete(void* p);
-        void* __cdecl operator new(std::size_t n, void* p);
-        void* __cdecl operator new[](std::size_t n, void* p);
-        void __cdecl operator delete(void* p, void* place);
-        void __cdecl operator delete[](void* p, void* place);
 
         class CommandArgument;
 

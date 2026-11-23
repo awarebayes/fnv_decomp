@@ -218,9 +218,6 @@ class TESNPCFileAccess : public TESFileFormVersion
 
 extern "C" void* __cdecl _alloca(size_t);
 extern "C" void* __cdecl memset(void*, int, size_t);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
-void __cdecl operator delete[](void*);
 template <int N> struct EndianSizeTag
 {
 };

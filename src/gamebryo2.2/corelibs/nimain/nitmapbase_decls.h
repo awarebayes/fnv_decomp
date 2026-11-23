@@ -63,7 +63,6 @@ struct FUN_004701d0_TESFormLargeArray
     FUN_004701d0_TESFormLargeArray(unsigned int size, unsigned int flags);
     void NiTLargeArray_TESForm_NiTMallocInterface_TESForm_NiTLargeArray(unsigned int size, unsigned int flags);
 };
-void operator delete(void* pointer);
 
 const char* PrepareScriptMessage(const char*, bool);
 

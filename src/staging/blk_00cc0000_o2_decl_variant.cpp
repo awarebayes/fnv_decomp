@@ -120,13 +120,11 @@ struct FUN_00cc1ab0_class
     void __thiscall DestroyAndFreeAlias();
 };
 void __cdecl FUN_00cc1e40();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00cc1f60_Class
 {
     void* __thiscall FUN_00cc1f60(bool flag);
 };
 void __cdecl FUN_00cc2ac0();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00cc2b40_class
 {
     FUN_00cc2b40_class* __thiscall FUN_00cc2b40(int flag);
@@ -148,7 +146,6 @@ struct FUN_00cc8920_shell : FUN_009ba5f0_shell
     FUN_00cc8920_shell* FUN_00cc8920(int a);
 };
 void __cdecl FUN_00cc8ce0();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00cc8da0_Class
 {
     FUN_00cc8da0_Class* FUN_00cc8da0(bool b);
@@ -165,14 +162,12 @@ struct FUN_00ccc420_class
 {
     void* __thiscall FUN_00ccc420(int);
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00ccc720_holder
 {
     void FUN_00ccc720();
     void* __thiscall DestroyHolder(int arg);
 };
 void FUN_00ccd080();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00ccd150_cls
 {
     FUN_00ccd150_cls* __thiscall FUN_00ccd150(int flags);
@@ -1421,7 +1416,6 @@ class SpawnedObject_t
     unsigned int m_10;
     unsigned int m_14;
 
-    void* operator new(size_t size);
     SpawnedObject_t();
 };
 struct FUN_00cc2480_cls

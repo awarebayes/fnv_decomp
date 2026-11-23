@@ -13,6 +13,4 @@ class StartMenuInterfaceQuery
     };
     static bool GetSelectedTargetIndex(enumMenus);
 };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 #endif

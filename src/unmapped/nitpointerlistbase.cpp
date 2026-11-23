@@ -6,7 +6,6 @@
 #include "../../include/NiTListItem.h"
 #include "../../include/NiTPointerListBase.h"
 
-void __cdecl operator delete(void*);
 
 struct FUN_004edb30_t
 {
@@ -44,7 +43,6 @@ void __thiscall NiPointerListBase::ReleaseStorage_004edc60()
     NiTMallocInterface<void*>::Deallocate((void**)q);
 }
 
-void __cdecl operator delete(void*);
 extern int DAT_010232bc;
 struct FUN_004edf70_t
 {
@@ -68,7 +66,6 @@ void* __thiscall FUN_004edc90_t::NiTPrimitiveArray_enum_BSTextureManager_eTextur
 
 class ActorCombatGroup;
 namespace fnv_004edcc0 {
-void __cdecl operator delete(void*);
 extern int DAT_010232c4;
 struct FUN_004edcc0_t
 {
@@ -264,7 +261,6 @@ FUN_004edbd0::~FUN_004edbd0()
 }
 
 namespace fnv_004edd80 {
-void __cdecl operator delete(void*);
 struct FUN_004edc30_t
 {
     void __thiscall ClearAndFreeMap();
@@ -295,7 +291,6 @@ void* FUN_004eddb0_t::FUN_004eddb0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_004ebb30_shell
 {
     void ForwardCall_004ebb30();
@@ -328,7 +323,6 @@ void* __thiscall FUN_004ebb50_shell::FUN_004ede10(unsigned int flags)
 }
 
 namespace fnv_004ede40 {
-void __cdecl operator delete(void*);
 struct FUN_004ebb50_shell
 {
     void __thiscall InitAndDeallocate_Thunk();

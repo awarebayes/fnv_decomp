@@ -23,8 +23,6 @@
 #include "../../../include/TextEditMenu.h"
 #include "../../../include/SurgeryMenu.h"
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 int __cdecl Warning(const char*, ...);
 class MenuSystem
 {

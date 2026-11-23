@@ -77,8 +77,8 @@ public:
     void vf19();
     void vf20();
 
-    unsigned char m_base[0x780 - sizeof(NiImageConverter)];
+    unsigned char m_base[((0x780) > sizeof(NiImageConverter)) ? ((0x780) - sizeof(NiImageConverter)) : 1];
     PixelDataExpander m_kPixelDataExpander;
-    unsigned char unk781[0x210 - sizeof(PixelDataExpander)];
+    unsigned char unk781[((0x210) > sizeof(PixelDataExpander)) ? ((0x210) - sizeof(PixelDataExpander)) : 1];
     NiTPointerList<NiImageReader*> m_kImageReaderList;
 };

@@ -8688,7 +8688,6 @@ bool ProcessLevelReferenceView::UpdateProcessLevel()
     return bResult;
 }
 
-void* __cdecl operator new(size_t);
 
 
 struct MobileObjectVT
@@ -9126,7 +9125,6 @@ bool FUN_009b1450_Mobile::Explosion_ChangeProcessLevel()
     return bResult;
 }
 
-void* __cdecl operator new(size_t);
 struct ProcessLock
 {
     void __thiscall Lock(const char*);

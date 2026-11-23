@@ -538,7 +538,6 @@ void __thiscall FUN_00cc1ab0_class::DestroyAndFreeAlias()
 
 void __cdecl FUN_00cc1e40();
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00cc1f60_Class {
     void* __thiscall FUN_00cc1f60(bool flag);
@@ -555,7 +554,6 @@ void* __thiscall FUN_00cc1f60_Class::FUN_00cc1f60(bool flag)
 }
 
 void __cdecl FUN_00cc2ac0();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00cc2b40_class {
     FUN_00cc2b40_class* __thiscall FUN_00cc2b40(int flag);
 };
@@ -613,7 +611,6 @@ FUN_00cc5110_Class* FUN_00cc5110_Class::FUN_00cc5110(int flags)
 }  // namespace fnv_00cc5110
 
 namespace fnv_00cc74e0 {
-extern "C" void __cdecl operator delete(void*, size_t);
 
 void __cdecl FUN_00cc7450();
 
@@ -674,7 +671,6 @@ FUN_00cc8920_shell* FUN_00cc8920_shell::FUN_00cc8920(int a)
 namespace fnv_00cc8d80 {
 void FUN_00d53220();
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00cc8d80_class {
     FUN_00cc8d80_class* __thiscall FUN_00cc8d80(int);
@@ -692,7 +688,6 @@ FUN_00cc8d80_class* __thiscall FUN_00cc8d80_class::FUN_00cc8d80(int arg)
 }  // namespace fnv_00cc8d80
 
 void __cdecl FUN_00cc8ce0();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00cc8da0_Class {
     FUN_00cc8da0_Class* FUN_00cc8da0(bool b);
 };
@@ -743,7 +738,6 @@ void* __thiscall FUN_00ccc420_class::FUN_00ccc420(int aiFlags)
     return this;
 }
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00ccc720_holder {
     void FUN_00ccc720();
@@ -765,7 +759,6 @@ void* __thiscall FUN_00ccc720_holder::DestroyHolder(int aiFlags)
 
 void FUN_00ccd080();
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00ccd150_cls {
     FUN_00ccd150_cls* __thiscall FUN_00ccd150(int flags);
@@ -2946,7 +2939,6 @@ public:
     unsigned int m_10;
     unsigned int m_14;
 
-    void* operator new(size_t size);
     SpawnedObject_t();
 };
 

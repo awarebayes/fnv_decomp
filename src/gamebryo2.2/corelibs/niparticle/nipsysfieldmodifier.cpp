@@ -16,7 +16,6 @@ char const* const* __cdecl NiPSysFieldModifier_GetRTTI()
     return &g_01202688_arg1;
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 // Calls FUN_00c31750, then deletes this with size 48 if flags has bit 0 set, and returns this.
 // @fnv 0x00c32100

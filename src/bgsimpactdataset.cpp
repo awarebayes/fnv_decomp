@@ -40,7 +40,6 @@ void BGSImpactDataSet::ResetFormData()
 }
 
 #include <malloc.h>
-void* __cdecl operator new(size_t);
 extern TESDataHandler* g_dataHandler;
 int __cdecl Warning(const char*, ...);
 // pdb: class ModelLoader, size 0x30 (here 0x1), 12 members
@@ -482,7 +481,6 @@ bool FUN_0058f5c0_shell::ImpactSwap_Compare(ImpactSwap* apSwap)
     return false;
 }
 
-void __cdecl operator delete(void*);
 
 struct SomeClass
 {

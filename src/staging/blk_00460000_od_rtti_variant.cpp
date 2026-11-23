@@ -969,7 +969,6 @@ struct SpawnedItem_b10003
         return FormHeap_Allocate(size);
     }
 };
-void* __cdecl operator new(size_t size);
 struct FUN_0048a3d0;
 typedef void(__thiscall* CopyMethod)(FUN_0048a3d0*, const FUN_0048a3d0*);
 typedef void*(__thiscall* ReleaseMethod)(FUN_0048a3d0*, int);

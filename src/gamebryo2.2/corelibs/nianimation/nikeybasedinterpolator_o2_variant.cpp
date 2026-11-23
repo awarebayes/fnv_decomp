@@ -22,7 +22,6 @@ NiKeyBasedInterpolator::NiKeyBasedInterpolator() throw()
 {
 }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 extern "C" void* DAT_01097054;
 
 // @fnv 0x00a3ca50

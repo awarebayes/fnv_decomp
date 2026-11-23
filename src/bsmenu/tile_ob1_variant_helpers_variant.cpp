@@ -115,7 +115,7 @@ class Tile__TileTemplateItem;
 typedef NiTPointerListBase<NiTPointerAllocator<unsigned int>, Tile__TileTemplateItem*> ItemList;
 struct FUN_00a0c190 : Tile__TileTemplate {
     NiFixedString m_str;
-    char pad[8 - sizeof(NiFixedString)];
+    char pad[((8) > sizeof(NiFixedString)) ? ((8) - sizeof(NiFixedString)) : 1];
     ItemList m_items;
 
     ~FUN_00a0c190();
@@ -632,8 +632,6 @@ struct TileWork {
 unsigned int BSStringLength(const char*);
 inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b) { return a > b ? a : b; }
 void* __cdecl memcpy(void*, const void*, unsigned int);
-void* operator new(size_t size);
-void operator delete(void* memory);
 struct ReuseNode {
     int trait;
     float value;
@@ -656,7 +654,6 @@ struct ReuseNode {
     }
 };
 inline void* operator new(size_t size) { return g_mm.Allocate(size); }
-void operator delete(void* memory);
 ReuseNode* Tile_TileTemplate_GetItem(int aiCmd, float afVal, const char* apStr, int aiTA, int aiLine);
 struct Sub_00a0c020 {
     int unk00;
@@ -1260,7 +1257,6 @@ struct S_00a04150_Class {
 
 #include <math.h>
 namespace fnv_00a09410 {
-void* __cdecl operator new(size_t,void*);
 int __cdecl FUN_00ec6da0(const char*, const char*);
 unsigned int __cdecl strlen(const char*);
 int __cdecl strcpy_s(char*, unsigned int, const char*);

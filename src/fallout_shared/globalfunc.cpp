@@ -100,8 +100,6 @@ inline NiPoint3 operator*(float scalar, const NiPoint3& point)
 
 class BSShaderPPLightingProperty;
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 class BipedNodeNames
 {
@@ -3037,7 +3035,6 @@ NiPoint3* CreateElementArray(NiGeometry*);
 bool FloatEQ(float, float, float);
 NiPoint3 FUN_004a3760(float, const NiPoint3&);
 extern NiGeometry* DAT_011c6320;
-void __cdecl operator delete(void*);
 // @fnv 0x004b3e60
 // src: XBOX_DEBUG_PDB 0x004b3e60
 // pdb: FixNormals | GlobalFunc.obj | debug, call graph, high

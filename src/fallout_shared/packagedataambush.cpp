@@ -51,7 +51,6 @@ TESAmbushPackageData::~TESAmbushPackageData()
 
 extern int DAT_0119bdec;
 extern int DAT_0119bdc8;
-void* __cdecl operator new(size_t size);
 struct PackageRecord
 {
     int unk00;

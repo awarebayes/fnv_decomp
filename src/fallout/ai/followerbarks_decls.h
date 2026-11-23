@@ -3,7 +3,6 @@
 #define FOLLOWERBARKS_DECLS_H
 
 unsigned int gm_GetTickCount();
-void __cdecl operator delete(void*);
 template <> void BSSimpleList<const char*>::RemoveHead();
 class GlobalObject2_0096a2d0
 {

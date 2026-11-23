@@ -230,8 +230,6 @@ extern TESObjectSTAT* DAT_011ca264;
 extern TESObjectSTAT* DAT_011ca228;
 extern TESObjectSTAT* DAT_011ca22c;
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 class SceneObjectLookup
 {
   public:

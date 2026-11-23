@@ -35,7 +35,6 @@ typedef NiTPointerMap<unsigned int, NiDX9VertexBufferManager::NiDX9VBInfo*> Vert
 struct FUN_00e891f0_Class {
     void __thiscall NiD3DTextureStageGroup_RemoveAllStageStates();
 };
-extern "C" void __cdecl operator delete(void* p, size_t size);
 extern int DAT_010efc34;
 void __cdecl FUN_00e68830();
 struct FUN_00e8aa40_Class {
@@ -98,7 +97,6 @@ void __cdecl NiFree(void*);
 struct FUN_00e941d0_Node { unsigned int pad[9]; unsigned int count; unsigned int pad2[5]; FUN_00e941d0_Node* next; FUN_00e941d0_Node* prev; };
 struct FUN_00e941d0_This { int pad[11]; FUN_00e941d0_Node* head; };
 FUN_00e941d0_Node* __fastcall RemoveFirstNodeAtLeast(FUN_00e941d0_This* self, int, unsigned int value);
-extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e98610_Node {
     void* m_next;
     void* m_auiShapeKeys;
@@ -184,7 +182,6 @@ extern int DAT_010efe54;
 extern int DAT_010efe74;
 extern MemoryManager _g_memoryManager;
 void __cdecl _NiFree(void*);
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00e8f800_Class {
     void* m_vptr;
     char m_auiShapeKeys[4];
@@ -300,7 +297,6 @@ struct FUN_00e96c90_Class {
     void __thiscall FUN_00e89970();
     void __thiscall UpdateState_00e96c90();
 };
-extern "C" void __cdecl operator delete(void* p, size_t size);
 void __cdecl FUN_00e989c0();
 extern int DAT_010f1550;
 struct FUN_00e97870_Class {
@@ -2429,7 +2425,6 @@ struct FUN_00e940a0_Class {
     void* m_00;
     void __thiscall ReleaseGlobalSlot();
 };
-extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e94150_Node {
     int m_00;
     int m_04;

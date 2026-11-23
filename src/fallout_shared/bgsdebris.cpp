@@ -260,7 +260,6 @@ struct FUN_004fa670_shell : public DebrisModelEntry
     void BGSDebrisData_SetFileName(char*);
 };
 
-void* __cdecl operator new(size_t);
 template <class T> unsigned int __cdecl BSStringLength(T const*);
 
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members

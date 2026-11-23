@@ -18,7 +18,6 @@ void BGSHungerStage::ClearData()
 
 extern "C" unsigned int gHungerStageCount;
 extern "C" BGSHungerStage** gHungerStages;
-void __cdecl operator delete(void*);
 
 struct RemoveStageLocals
 {
@@ -234,7 +233,6 @@ void* BGSHungerStage::FUN_00401a90(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 void* __cdecl memcpy(void* dest, const void* src, unsigned int size);
 // @fnv 0x00401bf0
 // pdb: BGSHungerStage::Copy | BGSHunger.obj | retail, vtable slot, high

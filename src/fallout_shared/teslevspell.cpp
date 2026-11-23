@@ -181,7 +181,6 @@ struct FUN_0096a2d0
     FUN_0096a2d0();
     void FUN_005ae3d0(SpellItem*&);
 };
-void* operator new(size_t);
 // Adapter for the list-building member missing from TESLevSpell.h.
 struct SpellListBuilder
 {

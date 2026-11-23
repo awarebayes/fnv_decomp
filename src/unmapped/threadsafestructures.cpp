@@ -171,7 +171,6 @@ FUN_0044c760_class::FUN_0044c760_class(unsigned int aiMaxThreads, unsigned int a
     m_pManager = new ThreadInterfaceManager<LockFreeQueue<bhkRigidBody*>::QueueDeleteManagerTag>(aiMaxThreads);
 }
 
-void* __cdecl operator new(size_t);
 
 struct FUN_006ec660 : InterfacedClass
 {

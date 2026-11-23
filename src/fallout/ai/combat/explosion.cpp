@@ -405,7 +405,6 @@ FUN_009ae0f0::FUN_009ae0f0()
     m14 = 15.0f;
 }
 
-void* __cdecl operator new(size_t);
 // TESObjectWEAP.h forward-declares enum SOUND_LEVEL, which conflicts with
 // the SOUND_LEVEL typedef imported by BaseProcess.h.
 TESForm* GetFormByID(unsigned int);

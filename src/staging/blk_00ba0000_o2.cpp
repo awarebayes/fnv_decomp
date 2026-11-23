@@ -174,7 +174,6 @@ public:
 #include "../../include/Vec4.h"
 #include "../../include/ImageSpaceEffectParam.h"
 
-void __cdecl operator delete(void*);
 
 // Bodies kept here so shared declarations retain the original inlining.
 inline NiAlphaProperty::NiAlphaProperty() : NiProperty()
@@ -393,8 +392,6 @@ void* __thiscall FUN_00ba4920_Class::FUN_00ba4920(int a)
 }  // namespace fnv_00ba4920
 
 void __cdecl FUN_00ba7df0();
-void __cdecl operator delete(void*);
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00ba8270_Class
 {
@@ -493,7 +490,6 @@ char __thiscall FUN_00bae780_Class::SkyShaderProperty_SetupGeometry(NiAVObject* 
 }
 
 void __cdecl FUN_00bb0de0();
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bb0ea0_Class
 {
@@ -513,7 +509,6 @@ void* __thiscall FUN_00bb0ea0_Class::FUN_00bb0ea0(bool abDelete)
 
 namespace fnv_00bb3140 {
 extern int DAT_010b9338;
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bb3140_Class
 {
     int m_vtbl;
@@ -628,7 +623,6 @@ void* __thiscall FUN_00bb3710_Class::SpeedTreeShaderLightingProperty_SetData(voi
 }
 
 void __cdecl FUN_00bb35b0();
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bb38e0_Class
 {
@@ -701,7 +695,6 @@ void* __thiscall FUN_00bb4650_Class::FUN_00bb4650(unsigned char flags)
 }
 
 void __cdecl FUN_00bb7d70();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00bb7f60_Class
 {
     void __thiscall FUN_00bb7d70();

@@ -2123,7 +2123,6 @@ void TemporarySceneGraph::AttachTemporaryNode(NiAVObject* apObject, float afTime
         pTempNode->UpdateSceneObject();
     }
 }
-void* __cdecl operator new(size_t);
 
 struct G2
 {

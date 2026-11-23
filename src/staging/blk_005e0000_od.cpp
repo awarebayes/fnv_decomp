@@ -312,7 +312,6 @@ BSSimpleArray<FootIK_DATA__FootIK_Leg_DATA, 1024>::~BSSimpleArray()
     Clear(true);
 }
 
-void* __cdecl operator new(size_t);
 
 // @fnv 0x005ef150
 // pdb: BSSimpleArray<FootIK_DATA::FootIK_Leg_DATA,1024>::_Allocate | BGSRagdoll.obj | debug, vtable slot, medium
@@ -793,7 +792,6 @@ struct FUN_005e03a0_Class
 {
     void __thiscall NiTArray_TESTexture_NiTMallocInterface_TESTexture_dtor();
 };
-void __cdecl operator delete(void*);
 struct FUN_005e06e0_Class
 {
     void* __thiscall FUN_005e06e0(unsigned int flags);
@@ -847,7 +845,6 @@ void* __thiscall FUN_005e0740_class::FUN_005e0740(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_005dd7f0_class
 {
     void NiTPrimitiveArray_char_const_dtor();
@@ -884,7 +881,6 @@ _Mem_20a4* __thiscall _Mem_20a4::FUN_005e07a0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 
 struct FUN_005e0590_shell
 {
@@ -1050,12 +1046,10 @@ GlobalObject_00869f00* __thiscall GlobalObject_00869f00_Deleting::FUN_005ef590(u
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_005ef1d0_class
 {
     void __thiscall FUN_005ef1d0();
 };
-void __cdecl operator delete(void*);
 
 struct FUN_005ef5f0_class
 {
@@ -1072,7 +1066,6 @@ void* __thiscall FUN_005ef5f0_class::FUN_005ef5f0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 
 // The virtual destructor emits the scalar deleting destructor at 0x005ef620.
 
@@ -2466,8 +2459,6 @@ void FUN_005efa80_cls::BSSimpleArray_PathingLocation_1024_ReallocateBuffer(void*
     }
 }
 
-void* operator new(size_t uiSize, void* pvMem);
-void operator delete(void* pvMem, void* pvPlace);
 
 struct EFBC0Item
 {
@@ -3708,7 +3699,6 @@ bool Target005ed1e0::BGSRagdoll_GrabIK_Compare(Target005ed1e0* arData)
     return different;
 }
 
-void* __cdecl operator new(size_t, void*);
 
 struct SpawnItem : FUN_005ef7f0_Data
 {
@@ -3737,8 +3727,6 @@ void BSSimpleArray<FootIK_DATA__FootIK_Leg_DATA, 1024>::InitializeItems(FootIK_D
     }
 }
 
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct E5EF9A0Entry
 {
@@ -4789,7 +4777,6 @@ void SoundConversionFields::SwapMemberByteOrder()
     BSEndian_00407a90(&m_0A, InitTag5E35());
 }
 
-void __cdecl operator delete(void*);
 struct DeletingObject
 {
     void FUN_005e4bc0();
@@ -5268,7 +5255,6 @@ bool SoundRecordOperations::Compare(TESForm* apCompare)
     return false;
 }
 
-void* __cdecl operator new(size_t);
 
 struct FUN_005e63f0 : s5e63f0::Derived
 {

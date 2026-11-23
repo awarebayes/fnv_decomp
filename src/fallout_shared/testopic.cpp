@@ -274,7 +274,6 @@ struct FUN_006195d0_shell : public TESTopic
     QuestDialogueInfo* GetOrCreateQuestInfo(TESQuest*, bool);
 };
 
-void* __cdecl operator new(size_t);
 QuestDialogueInfo* __fastcall FUN_00619740(void*);
 
 struct QuestInfoStub : public QuestDialogueInfo

@@ -98,7 +98,6 @@ struct FUN_00cb0a80_class
 char ToUpperAscii(char c);
 char ToLowerAscii(char param_1);
 void __cdecl FUN_00cc9640();
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00cb9b60_class
 {
     FUN_00cb9b60_class* DestroyIfFlagged(int flag);

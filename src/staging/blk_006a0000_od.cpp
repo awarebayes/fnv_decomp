@@ -1529,7 +1529,6 @@ FUN_006a8700_Class* FUN_006a8700_Class::AStarNode_AStarNode()
     return this;
 }
 
-void* __cdecl operator new(size_t, void*);
 struct FUN_006a8a30_class
 {
     void __thiscall BSSimpleArray_WeaponData_1024_ConstructItems(int base, unsigned int count);
@@ -4132,8 +4131,6 @@ struct PendingItem
     int m_iWordAt00;
     int m_iWordAt04;
     PendingItem();
-    void* operator new(size_t size, void* where);
-    void operator delete(void* p, void* where);
 };
 
 PendingItem::PendingItem()
@@ -4192,7 +4189,6 @@ FUN_006a2500_cls::FUN_006a2500_cls()
     BSSimpleArray_float_1024_InitialSetup(0, 0);
 }
 
-void __cdecl operator delete(void*, void*);
 
 struct S_006a26d0_Item
 {
@@ -4818,8 +4814,6 @@ unsigned int FUN_006b3fd0_cls::UpdateState_006b3fd0()
     return m_08 - 1;
 }
 
-void* operator new(size_t uiSize, void* pvWhere);
-void operator delete(void* pvMem, void* pvWhere);
 
 class C6B40F0Element
 {
@@ -8083,7 +8077,6 @@ struct FUN_006bf4d0_cls
     void* CreateObject(void* a1, void* a2, int a3);
 };
 
-void operator delete(void*, void*);
 
 // Allocates 0x30 bytes from m_0c and placement-constructs a FUN_006bf4d0_obj with a1, a2, a3, returning the new object.
 // @fnv 0x006bf4d0
@@ -8325,7 +8318,6 @@ void FUN_006a1720_class::ResizeElementStorage(unsigned int requested, bool shrin
     }
 }
 
-void* __cdecl operator new(size_t size, void* placement);
 struct FUN_006a14b0
 {
     unsigned int unk00;
@@ -12066,8 +12058,6 @@ void __thiscall FUN_006bf870_class::SetVtableAndProcessState_006bf870()
     reinterpret_cast<BSSimpleArray<SandBoxChoiceListItem>*>(this)->Clear(true);
 }
 
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct B6BFDD0Entry
 {

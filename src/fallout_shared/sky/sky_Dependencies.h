@@ -3,6 +3,4 @@
 #define FNV_FALLOUT_SHARED_SKY_SKY_DEPENDENCIES_H
 #include "../../../include/layout_support.h"
 #include "../../../include/AutoMemContext.h"
-void* __cdecl operator new(size_t size);
-void __cdecl operator delete(void* pointer);
 #endif

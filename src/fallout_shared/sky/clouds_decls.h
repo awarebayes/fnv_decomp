@@ -26,7 +26,7 @@ class NiTexture;
 class CloudsColorController : public NiTimeController
 {
   public:
-    unsigned char layoutPadding[0x60 - sizeof(NiTimeController)];
+    unsigned char layoutPadding[((0x60) > sizeof(NiTimeController)) ? ((0x60) - sizeof(NiTimeController)) : 1];
     NiColorA color;
 };
 #include "../../../include/SETTING_VALUE.h"

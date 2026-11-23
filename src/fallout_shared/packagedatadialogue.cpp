@@ -216,7 +216,6 @@ ConstructorHost* ConstructorHost::TESDialoguePackageData_ctor(float initial, uns
     return this;
 }
 
-void* __cdecl operator new(size_t);
 
 TESForm* __cdecl _GetFormByNumericID(unsigned int formID);
 

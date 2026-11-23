@@ -2071,7 +2071,6 @@ void TESNPC::SetField1F0(TESNPC* aValue)
     m_pTemplateNPC = aValue;
 }
 
-void* __cdecl operator new(size_t);
 void __fastcall InventoryChanges_ResetCachedWeights(InventoryChanges*);
 // @fnv 0x004befb0
 // pdb: InventoryChanges::InventoryChanges | InventoryChanges.obj | retail, upstream name already matches, high
@@ -3429,7 +3428,6 @@ PlacedRef* Placement::InventoryChanges_DropItemIntoWorld(PlacedRef* apRef, void*
     return result3;
 }
 
-void* __cdecl operator new(size_t);
 struct Weapon;
 struct Extra;
 struct Item;
@@ -4486,7 +4484,6 @@ FUN_0076b630* Target::SelectBestWeapon(ActorStand* apActorBase, float* afvalue, 
     }
 }
 
-void* __cdecl operator new(size_t);
 struct ContainerView
 {
     unsigned int TESContainer_GetFilteredList();
@@ -7259,8 +7256,6 @@ struct W20Inventory
     void InventoryChanges_AddItem(W20Form*, int, int);
     void InventoryChanges_AddItem_0(W20Ref*, int, int, bool);
 };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 void FNV_Warning(const char*, ...);
 int FUN_004873d0(W20Form*);
 unsigned int FUN_0042f5a0(unsigned int, unsigned int);
@@ -12777,7 +12772,6 @@ void InvHost::PlayerCharacter_AddRockItAmmo(void* apObj, InvExtra* apExtra, int 
 }
 
 extern const char g_inventoryChangesSourceFilename[];
-void* operator new(size_t);
 struct Transfer4c37C37Form
 {
     virtual void Pad48_0();
@@ -18416,7 +18410,6 @@ void SaveInventory::ItemChange_SaveGameTES()
 }
 }  // namespace fnv_004be6f0
 
-void* __cdecl operator new(size_t);
 struct ExtraSetter_bdb40
 {
     void ExtraDataList_SetIsModding(int);

@@ -23,8 +23,6 @@ struct SaveLoadManagerFileOperations : public BGSSaveLoadManager
 };
 extern int DAT_010a2480;
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 void __cdecl ReadSaveFileHeader(void*, void*);
 NiTexture* __cdecl BGSSaveLoadHeader_LoadHeaderScreenshot(SaveLoadHeader*, unsigned int, unsigned int, unsigned int);
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members

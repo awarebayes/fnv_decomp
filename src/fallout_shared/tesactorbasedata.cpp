@@ -61,7 +61,6 @@ void TESActorBaseData::InitializeComponent()
 
 class NiColor;
 
-void __cdecl operator delete(void*);
 bool __fastcall _ref_008256d0(void*);
 void** __fastcall _ref_006815c0(void*);
 void __fastcall _ref_0063f7b0(void*);
@@ -1298,7 +1297,6 @@ class FactionReaction
     char m_ucRank;
 };
 
-void* __cdecl operator new(size_t);
 TESForm* __cdecl TESForm_GetFormByNumericID(unsigned int);
 void __cdecl FNV_Warning(const char*, ...);
 

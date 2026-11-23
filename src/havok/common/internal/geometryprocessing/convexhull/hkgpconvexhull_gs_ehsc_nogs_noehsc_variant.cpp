@@ -841,7 +841,6 @@ struct S_00d7a010_Array {
 };
 struct S_00d7a010_Obj {
     virtual ~S_00d7a010_Obj() throw();
-    void operator delete(void* p) throw();
 };
 void __cdecl hkgpConvexHull_createVoronoiFeatures(int a, int b, S_00d7a010_Array<S_00d7a010_Obj*>& out, int c, float f) throw();
 void __cdecl DeleteCollectedObjects(int a, int b, int c, float f);
@@ -4988,7 +4987,6 @@ struct S00d79ab0_ImplFlags {
 class S00d79ab0_Hull {
 public:
     virtual ~S00d79ab0_Hull();
-    void operator delete(void* p);
     S00d79ab0_Hull* hkgpConvexHull_clone() const;
     int hkgpConvexHull_splitByPlane(const S00d79ab0_Vector4& plane, S00d79ab0_Hull** posOut, S00d79ab0_Hull** negOut, float thickness) const;
     void SetValue(float minCosAngle, bool keepPlanes);

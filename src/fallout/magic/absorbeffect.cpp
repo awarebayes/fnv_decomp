@@ -202,7 +202,6 @@ AbsorbEffect::AbsorbEffect(MagicCaster* apCaster, MagicItem* apSpell, EffectItem
     spSource = 0;
 }
 
-void* __cdecl operator new(size_t size);
 
 // @fnv 0x00802f40
 // pdb: AbsorbEffect::Copy | AbsorbEffect.obj | retail, upstream name already matches, high

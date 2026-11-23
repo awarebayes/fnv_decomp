@@ -17,7 +17,6 @@ struct GROUP_REACTION
     void Endian();
 };
 
-void __cdecl operator delete(void* pointer);
 
 static const int kInitializeDataComponentValue1 = 8;
 
@@ -226,8 +225,6 @@ TESReactionForm::~TESReactionForm()
     ClearComponent();
 }
 
-void __cdecl operator delete(void*);
-void* __cdecl operator new(size_t);
 // @fnv 0x0048ca90
 // pdb: TESReactionForm::InitLoadGame | TESReactionForm.obj | retail, object-file run extension, low
 // pdb note: debug build links it to TESReactionForm::LoadGame

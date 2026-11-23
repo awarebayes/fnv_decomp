@@ -800,7 +800,6 @@ void* __fastcall DeleteRagdollMap(NiTMap<const char*, NiPointer<bhkRagdollShareD
 
 void __stdcall FUN_00c76240();
 
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c7a8b0_class
 {
@@ -1560,7 +1559,6 @@ void __cdecl SetTlsValueAndReset(int apObject, int aeMode)
     tls.value = oldValue;
 }
 
-void __cdecl operator delete(void*, size_t);
 struct FUN_00c6c290_holder
 {
     void FUN_00c6c290();
@@ -1633,7 +1631,6 @@ void* __thiscall FUN_00c6cb70_class::FUN_00c6cb70(int aiFlags)
     return this;
 }
 
-void __cdecl operator delete(void*, size_t);
 struct FUN_00cd2de0
 {
     int m_iWordAt00;
@@ -7230,7 +7227,6 @@ void FUN_00c6cef0_cls::CallTargetWithArgs(int a, int b)
 }
 
 extern void __cdecl FUN_00cabf50();
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c6d010_Class
 {
@@ -7392,7 +7388,6 @@ void* __cdecl bhkListShape_GetRTTI()
     return &g_unk012681a8;
 }
 
-void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c6d320_class
 {

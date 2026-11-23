@@ -41,7 +41,7 @@ class NiPointLight : public NiLight
     bool IsEqual_00a7d730(NiObject* object);
     void UpdateWorldData_00a7d7a0(NiUpdateData& update);
 
-    unsigned char storage[0xfc - sizeof(NiLight)];
+    unsigned char storage[((0xfc) > sizeof(NiLight)) ? ((0xfc) - sizeof(NiLight)) : 1];
 };
 
 typedef char NiPointLight_size_check[1];

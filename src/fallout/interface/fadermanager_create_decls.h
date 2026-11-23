@@ -4,7 +4,6 @@
 #define FADERMANAGER_CREATE_DECLS_H
 
 // Private type and helper declarations used by the two creation routines.
-void* operator new[](size_t);
 void* _NiMalloc(unsigned int);
 int Renderer_GetScreenWidth();
 int Renderer_GetScreenHeight();

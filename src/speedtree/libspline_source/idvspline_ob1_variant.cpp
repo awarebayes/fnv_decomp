@@ -3848,7 +3848,6 @@ NodeX* Tree::ReleaseStorage_00b3b880()
 }
 }  // namespace fnv_00b3b880
 
-void __cdecl operator delete(void*);
 void CopyStringStorage(char*, unsigned int, const char*, unsigned int);
 namespace std {
 template <class T> struct char_traits;
@@ -3928,7 +3927,6 @@ class out_of_range : public logic_error
     {}
 };
 }
-void __cdecl operator delete(void*);
 namespace std {
 template <class A, class B> struct pair
 {
@@ -4410,7 +4408,6 @@ float FUN_00b37ad0_class::CIdvBezierSpline_Evaluate(float fPercent)
 }
 
 namespace fnv_00b397f0 {
-void operator delete(void*);
 
 class GlobalObject_00b3f100
 {
@@ -5317,7 +5314,6 @@ struct SplinePoint
         return (&x)[component];
     }
 };
-void __cdecl operator delete(void*);
 __forceinline void DeallocQ(void* p)
 {
     operator delete(p);

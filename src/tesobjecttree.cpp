@@ -2085,7 +2085,6 @@ struct FUN_0051d2c0_shell
                                         const void* itemSource, const void* idSource);
 };
 
-void* __cdecl operator new(size_t);
 void* __cdecl __memcpy(void* destination, const void* source, unsigned int size);
 extern unsigned int _data_011c16bc;
 

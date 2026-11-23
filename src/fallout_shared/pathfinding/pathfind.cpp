@@ -394,7 +394,6 @@ struct ParentSpaceNode
 };
 typedef char _sizecheck_ParentSpaceNode[1];
 
-void* __cdecl operator new(size_t, void*);
 struct ArrHelper
 {
     void ConstructParentSpaceNodes(ParentSpaceNode* first, unsigned int count);
@@ -9125,8 +9124,6 @@ bool __cdecl BuildOptimalPathSolution(PathingRequestOptimalLocation* request, Pa
 }
 }  // namespace fnv_006d23d0
 
-void* operator new(size_t uiSize, void* pvMem);
-void operator delete(void* pvMem, void* pvPlace);
 
 struct FUN_006a0480
 {

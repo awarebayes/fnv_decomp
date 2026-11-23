@@ -24,7 +24,6 @@ struct FUN_00b42980
     int b;
     FUN_00b42980& Set(unsigned int v, FUN_00b42980 const& src);
 };
-void* operator new(size_t);
 void FUN_00ec7c56();
 struct FUN_00b40800_t
 {
@@ -202,7 +201,6 @@ class FUN_00b420a0_cls
     FUN_00b42980 m_obj;
     int CompareAndGetDelta(FUN_00b42980 const& arg);
 };
-void* operator new(size_t);
 extern char DAT_010176f8[];
 extern char DAT_01140ef8[];
 struct FnvThrowObj
@@ -363,7 +361,6 @@ inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;
 }
-void __cdecl operator delete(void*) throw();
 namespace stl {
 
 struct _Length_error
@@ -1122,7 +1119,6 @@ struct Matcher
     float limit;
     void ProcessEntries_00b41110(stl::vector<MatchNode*> nodes);
 };
-void __cdecl operator delete(void*) throw();
 struct VbAux
 {
     const void* container;
@@ -2129,8 +2125,6 @@ class BoolIteratorB42 : public IteratorBaseAuxB42
     unsigned int* _Myptr;
     unsigned int _Myoff;
 };
-void operator delete(void*) throw();
-void* operator new(size_t);
 inline void operator delete(void*, void*) throw()
 {}
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, void* hint);

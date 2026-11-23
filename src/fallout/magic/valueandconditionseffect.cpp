@@ -66,7 +66,6 @@ void ValueAndConditionsEffect::CopyData(ActiveEffect* apDestination)
         copy->eTargetBodyPart = eTargetBodyPart;
 }
 
-void* __cdecl operator new(size_t size);
 
 // @fnv 0x0082b8f0
 // pdb: ValueAndConditionsEffect::Instantiate | ValueAndConditionsEffect.obj | debug, object-file gap fill, medium

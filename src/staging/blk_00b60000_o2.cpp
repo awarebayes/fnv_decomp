@@ -256,7 +256,6 @@ OwnerMap* __fastcall DestroyOwnerMap(OwnerMap* self, void*, bool dealloc)
 }
 
 void __cdecl FUN_00b60d80(void);
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00b61220_class
 {
@@ -291,7 +290,6 @@ template <> RoomMapBase::~NiTMapBase()
 }
 
 void __cdecl FUN_00b656e0();
-extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b664f0_class
 {
@@ -333,7 +331,6 @@ int __cdecl Object_ComputeValue_00b66760(int a)
 
 void __cdecl FUN_00b6a520();
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b6adb0_class
 {
@@ -351,7 +348,6 @@ void* FUN_00b6adb0_class::FUN_00b6adb0(int flags)
 }
 
 void __cdecl FUN_00b6aef0();
-void __cdecl operator delete(void* p, size_t) throw();
 
 struct FUN_00b6b160_class
 {
@@ -733,7 +729,7 @@ struct _Base_00441d20
 };
 struct FUN_00b606f0_class : _Base_00441d20
 {
-    char _00[0x31 - sizeof(_Base_00441d20)];
+    char _00[((0x31) > sizeof(_Base_00441d20)) ? ((0x31) - sizeof(_Base_00441d20)) : 1];
     BSStream _30;
     ~FUN_00b606f0_class();
 };

@@ -62,7 +62,6 @@ struct FUN_00b319a0_class
     int __thiscall ProcessAndReturnValue_00b319a0(int n);
 };
 unsigned int __cdecl FUN_00ec7c56();
-void __cdecl operator delete(void*);
 struct FUN_00b1ec70_class
 {
     int i0;
@@ -114,7 +113,6 @@ struct FUN_00b1fe80_helper
     void __thiscall FUN_00b22650(int* a, int* b);
     void __thiscall UpdateFields_00b1fe80();
 };
-void __cdecl operator delete(void*);
 struct FUN_00b20c30_class
 {
     void __thiscall FUN_00b20c30(void* a, void* b);
@@ -263,7 +261,6 @@ struct FUN_00ec78f1_t
     void* __thiscall FUN_00ec78f1(int* out);
 };
 void __stdcall FUN_00ec7894(FUN_00ec78f1_t* info, const char* fmt);
-void* __cdecl operator new(size_t);
 extern int DAT_010176f8;
 extern int DAT_01140ef8;
 void* __cdecl Object_AllocateElementStorage_00b23980(unsigned int n);
@@ -763,7 +760,6 @@ Iter* __thiscall Iter::ProcessAndReturnValue_00b235e0(int _Off)
     return this;
 }
 
-void* __cdecl operator new(size_t);
 
 // @fnv 0x00b23b50
 // src: GUESS 0x00b23b50 (confidence: low)
@@ -1335,7 +1331,6 @@ FUN_00b16890_It& FUN_00b16890_It::UpdateState_00b16890(int _Off)
     return *this;
 }
 
-void __cdecl operator delete(void* _Ptr) throw();
 extern int DAT_010173f0;
 namespace dtorb181 {
 void FUN_00ec7c56();
@@ -2899,7 +2894,6 @@ VecQ& VecQ::UpdateState_00b1d130(const VecQ& _Right)
 }
 
 namespace fnv_00b1d8a0 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace vct1d8a0 {
@@ -4105,7 +4099,6 @@ void __thiscall FUN_00b1df10_obj::UpdateState_00b1df10()
 }
 
 namespace fnv_00b1e090 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace ctoraca {
@@ -5432,7 +5425,6 @@ void VcVector::ClearAllElements()
 }
 
 namespace fnv_00b1e3e0 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace vct1e3e0 {
@@ -7701,7 +7693,6 @@ bool BxVector::UpdateState_00b1f590(unsigned int _Capacity)
 }
 
 namespace fnv_00b1f800 {
-void __cdecl operator delete(void*);
 int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 struct EraseSecureTag
 {
@@ -7773,7 +7764,6 @@ struct EraseElement
     }
 };
 unsigned int __cdecl FUN_00ec7c56();
-void __cdecl operator delete(void*);
 EraseElement* __cdecl Frondengine_EvaluateValue_00b23830(EraseElement*, EraseElement*, EraseElement*);
 struct EraseVector;
 struct EraseIteratorBase
@@ -7924,7 +7914,6 @@ EraseIterator EraseVector::ProcessAndReturnValue_00b1f800(EraseConstIterator fir
 }  // namespace fnv_00b1f800
 
 namespace fnv_00b1f9e0 {
-void __cdecl operator delete(void* _Ptr) throw();
 extern int DAT_010173f0;
 namespace tidyb1f9 {
 void FUN_00ec7c56();
@@ -9529,7 +9518,6 @@ void VecQ::InsertFilledElements_00b20360(CItQ _Where, unsigned _Count, const ElQ
 }  // namespace fnv_00b20360
 
 namespace fnv_00b20ba0 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace auxb20b {
@@ -11923,7 +11911,6 @@ FUN_00b23520_It& FUN_00b23520_It::ProcessAndReturnValue_00b23520(int _Off)
 }
 
 namespace fnv_00b23760 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace cpyb237 {
@@ -13392,7 +13379,6 @@ EUMB* __cdecl Frondengine_EvaluateValue_00b23930(EUMB* _First, EUMB* _Last, EUMB
 }  // namespace fnv_00b23930
 
 namespace fnv_00b239e0 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace cbkb239 {
@@ -18683,7 +18669,6 @@ Elem64a0* __cdecl Object_ProcessAndReturnValue_00b264a0(Elem64a0* _First, Elem64
 }  // namespace fnv_00b264a0
 
 namespace fnv_00b26ab0 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace swapb26a {
@@ -19721,7 +19706,6 @@ void __cdecl Frondengine_ProcessEntries_00b26b50(SFrondGuideEntry* first, int ho
 }
 
 namespace fnv_00b26ce0 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace cbkb26c {
@@ -20650,7 +20634,6 @@ ElQ* Frondengine_ProcessEntries_00b26db0(ElQ* first, ElQ* last, ElQ* dest)
 }  // namespace fnv_00b26db0
 
 namespace fnv_00b26e80 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace pushb26e {
@@ -21537,7 +21520,6 @@ void Object_ProcessEntries_00b26e80(GvElem* _First, int _Hole, int _Top, GvElem 
 }  // namespace fnv_00b26e80
 
 namespace fnv_00b26f90 {
-void __cdecl operator delete(void* _Ptr) throw();
 inline void operator delete(void*, void*) throw()
 {}
 namespace popb26f {
@@ -24898,7 +24880,6 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 namespace std {
 class bad_alloc
 {
@@ -26031,7 +26012,6 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 namespace std {
 class bad_alloc
 {
@@ -26906,7 +26886,6 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 namespace std {
 class bad_alloc
 {
@@ -30346,8 +30325,6 @@ FUN_00b22ff0::FUN_00b22ff0(const FUN_00b22ff0& _Right) : VectorOperations(_Right
 namespace FrondComputeCrt {
 extern "C" size_t __cdecl strlen(const char*);
 }
-void __cdecl operator delete(void*);
-void* __cdecl operator new(size_t);
 int* __cdecl GetErrorNumber();
 char* __cdecl GetErrorText(int);
 inline IdvFileError::IdvFileError(const std::string& message, bool systemError)

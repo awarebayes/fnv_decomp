@@ -2931,7 +2931,7 @@ extern ActorDeletionQueue_projectile DAT_011e0e80;
 struct LevelTwoProcess : BaseProcess
 {
     LevelTwoProcess();
-    char processData[0xC8 - sizeof(BaseProcess)];
+    char processData[((0xC8) > sizeof(BaseProcess)) ? ((0xC8) - sizeof(BaseProcess)) : 1];
 };
 
 struct Owner_9c4a40
@@ -3592,8 +3592,6 @@ FUN_009bbef0::FUN_009bbef0(void* apBaseForm, PrjRef* apSource, void* apWeaponEnt
     SetMobileType(0);
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct P062Object;
 struct P062Ammo;
 struct P062Scene;

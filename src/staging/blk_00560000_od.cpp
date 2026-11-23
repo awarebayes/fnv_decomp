@@ -1027,7 +1027,6 @@ struct FUN_0066d410_shell
 {
     void ForwardCall_0066d410();
 };
-void __cdecl operator delete(void* p, size_t flags);
 struct FUN_0056d5c0_Class
 {
     void* __thiscall FUN_0056d5c0(unsigned int flags);

@@ -154,7 +154,6 @@ BoundItemEffect::~BoundItemEffect()
 }
 
 void* __cdecl FormHeap_Allocate(unsigned int uiSize);
-void* operator new(size_t);
 
 // Allocates a BoundItemEffect from the caster, item and effect item.
 // @fnv 0x008085f0

@@ -147,7 +147,6 @@ void __thiscall FUN_00bb0d30_shell::PrecipitationShaderProperty_SetClampNI(int v
 }
 
 void* __cdecl FUN_00bb0550();
-extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bb0a50_shell
 {
     void* __thiscall PrecipitationShader_ScalarDtor(int flags);

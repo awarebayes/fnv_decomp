@@ -310,7 +310,6 @@ AlarmPackage::~AlarmPackage()
     Crimes.RemoveAll();
 }
 
-void* __cdecl operator new(size_t);
 
 struct FUN_009ebae0_shell
 {

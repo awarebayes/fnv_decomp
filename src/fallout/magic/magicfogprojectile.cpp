@@ -303,7 +303,6 @@ void Effect::MagicFogProjectile_AdjustParticles(NiObject* apav)
     }
 }
 
-void* __cdecl operator new(size_t);
 struct FUN_0081aa80
 {
     TESForm* form;
@@ -660,8 +659,6 @@ struct FogLight
 {
     int unk00[7];
     FogLight(unsigned int auiFormId, void* pkNode);
-    void* operator new(size_t uiSize);
-    void operator delete(void* pvMem);
     void MagicLight_Fade(int iUnk, float fRadius);
     void NiTimeController_SetPhase(float fFadeAmount);
 };

@@ -189,7 +189,6 @@ class ExteriorCellData
 // 0x00621e80 resets CellMopp; its shared header has no reset declaration (ECX is the sole argument).
 void __fastcall ResetCellMopp(CellMopp* mopp);
 
-void __cdecl operator delete(void* pointer);
 
 const char kTESObjectCELLCellRefLockEnter[] = "TESObjectCELL::CellRefLockEnter()";
 
@@ -568,7 +567,6 @@ void* TESObjectCELL::GetInteriorData_00544600()
 
 
 
-void* __cdecl operator new(size_t);
 
 
 
@@ -12323,8 +12321,6 @@ struct Pending
 extern Pending pending;
 bool AILinearTaskThreadManager_ShouldQueue3DTask();
 void TESObjectCELL_QueueAttachChild(Ref*, Obj*);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct Cell
 {
     int f00;
@@ -18640,7 +18636,6 @@ namespace fnv_005596a0 {
 // 0x00621e80 resets CellMopp; its shared header has no reset declaration (ECX is the sole argument).
 void __fastcall ResetCellMopp(CellMopp* mopp);
 
-void __cdecl operator delete(void* pointer);
 
 class FUN_005596a0
 {
@@ -18772,8 +18767,6 @@ FUN_005415b0::FUN_005415b0() : fieldb4(0), fieldb8(0), fieldbc(0), fieldd4(0)
     field58.slot0();
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern const char str_0102ed68[];
 struct Mem960
 {
@@ -21279,9 +21272,6 @@ namespace fnv_00552dc0 {
 void* __cdecl Object_DispatchCommandFour(unsigned int);
 struct ChildGeometryBase;
 
-void* __cdecl operator new(size_t);
-void* __cdecl operator new(size_t, void*);
-void __cdecl operator delete(void*);
 extern float DAT_011ca158;
 extern float DAT_0102efc0;
 extern unsigned int DAT_011ca088;

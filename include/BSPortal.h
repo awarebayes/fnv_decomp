@@ -49,8 +49,8 @@ public:
 
     union
     {
-        char data[0x40 - sizeof(BSOcclusionPlane)];
-        char unk08[0x40 - sizeof(BSOcclusionPlane)];
+        char data[((0x40) > sizeof(BSOcclusionPlane)) ? ((0x40) - sizeof(BSOcclusionPlane)) : 1];
+        char unk08[((0x40) > sizeof(BSOcclusionPlane)) ? ((0x40) - sizeof(BSOcclusionPlane)) : 1];
     };
     unsigned int m_40;
     unsigned int unk44;

@@ -1098,7 +1098,6 @@ struct FUN_00620230_Class
     void __thiscall FUN_0061fc50();
     void* __thiscall FUN_00620230(unsigned int flags);
 };
-void __cdecl operator delete(void*);
 // Calls FUN_0061fc50, deletes this when flags has bit 1 set, and returns this.
 // @fnv 0x00620230
 // pdb: ZoneEntry::EmptyList | BGSZoneTargetListener.obj | retail, call graph (shared callers), low
@@ -1459,7 +1458,6 @@ struct FUN_00622780
 {
     void __thiscall Clear();
 };
-void __cdecl operator delete(void*);
 struct FUN_00622810_Class : public FUN_00622780
 {
     void* __thiscall FUN_00622810(unsigned int flags);
@@ -2041,7 +2039,6 @@ FUN_0062e780_Class* __cdecl TESWaterListener_GetExteriorListener()
     return DAT_011cc54c;
 }
 
-void __cdecl operator delete(void* p);
 struct FUN_006317c0_Class
 {
     void __thiscall ResetVirtualTableAndClear_00631780();
@@ -2624,7 +2621,6 @@ struct FUN_00626800_Pair
     int a;
     int b;
 };
-void* __cdecl operator new(size_t, void*);
 // For each of count elements, placement-constructs an 8-byte pair at base + i*8 by copying the pair from src.
 // @fnv 0x00626800
 // pdb: hkArrayUtil::constructWithCopy<HavokError::hkFileLine> | HavokStream.obj | debug, call graph, high

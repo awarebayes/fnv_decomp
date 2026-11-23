@@ -360,7 +360,6 @@ bool TESObject_WriteTriFile(const FileString& fileName, void* output)
 
 void __cdecl FUN_00ec7c56();
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
-void __cdecl operator delete(void*);
 namespace std {
 template <class E> struct char_traits
 {
@@ -715,7 +714,6 @@ FUN_00ac0530_cls* FUN_00ac0530_cls::EvaluateValue_00ac0530(int a)
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -1398,7 +1396,6 @@ FUN_00ac3df0::FUN_00ac3df0(BxString a_fileId)
 }  // namespace fnv_00ac3df0
 
 extern "C" int DAT_011f6238;
-void __cdecl operator delete(void* _Ptr) throw();
 inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;
@@ -3201,7 +3198,6 @@ struct _iobuf
     char* _tmpfname;
 };
 extern "C" int __cdecl fclose(struct _iobuf* _File);
-void __cdecl operator delete(void* pv);
 
 template <class _Ty> class allocatorDEB0
 {
@@ -3429,7 +3425,6 @@ namespace fnv_00ad3000 {
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -3723,7 +3718,6 @@ namespace fnv_00ad3e60 {
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -4124,7 +4118,6 @@ void StrQ_ad6bb0::UpdateState_00ad6bb0(StrQ_ad6bb0& _Right)
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 namespace std {}
 extern "C" char* __cdecl strcpy(char* pcDst, const char* pcSrc);
 struct IdName_ac34
@@ -4143,7 +4136,6 @@ void __cdecl Object_UpdateFields_00ac34c0(IdName_ac34* pPtr, const IdName_ac34& 
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 namespace std {}
 extern "C" char* __cdecl strcpy(char* pcDst, const char* pcSrc);
 struct FUN_00b2e740
@@ -6846,7 +6838,6 @@ bool FaceBinaryReadReceiver::BSFaceGenBinaryFile_readHeader(void* data, unsigned
 }
 
 extern "C" int DAT_011f6238;
-void __cdecl operator delete(void* _Ptr) throw();
 namespace plusad42 {
 void FUN_00ec7c56();
 extern "C" size_t __cdecl strlen(const char* _Str);
@@ -7938,7 +7929,6 @@ plusad42::BxString TESObject_ConcatenateStrings(const plusad42::BxString& _Left,
 }
 
 extern "C" int DAT_011f6238;
-void __cdecl operator delete(void* _Ptr) throw();
 namespace rdac52 {
 void FUN_00ec7c56();
 extern "C" size_t __cdecl strlen(const char* _Str);
@@ -9056,7 +9046,6 @@ bool GvBinaryFile_SV::FutBinaryFileC_readHeader(void* data, unsigned int size, u
 }
 
 extern "C" int DAT_011f6238;
-void __cdecl operator delete(void* _Ptr) throw();
 namespace plus2ad4 {
 void FUN_00ec7c56();
 extern "C" size_t __cdecl strlen(const char* _Str);

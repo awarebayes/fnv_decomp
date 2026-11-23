@@ -3881,7 +3881,6 @@ struct FUN_00670b30
 };
 
 TESPackage* __cdecl CreatePackageStandIn(PTYPE);
-void* __cdecl operator new(size_t);
 
 struct BaseProcessExt
 {

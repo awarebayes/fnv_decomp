@@ -790,7 +790,6 @@ void FUN_004b9d80_Class::ReleaseStorage_004b9d80(void* pObject)
     ((Unk6b*)((char*)this + 0xc))->FreeMemory(pObject);
 }
 
-void* __cdecl operator new(size_t);
 
 struct FUN_004b9de0
 {
@@ -986,7 +985,6 @@ void __thiscall FUN_004b9d30::NiTMapBase_DFALL_NiTMapItem_unsigned_int_VertexDis
 }
 
 void __fastcall ProcessState_00c4ed40(void*);
-void __cdecl operator delete(void*);
 struct FUN_004a4410_Class
 {
     void* __thiscall BSOcclusionQuery_ScalarDtor(unsigned int flags);
@@ -1104,7 +1102,6 @@ FUN_004aa310_Class* __thiscall FUN_004aa310_Class::FUN_004aa310(unsigned int fla
 }
 
 void __fastcall FUN_004afc20(void*);
-void __cdecl operator delete(void*);
 struct FUN_004b0160_class
 {
     void __fastcall FUN_004afc20();
@@ -2774,8 +2771,6 @@ struct ScanItem64
     int ClearToZero();
 };
 
-void* __cdecl operator new(size_t size, void* placement) throw();
-void __cdecl operator delete(void* p, void* placement) throw();
 
 struct FUN_004a9ab0_cls
 {
@@ -3607,8 +3602,6 @@ NiTriShape* __cdecl CreateOctahedron(float size, const NiColorA* color, bool lig
     return vertices;
 }
 
-void* operator new[](size_t);
-void operator delete[](void*);
 void* _NiMalloc_00aa1070(unsigned int);
 void FUN_00b57e30(NiTriShape*, int, int);
 // Builds an 8-vertex box mesh from eight corner positions and a color, with 72 triangle indices, and optionally attaches extra data.

@@ -3,8 +3,6 @@
 
 #include "../../../include/MemoryManager.h"
 
-void* __cdecl operator new(size_t);
-void* __cdecl operator new[](size_t);
 void* __cdecl ourMemset(void*, int, unsigned);
 struct Heap
 {

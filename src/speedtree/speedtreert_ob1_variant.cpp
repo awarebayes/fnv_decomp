@@ -2307,7 +2307,6 @@ inline void __cdecl std_char_traits_char_assign(char& destination, const char& s
 }
 
 void __cdecl FUN_00ec7c56();
-void __cdecl operator delete(void*);
 struct Alloc59;
 
 struct Global59
@@ -4067,7 +4066,6 @@ inline typename _Traits::char_type* copy_s(typename _Traits::char_type* _First1,
 }
 }
 
-void __cdecl operator delete(void*);
 template <class _Ty> class allocator
 {
   public:
@@ -5166,7 +5164,6 @@ inline typename _Traits::char_type* copy_s(typename _Traits::char_type* _First1,
 }
 }
 
-void __cdecl operator delete(void*);
 template <class _Ty> class allocator
 {
   public:
@@ -6088,7 +6085,6 @@ inline typename _Traits::char_type* copy_s(typename _Traits::char_type* _First1,
 }
 }
 
-void __cdecl operator delete(void*);
 template <class _Ty> class allocator
 {
   public:
@@ -6623,8 +6619,6 @@ void* __cdecl memcpy(void*, const void*, unsigned int);
 void* __cdecl memmove(void*, const void*, unsigned int);
 int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct SpdCharTraits
 {
     static void assign(char& a, const char& b)
@@ -7039,7 +7033,6 @@ void SpdWindReader::CSpeedTreeRT_ParseWindInfo(SpdParser* pFile)
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -7332,7 +7325,6 @@ namespace fnv_00b09f90 {
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -11131,7 +11123,6 @@ bool FUN_00b06180_Reader::ProcessAndTransformResult_00b06180()
 }  // namespace fnv_00b06180
 
 namespace fnv_00b06090 {
-void __cdecl operator delete(void* _Ptr) throw();
 namespace bufb060 {
 void FUN_00ec7c56();
 template <class T> inline void GvDestroyOne(T* _Ptr)
@@ -12534,7 +12525,6 @@ void Tree::CSpeedTreeRT_ParseSupplementalTexCoordInfo(Parser* pFile)
 }  // namespace fnv_00b0d810
 
 namespace fnv_00b0dfb0 {
-void __cdecl operator delete(void* _Ptr) throw();
 namespace vct0dfb0 {
 void FUN_00ec7c56();
 template <class T> inline void GvDestroyOne(T* _Ptr)
@@ -13979,7 +13969,6 @@ inline TreeConstIterator::TreeConstIterator(float* p, const TreeContainer* conta
 }
 
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
-void __cdecl operator delete(void*);
 struct TreeCharAllocator
 {
     void deallocate(char* p, unsigned int count)
@@ -14854,7 +14843,6 @@ inline typename _Traits::char_type* copy_s(typename _Traits::char_type* _First1,
 }
 }
 
-void __cdecl operator delete(void*);
 template <class _Ty> class allocator
 {
   public:

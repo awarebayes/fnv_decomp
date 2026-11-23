@@ -528,7 +528,6 @@ struct FUN_00644350_Class
     bool IsGreaterThan(int a);
 };
 int CompareObjects(int a, int b);
-void* __cdecl operator new(size_t size, void* placement);
 struct FUN_00644490_Class
 {
     void __thiscall BSSimpleArray_NavMeshTriangle_1024_ConstructItems(char* items, unsigned int count);
@@ -633,7 +632,6 @@ struct Dummy658130
 unsigned char __cdecl std_Move_cat_unsigned_char(void*, void*);
 void __cdecl Object_InvokeCallbackForRange(int, int, int, unsigned char);
 void Range_ProcessWithMoveCategory_00658bd0(int a1, int a2, int a3);
-void __cdecl operator delete(void* p);
 struct FUN_00658bb0_Class
 {
     void __thiscall FUN_00658bb0();
@@ -647,7 +645,6 @@ struct FUN_00658ea0_cls
 {
     void* __thiscall FUN_00658ea0(unsigned int);
 };
-void __cdecl operator delete(void* p);
 struct FUN_00658ed0_Class
 {
     void __thiscall FUN_00658e10();
@@ -665,7 +662,6 @@ struct FUN_006a68b0_Class
 {
     void ForwardCall_006a68b0();
 };
-void __cdecl operator delete(void*);
 struct FUN_00659140_Class
 {
     void* __thiscall FUN_00659140(unsigned int flags);
@@ -702,7 +698,6 @@ struct FUN_006593b0_class
     void __thiscall FUN_006593b0(int a);
 };
 void __cdecl Runtime_ForwardCall_00659370(int a);
-void __cdecl operator delete(void*);
 struct FUN_00659380_class
 {
     void __thiscall FUN_006593e0();
@@ -885,7 +880,6 @@ struct Owner_0065eb60
     Sub_0065eed0 m_iWordAt04;
     Owner_0065eb60& __thiscall CopyFields_0065eb60(const Owner_0065eb60&);
 };
-void __cdecl operator delete(void*);
 struct FUN_0065eca0_class
 {
     void __thiscall FUN_0065edd0();
@@ -895,7 +889,6 @@ struct FUN_0065ecd0_class
 {
     void* __thiscall FUN_0065ecd0(unsigned int flags);
 };
-void __cdecl operator delete(void* p);
 struct FUN_0065ed00_class
 {
     void __thiscall ForwardCall_0065ee50();
@@ -2662,7 +2655,6 @@ struct S_0065e550_Err
     S_0065e550_Err(int code);
     ~S_0065e550_Err();
 };
-void* __cdecl operator new(size_t size);
 void* __cdecl Runtime_AllocateElementArray52Checked(unsigned int n);
 struct LengthErrB9739
 {
@@ -3018,7 +3010,6 @@ class FUN_00657af0 : public E7AF0Base
     ~FUN_00657af0();
     void Clear();
 };
-void* __cdecl operator new(size_t uiSize);
 class C658CA0BadAlloc
 {
   public:
@@ -3562,8 +3553,6 @@ struct FUN_0065ea00_Class
     void __thiscall ForwardCall_0065ea00(void* a);
 };
 
-void* __cdecl operator new(size_t size, size_t allocation);
-void __cdecl operator delete(void* object, size_t allocation);
 
 // @fnv 0x0065dc90
 FUN_0065dc90::FUN_0065dc90(FUN_0065de30 argument) : FUN_006815c0(), member(argument)

@@ -2673,8 +2673,6 @@ struct FUN_007a6310_Elem8
     FUN_007a6310_Elem8();
 };
 
-void* __cdecl operator new(size_t size, void* where);
-void __cdecl operator delete(void* p, void* where);
 
 struct FUN_007a6310_cls
 {
@@ -6334,7 +6332,6 @@ bool D7580ListBox::ListBox_StartMenu_Option_IsEnabled()
 }
 
 namespace fnv_007d7da0 {
-void* __cdecl operator new(size_t);
 struct ItemTile;
 struct ItemValue
 {

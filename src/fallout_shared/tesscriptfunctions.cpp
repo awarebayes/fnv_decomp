@@ -2871,7 +2871,6 @@ void* DelStandIn::FUN_00709a60(unsigned int flags)
 }
 }  // namespace fnv_00709a60
 
-void* __cdecl operator new(size_t);
 
 struct FUN_00a69dd0 {
     char pad[0x10];

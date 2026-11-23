@@ -60,8 +60,6 @@ struct TESDataHandlerForms
 class TESDataHandler;
 extern TESDataHandler* g_dataHandler;
 
-void* operator new(size_t);
-void operator delete(void*);
 struct TESFileChunkData16
 {
     bool GetChunkData(unsigned short*);

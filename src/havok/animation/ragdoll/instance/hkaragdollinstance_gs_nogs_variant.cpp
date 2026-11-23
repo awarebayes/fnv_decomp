@@ -270,7 +270,6 @@ class hkaRagdollInstanceR : public hkReferencedObjectR
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(uiBytes);
         return b;
     }
-    void operator delete(void* p, hk_size_tR uiBytes);
     hkaRagdollInstanceR(const hkArrayR<hkpRigidBodyR*>& kRigidBodies,
                         const hkArrayR<hkpConstraintInstanceR*>& kConstraints, const hkaSkeletonR* pkSkeleton,
                         const hkArrayR<int>& kBoneToRigidBodyMap) throw();

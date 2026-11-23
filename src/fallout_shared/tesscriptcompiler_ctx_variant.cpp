@@ -9,7 +9,6 @@
 ScriptFunctionInfo* GetFunctionByOpcode(SCRIPT_OUTPUT output);
 
 int BSstricmp(const char*, const char*);
-void* __cdecl operator new(size_t);
 extern TESForm* g_thePlayer;
 #include "../../include/BSSimpleList.h"
 struct ScriptInfo

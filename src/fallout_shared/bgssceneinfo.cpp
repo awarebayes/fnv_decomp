@@ -1311,7 +1311,6 @@ struct Clear245
     void FUN_00438af0();
 };
 extern Clear245 DAT_011c5c40;
-void* __cdecl operator new(size_t);
 // Accumulates cost and count over the interior cell or nearby exterior cells, adding the list total when include is set, then calls FUN_00438af0.
 // @fnv 0x004a8bb0
 // src: XBOX_PDB 0x004a8bb0

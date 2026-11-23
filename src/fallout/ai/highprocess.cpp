@@ -6594,7 +6594,6 @@ struct FUN_009bacb0
     FUN_009bacb0(Projectile* projectile, void* parentRef);
 };
 
-void* __cdecl operator new(size_t size);
 
 // Shared HighProcess lacks the 0x00902190 muzzle-flash allocation member.
 struct HighProcessStandIn
@@ -11752,7 +11751,6 @@ bool HighProcess::IsGroupAlreadyInList(ActorCombatGroup* pgroup)
     return found;
 }
 
-void* operator new(size_t);
 struct FUN_0066e590
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20;
@@ -18517,7 +18515,6 @@ bool HighProcess::vfn_80c(Actor* apTarget, int aiArg)
     return bResult;
 }
 
-void* __cdecl operator new(size_t);
 struct SearchItem
 {
     unsigned int unk00;
@@ -28210,7 +28207,6 @@ void HighProcess::ProcessGuard(Actor* apActor)
     }
 }
 
-void* __cdecl operator new(size_t);
 extern double _DAT_01012060;
 
 struct FUN_008fe9e0_data

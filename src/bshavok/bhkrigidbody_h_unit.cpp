@@ -35,7 +35,6 @@ __forceinline void* __cdecl operator new(size_t size, AllocationManager& allocat
     storage[-1] = adjustment;
     return storage;
 }
-void __cdecl operator delete(void* memory, AllocationManager& allocator);
 struct FUN_00c8f5a0_Class
 {
     void* virtualFunctions;

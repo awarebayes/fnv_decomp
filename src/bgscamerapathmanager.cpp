@@ -10,7 +10,6 @@
 #include "../include/NiFile.h"
 
 #include "../include/TESFile.h"
-void* __cdecl operator new(size_t);
 
 // Constructs a NiTPrimitiveArray<BGSCameraPath*> by forwarding maxSize and growBy to the NiTArray base constructor.
 // @fnv 0x0058bc30

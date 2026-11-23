@@ -879,7 +879,6 @@ void* FUN_00978d50_Class::BSScrapArray_NavMeshSearchLink_1024_Allocate(unsigned 
     return p;
 }
 
-void __cdecl operator delete(void*);
 void ResetToGlobalData();
 struct FUN_00978d80_Class
 {
@@ -936,7 +935,6 @@ void* __thiscall FUN_00978e10_Class::FUN_00978e10(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_00978cf0_Class
 {
     void __thiscall FUN_00978cf0();
@@ -7561,8 +7559,6 @@ struct MoveBoolSetting
 };
 extern MoveBoolSetting g_011f1840;
 extern float DAT_011a56b4, DAT_011a5654;
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct IdleAction
 {
     int u00, u04, u08, u0c, u10, u14;

@@ -12,7 +12,6 @@
 // src/speedtree/treeengine.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/_fallout3/platforms/common/code/speedtree/treeengine.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
-void __cdecl operator delete(void*);
 struct FUN_00b2ae60_shell
 {
     void __thiscall FUN_00b2ae90();
@@ -2200,7 +2199,6 @@ inline Elem* copy_new(Elem* _First, Elem* _Last, Elem* _Dest)
     return Object_ProcessAndReturnValue_00b2e500(_Checked_base(_First), _Checked_base(_Last), _Dest, _Iter_random(_First, _Dest),
                         _Ptr_cat(_First, _Dest), _Range_checked_iterator_tag());
 }
-void __cdecl operator delete(void*);
 struct Alloc
 {
     void deallocate(Elem* _Ptr, unsigned int)

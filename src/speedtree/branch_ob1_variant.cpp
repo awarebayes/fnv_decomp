@@ -469,7 +469,6 @@ void ParticleEmitter::CIdvBranch_ComputeFlareEntries(CreationSettings* sInfo)
 // The frame layout under /Od is: named locals (declaration order) first, then
 // the implicit `this` home at the bottom of the frame, so the pointer local has
 // to live in an inner block to end up directly above `this` at [ebp-0x30].
-void __cdecl operator delete(void* p);
 
 struct FNV_scratch_t
 {

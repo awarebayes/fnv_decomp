@@ -1308,7 +1308,6 @@ const char* TESFile::GetIndexName(unsigned int count)
     return (const char*)list->GetItem();
 }
 
-void* __cdecl operator new(size_t);
 void __cdecl __memcpy(void* dst, const void* src, unsigned int size);
 struct G2
 {

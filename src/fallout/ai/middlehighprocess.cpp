@@ -6596,7 +6596,6 @@ void FUN_0092c540::SetHitData(FUN_009b4d90* apData)
 }  // namespace fnv_0092c540
 
 namespace fnv_009293b0 {
-void* __cdecl operator new(size_t);
 
 extern unsigned int _data_011c16bc;
 

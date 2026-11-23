@@ -26,11 +26,7 @@
 #include "../../../include/NiUpdateData.h"
 
 // Unit-specific declarations; shared Ni types come from NiGeometry.h.
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete[](void*);
 #include "../../../include/MEM_CONTEXT.h"
 #include "../../../include/HAIR_PART.h"
 template <class T> class FaceGenStringT

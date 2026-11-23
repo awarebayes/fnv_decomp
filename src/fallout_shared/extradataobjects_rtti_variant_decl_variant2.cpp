@@ -109,7 +109,6 @@ template <> bool BSStringT<char>::Set(const BSStringT<char>& source)
 void ResolveFormID(unsigned int*, TESFile*);
 TESForm* TESForm_GetFormByNumericID(unsigned int);
 void Warning_005b5e40(const char*, ...);
-void __cdecl operator delete(void*);
 
 // Walks m_kDecalReferences, resolving each decal's m_pHitReference form ID against the given TESForm and removing entries that cannot be resolved.
 // @fnv 0x00433db0

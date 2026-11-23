@@ -58,7 +58,6 @@ void CombatProcedureEngageTarget::Unk0c()
     ((CombatProcedure*)this)->RunProcedure();
 }
 
-void __cdecl operator delete(void*);
 
 // The compiler also supplies the scalar deleting destructor at 0x009d3b00.
 // @fnv 0x009d3b30

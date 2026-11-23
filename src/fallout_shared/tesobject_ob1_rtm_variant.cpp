@@ -5,7 +5,6 @@
 
 extern int DAT_010173f0;
 extern "C" int DAT_011f6238;
-void __cdecl operator delete(void* _Ptr) throw();
 inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;

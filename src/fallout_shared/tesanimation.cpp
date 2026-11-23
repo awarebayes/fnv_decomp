@@ -96,7 +96,6 @@ bool TESAnimation::IsKFFileInList(const char* apFilename)
     return false;
 }
 
-void* __cdecl operator new(size_t);
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members
 struct TaskQueueInterface
 {

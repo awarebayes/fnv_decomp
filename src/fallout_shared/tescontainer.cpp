@@ -548,7 +548,6 @@ bool __cdecl TESContainer_IsGold(TESObject* pObj)
 }
 
 namespace fnv_004818e0 {
-void* __cdecl operator new(size_t);
 namespace N {
 struct ContainerItemExtra
 {
@@ -1062,7 +1061,6 @@ bool TESContainer::CompareWithBase(BaseFormComponent* apCompareFC)
     return false;
 }
 
-void* __cdecl operator new(size_t);
 // The shared header has no declaration for this operation; the free helper keeps the object in ECX.
 // Copies the object list in reverse order, then removes entries that share the same object pointer.
 // @fnv 0x00482b00

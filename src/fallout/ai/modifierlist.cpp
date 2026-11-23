@@ -167,7 +167,6 @@ Modifier* FUN_009375b0_shell::Modifier_ctor(char acKey, float afValue)
     return this;
 }
 
-void* __cdecl operator new(size_t);
 void __cdecl FastModifierCollection_CheckInitializeMapping();
 extern int DAT_011e0750;
 

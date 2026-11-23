@@ -2247,7 +2247,6 @@ extern bool DAT_011da0c8;
 LoadingMenuCreateTile* Tile_GetMenuByClass(int);
 void FUN_00717740(int);
 void FUN_0078d020();
-void* __cdecl operator new(size_t);
 
 // Looks up a loading-menu tile by id; if missing, loads loading_menu.xml, initialises the menu, creates the thread and returns the tile.
 // @fnv 0x00788cc0

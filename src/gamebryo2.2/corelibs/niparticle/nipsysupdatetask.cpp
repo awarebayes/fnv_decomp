@@ -287,7 +287,6 @@ bool NiPSysUpdateTask::Clear_00c25be0()
     return true;
 }
 
-void __cdecl operator delete(void* pv, int iSize);
 void __cdecl NiMemObject_ReleaseStorage_00aa1490(void* pv, unsigned int uiSize);
 
 __forceinline void NiPSysUpdateTask::Destruct()

@@ -2040,8 +2040,6 @@ delete kTextureFile; kTextureFile=0; texture5->FUN_0060aeb0(1); ((TexturePtr*)pT
 
 namespace fnv_00a19f70 {
 struct LayoutMemory { void Deallocate(void*); };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
 void* LayoutCopy(void*,const void*,unsigned int);
@@ -2804,8 +2802,6 @@ extern float DAT_0102f0f8;
 extern double DAT_010731a8;
 double __cdecl FUN_00ec9130(double, double);
 extern char DAT_01011584[];
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
 extern "C" void* __cdecl memcpy(void*,const void*,size_t);
@@ -3170,8 +3166,6 @@ struct LayoutMemory { void Deallocate(void*); };
 extern float DAT_01095268;
 extern float DAT_01095264;
 extern float DAT_01095260;
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
 extern "C" void* __cdecl memcpy(void*,const void*,size_t);
@@ -3569,7 +3563,6 @@ struct EntQ {
   int unk00, unk04, unk08, unk0C, unk10, unk14, unk18, unk1C, unk20, unk24, unk28, unk2C, unk30, unk34, unk38, unk3C, unk40;
   EntQ* ProcessEntries_00a19c00(int a, int b);
   void* operator new(size_t n) { int aiD[9]; return DAT_011f6238.Game_DoHeapAlloc(n); }
-  void operator delete(void* p);
 };
 struct FUN_00a1bc70 : EntQ { FUN_00a1bc70(OwnQ* pOwner, int a, int c, int d); };
 struct HeadQ { int unk00, unk04; EntQ* pEnt; };
@@ -3712,8 +3705,6 @@ FUN_00a1b450::FUN_00a1b450(int aiFontIndex, unsigned char acChar, NiColorA axCol
     m34 = 0;
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
 extern "C" void* __cdecl memcpy(void*,const void*,size_t);
@@ -3999,8 +3990,6 @@ void Font::PrepText(const char* apOrigString,TextLayout::Layout* axData) {
  TextLayout::DAT_011f6238.MemoryManager_Deallocate(outputSlot60);
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 namespace PageMeshes {
 
 struct Color {float r,g,b,a;Color(float R,float G,float B,float A){r=R;g=G;b=B;a=A;}};extern NiPoint3 DAT_011f426c;extern float DAT_01095274,DAT_01095270,DAT_0109526c;

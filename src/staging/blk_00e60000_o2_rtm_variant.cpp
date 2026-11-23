@@ -79,7 +79,6 @@ struct FUN_00e7cdf0_shell
     int _p6;
 };
 void __cdecl ReleaseStorage_00e7d1b0();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e7d230_cls
 {
     FUN_00e7d230_cls* __thiscall DestroyIfFlagged(int);

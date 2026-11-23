@@ -2248,7 +2248,6 @@ inline void* __cdecl operator new(size_t size)
 {
     return Object_DispatchCommandFour(size);
 }
-void __cdecl operator delete(void*);
 
 struct TLSData
 {

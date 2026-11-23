@@ -630,7 +630,6 @@ char* __cdecl ourCalloc(unsigned int aNum, unsigned int aSize)
     return (char*)pBuffer;
 }
 
-void* __cdecl operator new(size_t);
 bool __fastcall _ref_008256d0(void*);
 int* __fastcall _ref_006815c0(void*);
 void* __fastcall _ref_00726070(void*);
@@ -688,7 +687,6 @@ void Script::SetText(const char* newText)
     }
 }
 
-void* __cdecl operator new(size_t);
 void* __fastcall CopyVariableList(Script*);
 
 // Allocates a ScriptLocals, stores the result of CopyVariableList(this) at offset 0xc and this at offset 0, then returns it.

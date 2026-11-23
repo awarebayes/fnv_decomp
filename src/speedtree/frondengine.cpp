@@ -156,7 +156,6 @@ int __thiscall FUN_00b319a0_class::ProcessAndReturnValue_00b319a0(int uiIndex)
     return uiIndex * 24 + m_iThirdValue;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_00b1ec70_class
 {
     int i0;
@@ -281,7 +280,6 @@ void FUN_00b1fe80_helper::UpdateFields_00b1fe80()
     m14 = 0;
 }
 
-void __cdecl operator delete(void*);
 
 struct FUN_00b20c30_class
 {
@@ -580,7 +578,6 @@ struct FUN_00ec78f1_t
     void* __thiscall FUN_00ec78f1(int* out);
 };
 void __stdcall FUN_00ec7894(FUN_00ec78f1_t* info, const char* fmt);
-void* __cdecl operator new(size_t);
 extern int DAT_010176f8;
 extern int DAT_01140ef8;
 
@@ -950,8 +947,6 @@ bool Pool_00b1f920::AllocateElementStorage_00b1f920(unsigned int aiNodeCount)
     return true;
 }
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 __declspec(noreturn) void __cdecl __CxxThrowException(void* a, unsigned int b);
 struct FUN_0044d6c0_class
 {

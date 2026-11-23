@@ -15,7 +15,6 @@ int __cdecl BSstrlen(char* s);
 extern const char saveExtension[];
 int __cdecl FUN_004564f0(char* a, const char* b, int n);
 int __cdecl BSsprintf(char* buf, unsigned int sz, const char* fmt, ...);
-void* __cdecl operator new(size_t n);
 
 class Finder
 {

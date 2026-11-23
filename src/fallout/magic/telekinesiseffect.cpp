@@ -239,7 +239,6 @@ void TelekinesisEffect::FinishInitLoadGame_0082b300(Actor* apActor)
     m_5d = 1;
 }
 
-void* __cdecl operator new(size_t);
 
 // @fnv 0x0082a5a0
 // pdb: TelekinesisEffect::Copy | TelekinesisEffect.obj | retail, vtable slot, high

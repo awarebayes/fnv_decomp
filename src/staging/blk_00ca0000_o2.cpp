@@ -279,7 +279,6 @@ char ToLowerAscii(char acChar)
 }
 
 void __cdecl FUN_00cc9640();
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00cb9b60_class
 {

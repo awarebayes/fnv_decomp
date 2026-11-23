@@ -207,7 +207,6 @@ struct FUN_006c07d0_shell : public NavMeshObstacleManager
     bool NavMeshObstacleManager_CreateListeners();
 };
 
-void* __cdecl operator new(size_t);
 
 BSWin32TaskletManager& __cdecl GetTaskletManager(void);
 
@@ -1317,7 +1316,6 @@ void* __thiscall ObstacleData_shell::FUN_006c2490(unsigned int flags)
 }
 
 void __fastcall NavMeshObstacleManager_UpdateState_006c5e70(int**);
-void __cdecl operator delete(void*);
 
 struct FUN_006c5e90_shell
 {

@@ -601,7 +601,7 @@ void NavMesh::SetAltered(bool abVal)
 
 struct FUN_00694620_shell : TESForm
 {
-    char _pad[0x104 - sizeof(TESForm)];
+    char _pad[((0x104) > sizeof(TESForm)) ? ((0x104) - sizeof(TESForm)) : 1];
     TESForm* m_pNavigationMesh;
     void NavMesh_FinishLoadGameBGS(BGSLoadFormBuffer* apLoadGameBuffer);
 };
@@ -652,7 +652,6 @@ struct FUN_00692950_shell : public NavMesh
 };
 
 extern "C" void* __cdecl _alloca(size_t);
-void* operator new(size_t);
 template <int N> struct EndianSizeTag
 {
 };

@@ -138,7 +138,6 @@ struct FUN_00537ca0_class
     const char* const* NiAdditionalGeometryData_GetRTTI();
 };
 struct FUN_00a73080_holder { void NiAdditionalGeometryData_dtor(); };
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00540800_Class {
     void UpdateFields_00540800();
@@ -214,7 +213,6 @@ struct FUN_00539fc0_Class
 {
     GlobalObjectO2_00a7b610* NiBinaryExtraData_GetRTTI();
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_0053a000 {
     void __thiscall Destruct();
 };
@@ -1459,7 +1457,6 @@ struct CleanupOwner {
     void Finish();
     bool TESObjectLAND_UnLoadVertices();
 };
-void* __cdecl operator new(size_t);
 void __cdecl ourMemset(void*, int, unsigned int);
 
 extern NiPoint3 DAT_011f426c;

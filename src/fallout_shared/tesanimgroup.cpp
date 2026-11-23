@@ -384,8 +384,6 @@ struct UShortArg
 {
     unsigned short v;
 };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 void* __cdecl memset(void*, int, unsigned int);
 
 // @fnv 0x005f2450
@@ -417,7 +415,6 @@ void __fastcall SetAnimGroupType(TESAnimGroup* self, UShortArg type)
 
 extern int DAT_010484e8;
 
-void __cdecl operator delete(void*);
 
 // @fnv 0x005f22d0
 // pdb: TESAnimGroup::~TESAnimGroup | TESAnimGroup.obj | retail, upstream name already matches, high

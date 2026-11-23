@@ -532,8 +532,6 @@ struct Manager
 };
 extern Manager* DAT_011c3b3c;
 void __cdecl MarkLoaded(Resource*);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct Camera : Resource
 {
     int f04, f08, f0c, f10, f14, f18, f1c, f20, f24, f28, f2c, f30, f34, f38, f3c;

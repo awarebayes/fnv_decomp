@@ -14,10 +14,6 @@
 #include "../../../include/NiTexture.h"
 #include "../../../include/Sky.h"
 
-void* __cdecl operator new(size_t);
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete(void*);
-void __cdecl operator delete[](void*);
 // Hide the inherited unsized delete to preserve this path's sized exception cleanup.
 class MoonSceneNodeAllocation : public NiNode
 {

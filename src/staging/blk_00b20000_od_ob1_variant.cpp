@@ -12338,7 +12338,6 @@ namespace fnv_00b3c3f0 {
 extern "C" size_t __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
-void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -12653,7 +12652,6 @@ void* MakeError_b3c3()
 }  // namespace fnv_00b3c3f0
 
 namespace fnv_00b326e0 {
-void __cdecl operator delete(void* _Ptr) throw();
 namespace valb326 {
 void FUN_00ec7c56();
 template <class T> inline void GvDestroyOne(T* _Ptr)
@@ -13611,7 +13609,6 @@ FUN_00b326e0::FUN_00b326e0(GvAlloc<unsigned short> _Al) : GvAuxBase<GvAlloc<unsi
 }  // namespace fnv_00b326e0
 
 namespace fnv_00b35a90 {
-void __cdecl operator delete(void* _Ptr) throw();
 namespace cpyb35a {
 void FUN_00ec7c56();
 template <class T> inline void GvDestroyOne(T* _Ptr)
@@ -14629,7 +14626,6 @@ FUN_00b311b0::FUN_00b311b0(unsigned int n) : FUN_00b326e0(AllocQ())
     UpdateFields_00b32600(n, (void*)0);
 }
 
-void __cdecl operator delete(void*) throw();
 
 struct ScalarTag31
 {
@@ -16435,7 +16431,6 @@ void TrTree::ProcessEntries_00b3a050(TrNode* _Rootnode)
 }  // namespace fnv_00b3a050
 
 namespace fnv_00b3d830 {
-void __cdecl operator delete(void* _Ptr) throw();
 namespace vct3d830 {
 void FUN_00ec7c56();
 template <class T> inline void GvDestroyOne(T* _Ptr)

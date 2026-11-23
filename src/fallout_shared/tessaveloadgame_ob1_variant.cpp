@@ -209,7 +209,6 @@ inline void* operator new(size_t n, MemoryManager*)
 {
     return g_memoryManager.Allocate(n);
 }
-void operator delete(void*, MemoryManager*);
 
 struct ArchiveFileManager
 {

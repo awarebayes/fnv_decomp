@@ -1312,7 +1312,6 @@ bool AimProjectile::UpdateProjectileAimNode()
     return true;
 }
 
-void* __cdecl operator new(size_t);
 struct Helper009f8770
 {
     void TESForm_LoadGameDataOLD(void*, int);

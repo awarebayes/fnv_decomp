@@ -66,8 +66,6 @@ int abs(int);
 }
 unsigned int DialogueRandom();
 bool RandomBoolean(float);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern TESDataHandler* g_dataHandler;
 extern PlayerCharacter* g_thePlayer;
 extern TES* g_TES;

@@ -43,7 +43,6 @@ void AILinearTaskThread::StartTaskThread()
     g_dataHandler->CreateThreadSafeFiles();
 }
 
-void __cdecl operator delete(void*);
 struct FUN_008c7830
 {
     void FUN_008c7860();

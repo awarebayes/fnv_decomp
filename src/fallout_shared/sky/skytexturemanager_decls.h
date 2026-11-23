@@ -4,8 +4,6 @@
 
 #include "skytexturemanager_task_decls.h"
 
-void* __cdecl operator new(size_t size);
-void __cdecl operator delete(void* object);
 bool __cdecl CleanPath(const char* path, char* output, unsigned int outputSize);
 
 class SkyTextureManager

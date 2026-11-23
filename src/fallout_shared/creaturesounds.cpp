@@ -7,8 +7,6 @@
 
 #include "../../include/CreatureSounds.h"
 extern "C" void* __cdecl memset(void*, int, size_t);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 // @fnv 0x005f0360
 // pdb: CreatureSounds::CreatureSounds | CreatureSounds.obj | retail, upstream name already matches, high

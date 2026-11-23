@@ -23,8 +23,6 @@ class LocationDescriptor
 extern TESBoundObject* DAT_011ca244;
 extern TESBoundObject* DAT_011ca248;
 
-void* __cdecl operator new(size_t size);
-void __cdecl operator delete(void* pointer);
 
 FNV_STATIC_ASSERT(sizeof(PackageTargetRecord) == 0x10);
 FNV_STATIC_ASSERT(sizeof(TESUseWeaponPackageData) == 0x24);

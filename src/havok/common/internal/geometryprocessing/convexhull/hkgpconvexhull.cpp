@@ -972,7 +972,6 @@ void __cdecl hkgpConvexHull_createVoronoiFeatures(S_00d79f90_World* domain, int 
 
 struct S_00d7a010_Obj {
     virtual ~S_00d7a010_Obj() throw();
-    void operator delete(void* p) throw();
 };
 
 void __cdecl hkgpConvexHull_createVoronoiFeatures(int domain, int points, hkArrayBase<S_00d7a010_Obj*>& cells, int edges, float margin) throw();

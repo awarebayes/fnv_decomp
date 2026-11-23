@@ -212,7 +212,6 @@ struct S3c60
 };
 
 unsigned int __fastcall _ref_0084e3a0(MagicprojectileOffset08View* pAudio);
-void* __cdecl operator new(size_t);
 
 // @fnv 0x0081a960
 // pdb: MagicFogProjectile::CheckAddTarget | MagicFogProjectile.obj | retail, vtable slot, high
@@ -757,7 +756,6 @@ struct S86a0
     int FUN_004086a0();
 };
 
-void* __cdecl operator new(size_t size);
 
 struct FUN_0080f810
 {

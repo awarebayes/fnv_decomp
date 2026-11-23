@@ -4,10 +4,6 @@
 // to their real unit once identified.
 
 
-void* __cdecl operator new(size_t uiSize);
-void* __cdecl operator new[](size_t uiSize);
-void __cdecl operator delete(void* pvMem);
-void __cdecl operator delete[](void* pvMem);
 
 void* __cdecl C4E7770Malloc(unsigned int uiSize);
 

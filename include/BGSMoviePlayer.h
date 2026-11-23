@@ -24,7 +24,7 @@ public:
     virtual unsigned int GetUptimeMilliseconds();
     virtual bool UpdateMoviePlayback(bool abAllowInterruption);
 
-    unsigned char unk10[0x20 - sizeof(MoviePlayer)];
+    unsigned char unk10[((0x20) > sizeof(MoviePlayer)) ? ((0x20) - sizeof(MoviePlayer)) : 1];
     unsigned char field_20;
 
     void* __thiscall FUN_00867150(unsigned int flags);

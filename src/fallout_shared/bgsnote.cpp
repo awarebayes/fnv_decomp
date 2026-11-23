@@ -1,7 +1,5 @@
 // fallout_shared/bgsnote.cpp: BGSNote and note serialization operations (25 functions)
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 #include "../../include/BGSNote.h"
 #include "../../include/BSSimpleList.h"

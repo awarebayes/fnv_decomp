@@ -4156,7 +4156,6 @@ EraseRangeIterator IteratorRangeStorage::std_vector_float_std_allocator_float_er
 }
 
 namespace fnv_0043abf0 {
-void* __cdecl operator new(size_t);
 unsigned int __cdecl BSStringLength(char const*);
 
 struct FUN_0043abf0
@@ -4184,7 +4183,6 @@ FUN_0043abf0::FUN_0043abf0(const char* apStr, void* apPtr) : m_ptr(0)
 }  // namespace fnv_0043abf0
 
 namespace fnv_0043baf0 {
-void* __cdecl operator new(size_t);
 unsigned int __cdecl BSStringLength(const char*);
 struct FUN_0043baf0;
 
@@ -4583,7 +4581,6 @@ FUN_00441f80::FUN_00441f80(int a, int b, int c) : QueuedFileLoadBase(a, b, c), m
 
 extern int DAT_01016e50;
 
-void* __cdecl operator new(size_t);
 
 #include "../../include/LockFreeQueue.h"
 
@@ -4743,7 +4740,6 @@ void FUN_00444fe0_shell::ModelLoader_QueueHead(TESNPC* apNPC, void* aspQueuedHea
     ((QHeadPtrDest*)aspQueuedHead)->Assign(spqueuedHead);
 }
 
-void* __cdecl operator new(size_t);
 struct QIdle
 {
     QIdle(void*, int, void*, void*);
@@ -4877,7 +4873,6 @@ struct FUN_00447850_shell : public ModelLoader
     void* ModelLoader_CopyFilenameList(void*, void*);
 };
 
-void* __cdecl operator new(size_t);
 unsigned int __cdecl BSStringLength(const char*);
 struct StrList
 {
@@ -10671,31 +10666,26 @@ struct TaskA
 {
     char d[72];
     TaskA(int);
-    void* operator new(size_t);
 };
 struct TaskB
 {
     char d[64];
     TaskB(Ref*, int);
-    void* operator new(size_t);
 };
 struct TaskC
 {
     char d[72];
     TaskC(Ref*, int);
-    void* operator new(size_t);
 };
 struct TaskD
 {
     char d[64];
     TaskD(Ref*, int);
-    void* operator new(size_t);
 };
 struct TaskE
 {
     char d[64];
     TaskE(Ref*, int);
-    void* operator new(size_t);
 };
 
 int FUN_0040fc90();
@@ -15161,7 +15151,6 @@ struct TaskHandle
 };
 int FUN_00406d30(char*, unsigned int, const char*);
 int FUN_00406d50(char*, unsigned int, const char*);
-void* operator new(size_t);
 struct MeshLoader
 {
     void ModelLoader_QueueFaceGenFile(const char*, int, void*, int);
@@ -17460,7 +17449,6 @@ class TextureNodeInfo
     int NiTexture_GetTextureQualityLevel();
 };
 void __cdecl GetNodePointer(BSFileEntry*, NodePointer&);
-void* __cdecl operator new(size_t);
 class TextureLoader
 {
   public:
@@ -17948,7 +17936,6 @@ class FUN_0043d540 : public QIdle
 {
   public:
     FUN_0043d540(int a, int b, int c);
-    void* operator new(size_t);
     unsigned int unk[15];
 };
 class OwnerX

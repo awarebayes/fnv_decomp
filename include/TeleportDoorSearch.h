@@ -22,7 +22,7 @@ public:
 
     int InsertOrUpdateNode(void*, float, AStarNode<ParentSpaceNode, TeleportLink>*&);
 
-    char prefix[0x205c - sizeof(void*)];
+    char prefix[((0x205c) > sizeof(void*)) ? ((0x205c) - sizeof(void*)) : 1];
     TESWorldSpace* startWorld;
     int pad;
     PathingLocation StartLocation; // src: XBOX_RETAIL_PDB +0x2064 (old: location)

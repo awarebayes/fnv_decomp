@@ -985,7 +985,6 @@ void* FUN_0062e0a0_List::RemoveFirstNode()
     return pValue;
 }
 
-void* __cdecl operator new(size_t size);
 
 struct FUN_0062cb90_Entry
 {
@@ -1188,7 +1187,6 @@ FUN_0062c640::FUN_0062c640()
     m_aiIndexedValues = new TrigEntry[m_uiItemCount];
 }
 
-void __cdecl operator delete[](void*);
 // The shared reference header does not yet declare this notification helper.
 class TrapReferenceNotification : public TESObjectREFR
 {

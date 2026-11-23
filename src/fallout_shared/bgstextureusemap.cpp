@@ -85,7 +85,6 @@ FUN_004aa340::~FUN_004aa340()
     RemoveAllEntries();
 }
 
-void __cdecl operator delete(void*);
 struct FUN_004aa650_shell
 {
     void FUN_004aa680();
@@ -179,7 +178,6 @@ void FUN_004aa340::RemoveAllEntries()
     reinterpret_cast<NiTMap<unsigned int, FUN_004aa830*>*>(reinterpret_cast<unsigned char*>(this) + 4)->RemoveAll();
 }
 
-void* __cdecl operator new(size_t);
 
 struct G2
 {

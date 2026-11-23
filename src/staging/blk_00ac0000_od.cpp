@@ -5315,7 +5315,6 @@ void __cdecl Object_FillRecordRange(Rec_00ac1600* begin, Rec_00ac1600* end, cons
 extern int DAT_010a2f9c;
 extern int DAT_010a2fa4;
 
-void __cdecl operator delete(void* pv);
 
 struct S00ace060_Obj
 {

@@ -49,7 +49,6 @@ class CloneableObj
     void FUN_00a6cfe0(NiBSBoneLODController*, CloningProcess*);
     void NiBSBoneLODController_CopyMembers(NiBSBoneLODController*, CloningProcess*);
 };
-void operator delete(void*, size_t);
 struct S_00c53e10
 {
     void FUN_00c53e40();

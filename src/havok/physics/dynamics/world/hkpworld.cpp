@@ -11654,12 +11654,12 @@ struct Sbp_CollisionInput {
 struct Sbp_Dispatcher { void hkpTypedBroadPhaseDispatcher_addPairs(Sbp_Pair* newPairs, int numNewPairs, void* filter); };
 
 struct Sbp_AabbPhantom : hkpPhantom {
-    char padAabb[0xb0 - sizeof(hkpPhantom)];
+    char padAabb[((0xb0) > sizeof(hkpPhantom)) ? ((0xb0) - sizeof(hkpPhantom)) : 1];
     Sbp_Vec m_aabbMin;
     Sbp_Vec m_aabbMax;
 };
 struct Sbp_ShapePhantom : hkpPhantom {
-    char padTransform[0xe0 - sizeof(hkpPhantom)];
+    char padTransform[((0xe0) > sizeof(hkpPhantom)) ? ((0xe0) - sizeof(hkpPhantom)) : 1];
     Sbp_Vec m_vTranslation;
 };
 struct Sbp_Border {

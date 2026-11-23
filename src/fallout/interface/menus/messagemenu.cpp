@@ -564,8 +564,6 @@ struct Message
     Message();
     bool GetByteAtOffset56();
 };
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 void* FormHeap_Allocate(unsigned int);
 int BSstrlen(const char*);
 void FUN_00406d30(char*, unsigned int, const char*);

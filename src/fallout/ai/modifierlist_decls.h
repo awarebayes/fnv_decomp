@@ -34,7 +34,6 @@ class ModifierPointerList
 
 #pragma pack(pop)
 
-void __cdecl operator delete(void* memory);
 
 FNV_STATIC_ASSERT(sizeof(Modifier) == 8);
 FNV_STATIC_ASSERT(sizeof(ActorValueModifierList) == 0x10);

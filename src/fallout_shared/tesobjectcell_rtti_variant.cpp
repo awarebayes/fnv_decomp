@@ -23,7 +23,6 @@
 class NiAVObject;
 extern BGSLoadedReferenceCollection* DAT_011c95c8;
 
-void __cdecl operator delete(void* pointer);
 const char kTESObjectCELLCellRefLockEnter[] = "TESObjectCELL::CellRefLockEnter()";
 unsigned int TESTerrainLODManager_GetGrassNode();
 NiAVObject* TESMain_GetWeatherRoot();
@@ -408,7 +407,6 @@ void TESObjectCELL::SaveGameTest()
     CellRefLockLeave();
 }
 
-void* __cdecl operator new(size_t);
 
 // ExtraCell3D owns the reference count associated with the cell's loaded 3D.
 

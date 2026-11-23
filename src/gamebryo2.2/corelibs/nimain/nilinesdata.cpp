@@ -21,7 +21,6 @@ void* __cdecl NiLinesData_GetRTTI()
 
 void* __cdecl NiFreeAlias(void*);
 extern int DAT_0109f23c;
-void __cdecl operator delete(void* p, size_t size);
 
 // @fnv 0x00a8a7c0
 // pdb: NiLinesData::`scalar deleting destructor' | NiLinesData.obj | retail, object-file run extension, low

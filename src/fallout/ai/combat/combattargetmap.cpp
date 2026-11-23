@@ -120,7 +120,6 @@ FUN_009a40c0::FUN_009a40c0() : FUN_009a42f0(5, 0), m(0)
 {}
 
 namespace fnv_009a3fe0 {
-void* __cdecl operator new(size_t);
 
 // Unit-local view of BSSimpleArray for 0x009a3fe0 (namespace fnv_009a3fe0): built on the shared BSSimpleArray, that code does not compile or does not match.
 template <typename T, int N> struct BSSimpleArray_009a3fe0

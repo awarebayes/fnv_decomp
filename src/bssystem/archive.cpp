@@ -4635,7 +4635,6 @@ inline void AppendPath(char* dest, unsigned int size, const char* src)
 {
     strcat_s(dest, size, src);
 }
-void* __cdecl operator new(size_t);
 // ArchivePathList: unit-local list node of path strings (item +0, next +4; BSSimpleList<const char*> shape), not the
 // shared PathNode (NavMesh* at +0): 0x00af7060 walks it; its insert is 0x005ae3d0
 struct ArchivePathList

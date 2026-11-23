@@ -4,7 +4,6 @@
 #include "../../include/NiControllerSequence.h"
 #include "../../include/SL.h"
 #include "../../include/BSAnimGroupSequence.h"
-void __cdecl operator delete(void* pointer);
 const char kTESObjectCELLCellRefLockEnter[] = "TESObjectCELL::CellRefLockEnter()";
 unsigned int TESTerrainLODManager_GetGrassNode();
 NiAVObject* TESMain_GetWeatherRoot();
@@ -161,8 +160,6 @@ void LockCtx::NiTreeCtrl_AddControllerSequence(int arg1, NiControllerSequence* a
 }
 
 extern "C" void* __cdecl _alloca(size_t);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 struct CellFile
 {
     unsigned char FUN_00472660();

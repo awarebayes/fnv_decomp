@@ -1112,7 +1112,6 @@ void* __thiscall FUN_00692080_class::FUN_00692080(unsigned int flags)
 }
 }  // namespace fnv_00692080
 
-void __cdecl operator delete(void*);
 struct FUN_00691b40_class
 {
     void __thiscall FUN_00691b40();
@@ -1129,7 +1128,6 @@ void* FUN_00691b40_class::FUN_006920b0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 void UpdateState_00691bf0();
 struct FUN_006920e0_class
 {
@@ -1464,7 +1462,6 @@ FUN_0069cd10_class* __thiscall FUN_0069cd10_class::UpdateState_0069cd10()
     return this;
 }
 
-void __cdecl operator delete(void*);
 
 struct FUN_0069d0c0_class
 {
@@ -1483,7 +1480,6 @@ void* FUN_0069d0c0_class::FUN_0069d0c0(unsigned int flags)
     return this;
 }
 
-void* __cdecl operator new(size_t, void*);
 template <>
 // @fnv 0x0069d0f0
 // pdb: BSSimpleArray<NavMeshBounds::NavMeshBoundsTriangle,1024>::_ConstructItems | NavMeshBounds.obj | debug, object-file run extension, low
@@ -2619,8 +2615,6 @@ int __thiscall FUN_00692000_class::AddData(FUN_00692000_data* source)
     return index;
 }
 
-void* __cdecl operator new(size_t uiSize, void* pvMem);
-void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct B692320Entry
 {
@@ -2648,7 +2642,6 @@ void B692320Allocator::ConstructEntries(B692320Entry* pkArray, unsigned int Item
         new (&pkArray[i]) B692320Entry;
 }
 
-void* __cdecl operator new(size_t, void*);
 inline void __cdecl operator delete(void*, void*)
 {}
 
@@ -2682,8 +2675,6 @@ void PathLocItemArray::ConstructItems(PathLocItem* items, unsigned int count)
     }
 }
 
-void* operator new(size_t size, void* place);
-void operator delete(void* object, void* place);
 
 struct PairCell
 {
@@ -2868,7 +2859,6 @@ Obj_b9971* FUN_0069b8a0_cls::CreateObj()
     return new Obj_b9971();
 }
 
-void __cdecl operator delete(void*, void*);
 // Not a NiBound (16 bytes): a 12-byte element whose ctor 0x006240d0 runs the (folded, empty /Od) NiPoint3 ctor
 // 0x006815c0 on itself, i.e. a NiPoint3 wrapper; its real class is unknown.
 struct FUN_006240d0_Element
@@ -3618,7 +3608,6 @@ extern float DAT_01030ff4;
 extern double DAT_0101de30;
 extern int DAT_011f426c;
 
-void* operator new(size_t n);
 void* __cdecl Object_DispatchCommandFour(unsigned int n);
 void* __cdecl FormHeap_Allocate(unsigned int n);
 void* __stdcall GetPathManager(void* p, int a);

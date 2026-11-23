@@ -142,7 +142,6 @@ extern TaskQueueParallelManager* DAT_01202df4;             // @ref 0x01202df4 DA
 extern TES* g_TES;
 extern PlayerCharacter* g_thePlayer;
 int Warning(const char*, ...);
-void operator delete(void*);
 extern bool DAT_011a31f4;
 extern "C" __declspec(dllimport) void __stdcall DebugBreak();
 

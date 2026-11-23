@@ -47,7 +47,6 @@ class BSTexMapItem
     unsigned short sPriority; // src: XBOX_RETAIL_PDB +0xc (old: m_usTextureSizeLevel)
     short sNameBaseOffset; // src: XBOX_RETAIL_PDB +0xe (old: m_sTextureCacheValue)
 
-    void* operator new(size_t size);
 
     BSTexMapItem(NiTexture* tex, BSTexMapItem* next)
     {

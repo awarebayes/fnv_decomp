@@ -197,7 +197,6 @@ struct FUN_0084e250_shell
     void BGSSaveLoadHistory_AddNote(unsigned int count);
 };
 
-void __cdecl operator delete(void*);
 
 // @fnv 0x0084e250
 // src: XBOX_RETAIL_PDB 0x0084e250

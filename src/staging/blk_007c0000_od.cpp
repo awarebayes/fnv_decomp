@@ -951,8 +951,6 @@ void C7D8EE0List::SelectLast()
     SetSelection(GetCount(0) - 1);
 }
 
-void* __cdecl operator new(size_t size, void* location);
-void __cdecl operator delete(void* object, void* location);
 // Default-constructs each video resolution record in place.
 // @fnv 0x007da1a0
 template <>

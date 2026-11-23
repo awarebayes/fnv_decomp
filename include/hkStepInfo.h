@@ -10,8 +10,6 @@
 class hkStepInfo
 {
   public:
-    void* __cdecl operator new(size_t nbytes);
-    void __cdecl operator delete(void* p);
 
     hkStepInfo() {}
     void set(float startTime, float endTime)

@@ -54,8 +54,6 @@ extern "C" size_t __cdecl strlen(const char*);
 extern "C" char* __cdecl strrchr(const char*, int);
 extern "C" char* __cdecl strtok(char*, const char*);
 extern "C" double __cdecl atof(const char*);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 inline unsigned int BSStringLength(const char* p)
 {
@@ -200,8 +198,6 @@ struct AtlasFile
 };
 AtlasFile* FileFinder_GetFile_(const char*, int, unsigned int);
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);

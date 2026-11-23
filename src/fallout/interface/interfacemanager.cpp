@@ -1217,7 +1217,6 @@ void __fastcall InterfaceManager_ForceTextureRelease(InterfaceManager* pThis)
     g_TES->SetTESActive(true);
 }
 
-void __cdecl operator delete(void*);
 
 struct Node_007165d0
 {
@@ -3348,7 +3347,6 @@ void FUN_0070c4a0_shell::UpdateInterface()
 }
 }  // namespace fnv_0070c4a0
 
-void* __cdecl operator new(size_t);
 struct Scratch
 {
     int a;
@@ -3671,7 +3669,6 @@ struct FUN_0070adb0_shell : public InterfaceManager
 };
 
 
-void* __cdecl operator new(size_t);
 
 struct NiUpdateDataH
 {
@@ -4676,7 +4673,6 @@ SceneGraph* FUN_00712e90_shell::InterfaceManager_CreateSceneGraph(SceneGraph* ap
 }
 }  // namespace fnv_00712e90
 
-void* __cdecl operator new(size_t);
 struct Widget
 {
     Widget();
@@ -12804,7 +12800,6 @@ struct FUN_00718ee0_shell : public SystemColorManager
     void AddColor(char*, unsigned int, unsigned int, unsigned int, SystemColorInfo*, int);
 };
 
-void* __cdecl operator new(size_t);
 unsigned int __cdecl PackRgba(unsigned int, unsigned int, unsigned int, unsigned int);
 
 struct FUN_00719250_stand
@@ -13004,7 +12999,6 @@ struct GlobalObject2_0040c150
 {
     int* Int();
 };
-void* __cdecl operator new(size_t);
 unsigned int __cdecl PackRgba(unsigned int, unsigned int, unsigned int, unsigned int);
 struct FUN_007192e0
 {

@@ -1783,7 +1783,6 @@ struct FUN_00c3c590_QueuedFile
 };
 
 int __cdecl InitScriptRunLock(void*);
-void* __cdecl operator new(size_t);
 
 // @fnv 0x00477780
 // pdb: BGSDestructibleObjectForm::PreloadReplacementModels | BGSDestructibleObjectForm.obj | retail, upstream name already matches, high

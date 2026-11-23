@@ -1137,8 +1137,6 @@ void TESCreature::SaveForm()
 }
 
 extern "C" void* _alloca(size_t);
-void* operator new(size_t);
-void operator delete(void*);
 void* ourMemset(void*, int, unsigned int);
 struct CreatureRecordFile
 {

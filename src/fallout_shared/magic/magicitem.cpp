@@ -464,7 +464,6 @@ void MagicItem_IncrementGlobalCounter()
     DAT_011c3438 += 1;
 }
 
-void operator delete(void*);
 const char* strrchr(const char*, int);
 
 // Preloads the magic item's effect models and, per effect, loads weapon, armor, NPC or creature models and animation files via g_modelLoader.

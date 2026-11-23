@@ -79,7 +79,6 @@ void __cdecl BSEndian(unsigned short*, EndianSizeTag<2>);
 unsigned int __fastcall GetRagdollRecordType(TESFile* file);
 
 int __cdecl Warning(const char*, ...);
-void __cdecl operator delete(void*);
 
 // The shared string header lacks the BSStringT comparison overload at 0x00501c90.
 struct RagdollStringOperations : BSStringT<char>

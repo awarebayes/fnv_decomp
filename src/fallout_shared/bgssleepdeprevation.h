@@ -20,6 +20,5 @@ class SleepStageDataOperations
 extern "C" unsigned int DAT_011c31b0;
 extern "C" BGSSleepDeprevationStage** DAT_011c31b4;
 
-void operator delete(void* pointer);
 
 #endif

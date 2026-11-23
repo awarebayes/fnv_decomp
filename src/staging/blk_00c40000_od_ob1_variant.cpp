@@ -768,7 +768,6 @@ struct FUN_00878690_shell
 {
     void __thiscall FUN_00c51df0();
 };
-void __cdecl operator delete(void* ptr, size_t size);
 struct FUN_00c52830_class
 {
     void* __thiscall FUN_00c52830(unsigned int flags);
@@ -789,7 +788,6 @@ struct FUN_00a7b300_shell
 struct FUN_00c55330_class
 {
     void* __thiscall FUN_00c55330(unsigned int flags);
-    void operator delete(void* p, size_t size);
 };
 extern int DAT_010c2d54;
 struct FUN_00c1c280_class
@@ -867,12 +865,10 @@ struct FUN_00c5db90_Class
 {
     void __thiscall FUN_00c5db90();
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c5eb20_Class
 {
     void* __thiscall FUN_00c5eb20(unsigned int flags);
 };
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c5ed60_Class
 {
     void __thiscall FUN_00c5ed60();
@@ -895,7 +891,6 @@ struct FUN_00c5f500_class
 struct FUN_00c5fc20_class
 {
     void* __thiscall FUN_00c5fc20(unsigned int flags);
-    void __cdecl operator delete(void* p, size_t size);
     void __thiscall FUN_00c5faa0();
 };
 struct BaseForCall
@@ -1069,7 +1064,6 @@ struct FUN_00c450d0 : FUN_00c5f570_Class
 };
 struct FUN_00c465a0_class
 {
-    void* operator new(size_t);
     FUN_00c465a0_class();
     char pad[0x1c];
 };

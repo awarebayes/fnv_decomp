@@ -38,8 +38,6 @@ public:
 // Unit-specific declarations; TESForm comes from the shared reference header.
 extern "C" void* memset(void*, int, size_t);
 extern "C" void* _alloca(size_t);
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 class TerminalMenuItem
 {
   public:

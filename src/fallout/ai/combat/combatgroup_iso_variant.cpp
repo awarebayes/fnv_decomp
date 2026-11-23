@@ -1413,8 +1413,6 @@ struct Obj8
     int m0;
     int m4;
     Obj8();
-    void* operator new(size_t size, void* where);
-    void operator delete(void* p, void* where);
 };
 struct Walker8
 {
@@ -2751,8 +2749,6 @@ struct RemovalArray : RemovalOperations
     unsigned int unk08;
     void BSSimpleArray_CombatTarget_1024_RemoveFast(unsigned int first, unsigned int count);
 };
-void* operator new(size_t uiSize, void* pvWhere);
-void operator delete(void* pvMem, void* pvWhere);
 class C98F840Element
 {
   public:

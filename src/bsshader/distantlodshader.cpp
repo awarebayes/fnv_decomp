@@ -424,7 +424,7 @@ struct NiD3DVertexDeclaration : ShaderVTable
 
 struct A51BF0Base : ShaderVTable
 {
-    char pad[0x100 - sizeof(void*)];
+    char pad[((0x100) > sizeof(void*)) ? ((0x100) - sizeof(void*)) : 1];
     static void* __cdecl operator new(size_t);
 };
 

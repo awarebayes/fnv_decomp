@@ -17,10 +17,6 @@
 #include "../../../include/BSFaceGenModel.h"
 #include "../../../include/BSFaceGenManager.h"
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete[](void*);
 #include "../../../include/MEM_CONTEXT.h"
 #include "../../../include/HAIR_PART.h"
 template <class T> class FaceGenIterator

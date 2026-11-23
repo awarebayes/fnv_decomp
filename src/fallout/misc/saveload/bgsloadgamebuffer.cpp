@@ -397,7 +397,6 @@ unsigned int FUN_00853500_shell::BGSNumericIDIndex_GetNumericID()
     return ((FUN_00846d20_shell*)g_BGSSaveLoadGame->GetFormIDMap())->BGSSaveLoadFormIDMap_GetFormID(uiValue);
 }
 
-void* __cdecl operator new(size_t);
 
 int DAT_011d60cc;
 
@@ -443,7 +442,6 @@ void BGSLoadGameBuffer::ReadTypedData(NiMatrix3* apData, unsigned int aiSize)
     }
 }
 
-void __cdecl operator delete(void* pointer);
 
 struct FUN_0081db60_shell
 {

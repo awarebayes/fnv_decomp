@@ -283,8 +283,6 @@ class ModelLoader
 extern ModelLoader* g_modelLoader;
 extern const char* DAT_01199bcc[];
 extern char DAT_011a9448;
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 extern "C" void* memset(void*, int, size_t);
 int Warning(const char*, ...);
 #include "../../include/ANIM_GROUP_ACTION.h"

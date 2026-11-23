@@ -160,7 +160,6 @@ public:
     CombatController(Actor* apAttacker, ActorCombatGroup* apCombatGroup, bool apCurrentPackage);
     CombatController(void* apAttacker, ActorCombatGroup* apCombatGroup, void* apCurrentPackage);
     CombatController(Actor* apAttacker, int apCombatGroup, TESPackage* apCurrentPackage);
-    void* operator new(size_t size);
 
     // Overrides of primary vtable slots 4, 21, 23, 25 and 33.
     virtual ~CombatController();

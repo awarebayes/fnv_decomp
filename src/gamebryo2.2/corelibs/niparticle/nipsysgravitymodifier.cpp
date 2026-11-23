@@ -46,7 +46,6 @@ struct NiPSysGravityModifier : NiPSysModifier
     float m_fTurbulenceAmount;
     float m_fScale;
     bool m_bFieldFlag;
-    void* operator new(size_t);
     NiPSysGravityModifier* InitDefaults();
     NiPSysGravityModifier* CreateClone_00c22b00(CloningProcess&);
 };

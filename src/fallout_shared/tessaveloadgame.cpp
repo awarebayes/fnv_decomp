@@ -1406,7 +1406,6 @@ bool __thiscall FUN_00862430_cls::HasInvalidComponents(FUN_00862430_vec* pVec)
 class TESTopicInfo;
 template <class T> class NiTMallocInterface;
 namespace fnv_008632a0 {
-void* __cdecl operator new(size_t);
 
 
 
@@ -7759,7 +7758,6 @@ void __thiscall Host58030::TESSaveLoadGame_SaveGlobalData(int apFile)
 #include "../../include/MEM_CONTEXT.h"
 extern const char DAT_010804c8[];
 extern const char DAT_01080750[];
-void* __cdecl operator new(size_t);
 extern "C" void __cdecl ProgramFlow(const char*);
 
 struct SaveMemory
@@ -9660,8 +9658,6 @@ struct Flame77 : CreatedForm77
     Flame77();
 };
 
-void* operator new(size_t);
-void operator delete(void*);
 enum MEM_CONTEXT;
 
 extern const char DAT_010804c8[];

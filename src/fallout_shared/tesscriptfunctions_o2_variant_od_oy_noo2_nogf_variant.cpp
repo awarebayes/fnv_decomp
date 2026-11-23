@@ -577,14 +577,14 @@ class LevListC4
 class LevCreatureC4 : public TESForm
 {
   public:
-    char m_acPad[0x30 - sizeof(TESForm)];
+    char m_acPad[((0x30) > sizeof(TESForm)) ? ((0x30) - sizeof(TESForm)) : 1];
     LevListC4 m_kList;
 };
 
 class LevCharacterC4 : public TESForm
 {
   public:
-    char m_acPad[0x30 - sizeof(TESForm)];
+    char m_acPad[((0x30) > sizeof(TESForm)) ? ((0x30) - sizeof(TESForm)) : 1];
     LevListC4 m_kList;
 };
 

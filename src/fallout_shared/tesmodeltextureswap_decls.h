@@ -35,7 +35,6 @@ const char kModelTextureSwapInitWarning[] =
     "MASTERFILE: Failed to find texture set (%08X) in model texture swap init for form '%s' (%08X).";
 
 int __cdecl Warning(const char* format, ...);
-void __cdecl operator delete(void* pointer);
 
 class TESObjectREFR;
 class CombatThreatRecord;
@@ -68,7 +67,6 @@ class TaskQueueInterface
   public:
     static void CopyStringToBuffer(char*, unsigned int, const char*);
 };
-void* __cdecl operator new(size_t);
 
 extern NiFixedString EmptyFS;
 void NiGlobalStringTable_IncRefCount(const NiFixedString&);

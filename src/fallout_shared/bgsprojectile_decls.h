@@ -3,7 +3,6 @@
 #ifndef FNV_BGSPROJECTILE_DECLS_H
 #define FNV_BGSPROJECTILE_DECLS_H
 
-void* operator new(size_t size);
 
 class BGSProjectileFloatNode
 {

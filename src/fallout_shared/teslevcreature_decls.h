@@ -10,8 +10,6 @@
 #include "../../include/TESModel.h"
 #include "../../include/TESModelTextureSwap.h"
 
-void* __cdecl operator new(size_t);
-void __cdecl operator delete(void*);
 
 // pdb: class ContainerItemExtra, size 0xc, 5 members
 class ContainerItemExtra

@@ -9,10 +9,6 @@
 #include "../../include/NiPoint3.h"
 
 #include <malloc.h>
-void* __cdecl operator new(size_t);
-void* __cdecl operator new[](size_t);
-void __cdecl operator delete(void*);
-void __cdecl operator delete[](void*);
 extern "C" void* __cdecl memset(void*, int, size_t);
 template <int N> struct EndianSizeTag
 {

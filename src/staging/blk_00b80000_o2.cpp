@@ -140,7 +140,6 @@ template<class T> inline NiPointer<T>& NiPointer<T>::operator=(const NiPointer& 
 template<class T> inline NiPointer<T>::operator T*() const { return m_pObject; }
 template<class T> inline T* NiPointer<T>::operator->() const { return m_pObject; }
 
-extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00b81290_class
 {
@@ -180,7 +179,6 @@ FUN_00b8d580_Class* __thiscall FUN_00b8d580_Class::FUN_00b8d580(unsigned int aui
 
 void FUN_00c03a20();
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b91b50
 {
@@ -200,7 +198,6 @@ FUN_00b91b50* FUN_00b91b50::Method(bool abFree)
 
 void __cdecl FUN_00b92450();
 
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b924d0_class
 {
@@ -357,7 +354,6 @@ FUN_00b8d990::FUN_00b8d990()
 extern int DAT_010b0b78;
 extern int DAT_010b0b98;
 void FUN_00c03a20();
-void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b8daa0_class
 {
@@ -564,7 +560,7 @@ extern int DAT_010b211c;
 
 struct FUN_00b8ee20_class : ImageSpaceEffectShader
 {
-    char pad[0x94 - sizeof(ImageSpaceEffectShader)];
+    char pad[((0x94) > sizeof(ImageSpaceEffectShader)) ? ((0x94) - sizeof(ImageSpaceEffectShader)) : 1];
     struct
     {
         unsigned int size;
@@ -1052,7 +1048,6 @@ FUN_00b91780_shell* __thiscall FUN_00b91780_shell::FUN_00b91780(bool abFree)
 }
 
 namespace fnv_00b917c0 {
-extern "C" void __cdecl operator delete(void*, size_t);
 extern int DAT_010b4de8;
 extern int DAT_010b4dc8;
 struct ImageSpaceEffectShader
@@ -1145,7 +1140,7 @@ void FUN_00c03a20();
 struct FUN_00b91cb0_class
 {
     void* vtbl;
-    char pad[0x6c - sizeof(void*)];
+    char pad[((0x6c) > sizeof(void*)) ? ((0x6c) - sizeof(void*)) : 1];
     void* m_6c;
     FUN_00b91cb0_class* __thiscall FUN_00b91cb0(unsigned char flag);
 };
@@ -1293,7 +1288,6 @@ FUN_00b92180::FUN_00b92180()
 extern int DAT_010b57b0;
 extern int DAT_010b57d0;
 void FUN_00c03a20();
-void __cdecl operator delete(void* p, size_t size);
 struct FUN_00b92290_shell
 {
     FUN_00b92290_shell* __thiscall FUN_00b92290(bool flag);
@@ -2139,7 +2133,7 @@ FUN_00b8ded0::FUN_00b8ded0()
 
 struct FUN_00b8e170 : ImageSpaceEffectShader
 {
-    char m_00b8e170[0x95 - sizeof(ImageSpaceEffectShader)];
+    char m_00b8e170[((0x95) > sizeof(ImageSpaceEffectShader)) ? ((0x95) - sizeof(ImageSpaceEffectShader)) : 1];
     DeferredTextureArrayMember m_00b8e204;
     FUN_00b8e170();
 };

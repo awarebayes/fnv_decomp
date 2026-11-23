@@ -829,7 +829,6 @@ void __cdecl TaskQueueInterface_QueueScriptFunctionCall(TaskQueueInterface*, int
 
 // Getter bodies are shared by the original linker. The receiver overlays below
 // preserve canonical symbol bindings: +0x24 target, +0x28 caster, +0x0c source.
-void* __cdecl operator new(size_t);
 class ActiveEffect
 {
   public:

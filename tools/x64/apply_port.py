@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Mechanical source edits of the x64 port; each step is idempotent and prints how many files it touched.
 
-usage: python tools/x64/apply_port.py <step>...   (steps: asserts, asm, alloc, size_t, crt)
+usage: python tools/x64/apply_port.py <step>...   (steps: asserts, asm, alloc, size_t, crt, decls)
 
 The edits are committed as ordinary source changes; this script exists so the same passes can be
 repeated when the branch is rebased onto newer upstream sources.
@@ -87,7 +87,18 @@ def step_crt(t):
     return t
 
 
-STEPS = {'asserts': step_asserts, 'asm': strip_asm, 'alloc': step_alloc, 'size_t': step_size_t, 'crt': step_crt}
+def step_decls(t):
+    # operator new/delete are declared by <new>; stand-alone redeclarations (some inside namespaces) are
+    # rejected by the 64-bit front end, and extern "C" on them contradicts the C++ linkage
+    t = re.sub(r'^[ \t]*(?:extern\s+"C"\s+)?void\*?\s+(?:__cdecl\s+)?operator\s+(?:new|delete)(?:\s*\[\])?\s*\([^()]*\)\s*(?:throw\(\)\s*)?;[ \t]*\n',
+               '', t, flags=re.M)
+    # array bounds written as a constant minus a 32-bit sizeof go negative at 64 bits
+    t = re.sub(r'\[(0x[0-9a-fA-F]+|\d+)\s*-\s*sizeof\(([^()]+)\)\]',
+               r'[((\1) > sizeof(\2)) ? ((\1) - sizeof(\2)) : 1]', t)
+    return t
+
+
+STEPS = {'asserts': step_asserts, 'asm': strip_asm, 'alloc': step_alloc, 'size_t': step_size_t, 'crt': step_crt, 'decls': step_decls}
 
 
 def main():

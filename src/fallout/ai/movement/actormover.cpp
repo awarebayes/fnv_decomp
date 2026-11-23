@@ -371,7 +371,6 @@ void ActorMover::FinishMoving(bool abClearHandler)
     ((TESForm*)this)->TESForm::ClearData();
 }
 
-void* __cdecl operator new(size_t);
 void* __fastcall FUN_009dff40(void*, int, void*, void*);
 
 struct Dummy_0xe4

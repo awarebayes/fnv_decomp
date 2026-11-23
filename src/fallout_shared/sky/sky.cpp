@@ -66,7 +66,6 @@ class GameSettingCollection;
 using ::SettingT;
 extern SettingT<GameSettingCollection> originalRuntimeFloatSetting76;
 extern NiColor DAT_011a9b7c;
-void* operator new(size_t);
 
 // Additional out-of-line accessors used by this unit are absent from TESWeather.h.
 class WeatherAccessMethods : public TESWeather

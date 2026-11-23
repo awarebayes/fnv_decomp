@@ -314,7 +314,6 @@ void* FUN_005277a0_Class::FUN_005277a0(unsigned int flags)
     return this;
 }
 
-void __cdecl operator delete(void*);
 struct FUN_00528be0_Class
 {
     void __thiscall FUN_00528be0();
@@ -753,7 +752,6 @@ struct FUN_00526c90
     FUN_00526c90();
 };
 
-void* __cdecl operator new(size_t);
 
 // @fnv 0x00526e10
 // src: COMMUNITY 0x00526e10

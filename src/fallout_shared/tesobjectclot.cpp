@@ -48,7 +48,6 @@ void TESObjectCLOT::Save_00515f40()
     TESForm::FinishFormRecord();
 }
 
-void __cdecl operator delete(void*);
 
 // Calls the object's destructor and, when bit 0 of flags is set, frees the object, then returns this.
 // @fnv 0x00515580
