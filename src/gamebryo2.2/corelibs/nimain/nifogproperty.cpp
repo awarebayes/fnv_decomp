@@ -48,7 +48,7 @@ enum FogFunction
     FOG_VERTEX_ALPHA = 2
 };
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl NiMalloc(unsigned int);
 char* __cdecl NiSprintf(char*, unsigned int, const char*, ...);
 

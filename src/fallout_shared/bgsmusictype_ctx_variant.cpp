@@ -7,7 +7,7 @@
 #include "../../include/AutoMemHelper.h"
 #include <malloc.h>
 #include "../../include/TESFile.h"
-extern "C" int __cdecl sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+extern "C" int __cdecl sprintf_s(char* buffer, size_t size, const char* format, ...);
 unsigned int __cdecl GetRandomNumberInRange(int minimum, int maximum);
 
 #include <windows.h>

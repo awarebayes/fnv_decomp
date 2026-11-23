@@ -927,7 +927,7 @@ struct BuildArrayLocalForm
     }
 };
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 struct BuildWorkItem

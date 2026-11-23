@@ -480,7 +480,7 @@ struct FUN_00ec2c40_cls
     void MoviePlayer_DecreaseSequenceThreadPriority();
 };
 // Look up the file name registered under a key and copy it into a MAX_PATH buffer.
-extern "C" int __cdecl strcpy_s(char* pcDest, unsigned int uiSize, const char* pcSrc);
+extern "C" int __cdecl strcpy_s(char* pcDest, size_t uiSize, const char* pcSrc);
 class EC2DF0NameMap
 {
   public:
@@ -1833,7 +1833,7 @@ class MovieSemaphore
     }
 };
 void* __cdecl NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dst, int val, unsigned int size);
+extern "C" void* __cdecl memset(void* dst, int val, size_t size);
 inline void* NiAllocBytes(unsigned int uiBytes)
 {
     return NiMalloc(uiBytes);

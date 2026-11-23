@@ -763,7 +763,7 @@ bool TopicS::HasCur()
     return (cur && *cur->_ref_006815c0() != 0) ? 1 : 0;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct ItemChangeList : BSSimpleList<InventoryStackRecord*>
 {

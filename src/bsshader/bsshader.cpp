@@ -60,11 +60,11 @@ class IMemoryHeap;
 #include "../../include/MemoryManager.h"
 
 extern MemoryManager g_memoryManager;
-extern "C" unsigned int __security_cookie;
-extern "C" void __fastcall __security_check_cookie(unsigned int);
-extern "C" int strcpy_s(char*, unsigned int, const char*);
-extern "C" int strcat_s(char*, unsigned int, const char*);
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" uintptr_t __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
+extern "C" int strcpy_s(char*, size_t, const char*);
+extern "C" int strcat_s(char*, size_t, const char*);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 struct _iobuf;
 #include "../../include/_D3DXMACRO.h"
 // pdb: structure _FILETIME, size 0x8, 2 members
@@ -1760,7 +1760,7 @@ inline void Cat(char* d, unsigned n, const char* s)
     strcat_s(d, n, s);
 }
 extern "C" int BSsprintf(char*, int, const char*, ...);
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 class FileView;
 struct FileViewMethods
 {

@@ -60,7 +60,7 @@ void* __cdecl NiCollisionData_GetRTTI()
 }
 
 extern "C" void* __cdecl _NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 int __cdecl NiSprintf(char*, unsigned int, const char*, ...);
 
 // Allocates a string sized from pcPrefix and formats it as "<pcPrefix> = <mode name>" based on eMode, returning the buffer.
@@ -1125,7 +1125,7 @@ extern const char str_010f19c8[];
 extern const char str_010f19b0[];
 extern const char str_0109b2ec[];
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _NiMalloc_00aa1070(unsigned int size);
 void FUN_00a305b0(char* buf, unsigned int size, const char* fmt, const char* name);
 

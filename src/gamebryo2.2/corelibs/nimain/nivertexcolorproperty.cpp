@@ -124,7 +124,7 @@ void* __fastcall CloneVertexColorProperty(NiVertexColorProperty* self, void*, un
     }
 }
 
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 
 void* __cdecl NiMalloc(unsigned int size);
 int __cdecl FUN_00a305b0(char* buffer, unsigned int size, const char* format, ...);

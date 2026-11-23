@@ -4208,7 +4208,7 @@ char* __fastcall TESBipedModelForm_GetIconDefaultPath(TESBipedModelForm* self)
     return self->icon[0].GetTextureResourcePath();
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 extern "C" __declspec(dllimport) int __stdcall FindClose(void*);
 // This unit imports lstrcpy through its original IAT entry.

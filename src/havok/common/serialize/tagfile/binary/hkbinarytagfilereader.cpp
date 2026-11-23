@@ -1119,7 +1119,7 @@ struct ParamP
 };
 extern "C" unsigned __int64 __fastcall ReadVarInt(void*);
 extern "C" float __fastcall hkIArchive_readFloat32(void*);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct ValueWorld
 {
     virtual void dummy0();

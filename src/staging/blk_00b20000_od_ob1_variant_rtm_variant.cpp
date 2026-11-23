@@ -728,7 +728,7 @@ struct ClsB3FCF0
     SubObj_b3f* unk54;
     void SIdvBranchInfo_SetGravity(SubObj_b3f* pSpline);
 };
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 struct B2ESecureTag
 {
 };
@@ -1593,7 +1593,7 @@ class FUN_00b2e330_It : public IteratorBaseAuxXC1000
 // Supplied other-agent string helper model reused with credit; new record copy below.
 namespace record_model {
 extern const unsigned int DAT_010173f0;
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -2360,7 +2360,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -2740,7 +2740,7 @@ inline CItQ_aceeb0::CItQ_aceeb0(ElQ_aceeb0* _Ptr, const VecQ_aceeb0* _Pvector) :
     _Myptr = _Ptr;
 }
 namespace buyUShort {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag

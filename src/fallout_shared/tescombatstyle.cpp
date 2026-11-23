@@ -28,7 +28,7 @@ void TESCombatStyle::ResetFormData()
         memset(&m_kUnsignedIntArray16, 0, 0x40);
     }
 }
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 // Reads a combat style record from the file, loading its editor ID, OBND, and CSDT/CSAD/CSSD chunks, then applies version-dependent defaults.
 // @fnv 0x00505180
@@ -92,7 +92,7 @@ bool TESCombatStyle::Load(TESFile* apFile)
     return true;
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 // A one-word aggregate stays on the stack under fastcall, preserving the
 // original thiscall argument layout for helpers absent from the shared class.

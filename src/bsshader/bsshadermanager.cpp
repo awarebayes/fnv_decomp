@@ -2634,7 +2634,7 @@ void __cdecl BSShaderManager_PrepareGeometry(AVObj* apGeometry, bool aeObjectTyp
 }
 
 void* __cdecl NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
 extern MemoryManager _g_memoryManager;
 
@@ -3949,7 +3949,7 @@ struct AccumPointerInit
     }
 };
 extern AccumPointerInit* accumulators;
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 __forceinline void ClearCallbackTables()
 {
     memset(DAT_011f9f40 + 0, 0, 8);
@@ -4140,7 +4140,7 @@ inline void NiTriBasedGeom::GetTriangle(unsigned short i, unsigned short& a, uns
 extern const char DAT_0102bf34[];
 extern const char DAT_010ad7a8[];
 extern const char DAT_010ad730[];
-extern "C" void* memmove(void*, const void*, unsigned int);
+extern "C" void* memmove(void*, const void*, size_t);
 extern "C" void* FUN_00ec61c0(void*, int, unsigned int);
 // Copies tangent and binormal data from extra data when present; otherwise computes per-vertex vectors from UVs and normals and updates geometry data.
 // @fnv 0x00b54b60

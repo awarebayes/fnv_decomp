@@ -16,7 +16,7 @@
 #include "../../include/TESDescription.h"
 #include "../../include/TESObjectIMOD.h"
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 #include "../../include/ENUM_FORM_ID.h"

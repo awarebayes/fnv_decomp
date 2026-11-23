@@ -154,7 +154,7 @@ void __fastcall RegisterFloatsExtraDataController(
 }
 
 extern char* DAT_0109b220;
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl NiFree(void*);

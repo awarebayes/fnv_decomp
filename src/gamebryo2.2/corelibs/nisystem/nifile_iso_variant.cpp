@@ -162,8 +162,8 @@ void RelativeSeekFile::NiFile_Seek_00aa1a90(int distance)
 }
 }
 
-extern "C" unsigned int __cdecl strlen(const char* str);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" size_t __cdecl strlen(const char* str);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 extern bool(__cdecl* DAT_011ac230)(const char*);
 extern bool(__cdecl* DAT_011ac22c)(const char*);

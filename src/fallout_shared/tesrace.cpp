@@ -383,7 +383,7 @@ int BSFaceGenManager_GetForcedLod()
     return DAT_0119b4e4;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" void __cdecl _security_check_cookie(unsigned int);
 struct RaceEditorNameAccess : TESRace
 {
@@ -805,7 +805,7 @@ void TESRace::ResetFormData()
     m_pYoungerRace = 0;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 bool __cdecl TESForm_QEndianSwapOnSave();
 void __cdecl TESForm_AddChunk(unsigned int);
 void __cdecl TESForm_AddChunkArray(unsigned int, const void*, unsigned int);
@@ -1698,7 +1698,7 @@ template <int N> struct RaceLoadEndianTag
 };
 void __cdecl BSEndian_00401080(int*, RaceLoadEndianTag<4>);
 void* __cdecl ourMemset(void*, int, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct RaceLoadReactionEndian
 {

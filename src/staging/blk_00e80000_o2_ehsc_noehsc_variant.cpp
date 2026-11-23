@@ -6800,7 +6800,7 @@ struct GlobalPoolStub {
     void __thiscall Grow(unsigned int growBy);
 };
 PoolItemStub* __cdecl AllocatePoolItem();
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern float DAT_0126f9c4;
 struct Matrix { NiPoint3 a,b,c; };
 struct LightSource {
@@ -7002,7 +7002,7 @@ struct PairEntry {
     int key;
     int val;
 };
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern int DAT_0126f918;
 extern int DAT_0126f91c;
 extern int DAT_0126f920;

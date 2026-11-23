@@ -27223,7 +27223,7 @@ void FUN_00567c50_cls::TESObjectREFR_RemoveOwner()
     }
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct MarkerPoint
 {
     float x, y, z;
@@ -47732,7 +47732,7 @@ struct EqTypeDescriptor;
 extern EqTypeDescriptor DAT_01183028;
 extern EqTypeDescriptor DAT_011841cc;
 extern "C" void* __cdecl FUN_00ec43fb(void*, long, const EqTypeDescriptor*, const EqTypeDescriptor*, int);
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 
 // Compares this reference view against another TESForm, returning true if they differ in receiver, data, parent, extra list, or scale.

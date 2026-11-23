@@ -51,7 +51,7 @@ BGSHeadPart::BGSHeadPart() : TESForm(), TESFullName(), TESModelTextureSwap(), Ex
     ResetFormData();
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 // @fnv 0x005e7530
 // src: XBOX_PDB 0x005e7530

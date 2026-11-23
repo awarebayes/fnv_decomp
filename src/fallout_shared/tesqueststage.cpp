@@ -16,7 +16,7 @@
 #include "tesqueststage_decls.h"
 #include <malloc.h>
 
-extern "C" void* __cdecl memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* destination, int value, size_t size);
 extern "C" const char DAT_0104af30[];
 int __cdecl Warning(const char* format, ...);
 bool __cdecl FUN_005ac740();

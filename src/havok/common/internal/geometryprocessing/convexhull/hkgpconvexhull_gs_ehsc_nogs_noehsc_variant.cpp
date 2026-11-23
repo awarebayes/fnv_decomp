@@ -5379,7 +5379,7 @@ using ::_mm_add_ss;
 using ::_mm_shuffle_ps;
 using ::_mm_xor_ps;
 using ::_mm_store_ss;
-extern "C" void* __cdecl memcpy(void* d, const void* s, unsigned int n);
+extern "C" void* __cdecl memcpy(void* d, const void* s, size_t n);
 
 extern double DAT_01032980;
 extern double DAT_0101dae8;

@@ -22,4 +22,4 @@ class FileFinder
 };
 extern ModelLoader* g_modelLoader;
 extern NiNode* DAT_011dfecc;
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);

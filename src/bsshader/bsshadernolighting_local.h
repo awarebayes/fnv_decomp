@@ -49,9 +49,9 @@ struct BSNoLightingShaderConfig
     const char* path;
     _D3DXMACRO macros[9];
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 template <class T> inline void AssignShader(NiPointer<T>& dest, T* value)
 {
     if (dest.m_pObject != value)

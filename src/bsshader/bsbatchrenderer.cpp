@@ -3074,7 +3074,7 @@ void __fastcall AddPassToGroup(BSBatchRenderer* pThis, int, RenderPass99* pkPass
 
 namespace fnv_00b9a5b0 {
 extern void* __cdecl NiMalloc(unsigned int);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" void _ReadWriteBarrier();
 extern const void* DAT_0106cf88[];
 extern const void* DAT_0106cf68[];

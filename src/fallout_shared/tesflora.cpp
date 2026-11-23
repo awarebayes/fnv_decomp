@@ -124,7 +124,7 @@ void S_005085b0_Sec::TESFlora_InitItem()
     FUN_00484ab0(1);
 }
 
-extern "C" void* __cdecl _alloca(unsigned int uiSize);
+extern "C" void* __cdecl _alloca(size_t uiSize);
 
 struct FloraFile
 {

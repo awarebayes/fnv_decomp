@@ -182,8 +182,8 @@ struct DestructionStageChunk
     unsigned int debrisCount;
     void SAVE_DESTRUCTIBLE_OBJECT_STAGE_Endian();
 };
-extern "C" void* __cdecl _alloca(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
 void __cdecl Warning_005b5e40(const char*, ...);
 void __cdecl TESModel_LoadModelTextureChunk(TESModel*, TESFile*);
 

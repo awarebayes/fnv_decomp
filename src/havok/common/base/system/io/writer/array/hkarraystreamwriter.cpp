@@ -36,7 +36,7 @@ __forceinline void hkArrayBase<T>::_clearAndDeallocate(hkMemoryAllocator& alloc)
     m_data = 0;
     m_iCapacityState = 0x80000000;
 }
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int) throw();
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t) throw();
 template <class T>
 __forceinline void hkArrayBase<T>::_setSize(hkMemoryAllocator& alloc, int n, const T& fill)
 {

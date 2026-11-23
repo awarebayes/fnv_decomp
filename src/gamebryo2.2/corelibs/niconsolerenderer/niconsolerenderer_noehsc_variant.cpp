@@ -576,7 +576,7 @@ struct S_00e69a20
     DepthDevice* dev;
     bool __thiscall CreateDepthStencilBuffer(Ni2DBuffer* a, NiPixelFormat const* b, unsigned int c);
 };
-extern "C" char* __cdecl strcat_s(char* dest, unsigned int size, const char* src);
+extern "C" char* __cdecl strcat_s(char* dest, size_t size, const char* src);
 struct FUN_00e69c00_shell
 {
     char pad[0x5cc];
@@ -12144,7 +12144,7 @@ struct PackByteInfo
     unsigned char* dest;
 };
 unsigned int __cdecl PackByteElements(PackByteInfo* kParams);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 inline unsigned short minimum(unsigned short a, unsigned short b)
 {
     return a > b ? b : a;
@@ -12970,7 +12970,7 @@ struct Node
         operator_delete_sized(pvMem, uiSize);
     }
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 void* NiMalloc(unsigned int);
 struct RendererBase
 {

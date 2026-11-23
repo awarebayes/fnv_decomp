@@ -5,9 +5,9 @@
 
 #include "bsfacegenmodel_decls.h"
 
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
@@ -382,7 +382,7 @@ void __cdecl Object_Length_error_Thunk()
 }
 
 namespace xlenb0f {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag

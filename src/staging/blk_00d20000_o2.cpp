@@ -44,7 +44,7 @@ inline void CopyVectorWords(hkVector4& result, const hkVector4& vector)
     const int* src = (const int*)&vector;
     dst[0] = src[0]; dst[1] = src[1]; dst[2] = src[2]; dst[3] = src[3];
 }
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 #include "../../include/hkpListAgent.h"
 #include "../../include/hkpSymmetricAgentFlipBodyCollector.h"

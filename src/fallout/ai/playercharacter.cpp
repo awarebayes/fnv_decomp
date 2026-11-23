@@ -141,7 +141,7 @@ inline NiPoint3 operator*(float scalar, const NiPoint3& point)
 #include "../../../include/Sky.h"
 #include "../../../include/bhkCollisionObject.h"
 #include "../../../include/bhkWorld.h"
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 #undef __vecDelDtor
 
@@ -36476,7 +36476,7 @@ bool PlayerCharacter::AddEatDrinkItem(MagicItem* apItem)
     return badded;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 
 

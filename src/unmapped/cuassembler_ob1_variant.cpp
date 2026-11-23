@@ -4,9 +4,9 @@
 
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
-extern "C" unsigned int __cdecl strlen(const char* pStr);
+extern "C" size_t __cdecl strlen(const char* pStr);
 
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 namespace std {
 struct _Secure_char_traits_tag;
 template <class _Elem> struct char_traits;

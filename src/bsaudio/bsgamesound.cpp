@@ -215,8 +215,8 @@ struct BSGameSoundOperations : BSGameSound
     }
 };
 
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 extern BSAudio* DAT_011f6d98;
 
@@ -768,7 +768,7 @@ void BSWin32AudioInitialization::SetWindow(int aiWindow)
     FUN_00ad7020(0);
 }
 
-extern "C" int __cdecl strcat_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcat_s(char*, size_t, const char*);
 
 struct AudioPathFixer
 {

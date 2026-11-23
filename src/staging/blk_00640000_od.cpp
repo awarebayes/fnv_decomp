@@ -8391,7 +8391,7 @@ void* __thiscall FUN_0065ec70_class::FUN_0065ec70(unsigned int flags)
 }
 }  // namespace fnv_0065ec70
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct GridStorage
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14;

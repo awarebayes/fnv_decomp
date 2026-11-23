@@ -59,7 +59,7 @@ extern BGSVoiceType* g_pDefaultFemaleVoiceType;
 int __cdecl Warning(const char*, ...);
 
 extern "C" int __cdecl sprintf(char*, const char*, ...);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 int __cdecl NormalizePartIndex(BIPED_OBJECT);
 class TESBoundObject;
 

@@ -1,7 +1,7 @@
 #ifndef SPEEDTREELEAFSHADER_DECLS_H
 #define SPEEDTREELEAFSHADER_DECLS_H
 
-extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, size_t size);
 
 extern "C"
 {

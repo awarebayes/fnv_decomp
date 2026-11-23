@@ -14,8 +14,8 @@ inline void operator delete(void*, void*) throw()
 {}
 namespace skac53 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag

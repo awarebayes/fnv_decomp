@@ -486,7 +486,7 @@ NiObject* BSLookIKNote::MakeClone(CloningProcess& cloning)
     return pkClone;
 }
 
-extern "C" int __cdecl strncmp(const char* s1, const char* s2, unsigned int n);
+extern "C" int __cdecl strncmp(const char* s1, const char* s2, size_t n);
 extern "C" char* __cdecl strncpy(char* dest, const char* src, unsigned int n);
 
 inline NiFixedString::operator const char*() const

@@ -23,5 +23,5 @@ class FileEntryList;
 #include "../../include/TESGrass.h"
 // The shared chunk reader is bound under this canonical alias.
 #include "../../include/BGSImpactData.h"
-extern "C" void* __cdecl memset(void* data, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* data, int value, size_t size);
 #endif

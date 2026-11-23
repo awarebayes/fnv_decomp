@@ -30,7 +30,7 @@ TESFollowPackageData* TESFollowPackageData::Construct(float afValue)
     return this;
 }
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" bool __cdecl TESForm_QEndianSwapOnSave();
 extern "C" void __cdecl AppendChunk(int, void*, int);
 struct BipedModelForm

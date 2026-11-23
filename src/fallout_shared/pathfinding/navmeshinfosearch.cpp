@@ -68,7 +68,7 @@ template <class NodeDataType, class LinkDataType> class AStarOpenList
 typedef AStarOpenList<const NavMeshInfo*, TESObjectREFR*> NavMeshInfoQueue;
 FNV_STATIC_ASSERT(sizeof(NavMeshInfoQueue) == 0x54);
 FNV_STATIC_ASSERT(offsetof(NavMeshInfoSearch, m_pGoalNavMeshInfo) == 0x2074);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 // The legacy destructor label is contradicted by the queue member initialization
 // at AStarSearch construction: the receiver is this + 0x1ff4.

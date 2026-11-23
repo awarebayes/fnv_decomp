@@ -26,7 +26,7 @@ struct NiMatrix3_ColView : public NiMatrix3
     NiPoint3 GetCol(int c) const
     { return NiPoint3((&m_pEntry[0][0])[c], (&m_pEntry[0][0])[3+c], (&m_pEntry[0][0])[6+c]); }
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 // The shared stream declarations omit the position and transfer callback fields.
 inline unsigned int NiBinaryStream::BinaryRead(void* buffer, unsigned int bytes, unsigned int* sizes, unsigned int count)
@@ -287,7 +287,7 @@ void NiBillboardNode::GetViewerStrings_00a7e890(StrArr* pkStrings)
     AddViewerString(pkStrings, NiBillboardNode_GetViewerString("m_eMode", uiFlags));
 }
 
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 
 void* __cdecl _NiMalloc_00aa1070(unsigned int size);
 int __cdecl FUN_00a305b0(char* buffer, unsigned int size, const char* format, ...);

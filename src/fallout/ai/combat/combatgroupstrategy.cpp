@@ -589,7 +589,7 @@ bool CombatGroupStrategyAdvance::CanFlank(MarkerStruct* apGroup, ActorCombatGrou
     return true;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern const Vec990d60 DAT_011f426c;
 struct Centroid990640
 {

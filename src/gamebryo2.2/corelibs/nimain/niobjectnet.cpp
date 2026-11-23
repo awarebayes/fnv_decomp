@@ -561,7 +561,7 @@ struct FUN_00a5c290_shell : public NiObjectNET
     void NiObjectNET_CopyMembers(NiObjectNET*, CloningProcess*);
 };
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);

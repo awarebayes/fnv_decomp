@@ -739,7 +739,7 @@ extern SettingT_GameSettingCollection_ DAT_011d1df0;
 extern SettingT_GameSettingCollection_ DAT_011d40c0;
 extern SettingT_GameSettingCollection_ DAT_011d2d30;
 int __cdecl FUN_00406d30(char*, unsigned int, const char*);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct BoundRes
 {
     NiPoint3* FUN_006815c0();

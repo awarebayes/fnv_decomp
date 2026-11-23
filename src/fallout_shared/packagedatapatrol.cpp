@@ -177,7 +177,7 @@ void FUN_0067c6c0_shell::PatrolRefData_InitItem(int apOwner)
     reinterpret_cast<PackageEventActionData_packagedatapatrol*>(reinterpret_cast<char*>(this) + 4)->InitItem(apOwner);
 }
 
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 // pdb: class Date, size 0x4, 2 members
 struct Date
 {

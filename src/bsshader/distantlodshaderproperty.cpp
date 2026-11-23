@@ -1101,7 +1101,7 @@ inline void* operator new(size_t n)
     return Resource::operator new(n);
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 int __cdecl PrintError(char*, unsigned int, const char*, ...);
 

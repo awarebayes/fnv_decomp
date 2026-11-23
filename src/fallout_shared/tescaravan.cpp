@@ -68,7 +68,7 @@ class RegionDataEntry
     void Endian();
 };
 
-extern "C" void* memset(void* dst, int val, unsigned int size);
+extern "C" void* memset(void* dst, int val, size_t size);
 
 // @fnv 0x0059a370
 // pdb: TESCaravanCard::TESCaravanCard | TESCaravan.obj | retail, upstream name already matches, high

@@ -25,7 +25,7 @@ void NiD3DVertexShader::BuildVertexShader()
     NiD3DShaderProgramFactory_RecreateVertexShader(this);
 }
 
-extern "C" void* __cdecl memmove(void* pvDest, const void* pvSrc, unsigned int uiSize);
+extern "C" void* __cdecl memmove(void* pvDest, const void* pvSrc, size_t uiSize);
 
 extern int g_aiE89C70ConstantTypes[];
 

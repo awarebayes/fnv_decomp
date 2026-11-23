@@ -3307,7 +3307,7 @@ struct FUN_00c5d0a0_cls
 };
 typedef void* HKEY_t;
 int __cdecl Setting_DataType_00c33090(int);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 struct RegSetting
 {
     int unk00;
@@ -3399,7 +3399,7 @@ typedef unsigned long DWORD;
 typedef unsigned char BYTE;
 extern "C" __declspec(dllimport) long __stdcall RegQueryValueExA(HKEY hKey, const char* lpValueName, DWORD* lpReserved,
                                                                  DWORD* lpType, BYTE* lpData, DWORD* lpcbData);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 int __cdecl GetStateResult(int* apParams);
 // FUN_00c5de30: thiscall, zero two fields, reset sub-object at +0xac
 struct ResetHelper
@@ -6141,7 +6141,7 @@ struct S_00c4aca0_Self
     void __thiscall BSDebrisNode_CopyMembers(S_00c4aca0_Obj* pDest, int arCloneData);
     S_00c4aca0_Obj* __thiscall BSDebrisNode_CreateClone(int arCloneData);
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct ItemW
 {
     int a, b, c;

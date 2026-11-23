@@ -407,7 +407,7 @@ public:
     float unk10;
     void hkpSphereTriangleAgent_getClosestPoints(S00d3d6b0_BodyHolderB* bodyA, S00d3d6b0_BodyHolderB* bodyB, S00d3d6b0_Input* input, S00d3d6b0_Sink* collector);
 };
-extern "C" void* __cdecl memcpy(void* dst, const void* src, unsigned int size);
+extern "C" void* __cdecl memcpy(void* dst, const void* src, size_t size);
 #pragma intrinsic(memcpy)
 
 static __forceinline void copyVector(PacketCallLocal_00d3dd90& out, const PacketCallLocal_00d3dd90& in) {

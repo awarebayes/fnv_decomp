@@ -77473,7 +77473,7 @@ bool WorkerView::Actor_IsSkinnedToLimb(::NiAVObject* apSkin, int apLimb)
 // Actor: gather the limb-bone nodes of a model subtree into the fixed MAX_LIMB_BONES table
 // (reset on the outermost call), warning when the table overflows.
 
-extern "C" void* __cdecl memset(void* pvDest, int iValue, unsigned int ItemUpdateArray);
+extern "C" void* __cdecl memset(void* pvDest, int iValue, size_t ItemUpdateArray);
 void __cdecl B6FF0Warning(const char* pcFormat, ...);
 
 
@@ -90081,7 +90081,7 @@ void ActorNodeLoader::Character_PrecacheData()
     }
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void* dst, int val, unsigned int size);
+extern "C" void* __cdecl fnv_zlib_memset(void* dst, int val, size_t size);
 
 unsigned int gm_GetTickCount();
 

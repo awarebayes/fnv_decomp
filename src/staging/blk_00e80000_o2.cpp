@@ -9974,7 +9974,7 @@ PoolItemStub* __cdecl AllocatePoolItem()
     return item;
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern float DAT_0126f9c4;
 
 struct Matrix { LocalVec3 a,b,c; };
@@ -10302,7 +10302,7 @@ struct PairEntry {
     int val;
 };
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 extern int DAT_0126f918;
 extern int DAT_0126f91c;
@@ -11443,7 +11443,7 @@ struct FUN_00e69b40_shell {
     unsigned int GetEntry(unsigned int index);
 };
 struct Outer;
-extern "C" void* memmove(void* dst, const void* src, unsigned int n);
+extern "C" void* memmove(void* dst, const void* src, size_t n);
 extern "C" __declspec(dllimport) void __stdcall LeaveCriticalSection(void* cs);
 struct SixIntegerRecord {
     int d00; int d04; int d08; int d0c; int d10; int d14;
@@ -11691,7 +11691,7 @@ fill:
     return buffer;
 }
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 
 struct D3DINDEXBUFFER_DESC_L
@@ -12025,7 +12025,7 @@ FUN_00e9ec90::~FUN_00e9ec90() {
 }
 
 static const void* kNull = 0;
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" void _ReadWriteBarrier();
 void* Object_DispatchCommandFour(unsigned int size);
 

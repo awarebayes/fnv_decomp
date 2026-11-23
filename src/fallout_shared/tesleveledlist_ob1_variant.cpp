@@ -36,7 +36,7 @@ inline const char* NiRTTI::GetName() const
 
 #include "../../include/NiTPrimitiveArray.h"
 
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 void* NiMalloc(unsigned int uiSize);
 int NiSprintf(char* pcDest, unsigned int uiDestSize, const char* pcFormat, ...);
 

@@ -21,7 +21,7 @@
 void* __cdecl operator new(size_t);
 void* __cdecl operator new[](size_t);
 void __cdecl operator delete(void*);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 int __cdecl BSstricmp(const char*, const char*);
 const char* __cdecl PrepareScriptMessage(const char*, bool);
 int __cdecl Warning(const char*, ...);

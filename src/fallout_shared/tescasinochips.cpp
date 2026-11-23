@@ -245,7 +245,7 @@ void* __thiscall TESCasinoChips_shell::Destroy(unsigned int flags)
     return this;
 }
 
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 
 struct FUN_00504620_shell
 {

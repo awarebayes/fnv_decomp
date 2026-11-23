@@ -214,7 +214,7 @@ struct FUN_004d4de0_Class
     void* __thiscall NiTMap_TESObject_bool_ctor(unsigned int);
 };
 extern "C" void* __cdecl NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 extern int DAT_01020944;
 struct FUN_004d4e40_Class
 {
@@ -512,7 +512,7 @@ struct FUN_004d5a90_Class
     int m_i4;
     float GetNegativeMagnitude();
 };
-extern "C" int __cdecl sprintf_s(char* destination, unsigned int size, const char* format, ...);
+extern "C" int __cdecl sprintf_s(char* destination, size_t size, const char* format, ...);
 extern const char DAT_01020d58[];
 struct FUN_0040c150
 {
@@ -528,7 +528,7 @@ struct FUN_004d5b60
     FUN_004d5b60(int index, int number, int extra);
 };
 extern void* DAT_011c6d50[43];
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 void __cdecl ClearGlobalArray(void);
 int __cdecl StatsMenu_GetClassStatic();
 extern int DAT_011f36f4;

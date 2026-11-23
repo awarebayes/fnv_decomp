@@ -748,7 +748,7 @@ void ClsB3FCF0::SIdvBranchInfo_SetGravity(SubObj_b3f* pSpline)
     }
 }
 
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 struct B2ESecureTag
 {
 };
@@ -2396,7 +2396,7 @@ FUN_00b2e330_It& FUN_00b2e330_It::UpdateState_00b2e330(int _Off)
 // Supplied other-agent string helper model reused with credit; new record copy below.
 namespace record_model {
 extern const unsigned int DAT_010173f0;
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -3793,7 +3793,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -4854,7 +4854,7 @@ void VecQ::UpdateState_00b33bd0(CItQ _Where, unsigned _Count, const ElQ& _Val)
 }  // namespace fnv_00b33bd0
 
 namespace buyUShort {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -5390,7 +5390,7 @@ void __cdecl Object_ProcessState_00b35ca0(unsigned int* first, unsigned count, c
 namespace fnv_00b35ce0 {
 // Supplied other-agent vector model reused withcredit; new swap/move helpers below.
 namespace asgnb36 {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -6185,7 +6185,7 @@ asgnb36::AsVector* __cdecl Object_ProcessAndReturnValue_00b35ce0(asgnb36::AsVect
 namespace fnv_00b35da0 {
 // Supplied other-agent vector model reused withcredit; new swap/move helpers below.
 namespace asgnb36 {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -7063,7 +7063,7 @@ unsigned short* __cdecl Object_ProcessAndReturnValue_00b35e60(unsigned short* fi
 namespace fnv_00b35f60 {
 // Reuses the supplied other-agent vector helper model with credit; new copy wrapper below.
 namespace asgnb36 {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -9357,7 +9357,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -9721,7 +9721,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -9973,7 +9973,7 @@ namespace fnv_00b3e520 {
 // Supplied other-agent string helper model reused with credit; new record copy below.
 namespace record_model {
 extern const unsigned int DAT_010173f0;
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -10752,7 +10752,7 @@ namespace fnv_00b2e3f0 {
 // Supplied other-agent string helper model reused with credit; new record copy below.
 namespace record_model {
 extern const unsigned int DAT_010173f0;
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -11460,7 +11460,7 @@ void VecQ::UpdateState_00b34450(CItQ _Where, unsigned _Count, const ElQ& _Val)
 
 namespace fnv_00b36600 {
 namespace asgnb36 {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -12335,9 +12335,9 @@ void __thiscall FUN_00b357d0::UpdateState_00b37190(FUN_00b357d0& o)
 }  // namespace fnv_00b37190
 
 namespace fnv_00b3c3f0 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
@@ -12660,7 +12660,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -13618,7 +13618,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -15982,7 +15982,7 @@ namespace fnv_00b3a050 {
 extern unsigned int DAT_010173f0;
 namespace treeb3a {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -16442,7 +16442,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag

@@ -937,7 +937,7 @@ class FUN_00aa0390 : public NiRefObject
 FUN_00aa0390::FUN_00aa0390() throw() : m_pkFirst(0), m_pkSecond(0), m_pkThird(0)
 {}
 
-extern "C" unsigned int __cdecl strlen(const char* pcString);
+extern "C" size_t __cdecl strlen(const char* pcString);
 
 static const char kBackslash = 0x5c;
 static const char kForwardSlash = 0x2f;

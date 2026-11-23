@@ -90,7 +90,7 @@ class SteamUserStats
     virtual bool StoreStats();
 };
 extern "C" __declspec(dllimport) SteamUserStats* __cdecl SteamUserStatsAccessor();
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 struct AwardData
 {
     int id;

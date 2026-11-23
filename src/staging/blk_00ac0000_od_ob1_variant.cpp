@@ -1877,7 +1877,7 @@ void Runtime_ProcessEntries_00ac2650(FUN_00ac05b0* first, unsigned int n, const 
     }
 }
 
-extern "C" int __cdecl memmove_s(void*, unsigned, const void*, unsigned);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 struct CharTraits
 {
     typedef char char_type;
@@ -2346,8 +2346,8 @@ struct AllocBase12
 };
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 struct ErrorException12
 {
     ErrorException12();
@@ -3099,7 +3099,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -4143,7 +4143,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -4643,7 +4643,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -5141,7 +5141,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -5637,7 +5637,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -6019,7 +6019,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -6409,8 +6409,8 @@ void Object_UpdateFields_00ac14e0(void* a0, void* a1, int a2)
 void __cdecl operator delete(void* _Ptr) throw();
 namespace ucpyac15 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -7541,8 +7541,8 @@ namespace fnv_00ac1780 {
 void __cdecl operator delete(void* _Ptr) throw();
 namespace cpyac17 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -8639,8 +8639,8 @@ GvNamedEntry* Object_ProcessAndReturnValue_00ac1780(GvNamedEntry* _First, GvName
 }  // namespace fnv_00ac1780
 
 extern int DAT_010173f0;
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 namespace staging_std {
@@ -9162,7 +9162,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -9550,7 +9550,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -9938,7 +9938,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -10439,7 +10439,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -10827,7 +10827,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -11320,7 +11320,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -11708,7 +11708,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -12170,7 +12170,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -12558,7 +12558,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -13167,7 +13167,7 @@ void __cdecl Object_ProcessEntries_00ac2440(Elem* first, unsigned count, const E
 }  // namespace fnv_00ac2440
 
 namespace asgnac2 {
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -13937,7 +13937,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -14601,7 +14601,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -15030,7 +15030,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -15386,7 +15386,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -15742,7 +15742,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -16075,8 +16075,8 @@ namespace fnv_00ac4f00 {
 void __cdecl operator delete(void* _Ptr) throw();
 namespace bfopen {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -17349,7 +17349,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -17768,7 +17768,7 @@ void __cdecl Q::UpdateState_00ac6850()
 namespace fnv_00ac71f0 {
 namespace sanac7 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -18198,7 +18198,7 @@ BxString Runtime_ProcessEntries_00ac71f0(const BxString& name)
 }
 }  // namespace fnv_00ac71f0
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void __cdecl FUN_00ec30e8();
 extern "C" int __cdecl FUN_00ec4835(const void*, const void*, unsigned int);
 struct FnvAllocator
@@ -19402,7 +19402,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -20678,7 +20678,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -22928,7 +22928,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -24081,7 +24081,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -25482,7 +25482,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -26692,7 +26692,7 @@ FUN_00ad3810_It& FUN_00ad3810_It::UpdateState_00ad3810(int _Off)
 }
 
 namespace fnv_00ad3ca0 {
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 namespace staging_std {
 struct _Secure_char_traits_tag
 {
@@ -26937,7 +26937,7 @@ Ctype4110* Ctype4110::FUN_00ad4110(unsigned int flags)
 }
 
 namespace fnv_00ad47f0 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 namespace staging_std {
 bool __cdecl uncaught_exception();
 template <class C> struct char_traits
@@ -27349,7 +27349,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -28039,8 +28039,8 @@ FUN_00ad5770_Q& Runtime_ProcessEntries_00ad5770(FUN_00ad5770_Q& _Istr, StrQ& _St
 }  // namespace fnv_00ad5770
 
 namespace fnv_00ad5b00 {
-extern "C" int __cdecl memcpy_s(void*, unsigned, const void*, unsigned);
-extern "C" int __cdecl memmove_s(void*, unsigned, const void*, unsigned);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 void __cdecl operator delete(void*);
 void* __cdecl operator new(size_t);
 struct ErrBase
@@ -28450,8 +28450,8 @@ void __cdecl Object_ProcessEntries_00ad5cc0(S00ad5cc0_Elem* first, unsigned int 
 }
 
 namespace fnv_00ad5ec0 {
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
@@ -28911,7 +28911,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -29299,7 +29299,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -29548,8 +29548,8 @@ ElemMOVE* __cdecl Object_ProcessAndReturnValue_00ad6040(ElemMOVE* _First, ElemMO
 }  // namespace fnv_00ad6040
 
 namespace fnv_00ad6800 {
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 
 namespace staging_std {
 
@@ -29883,7 +29883,7 @@ const typename basic_string<_Elem, _Traits, _Ax>::size_type basic_string<_Elem, 
 
 namespace fnv_00ad68c0 {
 void __cdecl operator delete(void*);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 struct SecureTag
 {
 };
@@ -30264,7 +30264,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -31755,7 +31755,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -32379,7 +32379,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -32663,8 +32663,8 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     pointer _Mylast;
     pointer _Myend;
 };
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 namespace staging_std {
 class bad_alloc
@@ -33504,9 +33504,9 @@ bool C43B0::FutBinaryFileC_openForRead(Str43B0 a_fname)
 }  // namespace fnv_00ac43b0
 
 namespace fnv_00ac9bd0 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace staging_std {
@@ -33798,7 +33798,7 @@ FUN_00ac9bd0::~FUN_00ac9bd0()
 }  // namespace fnv_00ac9bd0
 
 namespace fnv_00acf900 {
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
@@ -34265,9 +34265,9 @@ basic_filebuf* basic_filebuf::UpdateState_00acfab0(const char* _Filename, int _M
 }  // namespace fnv_00acfab0
 
 namespace fnv_00ad5490 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace staging_std {
@@ -34717,7 +34717,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -35001,8 +35001,8 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     pointer _Mylast;
     pointer _Myend;
 };
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 namespace staging_std {
 class bad_alloc
@@ -35432,8 +35432,8 @@ String* __cdecl Object_ProcessAndReturnValue_00ad5a80(String* _First, String* _L
 }  // namespace fnv_00ad5a80
 
 namespace fnv_00ad60c0 {
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 extern "C" void __cdecl _invalid_parameter_noinfo();
 void __cdecl operator delete(void*);
 void* __cdecl operator new(size_t);
@@ -36019,8 +36019,8 @@ StringVector* __cdecl Object_ProcessAndReturnValue_00ad60c0(StringVector* first,
 }  // namespace fnv_00ad60c0
 
 namespace fnv_00ad61e0 {
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 // VS2008 vector<string> assignment and its inline library helpers.
 void __cdecl operator delete(void*);
 void* __cdecl operator new(size_t);
@@ -37053,7 +37053,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -37337,8 +37337,8 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     pointer _Mylast;
     pointer _Myend;
 };
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 namespace staging_std {
 class bad_alloc
@@ -39693,8 +39693,8 @@ vecacd::VcIterator EraseVectorView::UpdateState_00ad0110(vecacd::VcConstIterator
 void __cdecl operator delete(void* _Ptr) throw();
 namespace bfopenrw {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -42201,7 +42201,7 @@ int FBC9F0::ProcessEntries_00acc9f0(int _Meta)
 
 extern "C" int __cdecl fgetc(struct _iobuf* _File);
 extern "C" int __cdecl ungetc(int _Ch, struct _iobuf* _File);
-extern "C" void* __cdecl memset(void* _Dst, int _Val, unsigned int _Size);
+extern "C" void* __cdecl memset(void* _Dst, int _Val, size_t _Size);
 static const int acd100_EOF = -1;
 void __cdecl invalid_parameter();
 inline int __cdecl acd100_memcpy_s(void* _Destination, unsigned _DestSize, const void* _Source, unsigned _Count)
@@ -43082,13 +43082,13 @@ class bad_alloc : public exception
 };
 }
 extern "C" void __cdecl _invalid_parameter_noinfo();
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl memmove(void*, const void*, unsigned int);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern "C" const void* __cdecl memchr(const void*, int, unsigned int);
 extern "C" int __cdecl wmemcmp(const wchar_t*, const wchar_t*, unsigned int);
 extern "C" unsigned int __cdecl wcslen(const wchar_t*);

@@ -168,10 +168,10 @@ LANGUAGE GetConfiguredLanguage();
 const char* LocateString(const char*, const char*);
 template <class T> unsigned int BSStringLength(const T*);
 int strcat_s(char*, unsigned int, const char*);
-extern "C" int memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" int memcpy_s(void*, size_t, const void*, size_t);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
-extern "C" unsigned int strlen(const char*);
+extern "C" size_t strlen(const char*);
 extern const char* DAT_01189038[4];
 extern const char* DAT_01188f84[5];
 
@@ -193,7 +193,7 @@ const NiFixedString& get_g_EditorMarker0();
 const NiFixedString& get_g_EditorMarker1();
 const NiFixedString& get_g_EditorMarker2();
 int BSstricmp(const char*, const char*);
-extern "C" int _strnicmp(const char*, const char*, unsigned int);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 
 extern NiRTTI DAT_012024e0;
 int BSSM_ShaderPropertyIsLighting(NiProperty*);
@@ -2352,7 +2352,7 @@ class TimedTextEntry
 };
 
 template <class T> unsigned int BSStringLength(const T*);
-extern "C" int _strnicmp(const char*, const char*, unsigned int);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 
 // Looks up the named sequence on obj's controller manager and returns the value of the first entry whose name starts with prefix, else 0.
 // @fnv 0x004b6220

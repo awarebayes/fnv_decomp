@@ -2,7 +2,7 @@
 
 extern BSFaceGenManager* DAT_011d59e8;
 void BSFaceGenManager_InitializeSystem();
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 #include "../../../include/TESRace.h"
 #include "../../../include/ENUM_FORM_ID.h"
 #include "../../../include/SEX.h"

@@ -968,7 +968,7 @@ struct TaskQueueInterface
 {
     static void __cdecl CopyStringToBuffer(char*, unsigned int, const char*);
 };
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct TESTopic_shell
 {
     bool SetStringIfDifferent(const char*);
@@ -1143,7 +1143,7 @@ DialogueItem* FUN_0061b320_shell::TESTopic_CreateDialogueItem(TESObjectREFR* apS
 }
 
 namespace fnv_00618aa0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct TESFileRef
 {

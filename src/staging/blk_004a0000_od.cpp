@@ -1583,7 +1583,7 @@ void __thiscall FUN_004a9fc0_Class::ReleaseStorage_004a9fc0()
 
 namespace fnv_004aa210 {
 extern "C" void* __cdecl NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dst, int value, size_t count);
 struct FUN_004aa210_class
 {
     int* vtbl;

@@ -6748,7 +6748,7 @@ void PackageCopy::CopyFromPackage(TESForm* apCopy)
     ePROCEDURE_TYPE = ((PackageAccessor*)p)->NiAVObject_GetParent();
 }
 
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 void* ourMemset(void*, int, unsigned int);
 struct PkgFile
 {

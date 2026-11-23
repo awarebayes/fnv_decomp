@@ -21,7 +21,7 @@ template <int N> struct EndianSizeTag
 {
 };
 void __cdecl BSEndian(unsigned int* value, EndianSizeTag<4> tag);
-extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
+extern "C" void* __cdecl memcpy(void* destination, const void* source, size_t size);
 
 // 0x00693d70 is the NavMeshInfoMap lookup (map at +0x1c), not the static Pathing utility.
 class NavMeshLookupView_00693d70

@@ -2649,7 +2649,7 @@ extern float DAT_0126f700;
 extern float DAT_0126f704;
 extern float DAT_0126f708;
 extern float DAT_0126f70c;
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 // For modes 1–6, combines indexed floats from m and the block at DAT_0126f6c4, writes to DAT_0126f6d0–DAT_0126f70c, and returns false otherwise.
 // @fnv 0x00e7df90
 // src: COMMUNITY 0x00e7df90

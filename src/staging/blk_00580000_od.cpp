@@ -577,7 +577,7 @@ void __thiscall FUN_00589290_Class::SetVtableAndProcessState_00589290()
 
 namespace fnv_005892c0 {
 extern "C" void* NiMalloc(unsigned int);
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 extern int DAT_0103204c;
 struct FUN_005892c0_t
 {
@@ -1816,7 +1816,7 @@ FUN_0058bd30::FUN_0058bd30() : node60(0), node64(0), node6c(0), node70(0)
     unk76 = false;
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct FNVKeywordEntry
 {
     unsigned char flag0;

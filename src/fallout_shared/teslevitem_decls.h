@@ -32,6 +32,6 @@ class LeveledObject
     void LEVELED_OBJECT_FILE_Endian();
 };
 extern LeveledObject* DAT_011c8f1c;
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl _alloca(size_t);
 #endif

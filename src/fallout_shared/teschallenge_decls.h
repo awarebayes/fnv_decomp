@@ -49,11 +49,11 @@ class TopicMenuController
   public:
     static void IncrementMiscStat(int);
 };
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 extern const float DAT_010162c0;
 
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 extern TESDataHandler* g_dataHandler;
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);

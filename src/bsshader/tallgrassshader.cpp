@@ -1403,7 +1403,7 @@ void S_00ba92c0_Prop::BSShaderProperty_LoadBinary(S_00ba92c0_Stream& kStream)
     S_00ba92c0_BinRead(kStream.m_pkBin, &unk30, 4);
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct GrassThreadMemory
 {
     int unk000;

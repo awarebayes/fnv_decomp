@@ -359,7 +359,7 @@ bool TESObject_WriteTriFile(const FileString& fileName, void* output)
 }
 
 void __cdecl FUN_00ec7c56();
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 void __cdecl operator delete(void*);
 namespace std {
 template <class E> struct char_traits
@@ -712,9 +712,9 @@ FUN_00ac0530_cls* FUN_00ac0530_cls::EvaluateValue_00ac0530(int a)
 }
 }  // namespace fnv_00ac0530
 
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
@@ -1017,7 +1017,7 @@ namespace fnv_00ac3df0 {
 extern unsigned int DAT_010173f0;
 namespace binac3 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -1407,8 +1407,8 @@ inline void operator delete(void*, void*) throw()
 {}
 namespace wrac52 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -2524,7 +2524,7 @@ bool GvBinaryFile::FutBinaryFileC_writeHeader(const void* data, unsigned int siz
 namespace fnv_00ac6430 {
 namespace errac6 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -3426,9 +3426,9 @@ FUN_00acc8c0::~FUN_00acc8c0()
 {}
 
 namespace fnv_00ad3000 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
@@ -3720,9 +3720,9 @@ FUN_00ad3000::FUN_00ad3000(const FUN_00ad3000& kRight) : first(kRight.first), se
 }  // namespace fnv_00ad3000
 
 namespace fnv_00ad3e60 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
@@ -4121,9 +4121,9 @@ void StrQ_ad6bb0::UpdateState_00ad6bb0(StrQ_ad6bb0& _Right)
     }
 }
 
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 namespace std {}
 extern "C" char* __cdecl strcpy(char* pcDst, const char* pcSrc);
@@ -4140,9 +4140,9 @@ void __cdecl Object_UpdateFields_00ac34c0(IdName_ac34* pPtr, const IdName_ac34& 
     ::new (pvPtr) IdName_ac34(kVal);
 }
 
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 namespace std {}
 extern "C" char* __cdecl strcpy(char* pcDst, const char* pcSrc);
@@ -4864,7 +4864,7 @@ bool __cdecl TESObject_ProcessEntries_00ac7f50(ParserStream* stream, ParserPairs
 }
 
 namespace ac8parse {
-extern "C" unsigned strlen(const char*);
+extern "C" size_t strlen(const char*);
 template <class T> struct char_traits
 {
     static unsigned length(const T* p)
@@ -6849,8 +6849,8 @@ extern "C" int DAT_011f6238;
 void __cdecl operator delete(void* _Ptr) throw();
 namespace plusad42 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -7941,8 +7941,8 @@ extern "C" int DAT_011f6238;
 void __cdecl operator delete(void* _Ptr) throw();
 namespace rdac52 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -9059,8 +9059,8 @@ extern "C" int DAT_011f6238;
 void __cdecl operator delete(void* _Ptr) throw();
 namespace plus2ad4 {
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char* _Str);
-extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, unsigned int _Size);
+extern "C" size_t __cdecl strlen(const char* _Str);
+extern "C" int __cdecl memcmp(const void* _Buf1, const void* _Buf2, size_t _Size);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag

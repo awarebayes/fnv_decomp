@@ -195,7 +195,7 @@ BGSIdleCollection::~BGSIdleCollection()
     BGSIdleCollection::Free();
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 // @fnv 0x00479930
 // pdb: BGSIdleCollection::CompareComponent | BGSIdleCollection.obj | retail, vtable slot, high
@@ -267,7 +267,7 @@ void BGSIdleCollection::CopyFromBase(BaseFormComponent* apCopyFC)
 void __cdecl TESForm_AddChunk_3(unsigned int, unsigned char);
 void __cdecl _FUN_00485910(unsigned int, float);
 void __cdecl _FUN_00485710(unsigned int, unsigned int*, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 // @fnv 0x004799f0
 // src: XBOX_RETAIL_PDB 0x004799f0

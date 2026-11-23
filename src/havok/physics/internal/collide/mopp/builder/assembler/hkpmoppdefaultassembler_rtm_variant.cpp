@@ -1531,7 +1531,7 @@ struct CodeCopySource : FUN_00e065f0
 };
 static int copyCodeAndEmbedTerminals(BvTree* chunkInfo, CodeCopySource* codeWithTerminals, hkArrayBase<int>* codeWithoutTerminals, FUN_00e065f0* terminals);
 int copy_code_caller(BvTree* tree, CodeCopySource* source, hkArrayBase<int>* refs, FUN_00e065f0* destination);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct ObjectWriter
 {
     int unk00;

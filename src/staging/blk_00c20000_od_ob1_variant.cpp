@@ -631,7 +631,7 @@ struct S_00c3a5e0
     void NiNode_UpdateUpwardPass();
     void FUN_00c3a5e0();
 };
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" __declspec(dllimport) unsigned long __stdcall GetPrivateProfileStringA(
     const char* lpAppName, const char* lpKeyName, const char* lpDefault, char* lpReturnedString, unsigned long nSize,
     const char* lpFileName);
@@ -642,7 +642,7 @@ static const char kBackslash[] = "\\";
 static const char kIniName[] = "Loaders.ini";
 static const char kSpace[] = " ";
 void __cdecl BSStream_RegisterLoadersINI(const char* apINIFilePath);
-extern "C" int __cdecl _strnicmp(const char* a, const char* b, unsigned int n);
+extern "C" int __cdecl _strnicmp(const char* a, const char* b, size_t n);
 void __cdecl BuildDataPath(char* out, const char* path, const char* suffix);
 extern "C" unsigned char DAT_01202b48;
 void* __cdecl GetProgramFlowTextPath();

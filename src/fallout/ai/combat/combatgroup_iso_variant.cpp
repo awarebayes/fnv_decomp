@@ -1675,7 +1675,7 @@ struct GroupRef00989880
     void* __thiscall CombatGroup_FindMemberNearLocation(int arWorldLoc, float aRadius, Actor* apIgnoreMember);
 };
 extern NiPoint3 NiPoint3_ZERO;
-extern "C" void* _alloca(unsigned int size);
+extern "C" void* _alloca(size_t size);
 float __cdecl NiSqrt_004579e0(float v);
 struct ActorPos
 {

@@ -13284,7 +13284,7 @@ struct ConstraintItem : public hkReferencedObject
     EntityWithCC* m_18;
 };
 
-extern "C" void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl _fnv_zlib_memset(void*, int, size_t);
 
 struct WorldImpl : public FUN_00c6b320_Base
 {
@@ -17750,7 +17750,7 @@ namespace fnv_00c69010 {
 extern __m128 DAT_01267e30;
 extern float DAT_01267b38;
 extern int DAT_012677a4;
-extern "C" void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl _fnv_zlib_memset(void*, int, size_t);
 struct ConstructorPhysics;
 struct ConstructorParent : FUN_00c87c30_owner
 {
@@ -25662,7 +25662,7 @@ void FNV_C68DE0_OWNER::bhkWorld_UpdateDebugger()
 }  // namespace fnv_00c68de0
 
 namespace fnv_00c6aac0 {
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 extern __declspec(thread) int g_hkTlsMemoryState;
 

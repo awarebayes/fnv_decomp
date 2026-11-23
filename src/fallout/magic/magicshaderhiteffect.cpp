@@ -139,7 +139,7 @@ class TaskQueueInterface
 };
 bool IsConditionMet();
 float BSMAX_00404010(float, float);
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 extern PlayerCharacter* g_thePlayer;
 extern ModelLoader* g_modelLoader;
 extern TES* g_TES;
@@ -1438,7 +1438,7 @@ struct FUN_0081f770 : xEffectBase
 
 
 extern xLoader* xg_pLoader;
-extern "C" int __cdecl sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
+extern "C" int __cdecl sprintf_s(char* buf, size_t size, const char* fmt, ...);
 
 // @fnv 0x0081f770
 // pdb: LoadingMenu::SetNextSlide | LoadingMenu.obj | retail, string-set bridge, high

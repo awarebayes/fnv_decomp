@@ -180,7 +180,7 @@ struct LegacyTextureStream
     void LinkObject(NiStream&);
 };
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x00a60ba0
 // src: XBOX_PDB 0x00a60ba0
@@ -503,8 +503,8 @@ void ShaderPass_a60::EnsureProgramCreated()
     }
 }
 
-extern "C" unsigned int __cdecl strlen(const char* s);
-extern "C" void* __cdecl memset(void* d, int v, unsigned int n);
+extern "C" size_t __cdecl strlen(const char* s);
+extern "C" void* __cdecl memset(void* d, int v, size_t n);
 
 struct S00a60cc0_Mgr
 {

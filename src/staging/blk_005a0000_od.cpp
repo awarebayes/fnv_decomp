@@ -640,7 +640,7 @@ bool SubChallenge::IsNotEqual(void* apCompare)
 }
 }  // namespace fnv_005a8910
 
-extern "C" int __cdecl memcmp(const void* a, const void* b, unsigned int n);
+extern "C" int __cdecl memcmp(const void* a, const void* b, size_t n);
 
 
 

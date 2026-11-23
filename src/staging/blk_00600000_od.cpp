@@ -874,7 +874,7 @@ void* __thiscall FUN_0061fa40_class::FUN_0061fa40(unsigned int flags)
 
 namespace fnv_0061fa70 {
 extern "C" void* __cdecl NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dst, int c, unsigned int n);
+extern "C" void* __cdecl memset(void* dst, int c, size_t n);
 struct FUN_0061fa70_class
 {
     int __thiscall NiTMapBase_DFALL_NiTMapItem_TESObjectREFR_int_TESObjectREFR_int_NiTMapBase(int a);

@@ -14,8 +14,8 @@ struct ImageSpaceShaderHDRMacro
     ImageSpaceShaderHDRMacroItem kMacros[9];
 };
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern unsigned char g_HDRDoTest;
 
 class ImageSpaceShaderHDRInterface

@@ -80,7 +80,7 @@ extern "C" void FnvClearDataAlias();
 extern "C" void FnvModelListDtorAlias();
 extern "C" void FnvAttackDtorAlias();
 extern "C" void FnvActorBaseDtorAlias();
-extern "C" unsigned int __security_cookie;
+extern "C" uintptr_t __security_cookie;
 
 class CreatureSounds
 {

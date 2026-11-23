@@ -990,7 +990,7 @@ struct FUN_00e22970_Cls
     void AppendItems(void* apArg1, const FUN_00e22970_Item* apSrc, int aCount);
 };
 void __cdecl hkArrayUtil__reserve(void* mem, FUN_00e22970_Cls* array, int numElem, int sizeElem);
-extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, unsigned int aCount);
+extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, size_t aCount);
 struct FUN_00e229f0_cls
 {
     int* m_data;

@@ -102,7 +102,7 @@ bool ShaderLoader::AssembleShaderFile(const char* pcFileName, void** pvCode, uns
 
 extern "C" long __stdcall D3DXAssembleShader_00ee6e52(const char*, unsigned int, const void*, void*, unsigned int, ID3DXBuffer**,
                                        ID3DXBuffer**);
-extern "C" void* __cdecl memmove(void*, const void*, unsigned int);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
 
 inline void Move266(void* d, const void* s, unsigned int n)
 {

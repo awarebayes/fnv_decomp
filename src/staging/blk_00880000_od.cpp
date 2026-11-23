@@ -13,7 +13,7 @@
 #include "../../include/TESObjectREFR.h"
 
 // Intrinsic copies preserve the original point-copy instructions in this /Od unit.
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 // @fnv 0x00884c60

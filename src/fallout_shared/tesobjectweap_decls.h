@@ -136,8 +136,8 @@ namespace ActorValue
 }
 bool ActorValue_IsResistance(ActorValue__Index);
 int Warning(const char*, ...);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl _alloca(size_t);
 
 
 class INISettingCollection;

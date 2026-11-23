@@ -13,7 +13,7 @@ float BSAudio_GetMinDialogDist();
 float BSAudio_GetMaxDialogDist();
 void CheckWithinMultiBoundTask_CancelAttachment(unsigned int apMoribundRef);
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct LoadFile
 {
     unsigned int Size();

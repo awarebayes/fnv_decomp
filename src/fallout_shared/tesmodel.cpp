@@ -229,8 +229,8 @@ struct _FILETIME;
 struct _SYSTEMTIME;
 struct _WIN32_FIND_DATAA;
 
-extern "C" void* __cdecl _alloca(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
 // @fnv 0x00489940
 // pdb: TESTextureList::Load | TESModel.obj | retail, call graph (shared callers), high
 // pdb params: apFile, apParentForm, apModelName

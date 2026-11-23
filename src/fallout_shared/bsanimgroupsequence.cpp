@@ -70,7 +70,7 @@ class TimedTextEntry
 };
 extern const float DAT_01023850;
 const NiFixedString& FixedStrings_QAttachSound();
-extern "C" int _strnicmp(const char*, const char*, unsigned int);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 int BSstricmp(const char*, const char*);
 extern "C" char* strchr(const char*, int);
 extern "C" char* __insecure_strcpy(char*, const char*);

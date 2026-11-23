@@ -1124,7 +1124,7 @@ struct DataLookup
     FormRecord* GetTESClassByID(int);
 };
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct PositionSource
 {
 
@@ -1857,7 +1857,7 @@ namespace PlayerSaveStrings
     extern "C" const char DAT_0108a8e0[];
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 // @fnv 0x00955620

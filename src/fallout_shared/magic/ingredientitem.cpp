@@ -342,7 +342,7 @@ void FUN_0040a040_cls::IngredientItem_CopyMagicItemData(unsigned int apCopy)
     }
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct LCFile
 {

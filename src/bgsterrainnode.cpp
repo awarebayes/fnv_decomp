@@ -57,7 +57,7 @@ extern SettingT_GameSettingCollection_ bKeepLowDetailTerrain;
 
 int Warning(const char* aFormat, ...);
 
-extern "C" void* memset(void* pDestination, int cValue, unsigned int uSize);
+extern "C" void* memset(void* pDestination, int cValue, size_t uSize);
 
 FNV_STATIC_ASSERT(sizeof(BGSTerrainNode) == 96);
 FNV_STATIC_ASSERT(offsetof(BGSTerrainNode, pManager) == 0);

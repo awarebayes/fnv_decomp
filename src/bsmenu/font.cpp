@@ -285,7 +285,7 @@ unsigned int __cdecl strlen(const char*);
 int __cdecl _stricmp(const char*, const char*);
 int __cdecl _strnicmp(const char*, const char*, unsigned int);
 int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" int __cdecl strcat_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcat_s(char*, size_t, const char*);
 
 // Builds dst from src: prefixes "Trees" when src ends in "spt", prefixes str_010a435c unless src starts with "meshes\", else copies src.
 // @fnv 0x00af4250
@@ -2808,7 +2808,7 @@ void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 inline void* LayoutCopy(void* destination,const void* source,unsigned int size) { return memcpy(destination,source,size); }
 struct LayoutText {
     char* data; unsigned short length,capacity;
@@ -3174,16 +3174,16 @@ void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 inline void* LayoutCopy(void* destination,const void* source,unsigned int size) { return memcpy(destination,source,size); }
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" char* __cdecl strcpy(char*,const char*);
 extern "C" int __cdecl toupper(int);
 extern "C" int __cdecl _stricmp(const char*,const char*);
 int __cdecl BSstrcmp(const char*,const char*);
 long __cdecl FUN_00eca6d3(const char*);
 extern "C" int __cdecl sscanf(const char*,const char*,...);
-extern "C" void* __cdecl fnv_zlib_memset(void*,int,unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*,int,size_t);
 // local form of BSStringT<char>: 0x00a17390 needs inline ctor/Set/append operations; the shared split changes bytes.
 struct LayoutString {
     char* text; unsigned short length, capacity;
@@ -3716,10 +3716,10 @@ void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 inline void* LayoutCopy(void* destination,const void* source,unsigned int size) {return memcpy(destination,source,size);}
 namespace TextLayout {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" char* __cdecl strcpy(char*,const char*);
 extern "C" int __cdecl FUN_00ec65a6(char*,unsigned int,const char*);
 extern "C" int __cdecl sprintf(char*,const char*,...);
@@ -4842,7 +4842,7 @@ FUN_00a168b0::FUN_00a168b0() {
 }
 
 namespace fnv_00a1a800 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 unsigned int __cdecl BSStringLength(const char*);
 unsigned int __cdecl BSStringCapacityMaximum(unsigned int, unsigned int);
 void* __cdecl __memcpy(void*, const void*, unsigned int);

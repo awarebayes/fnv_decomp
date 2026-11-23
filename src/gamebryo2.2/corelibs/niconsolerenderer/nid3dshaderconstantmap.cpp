@@ -2130,7 +2130,7 @@ unsigned int __stdcall NiD3DShaderConstantMap_SetGlobalConstant(FUN_00e84b60_pro
 }
 }  // namespace fnv_00e84d00
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" double __cdecl cos(double);
 
 class NiMatrix3_ext : public NiMatrix3

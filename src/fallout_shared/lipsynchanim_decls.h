@@ -26,12 +26,12 @@ FNV_STATIC_ASSERT(sizeof(LipSyncAnimation) == 16);
 FNV_STATIC_ASSERT(offsetof(LipSyncAnimation, m_ppPhonemeFrames) == 8);
 FNV_STATIC_ASSERT(offsetof(LipSyncAnimation, m_ppModifierFrames) == 12);
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void __cdecl operator delete(void*);
 float __cdecl BSMIN(float, float);
 
 #include "../../include/NiBinaryStream.h"
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 bool __cdecl LipSynchAnim_Decompress(NiBinaryStream*, char*, unsigned int);
 
 #endif

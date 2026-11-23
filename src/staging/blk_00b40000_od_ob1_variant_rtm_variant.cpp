@@ -2871,7 +2871,7 @@ VBeginQ_00b41a50::iterator VBeginQ_00b41a50::EvaluateValue_00b41a50()
     return (iterator((_Myvec.begin())._Myptr, this));
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct TrimCharAllocatorBase
 {
 };

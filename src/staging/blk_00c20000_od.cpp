@@ -1357,7 +1357,7 @@ void FUN_00c3a620_cls::SetVirtualTableAndProcessState_00c3a620()
 }
 }  // namespace fnv_00c3a620
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 extern "C" __declspec(dllimport) unsigned long __stdcall GetPrivateProfileStringA(
     const char* lpAppName, const char* lpKeyName, const char* lpDefault, char* lpReturnedString, unsigned long nSize,
@@ -1425,7 +1425,7 @@ void __cdecl BSStream_RegisterLoadersINI(const char* apINIFilePath)
     }
 }
 
-extern "C" int __cdecl _strnicmp(const char* a, const char* b, unsigned int n);
+extern "C" int __cdecl _strnicmp(const char* a, const char* b, size_t n);
 
 // Copies path into a buffer, splits off extension and trailing underscore suffix, and writes a DATA\-prefixed or plain path plus suffix and extension to out.
 // @fnv 0x00c3b7e0
@@ -2491,7 +2491,7 @@ extern bool DAT_01202d90;
 extern char DAT_01015890[];
 extern char DAT_010c14c0[];
 extern char DAT_0101f520[];
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 struct C3BEFile
 {
     int m_00, m_04, m_08, m_0c, m_10;

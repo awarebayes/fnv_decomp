@@ -204,7 +204,7 @@ inline bool IsKindOf_s(const NiRTTI* pkRTTI, NiObject* pkObject)
     return false;
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 inline NiObject* PaletteObject(NiPalette* const& palette)
 {

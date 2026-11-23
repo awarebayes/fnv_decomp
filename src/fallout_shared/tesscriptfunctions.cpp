@@ -22775,7 +22775,7 @@ bool __cdecl Cmd_IncrementScriptedChallenge_Execute(const ScriptParameter* param
     return true;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct RecFile {
     RecFile* GetRealFile();
@@ -23194,8 +23194,8 @@ struct ModelLoader;
 extern bool ExtractArgs(const ScriptParameter*, const char*, unsigned int*, TESObjectREFR*, TESObjectREFR*, Script*, ScriptLocals*, ...);
 int __cdecl FUN_00406d30(char*, unsigned int, const char*);
 extern "C" int __cdecl _sprintf_s(char*, unsigned int, const char*, ...);
-extern "C" void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl _fnv_zlib_memset(void*, int, size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" unsigned int __cdecl _strlen(const char*);
 char* __cdecl FUN_004812f0(char*, const char*);
 char* __cdecl BSstrlwr(char*, unsigned int);
@@ -23627,7 +23627,7 @@ bool __cdecl Script_OutputTextureUseMap(const ScriptParameter* apParameters, con
 }
 }  // namespace fnv_005b6800
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 void BSstrncpy(char* apString1, const char* apString2, unsigned int aiLen);
 
 struct MemStatsFile
@@ -39163,8 +39163,8 @@ struct xNode {
 
 bool xExtractArgs(const void* pParams, const char* pData, unsigned int* pOffset, xRef* pThis, xRef* pContainer, void* pScript, void* pLocals, ...);
 extern "C" int __cdecl xStricmp(const char* a, const char* b);
-extern "C" int __cdecl sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
-extern "C" void* __cdecl memset(void* p, int v, unsigned int n);
+extern "C" int __cdecl sprintf_s(char* buf, size_t size, const char* fmt, ...);
+extern "C" void* __cdecl memset(void* p, int v, size_t n);
 extern "C" void* __cdecl FUN_00ec61c0(void* p, int v, unsigned int n);
 void xDebugLog(const char* fmt, ...);
 void xConsolePrint(BSStringT<char> kText);

@@ -389,7 +389,7 @@ struct FUN_007e0d80_shell : Flt
     void FUN_00438470(FUN_007e0d80_shell* other);
     FUN_007e0d80_shell* AppendString(FUN_007e0d80_shell* other);
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 // @fnv 0x007e0d80
 // pdb: BSStringT<char>::operator+= | StatsMenu.obj | retail, call graph (shared callers), medium

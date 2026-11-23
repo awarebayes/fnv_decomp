@@ -345,7 +345,7 @@ BSRenderedTexture* ImageSpaceManager::GetDepthRenderedTexture()
     return depth.GetRenderedTexture();
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 // @fnv 0x00b8b9a0
 // pdb: ImageSpaceManager::BeginParamModifiers | ImageSpaceManager.obj | retail, upstream name already matches, high
@@ -668,7 +668,7 @@ extern ImageSpaceManager* DAT_011f91ac;
 
 void __stdcall ImageSpaceManager_SetUseSunbeams(bool value);
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 extern "C" void* __cdecl _memmove(void*, const void*, unsigned int);
 extern ImageSpaceModifierParameterData DAT_011ff940;
@@ -1928,7 +1928,7 @@ void ImageSpaceManager::EndParamModifiers()
 using ::sqrt;
 using ::fabs;
 
-extern "C" void* __cdecl memmove(void*, const void*, unsigned);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
 
 struct Vec2
 {

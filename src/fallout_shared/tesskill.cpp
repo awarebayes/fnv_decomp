@@ -111,7 +111,7 @@ void __thiscall TESSkill::SaveForm()
     ((TESForm*)this)->FinishFormRecord();
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 // Reads a skill record from apFile: checks the record type, loads the base form, then dispatches each chunk to its handler until the file ends.
 // @fnv 0x00618130

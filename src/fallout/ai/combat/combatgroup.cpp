@@ -3275,7 +3275,7 @@ void* TargetExpiryGroupView::CombatGroup_FindMemberNearActor(Actor* apActor, flo
 }
 
 extern NiPoint3 NiPoint3_ZERO;
-extern "C" void* _alloca(unsigned int size);
+extern "C" void* _alloca(size_t size);
 float __cdecl NiSqrt_004579e0(float v);
 
 

@@ -554,7 +554,7 @@ FUN_00a1bc70::FUN_00a1bc70(unsigned int a1, unsigned int a2, unsigned int a3, un
     CallStep(a2, 0);
 }
 
-extern "C" int __cdecl memcmp(const void* a, const void* b, unsigned int n);
+extern "C" int __cdecl memcmp(const void* a, const void* b, size_t n);
 
 struct CharTraitsQ
 {

@@ -343,7 +343,7 @@ bool H0050fb90::TESObject_IsOcclusionMarker()
     return false;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct AlchBase30
 {

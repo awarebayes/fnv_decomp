@@ -1170,7 +1170,7 @@ bool FUN_00b78980_shell::InitializePasses()
 }
 }  // namespace fnv_00b7a730
 
-extern "C" void* _fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* _fnv_zlib_memset(void*, int, size_t);
 void __cdecl FUN_00be0c00(const char* param_1, char* param_2);
 int __cdecl sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long* value);

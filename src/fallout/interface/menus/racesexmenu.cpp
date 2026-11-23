@@ -5396,7 +5396,7 @@ struct TexturePointer
 };
 FaceModel* __cdecl BSFaceGenManager_GetFaceGenModelExtraData(AppearanceObject*);
 extern AppearancePlayer* appearancePlayer;
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 int __cdecl _mbsnicmp(const char*, const char*, unsigned int);
 void __cdecl RecurseAndRemoveObjectsFromPalette(SkinRoot*, void*);
 void __cdecl BSFaceGenManager_OffsetFaceGenCoord(void*, void*, void*, int);

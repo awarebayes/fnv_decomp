@@ -26,5 +26,5 @@ public:
 };
 
 void __fastcall FUN_004056d0(void*);
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 int Warning(const char*, ...);

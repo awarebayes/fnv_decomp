@@ -24,7 +24,7 @@ class TaskQueueInterface
   public:
     static void CopyStringToBuffer(char*, unsigned int, const char*);
 };
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 char* strrchr_0040ab30(char*, int);
 class Archive;
 // pdb: class ArchiveManager, size 0x1, 0 members
@@ -76,7 +76,7 @@ extern FormTypeDescription DAT_01187004[];
 extern TESWorldSpace* DAT_011c3f34;
 extern TESTopic* g_loadingTopic;
 extern TESTopicInfo* DAT_011c3f38;
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 NiPointer<NavMesh> MakeNavMeshPointer(NavMesh*);
@@ -84,7 +84,7 @@ NiPointer<NavMesh> MakeNavMeshPointer(NavMesh*);
 int strcat_s(char*, unsigned int, const char*);
 char* strchr(char*, int);
 int FUN_00ec4835(const void*, const void*, unsigned int);
-extern "C" void* memcpy(void*, const void*, unsigned int);
+extern "C" void* memcpy(void*, const void*, size_t);
 extern "C" int* _errno();
 
 extern "C" int _mbsnicmp(const unsigned char*, const unsigned char*, unsigned int);

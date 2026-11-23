@@ -24,7 +24,7 @@ class FileFinder
     unsigned int FileFinder_LookForFile(char*, unsigned int, unsigned int);
 };
 extern "C" FileFinder* g_fileFinder;
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 extern MemoryManager g_memoryManager;
 // pdb: class ArchiveManager, size 0x1, 0 members

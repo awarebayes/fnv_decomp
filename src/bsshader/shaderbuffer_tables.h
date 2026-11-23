@@ -1,4 +1,4 @@
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern int DAT_011ff9d8[];
 extern int DAT_011ffa30[];
 extern unsigned int DAT_011ffa4c;

@@ -2169,7 +2169,7 @@ ExtraPackageStartLocation::ExtraPackageStartLocation(TESWorldSpace* apWorld, TES
     *reinterpret_cast<float*>(&unk1C) = afzrotation;
 }
 
-extern "C" int memcmp(const void*, const void*, unsigned int);
+extern "C" int memcmp(const void*, const void*, size_t);
 
 // @fnv 0x00432770
 // src: XBOX_PDB 0x00432770
@@ -4222,7 +4222,7 @@ struct FUN_004342b0_shell
     void LoadItemsFromArchive(void* archive);
 };
 Results_004342b0* __cdecl FUN_00ec43fb(void*, int, void*, void*, int);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 // @fnv 0x004342b0
 // pdb: ExtraDecalRefs::Copy | ExtraDataObjects.obj | retail, call graph, high

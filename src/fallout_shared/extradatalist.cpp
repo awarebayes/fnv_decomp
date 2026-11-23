@@ -10792,7 +10792,7 @@ BSExtraData* __thiscall FUN_0042f420_helper::ExtraDataList_GetOrCreateExtraFollo
 
 namespace fnv_0040f900 {
 extern int DAT_011c38e4;
-extern "C" void* __cdecl memset(void* dest, int c, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int c, size_t count);
 struct FUN_0040f900_tls
 {
     int pad0;

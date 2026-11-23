@@ -5144,7 +5144,7 @@ extern "C" __declspec(dllimport) void __stdcall fnv_LeaveCriticalSection(void* c
 extern unsigned char DAT_011f4380;
 void* __cdecl _NiMalloc_00aa1070(unsigned int size);
 void __cdecl NiFreeAlias(void*);
-extern "C" void* __cdecl memmove(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memmove(void* dst, const void* src, size_t n);
 struct ExtraName
 {
     const char* handle;

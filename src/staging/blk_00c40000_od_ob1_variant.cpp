@@ -3429,7 +3429,7 @@ struct FUN_00c5d0a0_cls
 };
 typedef void* HKEY_t;
 int __cdecl Setting_DataType_00c33090(int);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 struct RegSetting
 {
     int unk00;
@@ -3521,7 +3521,7 @@ typedef unsigned long DWORD;
 typedef unsigned char BYTE;
 extern "C" __declspec(dllimport) long __stdcall RegQueryValueExA(HKEY hKey, const char* lpValueName, DWORD* lpReserved,
                                                                  DWORD* lpType, BYTE* lpData, DWORD* lpcbData);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 
 int __cdecl GetStateResult(int* apParams);
@@ -7273,7 +7273,7 @@ S_00c4aca0_Obj* __thiscall S_00c4aca0_Self::BSDebrisNode_CreateClone(int arClone
     return p;
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct ItemW
 {
     int a, b, c;
@@ -19673,7 +19673,7 @@ struct C42List
     C42Node* m_10;
     void CopyData_00c42b80();
 };
-extern "C" void* __cdecl memmove(void*, const void*, unsigned);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
 // @fnv 0x00c42b80
 // src: GUESS 0x00c42b80 (confidence: low)
 void C42List::CopyData_00c42b80()

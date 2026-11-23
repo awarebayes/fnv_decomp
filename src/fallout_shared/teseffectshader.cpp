@@ -120,7 +120,7 @@ void TESEffectShader::InitItem()
     SetInitializationState(true);
 }
 
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 
 // @fnv 0x00505e70
 // pdb: TESEffectShader::Load | TESEffectShader.obj | retail, upstream name already matches, high

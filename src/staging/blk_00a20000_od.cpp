@@ -845,8 +845,8 @@ extern "C" __declspec(dllimport) unsigned long __stdcall GetPrivateProfileString
     const char* lpAppName, const char* lpKeyName, const char* lpDefault, char* lpReturnedString, unsigned long nSize,
     const char* lpFileName);
 extern "C" long __cdecl strtol(const char* str, char** endptr, int base);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
-extern "C" int __cdecl strcat_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
+extern "C" int __cdecl strcat_s(char* dst, size_t size, const char* src);
 
 extern char DAT_01202fa0[];
 extern const char* DAT_011a2ff8;
@@ -5264,7 +5264,7 @@ struct EventMemory
     void* Allocate(unsigned int);
 };
 extern EventMemory _g_memoryManager;
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" void __stdcall XInputManager_KillRumbles(int, unsigned short*);
 struct Controller
 {

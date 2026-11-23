@@ -150,7 +150,7 @@ void __thiscall NiD3DShaderProgram::SetShaderCode(unsigned int uiSize, void* pvC
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl NiFreeAlias(void*);
 int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" unsigned int strlen(const char*);
+extern "C" size_t strlen(const char*);
 // Frees the stored string at offset 0x30 and replaces it with a newly allocated copy of pcEntryPoint, or null if empty.
 // @fnv 0x00e95cf0
 // src: GAMEBRYO_SRC 0x00e95cf0

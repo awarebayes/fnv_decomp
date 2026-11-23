@@ -35,7 +35,7 @@ void TESLevSpell::Copy_0050bcd0(TESForm* apCopy)
     ((FormHelpers*)this)->TESForm_CopyAllComponents(apCopy);
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void* memset(void*, int, unsigned int);
 // pdb: class ContainerItemExtra, size 0xc, 5 members
 class ContainerItemExtra

@@ -198,7 +198,7 @@ inline void NiD3DVertexShader::DecRefCount()
         DeleteThis();
 }
 extern ShaderPtr<NiD3DVertexShader> DAT_012005d0[4];
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 // @fnv 0x00bb01c0
 // src: XBOX_RETAIL_PDB 0x00bb01c0

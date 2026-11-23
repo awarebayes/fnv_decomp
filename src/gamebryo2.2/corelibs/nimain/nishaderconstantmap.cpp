@@ -109,7 +109,7 @@ inline void* NiShaderConstantMap::ShaderConstantMapEntry::operator new[](size_t 
     return g_memoryManager.Allocate(size);
 }
 
-extern "C" int strcpy_s(char*, unsigned int, const char*);
+extern "C" int strcpy_s(char*, size_t, const char*);
 // The mutable-source C++ overload is distinct from the CRT entry point.
 int strcpy_s(char*, unsigned int, char*);
 extern "C" char* strchr(char*, int);

@@ -36,8 +36,8 @@ public:
 #include "../../include/Setting.h"
 
 // Unit-specific declarations; TESForm comes from the shared reference header.
-extern "C" void* memset(void*, int, unsigned int);
-extern "C" void* _alloca(unsigned int);
+extern "C" void* memset(void*, int, size_t);
+extern "C" void* _alloca(size_t);
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 class TerminalMenuItem
@@ -705,7 +705,7 @@ void BGSTerminal::ClearData()
     reinterpret_cast<TerminalStateAccess*>(this)->BGSTerminal_ClearMenuItemList();
 }
 
-extern "C" void* memcpy(void*, const void*, unsigned int);
+extern "C" void* memcpy(void*, const void*, size_t);
 
 struct TerminalPasswordAccess
 {
@@ -747,7 +747,7 @@ void BGSTerminal::CopyFrom(const TESForm* apCopy)
     TESObjectACTI::CopyFrom(pTerminal);
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 struct TerminalStringCmp
 {

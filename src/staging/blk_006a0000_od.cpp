@@ -2760,7 +2760,7 @@ void FUN_006a2470_class::UpdateState_006a2470(unsigned int requested, unsigned i
 
 namespace fnv_006a64e0 {
 extern "C" void* __cdecl NiMalloc(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct FUN_006a64e0_class
 {
     int* m_p;

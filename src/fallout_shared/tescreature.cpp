@@ -59,7 +59,7 @@ extern "C" void FnvClearDataAlias();
 extern "C" void FnvModelListDtorAlias();
 extern "C" void FnvAttackDtorAlias();
 extern "C" void FnvActorBaseDtorAlias();
-extern "C" unsigned int __security_cookie;
+extern "C" uintptr_t __security_cookie;
 
 #include "../../include/ENUM_FORM_ID.h"
 extern TESDataHandlerTypes::TESFaction* DAT_011cb550;
@@ -1136,7 +1136,7 @@ void TESCreature::SaveForm()
     FinishFormRecord();
 }
 
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 void* operator new(size_t);
 void operator delete(void*);
 void* ourMemset(void*, int, unsigned int);
@@ -1865,7 +1865,7 @@ void Actor::ApplyEffectToBodyParts(Effect* effect, int type, int part, void* sou
 extern "C" char DAT_01183a00;
 extern "C" char DAT_01183028;
 extern "C" void* __cdecl FUN_00ec43fb(void*, int, void*, void*, int);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct S47bdd0
 {
     void FUN_0047bdd0(void*);

@@ -36,7 +36,7 @@ extern void(__stdcall* DAT_00fdf054)(void*);
 extern unsigned char kVtbl_NiD3DShaderFactory;
 extern MemoryManager g_memoryManager;
 extern "C" void* __cdecl NiMalloc(unsigned int);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned long);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t long);
 
 template <class TAlloc, class TKEY, class TVAL>
 __forceinline void* NiTMapBase<TAlloc, TKEY, TVAL>::GetFirstPos() const
@@ -950,8 +950,8 @@ void ShaderFactoryShell::NiD3DShaderFactory_RestoreAllShaderRendererData()
 
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl strcpy_s(char* pcDest, unsigned int uiSize, const char* pcSrc);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl strcpy_s(char* pcDest, size_t uiSize, const char* pcSrc);
 
 void* __cdecl NiMalloc(unsigned int uiSize);
 

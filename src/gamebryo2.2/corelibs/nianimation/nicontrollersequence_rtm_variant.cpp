@@ -7,7 +7,7 @@
 // RTM variant: this function matches the game with VC9 RTM (15.00.21022.08).
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern float DAT_01015f5c;
 extern double DAT_010241b0;
 void __cdecl FUN_00ec65a6(char*, unsigned int, const char*);

@@ -61,7 +61,7 @@ class TaskQueueInterface
 int AppendModelPath(char*, unsigned int, const char*);
 char* strrchr_0040ab30(char*, int);
 extern "C" const char* strrchr(const char*, int);
-extern "C" int _strnicmp(const char*, const char*, unsigned int);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 extern "C" void FormHeapFreeAndLog(const void*);
 
 // Looks up the TESForm for auiID and returns it cast to MagicItemForm or MagicItemObject, otherwise null.

@@ -6,7 +6,7 @@
 #include "../../include/TESSound.h"
 
 #include "../../include/CreatureSounds.h"
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 

@@ -628,7 +628,7 @@ bool FUN_00906570_Class::AdvanceRequest(Request9065* arIterator, void** arKey, v
     return success;
 }
 
-extern "C" void* __cdecl memset(void* pvDest, int iValue, unsigned int ItemUpdateArray);
+extern "C" void* __cdecl memset(void* pvDest, int iValue, size_t ItemUpdateArray);
 void* NiMalloc(unsigned int uiSize);
 
 class NiTMapItem913;

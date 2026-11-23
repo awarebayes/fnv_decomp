@@ -27,7 +27,7 @@
 #include "../../include/hkpShapePhantom.h"
 
 extern "C" void* __cdecl _NiMalloc(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern int DAT_0104e510;
 
 struct FUN_006318b0_Class

@@ -18977,7 +18977,7 @@ void* FUN_00cdb3c0_class::GetUnk38_00cdb3c0()
     return unk38;
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void* dest, int val, unsigned int count) throw();
+extern "C" void* __cdecl fnv_zlib_memset(void* dest, int val, size_t count) throw();
 
 void __cdecl ResizeAudioStream(void* mem, void* array, int sizeElem) throw();
 void __cdecl hkArrayUtil__reserve(void* mem, void* array, int numElem, int sizeElem) throw();

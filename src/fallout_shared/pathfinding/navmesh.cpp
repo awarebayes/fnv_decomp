@@ -895,7 +895,7 @@ unsigned int Arr16::BSSimpleArray_NavMeshTriangle_1024_Add(Elem16* apElement)
 }
 
 extern "C" void* __cdecl _NiMalloc(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern const char $SG3635[];
 
 // @fnv 0x00691de0

@@ -97,7 +97,7 @@ class CloningProcess
   public:
     NiTStringPointerMap<ShaderBufferRecord*>* m_pCloneMap;
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 extern NiBound DAT_011f4288;
 inline const NiBound& NiGeometry::GetBoundingVolume() const

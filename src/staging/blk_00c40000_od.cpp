@@ -7238,7 +7238,7 @@ void FUN_00c5d0a0_cls::CopyVec4AndHelper(FUN_00c5d0a0_cls* apOther, int aiArg) {
 
 typedef HKEY HKEY_t;
 int __cdecl Setting_DataType_00c33090(int);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 
 struct RegStore : RegSettingCollection {
@@ -7285,7 +7285,7 @@ typedef unsigned long DWORD;
 typedef unsigned char BYTE;
 extern "C" __declspec(dllimport) long __stdcall RegQueryValueExA(HKEY hKey, const char* lpValueName, DWORD* lpReserved, DWORD* lpType, BYTE* lpData, DWORD* lpcbData);
 
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 
 
 int __cdecl GetStateResult(int* apParams);
@@ -11587,7 +11587,7 @@ void __thiscall FUN_00c49f10_Obj::BSCompoundFrustum_VerifyGroups() {
     }
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 struct RangeNameObj {
     int unk00;

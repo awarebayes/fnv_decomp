@@ -327,7 +327,7 @@ struct FUN_005e79a0_t
 {
     bool TESForm_CompareAllComponents(TESForm*);
 };
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 extern char DAT_01183028;
 struct FUN_004fc8c0_shell : public BGSPlaceableWater
 {

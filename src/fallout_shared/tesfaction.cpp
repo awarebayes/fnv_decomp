@@ -47,7 +47,7 @@ struct FactionAccess : TESFaction
     void SaveFactionGame(BGSSaveFormBuffer* apSaveGameBuffer);
 };
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern TESDataHandler* g_dataHandler;
 
 // @fnv 0x005fc840

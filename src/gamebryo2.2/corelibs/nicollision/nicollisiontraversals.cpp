@@ -1109,7 +1109,7 @@ bool __cdecl NiCollisionTraversals_FindIntersectionsTriShapeFastPath(const Rayca
 }
 
 extern char DAT_011f4248;
-extern "C" void* memcpy(void* dst, const void* src, unsigned int n);
+extern "C" void* memcpy(void* dst, const void* src, size_t n);
 __forceinline NiPoint3::NiPoint3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
 __forceinline NiPoint3 NiPoint3::operator-(const NiPoint3& pt) const
 {

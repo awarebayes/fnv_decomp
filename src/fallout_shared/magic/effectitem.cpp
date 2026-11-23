@@ -89,7 +89,7 @@ public:
 
 // Unit-specific declarations; TESForm is supplied by the shared headers.
 
-extern "C" void* __cdecl memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* destination, int value, size_t size);
 int __cdecl Warning(const char* format, ...);
 
 // The game uses the cdecl deallocation wrapper, rather than the manager member.

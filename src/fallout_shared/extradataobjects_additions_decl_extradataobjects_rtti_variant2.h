@@ -23,6 +23,6 @@ void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* pointer);
 void* __cdecl operator new[](size_t size);
 void __cdecl operator delete[](void* pointer);
-extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
+extern "C" void* __cdecl memcpy(void* destination, const void* source, size_t size);
 
 #endif

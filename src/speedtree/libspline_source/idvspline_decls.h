@@ -22,7 +22,7 @@ struct IdvSplineInputCursor
 int IsIntegerString(const char*);
 int IsAFloat(const char*);
 int Warning(const char*, ...);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern "C" long __cdecl atol(const char*);
 extern "C" double __cdecl atof(const char*);
 #endif

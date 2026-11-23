@@ -401,7 +401,7 @@ void NiPathInterpolator::WriteToStream(NiStream* pStream)
 
 __declspec(dllimport) long __stdcall InterlockedIncrement(long* p);
 __declspec(dllimport) long __stdcall InterlockedDecrement(long* p);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void* __cdecl NiMalloc(unsigned int);
 
 __forceinline void NiRefObject::IncRefCount()
@@ -934,7 +934,7 @@ struct PathBlend
     FV3* __thiscall FUN_00439e90(FV3*, const FV3*);
 };
 extern char DAT_011a9448;
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern PathBasis DAT_011a9484;
 extern float DAT_011f3e40;
 extern unsigned int DAT_011f3e44;

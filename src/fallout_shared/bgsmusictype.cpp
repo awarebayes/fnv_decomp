@@ -50,7 +50,7 @@ bool BGSMusicType::LoadForm(TESFile* apFile)
     return true;
 }
 
-extern "C" int __cdecl sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+extern "C" int __cdecl sprintf_s(char* buffer, size_t size, const char* format, ...);
 unsigned int __cdecl GetRandomNumberInRange(int minimum, int maximum);
 
 // Prefixes the sound file with Data\\Music unless it ends in a backslash, then selects a random track index when tracks exist.

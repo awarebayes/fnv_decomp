@@ -64,8 +64,8 @@ inline bool ArchivePointerNotEqual(const NiPointer<Archive>& pointer, Archive* o
 
 // bssystem/archive.cpp: archive management and file streams (114 functions).
 
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
-extern "C" int __cdecl strcat_s(char*, unsigned int, const char*);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
+extern "C" int __cdecl strcat_s(char*, size_t, const char*);
 extern "C" int __cdecl _strlwr_s(char*, unsigned int);
 extern "C" const char kDataPrefix[];
 extern "C" const char kTexturePrefix[];
@@ -756,8 +756,8 @@ typedef char _sizecheck_BSHash[1];
 
 extern "C" int __cdecl _splitpath_s(const char*, char*, unsigned int, char*, unsigned int, char*, unsigned int, char*,
                                     unsigned int);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void __cdecl ComputeNameHash(char*, char*, FileNameHash*);
 
 // Splits a path into drive, directory, file and extension, hashes the file name with its extension and the directory path into the two output hashes.
@@ -801,8 +801,8 @@ void __cdecl HashPathComponents(const char* apString, FileNameHash* arDirHash, F
 
 extern "C" int __cdecl _splitpath_s(const char*, char*, unsigned int, char*, unsigned int, char*, unsigned int, char*,
                                     unsigned int);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void __cdecl ComputeNameHash(const char*, const char*, void*);
 
 struct FUN_00afd390_class
@@ -1537,7 +1537,7 @@ const char* __cdecl ArchiveManager_TrimFileName(const char* apFileName)
 }
 
 namespace fnv_00af5700 {
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 int __cdecl _stricmp(const char*, const char*);
 struct FileFinder
 {
@@ -2391,8 +2391,8 @@ bool BSFile::SetBufferSize(unsigned int auiSize)
 }
 
 namespace fnv_00af96d0 {
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 struct MemMgrStand
 {
@@ -3348,8 +3348,8 @@ bool ArchiveFileHashLookup::Archive_FindFileInDirectory(unsigned int aiDirectory
 }  // namespace fnv_00afa120
 
 namespace fnv_00afad00 {
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
-extern "C" int __cdecl strcat_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
+extern "C" int __cdecl strcat_s(char*, size_t, const char*);
 template <unsigned int N> inline int strcat_s(char (&dest)[N], const char* src)
 {
     return strcat_s(dest, N, src);
@@ -3558,7 +3558,7 @@ int ArchiveMatchedEntries::ClearMatchedEntries()
 }
 }  // namespace fnv_00afad00
 
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 
 struct FUN_00afb520_mm
 {
@@ -4591,8 +4591,8 @@ inline void* __cdecl operator new[](size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 extern "C" __declspec(dllimport) void __stdcall EnterCriticalSection(void*);
 extern "C" __declspec(dllimport) void __stdcall LeaveCriticalSection(void*);
 
@@ -4771,7 +4771,7 @@ extern unsigned char DAT_011acdf9;
 extern bool DAT_011f8154;
 extern int DAT_011acdfc, DAT_011ace00, DAT_011ace04;
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" __declspec(dllimport) unsigned long __stdcall GetTickCount();
 struct FileStat077
 {
@@ -5494,8 +5494,8 @@ __declspec(dllimport) void __stdcall EnterCriticalSection(void*);
 
 __declspec(dllimport) void __stdcall LeaveCriticalSection(void*);
 
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 extern "C" char* __cdecl strrchr(const char*, int);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
@@ -5851,7 +5851,7 @@ struct ArcInflateReadState
     unsigned char* m_pNextOutputByte;
     unsigned int m_uiAvailableOutputBytes;
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 int __cdecl FUN_00b44000(ArcInflateReadState* state, int flush);
 int __cdecl FUN_00b45db0(ArcInflateReadState* state);
 struct DecompReadFile : public CompressedArchiveFile

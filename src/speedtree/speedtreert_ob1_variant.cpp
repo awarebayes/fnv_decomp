@@ -126,7 +126,7 @@ public:
 };
 #include "../../include/CVec3.h"
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 inline LocalVec3::LocalVec3()
@@ -1787,7 +1787,7 @@ struct CharAllocB05130
 struct SecureTagB05130
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB05130
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -1916,7 +1916,7 @@ struct CharAllocB05210
 struct SecureTagB05210
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB05210
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -2963,7 +2963,7 @@ struct CharAllocB06280
 struct SecureTagB06280
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB06280
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -3140,7 +3140,7 @@ struct CharAllocB06440
 struct SecureTagB06440
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB06440
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -3310,7 +3310,7 @@ struct CharAllocB06660
 struct SecureTagB06660
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB06660
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -3489,7 +3489,7 @@ struct CharAllocB06810
 struct SecureTagB06810
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB06810
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -3680,7 +3680,7 @@ struct CharAllocB069C0
 struct SecureTagB069C0
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB069C0
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -4023,7 +4023,7 @@ void __cdecl SpdTreeQ::CSpeedTreeRT_SetCamera(const float* pPosition, const floa
 }  // namespace fnv_00b06c10
 
 namespace fnv_00b07060 {
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 namespace stdb07 {
 struct _Secure_char_traits_tag
 {
@@ -4196,7 +4196,7 @@ struct CharAllocB071F0
 struct SecureTagB071F0
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB071F0
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -4418,7 +4418,7 @@ struct CharAllocB07510
 struct SecureTagB07510
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB07510
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -4599,7 +4599,7 @@ struct CharAllocB076E0
 struct SecureTagB076E0
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB076E0
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -4808,7 +4808,7 @@ struct CharAllocB07900
 struct SecureTagB07900
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB07900
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -5122,7 +5122,7 @@ float SpdTreeQ::CSpeedTreeRT_SetWindStrength(float fNewStrength, float fOldStren
 }  // namespace fnv_00b07b00
 
 namespace fnv_00b07db0 {
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 namespace stdb07 {
 struct _Secure_char_traits_tag
 {
@@ -5331,7 +5331,7 @@ struct CharAllocB08050
 struct SecureTagB08050
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB08050
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -5707,7 +5707,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -6044,7 +6044,7 @@ void ListOwnerRefB087::ProcessState_00b08780()
 }
 
 namespace fnv_00b088d0 {
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 namespace stdb07 {
 struct _Secure_char_traits_tag
 {
@@ -6264,7 +6264,7 @@ struct CharAllocB08AF0
 struct SecureTagB08AF0
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB08AF0
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -7036,9 +7036,9 @@ void SpdWindReader::CSpeedTreeRT_ParseWindInfo(SpdParser* pFile)
     } while (nToken != 0x2af9);
 }
 
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
@@ -7329,9 +7329,9 @@ FUN_00b09ef0::FUN_00b09ef0(String strFilename) : String(strFilename)
 {}
 
 namespace fnv_00b09f90 {
-extern "C" unsigned int __cdecl strlen(const char* pcString);
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" size_t __cdecl strlen(const char* pcString);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
+extern "C" int __cdecl memmove_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
@@ -7657,7 +7657,7 @@ struct CharAllocB0A2A0
 struct SecureTagB0A2A0
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB0A2A0
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -7848,7 +7848,7 @@ struct CharAllocB0A7A0
 struct SecureTagB0A7A0
 {
 };
-extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcpy_s(void* pvDst, size_t uiDstSize, const void* pvSrc, size_t ItemUpdateArray);
 struct CharTraitsB0A7A0
 {
     static char* _Copy_s(char* pcFirst1, unsigned int uiSizeInBytes, const char* pcFirst2, unsigned int ItemUpdateArray)
@@ -10130,7 +10130,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -11138,7 +11138,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -12541,7 +12541,7 @@ template <class T> inline void GvDestroyOne(T* _Ptr)
 {
     _Ptr->~T();
 }
-extern "C" unsigned int __cdecl strlen(const char* _Str);
+extern "C" size_t __cdecl strlen(const char* _Str);
 int FUN_00ec7c66(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 int FUN_00ec7c6b(void* _Dst, unsigned int _Size, const void* _Src, unsigned int _Count);
 struct BxSecureTag
@@ -13898,7 +13898,7 @@ template <class T> inline T TreeCheckedBase(T& iterator)
     TreeUnchangedTag tag;
     return TreeCheckedBase(iterator, tag);
 }
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 template <class In, class Out, class Category>
 inline Out TreeCopyOpt(In first, In last, Out destination, Category, TreeScalarTag, TreeCheckedTag)
 {
@@ -13978,7 +13978,7 @@ inline TreeConstIterator::TreeConstIterator(float* p, const TreeContainer* conta
     ptr = p;
 }
 
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 void __cdecl operator delete(void*);
 struct TreeCharAllocator
 {
@@ -14810,7 +14810,7 @@ FUN_00b036d0::FUN_00b036d0(FUN_00b036d0* pNewInstance)
 }
 
 namespace fnv_00b0d040 {
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 namespace stdb07 {
 struct _Secure_char_traits_tag
 {

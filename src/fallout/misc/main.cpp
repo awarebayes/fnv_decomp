@@ -6613,7 +6613,7 @@ extern HandlerInit* handlerInstance;
 extern int DAT_011a2ffc;
 int* BSUtilities_GetLocalAppDataPath();
 const char* PrepareScriptMessage(const char*, bool);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct ValueInit
 {
     virtual void v0();

@@ -296,13 +296,13 @@ class DialogMenuInterfaceCalls
     static void Interface_SetGunScopeVisible(bool);
 };
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 const NiFixedString& FixedStrings_QDVPG();
 NiAVObject* BSUtilities_GetObjectByName_004ade00(NiNode*, const NiFixedString&);
 void BSstrncpy(char*, const char*, unsigned int);
 int BSstricmp(const char*, const char*);
-extern "C" int __cdecl _strnicmp(const char*, const char*, unsigned int);
+extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 template <class T> unsigned int BSStringLength(const T*);
 
 class SceneObjectLookup
@@ -364,7 +364,7 @@ class TaskQueueInterface
 };
 char* strrchr_0040ab30(char*, int);
 int strcat_s(char*, unsigned int, const char*);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 // pdb: class FileFinder, size 0x10 (here 0x1), 1 members
 class FileFinder
 {

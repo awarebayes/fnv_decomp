@@ -54,8 +54,8 @@ template <int n> struct EndianSizeTag
 {
 };
 void BSEndian(unsigned int*, EndianSizeTag<4>);
-extern "C" void* __cdecl _alloca(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
 int __cdecl Warning(const char*, ...);
 
 // This entry point returns a full register value in the original Load call.

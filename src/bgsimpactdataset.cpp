@@ -22,7 +22,7 @@ extern ImpactSwap* DAT_011ca834;
 void __cdecl SetGlobalPointerAtOffset(int, const char*);
 void __cdecl ResetFootstepSounds();
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x0058e810
 // pdb: BGSImpactDataSet::BGSImpactDataSet | BGSImpactDataSet.obj | retail, upstream name already matches, high

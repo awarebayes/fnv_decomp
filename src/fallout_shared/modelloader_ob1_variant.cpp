@@ -2129,7 +2129,7 @@ bool C3B270_Owner::BSStream_SaveStream()
     return result;
 }
 
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 void __cdecl operator delete(void*);
 struct Aade20SecureCopy
 {

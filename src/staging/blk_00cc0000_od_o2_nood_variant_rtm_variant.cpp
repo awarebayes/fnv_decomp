@@ -327,8 +327,8 @@ struct __declspec(align(16)) PoseVector {
     }
 };
 struct PoseQuaternion {PoseVector vector; void setMul(const PoseQuaternion&,const PoseQuaternion&);};
-extern "C" unsigned int __security_cookie;
-extern "C" void __fastcall __security_check_cookie(unsigned int);
+extern "C" uintptr_t __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
 struct QuaternionProduct {LocalM128 quad;};
 // src: COMMUNITY 0x00c66320
 __declspec(noinline) void PoseQuaternion::setMul(const PoseQuaternion& a,const PoseQuaternion& b) {

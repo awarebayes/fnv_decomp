@@ -1037,7 +1037,7 @@ FUN_00a1bbd0::~FUN_00a1bbd0()
 }
 
 namespace fnv_00a1cb80 {
-extern "C" void* __cdecl fnv_zlib_memset(void* dst, int val, unsigned int size);
+extern "C" void* __cdecl fnv_zlib_memset(void* dst, int val, size_t size);
 
 extern MemoryPool* DAT_011f63b8[256];
 }  // namespace fnv_00a1cb80

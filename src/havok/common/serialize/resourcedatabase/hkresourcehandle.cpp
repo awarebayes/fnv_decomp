@@ -746,7 +746,7 @@ void S00e2e3f0_Obj::hkMemoryResourceHandle_clearExternalLinks()
     m_uiItemCount = 0;
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern "C" int __cdecl hkString_strCmp(const char*, const char*);
 inline const char* hkStringPtr::cString() const
 {

@@ -3618,7 +3618,7 @@ if(0){} GetDebrisManager()->Leave();
 }
 }  // namespace fnv_00a01b00
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 template <> inline unsigned int BSStringT<char>::Length() const {
     return sLen == 0xffff ? strlen(pString) : sLen;
 }
@@ -3668,7 +3668,7 @@ inline BSStringT<char>& AssignParsedText(BSStringT<char>& destination, const cha
 }
 
 namespace fnv_00a0a410 {
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl sscanf(const char*, const char*, ...);
 
 // src: XBOX_PDB 0x0044a670
@@ -4224,7 +4224,7 @@ extern const char str_01094ac0[];
 
 typedef unsigned int R_u32;
 
-extern "C" unsigned strlen(const char*);
+extern "C" size_t strlen(const char*);
 // src: XBOX_PDB 0x0044a670
 inline unsigned BSstrlen(const char* s){return strlen(s);}
 struct R_Val {
@@ -4274,7 +4274,7 @@ inline void* FormHeap_Allocate(unsigned n){return MemoryManager_Instance()->Allo
 // src: COMMUNITY 0x00401030
 inline void FormHeapFreeAndLog_00401030(void*p){MemoryManager_Instance()->Deallocate(p);}
 inline void* FUN_00401460(void*dst,const void*src,unsigned n){return memcpy(dst,src,n);}
-extern "C" unsigned strlen(const char*);
+extern "C" size_t strlen(const char*);
 
 struct R_Vt4 { virtual void v0(); virtual void v1(); virtual void v2(); virtual int v3(); };
 
@@ -4300,7 +4300,7 @@ struct R_Tile {
 
 };
 
-extern "C" unsigned int strlen(const char* s);
+extern "C" size_t strlen(const char* s);
 
 extern void FNV_Warning(const char* fmt, ...);
 

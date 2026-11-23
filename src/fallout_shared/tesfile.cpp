@@ -940,7 +940,7 @@ struct MyForm
 };
 extern int DAT_00ffffff;
 bool FUN_00484b40(unsigned int formID);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 }  // namespace fnv_00472bc0
 
@@ -1042,7 +1042,7 @@ bool TESFile::ReadChunkHeader()
     return true;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct S7010
 {
@@ -1109,7 +1109,7 @@ struct _ULARGE_INTEGER
 };
 typedef char _sizecheck__ULARGE_INTEGER[1];
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 template <int N> struct EndianSizeTag
 {
 };
@@ -1221,7 +1221,7 @@ int TESFile::ReadTESInfo()
 
 namespace fnv_004721d0 {
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 extern int DAT_010a2480;
 int __fastcall MissileProjectile_GetImpactResult(int);

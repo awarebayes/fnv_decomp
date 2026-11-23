@@ -2266,7 +2266,7 @@ void FUN_00485530_shell::InitGroupForm(FormRecordHeader* apOutGroupFORM, GroupDa
 }
 
 extern "C" void* __cdecl _NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 // @fnv 0x00486990
 // pdb: NiTStringTemplateMap<NiTMap<char const *,TESForm *>,TESForm *>::NiTStringTemplateMap<NiTMap<char const *,TESForm *>,TESForm *> | TESForm.obj | retail, object-file run extension, low
 // pdb note: debug build links it to NiTMapBase<NiTPointerAllocator<unsigned int>,unsigned int,TESForm *>::NiTMapBase<NiTPointerAllocator<unsigned int>,unsigned int,TESForm *>

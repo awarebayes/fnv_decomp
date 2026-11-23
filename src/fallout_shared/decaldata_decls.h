@@ -5,5 +5,5 @@
 class TESFile;
 #include "../../include/DecalData.h"
 #include "../../include/DecalData.h"
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #endif

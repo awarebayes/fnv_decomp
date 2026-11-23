@@ -484,7 +484,7 @@ NiAVObject* __cdecl xMakeLine(Pt3X& arLeftCorner, Pt3X& arRightCorner, float afF
 NiAVObject* __cdecl xMakeSphere(float afRadius, int aiSlices, int aiStacks, ColorX* apColor);
 void __cdecl AddNoLightingPropertyRecurse(NodeX* apObject);
 void __cdecl xPrepareNode(NodeX* apObject, int abFaceGenModel, int abSkipPreCache);
-extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, unsigned int auiSize);
+extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, size_t auiSize);
 extern NiPointer<NodeX> xspNavRoot;
 extern bool xbShowPortals;
 extern bool xbShowCover;

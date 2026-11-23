@@ -381,7 +381,7 @@ FNV_STATIC_ASSERT(offsetof(TaskQueueInterface, m_pTaskQueueProcessor) == 8);
 FNV_STATIC_ASSERT(offsetof(TaskQueueInterface, m_uiTaskFlags) == 12);
 #endif
 
-extern "C" int strcpy_s(char* apDestination, unsigned int auiSize, const char* apSource);
+extern "C" int strcpy_s(char* apDestination, size_t auiSize, const char* apSource);
 unsigned int gm_GetCurrentThreadId();
 
 // @fnv 0x00406d30

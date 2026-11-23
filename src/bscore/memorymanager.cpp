@@ -437,7 +437,7 @@ inline void DestroyMemoryPools()
         DAT_011f67b8[i] = 0;
     }
 }
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 // @fnv 0x00aa3a40
 // pdb: MemoryManager::~MemoryManager | MemoryManager.obj | retail, upstream name already matches, high
 // pdb locals: pscrapHeap, threadId, itr, i

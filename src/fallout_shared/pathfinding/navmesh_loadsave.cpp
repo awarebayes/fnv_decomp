@@ -651,7 +651,7 @@ struct FUN_00692950_shell : public NavMesh
     bool NavMesh_Load(TESFile*);
 };
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void* operator new(size_t);
 template <int N> struct EndianSizeTag
 {

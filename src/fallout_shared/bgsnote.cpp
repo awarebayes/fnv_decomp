@@ -36,7 +36,7 @@ template <class T> struct BGSNoteReference
     T* form;
 };
 bool __cdecl IsChunkTypeIcon(int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 // @fnv 0x005e8240

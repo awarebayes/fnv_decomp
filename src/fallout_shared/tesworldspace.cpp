@@ -27,7 +27,7 @@ class Tile;
 class TESSound;
 class TESQuest;
 class TESEffectShader;
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 extern float DAT_01031920;
 extern const char DAT_010187a0[];
 int Warning(const char*, ...);
@@ -3059,7 +3059,7 @@ bool WorldSpacePointQueryMethods::ContainsPoint(const NiPoint3* position)
 }
 
 namespace fnv_00583560 {
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 void* operator new(size_t);
 void operator delete(void*);
 struct B006815c0

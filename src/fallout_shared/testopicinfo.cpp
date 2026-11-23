@@ -1447,7 +1447,7 @@ void TESTopicInfo::Copy(TESForm* apCopy)
     SetInitializationState(topic->IsFormInitialized());
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void ourMemset(void*, int, unsigned int);
 struct FileOps : TESFile
 {

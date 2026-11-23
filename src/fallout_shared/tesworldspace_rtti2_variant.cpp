@@ -13,7 +13,7 @@
 #include "../../include/TESWorldSpace.h"
 #include "../../include/TESImageSpace.h"
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 // Method-only extensions for declarations not yet exposed by the shared headers.
 struct WorldImageSpaceComparison : TESImageSpace

@@ -6,7 +6,7 @@
 #include "../../include/TESForm.h"
 #include "NiPoint3.h"
 #include "TESFile.h"
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct DoorTeleportLoadData
 {
     TESObjectREFR* door;

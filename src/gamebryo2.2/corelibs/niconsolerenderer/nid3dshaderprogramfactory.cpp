@@ -166,7 +166,7 @@ struct P03MM
 };
 extern P03MM g_memoryManager;
 extern "C" void* __cdecl _NiMalloc(unsigned int size);
-extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int value, unsigned int size);
+extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int value, size_t size);
 extern int DAT_010f0eb0;
 extern int DAT_010f0f50;
 
@@ -361,7 +361,7 @@ void NiD3DShaderProgramFactory_SetD3DRenderer(int pkD3DRenderer)
 }
 
 extern "C" int __cdecl strcmp(const char*, const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 int strcpy_s(char* dst, unsigned int size, const char* src);
 void* NiMalloc(unsigned int size);
 extern "C" int __cdecl FUN_00aa1360(const char* s1, const char* s2);

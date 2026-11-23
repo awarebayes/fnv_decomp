@@ -304,7 +304,7 @@ struct FUN_005e79a0_t
     bool TESForm_CompareAllComponents(TESForm* apCompare);
 };
 
-extern "C" int memcmp(const void*, const void*, unsigned int);
+extern "C" int memcmp(const void*, const void*, size_t);
 
 struct EffectSettingShell : EffectSetting
 {

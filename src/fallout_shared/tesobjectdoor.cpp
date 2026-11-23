@@ -82,9 +82,9 @@ void TESIdleManager_SetUsedItemActivate(bool);
 void Interface_CreateLockPickMenu(TESObjectREFR*, int, int);
 void ApplyPerkModifiers(int, Actor*, float*);
 int Warning(const char*, ...);
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 #pragma intrinsic(_alloca)
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 
 // Loads a TESObjectDOOR record from a TESFile, dispatching each chunk to the matching sub-record loader and returning false if the form type is not 28.
 // @fnv 0x005177f0

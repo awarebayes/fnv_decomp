@@ -3,7 +3,7 @@
 #include "../../include/BGSVoiceType.h"
 #include "../../include/TESFile.h"
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 // Loads a BGSVoiceType record from a TESFile, handling EDID, OBND and DATA chunks, and returns false if the form type is not 0x5d.
 // @fnv 0x005f01a0
 // pdb: BGSVoiceType::Load | BGSVoiceType.obj | retail, upstream name already matches, high

@@ -35,9 +35,9 @@ extern int(__cdecl* DAT_00fdf0d4)(char* path);
 extern unsigned int DAT_011aa2e8;
 extern char* DAT_011a2224;
 
-extern "C" unsigned int __cdecl strlen(const char* string);
-extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, unsigned int size);
-extern "C" unsigned int __security_cookie;
-extern "C" void __fastcall __security_check_cookie(unsigned int cookie);
+extern "C" size_t __cdecl strlen(const char* string);
+extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, size_t size);
+extern "C" uintptr_t __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t cookie);
 
 #endif

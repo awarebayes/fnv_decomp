@@ -2638,7 +2638,7 @@ int __stdcall Runtime_UpdateState_009f9cd0(int a)
 
 extern "C" __declspec(dllimport) void __stdcall EnterCriticalSection(void*);
 extern "C" __declspec(dllimport) void __stdcall LeaveCriticalSection(void*);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 struct AllocSysInfo
 {
@@ -2796,7 +2796,7 @@ int FnvCpu_FUN_009fd0f0_CpuObject::NiInitOptions_GetAllocator()
     return value;
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 // Exe 0x009f9a80: unit-local Vector4f view; declarations and layout are preserved.
 struct BlkVector4fView
@@ -3235,7 +3235,7 @@ struct SampleProperties
     int cbBuffer;
 };
 
-extern "C" void* __cdecl memmove(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memmove(void* dst, const void* src, size_t n);
 
 // Copies a subset of MediaSample fields into a SampleProperties struct at pDest, clearing the 0x20 sample flag and zeroing pMediaType when the 0x8 flag is unset.
 // @fnv 0x009fa960
@@ -4680,7 +4680,7 @@ int __stdcall CompareWideStrings(const wchar_t* p, const wchar_t* q)
 }  // namespace fnv_009fd030
 
 extern "C" __declspec(dllimport) void* __stdcall CoTaskMemAlloc(unsigned long cb);
-extern "C" void* __cdecl memcpy(void* dst, const void* src, unsigned int size);
+extern "C" void* __cdecl memcpy(void* dst, const void* src, size_t size);
 int __stdcall strlen_w(const wchar_t* psz);
 
 // Allocates a CoTaskMemAlloc'd copy of psz, writes the pointer to ppszReturn, and returns HRESULT.

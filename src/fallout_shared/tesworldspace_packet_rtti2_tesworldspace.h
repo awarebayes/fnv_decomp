@@ -139,7 +139,7 @@ class TESFullName
   public:
     void SetFullName(const char*);
 };
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 extern float DAT_01031920;
 extern const char DAT_010187a0[];
 int Warning(const char*, ...);

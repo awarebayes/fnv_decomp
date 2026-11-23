@@ -3,7 +3,7 @@
 #include "../../include/BSDiscBootSystemUtility.h"
 #include "../../include/MemoryManager.h"
 
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 // @fnv 0x00af3ae0
 // pdb: BSDiscBootSystemUtility::Destroy | BSDiscBootSystemUtility.obj | debug, upstream name already matches, high

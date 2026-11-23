@@ -1382,7 +1382,7 @@ int* Object_AllocateElementStorage_00b16b00(unsigned int count, int aiUnused)
 }
 
 extern "C" unsigned int __cdecl wcslen(const wchar_t* s);
-extern "C" void* __cdecl memmove(void* dst, const void* src, unsigned int size);
+extern "C" void* __cdecl memmove(void* dst, const void* src, size_t size);
 
 struct Pad36
 {
@@ -1917,7 +1917,7 @@ void FUN_00b15600_cls::ReleaseEntries_00b15600()
     m_14 = 0;
 }
 
-extern "C" int __cdecl strcat_s(char* d, unsigned int n, const char* s);
+extern "C" int __cdecl strcat_s(char* d, size_t n, const char* s);
 // pdb: structure _FILETIME, size 0x8, 2 members
 struct _FILETIME
 {

@@ -8,7 +8,7 @@ class RegionDataEntry
   public:
     void Endian();
 };
-extern "C" void* memset(void* dst, int val, unsigned int size);
+extern "C" void* memset(void* dst, int val, size_t size);
 
 // Adjustor thunk (MSVC this-adjusting thunk for a secondary base sub-object).
 // The secondary base sits at offset 0x3c inside the derived object, so the

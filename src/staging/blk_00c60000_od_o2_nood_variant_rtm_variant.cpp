@@ -5813,7 +5813,7 @@ using ::_mm_move_ss;
 }
 extern "C" unsigned long __readfsdword(unsigned long);
 extern "C" double __cdecl sqrt(double);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct Vec3C
 {
     float x, y, z;

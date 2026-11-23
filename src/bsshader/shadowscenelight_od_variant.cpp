@@ -4,6 +4,6 @@
 
 #include "../../include/NiPoint3.h"
 #include "../../include/NiFrustumPlanes.h"
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" const NiPoint3 NiPoint3_ZERO;
 extern const float runtimeFloatSettingDefault100;

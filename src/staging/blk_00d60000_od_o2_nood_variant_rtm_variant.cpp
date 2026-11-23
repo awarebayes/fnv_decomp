@@ -444,8 +444,8 @@ __forceinline SimdC::LocalM128 blendPosition(const PoseVector4& position, const 
                              SimdC::_mm_mul_ps(t, target.quad()));
 }
 
-extern "C" unsigned int __security_cookie;
-extern "C" void __fastcall __security_check_cookie(unsigned int);
+extern "C" uintptr_t __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
 // src: COMMUNITY 0x00c66320
 __declspec(noinline) void hkQuaternion::setMul(const hkQuaternion& a, const hkQuaternion& b)
 {

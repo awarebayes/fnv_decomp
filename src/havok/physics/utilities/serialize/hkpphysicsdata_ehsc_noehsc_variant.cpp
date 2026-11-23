@@ -247,7 +247,7 @@ struct HostType
     ArrayType m_0c;
     void hkpPhysicsData_populateFromWorld(ClientType*, unsigned char);
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct Value
 {
     BoolResult isActive_00c9bff0();

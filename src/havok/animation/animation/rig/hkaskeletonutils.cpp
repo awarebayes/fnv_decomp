@@ -91,7 +91,7 @@ short __cdecl FindIndexByKey(hkaSkeleton* pSearchEntries, const void* pKey,
     return -1;
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 // Clears flags up to root, marks root, then sets each later node's flag from whether its parent is flagged, and finally sets root to finalValue.
 // @fnv 0x00cdd410
 void __cdecl MarkHierarchyDescendants(hkaSkeleton* hierarchy, int root, unsigned char* flags, unsigned char finalValue)

@@ -2860,14 +2860,14 @@ struct FUN_00c5d0a0_cls {
 };
 typedef void* HKEY_t;
 int __cdecl Setting_DataType_00c33090(int);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 struct RegSetting {
     int unk00;
     int value;
     char* pName;
     unsigned int GetSize();
 };
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 int __cdecl GetStateResult(int* apParams);
 // FUN_00c5de30: thiscall, zero two fields, reset sub-object at +0xac
 struct ResetHelper {
@@ -4978,7 +4978,7 @@ struct DerQ : FUN_00c450d0 {
   DerQ() { vtbl = (int)&DAT_010c1eb4; }
 };
 DerQ* BSBlastNode_CreateObject();
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct ItemW { int a, b, c; };
 struct ArrW {
     virtual void v00();

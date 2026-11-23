@@ -1376,7 +1376,7 @@ void* __thiscall FUN_0084d270_class::FUN_0084d270(unsigned int flags)
 
 namespace fnv_0084d2a0 {
 extern "C" void* __cdecl NiMalloc(unsigned int);
-extern "C" void* __cdecl memset(void* dst, int c, unsigned int n);
+extern "C" void* __cdecl memset(void* dst, int c, size_t n);
 extern int DAT_0107f734;
 struct FUN_0084d2a0_t
 {
@@ -1777,7 +1777,7 @@ void TESSaveLoadGame::QueueFormForFinalization(TESForm* apForm)
         m_QueuedFormList.AddHead(apForm);
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 unsigned int __fastcall BGSNumericIDIndex_GetNumericID(void*);
@@ -3082,7 +3082,7 @@ unsigned int __thiscall FUN_00859120_cls::TESSaveLoadGame_CheckNewReference(TESF
     return aiFlags;
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern char DAT_01080864;
 void __cdecl Warning_005b5e40(void*);
 

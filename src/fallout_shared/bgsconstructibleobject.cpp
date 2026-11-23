@@ -32,7 +32,7 @@ public:
 };
 
 void* __cdecl _Deallocate(void*);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void __cdecl TESForm_AddChunk_00485910(unsigned int, unsigned int);
 
 struct ModelSave

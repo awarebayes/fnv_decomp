@@ -13,7 +13,7 @@
 #include "../../include/Actor.h"
 #include "../../include/EffectSetting.h"
 
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 #pragma intrinsic(_alloca)
 int Warning(const char*, ...);
 class TESFileFormVersion
@@ -41,7 +41,7 @@ class ModelLoader
 };
 extern ModelLoader* g_modelLoader;
 
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 
 class Queueable18
 {

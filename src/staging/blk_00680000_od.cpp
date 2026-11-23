@@ -441,7 +441,7 @@ unsigned int FUN_00695370_class::GetArrFlags()
     return arr.GetFlags();
 }
 
-extern "C" void* __cdecl memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dst, int value, size_t count);
 
 // @fnv 0x00695390
 // pdb: BSmemset | TESScriptFunctions.obj | debug, call graph, medium
@@ -1029,7 +1029,7 @@ void* FUN_00691ea0_class::FUN_006917a0(unsigned int flags)
 }
 
 extern "C" void* __cdecl _NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dst, int value, size_t count);
 extern int SG6701;
 struct FUN_006918c0_class
 {
@@ -3324,7 +3324,7 @@ struct LDEndianTag
 
 void __cdecl LDSwap32(int* apValue, LDEndianTag aTag);
 void __cdecl LDSwap16(short* apValue, LDEndianTag aTag);
-extern "C" int __cdecl memcpy_s(void* apDest, unsigned int auiDestSize, const void* apSrc, unsigned int auiCount);
+extern "C" int __cdecl memcpy_s(void* apDest, size_t auiDestSize, const void* apSrc, size_t auiCount);
 
 struct LDFile
 {

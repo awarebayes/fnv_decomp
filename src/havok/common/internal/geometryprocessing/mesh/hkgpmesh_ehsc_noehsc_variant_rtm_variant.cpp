@@ -1215,7 +1215,7 @@ struct FUN_00e22970_Item
     int m_data[12];
 };
 void __cdecl hkArrayUtil__reserve(void* apArg1, hkArrayBase<FUN_00e22970_Item>* apThis, int aCapacity, int aElemSize);
-extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, unsigned int aCount);
+extern "C" void* __cdecl memcpy(void* apDst, const void* apSrc, size_t aCount);
 void __cdecl hkArrayUtil__reserve(int mem, void* array, int numElem, int sizeElem);
 struct FUN_00e22c80_cls
 {

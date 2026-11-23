@@ -160,8 +160,8 @@ class WaterShaderMemContext
             WaterShaderGetThreadState()->m_uiMemoryContext = previous;
     }
 };
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" int fnv_particle_shader_renderer_level;
 extern NiPointer<NiShaderConstantMapEntry> DAT_011ff4a0;
 extern NiPointer<NiShaderConstantMapEntry> DAT_011ff4a4;

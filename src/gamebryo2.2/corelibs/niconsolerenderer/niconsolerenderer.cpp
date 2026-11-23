@@ -60,7 +60,7 @@ __forceinline void* operator new(size_t size, PixelDataAllocationTag) { return N
 enum AlphaPropertyAllocationTag { AllocateAlphaProperty };
 __forceinline void* operator new(size_t size, AlphaPropertyAllocationTag) { return NiAlphaProperty::operator new(size); }
 // Preserve the original aggregate copy of the point's storage.
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 __forceinline void CopyPoint3Storage(NiPoint3& dest, const NiPoint3& source)
 {
@@ -1403,7 +1403,7 @@ bool __thiscall S_00e69a20::CreateDepthStencilBuffer(Ni2DBuffer* apBuffer, NiPix
 	return NiDX9AdditionalDepthStencilBufferData::Create(dev, &apBuffer, apPixelFormat, c);
 }
 
-extern "C" char* __cdecl strcat_s(char* dest, unsigned int size, const char* src);
+extern "C" char* __cdecl strcat_s(char* dest, size_t size, const char* src);
 struct FUN_00e69c00_shell {
     char pad[0x5cc];
     unsigned int flags;
@@ -15304,7 +15304,7 @@ unsigned int __cdecl PackByteElements(PackByteInfo* kParams) {
     return size;
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 inline unsigned short minimum(unsigned short a, unsigned short b) { return a > b ? b : a; }
 struct ByteFloatStream {
  unsigned short lastComponent, unk02, type, unk06, vertices, unk0a;
@@ -16038,7 +16038,7 @@ void E71E40::RemoveItemsFromMap(FUN_00e744b0_Src* p) {
 
 }
 
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 
 void* NiMalloc(unsigned int);
 struct RendererBase {
@@ -21025,7 +21025,7 @@ void RendererPacketMap::SetMapEntryWithReferenceCounting(unsigned int key, Refer
 }
 
 namespace fnv_00e73eb0 {
-extern "C" void* __cdecl memmove(void* pvDst, const void* pvSrc, unsigned int uiSize);
+extern "C" void* __cdecl memmove(void* pvDst, const void* pvSrc, size_t uiSize);
 
 void __cdecl Object_DoNothing(const char* pcMessage);
 
@@ -24989,7 +24989,7 @@ unsigned int NiD3DShaderDeclaration_Pack_UnsignedShortToUByteColor(Stream_e78910
     return uiBytesWritten;
 }
 
-extern "C" void* __cdecl memcpy(void*,const void*,unsigned int);
+extern "C" void* __cdecl memcpy(void*,const void*,size_t);
 struct Stream78 {
  unsigned short type, unk02;
  unsigned short components, unk06;
@@ -27889,7 +27889,7 @@ bool __thiscall ThisObj::BuildPacketEntries(void* a1, void* pkModel, Arg3* pkArg
     return bResult;
 }
 
-extern "C" void* __cdecl memset(void*,int,unsigned int);
+extern "C" void* __cdecl memset(void*,int,size_t);
 extern "C" void* __cdecl FUN_00ec61c0(void*,int,unsigned int);
 struct InitAdapterList;
 extern InitAdapterList* DAT_0126f0e8;

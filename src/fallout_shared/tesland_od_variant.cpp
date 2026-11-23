@@ -49,7 +49,7 @@ inline bool NiPoint3::operator==(const NiPoint3& other) const
 int TruncateFloatToInt(float value);
 // Scoped memcpy intrinsics preserve trivial vector copies under /Od; the shared
 // copy operations would otherwise emit calls. Raw float buffers retain uninitialized storage.
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 void __cdecl Deallocate(void*);
 
@@ -5569,7 +5569,7 @@ bool LandLD::TESObjectLAND_ForceGoodNormals()
     return true;
 }
 
-extern "C" void* __cdecl memset(void* dst, int val, unsigned int size);
+extern "C" void* __cdecl memset(void* dst, int val, size_t size);
 
 float __cdecl Max_00404010(float a, float b);
 float __cdecl Min_0040ebd0(float a, float b);

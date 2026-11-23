@@ -61,9 +61,9 @@ struct LightRecordAccess : TESObjectLIGH
 template <class T> unsigned int __cdecl BSStringLength(const T* string);
 bool __cdecl NiObject_IsKindOf(const NiRTTI* type, NiAVObject* object);
 extern NiRTTI DAT_011f4a28;
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
-extern "C" void* __cdecl memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* destination, int value, size_t size);
 extern "C" const char DAT_01029064[];
 extern int __cdecl Warning(const char* format, ...);
 extern float DAT_010249d8;

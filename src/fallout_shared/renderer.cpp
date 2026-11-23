@@ -1328,7 +1328,7 @@ int __cdecl FUN_009feae8(int*, unsigned int*);
 int __cdecl Object_ForwardCall_009feae2(int*, unsigned int*);
 int __cdecl FUN_009febd8(void*, int*);
 void* __cdecl NiXenonRenderer_GetRenderer();
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct DriverVersion
 {
     int version;

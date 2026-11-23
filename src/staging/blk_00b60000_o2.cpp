@@ -60,7 +60,7 @@ public:
 #include "../../include/StrArr.h"
 
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 inline V4::V4() {}
 inline V4::V4(float a, float b, float c, float d) : x(a), y(b), z(c), w(d) {}
 inline void V4::operator=(const V4& other)
@@ -618,7 +618,7 @@ void FUN_00b6f460_class::LoadAndSetAdditional(NiStream* kStream)
     }
 }
 
-extern "C" void* __cdecl memmove(void* dst, const void* src, unsigned int n);
+extern "C" void* __cdecl memmove(void* dst, const void* src, size_t n);
 struct FUN_00b71ad0_class
 {
     void CopySourceData(const void* src);
@@ -1161,8 +1161,8 @@ template <> NiPointer<FnvB60280Ref>& NiPointer<FnvB60280Ref>::operator=(FnvB6028
     return *this;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 void* __cdecl _NiMalloc_00aa1070(unsigned int);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);

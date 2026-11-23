@@ -19,7 +19,7 @@ inline void NiD3DShaderConstantMap::DecRefCount() { NiRefObject::DecRefCount(); 
 inline void NiShaderConstantMapEntry::IncRefCount() { NiRefObject::IncRefCount(); }
 inline void NiShaderConstantMapEntry::DecRefCount() { NiRefObject::DecRefCount(); }
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 #pragma intrinsic(memset)
 
 // VC9 reverses the shared GetEntry overloads within their vtable group. The

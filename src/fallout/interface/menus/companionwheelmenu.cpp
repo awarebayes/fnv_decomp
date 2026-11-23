@@ -2880,7 +2880,7 @@ void CompanionHealingMenu::HealCompanion()
 
 extern const char str_01019f08[];
 // 0x00755dc0  unit_929b7ab49562.cpp  /MT /Od /Oy- /GS /EHsc /Gy
-extern "C" int sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
+extern "C" int sprintf_s(char* buf, size_t size, const char* fmt, ...);
 
 extern Setting DAT_011d300c;
 extern Setting DAT_011d2568;

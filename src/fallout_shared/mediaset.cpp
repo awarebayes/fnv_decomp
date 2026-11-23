@@ -296,7 +296,7 @@ void __fastcall BSStringT_BSStringT_Thunk(BSStringT<char>* apString)
     apString->BSStringT<char>::~BSStringT<char>();
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 
 

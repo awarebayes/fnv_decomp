@@ -1221,7 +1221,7 @@ void __cdecl NiPoint2_SaveBinary(Owner* stream, unsigned int pkValues, unsigned 
 }
 
 namespace fnv_00a66a60 {
-extern "C" void* __cdecl memset(void* pvDst, int iValue, unsigned int uiSize);
+extern "C" void* __cdecl memset(void* pvDst, int iValue, size_t uiSize);
 
 extern MemoryManager g_memoryManager;
 

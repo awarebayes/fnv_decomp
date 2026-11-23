@@ -61,7 +61,7 @@ void TESProduceForm::CopyFromBase(BaseFormComponent* apCopyFC)
     SetAllProductionChances((void*)((char*)pCopy + 8));
 }
 
-extern "C" int __cdecl memcmp(const void* a, const void* b, unsigned int n);
+extern "C" int __cdecl memcmp(const void* a, const void* b, size_t n);
 // Compares production chance bytes and the ingredient value against another component, returning true when they differ or the other is not a TESProduceForm.
 // @fnv 0x0048b6a0
 // pdb: TESProduceForm::CompareComponent | TESProduceForm.obj | retail, vtable slot, high

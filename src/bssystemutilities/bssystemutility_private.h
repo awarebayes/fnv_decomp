@@ -59,7 +59,7 @@ FNVVTableSlot8* GetVTableSlot8();
 FNVVTableSlot8* BSGameDataSystemUtility_GetSingleton();
 FNVVTableSlot8* GetInitObj();
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern "C" void __cdecl fnv_CopyFilePath(char*, unsigned int, const char*, unsigned int);
 
 #endif

@@ -31,8 +31,8 @@ class D3DRenderStateGroup
 };
 void ConfigureBeamStage(BeamStage*, unsigned int, unsigned int, unsigned int, bool);
 #include "../../include/_D3DXMACRO.h"
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern NiD3DPass* DAT_0126f74c;
 FNV_STATIC_ASSERT(offsetof(NiD3DPass, m_uiCurrentStage) == 0x14);
 FNV_STATIC_ASSERT(offsetof(NiD3DPass, m_pkRenderStateGroup) == 0x30);

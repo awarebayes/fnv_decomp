@@ -390,8 +390,8 @@ class SaveHeaderOps
 class TESIdleForm;
 extern char* DAT_011a2224;
 extern const char ENGLISH[];
-extern "C" unsigned __cdecl strlen(const char*);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 int BSstrcmp(const char*, const char*);
 #endif
 
@@ -2819,7 +2819,7 @@ struct FloatSetting539
 extern BoolSetting539 DAT_011d8928;
 extern FloatSetting539 DAT_011d2178;
 extern const char DAT_010721f4[];
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 unsigned int __cdecl Cmd_GetSessionTime_Execute();
 struct ActorAccess539
 {

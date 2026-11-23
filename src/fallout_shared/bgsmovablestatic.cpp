@@ -185,7 +185,7 @@ void FUN_004fbf20_shell::Destroy()
 MovableStaticObject::~MovableStaticObject()
 {}
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 struct AlchTexSwap
 {
     unsigned int modelPath;

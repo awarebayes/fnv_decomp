@@ -64,7 +64,7 @@ void* __thiscall NiStringsExtraData::FUN_00a94970(unsigned int flags)
 
 void* __cdecl _NiMalloc(unsigned int);
 int __cdecl _strcpy_s(char*, unsigned int, const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 
 // @fnv 0x00a94880
 // src: XBOX_RETAIL_PDB 0x00a94880

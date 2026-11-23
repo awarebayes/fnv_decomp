@@ -391,7 +391,7 @@ void WeatherSave::TESWeather_Save()
     TESForm::FinishFormRecord();
 }
 
-extern "C" int memcmp(const void* buf1, const void* buf2, unsigned int count);
+extern "C" int memcmp(const void* buf1, const void* buf2, size_t count);
 
 class TESRegionData;
 

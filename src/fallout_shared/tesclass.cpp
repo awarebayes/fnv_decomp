@@ -27,9 +27,9 @@ class LegacyActorBaseData
     unsigned char trainingSkill, trainingLevel;
     void SwapEndianData();
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 int __cdecl Warning(const char*, ...);
 // TESFileFormInt_tesclass: local type (was include/TESFileFormInt.h, which had no evidence of one real class); its methods are 0x00472660 TESFile::GetTESForm
 class TESFileFormInt_tesclass

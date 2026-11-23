@@ -3240,7 +3240,7 @@ extern "C" unsigned int(__stdcall* xmmioAscend)(void* h, xMMCKINFO* pck, unsigne
 extern "C" unsigned int(__stdcall* xmmioGetInfo)(void* h, xMMIOINFO* pInfo, unsigned int uFlags);
 extern "C" unsigned int(__stdcall* xmmioAdvance)(void* h, xMMIOINFO* pInfo, unsigned int uFlags);
 extern "C" char* __cdecl xStrstr(char* s, const char* sub);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int n, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t n, const char* src);
 extern "C" void* __cdecl xMemcpy(void* d, const void* s, unsigned int n);
 void xWarning(const char* fmt, ...);
 long __stdcall xWavIOProc(char* a, unsigned int b, long c, long d);

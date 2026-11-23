@@ -6,8 +6,8 @@
 #include "../../include/TESCombatStyle.h"
 #include "../../include/UInt32ChunkData.h"
 #include "../../include/UnsignedIntArray16.h"
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
+extern "C" void* __cdecl memset(void*, int, size_t);
 TESCombatStyle* TESCombatStyle_GetDefaultCombatStyle();
 StatsChunkData& __fastcall GetCombatStyleData(TESCombatStyle* style);
 HungerStageData* __fastcall GetHungerStageData(BGSHungerStage* stage);

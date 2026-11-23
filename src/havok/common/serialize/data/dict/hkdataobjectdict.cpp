@@ -9468,7 +9468,7 @@ hkNameRefDC96 hkNameDC96::hkDataObjectDict_accessByName(const char* name)
 }  // namespace fnv_00dc9640
 
 namespace fnv_00dc9d10 {
-extern "C" void* __cdecl fnv_zlib_memset(void* pvDest, int iValue, unsigned int iCount);
+extern "C" void* __cdecl fnv_zlib_memset(void* pvDest, int iValue, size_t iCount);
 extern "C" void _ReadWriteBarrier(void);
 
 class hkMemoryAllocatorDC9D;

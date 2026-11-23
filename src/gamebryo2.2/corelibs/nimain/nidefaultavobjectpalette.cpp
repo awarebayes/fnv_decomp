@@ -712,7 +712,7 @@ extern NiFixedString EmptyFS;
 
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl _NiFree_00aa10f0(void*);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 // pdb: class Key, size 0x8 (here 0x4), 2 members
 struct Key
 {

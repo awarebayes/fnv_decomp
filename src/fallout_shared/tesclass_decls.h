@@ -77,9 +77,9 @@ class TESClass : public TESForm, public TESFullName, public TESDescription, publ
     bool Load(TESFile*);
     bool ValidateSkillActorValue();
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 int __cdecl Warning(const char*, ...);
 class TESFileFormInt
 {

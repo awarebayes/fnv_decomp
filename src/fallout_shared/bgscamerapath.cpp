@@ -168,9 +168,9 @@ void BGSCameraPath::FixNextPaths(NiFormArray* apArray)
     }
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 // @fnv 0x0058a9e0
 // pdb: BGSCameraPath::Load | BGSCameraPath.obj | retail, upstream name already matches, high
 // pdb params: apFile
@@ -503,7 +503,7 @@ void BGSCameraPath::CopyFromForm(TESForm* apCopy)
     }
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 
 struct FormCompareStub
 {

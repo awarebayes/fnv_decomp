@@ -3,7 +3,7 @@
 #define FNV_TESOBJECTANIO_DECLS_H
 
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 #include "../../include/TESFile.h"

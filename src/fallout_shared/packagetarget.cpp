@@ -256,7 +256,7 @@ struct FormValueEntry
     int iValue;
     float m_fTargetValue;
 };
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 extern "C" bool __cdecl TESForm_QEndianSwapOnSave();
 extern "C" void __cdecl AppendChunk(int id, FormValueEntry* data, unsigned int size);
 

@@ -212,8 +212,8 @@ inline void NiD3DPass::SetPixelShader(NiD3DPixelShader* pkPixelShader)
 
 void ConfigureBeamStage(BeamStage*, unsigned int, unsigned int, unsigned int, bool);
 #include "../../include/_D3DXMACRO.h"
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern NiD3DPass* DAT_0126f74c;
 
 // Configures two NiD3DPass objects with two texture stages each, render states, vertex and pixel shaders, and returns true.

@@ -161,7 +161,7 @@ struct FUN_007e0d80_shell : Flt
     void FUN_00438470(FUN_007e0d80_shell* other);
     FUN_007e0d80_shell* AppendString(FUN_007e0d80_shell* other);
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 int SurgeryMenu_GetClassStatic();
 int __cdecl TextEdit_GetMenuID();
 struct SysMgr

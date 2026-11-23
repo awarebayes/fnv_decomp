@@ -142,7 +142,7 @@ NiTextKeyExtraData* __fastcall InitializeTextKeyRefCount(NiTextKeyExtraData* sel
     return self;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct StrArray
 {
     void* m_vtbl;

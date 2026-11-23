@@ -254,7 +254,7 @@ class TESObjectDoorController : public NiTimeController
     TESObjectDoorController();
     void MagicShaderHitEffect_SetLifeTime(float);
 };
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 class NiTexture;
 class CloningProcess

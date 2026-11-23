@@ -55,7 +55,7 @@ template <class K, class V> class BSMap : public BSMapBase<K, V>
 };
 
 bool TESModel_IsModelChunk(int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 
 int Warning();

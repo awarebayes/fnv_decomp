@@ -281,7 +281,7 @@ FUN_00c3ec80::FUN_00c3ec80(unsigned int a, unsigned int b, unsigned int c)
     unk14 = new (&g_memoryManager) FUN_00c42180(a);
 }
 
-extern "C" void* __cdecl memset(void* pvDest, int iValue, unsigned int uiSize);
+extern "C" void* __cdecl memset(void* pvDest, int iValue, size_t uiSize);
 
 extern MemoryManager g_kMemoryManagerC4;
 

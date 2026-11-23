@@ -84,8 +84,8 @@ struct ArmorDataEndian
 
 // Record-loading helpers and legacy armor layouts.
 #include "../include/TESFile.h"
-extern "C" void* __cdecl _alloca(unsigned int);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 class TESFileFormVersion
@@ -112,7 +112,7 @@ struct TESObjectARMOOldData
     void BSEndian_Thunk();
 };
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 int __cdecl Warning(const char*, ...);
 
 // @fnv 0x00512e10

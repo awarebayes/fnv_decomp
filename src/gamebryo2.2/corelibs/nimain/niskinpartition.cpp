@@ -896,7 +896,7 @@ inline bool Degenerate(const unsigned short* indices)
         return true;
     return false;
 }
-extern "C" __declspec(nothrow) void* __cdecl fnv_zlib_memset(void*, int, unsigned int) throw();
+extern "C" __declspec(nothrow) void* __cdecl fnv_zlib_memset(void*, int, size_t) throw();
 
 struct SkinGeom
 {

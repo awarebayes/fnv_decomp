@@ -48,7 +48,7 @@ class AILinearTaskThreadManager // src: XBOX_RETAIL_PDB 0x008c7290 (first retail
     static void SetMainRendering(bool);
 };
 
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern "C" unsigned int gPreferredMoveMode;
 
 // @fnv 0x008c7290

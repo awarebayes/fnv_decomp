@@ -104,7 +104,7 @@ bool __fastcall IsQuaternionPose(NiQuaternionInterpolator* self, void*, unsigned
     return bIsDefault;
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 inline void CopyQuaternionValue(NiQuaternion& dst, const NiQuaternion& src)

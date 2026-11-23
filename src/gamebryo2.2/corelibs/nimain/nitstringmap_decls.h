@@ -5,8 +5,8 @@
 #include "../../../../include/NiTStringTemplateMap.h"
 #include "../../../../include/NiTStringPointerMap.h"
 
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 void* __cdecl _NiMalloc(unsigned int);
 class NiShader;
 

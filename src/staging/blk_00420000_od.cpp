@@ -1473,7 +1473,7 @@ FUN_00433830::~FUN_00433830()
     FreeActivateList(&m_kEntryList);
 }
 
-extern "C" void _fnv_zlib_memset(void* p, int c, unsigned int n);
+extern "C" void _fnv_zlib_memset(void* p, int c, size_t n);
 struct FUN_00438820_Class
 {
     void* vtbl;

@@ -249,7 +249,7 @@ FUN_00bb6300::~FUN_00bb6300()
     decl = 0;
 }
 
-extern "C" void* __cdecl memmove(void* dst, const void* src, unsigned int size);
+extern "C" void* __cdecl memmove(void* dst, const void* src, size_t size);
 
 extern unsigned int DAT_012007b8;
 extern "C" int fnv_particle_shader_renderer_level;

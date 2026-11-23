@@ -250,7 +250,7 @@ void BGSSleepDeprevationStage::CopyFromSleepDeprivationStage(TESForm* apCopy)
     fnv_004022b0::__memcpy(FUN_00500940(), pcopy->FUN_00500940(), 8);
 }
 
-extern "C" int __cdecl memcmp(const void* pvA, const void* pvB, unsigned int uiSize);
+extern "C" int __cdecl memcmp(const void* pvA, const void* pvB, size_t uiSize);
 
 // @fnv 0x00402310
 // src: XBOX_PDB 0x00402310

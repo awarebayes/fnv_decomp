@@ -1153,7 +1153,7 @@ void __thiscall FUN_0049f990_class::BSSimpleArray_NiPoint3_1024_InitialSetup(uns
 }
 
 extern "C" void* __cdecl NiMalloc(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern int $SG6245;
 struct FUN_00486fa0_Class
 {
@@ -3264,7 +3264,7 @@ void __cdecl BGSAutoWater_GeneratePolygons(CellView* apCell)
     }
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 void* __memcpy(void*, const void*, unsigned int);
 void __cdecl BSEndian(unsigned char*, EndianSizeTag<1>);
 

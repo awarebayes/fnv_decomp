@@ -9,6 +9,6 @@ class LoadScreenTypeData
     unsigned char bytes[88];
     void Endian();
 };
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 #pragma intrinsic(_alloca)
 #endif

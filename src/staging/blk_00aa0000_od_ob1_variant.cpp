@@ -2741,7 +2741,7 @@ void* __thiscall S00aa8950_Obj::FUN_00aa8950(unsigned int flags)
     return this;
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int, int);
 
 namespace FnvControlStd {
@@ -2939,7 +2939,7 @@ FUN_00aaaa80::~FUN_00aaaa80()
 namespace fnv_00aaab90 {
 extern MemoryManager DAT_011f6238;
 extern "C" int __cdecl fclose(void*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" const char DAT_01011584[];
 char* __cdecl std_Traits_helper_copy_s_std_char_traits_char(char*, unsigned int, const char*, unsigned int);
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int, int);
@@ -5213,7 +5213,7 @@ inline void Dead13()
     int a[13];
 }
 void __cdecl ReportAssertionViolation(const char* fname, int line);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct FGValueQ
 {
     float* data;
@@ -5444,7 +5444,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -9158,8 +9158,8 @@ void FUN_00ab9dc0_Vector::ProcessState_00ab9dc0()
 
 extern unsigned int DAT_010173f0;
 void __cdecl FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void __cdecl operator delete(void*);
 template <class T> struct StdAllocator
 {
@@ -12534,7 +12534,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -13030,7 +13030,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -13418,7 +13418,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -17886,8 +17886,8 @@ S_0065eb90* __cdecl Object_ProcessAndReturnValue_00ab4520(S_0065eb90* _First, S_
 namespace fnv_00ab5ec0 {
 extern unsigned int DAT_010173f0;
 void __cdecl FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 void __cdecl operator delete(void*);
 template <class T> struct StdAllocator
 {
@@ -18034,7 +18034,7 @@ struct TriString : StringValue
         return 16 <= capacity ? storage.heap : storage.small;
     }
 };
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct TriHeader
 {
     unsigned int vertices, triangles, quads, materials, shapes, texcoords;
@@ -19542,8 +19542,8 @@ void ReworkModel::ProcessEntries_00aad140(int idx, ReworkPair* bases)
 }
 
 void __cdecl operator delete(void*);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 struct SecureTraitsTag
 {
 };
@@ -20259,7 +20259,7 @@ inline SecureTag secure_category()
     SecureTag category;
     return category;
 }
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 inline char* secure_copy(char* dest, unsigned int size, const char* source, unsigned int count, SecureTag)
 {
     memcpy_s(dest, size, source, count);
@@ -20794,8 +20794,8 @@ void WordInsert::WordVector::InsertFilledElements_00abc320(Iterator _Where, unsi
     }
 }
 
-extern "C" int __cdecl memcpy_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" int __cdecl memcpy_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 void __cdecl FUN_00ec7c56();
 double __cdecl FUN_00ec6940(double);
 
@@ -21535,9 +21535,9 @@ extern unsigned int DAT_010173f0;
 extern char DAT_010a2d3c;
 extern void* DAT_010a2c38;
 void FUN_00ec7c56();
-extern "C" unsigned int __cdecl strlen(const char*);
-extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
+extern "C" size_t __cdecl strlen(const char*);
+extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
+extern "C" int __cdecl memmove_s(void*, size_t, const void*, size_t);
 extern MemoryManager DAT_011f6238;
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int, int);
 inline void __cdecl GameFree(void* p)

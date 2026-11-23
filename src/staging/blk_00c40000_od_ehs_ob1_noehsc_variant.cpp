@@ -2726,8 +2726,8 @@ struct FUN_00c5d0a0_cls {
     void CopyVec4AndHelper(FUN_00c5d0a0_cls* a1, int a2);
 };
 int __cdecl Setting_DataType_00c33090(int);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 int __cdecl GetStateResult(int* apParams);
 // FUN_00c5de30: thiscall, zero two fields, reset sub-object at +0xac
 struct ResetHelper {

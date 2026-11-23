@@ -1376,7 +1376,7 @@ FUN_0076b300::FUN_0076b300(const char* apString, char* apParent, const char* apT
 }
 
 // Adapted from prior contributor's code (credited in packet.json)
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" void* __cdecl FUN_00afdf20(const char*, unsigned int, unsigned int, unsigned int);
 extern "C" void __cdecl Warning_005b5e40(int, const char*, const char*);
 extern "C" unsigned int __cdecl RandomUnsignedInt(unsigned int);

@@ -3,7 +3,7 @@
 #define NIDYNAMICGEOMETRYGROUP_DECLS_H
 
 void* __cdecl _NiMalloc(unsigned int) throw();
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int) throw();
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t) throw();
 
 template <class T> DynamicMapBase<T>::DynamicMapBase() : size(37), count(0)
 {

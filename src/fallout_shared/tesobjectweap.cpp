@@ -2186,7 +2186,7 @@ void Weapon::Save()
     EndSave();
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 extern unsigned char DAT_01183028;
 extern unsigned char DAT_01183998;
 TESObjectWEAP* __cdecl FUN_00ec43fb(unsigned int, unsigned int, void*, void*, unsigned int);

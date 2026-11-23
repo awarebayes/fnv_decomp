@@ -24,7 +24,7 @@
 
 extern unsigned int __cdecl GetEncodedIntegerSize(unsigned int value);
 extern void __cdecl WriteEncodedInteger(char* destination, unsigned int value);
-extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
+extern "C" void* __cdecl memcpy(void* destination, const void* source, size_t size);
 
 struct FUN_008659c0_Buffer;
 

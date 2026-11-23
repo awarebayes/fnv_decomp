@@ -208,7 +208,7 @@ void FUN_00853570_shell::BGSNumericIDIndex_SetNumericID(unsigned int aiNumericID
     ((unsigned char*)this)[2] = (unsigned char)iElementIndex;
 }
 
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 extern int DAT_011a2428[];
 extern unsigned int DAT_011de3e0;
 extern unsigned char DAT_011de360[];

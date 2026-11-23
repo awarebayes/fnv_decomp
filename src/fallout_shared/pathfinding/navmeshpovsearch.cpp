@@ -417,7 +417,7 @@ bool S3e60::BSSimpleArray_PathingAvoidNode_1024_GetAt(unsigned int auiFlag)
     return GetFlag(auiFlag);
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 __declspec(dllimport) void __stdcall Sleep(unsigned long);
 struct S2f760
 {

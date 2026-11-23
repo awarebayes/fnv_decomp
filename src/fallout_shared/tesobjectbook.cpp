@@ -31,7 +31,7 @@ struct BookLegacyFormIO : public TESForm
 namespace ActorValue {
 Index __cdecl GetActorValueForSectionIndex(Section section, unsigned char index);
 }
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 class TESFileFormVersion
 {
   public:

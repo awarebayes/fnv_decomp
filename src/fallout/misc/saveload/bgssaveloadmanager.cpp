@@ -213,8 +213,8 @@ extern const char g_emptyTopicInfoPrompt[];
 extern "C" const char g_currentExeVersion[];
 extern "C" const char g_versionInfoFormat[];
 extern "C" const char g_dateTimeFormat[];
-extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, unsigned int size);
-extern "C" int __cdecl sprintf_s(char* output, unsigned int capacity, const char* format, ...);
+extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, size_t size);
+extern "C" int __cdecl sprintf_s(char* output, size_t capacity, const char* format, ...);
 
 struct FNVSystemTime
 {
@@ -846,7 +846,7 @@ void S00851cd0::PlayerCharacter_UpdateTotalPlayingTime()
     ((BGSSaveLoadManager*)this)->UpdateSaveTimestamp();
 }
 
-extern "C" int __cdecl sprintf_s(char* output, unsigned int capacity, const char* format, ...);
+extern "C" int __cdecl sprintf_s(char* output, size_t capacity, const char* format, ...);
 
 struct FUN_00851cb0_shell
 {

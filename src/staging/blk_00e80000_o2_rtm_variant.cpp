@@ -2736,7 +2736,7 @@ struct GlobalPoolStub {
     void __thiscall Grow(unsigned int growBy);
 };
 PoolItemStub* __cdecl AllocatePoolItem();
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern float DAT_0126f9c4;
 struct Matrix { NiPoint3 a,b,c; };
 struct LightSource {
@@ -2938,7 +2938,7 @@ struct PairEntry {
     int key;
     int val;
 };
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern int DAT_0126f918;
 extern int DAT_0126f91c;
 extern int DAT_0126f920;
@@ -3484,7 +3484,7 @@ struct FUN_00e69b40_shell {
     unsigned int GetEntry(unsigned int index);
 };
 struct Outer;
-extern "C" void* memmove(void* dst, const void* src, unsigned int n);
+extern "C" void* memmove(void* dst, const void* src, size_t n);
 extern "C" __declspec(dllimport) void __stdcall LeaveCriticalSection(void* cs);
 // Six 32-bit fields occupy 0x18 bytes; this record has no scalar spin-lock operations.
 struct SixIntegerRecord {
@@ -3575,7 +3575,7 @@ struct S00e8f360_Mgr {
     unsigned int m_indexBufferSize;
     S00e8f360_IB* EnsureIndexBuffer(unsigned int minQuads, unsigned int quadCount, bool populate, unsigned int usage, unsigned int pool);
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 struct IDirect3DDevice9Like;
 struct D3DINDEXBUFFER_DESC_L
 {
@@ -3694,7 +3694,7 @@ struct FUN_00e9ec90 {
     static void operator delete(void* p) { g_memoryManager.Deallocate(p); }
 };
 static const void* kNull = 0;
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" void _ReadWriteBarrier();
 void* Object_DispatchCommandFour(unsigned int size);
 struct S00e8fa80_Node {

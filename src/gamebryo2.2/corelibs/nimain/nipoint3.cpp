@@ -28,7 +28,7 @@ void NiColor::SaveBinary(NiStream& stream)
 
 extern "C" int __cdecl NiSprintf(char*, unsigned int, char const*, ...);
 extern "C" void* __cdecl _NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(char const*);
+extern "C" size_t __cdecl strlen(char const*);
 
 // Allocates a buffer sized to the prefix plus 0x40 and formats "%s = (%g,%g,%g)" from the prefix and x, y, z into it, returning the buffer.
 // @fnv 0x00a59af0

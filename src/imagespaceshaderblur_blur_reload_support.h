@@ -10,7 +10,7 @@
 // Declaration facts: public yvileapsis/yUI-NVSE CommonLib shader headers;
 // NiTArray/ImageSpaceEffect layout follows the accepted bloom declarations
 // (decomp/src/bsshader/imagespaceeffectbloom_decls.h).
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 typedef char ShaderMacroSize[1];
 #include "../include/NiTMallocInterface.h"
 #include "../include/NiTArray.h"

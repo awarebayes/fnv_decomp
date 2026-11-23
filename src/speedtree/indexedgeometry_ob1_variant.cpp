@@ -484,7 +484,7 @@ struct FUN_00b39460
     ~FUN_00b39460();
 };
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 void* __cdecl operator new[](size_t);
 
@@ -938,7 +938,7 @@ void Mesh::CIndexedGeometry_CombineStrips(bool bToggleFaceOrdering)
 }
 }
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 void* __cdecl _memmove(void*, const void*, unsigned int);
 struct Matrix4
@@ -1322,7 +1322,7 @@ struct RandomTag
 struct CheckedTag
 {
 };
-extern "C" void* __cdecl memmove(void*, const void*, unsigned int);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
 template <class I, class O> inline RandomTag IterRandom(const I&, const O&)
 {
     RandomTag cat;
@@ -3459,7 +3459,7 @@ inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, random_access_
                _Range_checked_iterator_tagS());
     return _Result;
 }
-extern "C" int __cdecl memmove_s(void* _Dst, unsigned int _DstSize, const void* _Src, unsigned int _MaxCount);
+extern "C" int __cdecl memmove_s(void* _Dst, size_t _DstSize, const void* _Src, size_t _MaxCount);
 template <class _InIt, class _OutIt, class _InOutItCat>
 inline _OutIt _Copy_optS(_InIt _First, _InIt _Last, _OutIt _Dest, _InOutItCat, _Scalar_ptr_iterator_tagS,
                          _Range_checked_iterator_tagS)
@@ -3808,7 +3808,7 @@ __forceinline float Blend(float original, float target, float factor)
 {
     return original + (target - original) * factor;
 }
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 // @fnv 0x00b30800

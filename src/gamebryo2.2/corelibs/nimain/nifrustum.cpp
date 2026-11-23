@@ -6,7 +6,7 @@
 
 extern "C" int NiSprintf(char*, unsigned int, const char*, ...);
 extern "C" void* _NiMalloc(unsigned int);
-extern "C" unsigned int strlen(const char*);
+extern "C" size_t strlen(const char*);
 
 // Allocates a buffer sized from the prefix length and formats the frustum's near, far, left, right, top, bottom and ortho values into it, returning the string.
 // @fnv 0x00a71bc0

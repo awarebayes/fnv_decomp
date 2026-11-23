@@ -1678,7 +1678,7 @@ bool ThreatManager::IsThreatWithinLimits(ThreatActor* apAttacker, ThreatActor* a
     return true;
 }
 
-extern "C" void* __cdecl memset(void* dest, int c, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int c, size_t count);
 
 extern int DAT_011f1590;
 

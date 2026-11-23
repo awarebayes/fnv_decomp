@@ -10,7 +10,7 @@ struct SystemLocaleState
 
 extern SystemLocaleState gSystemLocaleState;
 extern unsigned int gCachedLanguage;
-extern "C" int __cdecl _strnicmp(const char* left, const char* right, unsigned int count);
+extern "C" int __cdecl _strnicmp(const char* left, const char* right, size_t count);
 
 // Returns the cached language code, detecting it once by comparing gSystemLocaleState.language against ENGLISH, FRENCH, ITALIAN, GERMAN and SPANISH.
 // @fnv 0x00a22cb0

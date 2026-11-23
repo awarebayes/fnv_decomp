@@ -6688,7 +6688,7 @@ struct ListX
     int m0, m4, m8, mc;
     FUN_0044ed50* m10;
 };
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 struct OwnerX
 {
     ListX* m0;

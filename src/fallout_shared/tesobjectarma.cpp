@@ -39,7 +39,7 @@ struct ArmorDataEndianAccess
     void Endian();
 };
 
-extern "C" void* __cdecl memset(void* destination, int value, unsigned int size);
+extern "C" void* __cdecl memset(void* destination, int value, size_t size);
 extern int __cdecl Warning(const char* format, ...);
 
 // Zeroes the ARMA's data block with memset.

@@ -22,7 +22,7 @@
 #include "../include/TESObject.h"
 #include "../include/TESWorldSpace.h"
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 // Sets the form type to 0x61 and then runs the constructor's initialization routine.
 // @fnv 0x00525c40
@@ -390,7 +390,7 @@ void BGSEncounterZone::LoadGame_005264a0(BGSLoadFormBuffer* apLoadGameBuffer)
     }
 }
 
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 // Returns true when other is not a BGSEncounterZone, the base comparison returns true, or the Data bytes differ.
 // @fnv 0x00526000
 // src: XBOX_PDB 0x00526000

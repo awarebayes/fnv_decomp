@@ -176,7 +176,7 @@ struct FloatMatrix3
     Pt rows[3];
     NiPoint3 FUN_004b4500(const NiPoint3* p);
 };
-extern "C" void* __cdecl memmove(void*, const void*, unsigned int);
+extern "C" void* __cdecl memmove(void*, const void*, size_t);
 struct Host
 {
     int u00;

@@ -9,7 +9,7 @@
 extern float DAT_01094c4c;
 extern const char DAT_01093f80[];
 extern "C" int __cdecl _stricmp(const char*, const char*);
-extern "C" int __cdecl memcmp(const void*, const void*, unsigned int);
+extern "C" int __cdecl memcmp(const void*, const void*, size_t);
 extern "C" int __cdecl tolower(int);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 extern NiFixedString EmptyFS;
@@ -53,7 +53,7 @@ class Tile__BuildStorage
 
 extern void FUN_00f1d2eb();
 extern void FUN_00f1e4f0();
-extern "C" unsigned int __security_cookie;
+extern "C" uintptr_t __security_cookie;
 extern void* DAT_01094cfc;
 extern const char DAT_010954cc[];
 class NiNode;

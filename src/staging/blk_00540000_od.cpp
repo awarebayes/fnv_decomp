@@ -1066,7 +1066,7 @@ void __thiscall FUN_00559c90_Class::NiTPointerListBase_DFALL_NiTListItem_BSAnimG
 
 namespace fnv_00559d20 {
 extern "C" void* __cdecl _NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 extern int DAT_0102f428;
 
 struct FUN_00559d20_Class
@@ -1207,7 +1207,7 @@ void __thiscall FUN_00558600_Class::BSShaderAccumulator_GetDebugStats(int* a, in
 }
 
 void* __cdecl operator new(size_t);
-extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int value, unsigned int count);
+extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int value, size_t count);
 extern int DAT_0102f3e8;
 struct FUN_00559b40
 {

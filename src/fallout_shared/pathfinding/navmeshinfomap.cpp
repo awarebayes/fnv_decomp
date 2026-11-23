@@ -307,7 +307,7 @@ int* __fastcall NiTMap_unsigned_int_BSSimpleArray_NavMeshInfo_1024_NiTMap(int* s
 }
 }  // namespace fnv_006b7df0
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 // Exe 0x006b5d80: local storage view; GetFlags binds the folded DWORD-at-+8 accessor 0x0044ddc0.
 struct NavmeshinfomapOffset08View
 {

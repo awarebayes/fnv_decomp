@@ -3525,7 +3525,7 @@ struct BoneWoundList
     void FUN_005ae3d0(BoneWound*&);
 };
 extern "C" int sprintf(char*, const char*, ...);
-extern "C" int _strnicmp(const char*, const char*, unsigned);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 
 // Updates bone wound animations on the host by matching bone names, computing a blend factor from the limb tier, and applying it to each wound entry.
 // @fnv 0x007e4920

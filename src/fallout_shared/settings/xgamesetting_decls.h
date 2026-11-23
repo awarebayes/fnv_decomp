@@ -16,7 +16,7 @@ FNV_STATIC_ASSERT(offsetof(Setting, uValue) == 0x4);
 FNV_STATIC_ASSERT(offsetof(Setting, pKey) == 0x8);
 FNV_STATIC_ASSERT(offsetof(GameSettingCollection, pFile) == 0x108);
 
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 const char* PrepareScriptMessage(const char* text, bool alternate);
 
 #endif

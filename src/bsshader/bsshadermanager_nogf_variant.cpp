@@ -609,7 +609,7 @@ inline bool IsExactB(Shader* s, RTTIStub* r)
 Shader* __cdecl BSShaderManager_GetShader(void*);
 void __cdecl BSShaderManager_PrepareGeometry(AVObj* apGeometry, bool aeObjectType, bool abFaceGenModel, bool abSkipPreCache);
 void* __cdecl NiMalloc(unsigned int);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _fnv_zlib_memset(void*, int, unsigned int);
 extern MemoryManager _g_memoryManager;
 struct StringHashMapBase

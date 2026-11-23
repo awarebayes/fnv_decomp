@@ -285,7 +285,7 @@ extern const char* DAT_01199bcc[];
 extern char DAT_011a9448;
 void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 int Warning(const char*, ...);
 #include "../../include/ANIM_GROUP_ACTION.h"
 // No shared Animation.h is available yet; retain the canonical per-file layout.
@@ -4295,7 +4295,7 @@ void S_00490400_Anim::Animation_AddAnimationsFromList(AnimationList<const char*>
     }
 }
 
-extern "C" int __cdecl _strnicmp(const char* pcA, const char* pcB, unsigned int ItemUpdateArray);
+extern "C" int __cdecl _strnicmp(const char* pcA, const char* pcB, size_t ItemUpdateArray);
 extern "C" int __cdecl tolower(int c);
 unsigned int BSStringLength(const char* pcString);
 

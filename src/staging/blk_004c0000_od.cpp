@@ -519,7 +519,7 @@ void* __thiscall FUN_004d4de0_Class::NiTMap_TESObject_bool_ctor(unsigned int uiH
 }
 
 extern "C" void* __cdecl NiMalloc(unsigned int size);
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 extern int DAT_01020944;
 struct FUN_004d4e40_Class
 {
@@ -1278,7 +1278,7 @@ float FUN_004d5a90_Class::GetNegativeMagnitude()
     return (float)(m_i4 < 0 ? (double)(m_i4 * -1) * DAT_010209a8 : 0.0);
 }
 
-extern "C" int __cdecl sprintf_s(char* destination, unsigned int size, const char* format, ...);
+extern "C" int __cdecl sprintf_s(char* destination, size_t size, const char* format, ...);
 extern const char DAT_01020d58[];
 
 struct FUN_0040c150
@@ -1335,7 +1335,7 @@ void* __fastcall InitNameTable(void* pThis)
 
 extern void* DAT_011c6d50[43];
 
-extern "C" void* __cdecl memset(void* dest, int value, unsigned int count);
+extern "C" void* __cdecl memset(void* dest, int value, size_t count);
 
 // Iterates DAT_011c6d50, calls FUN_004d5dd0(1) on each non-null entry, then zeroes the 43-entry array with memset.
 // @fnv 0x004d5d50

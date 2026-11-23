@@ -188,7 +188,7 @@ struct FnvD3DDevice
 
 extern bool DAT_0126f0d0;
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 // @fnv 0x00ebf7d0
 FnvD3DTexture* __cdecl CreateZeroedTexture(FnvD3DDevice* device, int format, int unused, unsigned int bytesPerPixel,

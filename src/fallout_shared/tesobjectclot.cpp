@@ -110,7 +110,7 @@ void ClothingInitialization::Initialize()
 TESObjectCLOT::~TESObjectCLOT()
 {}
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct RecordReader
 {

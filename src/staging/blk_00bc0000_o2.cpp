@@ -281,7 +281,7 @@ __forceinline float NiPoint3::operator*(const NiPoint3& pt) const
 
 extern "C" void* BoltShader_ms_RTTI; // src: XBOX_RETAIL_PDB 0x01201f5c (old: g_01201f5c)
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 
 inline void StrArr::AppendInline(char* string)
 {
@@ -2036,7 +2036,7 @@ void S_00bc0920_Class::CallVTableSlots13cAnd140()
     this->vtbl->unk140(this);
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void* dst, int value, unsigned int size);
+extern "C" void* __cdecl fnv_zlib_memset(void* dst, int value, size_t size);
 int __cdecl sprintf_s(char* buffer, unsigned int size, const char* format, ...);
 
 struct ShaderObject
@@ -9822,7 +9822,7 @@ void FUN_00bc5070_shell::VolumetricFogShader_LoadVertexShaders()
     }
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern bool DAT_011ad80e;
 void __cdecl FUN_00be0c00(const char*, char*);
 int __cdecl BSsprintf(char*, int, const char*, ...);
@@ -10133,7 +10133,7 @@ FUN_00bcd4a0::~FUN_00bcd4a0()
         passes[i].clear();
 }
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
 struct PixelRef
@@ -10167,7 +10167,7 @@ struct PixelPtr
         }
     }
 };
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 struct Macro
 {
     const char* name;
@@ -10811,7 +10811,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile lo
 
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 
 void __cdecl FUN_00be0c00(const char*, char*);
 

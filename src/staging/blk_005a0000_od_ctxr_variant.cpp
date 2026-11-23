@@ -245,7 +245,7 @@ struct FUN_005a7b00_Class
     void TESForm_CopyAllComponents(unsigned int id);
     void InitializeFromRecord(unsigned int apCopy);
 };
-extern "C" int __cdecl memcmp(const void* a, const void* b, unsigned int n);
+extern "C" int __cdecl memcmp(const void* a, const void* b, size_t n);
 struct FUN_008ad910_rd;
 class FUN_008ad910_ref
 {

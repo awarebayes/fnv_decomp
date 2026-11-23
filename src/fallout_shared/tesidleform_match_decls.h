@@ -44,8 +44,8 @@ class FUN_005a71d0
     unsigned int previous;
     void TwoValues_Endian();
 };
-extern "C" void* __cdecl memset(void*, int, unsigned int);
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
+extern "C" void* __cdecl _alloca(size_t);
 #include "../../include/TESDataHandler.h"
 class IdleAnimationManager
 {

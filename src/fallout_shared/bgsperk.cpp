@@ -1452,7 +1452,7 @@ void PerkOperations::ClearConditions()
     reinterpret_cast<ConditionCleanup*>(&reinterpret_cast<BGSPerk*>(this)->m_kConditions)->FUN_00680fe0();
 }
 
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 int __cdecl AppendPerkDescription(char*, unsigned int, const char*);
 
 struct LocalizedText

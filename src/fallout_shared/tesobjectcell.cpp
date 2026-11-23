@@ -3455,7 +3455,7 @@ char FUN_00557d30_class::PathingRequestCover_GetSortDistanceFromTarget()
 
 namespace fnv_00558fb0 {
 void* __cdecl _NiMalloc(unsigned int);
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern int DAT_0102f378;
 // NiTMapItemView: unit-local view (declares only what 0x00558fb0 calls), not the shared NiTMapItem; renamed so no local type keeps the shared name
 struct NiTMapItemView
@@ -15626,7 +15626,7 @@ struct CellSeenData
     static void* operator new(size_t);
 
 };
-extern "C" void* memset(void*, int, unsigned int);
+extern "C" void* memset(void*, int, size_t);
 extern const char DAT_0102ed68[], DAT_01015718[], DAT_010156a8[], DAT_01015588[], DAT_01015500[], DAT_010154a0[],
     DAT_01015440[];
 void Warning_005b5e40(const char*, ...);
@@ -19366,7 +19366,7 @@ void C0054e830::TESObjectCELL_TakeLocalMapPicture(void* apCamera, NP* aspRendere
 }
 }  // namespace fnv_0054e830
 
-extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
+extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)
 
 namespace CellShadow {
@@ -19690,7 +19690,7 @@ extern const float DAT_01016970;
 void SnapToGridCell(NiPoint3& pos);
 bool __fastcall FUN_00425fd0(CellS* cell);
 int TruncateFloatToInt(float value);
-extern "C" void* memset(void* dst, int val, unsigned int count);
+extern "C" void* memset(void* dst, int val, size_t count);
 
 // Snaps a copy of the player's position to the grid and, when it matches the prior value, updates lighting in the current cell and selected neighboring cells.
 // @fnv 0x00555c20

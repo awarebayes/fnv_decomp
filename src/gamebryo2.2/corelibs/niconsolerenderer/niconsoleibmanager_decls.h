@@ -86,6 +86,6 @@ typedef char IndexBufferManager_size_check[1];
 typedef char IndexBufferManager_device_offset_check[1];
 typedef char D3DINDEXBUFFER_DESC_size_check[1];
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 extern "C" void* __cdecl fnv_zlib_memcpy(void*, const void*, unsigned int);
 #endif

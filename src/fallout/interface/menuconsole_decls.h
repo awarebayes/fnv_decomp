@@ -6,11 +6,11 @@
 #include "menuconsole_support.h"
 
 extern "C" char* __cdecl __insecure_strcpy(char*, const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl sprintf(char*, const char*, ...);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern "C" int __cdecl sscanf(const char*, const char*, ...);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 namespace console_crt
 {
     int __cdecl strcat_s(char*, unsigned int, const char*);

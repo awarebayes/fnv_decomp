@@ -544,7 +544,7 @@ void hkpMultiSphereAgent_createListAAgent(int bodyA, int bodyB, int input, int m
 }
 
 extern "C" LocalM128 _mm_xor_ps(LocalM128 _A, LocalM128 _B);
-extern "C" void* __cdecl memcpy(void* _Dst, const void* _Src, unsigned int _Size);
+extern "C" void* __cdecl memcpy(void* _Dst, const void* _Src, size_t _Size);
 
 extern char DAT_010ce80c;
 extern LocalM128 DAT_010c44d0;

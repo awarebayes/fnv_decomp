@@ -977,7 +977,7 @@ void MyHost::SetEntryKeyAndValue(MyItem* pkItem, unsigned int key, MyVal val)
     pkItem->f8 = val;
 }
 
-extern "C" void* __cdecl memset(void* dst, int c, unsigned int n);
+extern "C" void* __cdecl memset(void* dst, int c, size_t n);
 extern "C" void* __cdecl _NiMalloc(unsigned int size);
 extern int DAT_0107ec68;
 

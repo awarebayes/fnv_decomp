@@ -14,7 +14,7 @@
 extern const char DAT_01015890[];
 extern const char DAT_01024988[];
 int Warning(const char*, ...);
-extern "C" void* _alloca(unsigned int);
+extern "C" void* _alloca(size_t);
 
 // DebrisModelEntry and ModelLoader do not yet have shared headers.
 class DebrisModelEntry

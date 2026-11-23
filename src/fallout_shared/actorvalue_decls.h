@@ -127,7 +127,7 @@ unsigned char ToArrayIndex(int, Index);
 }
 bool ActorValue_IsAttribute(ActorValue::Index);
 int MinInt(int, int);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 class GlobalObject_0066ef90
 {
   public:

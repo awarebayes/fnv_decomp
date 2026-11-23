@@ -17,10 +17,10 @@ class ContainerItemExtraFileData
 };
 
 extern "C" void __cdecl _alloca_probe_16();
-extern "C" void __fastcall __security_check_cookie(unsigned int);
-extern "C" unsigned int __security_cookie;
+extern "C" void __fastcall __security_check_cookie(uintptr_t);
+extern "C" uintptr_t __security_cookie;
 
-extern "C" void* __cdecl memset(void*, int, unsigned int);
+extern "C" void* __cdecl memset(void*, int, size_t);
 
 // Constructs a TESAmmoEffect: zeroes effectData and sets the form type to ENUM_FORM_ID_AMEF_ID.
 // @fnv 0x00599c40
@@ -36,7 +36,7 @@ class NiTexture;
 
 extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 // @fnv 0x00599d70
 // pdb: TESAmmoEffect::Load | TESAmmoEffect.obj | retail, upstream name already matches, high
@@ -181,7 +181,7 @@ float ComputeAmmoEffectValue(int iEffectType, AmmoEffectList* pEffectList, float
     return fResult;
 }
 
-extern "C" int __cdecl memcmp(const void* pvA, const void* pvB, unsigned int ItemUpdateArray);
+extern "C" int __cdecl memcmp(const void* pvA, const void* pvB, size_t ItemUpdateArray);
 
 // @fnv 0x00599fc0
 // pdb: TESAmmoEffect::Compare | TESAmmoEffect.obj | retail, vtable slot, high

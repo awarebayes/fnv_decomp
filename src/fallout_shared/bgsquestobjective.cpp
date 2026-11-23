@@ -73,7 +73,7 @@ const char* BGSQuestObjective::GetDisplayText()
                                                           : g_emptyTopicInfoPrompt);
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 // Reads chunks from apFile: stores the QOBJ chunk's int in iIndex, and on the NNAM chunk passes its data (or null) to SetDisplayText, then returns.
 // @fnv 0x005ec370
 // pdb: BGSQuestObjective::Load | BGSQuestObjective.obj | retail, upstream name already matches, high

@@ -94,7 +94,7 @@ class PlayerQuestData
 };
 
 extern const StartMenu DAT_011d1fc8, DAT_011d3c04;
-extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int sprintf_s(char*, size_t, const char*, ...);
 // Menu.h does not declare this message helper.
 class MagicTargetMessages
 {
@@ -1423,7 +1423,7 @@ extern Setting_String setting_011d4cf0;
 void __cdecl ApplyPerkModifiers(int, class Actor*, ...);
 unsigned int __cdecl DialogueRandom();
 void __cdecl FUN_004d5c60(int);
-extern "C" int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+extern "C" int __cdecl sprintf_s(char*, size_t, const char*, ...);
 
 struct StandinISModForm
 {

@@ -126,7 +126,7 @@ class QuestSaveChangeFlags : public BGSSaveFormBuffer
 };
 
 void __cdecl LogWarning(const char* message, ...);
-extern "C" void* __cdecl _alloca(unsigned int size);
+extern "C" void* __cdecl _alloca(size_t size);
 class INISettingCollection;
 using ::SettingT;
 extern SettingT<INISettingCollection> bActivateAllQuestScripts;
@@ -785,7 +785,7 @@ void FUN_0060e680_shell::SetFlags(unsigned int auiFlags)
     *(unsigned int*)((char*)this + 0x54) = *(unsigned int*)((char*)this + 0x54) | auiFlags;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" void __cdecl _security_check_cookie(unsigned int);
 extern "C" unsigned int DAT_011c16bc;
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members

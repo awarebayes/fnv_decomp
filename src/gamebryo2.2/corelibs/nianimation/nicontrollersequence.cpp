@@ -365,7 +365,7 @@ void NiControllerSequence::ProcessState_00a35640()
     reinterpret_cast<NiRefObject*>(this)->NiRefObject::~NiRefObject();
 }
 
-extern "C" unsigned int __cdecl strlen(const char* s);
+extern "C" size_t __cdecl strlen(const char* s);
 void __cdecl FUN_00a305b0(char* out, unsigned int size, const char* fmt, const char* a, const char* b, const char* c);
 void __cdecl FUN_00ec65a6(char* c, unsigned int b, const char* a);
 

@@ -8014,7 +8014,7 @@ struct GlobalPoolStub
     void __thiscall Grow(unsigned int growBy);
 };
 PoolItemStub* __cdecl AllocatePoolItem();
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 extern float DAT_0126f9c4;
 struct Matrix
 {

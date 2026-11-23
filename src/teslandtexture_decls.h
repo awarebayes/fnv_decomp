@@ -18,5 +18,5 @@
 #include "../include/BSSimpleList.h"
 
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 int __cdecl Warning(const char*, ...);

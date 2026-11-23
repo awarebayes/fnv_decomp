@@ -227,7 +227,7 @@ extern "C" float DAT_01011584[];
 char* __cdecl FUN_00ecdd16(double value, int digits, char* buffer);
 extern float DAT_011adbcc;
 void __cdecl FUN_00be0c00(const char* name, char* outBuf);
-extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int val, unsigned int size);
+extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int val, size_t size);
 int _sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
 struct Entry
 {

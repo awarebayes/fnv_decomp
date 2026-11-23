@@ -3770,7 +3770,7 @@ int strcat_s(char*, unsigned int, const char*);
 int sprintf_s(char*, unsigned int, const char*, ...);
 char* strrchr_0040ab30(char*, int);
 unsigned int BSStringLength(const char*);
-extern "C" int _strnicmp(const char*, const char*, unsigned int);
+extern "C" int _strnicmp(const char*, const char*, size_t);
 char* FUN_004812f0(const char*, const char*);
 int FUN_00ec862c(const char*, const char*);
 // FileFinder::Exist (0x00456a20) is static; no shared FileFinder header exists yet.

@@ -201,7 +201,7 @@ void FUN_00a47470_cls::SetItem(unsigned int aiIndex, RefObject** appValue)
 }
 
 void* __cdecl _NiMalloc_00aa1070(unsigned int);
-extern "C" int __cdecl strcpy_s(char*, unsigned int, const char*);
+extern "C" int __cdecl strcpy_s(char*, size_t, const char*);
 
 struct AHNameArray
 {

@@ -47,7 +47,7 @@ void NiSphere::SaveBinary(NiStream& kStream)
     kStream.m_pkOstr->Write(&m_fRadius);
 }
 
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 void* __cdecl _NiMalloc(unsigned int);
 int __cdecl _NiSprintf(char*, unsigned int, const char*, ...);
 // Allocates a string sized from the prefix length and formats the four floats as "(%g,%g,%g), %g", returning the buffer.

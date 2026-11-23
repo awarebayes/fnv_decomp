@@ -395,7 +395,7 @@ FUN_00b6dd80::FUN_00b6dd80()
     }
 }
 
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t);
 void* NiMalloc(unsigned int size);
 
 // distinct from NiTArray<void*, NiTMallocInterface<void*> >: legacy vftable 0x010b9d24 calls dtor 0x00ba3ce0; shared RTTI vftable 0x010edae4 calls 0x00e6eb70.

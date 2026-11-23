@@ -40,7 +40,7 @@ bool FUN_00a88c00_shell::NiString_ToFloat(float* f)
 }
 
 char* __cdecl AllocStringHandle(const char*);
-extern "C" unsigned int __cdecl strlen(const char*);
+extern "C" size_t __cdecl strlen(const char*);
 struct MyStr
 {
     char* m_kHandle;

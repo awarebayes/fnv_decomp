@@ -2438,7 +2438,7 @@ void AudioManagerD570::BSAudioManager_Precache(const char* apToCache, unsigned i
     }
 }
 
-extern "C" int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+extern "C" int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 extern "C" unsigned int __cdecl FUN_00ae9d80(const char* path);
 struct SndHandleQ
 {
@@ -4893,7 +4893,7 @@ FUN_00ae8650* Pool_ae76b0::AudioMessageStack_Pop_00ae76b0()
 }  // namespace fnv_00ae76b0
 
 namespace fnv_00ae81e0 {
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 
 struct MemoryManagerAllocHelper
 {
@@ -8117,7 +8117,7 @@ extern float DAT_01094c4c;
 extern double DAT_010a3470;
 extern float DAT_01012054;
 extern Setting DAT_011f6e5c;
-extern "C" void* _fnv_zlib_memset(void*, int, unsigned int);
+extern "C" void* _fnv_zlib_memset(void*, int, size_t);
 int __cdecl FUN_00ec65a6(char*, unsigned int, const char*);
 
 struct DebugInit
@@ -9055,7 +9055,7 @@ SoundQ* OwnerQ2::BSAudioManager_GetFromCache(unsigned int aiSoundHash, int aiDir
     return pResult;
 }
 
-extern "C" void* __cdecl _alloca(unsigned int);
+extern "C" void* __cdecl _alloca(size_t);
 extern "C" char* __cdecl strcpy(char*, const char*);
 extern "C" int __cdecl sprintf(char*, const char*, ...);
 extern "C" char* __cdecl strcat(char*, const char*);
