@@ -32,7 +32,7 @@ void TurnUndeadEffect::bhkMouseSpringAction_GetMousePositionInWorld(MagicCaster*
 }
 
 extern unsigned int _data_011c16bc;
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 class FUN_0082b370 : public ActiveEffect

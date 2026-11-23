@@ -41,7 +41,7 @@ void* memset(void*, int, unsigned int);
 class ContainerItemExtra
 {
   public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     ContainerItemExtra();
     bool Load(TESFile*);
     void* pOwnerForm[3]; // src: XBOX_RETAIL_PDB +0x0 (old: data)
@@ -181,7 +181,7 @@ struct FUN_0096a2d0
     FUN_0096a2d0();
     void FUN_005ae3d0(SpellItem*&);
 };
-void* operator new(unsigned int);
+void* operator new(size_t);
 // Adapter for the list-building member missing from TESLevSpell.h.
 struct SpellListBuilder
 {

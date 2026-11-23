@@ -5045,7 +5045,7 @@ struct FUN_004331c0_rec
 {
     unsigned int key;
     unsigned char flag;
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 class FUN_005ae3d0_cls

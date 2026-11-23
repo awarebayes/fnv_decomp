@@ -6594,7 +6594,7 @@ struct FUN_009bacb0
     FUN_009bacb0(Projectile* projectile, void* parentRef);
 };
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 // Shared HighProcess lacks the 0x00902190 muzzle-flash allocation member.
 struct HighProcessStandIn
@@ -11752,7 +11752,7 @@ bool HighProcess::IsGroupAlreadyInList(ActorCombatGroup* pgroup)
     return found;
 }
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 struct FUN_0066e590
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20;
@@ -12912,7 +12912,7 @@ namespace fnv_009006a0 {
 struct SpawnedObject
 {
     SpawnedObject();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk0000;
     int unk0004;
@@ -15588,7 +15588,7 @@ struct Queue65
     virtual void v3();
     virtual bool Poll(Result65&);
     int unk04, unk08, unk0c, unk10, unk14, unk18;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Queue65();
 };
@@ -18517,7 +18517,7 @@ bool HighProcess::vfn_80c(Actor* apTarget, int aiArg)
     return bResult;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct SearchItem
 {
     unsigned int unk00;
@@ -23758,7 +23758,7 @@ struct PRMessageQueue
     int unk14;
     int unk18;
 
-    static void* __cdecl operator new(unsigned int auiSize);
+    static void* __cdecl operator new(size_t auiSize);
     PRMessageQueue();
 };
 
@@ -28210,7 +28210,7 @@ void HighProcess::ProcessGuard(Actor* apActor)
     }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern double _DAT_01012060;
 
 struct FUN_008fe9e0_data

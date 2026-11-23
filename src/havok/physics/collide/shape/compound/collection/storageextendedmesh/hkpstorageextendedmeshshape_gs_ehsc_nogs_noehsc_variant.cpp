@@ -23,7 +23,7 @@ enum hkPlacementNewArg
 {
     hkPlacementNew
 };
-inline void* operator new(unsigned int, void* p, hkPlacementNewArg)
+inline void* operator new(size_t, void* p, hkPlacementNewArg)
 {
     return p;
 }
@@ -135,7 +135,7 @@ struct hkpStorageExtendedMeshShapeMeshSubpartStorage : public hkReferencedObject
     hkArrayBase<NamedMaterial> namedMaterials;
     hkArrayBase<unsigned short> materialIndices16;
     hkpStorageExtendedMeshShapeMeshSubpartStorage() throw();
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         hkMemoryAllocator& allocator = hkMemoryRouter::getInstance().heap();
         hkpStorageExtendedMeshShapeMeshSubpartStorage* memory = static_cast<hkpStorageExtendedMeshShapeMeshSubpartStorage*>(allocator.blockAlloc(bytes));

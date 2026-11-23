@@ -1298,7 +1298,7 @@ class FactionReaction
     char m_ucRank;
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 TESForm* __cdecl TESForm_GetFormByNumericID(unsigned int);
 void __cdecl FNV_Warning(const char*, ...);
 

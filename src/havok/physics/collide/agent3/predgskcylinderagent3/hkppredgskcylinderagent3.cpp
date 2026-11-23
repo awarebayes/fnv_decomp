@@ -309,7 +309,7 @@ void d409d0_probe_caller(void)
     restoreOriginalShapesInCdBodies(g_d409d0_vals, g_d409d0_slots);
 }
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

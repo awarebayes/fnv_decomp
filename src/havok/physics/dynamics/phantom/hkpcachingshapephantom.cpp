@@ -74,7 +74,7 @@ public:
     hkArray<CollisionAgentPair> m_collisionDetails; // src: XBOX_RETAIL_PDB +0x160 (old: m_kCollisionDetails)
     hkBool m_orderDirty; // src: XBOX_RETAIL_PDB +0x16c (old: m_bOrderDirty)
 
-    static void* operator new(unsigned int uiSize) throw();
+    static void* operator new(size_t uiSize) throw();
     static void operator delete(void* p) throw();
     hkpCachingShapePhantom(const hkpShape* shape, const hkTransform& transform, hkUint32 collisionFilterInfo) throw();
     void ensureDeterministicOrder();
@@ -294,7 +294,7 @@ __forceinline void CopyWorldObjectEntries(hkpWorldObject* object, const hkpWorld
     reinterpret_cast<Copy>(static_cast<void (*)()>(&CopyWorldObjectEntries))(object, other);
 }
 
-__forceinline void* hkpCachingShapePhantom::operator new(unsigned int uiSize) throw()
+__forceinline void* hkpCachingShapePhantom::operator new(size_t uiSize) throw()
 {
     hkpWorldObject* p = (hkpWorldObject*)hkMemoryRouter_getInstance().heap().blockAlloc(uiSize);
     p->m_memSizeAndFlags = (hkUint16)uiSize;

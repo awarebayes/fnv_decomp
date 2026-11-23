@@ -13110,7 +13110,7 @@ void __fastcall Actor_CleanUpPointersOnDisable(char* pThis)
 }
 
 namespace fnv_008c1470 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_008c1c00
 {
@@ -14740,7 +14740,7 @@ struct FUN_00964190_shell : public Actor
     void ResetMover();
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 struct DummyMover;
@@ -44234,7 +44234,7 @@ struct AcObj
 {
     virtual ~AcObj();
     AcObj(void* p0, void* node, char* buf);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk004;
     int unk008;
@@ -44745,7 +44745,7 @@ struct Eef0_Obj
 {
     int m00, m04, m08, m0c, m10, m14, m18, m1c;
     Eef0_Obj();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Alloc_b10310(size);
     }
@@ -54183,7 +54183,7 @@ class ExtraDataList;
 class TESBoundObject;
 class Actor;
 namespace fnv_0088c830 {
-void* operator new(unsigned int, void*);
+void* operator new(size_t, void*);
 void* FormHeap_Allocate(unsigned int);
 bool __fastcall TESObjectWEAP_IsThrownWeapon(::TESObjectWEAP*);
 
@@ -60313,7 +60313,7 @@ struct DeferredDeath
     void TaskQueueInterface_QueueActorKill();
 };
 DeferredDeath* __stdcall FUN_004537b0(HealthActor*, float*, bool);
-void* operator new(unsigned int);
+void* operator new(size_t);
 struct HealthActor : Actor
 {
     bool FUN_00566950();
@@ -87111,7 +87111,7 @@ struct MagicHitEffectEx : public HitEffectBase
 {
     MagicHitEffectEx(TESObjectREFR* ref, TESEffectShader* apEffectData, float afTime);
     virtual bool IsFinished();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     int unk04;
     int unk08;
     int unk0c;
@@ -87175,7 +87175,7 @@ class B4E10Effect
   public:
     B4E10Effect(B4E10Outer* pkOwner, B4E10Item* apEffectData, float afTime);
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     virtual ~B4E10Effect();
@@ -96508,7 +96508,7 @@ namespace fnv_008bbf40 {
 struct PackageTarget206
 {
     int unk00, unk04, unk08;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     PackageTarget206();
     ~PackageTarget206();
     void PackageLocation_SetLocReference(TESObjectREFR* reference);
@@ -96516,7 +96516,7 @@ struct PackageTarget206
 struct PackageLocation206
 {
     int unk00, unk04, unk08, unk0c;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     PackageLocation206();
     ~PackageLocation206();
     void FUN_006800b0(int type);
@@ -108126,7 +108126,7 @@ class AHProcess
     int FUN_0045cd60();
     void ClearNode();
     void BaseProcess_SetLastTimeProcessed(float fTime);
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -132581,7 +132581,7 @@ extern DataHandler* DAT_011c3f2c;
 
 int __cdecl Warning_005b5e40(const char* s1, ...);
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 struct FUN_008d3310_shell : public Actor
 {
@@ -133154,7 +133154,7 @@ struct Node
     unsigned int unk0a8;
 
     Node(unsigned short);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     unsigned int Call_0043b480();
     Node* Call_0043b4a0(unsigned int);

@@ -174,13 +174,13 @@ struct MouseSpringAction
     unsigned short m_usMemSizeAndFlags;
     short unk06;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         MouseSpringAction* p = (MouseSpringAction*)hkMemoryRouter::getInstance().heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     MouseSpringAction(const hkVector4& positionInRbLocal, const hkVector4& mousePositionInWorld, float springDamping,
                       float springElasticity, float objectDamping, void* rb, int appliedCallbacks);

@@ -129,7 +129,7 @@ extern int DAT_010bdaec;
 extern int DAT_011a946c;
 extern int DAT_011a9470;
 extern int DAT_011a9474;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

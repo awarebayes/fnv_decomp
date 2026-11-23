@@ -59,7 +59,7 @@ struct ContactBody
     float m_limitC;
 };
 bool Object_ProcessEntries_00d28560(void* unused, char** items, int count, int offset);
-inline void* operator new(unsigned int, void* p) throw() { return p; }
+inline void* operator new(size_t, void* p) throw() { return p; }
 inline void operator delete(void*, void*) throw() {}
 
 static inline FinishingFlag NotFinishing()

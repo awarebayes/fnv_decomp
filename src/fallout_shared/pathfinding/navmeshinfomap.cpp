@@ -29,7 +29,7 @@ template <int N> struct EndianSizeTag
 };
 void BSEndian(unsigned int*, EndianSizeTag<4>);
 void BSEndian(int*, EndianSizeTag<4>);
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 // Global allocation wrapper at 0x00401000, distinct from the manager member allocator.
 void* __cdecl FNV_AllocateBuffer(unsigned int);

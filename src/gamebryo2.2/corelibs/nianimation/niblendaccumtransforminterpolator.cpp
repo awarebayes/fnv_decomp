@@ -36,7 +36,7 @@ struct AccumItem
     NiQuatTransform value, accum;
     float rotation[9];
     AccumItem() throw();
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

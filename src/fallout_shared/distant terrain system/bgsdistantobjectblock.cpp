@@ -13,7 +13,7 @@
 
 extern "C" int __cdecl _sprintf_s(char*, unsigned int, const char*, ...);
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* object);
 
 
@@ -1303,11 +1303,11 @@ struct MmTexturing
 struct MmAlpha
 {
     MmAlpha();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }
-    static void operator delete(void* pvMem, unsigned int)
+    static void operator delete(void* pvMem, size_t)
     {
         MmFree(pvMem);
     }
@@ -1596,8 +1596,8 @@ struct GtFlags
 struct GtProperty
 {
     char pad[0x1c];
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void*, size_t);
     GtProperty();
     void FUN_004393c0(int bAlpha);
     void NiAlphaProperty_SetAlphaBlending(int i);

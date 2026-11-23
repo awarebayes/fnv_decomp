@@ -916,7 +916,7 @@ struct FUN_00b6abb0 : NiMemObject
 struct AutoWaterFadeNode : BSFadeNode
 {
     AutoWaterFadeNode();
-    static void operator delete(void* memory, unsigned int size);
+    static void operator delete(void* memory, size_t size);
 };
 
 struct FUN_00c37ec0 : NiMemObject

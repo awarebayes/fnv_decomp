@@ -215,7 +215,7 @@ struct FUN_00c3a130_Class
 {
     char __thiscall BSMultiBoundRoom_RegisterStreamables(void* arg);
 };
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c3a140_Class
 {
     void __thiscall FUN_00c39770();
@@ -324,7 +324,7 @@ extern char const g_01204390_arg0[];
 extern char const g_01202e84_arg0[];
 extern char const g_01204388_arg0[];
 void BSStream_InitLoaders();
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c3ba80_Class
 {
     void __thiscall FUN_00c3bab0();
@@ -1223,7 +1223,7 @@ void TextureLoader::BSStream_LoadShaderTextures(const char* apcName)
 }
 
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long*);
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -1502,7 +1502,7 @@ struct Child10
     int unk08;
     int unk0C;
     Child10(int count);
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         return reinterpret_cast<PoolShell*>(&DAT_011f6238)->Game_DoHeapAlloc(sz);
     }
@@ -1527,12 +1527,12 @@ struct Pair8
     SmartRef unk04;
     Pair8() : unk00(0)
     {}
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         return reinterpret_cast<PoolShell*>(&DAT_011f6238)->Game_DoHeapAlloc(sz);
     }
 };
-inline void* operator new[](unsigned int sz)
+inline void* operator new[](size_t sz)
 {
     return reinterpret_cast<PoolShell*>(&DAT_011f6238)->Game_DoHeapAlloc(sz);
 }
@@ -1621,7 +1621,7 @@ struct Item_c3f530
     int unk1C;
     int unk20;
     Item_c3f530(Owner_c3f530* owner, float* x, float* y, float* z);
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -3288,7 +3288,7 @@ struct MH
     void* vtbl;
     bool bStatic;
     MH(bool b);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -3398,7 +3398,7 @@ struct OwnArr
     unsigned m_uiItemCount;
     int m_0c;
     OwnArr();
-    static void* operator new(unsigned s)
+    static void* operator new(size_t s)
     {
         return ((MemMgr2*)&DAT_011f6238)->Game_DoHeapAlloc(s);
     }
@@ -4753,7 +4753,7 @@ struct Item_00c3f7a0
     void* m_p0c;
     void* m_p10;
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -4861,7 +4861,7 @@ struct NodeC3
         key = k;
         obj.AssignRef(v);
     }
-    inline static void* operator new(unsigned int size)
+    inline static void* operator new(size_t size)
     {
         return MMGR.Allocate(size);
     }
@@ -5133,7 +5133,7 @@ template <class T> inline NiPointer<T>& NiPointer<T>::operator=(const NiPointer&
     return *this;
 }
 
-inline void* operator new(unsigned int, NiPointer<RefObj_c3d4>* p)
+inline void* operator new(size_t, NiPointer<RefObj_c3d4>* p)
 {
     return p;
 }

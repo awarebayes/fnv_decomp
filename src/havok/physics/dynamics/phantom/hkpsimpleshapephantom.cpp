@@ -512,7 +512,7 @@ inline hkMemoryAllocator& heapD1F7(hkMemoryRouter& router)
 class FUN_00d1f730 : public hkpSimpleShapePhantom
 {
   public:
-    static __forceinline void* operator new(unsigned int uiSize) throw()
+    static __forceinline void* operator new(size_t uiSize) throw()
     {
         hkpWorldObject* p = (hkpWorldObject*)heapD1F7(hkMemoryRouter_getInstance()).blockAlloc(uiSize);
         p->m_memSizeAndFlags = (hkUint16)uiSize;

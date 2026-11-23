@@ -371,7 +371,7 @@ struct FUN_00aa5860
     // Overloaded operator new that forwards the requested size to the memory manager's Allocate method and returns the allocated pointer.
 // @fnv 0x00aa58d0
 // pdb: ScrapHeapManager::Init | ScrapHeap.obj | retail, upstream name already matches, high
-    void* operator new(unsigned int uiSize)
+    void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

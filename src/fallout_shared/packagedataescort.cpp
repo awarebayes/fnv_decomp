@@ -105,7 +105,7 @@ TESEscortPackageData::~TESEscortPackageData()
 }
 
 namespace fnv_0067c330 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct LocationDescriptor
 {
     LocationDescriptor();

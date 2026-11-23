@@ -56,9 +56,9 @@ typedef NiTMapBase<DFALL<NiTMapItem<_D3DFORMAT, NiPixelFormat*> >, _D3DFORMAT, N
 #include "../../../../include/NiStream.h"
 // These allocations have no constructor-failure cleanup in the original code.
 enum PixelDataAllocationTag { AllocatePixelData };
-__forceinline void* operator new(unsigned int size, PixelDataAllocationTag) { return NiPixelData::operator new(size); }
+__forceinline void* operator new(size_t size, PixelDataAllocationTag) { return NiPixelData::operator new(size); }
 enum AlphaPropertyAllocationTag { AllocateAlphaProperty };
-__forceinline void* operator new(unsigned int size, AlphaPropertyAllocationTag) { return NiAlphaProperty::operator new(size); }
+__forceinline void* operator new(size_t size, AlphaPropertyAllocationTag) { return NiAlphaProperty::operator new(size); }
 // Preserve the original aggregate copy of the point's storage.
 extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
 #pragma intrinsic(memcpy)
@@ -5428,7 +5428,7 @@ class E6EC20Cache {
 public:
     ~E6EC20Cache();
 
-    static void operator delete(void* pvMem, unsigned int uiSize) { operator_delete_sized(pvMem, uiSize); }
+    static void operator delete(void* pvMem, size_t uiSize) { operator_delete_sized(pvMem, uiSize); }
 
     int unk00; int unk04; int unk08; int unk0C; int unk10;
 };
@@ -7267,7 +7267,7 @@ bool FUN_00e75000_cls::ProcessPendingNodes() {
     return true;
 }
 
-__forceinline void* NiPropertyState::operator new(unsigned int amount) { return g_memoryManager.Allocate(amount); }
+__forceinline void* NiPropertyState::operator new(size_t amount) { return g_memoryManager.Allocate(amount); }
 
 namespace fnv_00e750e0 {
 struct Property : NiMemObject { int unk00,unk04,unk08,unk0c,unk10,unk14; unsigned short flags,unk1a; };
@@ -10689,7 +10689,7 @@ struct ShaderMemMgr {
 };
 extern ShaderMemMgr g_shaderMemMgr;
 
-inline void* operator new[](unsigned int size) { return g_shaderMemMgr.Allocate(size); }
+inline void* operator new[](size_t size) { return g_shaderMemMgr.Allocate(size); }
 inline void operator delete[](void* p) { g_shaderMemMgr.Deallocate(p); }
 
 struct ShaderVertexElement {
@@ -11618,7 +11618,7 @@ class E7A6A0Bucket {
 public:
     __forceinline ~E7A6A0Bucket() { m_kEntries.RemoveAll(); }
 
-    static void operator delete(void* pvMem, unsigned int uiSize) { operator_delete_sized(pvMem, uiSize); }
+    static void operator delete(void* pvMem, size_t uiSize) { operator_delete_sized(pvMem, uiSize); }
 
     int m_iKey;
     NiTArray<E7A6A0Entry*, NiTMallocInterface<E7A6A0Entry*> > m_kEntries;
@@ -15922,7 +15922,7 @@ struct Node {
 
 
 
-    static void operator delete(void* pvMem, unsigned int uiSize) {
+    static void operator delete(void* pvMem, size_t uiSize) {
 
         operator_delete_sized(pvMem, uiSize);
 
@@ -27202,7 +27202,7 @@ struct BridgeFields {
 
 
 struct NPFNew : NiPixelFormat {
-    static void* operator new(unsigned int size) { return g_memoryManager.Game_DoHeapAlloc(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Game_DoHeapAlloc(size); }
     NPFNew(const NiPixelFormat& o) : NiPixelFormat(o) {}
 };
 
@@ -32904,7 +32904,7 @@ void Se745_StandinRenderer::NiDX9Renderer_RenderTriShape2(Se745_Src* apSrc) {
     pData->m_0e &= 0xf000;
 }
 
-inline void* operator new(unsigned int, void* p){return p;}
+inline void* operator new(size_t, void* p){return p;}
 namespace RendererReset {
 
 
@@ -33293,7 +33293,7 @@ struct ScrDX9Renderer {
 };
 
 enum ScrAllocationTag { ScrAllocatePixels };
-__forceinline void* operator new(unsigned int size, ScrAllocationTag) { return NiPixelData::operator new(size); }
+__forceinline void* operator new(size_t size, ScrAllocationTag) { return NiPixelData::operator new(size); }
 
 // Locks a render target surface, copies the pixel rows into a new NiPixelData buffer, and returns it.
 // @fnv 0x00e6f4e0

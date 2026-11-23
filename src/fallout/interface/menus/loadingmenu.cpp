@@ -2247,7 +2247,7 @@ extern bool DAT_011da0c8;
 LoadingMenuCreateTile* Tile_GetMenuByClass(int);
 void FUN_00717740(int);
 void FUN_0078d020();
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Looks up a loading-menu tile by id; if missing, loads loading_menu.xml, initialises the menu, creates the thread and returns the tile.
 // @fnv 0x00788cc0
@@ -2310,7 +2310,7 @@ struct ScreenEntry
     int unk00, unk04, unk08, unk0c, unk10, unk14;
     ScreenPath path;
     int unk1c, unk20, unk24, unk28, unk2c, unk30, unk34, unk38, unk3c;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     static void operator delete(void*);
     ScreenEntry();
     void Prepare();

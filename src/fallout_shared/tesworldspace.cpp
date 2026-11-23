@@ -333,7 +333,7 @@ void TESWorldSpace::RemovePersistentRef(TESObjectREFR* apRef)
     }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern float const DAT_01015f5c;
 
 struct OFFSET_DATA_24
@@ -1348,8 +1348,8 @@ void TESWorldSpace::InitializeData_00583070()
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 struct FUN_00c5a9d0 : A51BF0Base
@@ -3060,7 +3060,7 @@ bool WorldSpacePointQueryMethods::ContainsPoint(const NiPoint3* position)
 
 namespace fnv_00583560 {
 extern "C" void* _alloca(unsigned int);
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 struct B006815c0
 {

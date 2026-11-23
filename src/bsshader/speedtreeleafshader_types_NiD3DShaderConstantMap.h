@@ -46,7 +46,7 @@ FNV_STATIC_ASSERT(offsetof(NiShaderConstantMap, m_iProgramType) == 8);
 class NiD3DShaderConstantMap : public NiShaderConstantMap
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     NiD3DShaderConstantMap(GraphicsRenderer* renderer, unsigned int type);
     // base NiShaderConstantMap at +0x0, size 12
     NiTObjectArray<NiPointer<NiShaderConstantMapEntry> > m_kEntries;         // +0xC, 16 bytes

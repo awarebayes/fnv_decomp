@@ -158,7 +158,7 @@ void caller_e3b680()
     Object_UpdateFields_00e3b680(*(Vec4*)g_b, *(Vec4*)g_a, *(Vec4*)g_r);
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

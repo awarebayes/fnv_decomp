@@ -216,7 +216,7 @@ LocalM128* Object_ProcessAndReturnValue_00e2ab00(LocalM128* src, LocalM128* out1
 }
 }  // namespace fnv_00e2ab00
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 struct __declspec(align(16)) Key_e3a1 {
     float m_ax, m_ay, m_az, m_aw;

@@ -4248,7 +4248,7 @@ extern "C" C1A3B0Point3 _NiPoint3_ZERO;
 class C1A3B0Bound
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return reinterpret_cast<C1A3B0Heap&>(g_memoryManager).Allocate(uiSize);
     }

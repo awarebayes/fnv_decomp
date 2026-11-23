@@ -1312,7 +1312,7 @@ struct PoolEntry
 
 struct PoolTable
 {
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         return reinterpret_cast<S_00d056a0_Allocator*>(&hkMemoryRouter_getInstance()->heap())->AllocateMemoryBlock(nbytes);
     }

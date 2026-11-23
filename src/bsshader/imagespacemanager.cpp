@@ -2244,7 +2244,7 @@ Derived::Derived()
 
 
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
-inline void* __cdecl operator new(unsigned int size)
+inline void* __cdecl operator new(size_t size)
 {
     return Object_DispatchCommandFour(size);
 }

@@ -895,7 +895,7 @@ struct NormalVec
     float z;
     NormalVec()
     {}
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return g_memoryManager.Allocate(bytes);
     }

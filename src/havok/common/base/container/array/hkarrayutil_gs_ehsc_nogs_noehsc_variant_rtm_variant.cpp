@@ -75,7 +75,7 @@ void ResizeAudioStream(hkMemoryAllocator* mem, AudioStream* array, int sizeElem)
 typedef unsigned int hkUlong;
 extern void __cdecl hkArrayUtil__reserve(void* mem, void* array, int numElem, int sizeElem);
 extern void __cdecl ResizeAudioStream(void* mem, void* array, int sizeElem);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

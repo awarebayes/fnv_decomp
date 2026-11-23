@@ -255,7 +255,7 @@ struct CameraCloneStorage
     CameraCloneStorage() throw();
     char body[0x114];
 
-    static void* __cdecl operator new(unsigned int size)
+    static void* __cdecl operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }

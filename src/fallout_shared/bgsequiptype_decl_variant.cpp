@@ -8,7 +8,7 @@
 #include "../../include/TESIcon.h"
 #include "../../include/TESTexture.h"
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 unsigned int __cdecl BSstrlen(const char*);
 int __cdecl FUN_00406d30(char*, unsigned int, const char*);
 int __cdecl FUN_00406d50(char*, unsigned int, const char*);

@@ -76,7 +76,7 @@ class MersenneTwister
 };
 unsigned int DialogueRandom();
 
-void* operator new(unsigned int) throw();
+void* operator new(size_t) throw();
 
 int Warning(const char*, ...);
 
@@ -1015,7 +1015,7 @@ struct A51BF0Base
 {
     char padding[4];
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct Shell : public A51BF0Base

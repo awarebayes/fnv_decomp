@@ -187,11 +187,11 @@ struct InterfaceNavigationAccess : Tile { Tile* GetTileForTrait(int, int*); };
 
 struct InterfaceTripleCopy { unsigned int words[3]; };
 struct InterfaceHudAccess : HUDMainMenu { bool GetVisible(); };
-struct InterfaceNodeAccess : NiNode { InterfaceNodeAccess(unsigned short); static void operator delete(void*,unsigned int); NiPoint3& GetTranslate_0043c490(); void NiAVObject_SetTranslate(const NiPoint3&); };
+struct InterfaceNodeAccess : NiNode { InterfaceNodeAccess(unsigned short); static void operator delete(void*,size_t); NiPoint3& GetTranslate_0043c490(); void NiAVObject_SetTranslate(const NiPoint3&); };
 struct InterfaceFaceNodeAccess : BSFaceGenNiNode { void* GetAnimationDataForInterface(); };
 struct InterfaceImageSpaceAccess : ImageSpaceManager { static InterfaceImageSpaceAccess* BSShaderManager_GetImageSpaceManager(); void ImageSpaceManager_SetMenuBGBlendEnabled(bool); };
 struct InterfaceRenderedMenuAccess : FORenderedMenu { void SetScreenTexture(int); };
-struct InterfaceShaderAccess : BSShaderAccumulator { InterfaceShaderAccess(int,unsigned int,unsigned int); static void operator delete(void*,unsigned int); void FUN_004a1040(int); void FUN_0070a900(bool); };
+struct InterfaceShaderAccess : BSShaderAccumulator { InterfaceShaderAccess(int,unsigned int,unsigned int); static void operator delete(void*,size_t); void FUN_004a1040(int); void FUN_0070a900(bool); };
 struct InterfacePlayerAccess : PlayerCharacter { NiPoint3& CopyPosition(NiPoint3&);
     float PlayerCharacter_GetEyeHeight(); bool PlayerCharacter_IsActually3rdPerson(); bool PlayerCharacter_CanUseTelekinesis();
     void PlayerCharacter_ForceTemp1stPerson(int); void PlayerCharacter_EnteringMenuMode();
@@ -205,7 +205,7 @@ struct InterfaceAnimGroupAccess : TESAnimGroup { float FUN_005f3780(int); };
 struct InterfacePipboyAccess : FOPipboyManager { void FOPipboyManager_TriggerRandomEffect(); };
 struct InterfaceAudioAccess : BSAudio { void BSAudio_PauseAnimationSounds(); };
 struct InterfaceCameraAccess : NiCamera { void SetPort(const NiRect<float>&); void NiAVObject_SetTranslate(const NiPoint3&); };
-struct InterfaceSceneAccess : SceneGraph { InterfaceSceneAccess(const char*,bool,NiCamera*); static void operator delete(void*,unsigned int); NiCamera* GetInterfaceCamera(); void SceneGraph_SetCameraFOV(float,int,int,int); };
+struct InterfaceSceneAccess : SceneGraph { InterfaceSceneAccess(const char*,bool,NiCamera*); static void operator delete(void*,size_t); NiCamera* GetInterfaceCamera(); void SceneGraph_SetCameraFOV(float,int,int,int); };
 struct InterfacePointAccess : NiPoint3 { InterfacePointAccess(); InterfacePointAccess(float,float,float); };
 struct InterfaceSettingAccess : Setting { const char* FUN_00403df0(int); };
 struct InterfaceSoundAudioAccess : BSAudio { using BSAudio::GetSoundHandleByEditorID; BSSoundHandle GetSoundHandleByEditorID(const char*, unsigned int); };
@@ -3348,7 +3348,7 @@ void FUN_0070c4a0_shell::UpdateInterface()
 }
 }  // namespace fnv_0070c4a0
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct Scratch
 {
     int a;
@@ -3671,7 +3671,7 @@ struct FUN_0070adb0_shell : public InterfaceManager
 };
 
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct NiUpdateDataH
 {
@@ -4676,7 +4676,7 @@ SceneGraph* FUN_00712e90_shell::InterfaceManager_CreateSceneGraph(SceneGraph* ap
 }
 }  // namespace fnv_00712e90
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct Widget
 {
     Widget();
@@ -8877,7 +8877,7 @@ struct SceneNode
 
 struct Accumulator : NiMemObject
 {
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     Accumulator();
     void ShadowSceneNode_SetSceneGraphIndex(int);
     int unk000;
@@ -12804,7 +12804,7 @@ struct FUN_00718ee0_shell : public SystemColorManager
     void AddColor(char*, unsigned int, unsigned int, unsigned int, SystemColorInfo*, int);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 unsigned int __cdecl PackRgba(unsigned int, unsigned int, unsigned int, unsigned int);
 
 struct FUN_00719250_stand
@@ -13004,7 +13004,7 @@ struct GlobalObject2_0040c150
 {
     int* Int();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 unsigned int __cdecl PackRgba(unsigned int, unsigned int, unsigned int, unsigned int);
 struct FUN_007192e0
 {

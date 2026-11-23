@@ -704,7 +704,7 @@ struct xBound
 };
 struct xNiMem
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 
@@ -780,7 +780,7 @@ struct xAV
 struct xCam : xAV
 {
     xCam();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void FUN_00712e60(const NiColorA&);
     void NiCamera_SetMinNearPlaneDist(float);
@@ -791,7 +791,7 @@ struct xCam : xAV
 struct xLight : xAV
 {
     xLight();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void SetEffectColor(const xPoint3&);
     void FUN_0050dd50(const xPoint3&);

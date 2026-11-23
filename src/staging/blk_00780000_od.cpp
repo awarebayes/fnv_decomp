@@ -334,7 +334,7 @@ FUN_0078e0f0::~FUN_0078e0f0()
     NiAdditionalGeometryData::GetShadowSceneNodeForIndex(1)->RemoveAllLights();
 }
 
-void* operator new(unsigned int size, void* place);
+void* operator new(size_t size, void* place);
 void operator delete(void* object, void* place);
 
 struct Elem_788

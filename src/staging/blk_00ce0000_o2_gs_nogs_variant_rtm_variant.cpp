@@ -358,7 +358,7 @@ struct FUN_00cf8710_cls
 extern MemoryManager _g_memoryManager;
 class CF4840Saver {
 public:
-    void* operator new(unsigned int size) { return _g_memoryManager.Allocate(size); }
+    void* operator new(size_t size) { return _g_memoryManager.Allocate(size); }
     virtual void DeleteThis(bool bFree);
     int unk04;
     int unk08;

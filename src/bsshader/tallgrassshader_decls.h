@@ -6,7 +6,7 @@ extern MemoryManager g_memoryManager;
 class FUN_00ba94b0
 {
   public:
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

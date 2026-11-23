@@ -335,7 +335,7 @@ template <> inline NiPointer<NiUVData>::NiPointer()
 // inheriting all layout and member declarations from the shared class.
 struct UVControllerConstruction : NiUVController
 {
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }

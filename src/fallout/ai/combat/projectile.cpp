@@ -3592,7 +3592,7 @@ FUN_009bbef0::FUN_009bbef0(void* apBaseForm, PrjRef* apSource, void* apWeaponEnt
     SetMobileType(0);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct P062Object;
 struct P062Ammo;
@@ -4719,7 +4719,7 @@ extern int DAT_011dea3c;
 extern bool __cdecl BGSDestructibleObjectForm_IsDestructible(void*);
 extern void __cdecl RecursiveSetPropertyFadeAlpha(unsigned int, float);
 
-extern void* __cdecl operator new(unsigned int);
+extern void* __cdecl operator new(size_t);
 struct ActionConsumer
 {
     void MarkGeometryDataMutable(ActionObject*);

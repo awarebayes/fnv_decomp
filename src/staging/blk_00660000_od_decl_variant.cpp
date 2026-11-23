@@ -348,7 +348,7 @@ BSSimpleList<int>* BSSimpleList_GetNext_Thunk(BSSimpleList<int>* a)
 {
     return a->GetNext();
 }
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_0044d000
 {
     int pad[9];
@@ -360,7 +360,7 @@ struct FUN_00665e30_Class
     int* data;
     FUN_0044d000* __thiscall LockFreeMap_TESObjectREFR_BSTreeNode_AllocateInterface(int index);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct DetectionViewData;
 struct List_009e03e0
 {
@@ -387,7 +387,7 @@ struct DetectionViewData
     void DetectionState_LoadGame(BGSLoadGameBuffer* apLoadGameBuffer);
     void ActorCause_LoadGameBGS(BGSLoadGameBuffer* buffer);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl ReportAssertionViolation(char const*, int);
 struct FUN_0067caa0
 {
@@ -436,7 +436,7 @@ char* __cdecl C0190CopyOpt(char* first, char* last, C0190Iterator dest, C0190Sca
 char* __cdecl Runtime_EvaluateValue_00660190(C0190Iterator first, C0190Iterator last, C0190Iterator dest);
 void __cdecl BSSimpleList_GetNext_Thunk(void* a1, unsigned char flag);
 void __cdecl CallWithUninitializedFlag(void* a1);
-void* operator new(unsigned int uiSize, void* pvWhere);
+void* operator new(size_t uiSize, void* pvWhere);
 struct C6602B0Entry
 {
     short m_sA;
@@ -463,7 +463,7 @@ extern "C" void __cdecl Object_DispatchIteratorRange_006603a0(void* a, void* b, 
 
 // std::_Construct for a 0x58-byte element: copy-construct in place.
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 struct C60490Element
 {

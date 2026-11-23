@@ -147,7 +147,7 @@ struct FUN_00a73080_holder
 {
     void NiAdditionalGeometryData_dtor();
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00540800_Class
 {
     void UpdateFields_00540800();
@@ -162,7 +162,7 @@ struct FUN_00537d10_Class
 {
     void FUN_00537d40();
     void* FUN_00537d10(unsigned int flags);
-    static void operator delete(void* p, unsigned int size);
+    static void operator delete(void* p, size_t size);
 };
 struct QuantityData
 {
@@ -244,7 +244,7 @@ struct FUN_00539fc0_Class
 {
     GlobalObjectO2_00a7b610* NiBinaryExtraData_GetRTTI();
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_0053a000
 {
     void __thiscall Destruct();
@@ -494,7 +494,7 @@ struct FUN_0053a630_Class : public FUN_0053ae30_class
 };
 struct A51BF0Base
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct FUN_00537d60 : A51BF0Base
 {
@@ -978,7 +978,7 @@ struct Property960
     unsigned unk0fc;
     unsigned unk100;
     Property960();
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     void FUN_005a8060(int);
     void BSShaderPPLightingProperty_SetLandscapeTextureSet(int, void*);
     void BSShaderPPLightingProperty_SetLandscapeSpecularExponents(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char,
@@ -989,7 +989,7 @@ struct Binary960
 {
     unsigned unk00, unk04, unk08, unk0c, unk10;
     Binary960(unsigned, unsigned char*);
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
 };
 const char* __cdecl BSShaderManager_GetTexPercTag();
 struct Geometry960
@@ -1933,7 +1933,7 @@ struct CleanupOwner
     void Finish();
     bool TESObjectLAND_UnLoadVertices();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl ourMemset(void*, int, unsigned int);
 extern NiPoint3 DAT_011f426c;
 struct Range
@@ -2346,7 +2346,7 @@ struct Output538c00
     unsigned int m2c;
 
     Output538c00();
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         return Object_AllocateStorage_0056d280(nbytes);
     }

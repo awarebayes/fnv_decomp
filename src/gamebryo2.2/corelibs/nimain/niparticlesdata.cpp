@@ -177,7 +177,7 @@ struct ParticleViewFrame
     NiPoint3 axisX, axisY, axisZ;
 };
 extern MemoryManager g_memoryManager;
-inline void* operator new[](unsigned int bytes, MemoryManager& manager)
+inline void* operator new[](size_t bytes, MemoryManager& manager)
 {
     return manager.Allocate(bytes);
 }
@@ -535,7 +535,7 @@ struct AllocSvc
 extern AllocSvc DAT_011f6238;
 struct ArrNew
 {
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }

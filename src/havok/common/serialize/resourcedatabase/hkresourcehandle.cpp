@@ -27,7 +27,7 @@ __declspec(nothrow) inline hkStringPtr::~hkStringPtr()
 
 
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -1035,7 +1035,7 @@ struct Resource_e2ef
     unsigned short m_sReferenceCount;
     int unk08;
     Container_e2ef* m_parent;
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         Resource_e2ef* p = (Resource_e2ef*)ResourceHeap(*hkMemoryRouter_getInstance()).AllocateMemoryBlock(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;

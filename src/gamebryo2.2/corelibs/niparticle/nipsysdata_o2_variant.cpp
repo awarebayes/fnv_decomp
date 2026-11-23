@@ -502,7 +502,7 @@ struct S00c25340_Pt3
     float x, y, z;
     S00c25340_Pt3()
     {}
-    static void* operator new[](unsigned int size, MemoryManager& mm)
+    static void* operator new[](size_t size, MemoryManager& mm)
     {
         return mm.Allocate(size);
     }
@@ -510,7 +510,7 @@ struct S00c25340_Pt3
 
 struct S00c25340_Info : Point3ParameterData
 {
-    static void* operator new[](unsigned int size, MemoryManager& mm)
+    static void* operator new[](size_t size, MemoryManager& mm)
     {
         return mm.Allocate(size);
     }

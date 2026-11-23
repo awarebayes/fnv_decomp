@@ -530,7 +530,7 @@ class DA0920Base
     }
     virtual void vfunc00();
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -1013,7 +1013,7 @@ class RefObj
     unsigned short m_usMemSizeAndFlags;
     unsigned short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         RefObj* b = (RefObj*)((hkMemoryRouter*)hkMemoryRouter_getInstance())->heap().blockAlloc(nbytes);
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;

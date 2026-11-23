@@ -557,7 +557,7 @@ class EffBase
 };
 struct FUN_00aa13e0
 {
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 class FUN_0081c630 : public EffBase, public FUN_00aa13e0
 {

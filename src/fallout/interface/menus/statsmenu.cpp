@@ -3333,7 +3333,7 @@ bool Owner::SetIndexFromType(unsigned int uiType, int* piIndex)
 
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 BGSHungerStage* __cdecl FindHungerStage(float level);
 BGSSleepDeprevationStage* __cdecl GetSleepDeprivationStage(float level);

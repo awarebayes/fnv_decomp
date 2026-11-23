@@ -178,7 +178,7 @@ class FUN_00d979a0
     virtual ~FUN_00d979a0()
     {}
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -326,7 +326,7 @@ struct FUN_00d98360 : D98360Base
     FUN_00d98360();
     virtual ~FUN_00d98360();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkMemoryRouter_getInstance().heap().ReleaseBlock(p, nbytes);
     }

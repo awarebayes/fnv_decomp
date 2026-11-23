@@ -75,7 +75,7 @@ struct PipboyPass
         unk08 = 0;
         unk0c = 0;
     }
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager_011f6238.Game_DoHeapAlloc(uiSize);
     }
@@ -133,7 +133,7 @@ struct PipboyConstants : PipboyConstantsBase
     unsigned int unk084;
 
     PipboyConstants();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager_011f6238.Game_DoHeapAlloc(uiSize);
     }

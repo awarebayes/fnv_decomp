@@ -398,7 +398,7 @@ void e319Cls::hkaSplineCompressedAnimation_handleEndian()
 // member initialiser together with a3.
 void ReserveMoreL(hkMemory& mem, void* array, int sizeElem) throw();
 void ReserveL(hkMemory& mem, void* array, int numElem, int sizeElem) throw();
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

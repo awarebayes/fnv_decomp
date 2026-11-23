@@ -311,7 +311,7 @@ float PlayerCharacter::GetActorValueModifierAmount(ModifierGroup modifier, Actor
     return value;
 }
 
-void* operator new(unsigned int) throw();
+void* operator new(size_t) throw();
 void operator delete(void*);
 
 struct IntSetting
@@ -1041,8 +1041,8 @@ struct Alloc1C8
 struct AllocB0
 {
     AllocB0();
-    static void* operator new(unsigned int) throw();
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t) throw();
+    static void operator delete(void*, size_t);
     unsigned int unk000;
     unsigned int unk004;
     unsigned int unk008;
@@ -1092,8 +1092,8 @@ struct AllocB0
 struct Alloc44
 {
     Alloc44(float, float, float, float);
-    static void* operator new(unsigned int) throw();
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t) throw();
+    static void operator delete(void*, size_t);
     unsigned int unk000;
     unsigned int unk004;
     unsigned int unk008;
@@ -10468,8 +10468,8 @@ extern DataHandler93dd80* g_dataHandler;
 
 struct Obj93dd80
 {
-    static void* operator new(unsigned int size);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void*, size_t);
     Obj93dd80(void* form, unsigned int apEffectData, float afTime);
     virtual ~Obj93dd80();
     virtual void v01();
@@ -11572,8 +11572,8 @@ struct Effect
     int unk60;
     int unk64;
     int unk68;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Effect(void*, void*, float);
 };
 struct Collection
@@ -25666,8 +25666,8 @@ struct xGO
 };
 struct xFadeNode
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     xFadeNode();
     int m_kPointA[0x70];
 };
@@ -41124,7 +41124,7 @@ VTableTarget116* FUN_00963730_cls::PlayerCharacter_GetAutoAimActor()
     return (m_0D2C != 0 && m_0D2C->v116() != 0) ? m_0D2C : 0;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl StatsMenu_UpdatePerks(void);
 
 struct FUN_005eb6a0_Class
@@ -53944,7 +53944,7 @@ struct Sphere
     int unk008;
     int unk00c;
     int unk010;
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     Sphere(float, bool);
     void* Bipedanim_GetReferenceFlagsOrZero();
 };
@@ -59349,7 +59349,7 @@ struct AudioNode
     unsigned int unk44;
     unsigned int unk48;
     unsigned int unk4C;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     AudioNode();
     void bhkBlendCollisionObjectAddRotation_CopyFrom(void* apBlendObj);
 };

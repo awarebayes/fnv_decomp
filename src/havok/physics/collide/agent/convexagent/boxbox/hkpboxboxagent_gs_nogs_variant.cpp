@@ -108,7 +108,7 @@ extern "C" void* __cdecl hkpBoxBoxAgent_staticGetPenetrations(void);
 void __stdcall hkpBoxBoxAgent_getPenetrations(void* a1, void* a2, void* a3, void* a4);
 
 #include <xmmintrin.h>
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 
 

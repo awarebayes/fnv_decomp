@@ -691,8 +691,8 @@ struct BkTimer
 struct BkLight
 {
     char pad[0xfc];
-    static void* operator new(unsigned int size);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void*, size_t);
     BkLight();
     void NiAVObject_SetTranslate(const BkColor& c);
     void SetEffectColor(const BkColor& c);
@@ -768,7 +768,7 @@ struct BkLoader
 
 struct BkItemBase
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void*);
 };
 struct BkButton : BkItemBase

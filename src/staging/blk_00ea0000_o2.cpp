@@ -1039,7 +1039,7 @@ namespace sead090 {
 class Node
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     Node() throw();
 

@@ -2008,7 +2008,7 @@ struct FUN_0043bb80_shell
 {
     void LoadedFile_dtor();
 };
-void __cdecl operator delete(void* p, unsigned int sz);
+void __cdecl operator delete(void* p, size_t sz);
 struct FUN_0044b1f0_class
 {
     void* FUN_0044b1f0(unsigned int flags);
@@ -3556,7 +3556,7 @@ struct Node
     int value;
     Node* next;
     Node(int, int, int*);
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     static void __cdecl operator delete(void*);
 };
 struct TaggedPointer
@@ -4001,7 +4001,7 @@ struct S_00453720_Obj
     int unk00;
     int unk04;
     int unk08;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void*);
 };
 extern S_00453720_Obj* DAT_011cc224;
@@ -5710,7 +5710,7 @@ struct FUN_0058b770
     int unk24;
     FUN_0058b770();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 extern FUN_005ffaf0* DAT_011cb6a0;
 extern FUN_0058b770* DAT_011ca700;

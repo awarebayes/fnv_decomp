@@ -11,7 +11,7 @@ public:
 
     NiPropertyState() throw();
     NiPropertyState& operator=(const NiPropertyState& other);
-    static void* operator new(unsigned int amount);
+    static void* operator new(size_t amount);
     void SetSlot(Property* property);
     void NiPropertyState_dtor();
 };

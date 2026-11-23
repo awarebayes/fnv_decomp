@@ -1601,7 +1601,7 @@ __forceinline void S4ef0Owner::_querySingleAabb(const S4ef0Aabb& aabb,int type,S
  }
  querySingleAabbSub(object,bitField,refNode,type,pairsOut,nodesOut,collector);
 }
-inline void* __cdecl operator new(unsigned int, void* storage) { return storage; }
+inline void* __cdecl operator new(size_t, void* storage) { return storage; }
 extern float DAT_0104da48;
 extern float DAT_0104e148;
 static const __m128 batchSweepBias={65536.0f,65536.0f,65536.0f,65536.0f};

@@ -66,7 +66,7 @@ class GameSettingCollection;
 using ::SettingT;
 extern SettingT<GameSettingCollection> originalRuntimeFloatSetting76;
 extern NiColor DAT_011a9b7c;
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 // Additional out-of-line accessors used by this unit are absent from TESWeather.h.
 class WeatherAccessMethods : public TESWeather
@@ -2676,8 +2676,8 @@ class SkySceneNodeMethods : public NiNode
 {
   public:
     SkySceneNodeMethods(unsigned short);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void BSMultiBoundNode_SetCullingMode(bool);
     void NiAVObject_SetSelectiveUpdate(bool);
 };

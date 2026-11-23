@@ -457,7 +457,7 @@ int Object_GetDAT_01269008_00d68820()
 }
 }  // namespace fnv_00d68820
 
-inline void* operator new(unsigned int, void* pvMem)
+inline void* operator new(size_t, void* pvMem)
 {
     return pvMem;
 }

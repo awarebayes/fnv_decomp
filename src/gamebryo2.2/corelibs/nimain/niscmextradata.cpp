@@ -15,7 +15,7 @@ int* __cdecl NiSCMExtraData_GetRTTI()
 
 extern int DAT_0110129c;
 void __cdecl NiFreeAlias(void*);
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 // @fnv 0x00ee89b0
 void* NiSCMExtraData::Destroy(unsigned int auiFlags)
 {

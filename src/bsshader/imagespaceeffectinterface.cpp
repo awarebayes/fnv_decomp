@@ -56,7 +56,7 @@ struct PipboyPass : PipboyParamBase
         unk0c = 0;
     }
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager_011f6238.Allocate(uiSize);
     }
@@ -124,7 +124,7 @@ struct PipboyConstants : PipboyConstantsBase
 
     PipboyConstants();
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager_011f6238.Allocate(uiSize);
     }

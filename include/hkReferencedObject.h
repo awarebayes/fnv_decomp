@@ -18,7 +18,7 @@ public:
     // (each against its own view of the memory router).
     static void* __cdecl operator new(std::size_t nbytes);
     static void operator delete(void* p);
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     // HK_DECLARE_REFLECTION()
     static const ClassMemberDescriptor Members[];

@@ -119,7 +119,7 @@ int LocalhkaAnimation::CountAnnotationsInRange(float startTime, float deltaTime)
 
 extern "C" hkMemoryRouter& __cdecl hkMemoryRouter_getInstance() throw();
 
-inline void* operator new(unsigned int, void* pvWhere)
+inline void* operator new(size_t, void* pvWhere)
 {
     return pvWhere;
 }

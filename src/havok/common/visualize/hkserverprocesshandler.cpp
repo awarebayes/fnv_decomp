@@ -527,7 +527,7 @@ class FUN_00cf6da0
   public:
     FUN_00cf6da0(int iCapacity) throw();
 
-    static void* operator new(unsigned int uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return hkMemoryRouter::getInstance().heap().blockAlloc(uiSize);
     }

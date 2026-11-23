@@ -248,7 +248,7 @@ void __fastcall Tallgrassshader_ReleaseStorage_00ba9230(void** self, int)
 
 struct FUN_00ba8e50
 {
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }
@@ -577,7 +577,7 @@ extern MemoryManager _g_memoryManager;
 struct Elem_bacd00
 {
     float f[4];
-    static void* operator new[](unsigned int s)
+    static void* operator new[](size_t s)
     {
         return _g_memoryManager.Allocate(s);
     }
@@ -674,7 +674,7 @@ struct NiD3DVertexDeclaration
 extern NiRenderer* DAT_011f9508;
 struct FUN_00bacd00
 {
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }
@@ -1030,7 +1030,7 @@ extern "C" char DAT_011fd884, DAT_011fa280, DAT_011fa290, DAT_01200510;
 struct ShaderVariableMap : RefObj_bacd00
 {
     ShaderVariableMap(void* context, int mode);
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         return Object_DispatchCommandFour(0x44);
     }

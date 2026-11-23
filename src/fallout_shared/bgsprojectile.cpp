@@ -24,7 +24,7 @@
 
 class TESRace;
 template <class T> class BSSimpleList;
-void* operator new(unsigned int size);
+void* operator new(size_t size);
 
 class BGSProjectileFloatNode
 {

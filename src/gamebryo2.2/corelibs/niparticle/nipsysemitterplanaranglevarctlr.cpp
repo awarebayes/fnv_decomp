@@ -56,7 +56,7 @@ void __stdcall NiPSysEmitterPlanarAngleVarCtlr_GetViewerStrings(StrArr* pkString
 }
 
 #include "../../../../include/NiMemObject.h"
-inline void* __cdecl operator new(unsigned int, void* memory)
+inline void* __cdecl operator new(size_t, void* memory)
 {
     return memory;
 }

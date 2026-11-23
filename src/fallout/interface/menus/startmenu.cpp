@@ -3117,7 +3117,7 @@ struct StartMenuTileTraits : Tile
 {
     void* FindTraitValue(int);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct DebrisData;
 struct AEList

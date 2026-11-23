@@ -396,7 +396,7 @@ bool* CheckSubQueries(bool* result, void* key, hkpShape* self)
 void* hkArrayUtil__reserve(void* mem, void* array, int numElem, int sizeElem);
 void hkMemUtil_memMove(void* dst, const void* src, int numBytes);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

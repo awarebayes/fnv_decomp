@@ -186,7 +186,7 @@ void* __fastcall FindTriangleForLocationFilter_FindTriangleForLocationFilter(voi
 struct Item48
 {
     char pad[0x30];
-    static void* __cdecl operator new(unsigned int, void*);
+    static void* __cdecl operator new(size_t, void*);
     static void __cdecl operator delete(void*, void*);
     Item48(const PathingInfoEntry&);
 };
@@ -327,7 +327,7 @@ struct Item48
 {
     char data[0x30];
     Item48(void* a, TESObjectREFR* b);
-    static void* operator new(unsigned int, void*);
+    static void* operator new(size_t, void*);
     static void operator delete(void*, void*);
 };
 
@@ -931,7 +931,7 @@ struct FUN_006c9920_thing
     unsigned int unk24;
     unsigned int unk28;
     unsigned int unk2C;
-    static void* operator new(unsigned int size, void* p);
+    static void* operator new(size_t size, void* p);
     static void operator delete(void* p, void* q);
     FUN_006c9920_thing(unsigned int a);
 };

@@ -10,7 +10,7 @@ class NiNodeV;
 class Tile3D : public Tile
 {
   public:
-    static void* operator new(unsigned int bytes);
+    static void* operator new(size_t bytes);
     static void operator delete(void* memory);
 
     Tile3D();

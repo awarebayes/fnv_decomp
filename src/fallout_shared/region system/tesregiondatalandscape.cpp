@@ -1,6 +1,6 @@
 // fallout_shared/region system/tesregiondatalandscape.cpp: TESRegionDataLandscape, ThisT (15 functions)
 
-void* __cdecl operator new(unsigned int) throw();
+void* __cdecl operator new(size_t) throw();
 void __cdecl operator delete(void*);
 #include "../../../include/GO.h"
 #include "../../../include/NiFixedString.h"

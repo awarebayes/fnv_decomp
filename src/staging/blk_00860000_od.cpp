@@ -1358,7 +1358,7 @@ GlobalObject_0087d420* __thiscall GlobalObject_0087d420::FUN_0087d450(unsigned i
     return this;
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* p);
 extern BGSSaveLoadManager* DAT_011de134;
 void* __cdecl __memcpy(void* dest, const void* src, unsigned int count);
@@ -2532,7 +2532,7 @@ GlobalObject_0087d2c0* GlobalObject_0087d2c0::FUN_0087d2f0(unsigned int flags)
     return this;
 }
 
-extern void* __cdecl operator new(unsigned int, void*);
+extern void* __cdecl operator new(size_t, void*);
 
 struct FUN_0087d3d0_Class
 {
@@ -2731,7 +2731,7 @@ struct FUN_00866ff0_cls
     FUN_00866ff0_cls();
 };
 
-void* operator new(unsigned int size) throw();
+void* operator new(size_t size) throw();
 
 ScopeGuardCtx::~ScopeGuardCtx()
 {}
@@ -3347,7 +3347,7 @@ struct B877BE0Item
 
 struct B877BE0Node
 {
-    static void* operator new(unsigned int uiSize, void* pvWhere);
+    static void* operator new(size_t uiSize, void* pvWhere);
     static void operator delete(void* pvMem, void* pvWhere);
 
     B877BE0Node();
@@ -4026,7 +4026,7 @@ extern FUN_00633c90 DAT_011dec64;
 class FUN_00a712f0
 {
   public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     FUN_00a712f0();
     int unk000;
     int unk004;
@@ -6275,7 +6275,7 @@ struct Controller
     int unk24;
     int unk28;
     int unk2c;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Controller();
 };
@@ -6528,7 +6528,7 @@ class SSImage
   public:
     SSImage(unsigned int uiWidth, unsigned int uiHeight, SSFormat* kFormat, bool uiMipmapLevels, bool uiFaces);
     virtual ~SSImage();
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     unsigned int NiPixelData_GetWidth(int uiMipmapLevel, int uiFace);
     unsigned int DetailedActorPathHandler_GetCurrentNodeIndex();

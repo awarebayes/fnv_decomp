@@ -1221,7 +1221,7 @@ struct DceAux;
 DceAux* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, DceAux* hint);
 void __cdecl operator delete(void* p);
 
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }
@@ -1983,7 +1983,7 @@ ItQ_ab9bc0 VecQ_ab9bc0::ProcessAndReturnValue_00b0e880(CItQ_ab9bc0 _Where, const
 }
 }  // namespace fnv_00b0e880
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 namespace std {
 class exception
@@ -2371,7 +2371,7 @@ struct MemoryAlloc
 {
     void* Allocate(unsigned int);
 };
-inline void* __cdecl operator new(unsigned int n)
+inline void* __cdecl operator new(size_t n)
 {
     return reinterpret_cast<MemoryAlloc&>(g_memoryManager).Allocate(n);
 }
@@ -2704,9 +2704,9 @@ template <class T> inline T* __cdecl AllocateChecked(unsigned int _Count, T*)
 }
 
 namespace fnv_00b0f410 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -4566,7 +4566,7 @@ struct BadAllocB160 : ExceptionB160
     inline virtual ~BadAllocB160() throw()
     {}
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // src: GUESS 0x00b16b00 (confidence: medium)
 inline unsigned int* __cdecl Object_AllocateElementStorage_00b16b00(unsigned int _Count, unsigned int)
 {
@@ -7882,7 +7882,7 @@ void __cdecl Object_ProcessState_00b17a60(NodeD10** _First, NodeD10** _Last, Com
 }  // namespace fnv_00b17a60
 
 namespace fnv_00b17c20 {
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -7965,7 +7965,7 @@ void __cdecl Runtime_ProcessEntries_00b17d10(NodeD10** _First, int _Hole, int _T
 namespace fnv_00b17db0 {
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, int hint);
 void __cdecl operator delete(void*);
-inline void* __cdecl operator new(unsigned int, void* place)
+inline void* __cdecl operator new(size_t, void* place)
 {
     return place;
 }
@@ -14338,9 +14338,9 @@ bool FUN_00b00bc0_cls::BSTaskletManager_CloseTaskGroup(void** aGroup)
 }
 
 namespace fnv_00b0e730 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -15501,7 +15501,7 @@ struct SplineCurve
     int unk80;
 
     SplineCurve(const std::string& strInput);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 };
 

@@ -1722,7 +1722,7 @@ struct BoneLODControllerArray : BoneArray<unsigned short>
     {
         return ((Holder*)this)->ContainsSortedSubset((const Holder*)other);
     }
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return _g_memoryManager.Allocate(size);
     }

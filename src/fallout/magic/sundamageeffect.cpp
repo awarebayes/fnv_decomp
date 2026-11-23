@@ -482,7 +482,7 @@ struct S_00829e00_HitEffect
 
 struct S_00829e00_Effect : S_00829e00_HitEffect
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     S_00829e00_Effect(S_00829e00_Target* target, void* apEffectData, float afTime);
 };
 

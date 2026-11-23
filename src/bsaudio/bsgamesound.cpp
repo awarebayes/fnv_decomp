@@ -545,7 +545,7 @@ bool BSWin32AudioInitialization::CheckResult(int aiResult, const char* unused)
 struct FUN_00aeac20
 {
     FUN_00aeac20(unsigned int a);
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         return g_memoryManager.Allocate(0x230);
     }
@@ -691,7 +691,7 @@ struct FUN_00aea730_Class : Sound
 {
     char data[96];
     FUN_00aea730_Class(int);
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return ((MemoryManager*)&DAT_011f6238)->Game_DoHeapAlloc(n);
     }

@@ -347,7 +347,7 @@ struct FUN_00df71d0 : hkpBroadPhaseCastCollector, hkKdTreeCastCollector, S_00df7
 // @fnv 0x00df71d0
 // pdb: hkCpuWorldLinearCastCollector::`scalar deleting destructor' | hkpCpuWorldLinearCastJob.obj | retail, vtable slot, high
     virtual ~FUN_00df71d0() {}
-    static void operator delete(void* p, unsigned int n) { hkMemoryRouter_getInstance()->heap().ReleaseBlock(p, n); }
+    static void operator delete(void* p, size_t n) { hkMemoryRouter_getInstance()->heap().ReleaseBlock(p, n); }
 };
 FUN_00df71d0::FUN_00df71d0() {}
 

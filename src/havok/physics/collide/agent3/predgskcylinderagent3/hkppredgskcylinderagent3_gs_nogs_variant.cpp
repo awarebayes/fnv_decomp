@@ -144,7 +144,7 @@ static void restoreOriginalShapesInCdBodies(void** cdBodies, void** originalCdBo
 extern void** volatile g_d409d0_vals;
 extern void** volatile g_d409d0_slots;
 void d409d0_probe_caller(void);
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

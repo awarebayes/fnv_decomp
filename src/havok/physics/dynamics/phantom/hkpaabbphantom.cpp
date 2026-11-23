@@ -304,7 +304,7 @@ namespace fnv_00cf2d50 {
 class PhantomClone : public hkpAabbPhantom
 {
   public:
-    static __forceinline void* operator new(unsigned int uiSize) throw()
+    static __forceinline void* operator new(size_t uiSize) throw()
     {
         hkpWorldObject* p = (hkpWorldObject*)hkMemoryRouter_getInstance().heap().blockAlloc(uiSize);
         p->m_memSizeAndFlags = (hkUint16)uiSize;

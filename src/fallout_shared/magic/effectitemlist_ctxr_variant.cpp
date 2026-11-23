@@ -25,7 +25,7 @@ struct Item
     bool FUN_00404120(File*, const char*);
     bool FUN_00404710();
 };
-void* __cdecl operator new(unsigned);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 void __cdecl ResolveFormID(unsigned*, File*);
 TESForm* __cdecl TESForm_GetFormByNumericID(unsigned);

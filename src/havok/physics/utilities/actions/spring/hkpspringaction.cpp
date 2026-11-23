@@ -275,7 +275,7 @@ struct hkpCloneArgD4A0
 
 struct S00d4d4a0_Obj
 {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         S00d4d4a0_Obj* memory = reinterpret_cast<S00d4d4a0_Obj*>(hkMemoryRouter::getInstance().heap().blockAlloc(size));
         memory->m_usMemSizeAndFlags = static_cast<unsigned short>(size);

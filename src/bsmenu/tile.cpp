@@ -123,7 +123,7 @@ NiPoint2 NiPoint2::Subtract(const NiPoint2& aPoint) const
     return result;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 extern "C" void* __fastcall FUN_00718c90(void*);

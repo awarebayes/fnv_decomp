@@ -14,7 +14,7 @@
 #include "../../../../../../include/hkDataClassImpl.h"
 #include "../../../../../../include/hkDataClassDict.h"
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -6175,7 +6175,7 @@ struct Shape7DE0
     Shape7DE0() throw() : m_usFlags(0), m_iRefCount(0)
     {}
     virtual ~Shape7DE0();
-    static __forceinline void* operator new(unsigned int nbytes) throw()
+    static __forceinline void* operator new(size_t nbytes) throw()
     {
         Context7DE0* pkContext = GetContext7DE0();
         Shape7DE0* pkShape = static_cast<Shape7DE0*>(pkContext->m_pkMemory->allocateChunk(nbytes));
@@ -7631,7 +7631,7 @@ struct ObjectDCB990
     {
         m_kPairs.ClearAndRelease();
     }
-    static void operator delete(void* p, unsigned int nbytes) throw()
+    static void operator delete(void* p, size_t nbytes) throw()
     {
         hkMemoryRouter* pkRouter = &hkMemoryRouter::getInstance();
         pkRouter->heap().blockFree(p, (int)nbytes);
@@ -7834,7 +7834,7 @@ struct Node_dc7c : RefCounted_dc7c
     void* volatile m_data;
     int m_iElementCount;
     int m_iCapacityState;
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         Node_dc7c* p = (Node_dc7c*)GetSerializationHeap(hkMemoryRouter::getInstance()).blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -8320,7 +8320,7 @@ template <class T> struct ArrayXLocalForm
     }
 };
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

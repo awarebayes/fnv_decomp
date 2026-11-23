@@ -21,9 +21,9 @@
 class NiMemObjectAllocation_font
 {
 public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* pointer);
-    static void operator delete(void* pointer, unsigned int size);
+    static void operator delete(void* pointer, size_t size);
 };
 #include "../../include/NiPoint2.h"
 #include "../../include/NiPropertyState.h"
@@ -334,7 +334,7 @@ inline void* NiPoint2::operator new[](size_t size) { return g_memoryManager.Allo
 struct fnv_00a168b0 {
     char data[0x24];
     fnv_00a168b0();
-    static __forceinline void* operator new(unsigned int s) { return g_memoryManager.Allocate(s); }
+    static __forceinline void* operator new(size_t s) { return g_memoryManager.Allocate(s); }
     static __forceinline void operator delete(void*) {}
 };
 
@@ -468,7 +468,7 @@ void FUN_00a1b970_t::ClearString()
     str.Set(0, 0);
 }
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct FUN_00a1c1f0_vec { float a, b, c, d; FUN_00a1c1f0_vec() { a = 0.0f; b = 0.0f; c = 0.0f; d = 0.0f; } };
 struct FUN_00a1c1f0_elem { int pad[4]; FUN_00a1c1f0_vec v; };
 struct FUN_00a1c1f0_shell {
@@ -740,7 +740,7 @@ struct AttachWrap {
 
 // Unit-local view of TileShaderProperty for 0x00a14a20 (namespace fnv_00a14a20): built on the shared TileShaderProperty, that code does not compile or does not match.
 struct TileShaderProperty_00a14a20 {
-    static void* operator new(unsigned int n) { return BSFadeNode::operator new(n); }
+    static void* operator new(size_t n) { return BSFadeNode::operator new(n); }
     char pad[0xb0];
     TileShaderProperty_00a14a20(bool);
     void SetTextureImage(NiTexture*);
@@ -752,7 +752,7 @@ struct GeomPtr { NiGeometryData* m_pObject; operator NiGeometryData*() const { r
 struct FontPoint3 {
     float x, y, z;
     FontPoint3() {}
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
 };
 struct TexMap { char pad[8]; NiTexture* m_pkTexture; NiTexture* GetTexture() { return m_pkTexture; } };
 struct TexProp {
@@ -851,13 +851,13 @@ extern P03MM _g_memoryManager;
 struct FUN_00a1bd40 {
     char m_data[0x30];
     FUN_00a1bd40(void*, void*, unsigned int, unsigned int);
-    static __forceinline void* operator new(unsigned int s) { return _g_memoryManager.Allocate(s); }
+    static __forceinline void* operator new(size_t s) { return _g_memoryManager.Allocate(s); }
     static void operator delete(void*);
 };
 struct FUN_00a1be10 {
     char m_data[0x44];
     FUN_00a1be10(void*, void*, unsigned int, unsigned int);
-    static __forceinline void* operator new(unsigned int s) { return _g_memoryManager.Allocate(s); }
+    static __forceinline void* operator new(size_t s) { return _g_memoryManager.Allocate(s); }
     static void operator delete(void*);
 };
 struct FUN_00a19f70_t { void* WrapLine(void*, unsigned int); };
@@ -1442,7 +1442,7 @@ void GQFont::BuildGlyphQuad(GQGlyph* apLetter, unsigned int aiVert, NiGeometry* 
     axPos->x += apLetter->m_fGlyphWidthInPixels + ((apLetter->m_fGlyphWidthInPixels > 0.0) ? apLetter->m_fHorizontalSpacing : 0.0f);
 }
 
-struct AtlasVertex { float x,y,z;AtlasVertex() {} static void* operator new[](unsigned n) { return g_memoryManager.Allocate(n); } };
+struct AtlasVertex { float x,y,z;AtlasVertex() {} static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); } };
 struct AtlasData {
  unsigned unk00;
  unsigned unk04;
@@ -1957,7 +1957,7 @@ int unk48;
 int unk4c;
 unsigned char* pixels; int unk54; int unk58; unsigned int* offsets; unsigned int levels; int unk64; int unk68; int unk6c; bool changed;
 PixelData(unsigned int,unsigned int,const PixelFormat&,unsigned int,unsigned int);
-static void* __cdecl operator new(unsigned int);
+static void* __cdecl operator new(size_t);
 static void __cdecl operator delete(void*);
 __forceinline unsigned char* GetPixels(unsigned int level=0,unsigned int face=0) { return pixels+face*offsets[levels]+offsets[level]; }
 };
@@ -1969,13 +1969,13 @@ struct TextureMap { int unk00; int unk04; int unk08; int unk0c; TextureMap(); vo
 struct TextureMaps { int unk00; int unk04; int unk08; int unk0c; int unk10; TextureMap*& At(unsigned int); void SetAt(unsigned int,TextureMap*&); };
 struct Texture { virtual void V00(); virtual void Destroy(); long unk04; int unk08; int unk0c; int unk10; int unk14; int unk18; TextureMaps maps;
 Texture(PixelData*,const NiFixedString&,const Preferences&);
-static void* __cdecl operator new(unsigned int); static void __cdecl operator delete(void*);
+static void* __cdecl operator new(size_t); static void __cdecl operator delete(void*);
 void FUN_0060aeb0(int mode) { TextureMap* map=maps.At(0); if(!map) { TextureMap* created=new TextureMap; map=created; maps.SetAt(0,map); } map->SetFilter(mode); } void Release() { if(DecrementRef(&unk04)==0) Destroy(); } long Retain() { return IncrementRef(&unk04); }
 };
 struct TexturePtr { Texture* value; TexturePtr& operator=(Texture* incoming) { if(value!=incoming) { if(value) value->Release(); value=incoming; if(value) value->Retain(); } return *this; } };
 inline float FontMax(float a,float b) { return b>a?b:a; }
 inline float FontMin(float a,float b) { return a<b?a:b; }
-inline void* FontData::operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+inline void* FontData::operator new(size_t size) { return g_memoryManager.Allocate(size); }
 // These accessors preserve the loader's out-of-line calls; Font has no equivalents.
 struct FontLoaderAccess : Font {
     unsigned short RefCount() { return iRefCount; }
@@ -2040,7 +2040,7 @@ delete kTextureFile; kTextureFile=0; texture5->FUN_0060aeb0(1); ((TexturePtr*)pT
 
 namespace fnv_00a19f70 {
 struct LayoutMemory { void Deallocate(void*); };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
@@ -2121,7 +2121,7 @@ struct LayoutItem {
     }
     bool Empty() const { return !string.Get() || !string[0]; }
     ~LayoutItem() {}
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* p) { ((LayoutMemory*)&g_memoryManager)->Deallocate(p); }
 };
 struct LayoutNode { LayoutNode* next; LayoutNode* prev; LayoutItem* item; };
@@ -2155,7 +2155,7 @@ struct LayoutLine {
     LayoutNode* head; LayoutNode* tail; int count,width,unk10,height,depth,unk1c,unk20,maxWidth,unk28;
     LayoutOwner* owner;
     LayoutLine(LayoutOwner*,LayoutItem*,int,int);
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* p) { ((LayoutMemory*)&g_memoryManager)->Deallocate(p); }
     LayoutItem* RemoveTail() {
         LayoutItem* value=0;
@@ -2306,7 +2306,7 @@ struct IconSetting {
 };
 extern IconSetting g_011f3368;
 void __cdecl Tile_GetTextureAtlasInfo(const char*, const char*, BSStringT<char>*, IconRect*);
-void* operator new(unsigned int, void* address) { return address; }
+void* operator new(size_t, void* address) { return address; }
 struct IconArray {
     void** vtable;
     IconData* data;
@@ -2428,7 +2428,7 @@ struct FontManager_CharData // src: XBOX_DEBUG_PDB 0x00a1b450 (first debug link 
         unk34 = 0;
     }
     // end ctor
-    static __forceinline void* operator new(unsigned int s) { return g_memoryManager.Allocate(s); }
+    static __forceinline void* operator new(size_t s) { return g_memoryManager.Allocate(s); }
     static __forceinline void operator delete(void*) {}
 
     FontManager_CharData* Copy();
@@ -2731,7 +2731,7 @@ struct RunNodeBase { void* b0; void* b4; void* b8; RunNodeBase(); };
 struct RunNode : RunNodeBase {
     int c, d, e;
     RunNode(int a, int b, int cc) : RunNodeBase() { this->c = a; this->d = b; this->e = cc; }
-    static void* operator new(unsigned int n) { return ((fnv_00a18a30::Pool*)&fnv_00a18a30::DAT_011f6238)->Game_DoHeapAlloc(n); }
+    static void* operator new(size_t n) { return ((fnv_00a18a30::Pool*)&fnv_00a18a30::DAT_011f6238)->Game_DoHeapAlloc(n); }
     fnv_00a18a30::ListObj* GetList();
     void FontManager_TextDoc_AddChar(fnv_00a18a30::TextRun*);
     void* GetB8() { return b8; }
@@ -2804,7 +2804,7 @@ extern float DAT_0102f0f8;
 extern double DAT_010731a8;
 double __cdecl FUN_00ec9130(double, double);
 extern char DAT_01011584[];
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
@@ -3170,7 +3170,7 @@ struct LayoutMemory { void Deallocate(void*); };
 extern float DAT_01095268;
 extern float DAT_01095264;
 extern float DAT_01095260;
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
@@ -3319,7 +3319,7 @@ struct LayoutItem {
     }
     bool Empty() const { return !string.Get() || !string[0]; }
     ~LayoutItem() {}
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* p) { ((LayoutMemory*)&g_memoryManager)->Deallocate(p); }
 };
 struct LayoutLine { void* head; void* tail; int count,width,unk10,height,depth,unk1c; };
@@ -3338,7 +3338,7 @@ struct FUN_00a1b940 {
 struct LayoutBlock : FUN_00a1b940 {
     int width,height,unk14;
     LayoutBlock(int newWidth,int newHeight,int newUnk14) { width=newWidth; height=newHeight; unk14=newUnk14; }
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* p) { ((LayoutMemory*)&g_memoryManager)->Deallocate(p); }
     void FontManager_TextDoc_AddChar(LayoutItem*,int,bool);
     LayoutPage* GetValueAtCount();
@@ -3568,7 +3568,7 @@ struct OwnQ;
 struct EntQ {
   int unk00, unk04, unk08, unk0C, unk10, unk14, unk18, unk1C, unk20, unk24, unk28, unk2C, unk30, unk34, unk38, unk3C, unk40;
   EntQ* ProcessEntries_00a19c00(int a, int b);
-  void* operator new(unsigned int n) { int aiD[9]; return DAT_011f6238.Game_DoHeapAlloc(n); }
+  void* operator new(size_t n) { int aiD[9]; return DAT_011f6238.Game_DoHeapAlloc(n); }
   void operator delete(void* p);
 };
 struct FUN_00a1bc70 : EntQ { FUN_00a1bc70(OwnQ* pOwner, int a, int c, int d); };
@@ -3712,7 +3712,7 @@ FUN_00a1b450::FUN_00a1b450(int aiFontIndex, unsigned char acChar, NiColorA axCol
     m34 = 0;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 unsigned int LayoutLength(const char*);
 unsigned int LayoutCapacity(unsigned int,unsigned int);
@@ -3762,7 +3762,7 @@ struct FontListNodeView {
  int value;
  FontListNodeView* next;
  FontListNodeView(const int& item) : value(item), next(0) {}
- static void* operator new(unsigned int size) { return DAT_011f6238.Game_DoHeapAlloc(size); }
+ static void* operator new(size_t size) { return DAT_011f6238.Game_DoHeapAlloc(size); }
  void FUN_00af25b0(int* item) {
   if (!*item) return;
   FontListNodeView* tail = this;
@@ -3999,7 +3999,7 @@ void Font::PrepText(const char* apOrigString,TextLayout::Layout* axData) {
  TextLayout::DAT_011f6238.MemoryManager_Deallocate(outputSlot60);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 namespace PageMeshes {
 
@@ -4808,7 +4808,7 @@ extern Memory DAT_011f6238;
 // Font lacks class-specific allocation and exception cleanup declarations.
 struct FontAllocation : Font {
     FontAllocation(int index, const char* name, int enabled);
-    static __forceinline void* operator new(unsigned int n) { return DAT_011f6238.Game_DoHeapAlloc(n); }
+    static __forceinline void* operator new(size_t n) { return DAT_011f6238.Game_DoHeapAlloc(n); }
     static __forceinline void operator delete(void*) {}
 };
 }
@@ -4862,7 +4862,7 @@ struct TQPoint3 {
 
     TQPoint3() {}
     TQPoint3(float fX, float fY, float fZ) { x = fX; y = fY; z = fZ; }
-    static void* operator new[](unsigned int uiSize) { return DAT_011f6238.Game_DoHeapAlloc(uiSize); }
+    static void* operator new[](size_t uiSize) { return DAT_011f6238.Game_DoHeapAlloc(uiSize); }
 };
 
 struct TQStr {
@@ -4997,7 +4997,7 @@ struct TQPropertyState {
     TQPtr<TQProperty> properties[7];
     TQPropertyState();
     ~TQPropertyState();
-    static void* operator new(unsigned int size) { return DAT_011f6238.Game_DoHeapAlloc(size); }
+    static void* operator new(size_t size) { return DAT_011f6238.Game_DoHeapAlloc(size); }
     static void operator delete(void* memory) { DAT_011f6238.MemoryManager_Deallocate(memory); }
 };
 struct TQPropertyLock {
@@ -5106,7 +5106,7 @@ int unk0C8;
 int unk0CC;
 int unk0D0;
 
-    static void* __cdecl operator new(unsigned int uiSize);
+    static void* __cdecl operator new(size_t uiSize);
     TQShape(unsigned short usVertices, TQPoint3* pkVertex, TQPoint3* pkNormal, void* pkColor, NiPoint2* pkTexture,
             unsigned short usNumTextureSets, int eNBTMethod, unsigned short usTriangles, unsigned short* pusTriList,
             int iUnk1, int iUnk2, int iUnk3, int iUnk4);
@@ -5202,7 +5202,7 @@ int unkA4;
 int unkA8;
 int unkAC;
 
-    static void* __cdecl operator new(unsigned int uiSize);
+    static void* __cdecl operator new(size_t uiSize);
     TQProperty(bool abUseTexturingProperty);
     void SetTexture(TQTexture* apTexture);
 };

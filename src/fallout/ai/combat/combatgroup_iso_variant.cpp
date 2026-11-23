@@ -1413,7 +1413,7 @@ struct Obj8
     int m0;
     int m4;
     Obj8();
-    void* operator new(unsigned int size, void* where);
+    void* operator new(size_t size, void* where);
     void operator delete(void* p, void* where);
 };
 struct Walker8
@@ -2751,7 +2751,7 @@ struct RemovalArray : RemovalOperations
     unsigned int unk08;
     void BSSimpleArray_CombatTarget_1024_RemoveFast(unsigned int first, unsigned int count);
 };
-void* operator new(unsigned int uiSize, void* pvWhere);
+void* operator new(size_t uiSize, void* pvWhere);
 void operator delete(void* pvMem, void* pvWhere);
 class C98F840Element
 {
@@ -3238,7 +3238,7 @@ struct DebugMaterial
     int unk14;
     int unk18;
     DebugMaterial();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void NiAlphaProperty_SetAlphaBlending(bool);
 };
@@ -3352,7 +3352,7 @@ struct DebugNode
     int unka4;
     int unka8;
     DebugNode(int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     DebugNode* NiAVObject_GetParent();
     void NiAVObject_SetTranslate_004bc1f0(float, float, float);
@@ -3369,7 +3369,7 @@ struct DebugNodePtr
 };
 void* Object_DispatchCommandFour(unsigned int);
 void FUN_00aa13f0(void*);
-__forceinline void* DebugNode::operator new(unsigned int n)
+__forceinline void* DebugNode::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -3377,7 +3377,7 @@ __forceinline void DebugNode::operator delete(void* p)
 {
     FUN_00aa13f0(p);
 }
-__forceinline void* DebugMaterial::operator new(unsigned int n)
+__forceinline void* DebugMaterial::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -3721,11 +3721,11 @@ struct DebugBuilder
     int unk48;
     int unk4c;
     DebugBuilder(DebugPoint, float);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     DebugNode* CreateSortAdjustNode();
 };
-__forceinline void* DebugBuilder::operator new(unsigned int n)
+__forceinline void* DebugBuilder::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -4766,7 +4766,7 @@ struct Shape
     unsigned int unk50;
 
     Shape();
-    static __forceinline void* operator new(unsigned int);
+    static __forceinline void* operator new(size_t);
     static __forceinline void operator delete(void*)
     {}
     float FUN_004a7bd0();
@@ -4775,7 +4775,7 @@ struct Shape
     void PathingLOSGridMap_SetSightRadius(float);
 };
 void* Object_DispatchCommandFour(unsigned int);
-__forceinline void* Shape::operator new(unsigned int n)
+__forceinline void* Shape::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -5187,7 +5187,7 @@ struct LoadAnim
     int x4c;
     int x50;
     LoadAnim();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     void Lst0044_Data00D4_Load(BGSLoadFormBuffer*);
 };
 struct LoadPtr

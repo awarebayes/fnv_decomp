@@ -36,13 +36,13 @@ struct SpawnedRefObject
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
     int unk08, unk0C, unk10, unk14, unk18, unk1C, unk20, unk24, unk28, unk2C;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         SpawnedRefObject* b = (SpawnedRefObject*)hkMemoryRouter::getInstance().heap().blockAlloc(n);
         b->m_usMemSizeAndFlags = (unsigned short)n;
         return b;
     }
-    static void operator delete(void* p, unsigned int n)
+    static void operator delete(void* p, size_t n)
     {
         hkMemoryRouter::getInstance().m_heap->blockFree(p, n);
     }

@@ -185,7 +185,7 @@ static __declspec(noinline) void _getShapeChildren(hkpShape* shape, hkArray<hkpS
     }
 }
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

@@ -7,7 +7,7 @@
 
 extern MemoryManager g_memoryManager;
 #include "../../include/BSShaderProperty.h"
-inline void* BSShaderProperty::ShaderPassEntry::operator new(unsigned int size)
+inline void* BSShaderProperty::ShaderPassEntry::operator new(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
@@ -20,7 +20,7 @@ class ShadowSceneLight;
 struct BSShaderPropertyLightSlot
 {
     ShadowSceneLight* light;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

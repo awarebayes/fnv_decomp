@@ -11,7 +11,7 @@ B6B610Geometry* __cdecl FUN_00a7fc00(void* kName, void* uiWidth, void* uiHeight,
 class B6B610Wrapper
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 
     B6B610Wrapper(B6B610Geometry* geometry, void* f, void* g);

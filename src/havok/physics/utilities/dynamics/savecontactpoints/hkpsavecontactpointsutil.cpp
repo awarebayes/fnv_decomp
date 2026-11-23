@@ -1730,14 +1730,14 @@ struct S_00dcdd80_RefObj
     void* vtbl;
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         S_00dcdd80_RefObj* b =
             static_cast<S_00dcdd80_RefObj*>(fnvc_adapt::hkMemoryRouter_getInstance()->heap().blockAlloc(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return b;
     }
-    static void operator delete(void*, unsigned int)
+    static void operator delete(void*, size_t)
     {}
     void FUN_00c905b0();
 };
@@ -3202,7 +3202,7 @@ struct FUN_00e05d10_Base
     unsigned short m_usMemSizeAndFlags;
     unsigned short m_sReferenceCount;
 
-    void operator delete(void* p, unsigned int)
+    void operator delete(void* p, size_t)
     {
         FUN_00e05d10_Base* b = static_cast<FUN_00e05d10_Base*>(p);
         hkMemoryRouter_getInstance()->heap().blockFree(p, b->m_usMemSizeAndFlags);
@@ -7315,7 +7315,7 @@ class DCEEntryInit : public hkReferencedObject
 {
   public:
     __forceinline DCEEntryInit();
-    static void* operator new(unsigned int, void* storage)
+    static void* operator new(size_t, void* storage)
     {
         return storage;
     }

@@ -84,7 +84,7 @@ NightEyeEffect* NightEyeEffect_Create(void* apArg0, void* apArg1, void* apArg2)
     return new NightEyeEffect(apArg0, apArg1, apArg2);
 }
 
-void* operator new(unsigned int size) throw();
+void* operator new(size_t size) throw();
 
 // @fnv 0x00825760
 // pdb: NightEyeEffect::Copy | NightEyeEffect.obj | retail, upstream name already matches, high

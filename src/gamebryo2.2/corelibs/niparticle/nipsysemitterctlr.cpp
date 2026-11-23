@@ -666,7 +666,7 @@ struct CChildA : CBaseA
         m10 = 0;
         m14 = 0;
     }
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     void M(unsigned int a, unsigned int b, unsigned int c);
 };
 

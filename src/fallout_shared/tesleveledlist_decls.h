@@ -38,7 +38,7 @@ class MersenneTwister
 };
 unsigned int DialogueRandom();
 
-void* operator new(unsigned int) throw();
+void* operator new(size_t) throw();
 
 int Warning(const char*, ...);
 

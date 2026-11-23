@@ -17,7 +17,7 @@ inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b)
     return a > b ? a : b;
 }
 extern void* __memcpy(void*, const void*, unsigned int);
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 
 inline BSString::BSString(unsigned int len)

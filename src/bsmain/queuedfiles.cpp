@@ -243,7 +243,7 @@ struct FUN_00c3c4e0
     unsigned int unk10;
 
     FUN_00c3c4e0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_011f6238.Allocate(size);
     }

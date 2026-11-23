@@ -366,7 +366,7 @@ struct FUN_004037b0
 // NiMemObject's operator delete (0x00aa1460) takes the size; the shared header also declares a one-argument form.
 struct FUN_00a6aa40 : NiMemObject
 {
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     FUN_00a6aa40();
     void SetBaseTexture(void*);
     void FUN_004f3200(int);

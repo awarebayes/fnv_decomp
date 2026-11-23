@@ -27,7 +27,7 @@
 #include "../../../../../../../include/hkpWorldRayCastOutput.h"
 #include "../../../../../../../include/hkVector4.h"
 
-inline void* operator new(unsigned int, void* location) { return location; }
+inline void* operator new(size_t, void* location) { return location; }
 
 template <class T>
 inline T& heap(hkMemoryRouter& router)
@@ -520,7 +520,7 @@ void hkHandlerD085::hkpAabbTreeWorldManager_removeObjectFromTree(hkpEntity* obje
 }
 
 struct PlaceTagD088 {};
-inline void* operator new(unsigned int, void* p, PlaceTagD088) throw() { __assume(p != 0); return p; }
+inline void* operator new(size_t, void* p, PlaceTagD088) throw() { __assume(p != 0); return p; }
 inline void operator delete(void*, void*, PlaceTagD088) throw() {}
 
 template <class T>

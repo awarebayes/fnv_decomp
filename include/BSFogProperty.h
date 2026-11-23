@@ -34,7 +34,7 @@ public:
     ~BSFogProperty();
 
     static void* operator new(size_t size);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     void IncRefCount();
     void DecRefCount();
     BSFogProperty* __thiscall BSFogProperty_ScalarDtor(unsigned char flags);

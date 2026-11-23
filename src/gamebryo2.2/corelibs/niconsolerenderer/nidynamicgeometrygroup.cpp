@@ -25,7 +25,7 @@ typedef NiTArray<NiVBChip*, NiTMallocInterface<NiVBChip*> > DynamicChipArray;
 // RTTI vftables 0x010f107c / 0x010f109c identify the sets/chips maps as
 // NiTPointerMap<unsigned int, NiVBDynamicSet*> / NiTPointerMap<unsigned int, NiVBChip*>.
 // Their bases at 0x010f103c / 0x010f105c use NiTPointerAllocator<unsigned int>.
-inline void* __cdecl operator new(unsigned int, void* pvMem) throw()
+inline void* __cdecl operator new(size_t, void* pvMem) throw()
 {
     return pvMem;
 }
@@ -108,7 +108,7 @@ void* __fastcall DestroySetArray(DynamicSetArray* array, void*, unsigned int aui
     return array;
 }
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 // Destroys the group, frees it when bit 0 of uiFlags is set, and returns its address.
 // @fnv 0x00e95b40
 void* __fastcall DestroyIfFlagged(NiDynamicGeometryGroup* group, void*, unsigned int uiFlags)
@@ -414,7 +414,7 @@ struct BufferSetData
 
     BufferSetData() : unk00(0), unk04(0), size(0), buffer(0), unk10(0)
     {}
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return Object_DispatchCommandFour(bytes);
     }
@@ -603,7 +603,7 @@ struct DynamicSetData
 };
 struct DynamicChipData
 {
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     ~DynamicChipData()
     {
         buffer = 0;

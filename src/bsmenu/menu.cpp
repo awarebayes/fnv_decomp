@@ -916,7 +916,7 @@ struct FUN_00a0ac80 : public FUN_00a0ad40
             ++iIndex;
         }
     }
-    static void* operator new(unsigned int auSize)
+    static void* operator new(size_t auSize)
     {
         return _g_memoryManager.Allocate(auSize);
     }

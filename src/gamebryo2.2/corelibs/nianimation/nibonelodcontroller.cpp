@@ -661,7 +661,7 @@ template <class T> struct LinkGroup
     T* data;
     unsigned int capacity;
     unsigned int count;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }
@@ -697,7 +697,7 @@ struct LinkSkinInfo
 {
     void* object;
     void* skin;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }
@@ -944,7 +944,7 @@ struct A54440Heap : MemoryAllocator
 void* __cdecl _NiMalloc_00aa1070(unsigned int);
 struct A54440PointerGroup
 {
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return ((A54440Heap*)&g_011f6238)->Game_DoHeapAlloc(bytes);
     }
@@ -999,7 +999,7 @@ struct A54440GrowGroup
 };
 struct A54440LinkGroup
 {
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return ((A54440Heap*)&g_011f6238)->Game_DoHeapAlloc(bytes);
     }
@@ -1090,7 +1090,7 @@ static void* A54440Map(CloneMap* hash, void* key)
 }
 struct A54440SourceLink
 {
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return ((A54440Heap*)&g_011f6238)->Game_DoHeapAlloc(bytes);
     }

@@ -140,7 +140,7 @@ template<class T> inline NiPointer<T>& NiPointer<T>::operator=(const NiPointer& 
 template<class T> inline NiPointer<T>::operator T*() const { return m_pObject; }
 template<class T> inline T* NiPointer<T>::operator->() const { return m_pObject; }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00b81290_class
 {
@@ -180,7 +180,7 @@ FUN_00b8d580_Class* __thiscall FUN_00b8d580_Class::FUN_00b8d580(unsigned int aui
 
 void FUN_00c03a20();
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b91b50
 {
@@ -200,7 +200,7 @@ FUN_00b91b50* FUN_00b91b50::Method(bool abFree)
 
 void __cdecl FUN_00b92450();
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b924d0_class
 {
@@ -357,7 +357,7 @@ FUN_00b8d990::FUN_00b8d990()
 extern int DAT_010b0b78;
 extern int DAT_010b0b98;
 void FUN_00c03a20();
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b8daa0_class
 {
@@ -1052,7 +1052,7 @@ FUN_00b91780_shell* __thiscall FUN_00b91780_shell::FUN_00b91780(bool abFree)
 }
 
 namespace fnv_00b917c0 {
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 extern int DAT_010b4de8;
 extern int DAT_010b4dc8;
 struct ImageSpaceEffectShader
@@ -1293,7 +1293,7 @@ FUN_00b92180::FUN_00b92180()
 extern int DAT_010b57b0;
 extern int DAT_010b57d0;
 void FUN_00c03a20();
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00b92290_shell
 {
     FUN_00b92290_shell* __thiscall FUN_00b92290(bool flag);
@@ -11066,7 +11066,7 @@ struct ISParam : ISEffectParam
 
     ISParam();
     void Init(int aiVSize, int aiPSize);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memMgr.Allocate(size);
     }
@@ -13264,7 +13264,7 @@ FUN_00b8d4d0::~FUN_00b8d4d0()
 
 struct Header6c
 {
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     virtual void h0();
     int hdr_00_4, hdr_00_8, hdr_00_c, hdr_00_10, hdr_00_14, hdr_00_18, hdr_00_1c, hdr_00_20, hdr_00_24, hdr_00_28,
         hdr_00_2c, hdr_00_30, hdr_00_34, hdr_00_38, hdr_00_3c, hdr_00_40, hdr_00_44, hdr_00_48, hdr_00_4c, hdr_00_50,
@@ -13277,7 +13277,7 @@ struct AllocSvc
 extern AllocSvc DAT_011f6238;
 struct NiMemObj
 {
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }

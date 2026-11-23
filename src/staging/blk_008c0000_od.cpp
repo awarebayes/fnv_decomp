@@ -4627,7 +4627,7 @@ int GetLevelValue(int iLevel)
     return 0;
 }
 
-void* operator new(unsigned int, void*);
+void* operator new(size_t, void*);
 void operator delete(void*, void*);
 struct HandleBase
 {
@@ -4947,7 +4947,7 @@ void FUN_008c2630_Owner::Actor_CheckEquipWornEnchantment(TESBoundObject* apObjec
 }
 
 namespace fnv_008d5020 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_008d5590_shell_helper
 {

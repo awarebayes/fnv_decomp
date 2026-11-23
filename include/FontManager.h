@@ -25,7 +25,7 @@ public:
     unsigned char _pad21[3];
 
     void* __vecDelDtor(unsigned int);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* memory);
 
     static FontManager* pInstance;

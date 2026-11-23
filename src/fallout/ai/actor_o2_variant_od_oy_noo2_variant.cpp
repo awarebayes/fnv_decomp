@@ -4024,7 +4024,7 @@ class InitC7
 class ProjC7
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pv);
     ProjC7(const InitC7& arInfo);
     virtual void j000();
@@ -4639,7 +4639,7 @@ void __cdecl TESRegionDataImposter_SetImposterVisible(kRef* apImposter, int abVi
 struct kZ
 {
     int unk0, unk4, unk8, unkC, unk10;
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     kZ();
     void bhkSphereShape_Init(float f);
 };
@@ -4711,7 +4711,7 @@ struct __declspec(align(16)) kH
 struct kW
 {
     int unk0, unk4, unk8, unkC, unk10, unk14, unk18;
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     kW(kH* arInfo);
 };
 

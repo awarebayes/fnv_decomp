@@ -612,7 +612,7 @@ struct FUN_00449fd0
 struct FUN_00b37660;
 struct FUN_00b377c0
 {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FormHeap_Allocate(size);
     }
@@ -3228,7 +3228,7 @@ ElemB5A0* __cdecl Object_ProcessAndReturnValue_00b3b5a0(ElemB5A0* _First, ElemB5
 }  // namespace fnv_00b3b5a0
 
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -3655,7 +3655,7 @@ ElemMOVE* __cdecl Idvspline_EvaluateValue_00b3b6f0(ElemMOVE* _First, ElemMOVE* _
 }  // namespace fnv_00b3b6f0
 
 namespace fnv_00b3b880 {
-inline void* __cdecl operator new(unsigned int, void* where)
+inline void* __cdecl operator new(size_t, void* where)
 {
     return where;
 }

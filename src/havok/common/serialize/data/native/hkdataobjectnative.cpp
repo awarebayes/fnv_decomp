@@ -531,7 +531,7 @@ class hkRefObjDBB5
         m_sReferenceCount = 0;
     }
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkRefObjDBB5* b = static_cast<hkRefObjDBB5*>(GetRouterHeap<hkMemoryAllocator>(hkRouterDBB5::hkMemoryRouter_getInstance()).blockAlloc(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -813,7 +813,7 @@ struct hkArrayBaseDBBD
 };
 
 // Keep allocation inline so callers store the Havok allocation size before construction.
-inline void* hkDataArrayNative::operator new(unsigned int nbytes)
+inline void* hkDataArrayNative::operator new(size_t nbytes)
 {
     void* memory = GetRouterHeap<hkMemoryAllocator>(hkMemoryRouter_getInstance()).blockAlloc(nbytes);
     reinterpret_cast<unsigned short*>(memory)[2] = static_cast<unsigned short>(nbytes);

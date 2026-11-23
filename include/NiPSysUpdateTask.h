@@ -22,7 +22,7 @@ public:
     void Destruct();
     void* DestroyElements(unsigned int uiFlags);
 
-    static void* operator new[](unsigned int size, unsigned int count);
+    static void* operator new[](size_t size, size_t count);
     static void operator delete[](void* p);
 
     union

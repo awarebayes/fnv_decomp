@@ -568,7 +568,7 @@ void* TESObjectCELL::GetInteriorData_00544600()
 
 
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 
@@ -3003,8 +3003,8 @@ namespace fnv_00545a30 {
 struct CellPortalGraph
 {
     char storage[0x78];
-    static void* operator new(unsigned int size);
-    static void operator delete(void* pointer, unsigned int size);
+    static void* operator new(size_t size);
+    static void operator delete(void* pointer, size_t size);
     CellPortalGraph();
 };
 
@@ -8074,8 +8074,8 @@ struct FaceGenNode
     FaceGenNode();
     void SetAnimData(FaceAnimData* d);
     FaceAnimData* GetAnimData();
-    static void* operator new(unsigned int size);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void*, size_t);
 };
 
 struct Primitive
@@ -10920,11 +10920,11 @@ struct Widget
 struct FUN_00a5ecb0 : Widget
 {
     FUN_00a5ecb0(int);
-    static __forceinline void* operator new(unsigned int n)
+    static __forceinline void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct FUN_00c46970 : Widget
 {
@@ -10932,11 +10932,11 @@ struct FUN_00c46970 : Widget
     FUN_00c46970();
     void BSMultiBoundNode_SetCullingMode(int);
     void FUN_00439920(void*);
-    static __forceinline void* operator new(unsigned int n)
+    static __forceinline void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct FUN_00c35e00
 {
@@ -10944,22 +10944,22 @@ struct FUN_00c35e00
     int unk04, unk08, unk0c;
     FUN_00c35e00();
     void BSMultiBound_SetShape(void*);
-    static __forceinline void* operator new(unsigned int n)
+    static __forceinline void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct FUN_00c37ec0
 {
     void* vfptr;
     int unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20;
     FUN_00c37ec0();
-    static __forceinline void* operator new(unsigned int n)
+    static __forceinline void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct WidgetSlot
 {
@@ -12323,7 +12323,7 @@ struct Pending
 extern Pending pending;
 bool AILinearTaskThreadManager_ShouldQueue3DTask();
 void TESObjectCELL_QueueAttachChild(Ref*, Obj*);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct Cell
 {
@@ -14341,8 +14341,8 @@ struct RenderObject
 struct RenderCamera : RenderObject
 {
     RenderCamera();
-    static void* operator new(unsigned);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     int field004;
     int field008;
     int field00c;
@@ -14415,8 +14415,8 @@ struct RenderCamera : RenderObject
 struct RenderNode : RenderObject
 {
     RenderNode(unsigned short);
-    static void* operator new(unsigned);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     int field004;
     int field008;
     int field00c;
@@ -15623,7 +15623,7 @@ struct CellSeenData
 
     int unk20;
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 
 };
 extern "C" void* memset(void*, int, unsigned int);
@@ -16611,7 +16611,7 @@ struct CellPoint3
 
 
 
-inline void* operator new(unsigned int size, void* ptr)
+inline void* operator new(size_t size, void* ptr)
 {
     return ptr;
 }
@@ -18772,7 +18772,7 @@ FUN_005415b0::FUN_005415b0() : fieldb4(0), fieldb8(0), fieldbc(0), fieldd4(0)
     field58.slot0();
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 extern const char str_0102ed68[];
 struct Mem960
@@ -19210,8 +19210,8 @@ class BSA
 {
   public:
     char pad[0x280];
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     BSA(int, int, int);
     void BSShaderAccumulator_SetShadowSceneNode(void*);
     void FUN_004a1040(int);
@@ -19449,8 +19449,8 @@ struct SceneObject
     virtual void v39();
     virtual void InsertChild(SceneObject* apChild);
 
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void*, size_t);
     NiBound* NiAVObject_GetWorldBound();
     void NiAVObject_SetTranslate(const CellPoint3& arTranslate);
     void SetRotate_0043fa80(const NiMatrix3& arRotate);
@@ -21279,8 +21279,8 @@ namespace fnv_00552dc0 {
 void* __cdecl Object_DispatchCommandFour(unsigned int);
 struct ChildGeometryBase;
 
-void* __cdecl operator new(unsigned int);
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*);
 extern float DAT_011ca158;
 extern float DAT_0102efc0;
@@ -21381,7 +21381,7 @@ struct SpatialNode
     int unk90;
     int unk94;
     int unk98;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     SpatialNode(SceneInitializer*);
     void FUN_005533c0();
@@ -21524,11 +21524,11 @@ struct RefList
 };
 struct Shadow
 {
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }
-    static void operator delete(void* pvMem, unsigned int);
+    static void operator delete(void* pvMem, size_t);
     Shadow();
     int unk00;
     int unk04;

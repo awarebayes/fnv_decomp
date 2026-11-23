@@ -2773,11 +2773,11 @@ struct FUN_00b37660
     int unk7c;
     int unk80;
     FUN_00b37660(const B13970Tmp& strInput);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FormHeap_Allocate(size);
     }
-    static void* operator new(unsigned int size, void* p)
+    static void* operator new(size_t size, void* p)
     {
         return p;
     }

@@ -186,7 +186,7 @@ struct FUN_00d27f50_Obj {
     void __thiscall hkSmallArray_hkConstraintInternal_insertAt(int param_1, int param_2);
 };
 struct LinkedIndexArray { int** entries; int count; void hkUnionFind_collapseTree(); };
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 struct IndexBuffer { int* data; int size; unsigned capacityFlags; };
 struct IndexStorage { int* data; };
 struct AllocationManager { int unk00; int unk04; int unk08; int unk0C; void* allocator; };
@@ -607,7 +607,7 @@ class ObjD2C840 : public FUN_00d2c7e0 {
 public:
     virtual ~ObjD2C840();
     ObjD2C840(int count) : FUN_00d2c7e0(count) {}
-    static void* operator new(unsigned int, void* p) throw() { return p; }
+    static void* operator new(size_t, void* p) throw() { return p; }
     static void operator delete(void*, void*) throw() {}
 };
 void __cdecl ConstructObjD2C840(void* storage, int count);

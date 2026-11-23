@@ -425,7 +425,7 @@ struct NiD3DVertexDeclaration : ShaderVTable
 struct A51BF0Base : ShaderVTable
 {
     char pad[0x100 - sizeof(void*)];
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00bd5670 : A51BF0Base
@@ -840,7 +840,7 @@ struct InstanceData_00bd5670
     int unk04;
     int unk08;
     int unk0c;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return ((MemoryManager_Helper*)&DAT_011f6238)->Allocate(size);
     }

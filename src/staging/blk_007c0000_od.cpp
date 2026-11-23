@@ -951,7 +951,7 @@ void C7D8EE0List::SelectLast()
     SetSelection(GetCount(0) - 1);
 }
 
-void* __cdecl operator new(unsigned int size, void* location);
+void* __cdecl operator new(size_t size, void* location);
 void __cdecl operator delete(void* object, void* location);
 // Default-constructs each video resolution record in place.
 // @fnv 0x007da1a0
@@ -1058,8 +1058,8 @@ struct FUN_00a712f0
     unsigned int unk108;
     unsigned int unk10c;
     unsigned int unk110;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     FUN_00a712f0();
     void FUN_00712e60(const NiColorA&);
     void NiCamera_SetMaxFarNearRatio(float);

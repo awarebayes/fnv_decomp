@@ -543,7 +543,7 @@ struct FUN_00d69af0
     FUN_00d69af0();
     virtual ~FUN_00d69af0();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00d69af0* b = static_cast<FUN_00d69af0*>(p);
         hkMemoryAllocator& allocator = heap(hkMemoryRouter_getInstance());

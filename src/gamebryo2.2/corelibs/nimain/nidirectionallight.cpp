@@ -110,7 +110,7 @@ void __fastcall NiDirectionalLight_GetViewerStrings(NiDirectionalLight* light, v
 }  // namespace fnv_00a75d70
 
 extern "C" void* __cdecl Object_DispatchCommandFour(unsigned int size);
-inline void* operator new(unsigned int, void* memory) throw()
+inline void* operator new(size_t, void* memory) throw()
 {
     return memory;
 }

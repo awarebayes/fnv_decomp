@@ -15,7 +15,7 @@ class FactionRankPresentation
     TESTexture m_kRankTexture;          // +0x10, 12 bytes
     FactionRankPresentation();
     ~FactionRankPresentation();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int DestroyAndFree(unsigned int);
     // FactionRankPresentation

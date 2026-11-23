@@ -74,7 +74,7 @@ void __stdcall NiParticles_GetViewerStrings(StrArr* pStrings)
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
 extern int DAT_010a11d4;
 
-inline void* operator new(unsigned int, void* memory) { return memory; }
+inline void* operator new(size_t, void* memory) { return memory; }
 
 // @fnv 0x00a9b250
 NiParticles* __fastcall CreateAndInitObject(NiParticles* self, void*, unsigned int arg)

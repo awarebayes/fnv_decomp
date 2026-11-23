@@ -4180,15 +4180,15 @@ long __stdcall DsBasePin::ConnectPinWithMediaType(DsUnknown* pConnector, const v
     return hr;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
-inline void* __cdecl operator new(unsigned int, unsigned int size)
+inline void* __cdecl operator new(size_t, size_t size)
 {
     return operator new(size);
 }
 
-inline void __cdecl operator delete(void* p, unsigned int)
+inline void __cdecl operator delete(void* p, size_t)
 {
     operator delete(p);
 }
@@ -4353,7 +4353,7 @@ long __stdcall FUN_009fc780::CreatePinEnumeratorIfVersionMatches(FUN_009fc780** 
 }  // namespace fnv_009fc7e0
 
 extern "C" void* __cdecl FUN_00ec44d0(void*, const void*, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 int __stdcall strlen_w(const wchar_t*);
 
 struct FUN_009fcee0
@@ -5682,7 +5682,7 @@ FUN_009fe870::~FUN_009fe870()
 }
 }  // namespace fnv_009fe870
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct Stream_9fe960
 {

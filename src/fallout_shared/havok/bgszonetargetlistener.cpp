@@ -208,7 +208,7 @@ struct ZoneNode : ZoneBase, ZoneLink
     int unk44;
     int unk48;
     int unk4C;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void*);
     ZoneNode(unsigned int apRef, unsigned int apCol);
 };
@@ -305,7 +305,7 @@ struct ZoneTargetNode
     int unk48;
     int unk4C;
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     static void operator delete(void*);
     ZoneTargetNode(unsigned int apRef, unsigned int apCol);
 };

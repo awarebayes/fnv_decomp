@@ -1940,7 +1940,7 @@ __forceinline Allocator& HeapAllocator(hkMemoryRouter* holder)
 class BDE43E0ReferencedObject
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         BDE43E0ReferencedObject* pkObject =
             static_cast<BDE43E0ReferencedObject*>(HeapAllocator(hkMemoryRouter_getInstance()).AllocateMemoryBlock(uiSize));
@@ -3343,7 +3343,7 @@ int* __cdecl Object_GetGlobalObjectAddress_00dfb560()
     return &hkaWaveletCompressedAnimationClass;
 }
 
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }
@@ -6774,7 +6774,7 @@ class DFF2E0Object
   public:
     DFF2E0Object(DFF2E0FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -6820,7 +6820,7 @@ int* __cdecl Runtime_GetDAT0126d418Address()
 }
 
 namespace fnv_00dff3e0 {
-inline void* operator new(unsigned int, void* where) throw()
+inline void* operator new(size_t, void* where) throw()
 {
     return where;
 }
@@ -6995,7 +6995,7 @@ class DFF520Object
   public:
     DFF520Object(DFF520FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -7461,7 +7461,7 @@ struct SpawnedDerived : SpawnedObject
     {}
 };
 
-inline void* operator new(unsigned int, void* where)
+inline void* operator new(size_t, void* where)
 {
     return where;
 }

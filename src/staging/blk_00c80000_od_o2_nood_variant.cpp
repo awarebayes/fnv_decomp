@@ -1738,7 +1738,7 @@ struct FUN_00c88380
     void* object;
     int unk0c;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -2234,11 +2234,11 @@ struct PhysicsMotion
 {
     void ApplyImpulse(float deltaTime, const hkVector4& force);
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
-inline void* operator new[](unsigned int, void* p)
+inline void* operator new[](size_t, void* p)
 {
     return p;
 }

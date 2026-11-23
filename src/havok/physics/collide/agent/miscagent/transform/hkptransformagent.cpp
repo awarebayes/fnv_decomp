@@ -1377,7 +1377,7 @@ struct S_00d43030_RefObj {
     short m_sReferenceCount;
     virtual ~S_00d43030_RefObj() throw();
     __forceinline S_00d43030_RefObj() throw() { m_sReferenceCount = 1; }
-    __forceinline void* operator new(unsigned int nbytes)
+    __forceinline void* operator new(size_t nbytes)
     {
         S_00d43030_RefObj* b = static_cast<S_00d43030_RefObj*>((void*)static_cast<S_00d43030_Router*>(hkMemoryRouter_getInstance())->heap().allocate(nbytes));
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(nbytes);

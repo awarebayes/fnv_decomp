@@ -39,7 +39,7 @@ struct NewObj
 {
     char pad[0x104];
     NewObj();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -663,7 +663,7 @@ struct CopyAllocator
     void* Allocate(unsigned int);
 };
 extern CopyAllocator copyAllocator;
-inline void* operator new[](unsigned int size)
+inline void* operator new[](size_t size)
 {
     return copyAllocator.Allocate(size);
 }
@@ -1891,7 +1891,7 @@ template <class T> class TextureArrayPtr
         }
         return *this;
     }
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -2045,7 +2045,7 @@ struct NiPtrX
         }
         return *this;
     }
-    static void* operator new[](unsigned int s)
+    static void* operator new[](size_t s)
     {
         return DAT_011f6238.Game_DoHeapAlloc(s);
     }

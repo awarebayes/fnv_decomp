@@ -2624,7 +2624,7 @@ struct FUN_00626800_Pair
     int a;
     int b;
 };
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 // For each of count elements, placement-constructs an 8-byte pair at base + i*8 by copying the pair from src.
 // @fnv 0x00626800
 // pdb: hkArrayUtil::constructWithCopy<HavokError::hkFileLine> | HavokStream.obj | debug, call graph, high
@@ -4647,8 +4647,8 @@ struct TriData : Obj
     int unk50;
     int unk54;
     int unk58;
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     TriData(unsigned short nVerts, NiPoint3* verts, NiPoint3* normals, void* colors, Pt2* uvs, unsigned short nSets, int flags,
             unsigned short nTris, unsigned short* tris, int a, int b);
 };
@@ -4703,8 +4703,8 @@ struct TriShape : Obj
     int unkB8;
     int unkBC;
     int unkC0;
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     TriShape(TriData* d);
 };
 
@@ -4720,8 +4720,8 @@ struct PartData : Obj
     int unk20;
     int unk24;
     int unk28;
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     PartData(unsigned short usVertexCount, int uiDataStreamCount, int uiD3DStream);
 };
 
@@ -4766,8 +4766,8 @@ struct PartCtrl : Obj
     int unk94;
     int unk98;
     int unk9C;
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     PartCtrl(unsigned short aiParticleCount, float afRotationSpeed, NiPoint3* akVelocity, NiPoint3* akMin, NiPoint3* akMax, int aePrecipType, int aeFaceMode);
 };
 
@@ -5274,7 +5274,7 @@ extern void __cdecl bhkWorldCinfo_SetSimulationType(int);
 extern "C" __declspec(dllimport) unsigned int __stdcall GetCurrentDirectoryA(unsigned int, char*);
 struct Allocator622
 {
-    static __forceinline void* operator new(unsigned int nbytes)
+    static __forceinline void* operator new(size_t nbytes)
     {
         return Object_AllocateStorage_0056d280(nbytes);
     }
@@ -5673,7 +5673,7 @@ struct Obj6268b0
     int unk3A8;
     int unk3AC;
     Obj6268b0(float fValue, unsigned int uiValue);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void*);
 };
 
@@ -7118,8 +7118,8 @@ struct FUN_0056e550
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14;
     FUN_0056e550(const FUN_0056e4e0*);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct BoundaryPointer
 {

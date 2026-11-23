@@ -491,7 +491,7 @@ class FUN_00d87790
 
     FUN_00d87790(hkBool ops) throw();
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return reinterpret_cast<hkMemoryAllocator&>(hkRouterE028::hkMemoryRouter_getInstance().heap()).blockAlloc(uiSize);
     }

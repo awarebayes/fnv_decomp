@@ -135,7 +135,7 @@ struct FUN_00a414c0_class
 extern int DAT_010976fc;
 struct A51BF0Base
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct A51BF0
 {
@@ -1191,7 +1191,7 @@ struct Result
     int unk28;
     int unk2c;
     int unk30;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     Result(const char*, int, int) throw();
     void SetReferencedObject_00a47420(Obj*) throw();
     void AddSeq(void*, Obj*) throw();
@@ -1582,7 +1582,7 @@ struct A4F610KeyPair
     float v;
     ~A4F610KeyPair();
 };
-void* operator new[](unsigned int size)
+void* operator new[](size_t size)
 {
     return DAT_011f6238.Allocate(size);
 }

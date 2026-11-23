@@ -449,7 +449,7 @@ struct FUN_00d76ca0
         ((FUN_00d76ca0*)memory)->memorySize = (unsigned short)bytes;
         return memory;
     }
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return allocate(reinterpret_cast<Allocator&>(hkMemoryRouter_getInstance().heap()), bytes);
     }
@@ -2063,7 +2063,7 @@ struct E24850Node
     E24850Node* m_next;
     E24850Node* m_pSecondNode;
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -2881,7 +2881,7 @@ struct HullFloodTriangle
     int unk2c;
     int m_vis;
 };
-inline void* operator new(unsigned int, void* storage)
+inline void* operator new(size_t, void* storage)
 {
     return storage;
 }
@@ -4018,7 +4018,7 @@ struct FUN_00e21e30
 // pdb params: this
     virtual ~FUN_00e21e30()
     {}
-    void operator delete(void* p, unsigned int nbytes)
+    void operator delete(void* p, size_t nbytes)
     {
         reinterpret_cast<S_00e21e30_Alloc*>(hkMemoryRouter::getInstance().m_heap)->ReleaseBlock(p, static_cast<int>(nbytes));
     }
@@ -4545,7 +4545,7 @@ struct ProbeObjectTag
 struct ProbePlacement
 {
 };
-inline void* operator new(unsigned size, ProbePlacement* p)
+inline void* operator new(size_t size, ProbePlacement* p)
 {
     return p;
 }

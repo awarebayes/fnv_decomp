@@ -571,7 +571,7 @@ struct Source840 {
 struct Node840 { int unk00,unk04,unk08; union { int key; unsigned short children[2]; }; unsigned short flags,escape; };
 struct ParentAlias840 {Node840* value;};
 struct Task840 {
-    static __forceinline void* operator new(unsigned int, void* destination) { return destination; }
+    static __forceinline void* operator new(size_t, void* destination) { return destination; }
     hkAabb bounds;
     unsigned short start,unused22;
     int count;
@@ -841,7 +841,7 @@ void Sd9_Tree::ProcessEntries_00d9b580(unsigned short insertPointIdx, unsigned s
 }
 
 
-inline void* operator new(unsigned int, void* p) throw() { return p; }
+inline void* operator new(size_t, void* p) throw() { return p; }
 inline void operator delete(void*, void*) throw() {}
 
 void __cdecl ResizeAudioStream(void* mem, void* array, int sizeElem);

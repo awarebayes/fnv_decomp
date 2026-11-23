@@ -1226,7 +1226,7 @@ struct Location052
 struct Avoid052
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     Avoid052();
     void AppendNode(const PathingAvoidNode&);
 };

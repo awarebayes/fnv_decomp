@@ -78,7 +78,7 @@ struct FUN_00dfbff0
     FUN_00dfbff0();
     virtual ~FUN_00dfbff0();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00dfbff0* b = static_cast<FUN_00dfbff0*>(p);
         heap(hkMemoryRouter_getInstance()).ReleaseBlock(p, b->m_usMemSizeAndFlags);

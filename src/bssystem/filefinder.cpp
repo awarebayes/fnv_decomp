@@ -321,9 +321,9 @@ void __cdecl strcat_s(char*, unsigned int, const char*);
 template <class T> inline BSSimpleList<T>::BSSimpleList() { m_item = 0; m_pkNext = 0; }
 template <class T> inline BSSimpleList<T>::~BSSimpleList() { RemoveAll(); }
 template <class T> inline bool BSSimpleList<T>::IsEmpty() { return (m_pkNext == 0 && m_item == 0) ? 1 : 0; }
-template <class T> inline void* BSSimpleList<T>::operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+template <class T> inline void* BSSimpleList<T>::operator new(size_t size) { return g_memoryManager.Allocate(size); }
 template <class T> inline void BSSimpleList<T>::operator delete(void* p) { g_memoryManager.Deallocate(p); }
-inline void* __cdecl operator new[](unsigned int n)
+inline void* __cdecl operator new[](size_t n)
 {
     return g_memoryManager.Allocate(n);
 }
@@ -404,7 +404,7 @@ struct FileMatchList
     {
         return next == 0 && data == 0;
     }
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

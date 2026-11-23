@@ -6,7 +6,7 @@
 class NiStandardAllocator : public NiAllocator
 {
 public:
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     void* __thiscall NiStandardObjectAllocHelper(unsigned int);
     void func();
     void* NiStandardAllocator_Reallocate(void* pvMemory, unsigned int& stSizeInBytes, unsigned int& stAlignment,

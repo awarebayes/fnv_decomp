@@ -426,7 +426,7 @@ extern void* DAT_011f9508;
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct NiD3DVertexDeclaration

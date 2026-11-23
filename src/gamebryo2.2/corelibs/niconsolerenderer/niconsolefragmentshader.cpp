@@ -615,7 +615,7 @@ bool __stdcall SetBloodSplatter(unsigned int auiShaderType, bool abEnabled, bool
 
 extern unsigned int DAT_010eff44;
 extern void* DAT_0109b220;
-void operator delete(void* pvObject, unsigned int uiSize);
+void operator delete(void* pvObject, size_t uiSize);
 
 struct ShaderObj
 {

@@ -838,7 +838,7 @@ struct FUN_007faa20
 };
 struct Accum
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Accum(int, unsigned int, unsigned int);
     void SetEnabled(bool);

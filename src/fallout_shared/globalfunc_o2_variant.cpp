@@ -1922,7 +1922,7 @@ extern int DAT_0101ffcc;
 class TESObjectDoorController
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -1970,7 +1970,7 @@ class AllocatedNode
     int unk08;
     int unk0c;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -2141,7 +2141,7 @@ extern MemoryManager g_kMemoryManager;
 class __declspec(align(16)) Aligned7100
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         unsigned char* pucMem = (unsigned char*)g_kMemoryManager.Allocate(uiSize + 0x10);
         unsigned char ucOffset = (unsigned char)(0x10 - ((unsigned int)pucMem & 0xf));
@@ -2569,7 +2569,7 @@ struct Node6b3c0
     Node6b3c0* m_next;
     Node6b3c0(const RefPtr6b3c0& ptr) : m_ptr(ptr), m_next(0)
     {}
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager6b3c0.Allocate(size);
     }

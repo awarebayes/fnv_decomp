@@ -415,7 +415,7 @@ int OwnerClass::CallHelperWithDefaults(int first, int second)
 void __cdecl hkArrayUtil__reserve(hkMemoryAllocator& mem, void* array, int numElem, int sizeElem);
 void __cdecl hkMemUtil_memMove(void* pvDst, const void* pvSrc, int iNumBytes);
 
-inline void* __cdecl operator new(unsigned int, void* pvWhere)
+inline void* __cdecl operator new(size_t, void* pvWhere)
 {
     return pvWhere;
 }
@@ -678,7 +678,7 @@ struct DB85E0Impl
 {
     ~DB85E0Impl();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         fnvc_adapt::hkMemoryRouter_getInstance().heap().blockFree(p, nbytes);
     }
@@ -753,7 +753,7 @@ extern "C" hkMemoryRouter& __cdecl hkMemoryRouter_getInstance();
 class DBA1E0ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         DBA1E0ReferencedObject* b =
             static_cast<DBA1E0ReferencedObject*>(fnvc_adapt::hkMemoryRouter_getInstance().heap().blockAlloc(nbytes));

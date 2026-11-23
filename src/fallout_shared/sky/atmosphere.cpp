@@ -38,7 +38,7 @@ void __cdecl AtmoFree(void* pvMem);
 struct AtmosphereModelNode : NiNode
 {
     AtmosphereModelNode(unsigned short iChildren);
-    static void operator delete(void* pvMem, unsigned int)
+    static void operator delete(void* pvMem, size_t)
     {
         AtmoFree(pvMem);
     }

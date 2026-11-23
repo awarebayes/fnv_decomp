@@ -8,7 +8,7 @@ class NiTexture;
 template <class T> inline NiPointer<T>::~NiPointer()
 {
 }
-inline void* operator new[](unsigned int size, MemoryManager& memoryManager)
+inline void* operator new[](size_t size, MemoryManager& memoryManager)
 {
     return memoryManager.Allocate(size);
 }

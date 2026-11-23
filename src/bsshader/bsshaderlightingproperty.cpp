@@ -913,7 +913,7 @@ struct _Helper_00ba8b10
 
 struct FUN_00ba8e50
 {
-    static void* operator new(unsigned int size) { return BSFadeNode::operator new(size); }
+    static void* operator new(size_t size) { return BSFadeNode::operator new(size); }
     FUN_00ba8e50();
     virtual void vf();
     char p0[0x18];
@@ -964,7 +964,7 @@ NewObj* __fastcall BSShaderLightingProperty_CreateClone(_Helper_00ba8b10* self, 
 
 struct FUN_00b71720
 {
-    static void* operator new(unsigned int size) { return BSFadeNode::operator new(size); }
+    static void* operator new(size_t size) { return BSFadeNode::operator new(size); }
     FUN_00b71720();
     virtual void vf();
     char p0[0x18];
@@ -2016,8 +2016,8 @@ extern NiRTTI DAT_01202560;
 class S00b700d0_Alpha : public NiProperty
 {
   public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     S00b700d0_Alpha();
     void NiAlphaProperty_SetAlphaBlending(bool);
     void FUN_004393c0(bool);

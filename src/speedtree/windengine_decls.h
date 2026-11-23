@@ -16,7 +16,7 @@ class Matrix4f
     Matrix4f();
     void InitializeIdentity();
 
-    static __forceinline void* operator new[](unsigned int size)
+    static __forceinline void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

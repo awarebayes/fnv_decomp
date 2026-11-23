@@ -855,7 +855,7 @@ struct FUN_00a5a390_shell {
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, unsigned int);
+void __cdecl operator delete(void* p, size_t);
 // Calls DestroyFogProperty, then deletes this with size 0x1c if bDel is set, and returns this.
 // @fnv 0x00a950f0
 FUN_00a5a390_shell* FUN_00a5a390_shell::FUN_00a950f0(bool bDel)
@@ -1739,7 +1739,7 @@ struct S_a91120_Blk {
     unsigned char* unk00;
     unsigned int unk04;
     S_a91120_Blk* unk08;
-    static void* operator new(unsigned int size) { return DAT_011f6238.Game_DoHeapAlloc(size); }
+    static void* operator new(size_t size) { return DAT_011f6238.Game_DoHeapAlloc(size); }
     S_a91120_Blk(unsigned int n) throw() {
         unk04 = n;
         unk08 = 0;
@@ -2334,7 +2334,7 @@ void __cdecl NiParallelUpdateTaskManager_EndUpdate()
 
 class BA87920Base {
 public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA87920Base() throw();
     virtual ~BA87920Base();
@@ -2980,7 +2980,7 @@ struct FUN_00a5e3a0_Helper { void* Game_DoHeapAlloc(unsigned int); };
 struct PixelRow4 {
     unsigned char rgba[4];
     PixelRow4() {}
-    static void* operator new[](unsigned int size) {
+    static void* operator new[](size_t size) {
         return ((FUN_00a5e3a0_Helper*)&DAT_011f6238)->Game_DoHeapAlloc(size);
     }
 };

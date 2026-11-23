@@ -19,7 +19,7 @@ class ImageSpaceTexture
     NiPointer<NiObject> pTexture;                          // +0x4, 4 bytes
     NiTexturingProperty::FilterMode m_eTextureFilterMode;  // +0x8, 4 bytes
     NiTexturingProperty::ClampMode m_eClampMode;           // +0xC, 4 bytes
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

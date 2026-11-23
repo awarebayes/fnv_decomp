@@ -180,7 +180,7 @@ extern A8b110Allocator DAT_011f6238;
 
 struct A8b110Elem
 {
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return DAT_011f6238.Game_DoHeapAlloc(bytes);
     }
@@ -334,7 +334,7 @@ struct MemoryBlock
     unsigned int value;
     MemoryBlock()
     {}
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return reinterpret_cast<MMExtra&>(g_memoryManager)._Allocate(size);
     }
@@ -621,7 +621,7 @@ struct MMAllocInterface
 struct ArrayElement
 {
     unsigned int value;
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return ((MMAllocInterface*)&g_memoryManager)->Game_DoHeapAlloc(bytes);
     }

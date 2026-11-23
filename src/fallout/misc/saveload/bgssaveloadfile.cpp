@@ -23,7 +23,7 @@ struct SaveLoadManagerFileOperations : public BGSSaveLoadManager
 };
 extern int DAT_010a2480;
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 void __cdecl ReadSaveFileHeader(void*, void*);
 NiTexture* __cdecl BGSSaveLoadHeader_LoadHeaderScreenshot(SaveLoadHeader*, unsigned int, unsigned int, unsigned int);

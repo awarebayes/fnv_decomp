@@ -58,7 +58,7 @@ union __declspec(align(16)) hkAabbQ
 
 // These Havok constructors are inline in the original unit.
 
-inline void* hkpVehicleRayCastWheelCollide::operator new(unsigned int nbytes)
+inline void* hkpVehicleRayCastWheelCollide::operator new(size_t nbytes)
 {
     hkpVehicleRayCastWheelCollide* b = static_cast<hkpVehicleRayCastWheelCollide*>(hkMemoryRouter_getInstance().heap().blockAlloc(nbytes));
     b->m_memSizeAndFlags = (unsigned short)nbytes;

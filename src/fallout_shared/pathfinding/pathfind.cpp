@@ -394,7 +394,7 @@ struct ParentSpaceNode
 };
 typedef char _sizecheck_ParentSpaceNode[1];
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 struct ArrHelper
 {
     void ConstructParentSpaceNodes(ParentSpaceNode* first, unsigned int count);
@@ -1699,7 +1699,7 @@ struct FUN_006f4d00
 {
     unsigned int m00, m04, m08, m0c, m10, m14, m18, m1c, m20, m24, m28, m2c;
     FUN_006f4d00(const PathingLocation& aLocation);
-    static __forceinline void* operator new(unsigned int bytes, void* heap)
+    static __forceinline void* operator new(size_t bytes, void* heap)
     {
         return Memory_ReturnPlacementAddress(bytes, heap);
     }
@@ -5344,8 +5344,8 @@ struct PathNodeHolder
 {
     void IncRefCount();
     void DecRefCount();
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     PathNodeHolder(NiPoint3 pos, float radius);
     unsigned int GetCount();
     char GetValue(unsigned int idx);
@@ -9125,7 +9125,7 @@ bool __cdecl BuildOptimalPathSolution(PathingRequestOptimalLocation* request, Pa
 }
 }  // namespace fnv_006d23d0
 
-void* operator new(unsigned int uiSize, void* pvMem);
+void* operator new(size_t uiSize, void* pvMem);
 void operator delete(void* pvMem, void* pvPlace);
 
 struct FUN_006a0480

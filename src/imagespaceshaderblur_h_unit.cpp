@@ -206,7 +206,7 @@ struct BlurShaderBase : BSShader
 struct FUN_00b8e760 : BlurShaderBase
 {
     virtual ~FUN_00b8e760();
-    static void operator delete(void* object, unsigned int size);
+    static void operator delete(void* object, size_t size);
 };
 
 // Destructor that sets effectVft to the address of DAT_010b1960.
@@ -245,7 +245,7 @@ extern int DAT_010b1ae8;
 struct FUN_00b8e900 : BlurShaderBase
 {
     virtual ~FUN_00b8e900();
-    static void operator delete(void* object, unsigned int size);
+    static void operator delete(void* object, size_t size);
 };
 
 // Destructor that sets effectVft to the address of DAT_010b1ae8.

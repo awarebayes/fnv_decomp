@@ -82,7 +82,7 @@ struct FUN_00a72590_Class
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 void* NiPointLight_CreateObject();
 extern void _NiFree(void*);
@@ -1295,7 +1295,7 @@ struct NodeA616
     NodeA616(EntryA616* entry, NodeA616* next) : m_entry(entry), m_next(next)
     {}
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&_g_memoryManager)->Game_DoHeapAlloc(uiSize);
     }
@@ -1642,7 +1642,7 @@ class FUN_007613f0
     FUN_007613f0() throw();
     ~FUN_007613f0() throw()
     {}
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&DAT_011f6238)->Game_DoHeapAlloc(uiSize);
     }

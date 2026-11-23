@@ -1835,7 +1835,7 @@ struct FUN_006e3850
     unsigned int capacity;
     unsigned int count;
     unsigned int flags;
-    static __forceinline void* __cdecl operator new(unsigned int bytes)
+    static __forceinline void* __cdecl operator new(size_t bytes)
     {
         return Object_DispatchCommandFour(bytes);
     }
@@ -2079,7 +2079,7 @@ void Package8020::SpectatorPackage_Update(Actor* pOwner)
     FUN_004534f0(pOwner);
 }
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*, void*);
 
 struct Elem

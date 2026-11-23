@@ -471,7 +471,7 @@ void S00cfac20_Grp::hkpSimpleWorldRayCaster_castRayGroup(S00cfac20_Builder* broa
 
 typedef unsigned short hkUint16;
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

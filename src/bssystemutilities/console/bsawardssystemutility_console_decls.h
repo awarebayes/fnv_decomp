@@ -22,7 +22,7 @@ class DownloadableContentManager
 
     DownloadableContentManager();
     static DownloadableContentManager& BSDLCSystemUtility_QInstance();
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -44,7 +44,7 @@ class IdleSystem
     static void Startup();
     static IdleSystem& GetRandomGenerator();
     static bool Initialize();
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

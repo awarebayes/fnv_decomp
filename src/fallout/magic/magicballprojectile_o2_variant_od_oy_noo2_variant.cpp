@@ -99,7 +99,7 @@ struct xAVOwner
 float xFUN_00646660(float, float, int);
 struct xNiAlloc
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct xShape : xNiAlloc
@@ -186,7 +186,7 @@ struct xCharCtl
     virtual void v50();
     virtual void v51();
     virtual void FUN_d0(int);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return xFUN_00553300(n);
     }

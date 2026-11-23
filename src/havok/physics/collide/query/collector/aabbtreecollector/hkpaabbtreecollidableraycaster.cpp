@@ -207,7 +207,7 @@ struct S_00d9a270_Base
 {
     virtual ~S_00d9a270_Base()
     {}
-    void operator delete(void* p, unsigned int nbytes)
+    void operator delete(void* p, size_t nbytes)
     {
         S_00d9a270_Router::hkMemoryRouter_getInstance()->heap().ReleaseBlock(p, nbytes);
     }

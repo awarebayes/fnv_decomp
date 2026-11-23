@@ -299,7 +299,7 @@ struct FNVArray {
 struct FNVBuffers {
     FNVArray spare;
     FNVArray elements;
-    static void* operator new(unsigned int bytes) {
+    static void* operator new(size_t bytes) {
         return hkMemoryRouter_getInstance()->GetAllocator()->Allocate(bytes);
     }
 };
@@ -1583,7 +1583,7 @@ struct S_00caf4d0_Stack {
 static __forceinline hkMemoryRouter* GetRouter37() throw() { return reinterpret_cast<hkMemoryRouter*>(hkMemoryRouter_getInstance()); }
 void ResizeAudioStream(S_00caf4d0_Heap& mem, void* array, int sizeElem) throw();
 
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 
 
@@ -3008,7 +3008,7 @@ typedef S00cae900_TraitBool<false> S00cae900_TypeIsClass;
 template <typename T> struct S00cae900_IsPodType : public S00cae900_TraitBool<false> {};
 template <> struct S00cae900_IsPodType<hkVector4> : public S00cae900_TraitBool<true> {};
 struct S00cae900_PlacementNewArg;
-inline void* operator new(unsigned int, S00cae900_PlacementNewArg* p) { return p; }
+inline void* operator new(size_t, S00cae900_PlacementNewArg* p) { return p; }
 template <typename T> __forceinline void S00cae900_construct(T* t, int n, S00cae900_TypeIsPod) {}
 template <typename T> __forceinline void S00cae900_construct(T* t, int n, S00cae900_TypeIsClass) {
     for (int i = 0; i < n; ++i) {

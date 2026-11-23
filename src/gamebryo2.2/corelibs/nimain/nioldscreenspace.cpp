@@ -529,7 +529,7 @@ struct ObjA8F260 : NiRefObject
         *(volatile int*)&m_10 = 0;
     }
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -735,7 +735,7 @@ struct SpawnedObj_a905c0
 
     void FUN_00a5d3a0();
     SpawnedObj_a905c0() throw();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -1085,7 +1085,7 @@ class NiPSysBaseA90
     NiPSysBaseA90() throw();
     virtual ~NiPSysBaseA90();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04, unk08, unk0C, unk10, unk14, unk18, unk1C, unk20;

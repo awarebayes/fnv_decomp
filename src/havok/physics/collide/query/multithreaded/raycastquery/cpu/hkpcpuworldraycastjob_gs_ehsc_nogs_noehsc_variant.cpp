@@ -202,7 +202,7 @@ struct Spawned
     unsigned int m_10;
     unsigned int m_14;
     unsigned int m_18;
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }

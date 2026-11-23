@@ -261,7 +261,7 @@ int hkpMeshWeldingUtility_calcBitcodeForTriangleEdge(Iface* self, void* a, void*
 bool* CheckSubQueries(bool* result, void* key, Iface* self);
 void* hkArrayUtil__reserve(void* mem, void* array, int numElem, int sizeElem);
 void hkMemUtil_memMove(void* dst, const void* src, int numBytes);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

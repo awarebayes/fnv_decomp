@@ -387,7 +387,7 @@ hkpRigidBodyInertiaViewer::hkpRigidBodyInertiaViewer(void* contexts) : D671F0Bas
 
 class D67880ReferencedObject {
 public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D67880ReferencedObject* b = static_cast<D67880ReferencedObject*>(routerHeap(hkMemoryRouter::getInstance()).blockAlloc(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -709,7 +709,7 @@ struct FUN_00d67930 {
     short m_sReferenceCount;
 
     FUN_00d67930();
-    static void operator delete(void* p, unsigned int)
+    static void operator delete(void* p, size_t)
     {
         FUN_00d67930* b = static_cast<FUN_00d67930*>(p);
         routerHeap(hkMemoryRouter::getInstance()).blockFree(p, b->m_usMemSizeAndFlags);

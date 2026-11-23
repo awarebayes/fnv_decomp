@@ -34,7 +34,7 @@ void* __thiscall BSPlayerDistanceCheckController::ScalarDeletingDestructor(unsig
 
 struct TESObjectDoorController
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     TESObjectDoorController();
     void* vtable;

@@ -470,7 +470,7 @@ class B5B10ItemCopy
   public:
     B5B10ItemCopy(EffectItem* pkSource);
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return FormHeap_Allocate(uiSize);
     }

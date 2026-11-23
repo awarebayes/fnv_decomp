@@ -260,7 +260,7 @@ bool NiPathInterpolator::RegisterStreamables_00a3dcc0(void* pkStream)
     return true;
 }
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 // @fnv 0x00a3f4b0
 void* __cdecl CreateA51BF0Base()

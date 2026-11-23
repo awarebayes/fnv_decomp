@@ -44,7 +44,7 @@ void CureEffect::Start()
         static_cast<CureEffectTarget*>(GetTarget())->RemoveEffectsByArchetype(eArchetypeID, 0);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // @fnv 0x0080c0f0
 // pdb: CureEffect::Copy | CureEffect.obj | retail, upstream name already matches, high

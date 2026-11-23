@@ -1406,7 +1406,7 @@ bool __thiscall FUN_00862430_cls::HasInvalidComponents(FUN_00862430_vec* pVec)
 class TESTopicInfo;
 template <class T> class NiTMallocInterface;
 namespace fnv_008632a0 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 
@@ -5684,7 +5684,7 @@ struct PixelData
     int unk68;
     int unk6c;
     int unk70;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     PixelData(unsigned int, unsigned int, const PixelFormat&, unsigned int, unsigned int);
     void* NiPixelData_GetPixels(unsigned int, unsigned int);
@@ -7759,7 +7759,7 @@ void __thiscall Host58030::TESSaveLoadGame_SaveGlobalData(int apFile)
 #include "../../include/MEM_CONTEXT.h"
 extern const char DAT_010804c8[];
 extern const char DAT_01080750[];
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern "C" void __cdecl ProgramFlow(const char*);
 
 struct SaveMemory
@@ -9660,7 +9660,7 @@ struct Flame77 : CreatedForm77
     Flame77();
 };
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 enum MEM_CONTEXT;
 

@@ -623,8 +623,8 @@ struct EffectData
     unsigned int unk5c, unk60, unk64, unk68;
     RefValue target;
     unsigned int unk70;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     EffectData();
 };
 struct ShaderSource

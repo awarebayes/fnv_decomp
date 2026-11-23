@@ -585,7 +585,7 @@ struct Host
 {
     void UpdateFields_00c312a0();
     Host* DestroyIfRequested(bool bFree);
-    static void __cdecl operator delete(void*, unsigned int);
+    static void __cdecl operator delete(void*, size_t);
 };
 // Calls FUN_00c312a0, then deletes this (size 0x40) when bFree is set, and returns this.
 // @fnv 0x00c2a090
@@ -751,7 +751,7 @@ class C29E50Base
     C29E50Base() throw();
     virtual ~C29E50Base();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;
@@ -807,7 +807,7 @@ BSFadeNode* CreateParticleFactoryObject()
 
 extern int DAT_010befbc;
 
-void* operator new(unsigned int, void* memory)
+void* operator new(size_t, void* memory)
 {
     return memory;
 }

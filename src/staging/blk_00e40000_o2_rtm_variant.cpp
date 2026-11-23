@@ -2522,7 +2522,7 @@ struct Se5b160_RefObj {
     static Se5b160_Heap& heap() { return reinterpret_cast<Se5b160_Router*>(hkMemoryRouter_getInstance())->heap(); }
     unsigned short m_usAllocationSize;
     unsigned short m_iObjectReferenceCount;
-    static void* operator new(unsigned int nbytes) {
+    static void* operator new(size_t nbytes) {
         Se5b160_RefObj* b = static_cast<Se5b160_RefObj*>(Se5b160_Router::GetMonitorStream().heap().AllocateMemoryBlock(static_cast<int>(nbytes)));
         b->m_usAllocationSize = static_cast<unsigned short>(nbytes);
         return b;

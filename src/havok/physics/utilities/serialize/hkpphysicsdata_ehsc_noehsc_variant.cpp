@@ -167,7 +167,7 @@ extern void __cdecl ResizeAudioStream(void*, void*, int);
 struct D4C2Place
 {
 };
-inline void* operator new(unsigned int, void* p, D4C2Place)
+inline void* operator new(size_t, void* p, D4C2Place)
 {
     __assume(p != 0);
     return p;
@@ -309,7 +309,7 @@ void probeCaller();
 struct SplitPlace
 {
 };
-inline void* operator new(unsigned int, void* p, SplitPlace)
+inline void* operator new(size_t, void* p, SplitPlace)
 {
     return p;
 }
@@ -492,7 +492,7 @@ struct SplitSystem : SplitRef
     SplitName name;
     unsigned long userData;
     SplitBool active;
-    static __forceinline void* operator new(unsigned int bytes)
+    static __forceinline void* operator new(size_t bytes)
     {
         SplitRef* p = (SplitRef*)((SplitRouter*)hkMemoryRouter_getInstance())->allocator().alloc(bytes);
         p->m_usMemSizeAndFlags = (unsigned short)bytes;

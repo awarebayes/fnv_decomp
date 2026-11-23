@@ -1390,7 +1390,7 @@ class DD91A0ReferencedObject
     }
     virtual void vfunc00();
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         DD91A0ReferencedObject* b =
             static_cast<DD91A0ReferencedObject*>(heap(hkMemoryRouter_getInstance()).AllocateMemoryBlock(nbytes));
@@ -1454,7 +1454,7 @@ class DDC160ReferencedObject
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         DDC160ReferencedObject* b =
             static_cast<DDC160ReferencedObject*>(heap(hkMemoryRouter_getInstance()).AllocateMemoryBlock(nbytes));
@@ -1938,7 +1938,7 @@ struct hkPairDDFB
 
     hkPairDDFB(void* object, void* key) : m_object(object), m_key(key)
     {}
-    static void* operator new(unsigned int, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

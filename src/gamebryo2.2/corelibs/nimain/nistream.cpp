@@ -487,7 +487,7 @@ hkMemoryRouter* __cdecl GetMemoryRouterC68();
 class hkFreeListMemorySystem : public hkMemorySystem
 {
   public:
-    void* operator new(unsigned int, void* pvWhere)
+    void* operator new(size_t, void* pvWhere)
     {
         return pvWhere;
     }
@@ -553,7 +553,7 @@ extern MemoryManager g_kMemoryManagerC68;
 class bhkSingletonC68
 {
   public:
-    void* operator new(unsigned int uiSize)
+    void* operator new(size_t uiSize)
     {
         return g_kMemoryManagerC68.Allocate(uiSize);
     }
@@ -3657,7 +3657,7 @@ extern MemoryManager g_memoryManager;
 class A660A0Object
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

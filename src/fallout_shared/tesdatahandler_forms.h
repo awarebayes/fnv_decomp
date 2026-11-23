@@ -2,7 +2,7 @@
 #ifndef FNV_TESDATAHANDLER_FORMS_H
 #define FNV_TESDATAHANDLER_FORMS_H
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 class NiNode;
 #include "../../include/ENUM_FORM_ID.h"

@@ -5246,7 +5246,7 @@ struct InsertList
     void BSSimpleList_ActiveEffect_Insert(FUN_007a62e0*, InsertCompare);
     void FUN_00905820(FUN_007a62e0* const&);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 extern const char DAT_0106f860[];
 extern int __cdecl Tile_AddUserTrait(const char*, int);

@@ -58,7 +58,7 @@ class FUN_00622c80
 {
   public:
     unsigned char data[0x3b0];
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void*);
     FUN_00622c80(float value, unsigned int id);
 };

@@ -11,7 +11,7 @@ public:
     ExtraHealth(float health);
     ExtraHealth(void* apCaster, void* apSpell, void* apEffect);
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     static void operator delete(void* pointer);
 
     float fHealthPercent;

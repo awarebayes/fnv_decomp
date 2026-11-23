@@ -513,7 +513,7 @@ struct FUN_00df71d0 : S_00df71d0_B0, S_00df71d0_B1, S_00df71d0_B2, S_00df71d0_B3
 // pdb: hkCpuWorldLinearCastCollector::`scalar deleting destructor' | hkpCpuWorldLinearCastJob.obj | retail, vtable slot, high
     virtual ~FUN_00df71d0()
     {}
-    static void operator delete(void* p, unsigned int n)
+    static void operator delete(void* p, size_t n)
     {
         hkMemoryRouter_getInstance()->heap().ReleaseBlock(p, n);
     }

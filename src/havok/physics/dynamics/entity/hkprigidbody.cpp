@@ -988,7 +988,7 @@ struct CA92A0Element
     int unk08;
     int unk0C;
 
-    static void* operator new(unsigned int, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

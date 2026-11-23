@@ -1265,7 +1265,7 @@ struct FUN_00e065f0
     void nullsub_26();
     FUN_00e065f0(unsigned int size) throw();
     void hkpMoppCodeGenerator_dtor();
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         FUN_00e065f0* p = static_cast<FUN_00e065f0*>(((BvAllocator*)hkMemoryRouter::getInstance().m_heap)->AllocateMemoryBlock(n));
         p->m_usMemSizeAndFlags = (unsigned short)n;
@@ -1383,7 +1383,7 @@ struct BvBuilder
     void hkpMoppDefaultAssembler_assembleNonTerminalCommand(BvNode* currentNode, FUN_00e095d0_cls* parentInfo, FUN_00e095d0_cls* currentInfo, BvRange* rescaleCommandInfo);
     void hkpMoppDefaultAssembler_assembleSubNodeIntoChunks(BvNode* currentNode, FUN_00e095d0_cls* parentInfo, FUN_00e095d0_cls* currentInfo, int chunkId, hkArrayBase<int>* terminalsOut);
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

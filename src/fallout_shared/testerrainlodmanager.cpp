@@ -292,8 +292,8 @@ struct TerrainNode
     unsigned int unka4;
     unsigned int unka8;
     TerrainNode(unsigned short);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void AssignFixedString(FixedName*);
     void FUN_00b5d9f0(TerrainNode*, int);
     void NiAVObject_Update(UpdateData*);

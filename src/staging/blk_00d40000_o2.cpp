@@ -1278,7 +1278,7 @@ class D4BF10Object
   public:
     D4BF10Object(D4BF10FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -1545,7 +1545,7 @@ class SpawnedObject
     unsigned int unk4C;
     unsigned int unk50;
     unsigned int unk54;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     SpawnedObject();
 };
 
@@ -1559,7 +1559,7 @@ class FUN_00d50140_cls
     int EnsureSpawnedObject();
 };
 
-void* SpawnedObject::operator new(unsigned int size)
+void* SpawnedObject::operator new(size_t size)
 {
     hkMemoryRouter* h = hkMemoryRouter_getInstance();
     void* p = reinterpret_cast<hkMemoryAllocator*>(h->m_heap)->blockAlloc(size);
@@ -1591,7 +1591,7 @@ struct DataBase
 {
     DataBase();
     virtual ~DataBase();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3143,7 +3143,7 @@ void __cdecl hkString_memCpy16_64(int* aiDest, const int* aiSrc)
 struct PlaceTag
 {
 };
-inline void* operator new(unsigned int, void* p, PlaceTag)
+inline void* operator new(size_t, void* p, PlaceTag)
 {
     __assume(p != 0);
     return p;
@@ -4698,7 +4698,7 @@ class FUN_00d50c90
     void* data4c;
     int size50, flags54;
     FUN_00d50c90();
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         FUN_00d50c90* p = (FUN_00d50c90*)hkRouterD539::hkMemoryRouter_getInstance().heap().blockAlloc(bytes);
         p->sizeAndFlags = (unsigned short)bytes;
@@ -4784,7 +4784,7 @@ D502D0_RefData* D502D0_Owner::EnsureReference(bool* created)
     return m_pData;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -4861,7 +4861,7 @@ struct FUN_00dd0530
         size = (unsigned short)n;
         return this;
     }
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         hkMemoryRouter* h = hkMemoryRouter_getInstance();
         return ((FUN_00dd0530*)((hkMemoryAllocator*)h->m_heap)->blockAlloc(n))->SetSizeAndGrow(n);

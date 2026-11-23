@@ -44,7 +44,7 @@ class CollisionObject80F
 class Shape80F
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Shape80F(float afRadius, int abBS);
     int unk00;
@@ -199,7 +199,7 @@ class Controller80F
     virtual void v0c8();
     virtual void v0cc();
     virtual void SetState(int iState);
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Controller80F(ControllerInfo80F& kInfo, BallProjectilePhysicsView* pkActor);
     void SetGravity(float afGravity);
@@ -1259,7 +1259,7 @@ class CollisionObject80F
 class Shape80F
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Shape80F(float afRadius, int abBS);
     int unk00;
@@ -1414,7 +1414,7 @@ class Controller80F
     virtual void v0c8();
     virtual void v0cc();
     virtual void SetState(int iState);
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Controller80F(ControllerInfo80F& kInfo, BoltProjectilePhysicsView* pkActor);
     void SetGravity(float afGravity);
@@ -2531,7 +2531,7 @@ struct ColorData
     int unk0C;
     int unk10;
     ColorData(float, int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct Resource
@@ -3292,7 +3292,7 @@ struct Visual
     int unk658;
     int unk65C;
     Visual(FxState*, Actor*);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void bhkCharacterController_SetFallTime(float);
     void bhkCharacterController_SetQuickSimulate(bool);
@@ -3314,7 +3314,7 @@ struct RenderGlobals
 extern RenderGlobals* DAT_011de45c;
 extern float DAT_01015f5c;
 extern double DAT_010240b0;
-extern void* __cdecl operator new(unsigned int);
+extern void* __cdecl operator new(size_t);
 extern void __cdecl operator delete(void*);
 extern Resource* __cdecl FindFirstCollisionObject(void*);
 extern int __cdecl bhkCollisionFilter_GetNewSystemGroup();

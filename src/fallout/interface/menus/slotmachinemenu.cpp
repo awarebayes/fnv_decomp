@@ -551,7 +551,7 @@ SlotMachineMenu::~SlotMachineMenu()
 }
 
 namespace fnv_007c0a40 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_00733f50
 {
     void* owner;

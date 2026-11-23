@@ -699,7 +699,7 @@ void __thiscall BGSLoadFormBuffer::SetSkipForm_00848d90(bool abSet)
         iFlags &= ~1;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // The shared game has no ordinary destructor declaration. This API-only view
 // preserves its destruction calls without duplicating the game layout.
 struct SaveLoadGameMemberDestruction
@@ -2091,7 +2091,7 @@ extern GlobalTask* DAT_01202d98;
 extern PlayerMethods* DAT_011dea3c;
 extern FinalizeMethods DAT_011de7b8;
 extern const char DAT_0107f048[], DAT_0107efd0[], DAT_0107efb0[];
-extern void* __cdecl operator new(unsigned int);
+extern void* __cdecl operator new(size_t);
 void __cdecl FUN_0084dff0(FUN_0084ded0*, const char*, ...);
 void __cdecl ReadFileIntoBuffer(SaveFile*, unsigned char*, unsigned int);
 void __cdecl StartMenu_SetMissingContentFlag(unsigned int);

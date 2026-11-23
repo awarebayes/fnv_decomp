@@ -139,7 +139,7 @@ struct TaskBlock
         return i >= m_uiCount ? 0 : &m_pkTasks[i];
     }
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&g_memoryManager)->Game_DoHeapAlloc(uiSize);
     }
@@ -154,7 +154,7 @@ extern S_00a56ce0_HeapX DAT_011f6238;
 extern "C" void* __cdecl FUN_00aa1420(unsigned int n);
 
 // Global placement allocation preserves the heap path for a zero-length task array.
-inline void* operator new[](size_t size, unsigned int count)
+inline void* operator new[](size_t size, size_t count)
 {
     if (count == 0)
         return DAT_011f6238.Game_DoHeapAlloc(4);

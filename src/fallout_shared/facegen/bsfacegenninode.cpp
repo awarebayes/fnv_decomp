@@ -637,8 +637,8 @@ struct CloningProcess
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 struct FUN_006628c0 : A51BF0Base

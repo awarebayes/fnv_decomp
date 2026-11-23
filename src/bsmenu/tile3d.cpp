@@ -415,7 +415,7 @@ struct Tile__Extra : NiExtraData
         pNode = node;
         SetName("Tileptr");
     }
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 
 NiNode* __fastcall GetTileNiNode(Tile* tile);

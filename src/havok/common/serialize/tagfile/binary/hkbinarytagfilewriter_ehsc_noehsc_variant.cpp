@@ -704,7 +704,7 @@ struct DataObj
     int GetObjectKind() const;
     ObjHandle GetObjectHandle() const;
     bool IsStreamValid(const DataObj& src) const;
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
 };
 struct DataWorld
 {
@@ -778,7 +778,7 @@ template <typename T> struct PtrArrayLocalForm
         constructWithCopy(m_data + m_iElementCount++, 1, t);
     }
 };
-__forceinline void* DataObj::operator new(unsigned int n)
+__forceinline void* DataObj::operator new(size_t n)
 {
     return router().block().AllocateMemoryBlock(n);
 }

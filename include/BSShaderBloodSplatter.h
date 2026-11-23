@@ -20,7 +20,7 @@ public:
 
     BSShaderBloodSplatter();
     ~BSShaderBloodSplatter();
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 
     BSShader* CreateShader();
     void LoadShaders();

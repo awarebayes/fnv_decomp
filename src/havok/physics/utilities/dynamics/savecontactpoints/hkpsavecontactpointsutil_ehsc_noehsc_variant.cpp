@@ -1628,14 +1628,14 @@ struct S_00dcdd80_RefObj
     void* vtbl;
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         S_00dcdd80_RefObj* b =
             static_cast<S_00dcdd80_RefObj*>(S_00dcdd80_Router::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return b;
     }
-    static void operator delete(void*, unsigned int)
+    static void operator delete(void*, size_t)
     {}
     void FUN_00c905b0();
 };

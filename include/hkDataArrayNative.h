@@ -9,7 +9,7 @@ class hkDataArrayNative : public hkDataArrayImpl
 {
 public:
     hkDataArrayNative(int world, void* address, int arraySize, int elementStride, int stype, int klass, int cArrayCount) throw();
-    void* operator new(unsigned int nbytes);
+    void* operator new(size_t nbytes);
 
     virtual void vf00();
     virtual void vf01();

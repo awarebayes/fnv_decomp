@@ -4,8 +4,8 @@
 // to their real unit once identified.
 
 
-void* __cdecl operator new(unsigned int uiSize);
-void* __cdecl operator new[](unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
+void* __cdecl operator new[](size_t uiSize);
 void __cdecl operator delete(void* pvMem);
 void __cdecl operator delete[](void* pvMem);
 
@@ -73,8 +73,8 @@ class C4E7770Setting
 class C4E7770TriShapeData
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
 
     C4E7770TriShapeData(unsigned short usVertices, C4E7770Point3* pkVertex, C4E7770Point3* pkNormal,
                         C4E7770ColorA* pkColor, C4E7770Point2* pkTexture, unsigned short usNumTextureSets,

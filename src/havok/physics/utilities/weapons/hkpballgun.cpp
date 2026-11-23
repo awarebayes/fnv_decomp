@@ -37,7 +37,7 @@ template <class T> class hkQueue
     int m_pTail;
     int m_iNodeCount;
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return hkMemoryRouter::getInstance().heap().blockAlloc(uiSize);
     }

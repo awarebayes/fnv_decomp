@@ -310,7 +310,7 @@ struct Motion
     void FUN_00d1eaf0(const NiPoint3& impulse);
 };
 extern "C" __m128 _mm_setr_ps(float, float, float, float);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

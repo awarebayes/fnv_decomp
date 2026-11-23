@@ -267,7 +267,7 @@ template <typename T> __forceinline void hkArrayBase<T>::GrowArrayCapacity(hkMem
     }
 }
 
-inline void* operator new(unsigned int, void*);
+inline void* operator new(size_t, void*);
 
 template <typename T> __forceinline void hkArrayBase<T>::_reserveExactly(hkMemoryAllocator& alloc, int n)
 {
@@ -344,7 +344,7 @@ void FUN_00d56070_class::SetShortAtKey(int key, short weldingInfo)
 }
 
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

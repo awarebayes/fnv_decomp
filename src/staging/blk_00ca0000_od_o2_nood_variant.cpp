@@ -1120,7 +1120,7 @@ struct F7_Shape
     hkVector4 unk10;
     hkVector4 v20, v30, v40, v50, v60, v70, v80, v90, va0;
     F7_Shape();
-    static void* operator new(unsigned int amount)
+    static void* operator new(size_t amount)
     {
         void* r = (&hkMemoryRouter::getInstance())->heap().blockAlloc(amount);
         ((F7_Shape*)r)->size = (unsigned short)amount;

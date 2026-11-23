@@ -138,14 +138,14 @@ struct LegacyRef
     LegacyController* pointer;
     ~LegacyRef() throw()
     {}
-    static void* operator new[](unsigned int bytes, ReferenceAllocation*& allocation) throw();
+    static void* operator new[](size_t bytes, ReferenceAllocation*& allocation) throw();
 };
 struct ReferenceAllocation
 {
     unsigned int count;
     LegacyRef elements[1];
 };
-__forceinline void* LegacyRef::operator new[](unsigned int bytes, ReferenceAllocation*& allocation) throw()
+__forceinline void* LegacyRef::operator new[](size_t bytes, ReferenceAllocation*& allocation) throw()
 {
     allocation = (ReferenceAllocation*)_g_memoryManager.Allocate(bytes);
     return allocation;

@@ -42,7 +42,7 @@ class ImageSpaceShaderParam : public ImageSpaceEffectParam
   public:
     char data[0x88];
     ImageSpaceShaderParam();
-    static __forceinline void* operator new(unsigned int n)
+    static __forceinline void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

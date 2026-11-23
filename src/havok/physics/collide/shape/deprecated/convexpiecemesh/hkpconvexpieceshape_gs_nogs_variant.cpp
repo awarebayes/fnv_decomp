@@ -84,7 +84,7 @@ extern "C" void __debugbreak();
 extern const unsigned int DAT_01017d10[4];
 void __cdecl ResizeAudioStream(void* mem, void* array, int sizeElem);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

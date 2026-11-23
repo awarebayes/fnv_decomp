@@ -25,7 +25,7 @@
 // Supporting declarations formerly supplied by ninode_packet_decls.h.
 
 extern MemoryManager g_memoryManager;
-inline void* operator new(unsigned int, void* memory)
+inline void* operator new(size_t, void* memory)
 {
     return memory;
 }
@@ -1547,7 +1547,7 @@ class BA5EFA0ObjectArray : public BA5EFA0ChildArray
 class BA5EFA0AVObject
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA5EFA0AVObject() throw();
     virtual ~BA5EFA0AVObject();

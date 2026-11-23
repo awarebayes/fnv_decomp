@@ -263,7 +263,7 @@ struct DLCEntry_00af2940
 extern DLCEntry_00af2940 DAT_011accb8[];
 struct FUN_00b008b0
 {
-    __forceinline static void* operator new(unsigned int s)
+    __forceinline static void* operator new(size_t s)
     {
         return g_memoryManager.Allocate(s);
     }

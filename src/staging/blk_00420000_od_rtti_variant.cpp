@@ -617,7 +617,7 @@ struct FUN_00420c10_Class : public FUN_004207e0Class
 {
     void ExtraDataList_AddRoomLinkedRoomRef(int apRef);
 };
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 struct FUN_0042cca0 : public BSExtraData
 {
     void* vtbl;
@@ -743,7 +743,7 @@ struct FUN_0042e060_class
     void __thiscall BaseExtraList_AddExtra(void* extra);
     void __thiscall ExtraDataList_SetTalkingActorExtra(unsigned int apTalkAct, unsigned int apRef);
 };
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 struct B42FA60Entry
 {
@@ -770,7 +770,7 @@ class FUN_0042fe80_Map : public B42FE80MapBase
     virtual ~FUN_0042fe80_Map();
     void RemoveAll();
 };
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*, void*);
 struct FUN_004300a0
 {
@@ -1766,7 +1766,7 @@ struct AnimMatrix3
 };
 struct AnimMemObject
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 struct AnimSource

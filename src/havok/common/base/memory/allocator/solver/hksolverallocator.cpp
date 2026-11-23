@@ -412,7 +412,7 @@ char* hkBlockAllocatorD5E9::Allocate(int* reqNumInOut) throw()
 }
 }  // namespace fnv_00d5e9b0
 
-inline void* operator new(unsigned int, void* ptr)
+inline void* operator new(size_t, void* ptr)
 {
     return ptr;
 }

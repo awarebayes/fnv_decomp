@@ -825,7 +825,7 @@ struct FUN_00458e20_shell : Calendar
 {
     void FUN_00458e20(NiAVObject*, float);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct G2
 {
     int** _ref_006815c0();

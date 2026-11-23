@@ -32,7 +32,7 @@ void __fastcall Object_UpdateFields_00ca3560(int** self, int)
 class CA34C0Object
 {
   public:
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     static void __cdecl operator delete(void* p);
 
     CA34C0Object();
@@ -114,7 +114,7 @@ Special* Special::FUN_00ca2aa0(unsigned int flags)
 
 #include <xmmintrin.h>
 #include <string.h>
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -481,7 +481,7 @@ static __forceinline void resizeBones(HavokArray<BoneName>& bones, int count)
     bones.size = count;
 }
 typedef hkReferencedObject RigBase;
-__forceinline void* __cdecl hkaSkeleton::operator new(unsigned int n)
+__forceinline void* __cdecl hkaSkeleton::operator new(size_t n)
 {
     RigBase* memory = (RigBase*)((MemoryAllocator&)hkMemoryRouter_getInstance().heap()).allocate(n);
     memory->m_memSizeAndFlags = (unsigned short)n;
@@ -1207,7 +1207,7 @@ struct Item
     unsigned int mask;
     unsigned char active;
     Item();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     void FUN_00ca2020();
 };
 struct AllocatorExtended : Allocator
@@ -1326,7 +1326,7 @@ struct FUN_0056e550
     void* resource;
     FUN_0056e550(SceneRecord*);
     unsigned unk0c, unk10, unk14;
-    static __forceinline void* operator new(unsigned n)
+    static __forceinline void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -1346,7 +1346,7 @@ struct FUN_00d1fa50
     unsigned int unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24;
     FUN_00d1fa50(PayloadArgs*);
     void ResetEntries();
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         hkMemoryRouter* alloc = (&hkMemoryRouter::getInstance());
         FUN_00d1fa50* p = (FUN_00d1fa50*)((Provider*)alloc->m_heap)->vtbl->allocate(((Provider*)alloc->m_heap), size);
@@ -1466,7 +1466,7 @@ __forceinline Item::Item()
     : source(0), collection(0), scene(0), bounding(0), payload(0), unknown14(0), unknown18(0), mask(0x80000000),
       active(1)
 {}
-__forceinline void* Item::operator new(unsigned int n)
+__forceinline void* Item::operator new(size_t n)
 {
     return ((AllocatorExtended*)&DAT_011f6238)->Game_DoHeapAlloc(n);
 }

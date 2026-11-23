@@ -9,7 +9,7 @@
 #include "../../../../include/NiBinaryStream.h"
 #include "../../../../include/NiRTTI.h"
 
-inline void* operator new(unsigned int, void* pointer)
+inline void* operator new(size_t, void* pointer)
 {
     return pointer;
 }

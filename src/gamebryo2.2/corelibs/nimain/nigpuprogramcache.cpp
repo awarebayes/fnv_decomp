@@ -58,7 +58,7 @@ void* SomeClass::FUN_00ee90b0(unsigned int uiFlags)
 }
 
 void __cdecl FUN_00ee9a60();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 struct FUN_00ee9ca0_shell
 {
     void* __thiscall FUN_00ee9ca0(unsigned int flags);
@@ -97,7 +97,7 @@ void* NiTFixedStringMap_NiAVObject___::Destroy(int b)
     return this;
 }
 
-void* __cdecl NiStandardAllocator::operator new(unsigned int n)
+void* __cdecl NiStandardAllocator::operator new(size_t n)
 {
     return g_memoryManager.Game_DoHeapAlloc(n);
 }

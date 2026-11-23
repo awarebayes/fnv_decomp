@@ -381,7 +381,7 @@ void LinkedIndexArray::hkUnionFind_collapseTree(){
 int* values=*entries; int* current=*entries; int* end=current+count;while(current!=end){if(*current>=0){while(values[*current]>=0){*current=values[*current];values=*entries;}}++current;}
 }
 
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 struct IndexBuffer { int* data; int size; unsigned capacityFlags; };
 struct IndexStorage { int* data; };
 hkMemoryRouter* __cdecl hkMemoryRouter_getInstance();
@@ -538,7 +538,7 @@ public:
     D2F240Agent(void* mgr) throw();
     virtual ~D2F240Agent();
 
-    static void* operator new(unsigned int uiSize) {
+    static void* operator new(size_t uiSize) {
         void* p = HeapD2F240(hkMemoryRouter_getInstance()).blockAlloc(uiSize);
         static_cast<D2F240Agent*>(p)->m_usMemSizeAndFlags = (unsigned short)uiSize;
         return p;
@@ -1788,7 +1788,7 @@ class ObjD2C840 : public FUN_00d2c7e0 {
 public:
     virtual ~ObjD2C840();
     ObjD2C840(int count) : FUN_00d2c7e0(count) {}
-    static void* operator new(unsigned int, void* p) throw() { return p; }
+    static void* operator new(size_t, void* p) throw() { return p; }
     static void operator delete(void*, void*) throw() {}
 };
 // Placement-constructs an ObjD2C840 with the given count into the provided storage.
@@ -2701,7 +2701,7 @@ inline void* hkReferencedObject::operator new(std::size_t nbytes)
     object->m_memSizeAndFlags = static_cast<unsigned short>(nbytes);
     return object;
 }
-inline void hkReferencedObject::operator delete(void* p, unsigned int nbytes)
+inline void hkReferencedObject::operator delete(void* p, size_t nbytes)
 {
     hkReferencedObject* object = static_cast<hkReferencedObject*>(p);
     Heap(hkMemoryRouter::getInstance()).blockFree(p, object->m_memSizeAndFlags);
@@ -3513,7 +3513,7 @@ struct FUN_00d36b20
     int unk14;
     int unk18;
 
-    static __forceinline void* operator new(unsigned int size) throw()
+    static __forceinline void* operator new(size_t size) throw()
     {
         hkMemoryRouter* manager = hkMemoryRouter_getInstance();
         FUN_00d36b20* object = static_cast<FUN_00d36b20*>(reinterpret_cast<hkMemoryAllocator*>(manager->m_heap)->blockAlloc(size));
@@ -3555,9 +3555,9 @@ public:
     FUN_00d2dc10() {}
     virtual ~FUN_00d2dc10() {}
 
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
     static void operator delete(void*, void*) {}
-    static void operator delete(void* p, unsigned int nbytes) { HeapD2DC10(hkMemoryRouter_getInstance()).blockFree(p, nbytes); }
+    static void operator delete(void* p, size_t nbytes) { HeapD2DC10(hkMemoryRouter_getInstance()).blockFree(p, nbytes); }
 
     int unk04;
     int unk08;

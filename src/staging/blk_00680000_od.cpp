@@ -1483,7 +1483,7 @@ void* FUN_0069d0c0_class::FUN_0069d0c0(unsigned int flags)
     return this;
 }
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 template <>
 // @fnv 0x0069d0f0
 // pdb: BSSimpleArray<NavMeshBounds::NavMeshBoundsTriangle,1024>::_ConstructItems | NavMeshBounds.obj | debug, object-file run extension, low
@@ -2619,7 +2619,7 @@ int __thiscall FUN_00692000_class::AddData(FUN_00692000_data* source)
     return index;
 }
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct B692320Entry
@@ -2648,7 +2648,7 @@ void B692320Allocator::ConstructEntries(B692320Entry* pkArray, unsigned int Item
         new (&pkArray[i]) B692320Entry;
 }
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 inline void __cdecl operator delete(void*, void*)
 {}
 
@@ -2682,7 +2682,7 @@ void PathLocItemArray::ConstructItems(PathLocItem* items, unsigned int count)
     }
 }
 
-void* operator new(unsigned int size, void* place);
+void* operator new(size_t size, void* place);
 void operator delete(void* object, void* place);
 
 struct PairCell
@@ -2848,11 +2848,11 @@ struct Obj_b9971
     int m_08;
     int m_0c;
     Obj_b9971();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FormHeap_Allocate(size);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 struct FUN_0069b8a0_cls
@@ -3618,7 +3618,7 @@ extern float DAT_01030ff4;
 extern double DAT_0101de30;
 extern int DAT_011f426c;
 
-void* operator new(unsigned int n);
+void* operator new(size_t n);
 void* __cdecl Object_DispatchCommandFour(unsigned int n);
 void* __cdecl FormHeap_Allocate(unsigned int n);
 void* __stdcall GetPathManager(void* p, int a);
@@ -3672,8 +3672,8 @@ struct ObjX
     int unk00a4;
     int unk00a8;
     ObjX(int a);
-    static void* operator new(unsigned int n);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t n);
+    static void operator delete(void*, size_t);
 };
 struct ObjY
 {
@@ -3685,8 +3685,8 @@ struct ObjY
     int unk0014;
     int unk0018;
     ObjY();
-    static void* operator new(unsigned int n);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t n);
+    static void operator delete(void*, size_t);
     ObjY* FUN_004391c0();
 };
 struct GRes2

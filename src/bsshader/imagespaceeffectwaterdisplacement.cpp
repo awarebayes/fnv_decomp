@@ -627,7 +627,7 @@ extern MemoryManager DAT_011f6238;
 class ImageSpaceShaderParam : public ImageSpaceEffectParam
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_011f6238.Allocate(size);
     }

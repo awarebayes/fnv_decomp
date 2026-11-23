@@ -218,7 +218,7 @@ struct FUN_00622440_Class
 {
     void __thiscall FUN_00caff80();
     void* __thiscall FUN_00622440(unsigned int flags);
-    static void operator delete(void* p, unsigned int size);
+    static void operator delete(void* p, size_t size);
 };
 
 // @fnv 0x00622440
@@ -260,7 +260,7 @@ void CellMopp::Kill()
     }
 }
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00ca4da0
 {
     ~FUN_00ca4da0();

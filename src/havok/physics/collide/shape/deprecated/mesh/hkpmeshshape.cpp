@@ -37,7 +37,7 @@ __forceinline void hkVector4::set(float a, float b, float c, float d)
     m_vComponents = _mm_setr_ps(a, b, c, d);
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

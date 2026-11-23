@@ -209,7 +209,7 @@ hkpConstraintData* __cdecl hkpConstraintDataCloningUtil_cloneIfCanHaveMotors(con
 class FUN_00cf3ea0 : public hkpConstraintInstance
 {
   public:
-    static __forceinline void* operator new(unsigned int uiSize) throw()
+    static __forceinline void* operator new(size_t uiSize) throw()
     {
         void* p = hkMemoryRouter::getInstance().heap().blockAlloc(uiSize);
         ((unsigned short*)p)[2] = (unsigned short)uiSize;

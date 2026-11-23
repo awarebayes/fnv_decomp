@@ -154,7 +154,7 @@ BoundItemEffect::~BoundItemEffect()
 }
 
 void* __cdecl FormHeap_Allocate(unsigned int uiSize);
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 // Allocates a BoundItemEffect from the caster, item and effect item.
 // @fnv 0x008085f0
@@ -1774,7 +1774,7 @@ class BIShader
     virtual void v0bc();
     virtual void v0c0();
     virtual bool Init();  // +0xc4
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     int unk04[14];
 };
@@ -2470,7 +2470,7 @@ struct FUN_00410360 : ExtraP
 {
     int u00, u04, u08, u0c, u10, u14, u18, u1c;
     FUN_00410360();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FormHeap_Allocate(n);
     }
@@ -2481,7 +2481,7 @@ struct FUN_004bc550 : EntryP
 {
     int u04, u08;
     FUN_004bc550(TESBoundObject*, int);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FormHeap_Allocate(n);
     }
@@ -2491,7 +2491,7 @@ struct FUN_004bc650 : EntryP
 {
     int u04, u08;
     FUN_004bc650(EntryP*);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return FormHeap_Allocate(n);
     }

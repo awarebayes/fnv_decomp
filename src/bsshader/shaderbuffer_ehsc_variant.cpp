@@ -109,7 +109,7 @@ struct Thing_b9704
     unsigned int unk100;
     unsigned int unk104;
     Thing_b9704(unsigned int a1, unsigned int apData, Thing_b9704* aiSize);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return ((S00b7fd90_Alloc*)&DAT_011f6238)->Game_DoHeapAlloc(size);
     }

@@ -160,7 +160,7 @@ struct ListB
 };
 int hkpConstraintUtils_getConstraintPivots(KeyOwnerA* a, Tmp16* pivotInAOut, Tmp16* pivotInBOut);
 int hkpConstraintChainUtil_addConstraintToChain(KeyOwnerA* newChildInstance, ListB* chainInstance, OwnerC* chainData, ...);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -316,7 +316,7 @@ struct FUN_00e3b8f0 : RefObject
     int capacity;
     int unk24, unk28, unk2c, unk30, unk34, unk38, unk3c;
     FUN_00e3b8f0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return allocateObject(size);
     }
@@ -328,7 +328,7 @@ struct FUN_00dd0530 : Edge
     Array<Node*> nodes;
     void* action;
     FUN_00dd0530(FUN_00e3b8f0*);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return allocateObject(size);
     }

@@ -543,7 +543,7 @@ void __thiscall FUN_00800e50_Class::FOVATSEffectManager_SetSelectedMultiTarget(i
 }
 
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Allocates and constructs a ConcussionEffect from the given MagicCaster, MagicItem and EffectItem.
 // @fnv 0x0080bff0
@@ -552,7 +552,7 @@ ConcussionEffect* CreateConcussionEffect(MagicCaster* a, MagicItem* pItem, Effec
     return new ConcussionEffect(a, pItem, pEffect);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct FUN_0080d6b0_t
 {

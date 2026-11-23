@@ -134,7 +134,7 @@ __forceinline NiSkinInstance::NiSkinInstance() throw()
 }
 
 // Explicit-size allocation covers the renderer cache omitted from NiSkinInstance.h.
-inline void* operator new(size_t, unsigned int uiSize) throw()
+inline void* operator new(size_t, size_t uiSize) throw()
 {
     return NiMemObject::operator new(uiSize);
 }

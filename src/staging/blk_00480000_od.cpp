@@ -1008,7 +1008,7 @@ TESModelTextureSwap* TESBipedModelForm_GetBipedTESModel(TESForm* apObj, TESObjec
 }
 
 extern int DAT_0101d274;
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void* _fnv_zlib_memset(void* p, int c, unsigned int n);
 struct FUN_0048b3e0_t
 {
@@ -2024,7 +2024,7 @@ int FUN_0049f7d0_cls::FindIndexIf(int a1, unsigned int start, bool(__cdecl* pred
     return -1;
 }
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct B49F8F0Entry
@@ -2053,7 +2053,7 @@ void B49F8F0Allocator::ConstructEntries(B49F8F0Entry* pkArray, unsigned int Item
         new (&pkArray[i]) B49F8F0Entry;
 }
 
-void* __cdecl operator new(unsigned int size, void* where);
+void* __cdecl operator new(size_t size, void* where);
 void __cdecl operator delete(void*, void*);
 struct FUN_0049f1c0
 {
@@ -2504,7 +2504,7 @@ MyNode* __cdecl bhkUtilFunctions_FindNextCollisionObject(MyNode* apObj);
 void __cdecl bhkUtilFunctions_SetCOUseVel(int abUseVel, void* apObj);
 void __fastcall FinishScriptRunLockIfActive(void* a);
 void __fastcall SpecialIdlePlay(Animation* a);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct AnimPosition
 {
     float x;

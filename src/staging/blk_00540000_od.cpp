@@ -1206,7 +1206,7 @@ void __thiscall FUN_00558600_Class::BSShaderAccumulator_GetDebugStats(int* a, in
     *k = DAT_011f9fec;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern "C" void* __cdecl _fnv_zlib_memset(void* dst, int value, unsigned int count);
 extern int DAT_0102f3e8;
 struct FUN_00559b40
@@ -2165,7 +2165,7 @@ struct LightData
     int unk18;
     int unk1c;
     int unk20;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     LightData();
     bool HasEnoughSeenPoints(const NiPoint3*, const NiPoint3*);
 };
@@ -2317,7 +2317,7 @@ void Cell::TESObjectCELL_UpdateSeenData(const NiPoint3* aCoord)
 }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct Result556ef0
 {

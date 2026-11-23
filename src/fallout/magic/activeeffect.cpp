@@ -1550,7 +1550,7 @@ void ActiveEffect::SaveGame(Actor* apActor)
 
 struct ShaderHitEffect : FUN_0081c530
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     ShaderHitEffect();
 };
@@ -1573,7 +1573,7 @@ struct ModelHitEffect : MagicHitEffect
     unsigned int unk60;
     unsigned int unk64;
     unsigned int unk68;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     ModelHitEffect();
 };
@@ -2003,12 +2003,12 @@ void ActiveEffect::InitLoadGame(Actor* apActor)
 
 struct Shell81c530 : public FUN_0081c530
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     Shell81c530();
 };
 struct FUN_0081f220 : public MagicHitEffect
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     int field28;
     int field2c;
     int field30;

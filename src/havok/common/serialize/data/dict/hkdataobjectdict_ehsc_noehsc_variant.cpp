@@ -16,7 +16,7 @@
 
 // src/havok/common/serialize/data/dict/hkdataobjectdict.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/projects/fallout/code/havok/source/common/serialize/data/dict/hkdataobjectdict.cpp).
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -168,7 +168,7 @@ extern "C" hkRouterDC82& __cdecl hkMemoryRouter_getInstance() throw();
 #include "../../../../../../include/hkDataClassImpl.h"
 
 // hkDataRefCounted's class allocator, inlined here: the router heap allocates and the size is recorded at +4.
-inline void* hkDataRefCounted::operator new(unsigned int n)
+inline void* hkDataRefCounted::operator new(size_t n)
 {
     void* p = hkRouterNsDC82::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(n);
     static_cast<hkDataRefCounted*>(p)->m_memSize = (unsigned short)n;

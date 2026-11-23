@@ -194,7 +194,7 @@ __forceinline hkSimdReal::operator float() const { float result; _mm_store_ss(&r
 inline hkAabb::hkAabb() {}
 inline Pair::Pair() throw() {}
 inline Pair::Pair(int aa, int bb) : a(aa), b(bb) {}
-inline void* Pair::operator new(unsigned int, void* p) throw() { return p; }
+inline void* Pair::operator new(size_t, void* p) throw() { return p; }
 
 // SSE_DECLARATIONS_DEFER_TO_SDK
 // src/havok/common/internal/geometryprocessing/mesh/hkgpmesh.cpp - unit created 2026-10-16 from the whole-binary attribution (360 source path: d:/build/20091222_000100_aianbecldeph/source/common/internal/geometryprocessing/mesh/hkgpmesh.cpp).
@@ -408,7 +408,7 @@ struct Options {unsigned int unk00,unk04; unsigned char flag08,flag09,flag0a,fla
 struct FUN_00d76ca0 {__declspec(nothrow) virtual ~FUN_00d76ca0(); unsigned short memorySize,referenceCount; int unk08,unk0c,unk10;
  __declspec(nothrow) FUN_00d76ca0();
  static void* allocate(Allocator& heap,unsigned int bytes) { void* memory=heap.allocate(bytes); ((FUN_00d76ca0*)memory)->memorySize=(unsigned short)bytes; return memory;}
- static void* operator new(unsigned int bytes) {return allocate(meshHeap(hkMemoryRouter_getInstance()),bytes);}
+ static void* operator new(size_t bytes) {return allocate(meshHeap(hkMemoryRouter_getInstance()),bytes);}
  __declspec(nothrow) void hkgpConvexHull_build(MeshPacketCallLocal_00e16e50*,int,const Options&);
  __declspec(nothrow) int GetInnerField1A8();
 };
@@ -3289,7 +3289,7 @@ struct E24850Node {
     E24850Node* m_next;
     E24850Node* m_pSecondNode;
 
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
     E24850Node(void* data);
 };
 
@@ -5655,7 +5655,7 @@ struct HullFloodTriangle {
     int unk2c;
     int m_vis;
 };
-inline void* operator new(unsigned int, void* storage) { return storage; }
+inline void* operator new(size_t, void* storage) { return storage; }
 struct HullFloodEdge {
     HullFloodTriangle* m_node;
     int m_k;
@@ -7931,7 +7931,7 @@ struct FUN_00e21e30 {
 // pdb: hkgpMesh::TriangleShape::`scalar deleting destructor' | hkgpMesh.obj | retail, vtable slot, high
 // pdb params: this
     virtual ~FUN_00e21e30() {}
-    void operator delete(void* p, unsigned int nbytes) {
+    void operator delete(void* p, size_t nbytes) {
         (*reinterpret_cast<hkMemoryRouter*>(&::hkMemoryRouter_getInstance())).heap().blockFree(p, static_cast<int>(nbytes));
     }
 };
@@ -7997,7 +7997,7 @@ struct FUN_00e22db0 {
 // @fnv 0x00e22db0
 // pdb: hkgpMesh::NearestFeaturePolicy::`scalar deleting destructor' | hkgpMesh.obj | retail, vtable slot, high
     virtual ~FUN_00e22db0() {}
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         hkMemoryRouter* sv = fnvc_adapt::hkMemoryRouter_getInstance();
         sv->m_heap->blockFree(p, 0x60);
@@ -9367,7 +9367,7 @@ struct S_00e248b0_Arr {
     int m_iElementCount;
     int m_cap;
     S_00e248b0_Arr() : m_data(0), m_iElementCount(0), m_cap(0x80000000) {}
-    static void* operator new(unsigned int size) { return S_00e248b0_heap(hkMemoryRouter_getInstance())->blockAlloc(size); }
+    static void* operator new(size_t size) { return S_00e248b0_heap(hkMemoryRouter_getInstance())->blockAlloc(size); }
 };
 
 static __forceinline S_00e248b0_Arr* BoundaryCore(S_00e248b0_Edge& cur, S_00e248b0_Edge start) { S_00e248b0_Arr* arr=0;
@@ -10170,7 +10170,7 @@ struct E17ArrayLocalForm
     void hkArrayBase_struct_hkgpMeshBase_Edge_append(E17Mem* heap, const T* data, int n);
     void append(const T* data, int n) { hkArrayBase_struct_hkgpMeshBase_Edge_append(&e17Heap(), data, n); }
 
-    static void* operator new(unsigned int size) { return e17Heap().allocate(size); }
+    static void* operator new(size_t size) { return e17Heap().allocate(size); }
     static void operator delete(void* p) { e17Heap().deallocate(p, sizeof(E17ArrayLocalForm)); }
 };
 
@@ -10446,7 +10446,7 @@ struct PartsMap {
     int hkMapBase_unsigned_long_unsigned_long_hkMapOperations_unsigned_long_insert(Allocator*,unsigned long,unsigned long);
     void ProcessArgument(Allocator*);
     void Object_DoNothing();
-    static void* operator new(unsigned n,Allocator* heap){return heap->allocate(n);}
+    static void* operator new(size_t n,Allocator* heap){return heap->allocate(n);}
     __forceinline void reserve(int n){EnsureCapacity(&meshHeap(hkMemoryRouter_getInstance()),n);}
     __forceinline unsigned long lookup(unsigned long k)const{return LookupHashEntry(k,0);}
     __forceinline void insert(unsigned long k,unsigned long v){hkMapBase_unsigned_long_unsigned_long_hkMapOperations_unsigned_long_insert(&meshHeap(hkMemoryRouter_getInstance()),k,v);}
@@ -12409,7 +12409,7 @@ void FUN_00e12890_cls::hkgpMesh_fetchAreaSortedTriangles(FUN_00e12890_List* tria
 }  // namespace fnv_00e12890
 
 namespace fnv_00e15830 {
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 
 
@@ -13204,7 +13204,7 @@ edgesOut.AddBack(*b);
 }
 
 namespace fnv_00e1a7a0 {
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 
 
@@ -15397,7 +15397,7 @@ void* FUN_00e235d0_cls::hkGeometryProcessing_PoolAllocator_struct_hkgpTriangulat
 }  // namespace fnv_00e235d0
 
 namespace fnv_00e237b0 {
-inline void* __cdecl operator new(unsigned int, void* where) { return where; }
+inline void* __cdecl operator new(size_t, void* where) { return where; }
 struct FUN_00e237b0_Input {
     void* unk00; void* unk04; void* unk08; void* unk0c;
     void* unk10; void* unk14; void* unk18; void* unk1c; void* entry;

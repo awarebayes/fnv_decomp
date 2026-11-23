@@ -9,8 +9,8 @@
 #include "../../include/NiPoint3.h"
 
 #include <malloc.h>
-void* __cdecl operator new(unsigned int);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new(size_t);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete(void*);
 void __cdecl operator delete[](void*);
 extern "C" void* __cdecl memset(void*, int, unsigned int);
@@ -755,7 +755,7 @@ struct Obj52 : NiMemObject
 {
     void FUN_00a3cc80();
     void* FUN_0052cf90(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Calls FUN_00a3cc80, deletes this with size 0x18 when flags has bit 0 set, and returns this.
 // @fnv 0x0052cf90

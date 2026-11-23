@@ -238,7 +238,7 @@ struct FUN_00c9fde0 : bhkRefObject
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 extern int DAT_01030864;
 extern int DAT_01268244;
@@ -722,7 +722,7 @@ struct TlsGuard_t
         g_tlsBlock.m_2b4 = m_saved;
     }
 };
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -1289,7 +1289,7 @@ struct FUN_00cf2cb0
 {
     int unk0;
     unsigned short length;
-    static void* operator new(unsigned int count)
+    static void* operator new(size_t count)
     {
         Pool* pool = hkMemoryRouter_getInstance();
         FUN_00cf2cb0* p = (FUN_00cf2cb0*)pool->allocator->Allocate(224);
@@ -1772,7 +1772,7 @@ class CA0840Output
     CA0840Output() : m_pkTarget(0), m_fValue(DAT_010c72bc)
     {}
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

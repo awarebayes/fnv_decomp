@@ -39,7 +39,7 @@ public:
     TextureFile pTextureFiles[8];
     FontLetter pFontLetters[256];
 
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     RunNode* FontManager_PrepHypertext(SStr*, Info_*);
     RunNode* FontManager_PrepText(SStr* axTextString, Info_* axData);
 };

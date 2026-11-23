@@ -13,7 +13,7 @@ void __fastcall UpdateFields_00c5faa0(void*);
 void __cdecl __Dummy_00b6fef0(void*, unsigned int);
 void* __cdecl Object_DispatchCommandFour(unsigned int);
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

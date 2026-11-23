@@ -418,7 +418,7 @@ struct S00d26510_Tri : public S00d26510_Convex
     LocalM128 m_kVertexC;
     LocalM128 m_kVertexTransform;
 
-    void* operator new(unsigned int, void* p) throw()
+    void* operator new(size_t, void* p) throw()
     {
         return p;
     }

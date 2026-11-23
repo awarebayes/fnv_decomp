@@ -139,7 +139,7 @@ struct SampledHeightField : hkpSampledHeightFieldShape {
 };
 void __cdecl hkAabbUtil_calcAabb_00d26230(hkUlong, const hkVector4&, const hkVector4&, float, hkUlong);
 
-inline void* operator new(unsigned int,void* p) throw() { return p; }
+inline void* operator new(size_t,void* p) throw() { return p; }
 extern "C" { LocalM128 _mm_set_ps(float,float,float,float); LocalM128 _mm_setr_ps(float,float,float,float); LocalM128 _mm_mul_ps(LocalM128,LocalM128); LocalM128 _mm_load_ss(const float*); LocalM128 _mm_shuffle_ps(LocalM128,LocalM128,int); }
 
 

@@ -889,7 +889,7 @@ struct Source840 {
 struct Node840 { int unk00,unk04,unk08; union { int key; unsigned short children[2]; }; unsigned short flags,escape; };
 struct ParentAlias840 {Node840* value;};
 struct Task840 {
-    static __forceinline void* operator new(unsigned int, void* destination) { return destination; }
+    static __forceinline void* operator new(size_t, void* destination) { return destination; }
     Task840() {}
     Task840(const Task840& other) { memcpy(this, &other, sizeof(*this)); }
     hkAabb bounds;

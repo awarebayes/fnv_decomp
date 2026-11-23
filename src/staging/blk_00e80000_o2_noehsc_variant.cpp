@@ -69,7 +69,7 @@ struct FUN_00e891f0_Class
 {
     void __thiscall NiD3DTextureStageGroup_RemoveAllStageStates();
 };
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 extern int DAT_010efc34;
 void __cdecl FUN_00e68830();
 struct FUN_00e8aa40_Class
@@ -197,7 +197,7 @@ struct FUN_00e941d0_This
     FUN_00e941d0_Node* head;
 };
 FUN_00e941d0_Node* __fastcall RemoveFirstNodeAtLeast(FUN_00e941d0_This* self, int, unsigned int value);
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e98610_Node
 {
     void* m_next;
@@ -308,7 +308,7 @@ extern int DAT_010efe54;
 extern int DAT_010efe74;
 extern MemoryManager _g_memoryManager;
 void __cdecl _NiFree(void*);
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00e8ceb0_Class
 {
     void __thiscall ReleaseStorage_00e8ceb0();
@@ -421,7 +421,7 @@ struct FUN_00e96c90_Class
     void __thiscall FUN_00e89970();
     void __thiscall UpdateState_00e96c90();
 };
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 void __cdecl FUN_00e989c0();
 extern int DAT_010f1550;
 struct FUN_00e97870_Class
@@ -433,7 +433,7 @@ extern unsigned int DAT_011c1118;
 extern int DAT_0126fa58;
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 void NiVBBlock_GetFreeChip();
 struct FUN_00e98b10_Class
@@ -7607,7 +7607,7 @@ struct FUN_00e940a0_Class
     void* m_00;
     void __thiscall ReleaseGlobalSlot();
 };
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e94150_Node
 {
     int m_00;
@@ -7963,7 +7963,7 @@ struct E94B0Block
             m_pkEntryArray = 0;
     }
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kE94B0MemoryManager.Allocate(uiSize);
     }
@@ -8252,7 +8252,7 @@ struct SNAEntryElem
     ~SNAEntryElem()
     {}
 
-    static void* operator new[](unsigned int size) throw()
+    static void* operator new[](size_t size) throw()
     {
         return FUN_00aa1420(size);
     }

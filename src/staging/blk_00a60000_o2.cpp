@@ -3293,7 +3293,7 @@ struct NodeA616
     NodeA616(EntryA616* entry, NodeA616* next) : m_entry(entry), m_next(next)
     {}
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return ((FUN_00a5e3a0_Helper*)&_g_memoryManager)->Game_DoHeapAlloc(uiSize);
     }

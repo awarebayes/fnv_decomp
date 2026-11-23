@@ -1443,8 +1443,8 @@ class P2
 class SizedNiMemObject
 {
   public:
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 class CreatedObj : public SizedNiMemObject
 {
@@ -1618,8 +1618,8 @@ namespace fnv_0051cba0 {
 class SizedNiMemObject
 {
   public:
-    static void* operator new(unsigned int size);
-    static void operator delete(void* pointer, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* pointer, size_t);
 };
 // the reference-count view of the billboard NiSourceTexture
 class BillboardTexture
@@ -2085,7 +2085,7 @@ struct FUN_0051d2c0_shell
                                         const void* itemSource, const void* idSource);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void* __cdecl __memcpy(void* destination, const void* source, unsigned int size);
 extern unsigned int _data_011c16bc;
 

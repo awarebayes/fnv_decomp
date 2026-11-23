@@ -711,7 +711,7 @@ struct PendingD9 {
     K16D9 m_e0, m_e1, m_e2, m_e3, m_e4, m_e5, m_e6, m_e7, m_e8;
     int m_f0, m_f1, m_f2;
     PendingD9();
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* p) { g_011f6238.MemoryManager_Deallocate((PendingObj*)p); }
 };
 extern PendingD9* DAT_011f33a8;
@@ -983,14 +983,14 @@ struct A0FE20Property {
 };
 class NiMemObjectBase {
 public:
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct A0FE20MemoryFree { void Deallocate(void*); };
 struct A0FE20PropertyState {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18;
     A0FE20PropertyState();
     ~A0FE20PropertyState();
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* p) { ((A0FE20MemoryFree*)&g_memoryManager)->Deallocate(p); }
 };
 unsigned int FUN_0040fc90();
@@ -1217,7 +1217,7 @@ struct TextListD {
  TextListD() { count=0; first=0; last=0; }
  ~TextListD();
 };
-inline void* operator new(unsigned size,void* p) { return p; }
+inline void* operator new(size_t size,void* p) { return p; }
 struct ArrayD {
  virtual void slot0();
  virtual void** Allocate(unsigned);
@@ -1290,12 +1290,12 @@ inline void DeadQ15(){int a[15];}
 struct FUN_00a11880 {
     float f0; float f4; int i8; void* m_ptr; BSStringT<char> m_str; float f18; float c[4];
     FUN_00a11880();
-    void* operator new(unsigned int sz) { return g_memoryManager.Allocate(sz); }
+    void* operator new(size_t sz) { return g_memoryManager.Allocate(sz); }
     void SetName(const char* s) { m_str.Set(s, 0); }
 };
 struct NodeQ {
     FUN_00a11880* ent; int unk4; int key; int unk0c; int unk10; int unk14;
-    void* operator new(unsigned int sz) { return g_memoryManager.Allocate(sz); }
+    void* operator new(size_t sz) { return g_memoryManager.Allocate(sz); }
 };
 struct ArrQ : BSSimpleArray<void*> {
     unsigned int Count() { return iSize; }
@@ -2376,7 +2376,7 @@ extern int DAT_011f33bc;
 extern int DAT_011f33c0;
 extern int DAT_01202800;
 
-inline void* operator new(unsigned int n) { return g_memoryManager.Allocate(n); }
+inline void* operator new(size_t n) { return g_memoryManager.Allocate(n); }
 
 __forceinline NiColorA MakeColor(const unsigned int& r,const unsigned int& g,const unsigned int& b,const unsigned int& a) {
  float red4=(double)r/255.0,green=(double)g/255.0,blue9=(double)b/255.0,alpha=(double)a/255.0;
@@ -2511,7 +2511,7 @@ struct State107 {
     State107(); ~State107();
     static State107* Create();
     static void Destroy(State107*);
-    static void* operator new(unsigned size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void*);
 };
 State107* State107::Create() { return new State107; }
@@ -2597,7 +2597,7 @@ inline const NiBound& NiAVObject::GetBound() { return m_kWorldBound ? *reinterpr
 struct NodePointer { NiAVObject* ptr; NodePointer& FUN_0066b0d0(NiAVObject*); inline bool operator==(NiAVObject* p) const { return ptr==p; } };
 struct TextEntry { float x,y; int unk08; NodePointer node; BSStringT<char> text; float duration; int unk1c,unk20,unk24,unk28;
  inline BSStringT<char>& GetText() { return text; }
- static inline void* operator new(unsigned int n) { TextEntryAllocator allocator; return allocator.Allocate(n); }
+ static inline void* operator new(size_t n) { TextEntryAllocator allocator; return allocator.Allocate(n); }
  static void operator delete(void*);
 };
 struct FontSystem { Font* faces[2]; inline Font* GetFont(int i) { return faces[i]; } inline static FontSystem* GetSingleton(); };

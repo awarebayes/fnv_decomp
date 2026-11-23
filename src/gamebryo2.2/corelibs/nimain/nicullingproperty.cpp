@@ -263,7 +263,7 @@ void __fastcall NiCullingProperty_GetViewerStrings(NiCullingProperty* property, 
 }
 
 extern int DAT_0109f68c;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

@@ -15,7 +15,7 @@ __declspec(nothrow) __forceinline NiGeomMorpherController::InterpItem::~InterpIt
 {
 }
 
-inline void* NiGeomMorpherController::InterpItem::operator new[](unsigned int size) throw()
+inline void* NiGeomMorpherController::InterpItem::operator new[](size_t size) throw()
 {
     return g_memoryManager.Allocate(size);
 }

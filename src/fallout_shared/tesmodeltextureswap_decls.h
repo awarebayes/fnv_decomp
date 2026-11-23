@@ -68,7 +68,7 @@ class TaskQueueInterface
   public:
     static void CopyStringToBuffer(char*, unsigned int, const char*);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 extern NiFixedString EmptyFS;
 void NiGlobalStringTable_IncRefCount(const NiFixedString&);

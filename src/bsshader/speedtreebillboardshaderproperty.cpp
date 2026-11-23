@@ -4,7 +4,7 @@
 
 extern int DAT_010b8330;
 void __fastcall FUN_00b67380(void*);
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00ba8690
 {
@@ -162,7 +162,7 @@ int BA86C0Owner::SpeedTreeBillboardShaderProperty_ClarifyShader(A5A040Cls* apGeo
 
 extern int DAT_010b8330;
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct SpawnedBase
 {
@@ -236,7 +236,7 @@ struct SpawnedObject : SpawnedBase
     int unkF8;
     int unkFC;
     int unk100;
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }

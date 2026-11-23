@@ -24,7 +24,7 @@ GlobalObjectO2_00a7b610* __cdecl NiFloatExtraData_GetRTTI()
 
 extern void* DAT_010a0ec4;
 extern void __cdecl DestroyFields_00a7b300();
-extern void __cdecl operator delete(void*, unsigned int);
+extern void __cdecl operator delete(void*, size_t);
 
 // @fnv 0x00a9a4b0
 // pdb: NiFloatExtraData::`scalar deleting destructor' | NiFloatExtraData.obj | retail, object-file gap fill, high

@@ -37,7 +37,7 @@ public:
     Data();
     ~Data();
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 
     void Load(unsigned int);
     float TESEffectShader_BirthParticles(float, float, float, bool);

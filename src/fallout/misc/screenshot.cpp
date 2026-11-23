@@ -360,7 +360,7 @@ struct S_00878f60_PixelData
     int unk70;
     S_00878f60_PixelData(unsigned int uiWidth, unsigned int uiHeight, const S_00878f60_PixelFormat& kFormat, unsigned int uiMipmapLevels,
                          unsigned int uiFaces);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     unsigned char* NiPixelData_GetPixels(int mip, int face);
     int DetailedActorPathHandler_GetCurrentNodeIndex();

@@ -33,7 +33,7 @@ struct FUN_00dfc1e0
     FUN_00dfc1e0();
     virtual ~FUN_00dfc1e0();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00dfc1e0* b = static_cast<FUN_00dfc1e0*>(p);
         hkMemoryRouter_getInstance().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

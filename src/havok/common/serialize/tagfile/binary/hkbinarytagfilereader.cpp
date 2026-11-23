@@ -467,7 +467,7 @@ unsigned int __stdcall hkBinaryTagfileReader_load(unsigned int a, unsigned int b
 
 extern char DAT_01011584;
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

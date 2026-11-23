@@ -43,7 +43,7 @@ extern int DAT_0103046c;
 struct MyType
 {
     // This collision object shares the allocator, not the BSFadeNode layout.
-    static void* __cdecl operator new(unsigned int size)
+    static void* __cdecl operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }

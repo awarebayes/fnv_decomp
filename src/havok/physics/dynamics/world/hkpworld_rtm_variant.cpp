@@ -1186,7 +1186,7 @@ static __forceinline void SaveBlob(ObjectWriter* writer,char* name,void* address
 struct WorldWatchDogHolder : hkpWorld {
     void* __thiscall hkpWorld_getMemoryWatchDog();
 };
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 inline void __cdecl operator delete(void*, void*) { }
 struct ThreadMemHolder {
     int unk00;
@@ -3065,7 +3065,7 @@ public:
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkRefObjC97E* b = static_cast<hkRefObjC97E*>(hkRouterC97E::hkMemoryRouter_getInstance().heap().blockAlloc(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -3231,7 +3231,7 @@ struct CFB240ContactMgrFactory {
     virtual ~CFB240ContactMgrFactory();
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    void* operator new(unsigned int n) {
+    void* operator new(size_t n) {
         CFB240ContactMgrFactory* b = static_cast<CFB240ContactMgrFactory*>(c912::router()->heap().blockAlloc(n));
         b->m_usMemSizeAndFlags = (unsigned short)n;
         return b;
@@ -4352,7 +4352,7 @@ struct FUN_00d065e0 {
     unsigned char active;
     unsigned char unk41, unk42, unk43;
     FUN_00d065e0() throw();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         MatchRouter* router = (MatchRouter*)::hkMemoryRouter_getInstance();
         FUN_00d065e0* memory = (FUN_00d065e0*)router->heap->allocate(size);
@@ -7531,7 +7531,7 @@ struct CollisionInputCtor {
     unsigned short unk6e;
     ManifoldCtor* manifold;
     int unk74,unk78,unk7c;
-    static void* operator new(unsigned int n) { return worldAlloc(n); }
+    static void* operator new(size_t n) { return worldAlloc(n); }
     CollisionInputCtor() { unk64=0;unk04=0; }
 };
 

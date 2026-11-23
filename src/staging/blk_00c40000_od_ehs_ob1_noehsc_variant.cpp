@@ -339,7 +339,7 @@ void __cdecl SetVtableAndProcessState_00c43070(void*);
 struct FUN_00c43620_Class {
     void __thiscall SetVtableAndProcessState_00c43070();
     void* __thiscall FUN_00c43620(unsigned int flags);
-    static void __cdecl operator delete(void* p, unsigned int size);
+    static void __cdecl operator delete(void* p, size_t size);
 };
 struct FUN_00c43850_Class {
     void __thiscall ForwardToBase(void* dst, unsigned int size);
@@ -424,7 +424,7 @@ struct FUN_00c51640_Class {
 struct FUN_00878690_shell {
     void __thiscall FUN_00c51df0();
 };
-void __cdecl operator delete(void* ptr, unsigned int size);
+void __cdecl operator delete(void* ptr, size_t size);
 struct FUN_00c52830_class {
     void* __thiscall FUN_00c52830(unsigned int flags);
 };
@@ -437,7 +437,7 @@ struct FUN_00c54ec0_class {
 struct FUN_00a7b300_shell { void __thiscall DestroyFields_00a7b300(); };
 struct FUN_00c55330_class {
     void* __thiscall FUN_00c55330(unsigned int flags);
-    void operator delete(void* p, unsigned int size);
+    void operator delete(void* p, size_t size);
 };
 extern int DAT_010c2d54;
 extern int DAT_010c2d54;
@@ -480,11 +480,11 @@ struct FUN_00c5e560_class : public NiNode {
 struct FUN_00c5db90_Class {
     void __thiscall FUN_00c5db90();
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c5eb20_Class {
     void* __thiscall FUN_00c5eb20(unsigned int flags);
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c5ed60_Class {
     void __thiscall FUN_00c5ed60();
 };
@@ -502,7 +502,7 @@ struct FUN_00c5f500_class {
 };
 struct FUN_00c5fc20_class {
     void* __thiscall FUN_00c5fc20(unsigned int flags);
-    void __cdecl operator delete(void* p, unsigned int size);
+    void __cdecl operator delete(void* p, size_t size);
     void __thiscall FUN_00c5faa0();
 };
 struct BaseForCall { bool NiNode_IsEqual(NiObject*); };
@@ -656,7 +656,7 @@ struct FUN_00c450d0 : FUN_00c5f570_Class {
     FUN_00c450d0();
 };
 struct FUN_00c465a0_class {
-    void* operator new(unsigned int);
+    void* operator new(size_t);
     FUN_00c465a0_class();
     char pad[0x1c];
 };
@@ -673,7 +673,7 @@ struct FUN_00c465a0 {
     int f;
     FUN_00c465a0();
     ~FUN_00c465a0();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 FUN_00c465a0* __cdecl BSWindModifier_CreateObject();
 struct FUN_00c48fe0_Class {
@@ -807,7 +807,7 @@ struct FUN_00c46930_class {
 struct A51BF0Base {
     char pad[0xb4];
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     A51BF0Base();
 
     void __thiscall BSMultiBoundNode_CopyMembers(A51BF0Base* copy, int arCloneData);
@@ -895,7 +895,7 @@ struct FUN_00c5ce40_Class {
 };
 struct FUN_00c5d260_view {
     void __thiscall Destruct();
-    static void __cdecl operator delete(void* p, unsigned int sz);
+    static void __cdecl operator delete(void* p, size_t sz);
 };
 struct FUN_00c5d260 : FUN_00c5d260_view {
     void* __thiscall FUN_00c5d260_method(unsigned int flags);
@@ -985,12 +985,12 @@ struct SpawnedObject_b9874 {
     char m00[0x10];
     SpawnedObject_b9874();
     void Init(int* arg);
-    static void* operator new(unsigned int size) { return Object_DispatchCommandFour(size); }
+    static void* operator new(size_t size) { return Object_DispatchCommandFour(size); }
 };
 SpawnedObject_b9874* BSXFlags_CreateObject();
 struct S_00c437c0_Obj {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24, unk28, unk2c, unk30, unk34, unk38, unk3c, unk40, unk44, unk48, unk4c, unk50, unk54, unk58, unk5c, unk60, unk64, unk68, unk6c, unk70, unk74, unk78, unk7c, unk80, unk84, unk88, unk8c, unk90, unk94, unk98, unk9c, unka0, unka4, unka8, unkac, unkb0, unkb4;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     S_00c437c0_Obj();
 };
 struct S_00c437c0 : FUN_00c43850_Class {
@@ -998,7 +998,7 @@ struct S_00c437c0 : FUN_00c43850_Class {
 };
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
 struct SpawnedObject_b9504 : FUN_00c43660 {
-    static void* operator new(unsigned int size) throw() { return Object_DispatchCommandFour(size); }
+    static void* operator new(size_t size) throw() { return Object_DispatchCommandFour(size); }
 };
 FUN_00c43660* __cdecl BSValueNode_CreateObject();
 class FUN_00c43be0_cls {
@@ -1378,7 +1378,7 @@ struct NewObject_b9649 {
     unsigned int unkAC;
     unsigned int unkB0;
     NewObject_b9649();
-    static void* operator new(unsigned int size) { return Object_DispatchCommandFour(size); }
+    static void* operator new(size_t size) { return Object_DispatchCommandFour(size); }
 };
 NewObject_b9649* CreateNewObject();
 struct UpdateContext {
@@ -2662,7 +2662,7 @@ struct EmitterObjectStub {
     int unkcc;
     int unkd0;
     EmitterObjectStub();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 };
 struct EmitterOwnerStub {
@@ -3307,7 +3307,7 @@ struct PositionModifierInstance {
     bool active;
     float lastTime;
     void* next;
-    static __forceinline void* operator new(unsigned int amount) {
+    static __forceinline void* operator new(size_t amount) {
         return Object_DispatchCommandFour(amount);
     }
 };
@@ -3394,7 +3394,7 @@ struct ThisC43220 {
 class BC45120CloningProcess;
 class BC45120Object {
 public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     BC45120Object();
@@ -3846,7 +3846,7 @@ struct C45440_Obj : FUN_00c450d0 {
     int uA4;
     int uA8;
     int uAC;
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 C45440_Obj* __cdecl CreateC45440Obj(void);
 struct Animation;
@@ -4698,7 +4698,7 @@ struct BBXRef
 {
     int m_uiFilterValue;
 
-    static void *operator new(unsigned int size) { return ((BBXHeap *)&DAT_011f6238)->Game_DoHeapAlloc(size); }
+    static void *operator new(size_t size) { return ((BBXHeap *)&DAT_011f6238)->Game_DoHeapAlloc(size); }
     static void operator delete(void *p) { ((BBXHeap *)&DAT_011f6238)->MemoryManager_Deallocate(p); }
 
     BBXRef(const char *s)

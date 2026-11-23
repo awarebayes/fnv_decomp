@@ -230,7 +230,7 @@ extern TESObjectSTAT* DAT_011ca264;
 extern TESObjectSTAT* DAT_011ca228;
 extern TESObjectSTAT* DAT_011ca22c;
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 class SceneObjectLookup
 {
@@ -249,8 +249,8 @@ class TESObjectDoorController : public NiTimeController
   public:
     unsigned int unk34;
     unsigned int unk38;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     TESObjectDoorController();
     void MagicShaderHitEffect_SetLifeTime(float);
 };

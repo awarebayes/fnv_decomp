@@ -529,7 +529,7 @@ struct PendingNode
         m_08 = 0;
         m_0c = 0x80000000u;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         hkMemoryRouter* holder = (hkMemoryRouter*)hkMemoryRouter_getInstance();
         Allocator* alloc = reinterpret_cast<Allocator*>(holder->m_heap);
@@ -1178,7 +1178,7 @@ struct S_00d66220_RefObject
     short m_sReferenceCount;
 
     virtual ~S_00d66220_RefObject();
-    static void operator delete(void* p, unsigned int)
+    static void operator delete(void* p, size_t)
     {
         S_00d66220_RefObject* o = static_cast<S_00d66220_RefObject*>(p);
         reinterpret_cast<hkMemoryAllocator&>(hkMemoryRouter::getInstance().heap()).blockFree(p, o->m_usMemSizeAndFlags);
@@ -1719,7 +1719,7 @@ void AudioNodeSub::hkpShapeDisplayViewer_entityRemovedCallback(AudioParam* entit
 
 struct S_00d65970_Item;
 
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }

@@ -1436,7 +1436,7 @@ struct NewScene
     int unk0A4;
     int unk0A8;
     NewScene(unsigned);
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct NewCamera
@@ -1511,7 +1511,7 @@ struct NewCamera
     int unk10C;
     int unk110;
     NewCamera();
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct EngineView

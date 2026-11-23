@@ -122,7 +122,7 @@ struct ColorAX
 };
 struct MemObjX
 {
-    static void* operator new(unsigned int auiSize);
+    static void* operator new(size_t auiSize);
     static void operator delete(void* apMem);
 };
 struct LeafDataX : public MemObjX
@@ -460,7 +460,7 @@ struct Geometry
     int unkb8;
     int unkbc;
     int unkc0;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Geometry(GeometryData*);
     void NiAVObject_AttachProperty(Property*);
@@ -674,7 +674,7 @@ struct Tree
     int unkec;
     int unkf0;
     int unkf4;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Tree(Model*, Object*);
     void UpdateProperties();

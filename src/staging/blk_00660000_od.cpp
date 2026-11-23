@@ -886,7 +886,7 @@ BSSimpleList<int>* BSSimpleList_GetNext_Thunk(BSSimpleList<int>* a)
     return a->GetNext();
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 struct FUN_0044d000
@@ -911,7 +911,7 @@ FUN_0044d000* __thiscall FUN_00665e30_Class::LockFreeMap_TESObjectREFR_BSTreeNod
                             (int)(data + index * 3 + 2));
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct DetectionViewData;
 
@@ -970,7 +970,7 @@ void DetectionViewData::ActorCause_LoadGameBGS(BGSLoadGameBuffer* buffer)
     }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl ReportAssertionViolation(char const*, int);
 
 struct FUN_0067caa0
@@ -1071,7 +1071,7 @@ void __cdecl CallWithUninitializedFlag(void* a1)
     BSSimpleList_GetNext_Thunk(a1, flag);
 }
 
-void* operator new(unsigned int uiSize, void* pvWhere);
+void* operator new(size_t uiSize, void* pvWhere);
 
 struct C6602B0Entry
 {
@@ -1109,7 +1109,7 @@ extern "C" void __cdecl Object_DispatchIteratorRange_006603a0(void* a, void* b, 
 
 // std::_Construct for a 0x58-byte element: copy-construct in place.
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct C60490Element
@@ -1836,7 +1836,7 @@ struct FUN_006e6da0
 {
     int a;
 };
-void* __cdecl operator new(unsigned int uiSize, FUN_006e6da0* pPlace);
+void* __cdecl operator new(size_t uiSize, FUN_006e6da0* pPlace);
 inline void __cdecl operator delete(void*, FUN_006e6da0*)
 {}
 class FUN_0065fa80

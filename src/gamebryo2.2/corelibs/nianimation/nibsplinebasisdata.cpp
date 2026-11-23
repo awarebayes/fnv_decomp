@@ -134,7 +134,7 @@ FUN_00a51ab0_cls* FUN_00a51ab0_cls::NiBSplineColorInterpolator_NiBSplineColorInt
 
 void* __cdecl Object_DispatchCommandFour(unsigned int uiSize);
 
-inline void* operator new(unsigned int, void* pMemory) throw()
+inline void* operator new(size_t, void* pMemory) throw()
 {
     return pMemory;
 }

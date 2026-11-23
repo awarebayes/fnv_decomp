@@ -110,7 +110,7 @@ struct PropertyCloneRoutines
 void* __cdecl Object_DispatchCommandFour(unsigned int);
 void __stdcall CreateVertexBufferSet(void*, int);
 
-void* __cdecl operator new(unsigned int, void* p)
+void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

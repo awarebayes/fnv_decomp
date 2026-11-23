@@ -77,7 +77,7 @@ struct RefObj
     short m_sReferenceCount;
 };
 
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

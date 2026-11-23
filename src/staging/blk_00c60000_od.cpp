@@ -554,7 +554,7 @@ struct FUN_00c600c0_class
 {
     void* __thiscall UpdateState_00c5fd50();
     void* __thiscall FUN_00c600c0(unsigned int flags);
-    static void __cdecl operator delete(void* p, unsigned int size);
+    static void __cdecl operator delete(void* p, size_t size);
 };
 
 // Calls FUN_00c5fd50, then frees this with operator delete when flags has bit 0 set, and returns this.
@@ -572,7 +572,7 @@ struct FUN_00c613a0_Class
 {
     void __thiscall FUN_00c613a0();
     void* __thiscall FUN_00c617e0(unsigned int flags);
-    void operator delete(void* p, unsigned int size);
+    void operator delete(void* p, size_t size);
 };
 // @fnv 0x00c617e0
 // pdb: BSWArray::`scalar deleting destructor' | BSWArray.obj | debug, object-file run extension, low
@@ -652,7 +652,7 @@ void __thiscall FUN_00c63970_class::BSParentVelocityModifier_SaveBinary(void* ar
 }
 
 void __cdecl FUN_00c63b40(void* p);
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64610_Class
 {
     void __thiscall FUN_00c63b40();
@@ -891,7 +891,7 @@ struct FUN_00c61b10
     char m_iWordAt00[0x6c];
     FUN_00c61b10();
     ~FUN_00c61b10();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 // Allocates and constructs a new FUN_00c61b10 object, returning the pointer.
 // @fnv 0x00c61e70
@@ -1114,7 +1114,7 @@ bool FUN_00c60a10_Class::BSPSysSimpleColorModifier_IsEqual(NiObject* pkObject)
 }
 
 void __cdecl FUN_00c31750(void);
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c60d10_Class
 {
@@ -1135,7 +1135,7 @@ void* FUN_00c60d10_Class::FUN_00c60d10(unsigned int flags)
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct FUN_00c612b0_Class : A51BF0Base
@@ -1191,7 +1191,7 @@ extern unsigned int _data_011c16bc;
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct FUN_00c61bc0_class
@@ -1227,7 +1227,7 @@ void FUN_00c63900_class::LoadModifierData(NiStream& arStream)
     ReadBinaryValue<unsigned int>(arStream, *reinterpret_cast<unsigned int*>(reinterpret_cast<char*>(this) + 0x20));
 }
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c31750_Class
 {
@@ -1290,7 +1290,7 @@ struct A51BF0Base
 {
     char m_ucUnknownByte[0x40];
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct FUN_00c63ab0 : public A51BF0Base
@@ -1377,7 +1377,7 @@ FUN_0043ba10_shell* FUN_00c64dc0_Class::BSAttachPointPair_SetChild(unsigned int 
     return m_iWordAt04.AssignInternedString(arChild);
 }
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c64e70_Class
 {
@@ -1402,7 +1402,7 @@ struct SpawnedObject_b9118
 {
     char m00[0x60];
     SpawnedObject_b9118();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -1763,7 +1763,7 @@ struct ParticlePositionClone : ParticlePositionModifierConstruction
 {
     unsigned char data[0x3c - sizeof(ParticlePositionModifierConstruction)];
 
-    static __forceinline void* __cdecl operator new(unsigned int size)
+    static __forceinline void* __cdecl operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -1790,7 +1790,7 @@ struct PositionModifierObject_b9439
 {
     char m00[0x3c];
     PositionModifierObject_b9439();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

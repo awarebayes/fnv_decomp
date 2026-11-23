@@ -93,8 +93,8 @@ class MotionType56D
 class Shape56D
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
     void* GetShape();
     void* m_pvVtable;
     int unk04;
@@ -161,8 +161,8 @@ class BodyCinfo56D
 class BoxBody56D
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
     BoxBody56D(BoxBodyCinfo56D& kInfo);
     unsigned int unk00;
     unsigned int unk04;
@@ -175,8 +175,8 @@ class BoxBody56D
 class Body56D
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
     Body56D(BodyCinfo56D& kInfo);
     void SetTransform(const NiTransform& arTrans);
     unsigned int unk00;
@@ -192,8 +192,8 @@ class Node56D;
 class Collision56D
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
     Collision56D(Node56D* pkNode);
     unsigned int unk00;
     unsigned int unk04;
@@ -205,8 +205,8 @@ class Collision56D
 class Property56D
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
     Property56D();
     void SetMode(int iMode, int iFlags);
     unsigned int unk00;

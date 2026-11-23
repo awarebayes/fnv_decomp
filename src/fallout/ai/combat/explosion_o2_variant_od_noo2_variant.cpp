@@ -720,7 +720,7 @@ struct FloatConfiguredObject
 void* __cdecl Object_DispatchCommandFour(unsigned int n);
 struct BigObj
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk04;
     int unk08;
@@ -836,7 +836,7 @@ struct PathReq
 };
 struct InitObj
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk00;
     int unk04;
@@ -850,7 +850,7 @@ struct InitObj
 // pdb: structure Sphere, size 0x10 (here 0x14), 2 members
 struct Sphere
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk00;
     int unk04;
@@ -937,7 +937,7 @@ void* __cdecl bhkCollisionFilter_GetNewSystemGroup();
 void* __cdecl Modelloader_GetReferencedThis(void* a);
 struct Body
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk00;
     int unk04;
@@ -954,7 +954,7 @@ struct Body
 };
 struct Acc
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk00;
     int unk04;

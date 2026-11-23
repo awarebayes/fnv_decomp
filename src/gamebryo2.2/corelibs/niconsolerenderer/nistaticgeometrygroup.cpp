@@ -298,7 +298,7 @@ struct S_00e948f0_Pool
 };
 extern S_00e948f0_Pool DAT_011f6238;
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -540,7 +540,7 @@ struct S00e94b80_Heap
 {
 };
 static S00e94b80_Heap s00e94b80_heap;
-inline void* operator new(unsigned int n, S00e94b80_Heap) throw()
+inline void* operator new(size_t n, S00e94b80_Heap) throw()
 {
     return Object_DispatchCommandFour(n);
 }

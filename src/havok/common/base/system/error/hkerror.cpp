@@ -86,7 +86,7 @@ class CB1600ReferencedObject
 class CB1600MemoryStreamWriter : public CB1600ReferencedObject
 {
   public:
-    static void* operator new(unsigned int, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

@@ -101,7 +101,7 @@ class B9F30Property
   public:
     B9F30Property(B9F30Geometry* pkGeometry, int m_iPassId, ...);
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kB9F30MemoryManager.Allocate(uiSize);
     }

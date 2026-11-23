@@ -161,7 +161,7 @@ struct FUN_00b617f0
     unsigned int m_38;
     unsigned int m_3c;
     FUN_00b617f0();
-    static void* operator new(unsigned int s)
+    static void* operator new(size_t s)
     {
         return g_memoryManager.Allocate(s);
     }
@@ -198,7 +198,7 @@ struct FUN_00bd8f90
     {
         return m_usFirstValue - m_usSecondValue;
     }
-    static void* operator new(unsigned int s)
+    static void* operator new(size_t s)
     {
         return g_memoryManager.Allocate(s);
     }
@@ -313,11 +313,11 @@ struct TallGrassShaderPropertyInstance
     int m_94;
     TallGrassShaderPropertyInstance();
     // This property uses the same allocator as BSFadeNode, but has its own layout.
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }
-    static void operator delete(void* pointer, unsigned int size)
+    static void operator delete(void* pointer, size_t size)
     {
         BSFadeNode::operator delete(pointer, size);
     }

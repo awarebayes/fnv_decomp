@@ -317,7 +317,7 @@ struct FUN_00a5a390_shell {
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, unsigned int);
+void __cdecl operator delete(void* p, size_t);
 void __cdecl NiShaderConstantMapEntry_InitializeAttribTable();
 void __cdecl NiShaderConstantMapEntry_SDMInit_NiShaderConstantMapEntry_InitializeObjectTable();
 void __cdecl NiShaderConstantMapEntry__SDMInit();
@@ -712,7 +712,7 @@ struct S_00a8f2c0_Obj {
     int unk08;
     int unk0c;
     S_00a8f2c0_Sub sub;
-    static void* operator new(unsigned int n) { return BSFadeNode::operator new(n); }
+    static void* operator new(size_t n) { return BSFadeNode::operator new(n); }
     S_00a8f2c0_Obj() throw() {
         FUN_00a5d3a0();
         vft = (void*)&DAT_0109f4dc;
@@ -1068,7 +1068,7 @@ struct FnvQueueState {
 void __cdecl NiParallelUpdateTaskManager_EndUpdate();
 class BA87920Base {
 public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA87920Base() throw();
     virtual ~BA87920Base();
@@ -1357,7 +1357,7 @@ struct FUN_00a5e3a0_Helper { void* Game_DoHeapAlloc(unsigned int); };
 struct PixelRow4 {
     unsigned char rgba[4];
     PixelRow4() {}
-    static void* operator new[](unsigned int size) {
+    static void* operator new[](size_t size) {
         return ((FUN_00a5e3a0_Helper*)&DAT_011f6238)->Game_DoHeapAlloc(size);
     }
 };
@@ -1508,7 +1508,7 @@ struct SpawnedRecord {
     int m_i3;
     SpawnedRecord() throw();
     ~SpawnedRecord() {}
-    static void* operator new[](unsigned int size) throw() { return reinterpret_cast<P03MM*>(&DAT_011f6238)->Allocate(size); }
+    static void* operator new[](size_t size) throw() { return reinterpret_cast<P03MM*>(&DAT_011f6238)->Allocate(size); }
 };
 
 // @fnv 0x00a90290

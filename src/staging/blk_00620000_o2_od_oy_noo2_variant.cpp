@@ -91,8 +91,8 @@ void CollisionPair::CameraCaster_Init(float afRadius, unsigned int aiGroup)
 
 struct xMemObj
 {
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* p, size_t);
 };
 class __declspec(align(16)) xSub20
 {
@@ -1366,8 +1366,8 @@ struct __declspec(align(16)) xCinfo
 };
 struct xNiAlloc
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct xBody : xNiAlloc
 {
@@ -2798,7 +2798,7 @@ NodeV* __cdecl FUN_0043b610(void* pvRef);
 
 struct SmoothEntryV
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     BodyV* m_pkBody;
     void* m_pvRef;
     float m_fTime;
@@ -2980,7 +2980,7 @@ NodeV* __cdecl FUN_0043b610(void* pvRef);
 
 struct SmoothEntryV
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pv);
     BodyV* m_pkBody;
     void* m_pvRef;
@@ -3174,8 +3174,8 @@ struct __declspec(align(16)) xCinfo
 };
 struct xNiAlloc
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct xBody : xNiAlloc
 {

@@ -438,7 +438,7 @@ struct BroadPhaseHandlePair
     CollidableD020* m_pkB;
 };
 void __stdcall NotifyPhantomCollision(BroadPhaseHandlePair* pkPair);
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

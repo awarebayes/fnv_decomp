@@ -1135,7 +1135,7 @@ public:
 void Runtime_DestroySubobject_00dfb550(DFB550Object* pkObject);
 extern int hkaWaveletCompressedAnimationClass; // src: XBOX_RETAIL_PDB 0x0126ad90 (old: DAT_0126ad90/g_0126ad90)
 int* __cdecl Object_GetGlobalObjectAddress_00dfb560();
-inline void* operator new(unsigned int, void* pvWhere) throw() { return pvWhere; }
+inline void* operator new(size_t, void* pvWhere) throw() { return pvWhere; }
 struct DFB570FinishFlag {
     int m_bFinishing;
 };
@@ -2121,7 +2121,7 @@ class DFF2E0Object {
 public:
     DFF2E0Object(DFF2E0FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
 };
 void Object_ConstructInPlace(void* p, int finishing);
 extern int hkpMountedBallGunClass; // src: XBOX_RETAIL_PDB 0x0126d370 (old: DAT_0126d370/g_0126d370)
@@ -2150,7 +2150,7 @@ class DFF520Object {
 public:
     DFF520Object(DFF520FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p) { return p; }
+    static void* operator new(size_t, void* p) { return p; }
 };
 void Object_ConstructInPlace_00dff520(void* p, int finishing);
 extern int DAT_0126d490;

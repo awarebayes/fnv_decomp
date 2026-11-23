@@ -138,7 +138,7 @@ struct FUN_00537ca0_class
     const char* const* NiAdditionalGeometryData_GetRTTI();
 };
 struct FUN_00a73080_holder { void NiAdditionalGeometryData_dtor(); };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00540800_Class {
     void UpdateFields_00540800();
@@ -151,7 +151,7 @@ struct FUN_00537d00_Class {
 struct FUN_00537d10_Class {
     void FUN_00537d40();
     void* FUN_00537d10(unsigned int flags);
-    static void operator delete(void* p, unsigned int size);
+    static void operator delete(void* p, size_t size);
 };
 struct QuantityData { void SetQuantity(unsigned int); };
 
@@ -214,7 +214,7 @@ struct FUN_00539fc0_Class
 {
     GlobalObjectO2_00a7b610* NiBinaryExtraData_GetRTTI();
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_0053a000 {
     void __thiscall Destruct();
 };
@@ -390,7 +390,7 @@ struct FUN_0053a630_Class : public FUN_0053ae30_class {
     int TESObjectLAND_GetMainTexture_0053a630(unsigned char acBlock, unsigned short asVertIndex);
 };
 struct A51BF0Base {
-    static void* operator new(unsigned int); static void operator delete(void*, unsigned int);
+    static void* operator new(size_t); static void operator delete(void*, size_t);
 };
 struct FUN_00537d60 : A51BF0Base {
     char _pad[0x18];
@@ -675,8 +675,8 @@ struct S_00539280_Owner {
 };
 
 struct Texture960 {Texture960* NiAVObject_GetParent();void* BGSTextureSet_GetAsShaderTextureSet();unsigned char TESLandTexture_GetSpecularExponent();};
-struct Property960 {virtual void v000();virtual void v004();virtual void v008();virtual void v00c();virtual void v010();virtual void v014();virtual void v018();virtual void v01c();virtual void v020();virtual void v024();virtual void v028();virtual void v02c();virtual void v030();virtual void v034();virtual void v038();virtual void v03c();virtual void v040();virtual void v044();virtual void v048();virtual void v04c();virtual void v050();virtual void v054();virtual void v058();virtual void v05c();virtual void v060();virtual void v064();virtual void v068();virtual void v06c();virtual void v070();virtual void v074();virtual void v078();virtual void v07c();virtual void v080();virtual void v084();virtual void v088();virtual void v08c();virtual void v090();virtual void v094();virtual void v098();virtual void v09c();virtual void v0a0();virtual void v0a4();virtual void v0a8();virtual void v0ac();virtual void v0b0();virtual void v0b4();virtual void v0b8();virtual void v0bc();virtual void v0c0();virtual void v0c4();virtual void v0c8();virtual void v0cc();virtual void v0d0();virtual void* vd4(void*);unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;unsigned unk01c;unsigned unk020;unsigned unk024;unsigned unk028;unsigned unk02c;unsigned unk030;unsigned unk034;unsigned unk038;unsigned unk03c;unsigned unk040;unsigned unk044;unsigned unk048;unsigned unk04c;unsigned unk050;unsigned unk054;unsigned unk058;unsigned unk05c;unsigned unk060;unsigned unk064;unsigned unk068;unsigned unk06c;unsigned unk070;unsigned unk074;unsigned unk078;unsigned unk07c;unsigned unk080;unsigned unk084;unsigned unk088;unsigned unk08c;unsigned unk090;unsigned unk094;unsigned unk098;unsigned unk09c;unsigned unk0a0;unsigned unk0a4;unsigned unk0a8;unsigned unk0ac;unsigned unk0b0;unsigned unk0b4;unsigned unk0b8;unsigned unk0bc;unsigned unk0c0;unsigned unk0c4;unsigned unk0c8;unsigned unk0cc;unsigned unk0d0;unsigned unk0d4;unsigned unk0d8;unsigned unk0dc;unsigned unk0e0;unsigned unk0e4;unsigned unk0e8;unsigned unk0ec;unsigned unk0f0;unsigned unk0f4;unsigned unk0f8;unsigned unk0fc;unsigned unk100;Property960();static void* operator new(unsigned); static void operator delete(void*, unsigned int);void FUN_005a8060(int);void BSShaderPPLightingProperty_SetLandscapeTextureSet(int,void*);void BSShaderPPLightingProperty_SetLandscapeSpecularExponents(unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,int,int,int);void BSShaderPPLightingProperty_StoreExtraDataPointers(void*);};
-struct Binary960 {unsigned unk00,unk04,unk08,unk0c,unk10;Binary960(unsigned,unsigned char*);static void* operator new(unsigned); static void operator delete(void*, unsigned int);};
+struct Property960 {virtual void v000();virtual void v004();virtual void v008();virtual void v00c();virtual void v010();virtual void v014();virtual void v018();virtual void v01c();virtual void v020();virtual void v024();virtual void v028();virtual void v02c();virtual void v030();virtual void v034();virtual void v038();virtual void v03c();virtual void v040();virtual void v044();virtual void v048();virtual void v04c();virtual void v050();virtual void v054();virtual void v058();virtual void v05c();virtual void v060();virtual void v064();virtual void v068();virtual void v06c();virtual void v070();virtual void v074();virtual void v078();virtual void v07c();virtual void v080();virtual void v084();virtual void v088();virtual void v08c();virtual void v090();virtual void v094();virtual void v098();virtual void v09c();virtual void v0a0();virtual void v0a4();virtual void v0a8();virtual void v0ac();virtual void v0b0();virtual void v0b4();virtual void v0b8();virtual void v0bc();virtual void v0c0();virtual void v0c4();virtual void v0c8();virtual void v0cc();virtual void v0d0();virtual void* vd4(void*);unsigned unk004;unsigned unk008;unsigned unk00c;unsigned unk010;unsigned unk014;unsigned unk018;unsigned unk01c;unsigned unk020;unsigned unk024;unsigned unk028;unsigned unk02c;unsigned unk030;unsigned unk034;unsigned unk038;unsigned unk03c;unsigned unk040;unsigned unk044;unsigned unk048;unsigned unk04c;unsigned unk050;unsigned unk054;unsigned unk058;unsigned unk05c;unsigned unk060;unsigned unk064;unsigned unk068;unsigned unk06c;unsigned unk070;unsigned unk074;unsigned unk078;unsigned unk07c;unsigned unk080;unsigned unk084;unsigned unk088;unsigned unk08c;unsigned unk090;unsigned unk094;unsigned unk098;unsigned unk09c;unsigned unk0a0;unsigned unk0a4;unsigned unk0a8;unsigned unk0ac;unsigned unk0b0;unsigned unk0b4;unsigned unk0b8;unsigned unk0bc;unsigned unk0c0;unsigned unk0c4;unsigned unk0c8;unsigned unk0cc;unsigned unk0d0;unsigned unk0d4;unsigned unk0d8;unsigned unk0dc;unsigned unk0e0;unsigned unk0e4;unsigned unk0e8;unsigned unk0ec;unsigned unk0f0;unsigned unk0f4;unsigned unk0f8;unsigned unk0fc;unsigned unk100;Property960();static void* operator new(size_t); static void operator delete(void*, size_t);void FUN_005a8060(int);void BSShaderPPLightingProperty_SetLandscapeTextureSet(int,void*);void BSShaderPPLightingProperty_SetLandscapeSpecularExponents(unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,int,int,int);void BSShaderPPLightingProperty_StoreExtraDataPointers(void*);};
+struct Binary960 {unsigned unk00,unk04,unk08,unk0c,unk10;Binary960(unsigned,unsigned char*);static void* operator new(size_t); static void operator delete(void*, size_t);};
 const char* __cdecl BSShaderManager_GetTexPercTag();
 struct Geometry960 {void NiGeometry_SetAdditionalGeometryData(void*);void NiAVObject_AttachProperty(Property960*);};
 struct Node960 {void NiObjectNET_AddExtraData(const char*,Binary960*);Geometry960* NiNode_GetAtChecked(unsigned);};
@@ -1459,7 +1459,7 @@ struct CleanupOwner {
     void Finish();
     bool TESObjectLAND_UnLoadVertices();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl ourMemset(void*, int, unsigned int);
 
 extern NiPoint3 DAT_011f426c;
@@ -1799,7 +1799,7 @@ struct Output538c00
     unsigned int m2c;
 
     Output538c00();
-    static void* operator new(unsigned int nbytes) { return Object_AllocateStorage_0056d280(nbytes); } static void operator delete(void*);
+    static void* operator new(size_t nbytes) { return Object_AllocateStorage_0056d280(nbytes); } static void operator delete(void*);
 
 };
 struct FUN_00538c00_Class
@@ -2176,8 +2176,8 @@ int __cdecl FloatToInt(float fValue);
 namespace TESLandInit {
 
 struct LandMemObject {
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void* apMem, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void* apMem, size_t);
 };
 
 struct LandTexturePtr {
@@ -2452,7 +2452,7 @@ struct Geometry5371 {
     unsigned int unkb8;
     unsigned int unkbc;
     unsigned int unkc0;
-    static void* operator new(unsigned int); static void operator delete(void*, unsigned int);
+    static void* operator new(size_t); static void operator delete(void*, size_t);
     Geometry5371(unsigned short, NiPoint3*, NiPoint3*, void*, NiPoint2*, unsigned short, unsigned short, unsigned short, unsigned short, unsigned short*, unsigned short*);
     void NiAVObject_SetTranslate(const NiPoint3&);
     void SetName(const NiFixedString&);

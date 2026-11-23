@@ -577,7 +577,7 @@ class BA94DD0CloningProcess;
 class BA94DD0FadeNode
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BA94DD0FadeNode() throw();
     virtual ~BA94DD0FadeNode();

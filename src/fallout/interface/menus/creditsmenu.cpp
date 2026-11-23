@@ -523,8 +523,8 @@ struct CreditFixedString
 
 struct CreditMemObject
 {
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void* apMem, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void* apMem, size_t);
 };
 
 struct CreditProperty : CreditMemObject
@@ -1176,8 +1176,8 @@ struct CreditMaterial
     int unk14;
     int unk18;
     CreditMaterial();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiAlphaProperty_SetAlphaBlending(bool);
 };
 struct CreditSceneNode
@@ -1281,8 +1281,8 @@ struct CreditSceneNode
     int unka4;
     int unka8;
     CreditSceneNode(int);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiAVObject_SetTranslate(const CreditPoint&);
     void NiAVObject_AttachProperty(CreditMaterial*);
     void NiAVObject_SetTranslate_004bc1f0(float, float, float);
@@ -1291,19 +1291,19 @@ struct CreditSceneNode
 };
 void* Object_DispatchCommandFour(unsigned int);
 void FUN_00aa13f0(void*);
-__forceinline void* CreditSceneNode::operator new(unsigned int n)
+__forceinline void* CreditSceneNode::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
-__forceinline void CreditSceneNode::operator delete(void* p, unsigned int)
+__forceinline void CreditSceneNode::operator delete(void* p, size_t)
 {
     FUN_00aa13f0(p);
 }
-__forceinline void* CreditMaterial::operator new(unsigned int n)
+__forceinline void* CreditMaterial::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
-__forceinline void CreditMaterial::operator delete(void* p, unsigned int)
+__forceinline void CreditMaterial::operator delete(void* p, size_t)
 {
     FUN_00aa13f0(p);
 }

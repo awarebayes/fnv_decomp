@@ -985,7 +985,7 @@ void* FUN_0062e0a0_List::RemoveFirstNode()
     return pValue;
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 struct FUN_0062cb90_Entry
 {

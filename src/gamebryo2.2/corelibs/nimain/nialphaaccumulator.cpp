@@ -226,7 +226,7 @@ struct Derived_a43370 : Base1_a43370
     Ptr_a43370 unk20;
     Derived_a43370() throw()
     {}
-    static void* __cdecl operator new(unsigned int s) throw()
+    static void* __cdecl operator new(size_t s) throw()
     {
         return Object_DispatchCommandFour(s);
     }

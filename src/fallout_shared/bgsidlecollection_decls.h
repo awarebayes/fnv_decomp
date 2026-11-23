@@ -22,7 +22,7 @@ template <int N> struct EndianSizeTag
 {
 };
 void BSEndian(unsigned int*, EndianSizeTag<4>);
-void* operator new[](unsigned int);
+void* operator new[](size_t);
 void operator delete[](void*);
 extern "C" void* memset(void*, int, unsigned int);
 #endif

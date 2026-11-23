@@ -264,7 +264,7 @@ struct EntryPod70
     int unk0c;
     int unk10;
 
-    static void* operator new[](unsigned int aSize)
+    static void* operator new[](size_t aSize)
     {
         return DAT_011f6238.Game_DoHeapAlloc(aSize);
     }
@@ -506,7 +506,7 @@ struct S_a873b0_Stream
 };
 struct S_a873b0_E : Entry
 {
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }

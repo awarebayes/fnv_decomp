@@ -2440,8 +2440,8 @@ struct XLoc
 struct XDoor
 {
     XDoor(XObj* apParent, float afLifetime, XRef* arDecalData);
-    static void* operator new(unsigned int sz);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t sz);
+    static void operator delete(void*, size_t);
     char pad0[0x1a];
     unsigned char m1a;
     unsigned char m1b;
@@ -2756,8 +2756,8 @@ struct DNode : DObj
     unsigned unka8;
     BgsdecalmanagerDListView* effects;
     unsigned unkb0;
-    static void* operator new(unsigned);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     DNode(DArray*, bool);
 };
 struct DOneArg
@@ -2864,8 +2864,8 @@ struct DSkin : DOneArg
     unsigned unka0;
     unsigned unka4;
     unsigned unka8;
-    static void* operator new(unsigned);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     DSkin(unsigned);
 };
 struct DEffect : DObj
@@ -2894,8 +2894,8 @@ struct DEffect : DObj
     unsigned unk58;
     unsigned unk5c;
     unsigned unk60;
-    static void* operator new(unsigned);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     DEffect(unsigned, float, DArg*, DObj*, DVec, DVec, float, float, unsigned);
 };
 struct DParentInterface

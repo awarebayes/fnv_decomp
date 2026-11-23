@@ -2404,7 +2404,7 @@ struct SpawnedItem_b10003
     unsigned int unk10;
     unsigned int unk14;
     SpawnedItem_b10003();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return FormHeap_Allocate(size);
     }
@@ -2433,7 +2433,7 @@ SpawnedItem_b10003** FUN_00478e90_This::AllocateSpawnedItemArray(unsigned char c
     return pItemArray;
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 struct FUN_0048a3d0;
 typedef void(__thiscall* CopyMethod)(FUN_0048a3d0*, const FUN_0048a3d0*);
 typedef void*(__thiscall* ReleaseMethod)(FUN_0048a3d0*, int);

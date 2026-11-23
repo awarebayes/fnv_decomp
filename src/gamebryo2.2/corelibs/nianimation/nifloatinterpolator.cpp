@@ -567,7 +567,7 @@ class A3C8D0_Object : public NiKeyBasedInterpolator
     int m_10;
     NiPointer<NiObject> m_14;
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

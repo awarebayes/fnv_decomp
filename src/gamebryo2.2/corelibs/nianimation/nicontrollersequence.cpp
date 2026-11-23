@@ -264,7 +264,7 @@ void NiControllerSequence::AttachInterpolators(char cPriority)
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 
@@ -2201,7 +2201,7 @@ static inline NiMultiTargetTransformController* ConstructMultiTargetController(
     controller->AllocateStorage(count);
     return controller;
 }
-void* __cdecl operator new(unsigned int, void* p)
+void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

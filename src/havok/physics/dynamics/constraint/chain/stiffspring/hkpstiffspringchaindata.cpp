@@ -232,7 +232,7 @@ void __cdecl hk1dLinearBilateralConstraintBuildJacobianWithCustomRhs_noSchema(co
                           SolverSchemaHeader* schema, hkReal customRhs) throw();
 void __cdecl hkStiffSpringChainBuildJacobian(int numConstraints, hkReal tau, hkReal damping, hkReal cfm, int* accumulators, hkUint32 accumBase,
                           SolverSchemaHeader* jacobiansEnd, const SixteenWordFloatRecord& in, QueryResultSchema& out) throw();
-__forceinline void* __cdecl operator new(unsigned int, void* p) throw()
+__forceinline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

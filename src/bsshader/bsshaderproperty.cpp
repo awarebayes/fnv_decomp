@@ -246,7 +246,7 @@ void __fastcall BSShaderProperty_PostLinkObject(BSSP_stub* self, int, int arg)
 struct AllocElem
 {
     int v;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -346,7 +346,7 @@ void BB97550Shader::ImageSpaceManager_RenderEffect(unsigned int uiPassIndex, int
 struct S_00ba8c50_Slot
 {
     ShadowSceneLight* light;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

@@ -263,7 +263,7 @@ struct StreamHeap
 };
 extern StreamHeap DAT_011f6238;
 
-inline void* operator new[](unsigned int size)
+inline void* operator new[](size_t size)
 {
     return DAT_011f6238.Alloc(size);
 }
@@ -318,7 +318,7 @@ struct IntegerEntry
         m_0c = 0;
         m_0e = 0xff;
     }
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManagerShell.Allocate(size);
     }
@@ -416,7 +416,7 @@ struct NiIntStreamEntryC
     {
         return !((FUN_00c54cc0_cls*)this)->HasEqualFields((FUN_00c54cc0_cls*)&kOther);
     }
-    static void* operator new[](unsigned int stSize)
+    static void* operator new[](size_t stSize)
     {
         return ((NiIntStreamMemoryC*)&g_memoryManager)->Allocate(stSize);
     }

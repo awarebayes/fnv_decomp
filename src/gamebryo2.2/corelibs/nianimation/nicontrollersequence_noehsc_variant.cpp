@@ -124,7 +124,7 @@ struct FUN_00a30900_shell
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 struct FUN_00a316a0_shell
 {
@@ -1254,7 +1254,7 @@ template <class T> struct ClonePtr
         }
         return *this;
     }
-    static void* operator new[](unsigned int size, MemoryManager& memory = _g_memoryManager) throw()
+    static void* operator new[](size_t size, MemoryManager& memory = _g_memoryManager) throw()
     {
         return memory.Allocate(size);
     }
@@ -1273,7 +1273,7 @@ struct FUN_00a31240
     void* blend;
     unsigned char blendIndex, priority, unk0e, unk0f;
     FUN_00a31240() throw();
-    static void* operator new[](unsigned int size, MemoryManager& memory = _g_memoryManager) throw()
+    static void* operator new[](size_t size, MemoryManager& memory = _g_memoryManager) throw()
     {
         return memory.Allocate(size);
     }
@@ -1284,7 +1284,7 @@ struct FUN_00a31680
     FUN_00a31680() throw();
     ~FUN_00a31680();
     void NiControllerSequence_IDTag_Operator_Set(const FUN_00a31680&);
-    static void* operator new[](unsigned int size, MemoryManager& memory = _g_memoryManager) throw()
+    static void* operator new[](size_t size, MemoryManager& memory = _g_memoryManager) throw()
     {
         return memory.Allocate(size);
     }
@@ -1400,7 +1400,7 @@ struct InterpArrayItem
             m_spControllerInterpolator->DecRefCount();
     }
     InterpArrayItem& operator=(const InterpArrayItem& kItem);
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -1433,7 +1433,7 @@ struct IDTag
             InterlockedDecrement((long volatile*)(pc - 8));
     }
     IDTag& operator=(const IDTag& kTag);
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -1493,8 +1493,8 @@ struct Memory71
 };
 struct Array71
 {
-    static void operator delete[](void*, unsigned int);
-    static void* operator new[](unsigned int n) throw()
+    static void operator delete[](void*, size_t);
+    static void* operator new[](size_t n) throw()
     {
         return reinterpret_cast<Memory71&>(DAT_011f6238).Game_DoHeapAlloc(n);
     }

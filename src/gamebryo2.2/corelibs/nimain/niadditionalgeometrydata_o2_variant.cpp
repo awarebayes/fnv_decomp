@@ -288,7 +288,7 @@ struct SceneElem
     unsigned int unk18;
 
     SceneElem() throw();
-    static void* operator new[](unsigned int size) throw()
+    static void* operator new[](size_t size) throw()
     {
         return DAT_011f6238.Alloc(size);
     }
@@ -407,7 +407,7 @@ Obj_a73e20* __cdecl NiAdditionalGeometryData_CreateObject()
 struct Impl00a8a680
 {
     Impl00a8a680(int usVertices, int pkVertex, int pkColor, int pkTexture, int usNumTextureSets, int eNBTMethod, int pkFlags) throw();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     int unk00;
     int unk04;
     int unk08;
@@ -492,7 +492,7 @@ struct LBMemoryManager
 
 extern LBMemoryManager g_kLBMemoryManager;
 
-inline void* __cdecl operator new[](unsigned int auiSize)
+inline void* __cdecl operator new[](size_t auiSize)
 {
     return g_kLBMemoryManager.Allocate(auiSize);
 }

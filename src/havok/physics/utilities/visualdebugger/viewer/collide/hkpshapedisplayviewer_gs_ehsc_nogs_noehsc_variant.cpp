@@ -329,7 +329,7 @@ struct PendingNode
         m_08 = 0;
         m_0c = 0x80000000u;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         hkMemoryRouter* holder = (hkMemoryRouter*)hkMemoryRouter_getInstance();
         hkMemoryAllocator* alloc = reinterpret_cast<hkMemoryAllocator*>((&holder->heap()));
@@ -1141,7 +1141,7 @@ struct S65_Self : S65_Prim, S65_Sec
     void hkpShapeDisplayViewer_entityAddedCallback(S65_Param* entity);
 };
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

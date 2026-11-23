@@ -158,7 +158,7 @@ struct S_de4d20_Grid
     int cellSize;
     unsigned int cellCap;
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(n);
     }

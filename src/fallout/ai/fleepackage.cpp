@@ -55,7 +55,7 @@ void FleePackage::AddAvoidedRef(TESObjectREFR* apRef)
         pAvoidRefList.AddHead(apRef);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 #include "../../../include/PACKAGE_PROCEDURE_TYPE.h"

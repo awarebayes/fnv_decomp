@@ -1092,7 +1092,7 @@ public:
         }
         m_pOwnerObject = apOwner;
     }
-    static void* operator new(unsigned int auiSize) { return g_mm.Allocate(auiSize); }
+    static void* operator new(size_t auiSize) { return g_mm.Allocate(auiSize); }
 };
 
 struct TemplateList_00a0ae70 {
@@ -1100,7 +1100,7 @@ struct TemplateList_00a0ae70 {
     TemplateList_00a0ae70* m_pkNext;
 
     TemplateList_00a0ae70(TileTemplate_00a0ae70* apItem) : m_item(apItem), m_pkNext(0) {}
-    static void* operator new(unsigned int auiSize) { return g_mm.Allocate(auiSize); }
+    static void* operator new(size_t auiSize) { return g_mm.Allocate(auiSize); }
 
     void AddTail(TileTemplate_00a0ae70** apItem) {
         if (*apItem == 0) return;
@@ -1289,7 +1289,7 @@ struct TileTemplateNew_ac80 {
         m_kName = apName;
         m_pkOwnerManager = apOwner;
     }
-    static void* operator new(unsigned int auiSize) { return DAT_011f6238.Allocate(auiSize); }
+    static void* operator new(size_t auiSize) { return DAT_011f6238.Allocate(auiSize); }
     static void operator delete(void* apMem) { DAT_011f6238.Deallocate(apMem); }
 };
 struct FUN_00a0ac80 {
@@ -1534,7 +1534,7 @@ void TileWork::Tile_ApplyRotationOnChildren() {
 
 inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b) { return a > b ? a : b; }
 void* __cdecl memcpy(void*, const void*, unsigned int);
-void* operator new(unsigned int size);
+void* operator new(size_t size);
 void operator delete(void* memory);
 template <class T> inline BSStringT<T>::BSStringT() { Init(); }
 template <class T> inline void BSStringT<T>::Init() { pString = 0; SetLength(0); SetMaxLength(0); }
@@ -1588,7 +1588,7 @@ struct ReuseNode {
         owner = c;
     }
 };
-inline void* operator new(unsigned int size) { return g_mm.Allocate(size); }
+inline void* operator new(size_t size) { return g_mm.Allocate(size); }
 void operator delete(void* memory);
 // @fnv 0x00a0b950
 // src: COMMUNITY 0x00a0b950
@@ -2078,7 +2078,7 @@ struct SmallArray {
 // account for, so the factory keeps the view under its own name.
 namespace tile_factory {
 struct Tile3D_FactoryView : ::Tile {
-    static __forceinline void* operator new(unsigned int bytes) {
+    static __forceinline void* operator new(size_t bytes) {
         return DAT_011f6238.Allocate(bytes);
     }
     static __forceinline void operator delete(void* memory) {
@@ -2262,7 +2262,7 @@ extern MemoryManager DAT_011f6238;
 struct FUN_00a0ac80;
 typedef FUN_00a0ac80 XmlNode;
 struct FUN_00a0ac80 {
-    static __forceinline void* operator new(unsigned int bytes) {
+    static __forceinline void* operator new(size_t bytes) {
         return DAT_011f6238.Allocate(bytes);
     }
     static __forceinline void operator delete(void*) {}
@@ -2979,7 +2979,7 @@ struct ListNode_a0a130 {
     int m_item;
     ListNode_a0a130* m_pkNext;
     ListNode_a0a130() { m_item = 0; m_pkNext = 0; }
-    static void* operator new(unsigned int uiSize) { return DAT_011f6238.Allocate(uiSize); }
+    static void* operator new(size_t uiSize) { return DAT_011f6238.Allocate(uiSize); }
     static void operator delete(void* pvMem)
     {
         int unused[5];   // frame space the original's inlined pool free reserves (never touched)
@@ -3698,7 +3698,7 @@ struct ParsedToken {
     }
 };
 struct ParsedNode {
-    static void* operator new[](unsigned int bytes) { return FormHeap_Allocate(bytes); }
+    static void* operator new[](size_t bytes) { return FormHeap_Allocate(bytes); }
     ParsedNode* next;
     ParsedNode* previous;
     ParsedToken* value;
@@ -4098,7 +4098,7 @@ extern FadeList DAT_011f3348;
 int __cdecl Tile_TextToTrait(const char*);
 struct FUN_00ae83e0 {
     FadeRecord* item; FUN_00ae83e0* next;
-    static void* operator new(unsigned int size) {return g_memoryManager.Allocate(size);}
+    static void* operator new(size_t size) {return g_memoryManager.Allocate(size);}
     static void operator delete(void* p) {g_memoryManager.Deallocate(p);}
     ~FUN_00ae83e0();
     inline void RemoveAll() { while (next) { FUN_00ae83e0* after=next->next; next->next=0; delete next; next=after; } item=0; }

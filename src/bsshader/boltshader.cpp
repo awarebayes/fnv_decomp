@@ -723,7 +723,7 @@ extern MemoryManager _g_memoryManager;
 struct IndexU16
 {
     unsigned short value;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -734,7 +734,7 @@ void* __cdecl BoltShader_GetSegmentIndices();
 class FUN_00ba63e0 : public NiObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk08;
     int unk0c;
@@ -754,7 +754,7 @@ class FUN_00ba63e0 : public NiObject
 class FUN_00a7b630 : public NiObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk08;
     int unk0c;
@@ -780,7 +780,7 @@ class FUN_00a7b630 : public NiObject
 class FUN_00a74480 : public NiAVObject
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk9c;
     int unka0;
@@ -806,7 +806,7 @@ class FUN_00a74480 : public NiAVObject
 class FUN_00bc1d40 : public NiShadeProperty
 {
   public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     int unk20;
     int unk24;

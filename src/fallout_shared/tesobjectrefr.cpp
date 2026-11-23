@@ -5496,7 +5496,7 @@ void Dummy::EffectSetting_SetLight(MobileObject* apMobileObject)
 }
 }  // namespace fnv_0057bd60
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern float const DAT_01015f5c;
 float __fastcall TESObjectCELL_GetWaterHeight(void*);
 void* __fastcall FUN_0057c2a0(void*);
@@ -26392,7 +26392,7 @@ int FUN_00ec7750(const char*, const char*);
 void FUN_00406d30(char*, unsigned int, const char*);
 char* strrchr_0040ab30(char*, int);
 void __cdecl Warning_005b5e40(const char*, ...);
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 // @fnv 0x005659f0
 // src: COMMUNITY 0x005659f0
@@ -27984,7 +27984,7 @@ struct TargetNode : public TargetObj
 {
     TargetNode(unsigned short = 0);
     void* operator new(size_t);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     void SetName(const NiFixedString&);
     void RemoveAllChildren();
     void UpdateProperties();
@@ -31680,7 +31680,7 @@ void __cdecl TESObjectREFR_MoveRefToNewSpace(MoveRef* ref, MoveCell* apInterior,
 }  // namespace fnv_00573800
 
 namespace fnv_00574b30 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct RefOps;
 struct ExtraOps;
@@ -34445,8 +34445,8 @@ struct OBBGameAllocation
 {
     unsigned char storage[0x48];
     OBBGameAllocation();
-    static void* operator new(unsigned int size);
-    static void operator delete(void* object, unsigned int size);
+    static void* operator new(size_t size);
+    static void operator delete(void* object, size_t size);
 };
 
 struct Worker57
@@ -39620,7 +39620,7 @@ void ConvertWaterPoint(WaterVector4&, const WaterPoint3&);
 void ConvertWaterRotation(WaterQuaternion&, const WaterVector4&);
 struct WaterHavokAllocation
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     static void operator delete(void*);
 };
 struct WaterShape
@@ -39728,8 +39728,8 @@ struct __declspec(align(16)) WaterRigidBodyInfo
 };
 struct WaterGameAllocation
 {
-    static void* __cdecl operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct WaterNode;
 struct WaterExtraData : WaterGameAllocation
@@ -40245,8 +40245,8 @@ struct UpdateParams
 
 struct HeapObject
 {
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
 };
 
 struct Shape : HeapObject
@@ -45743,7 +45743,7 @@ class FUN_0055a2f0 : public TESObjectREFR
 {
   public:
     FUN_0055a2f0();
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 using ::MobileObject;
 using ::Character;
@@ -45758,7 +45758,7 @@ class FUN_008d4500 : public TESObjectREFR
         unk168, unk16C, unk170, unk174, unk178, unk17C, unk180, unk184, unk188, unk18C, unk190, unk194, unk198, unk19C,
         unk1A0, unk1A4, unk1A8, unk1AC, unk1B0, unk1B4, unk1B8, unk1BC;
     FUN_008d4500(bool);
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 class FUN_009b7a50 : public TESObjectREFR
 {
@@ -45769,7 +45769,7 @@ class FUN_009b7a50 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150, unk154, unk158, unk15C;
     FUN_009b7a50(bool);
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 class FUN_009b3fa0 : public TESObjectREFR
 {
@@ -45780,7 +45780,7 @@ class FUN_009b3fa0 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150;
     FUN_009b3fa0(bool);
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 class FUN_00978fd0 : public TESObjectREFR
 {
@@ -45791,7 +45791,7 @@ class FUN_00978fd0 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150;
     FUN_00978fd0(bool);
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 class FUN_009b3160 : public TESObjectREFR
 {
@@ -45802,7 +45802,7 @@ class FUN_009b3160 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150, unk154;
     FUN_009b3160(bool);
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 class FUN_009aaff0 : public TESObjectREFR
 {
@@ -45813,7 +45813,7 @@ class FUN_009aaff0 : public TESObjectREFR
         unkF8, unkFC, unk100, unk104, unk108, unk10C, unk110, unk114, unk118, unk11C, unk120, unk124, unk128, unk12C,
         unk130, unk134, unk138, unk13C, unk140, unk144, unk148, unk14C, unk150, unk154;
     FUN_009aaff0(bool);
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 };
 // Allocates a new TESObjectREFR subclass based on ucType and returns the pointer, or null if the type is unknown.
 // @fnv 0x00564480

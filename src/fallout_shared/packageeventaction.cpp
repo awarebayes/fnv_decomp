@@ -235,7 +235,7 @@ struct QuantityData
     void SetQuantity(unsigned int);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Copies quantity, flags and form ID from apCopy, then clones or clears the script pointer depending on whether apCopy has one.
 // @fnv 0x0067dad0

@@ -32,7 +32,7 @@ struct S_00ddfcd0_RefObj
     }
     virtual ~S_00ddfcd0_RefObj() throw()
     {}
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         S_00ddfcd0_RefObj* b = static_cast<S_00ddfcd0_RefObj*>(hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;

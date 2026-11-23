@@ -82,7 +82,7 @@ struct D2FA00MemoryRouter {
 namespace fnvc_adapt { extern "C" D2FA00MemoryRouter& __cdecl hkMemoryRouter_getInstance(); }
 class D2FA00ReferencedObject {
 public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D2FA00ReferencedObject* b = static_cast<D2FA00ReferencedObject*>(fnvc_adapt::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(nbytes));
 b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -503,7 +503,7 @@ extern char DAT_011b4284,DAT_01268ad4;
 struct SolSortState {};
 extern void __cdecl QuickSortRange(unsigned*,int,int,SolSortState);
 struct SolPlace;
-inline void* operator new(unsigned int,SolPlace* p) {return p;}
+inline void* operator new(size_t,SolPlace* p) {return p;}
 struct SolPodTag {};
 struct SolClassTag {};
 template<class T> struct SolTypeTag {typedef SolClassTag Type;};

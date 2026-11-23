@@ -137,7 +137,7 @@ LimbConditionEffect* LimbConditionEffect_Create(void* ap1, void* ap2, void* ap3)
     return new LimbConditionEffect(ap1, ap2, ap3);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern int _data_011c16bc;
 
 // @fnv 0x0080f0a0

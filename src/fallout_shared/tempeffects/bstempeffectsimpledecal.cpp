@@ -549,8 +549,8 @@ bool DecalHost::UpdateDecalFade(float alpha)
 class B68CA10Object
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
 
     B68CA10Object(unsigned int uiArg);
     virtual ~B68CA10Object();
@@ -619,8 +619,8 @@ B68CA10Object* __cdecl CreateB68CA10Object(unsigned int uiArg)
 class B68CA90Geometry
 {
   public:
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pvMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pvMem, size_t);
 
     B68CA90Geometry(unsigned short usVertices, void* pvPositions, void* pvNormals, void* pvColors, void* pvTexture,
                     int iTextureSets, int iDataFlags, unsigned short usTriangles, void* pvTriList);
@@ -1010,8 +1010,8 @@ struct Material
     int unk040;
     int unk044;
     int unk048;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Material();
     void setAlpha(float);
 };
@@ -1027,8 +1027,8 @@ struct Stencil
     int unk018;
     int unk01C;
     int unk020;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Stencil();
     void mode(int);
 };
@@ -1161,8 +1161,8 @@ struct Shader
     int unk0FC;
     int unk100;
     int unk104;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Shader();
     void category(int);
     void flag(int, bool);
@@ -1217,8 +1217,8 @@ struct Attachment
     int unk0A8;
     int unk0AC;
     int unk0B0;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Attachment(Graph*, int);
 };
 struct TextureAccessor
@@ -2118,8 +2118,8 @@ struct xStream
 int __fastcall NiStream_GetObjectCount(xStream*);
 struct xNiObj
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 struct xDecalNode : xNiObj

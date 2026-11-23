@@ -530,7 +530,7 @@ hkpPhantomDisplayViewer::~hkpPhantomDisplayViewer()
 
 extern "C" void _ReadWriteBarrier(void);
 extern "C" unsigned __int64 __rdtsc(void);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

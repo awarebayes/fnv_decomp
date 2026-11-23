@@ -24,7 +24,7 @@ class TESWeather__WeatherSound
     TESWeather__WeatherSound();
     void TwoValues_Endian();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern "C" void* memset(void* dst, int val, unsigned int size);
 void __cdecl operator delete(void* ptr);
 

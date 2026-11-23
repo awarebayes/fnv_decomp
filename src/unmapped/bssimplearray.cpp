@@ -969,7 +969,7 @@ void BSSimpleArray<unsigned short, 1024>::SetSize(unsigned int aiNewSize, bool a
     }
 }
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 
 // @fnv 0x005ef650
 // pdb: BSSimpleArray<char const *,1024>::_ConstructItems | BGSRagdoll.obj | debug, object-file run extension, low
@@ -1995,7 +1995,7 @@ void __thiscall FUN_006cfe70_Class::BSSimpleArray_VirtualPathingNode_1024_Reallo
     }
 }
 
-void* __cdecl operator new(unsigned int size, void* place);
+void* __cdecl operator new(size_t size, void* place);
 void __cdecl operator delete(void* p, void* place);
 
 struct SpawnedObject9
@@ -2280,7 +2280,7 @@ struct FUN_006e2280
     int unk20, unk24, unk28, unk2c, unk30, unk34, unk38;
     FUN_006e2280(int, int);
 };
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*, void*);
 struct FUN_0069f920_cls
 {

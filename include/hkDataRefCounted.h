@@ -11,7 +11,7 @@ public:
     virtual ~hkDataRefCounted();
 
     // class allocator: bodies come from the units (the dictionary units inline it)
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 
     void addReference() const

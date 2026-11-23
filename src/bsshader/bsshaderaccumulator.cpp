@@ -1253,7 +1253,7 @@ struct QueryLocal
 {
     unsigned int handle;
     QueryLocal();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -3742,7 +3742,7 @@ struct LocalCriticalSection
     ~LocalCriticalSection();
 };
 
-inline void* operator new[](unsigned n)
+inline void* operator new[](size_t n)
 {
     return g_memoryManager.Allocate(n);
 }
@@ -3823,7 +3823,7 @@ struct RefPtr
 struct FUN_00bd9120
 {
     void* state;
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

@@ -1079,7 +1079,7 @@ class FUN_00e38b20
     hkClonableE392* m_9c;
     char unkA0[0x34];
 
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         FUN_00e38b20* b = static_cast<FUN_00e38b20*>(
             static_cast<hkMemoryRouter*>(hkMemoryRouter_getInstance())->heap().blockAlloc(nbytes));
@@ -1620,7 +1620,7 @@ hkpVehicleInstanceWheelInfo& __fastcall CopyFieldsExcept48And4C(hkpVehicleInstan
     return *dest;
 }
 
-inline void* operator new(unsigned int, void* pvWhere)
+inline void* operator new(size_t, void* pvWhere)
 {
     return pvWhere;
 }

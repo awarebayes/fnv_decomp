@@ -738,7 +738,7 @@ void __cdecl nullsub_14()
 void __stdcall Runtime_DoNothing_00d043f0(int)
 {}
 
-inline void* operator new(unsigned int, void* address)
+inline void* operator new(size_t, void* address)
 {
     return address;
 }

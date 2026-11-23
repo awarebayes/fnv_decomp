@@ -2089,8 +2089,8 @@ struct SceneNode
     virtual void slot53();
     virtual void slot54();
     virtual void Attach(SceneNode*, int);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     SceneNode(unsigned short);
     void Update(UpdateInfo&);
     Controller* GetController(const void*);

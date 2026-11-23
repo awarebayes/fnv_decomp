@@ -47,7 +47,7 @@ struct __declspec(align(16)) xCinfo
 };
 struct xNiAlloc
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct xShape : xNiAlloc

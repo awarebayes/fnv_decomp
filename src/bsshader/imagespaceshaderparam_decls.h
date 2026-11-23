@@ -29,7 +29,7 @@ template <> inline NiPointer<NiD3DShaderConstantMap>& NiPointer<NiD3DShaderConst
 struct ImageSpaceShaderParamFloat
 {
     float value;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

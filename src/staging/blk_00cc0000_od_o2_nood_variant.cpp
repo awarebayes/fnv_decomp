@@ -155,13 +155,13 @@ struct TransformObj
     int unk98;
     int unk9C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         TransformObj* p = (TransformObj*)hkMemoryRouter_getInstance()->heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     TransformObj();
 };
@@ -412,13 +412,13 @@ class Cc6830Motion
     int unk138;
     int unk13C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         Cc6830Motion* p = (Cc6830Motion*)hkMemoryRouter_getInstance()->heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00c8b4f0(p, nbytes);
     }
@@ -1019,7 +1019,7 @@ struct FUN_00d4f2a0
     FUN_00d4f2a0();
     static void operator delete(void* p) throw()
     {}
-    static __forceinline void* operator new(unsigned int size) throw()
+    static __forceinline void* operator new(size_t size) throw()
     {
         hkMemoryRouter* h = (hkMemoryRouter*)hkMemoryRouter_getInstance();
         void* p = h->m_heap->blockAlloc(size);
@@ -1213,13 +1213,13 @@ struct EntityObj
     int unk48, unk4C;
     float unk50, unk54, unk58;
     char unk5C, unk5D;
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         EntityObj* p = (EntityObj*)hkMemoryRouter_getInstance()->heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
     EntityObj(int entityA, int entityB, int userData);
     void hkpSpringAction_setPositionsInBodySpace(const hkVector4& pivotA, const hkVector4& pivotB);
     void removeReference();
@@ -1696,13 +1696,13 @@ struct ShapeObj
     int unk38;
     int unk3C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         ShapeObj* p = (ShapeObj*)hkMemoryRouter_getInstance()->heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     ShapeObj(int body, const ShapeVector& kVec, float fA, float fB);
     void FUN_00c905b0();
@@ -1794,7 +1794,7 @@ struct S00cc4610_Out
     int unk38;
     int unk3C;
     S00cc4610_Out(int entityA, int entityB, int userData);
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         hkMemoryAllocator& a = hkMemoryRouter_getInstance()->heap();
         void* p = a.blockAlloc(n);
@@ -2669,7 +2669,7 @@ struct ConvexShapeNode
     int unka4;
     int unka8;
     ConvexShapeNode(unsigned short);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     void SetParentObject(const struct Name&);
 };
 extern char* emptyString;
@@ -2989,7 +2989,7 @@ struct S00cc2530_FUN_00d4ce10
 
     S00cc2530_FUN_00d4ce10(int, const LocalM128*, int);
     void removeReference();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         void* p = Memory306::hkMemoryRouter_getInstance()->heap().blockAlloc(n);
         static_cast<S00cc2530_FUN_00d4ce10*>(p)->memorySize = (unsigned short)n;
@@ -3122,7 +3122,7 @@ struct Shape : RefCountedObject
     volatile unsigned int flags;
     unsigned int combinedFlags;
     unsigned char kind;
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         hkMemoryRouter* router = hkMemoryRouter_getInstance();
         Shape* result = static_cast<Shape*>(router->heap().blockAlloc(bytes));
@@ -3150,7 +3150,7 @@ struct FUN_00cc9d00 : RefCountedObject
     LocalM128 dimensions;
     unsigned int unk20, unk24, unk28, unk2c, unk30, unk34, unk38, unk3c, unk40, unk44, unk48, unk4c;
     FUN_00cc9d00(ObjectType* type, Shape* shape, SourceGeometry* geometry);
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         hkMemoryRouter* router = hkMemoryRouter_getInstance();
         FUN_00cc9d00* result = static_cast<FUN_00cc9d00*>(router->heap().blockAlloc(bytes));
@@ -3872,7 +3872,7 @@ using ::_g_memoryManager;
 struct ExtendedMeshFloat
 {
     float value;
-    static void* operator new[](unsigned size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -3880,7 +3880,7 @@ struct ExtendedMeshFloat
 struct ExtendedMeshIndex
 {
     unsigned short value;
-    static void* operator new[](unsigned size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -3938,7 +3938,7 @@ struct ExtendedMeshInput
 
 struct MeshPart
 {
-    static void* operator new[](unsigned size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -3975,7 +3975,7 @@ struct Mesh : FUN_00a5d3a0
 
     MeshPart* parts;
 
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -4530,7 +4530,7 @@ class FUN_00d55240_cls : public ::hkReferencedObject
   public:
     FUN_00d55240_cls(const Ccb5d0Vector& a, const Ccb5d0Vector& b, const Ccb5d0Vector& c);
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         ::fnv_00cc6830::FUN_00c8b4f0(p, nbytes);
     }
@@ -4719,13 +4719,13 @@ struct FUN_00d569c0
     unsigned short m_usMemSizeAndFlags;
     unsigned short m_sReferenceCount;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         FUN_00d569c0* p = (FUN_00d569c0*)(::hkMemoryRouter_getInstance)()->heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     FUN_00d569c0(float fRadius, int iCount);
     void hkpExtendedMeshShape_setScaling(const ::hkVec4* pkVector);
@@ -5271,13 +5271,13 @@ struct FUN_00d58510
     int unk88;
     int unk8C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         FUN_00d58510* p = (FUN_00d58510*)::hkMemoryRouter_getInstance()->heap().blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return p;
     }
-    static void operator delete(void* p, unsigned int nbytes);
+    static void operator delete(void* p, size_t nbytes);
 
     FUN_00d58510(const ::ShapeVector& kA, const ::ShapeVector& kB, float fRadius, int iA, int iB);
 };

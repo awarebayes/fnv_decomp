@@ -4688,7 +4688,7 @@ class E6EC20Cache
   public:
     ~E6EC20Cache();
 
-    static void operator delete(void* pvMem, unsigned int uiSize)
+    static void operator delete(void* pvMem, size_t uiSize)
     {
         operator_delete_sized(pvMem, uiSize);
     }
@@ -9253,7 +9253,7 @@ struct ShaderD3DDevice
     virtual long __stdcall CreateVertexDeclaration(const ShaderVertexElement*, ShaderVertexDecl**);
 };
 extern MemoryManager g_shaderMemMgr;
-inline void* operator new[](unsigned int size)
+inline void* operator new[](size_t size)
 {
     return g_shaderMemMgr.Allocate(size);
 }
@@ -9521,7 +9521,7 @@ class E7A6A0Bucket
         m_kEntries.RemoveAll();
     }
 
-    static void operator delete(void* pvMem, unsigned int uiSize)
+    static void operator delete(void* pvMem, size_t uiSize)
     {
         operator_delete_sized(pvMem, uiSize);
     }
@@ -12964,7 +12964,7 @@ struct Node
 
     Node* m_next;
 
-    static void operator delete(void* pvMem, unsigned int uiSize)
+    static void operator delete(void* pvMem, size_t uiSize)
     {
 
         operator_delete_sized(pvMem, uiSize);
@@ -13848,7 +13848,7 @@ struct ShaderProgram;
 
 struct ShaderEntry
 {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

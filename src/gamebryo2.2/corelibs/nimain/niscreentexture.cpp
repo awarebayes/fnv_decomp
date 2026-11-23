@@ -16,7 +16,7 @@ inline NiColorA::NiColorA(float red, float green, float blue, float alpha)
 extern "C" void NiColorA_LoadBinary();
 extern "C" void NiColorA_SaveBinary();
 
-inline void* __cdecl operator new(unsigned int, void* memory) throw()
+inline void* __cdecl operator new(size_t, void* memory) throw()
 {
     return memory;
 }

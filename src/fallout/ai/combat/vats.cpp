@@ -483,7 +483,7 @@ void FUN_009c9a50_shell::VATS_SetVATSLight(NiLight* apLight, bool abRemoveOld)
     }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 struct FUN_009ca500_shell : public VATSCommand

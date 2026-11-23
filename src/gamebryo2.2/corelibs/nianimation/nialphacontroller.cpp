@@ -30,7 +30,7 @@ int* __cdecl NiAlphaController_GetRTTI()
 }
 
 extern int DAT_0109a76c;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

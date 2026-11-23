@@ -545,7 +545,7 @@ class FUN_00e46e80
     FUN_00e46e80() throw();
     void hkQueue_hkpRigidBody_setCapacity(void* world) throw();
 
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return hkMemoryRouter_getInstance().heap().blockAlloc(n);
     }

@@ -19,7 +19,7 @@ __forceinline MotorChunkAllocator& GetMotorHeap(hkMemoryRouter& router)
     return *reinterpret_cast<MotorChunkAllocator*>(router.m_heap);
 }
 
-inline void* operator new(unsigned int size, void* p)
+inline void* operator new(size_t size, void* p)
 {
     return p;
 }

@@ -45,7 +45,7 @@ template <typename T> __forceinline void hkArrayBase<T>::_clearAndDeallocate(hkM
 }
 
 extern "C" void _ReadWriteBarrier();
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 inline void __cdecl operator delete(void*, void*) throw() {}
 struct hkxVertexDescriptionElementDecl
 {

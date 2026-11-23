@@ -1529,7 +1529,7 @@ FUN_006a8700_Class* FUN_006a8700_Class::AStarNode_AStarNode()
     return this;
 }
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 struct FUN_006a8a30_class
 {
     void __thiscall BSSimpleArray_WeaponData_1024_ConstructItems(int base, unsigned int count);
@@ -4132,14 +4132,14 @@ struct PendingItem
     int m_iWordAt00;
     int m_iWordAt04;
     PendingItem();
-    void* operator new(unsigned int size, void* where);
+    void* operator new(size_t size, void* where);
     void operator delete(void* p, void* where);
 };
 
 PendingItem::PendingItem()
 {}
 
-void* PendingItem::operator new(unsigned int size, void* where)
+void* PendingItem::operator new(size_t size, void* where)
 {
     return where;
 }
@@ -4818,7 +4818,7 @@ unsigned int FUN_006b3fd0_cls::UpdateState_006b3fd0()
     return m_08 - 1;
 }
 
-void* operator new(unsigned int uiSize, void* pvWhere);
+void* operator new(size_t uiSize, void* pvWhere);
 void operator delete(void* pvMem, void* pvWhere);
 
 class C6B40F0Element
@@ -8019,7 +8019,7 @@ bool PathTriangleCheck::NavMeshObstacleCutter_CheckTriangleAgainstObstacle(Local
 }
 
 namespace fnv_006bf3c0 {
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -8325,7 +8325,7 @@ void FUN_006a1720_class::ResizeElementStorage(unsigned int requested, bool shrin
     }
 }
 
-void* __cdecl operator new(unsigned int size, void* placement);
+void* __cdecl operator new(size_t size, void* placement);
 struct FUN_006a14b0
 {
     unsigned int unk00;
@@ -11439,8 +11439,8 @@ namespace PathDebugRender {
 
 struct DbgObject
 {
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void* apMem, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void* apMem, size_t);
     void NiMaterialProperty_SetEmittance(void* apKey);
     void NiMaterialProperty_SetAlpha(float c);
     void NiAVObject_AttachProperty(DbgObject* pkProperty);
@@ -12066,7 +12066,7 @@ void __thiscall FUN_006bf870_class::SetVtableAndProcessState_006bf870()
     reinterpret_cast<BSSimpleArray<SandBoxChoiceListItem>*>(this)->Clear(true);
 }
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct B6BFDD0Entry

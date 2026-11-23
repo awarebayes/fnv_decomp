@@ -146,7 +146,7 @@ struct __declspec(align(16)) xCinfo
 };
 struct xNiAlloc
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct xShape : xNiAlloc
@@ -406,7 +406,7 @@ class WorldObject9BE
 class Shape9BE
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Shape9BE(float afRadius, int abBS);
     int unk00;
@@ -562,7 +562,7 @@ class Controller9BE
     virtual void v0c8();
     virtual void v0cc();
     virtual void SetState(int iState);
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Controller9BE(ControllerInfo9BE& arInfo, ProjectilePhysicsReference* apProjectile);
     void SetEnabled(bool abTF);

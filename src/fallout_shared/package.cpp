@@ -3449,7 +3449,7 @@ struct LocationDescriptor
 };
 typedef char _sizecheck_PackageLocation[1];
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_00670b30 : LocationDescriptor
 {
@@ -6489,7 +6489,7 @@ FUN_0067b170_cls* FUN_0067b170_cls::UpdateState_0067b170()
     return this;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_0067f030
 {
     int kind;
@@ -12432,7 +12432,7 @@ class Form679
 extern TESSaveLoadGame* g_TESSaveLoadGame;
 Form679* __cdecl TESForm_GetFormByNumericID(unsigned int);
 void __cdecl FNV_Warning(const char*, ...);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 class FUN_0067f030
 {

@@ -282,8 +282,8 @@ struct ColorAX
 
 struct MemObjX
 {
-    static void* operator new(unsigned int auiSize);
-    static void operator delete(void* apMem, unsigned int);
+    static void* operator new(size_t auiSize);
+    static void operator delete(void* apMem, size_t);
 };
 struct LeafDataX : public MemObjX
 {
@@ -720,8 +720,8 @@ struct TexturingProp
     int unk0bc;
     int unk0c0;
     TexturingProp(NiTexture* tex);
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
 };
 
 struct ShaderProp
@@ -730,8 +730,8 @@ struct ShaderProp
     virtual void v00();
     void SetName(const char* prefix, const char* name);
     void SetFlag(unsigned int flag, bool on);
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
 };
 
 struct ShaderPropV
@@ -802,8 +802,8 @@ struct ShaderPropV
     virtual void vfc();
     virtual void Set100(int a, void* b);
     ShaderPropV();
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     int unk004;
     int unk008;
     int unk00c;
@@ -1042,7 +1042,7 @@ template <class T> struct TreeModelPointer
     TreeModelPointer& operator=(const TreeModelPointer&);
     TreeModelPointer& operator=(T*);
     operator T*();
-    static void* operator new[](unsigned int);
+    static void* operator new[](size_t);
     static void operator delete[](void*);
 };
 struct TreeRuntimeCopy
@@ -1206,7 +1206,7 @@ struct CSpeedTreeRT_Load
     unsigned int unk98;
     unsigned int unk9c;
     CSpeedTreeRT_Load();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     ~CSpeedTreeRT_Load();
     bool CSpeedTreeRT_LoadTree(const char*);
     void GetTextures_00b0d040(FUN_00b02e20*);
@@ -1622,8 +1622,8 @@ struct Geometry
     int unkb8;
     int unkbc;
     int unkc0;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Geometry(GeometryData*);
     void NiAVObject_AttachProperty(Property*);
     ShaderState* NiGeometry_GetModelData();
@@ -1836,8 +1836,8 @@ struct Tree
     int unkec;
     int unkf0;
     int unkf4;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Tree(Model*, Object*);
     void UpdateProperties();
     void FUN_00a59c90(UpdateData*);

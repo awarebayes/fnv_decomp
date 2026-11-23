@@ -3423,7 +3423,7 @@ class Helper69E
   public:
     Helper69E();
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return FormHeap_Allocate(uiSize);
     }

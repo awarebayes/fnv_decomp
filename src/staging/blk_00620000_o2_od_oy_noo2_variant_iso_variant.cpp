@@ -61,8 +61,8 @@ struct CollisionPair
 };
 struct xMemObj
 {
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* p, size_t);
 };
 class __declspec(align(16)) xSub20
 {
@@ -1682,7 +1682,7 @@ class NodeV
 NodeV* __cdecl FUN_0043b610(void* pvRef);
 struct SmoothEntryV
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     BodyV* m_pkBody;
     void* m_pvRef;
     float m_fTime;

@@ -42,7 +42,7 @@ void FUN_00d08210_Collidable::hkpLinkedCollidable_sortEntries()
     }
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

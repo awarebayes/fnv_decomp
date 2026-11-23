@@ -2323,7 +2323,7 @@ int FUN_009a3910_cls::BSSimpleArray_NavMeshInfo_1024_GetNewSizeForGrow()
     return (this->m_0c > 0x400) ? (int)(this->m_0c + 0x400) : (int)(this->m_0c << 1);
 }
 
-void* __cdecl operator new(unsigned int count, void* place);
+void* __cdecl operator new(size_t count, void* place);
 void __cdecl operator delete(void* ptr, void* place);
 struct FUN_009a3d90
 {
@@ -4627,7 +4627,7 @@ bool __thiscall FUN_009bec50_Class::Projectile_PostProcess(float afDelta)
     return false;
 }
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct E9A3A80Entry
@@ -5814,7 +5814,7 @@ TargetQueue* __stdcall FUN_004537b0(TargetRef*);
 bool __cdecl AILinearTaskThreadManager_ShouldQueue3DTask();
 extern TargetRef* DAT_011dea3c;
 void __cdecl FUN_005e58f0(int, TargetRef*, ...);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Creates a new projectile reference from a form, source and parent, scales it, attaches extra data, links it to the parent and updates or queues it.
 // @fnv 0x009ac9c0

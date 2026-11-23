@@ -1749,7 +1749,7 @@ void IndexRemap::hkUnionFind_reindex(const hkArray<int>& rindex, int numNewGroup
 }
 }  // namespace fnv_00d282c0
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -1819,7 +1819,7 @@ void __cdecl hkpWorldOperationUtil_internalDeactivateIsland(hkpWorld* apOwner, h
 }
 
 namespace fnv_00cb5500 {
-inline void* __cdecl operator new(unsigned int, void* place)
+inline void* __cdecl operator new(size_t, void* place)
 {
     return place;
 }
@@ -2304,7 +2304,7 @@ void __cdecl Cb5750_Owner::hkpWorldOperationUtil_updateEntityBP(Cb5750_Param* pa
 }
 
 namespace fnv_00cb5dd0 {
-inline void* __cdecl operator new(unsigned int, void* place)
+inline void* __cdecl operator new(size_t, void* place)
 {
     return place;
 }
@@ -2736,7 +2736,7 @@ int keep_alive_b11420(ShapeList* list, int** flags, int*** indexMap, int** count
 }
 
 namespace fnv_00cb4790 {
-inline void* __cdecl operator new(unsigned int, void* place)
+inline void* __cdecl operator new(size_t, void* place)
 {
     return place;
 }
@@ -4281,14 +4281,14 @@ struct MotionBase : RefHeader31
     void SetFlagBits(int a, int b, int c);
     void getMotionStateAndVelocitiesAndDeactivationType(MotionBase* motionOut);
     float FUN_00c86430();
-    __forceinline static void* operator new(unsigned int nbytes)
+    __forceinline static void* operator new(size_t nbytes)
     {
         hkMemoryAllocator& h = hkMemoryRouter_getInstance()->heap();
         RefHeader31* b = static_cast<RefHeader31*>(((AllocObj*)&h)->v01(static_cast<int>(nbytes)));
         b->m_04 = static_cast<unsigned short>(nbytes);
         return b;
     }
-    __forceinline static void* operator new(unsigned int, void* p)
+    __forceinline static void* operator new(size_t, void* p)
     {
         return p;
     }

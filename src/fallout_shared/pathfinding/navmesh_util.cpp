@@ -43,7 +43,7 @@ public:
 #include "../../../include/PathingLocation.h"
 #include "../../../include/TwoIntRecord.h"
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 namespace std {
 float abs(float);
@@ -3403,8 +3403,8 @@ struct NavChange;
 
 struct NavChange
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     virtual ~NavChange();
     unsigned int unk04, state;
     NavObstaclePtr obstacle;

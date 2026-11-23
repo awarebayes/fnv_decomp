@@ -246,7 +246,7 @@ void __thiscall GlobalObject_00869f00::BSSimpleArray_CoverReservation_1024_dtor(
 }
 }  // namespace fnv_00983700
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern void* DAT_011f1708;
 
 // If DAT_011f1708 is null, allocates one byte with operator new and stores the pointer in DAT_011f1708.
@@ -691,7 +691,7 @@ void __thiscall FUN_00993bf0_class::ForwardCall_00993bf0()
     reinterpret_cast<FUN_00993bf0_class*>(reinterpret_cast<char*>(this) + 0xc)->FUN_00993cd0();
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_00993cd0
 {
@@ -4823,7 +4823,7 @@ void FUN_0098fa00_cls::BSSimpleArray_CombatTarget_1024_ReallocateBuffer(int aiNe
     }
 }
 
-void* operator new(unsigned int size, void* place);
+void* operator new(size_t size, void* place);
 void operator delete(void* object, void* place);
 
 // @fnv 0x0098fc70
@@ -8244,7 +8244,7 @@ struct BuildOwner
     void SetThreadTasklet(BuildFirst*, BuildSecond*, int);
     BuildResult* BuildResultForInput(int, int, BuildInput*, bool);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // Validates input, builds entries and objects, creates a BuildResult when objects exist, and optionally a BuildMonitor, then returns the result.
 // @fnv 0x00994f10
 // pdb: CombatPlanner::CreatePlan | CombatPlanner.obj | debug, object-file run extension, low

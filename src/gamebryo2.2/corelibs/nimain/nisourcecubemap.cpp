@@ -232,7 +232,7 @@ extern "C"
     void __cdecl NiImageConverter_ConvertFilenameToPlatformSpecific(char** kPath, unsigned int* kPlatformSpecificPath);
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -653,7 +653,7 @@ struct Pixels
     unsigned int* offsets;
     unsigned int levels;
     unsigned int unk64, unk68, unk6c, unk70;
-    static void* __cdecl operator new(unsigned int size) throw();
+    static void* __cdecl operator new(size_t size) throw();
     __declspec(nothrow) unsigned int Width() const
     {
         return *widths;

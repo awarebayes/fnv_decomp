@@ -2962,7 +2962,7 @@ void Object_ProcessEntries_004def20()
         ((FUN_0066b0d0_Helper*)&DAT_011c7804[i])->FUN_0066b0d0(0);
 }
 
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 void __cdecl operator delete(void* pvMem);
 
 

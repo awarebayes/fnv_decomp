@@ -282,7 +282,7 @@ struct FUN_00d76ca0
         ((FUN_00d76ca0*)memory)->memorySize = (unsigned short)bytes;
         return memory;
     }
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return allocate(reinterpret_cast<Allocator&>(hkMemoryRouter_getInstance().heap()), bytes);
     }
@@ -1912,7 +1912,7 @@ struct E24850Node
     E24850Node* m_next;
     E24850Node* m_pSecondNode;
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -2682,7 +2682,7 @@ struct GpPool
     int unk380;
     int m_iAllocatedCount;
 
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         ((BlockAllocAB*)&reinterpret_cast<Allocator&>(hkMemoryRouter_getInstance().heap()))->ReleaseBlock(p, size);
     }

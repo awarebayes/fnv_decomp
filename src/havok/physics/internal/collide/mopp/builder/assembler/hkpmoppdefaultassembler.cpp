@@ -11,7 +11,7 @@
 inline Pair::Pair() throw()
 {}
 
-inline void* Pair::operator new(unsigned int, void* p) throw()
+inline void* Pair::operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -2594,7 +2594,7 @@ struct FUN_00e065f0
     void nullsub_26();
     FUN_00e065f0(unsigned int size) throw();
     void hkpMoppCodeGenerator_dtor();
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         FUN_00e065f0* p = static_cast<FUN_00e065f0*>(((BvAllocator*)GetBvRouter()->m_heap)->AllocateMemoryBlock(n));
         p->m_usMemSizeAndFlags = (unsigned short)n;
@@ -2809,7 +2809,7 @@ void BvBuilder::hkpMoppDefaultAssembler_assembleSubNodeIntoChunks(BvNode* curren
     }
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

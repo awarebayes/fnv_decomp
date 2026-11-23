@@ -161,7 +161,7 @@ void LockCtx::NiTreeCtrl_AddControllerSequence(int arg1, NiControllerSequence* a
 }
 
 extern "C" void* __cdecl _alloca(unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct CellFile
 {

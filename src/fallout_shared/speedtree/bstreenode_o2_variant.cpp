@@ -292,7 +292,7 @@ struct CollisionNodeStub
 {
     void* vf;
     char pad[16];
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     CollisionNodeStub()
     {
         NiRTTI_UpdateState_00c6b910(this);
@@ -310,7 +310,7 @@ CollisionNodeStub* bhkPCollisionObject_CreateObject()
 namespace fnv_00cb7640 {
 struct CollisionNodeStub
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 void* __fastcall NiRTTI_UpdateState_00c6b910(void*);
 extern int DAT_01066acc;
@@ -713,7 +713,7 @@ extern int DAT_012683dc;
 
 struct S_00cb79d0_Base
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     S_00cb79d0_Base();
     virtual void v00();
@@ -990,7 +990,7 @@ struct S_00caaf40_Obj
     int unk08;
     int unk0c;
     int unk10;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     S_00caaf40_Obj();
 };
 
@@ -1181,7 +1181,7 @@ struct FUN_00d22590
     int unk3C;
     FUN_00d22590(int vertexA, int vertexB, float c);
     void FUN_00c905b0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FUN_00d22590* p = (FUN_00d22590*)AllocateHavokMemory(hkMemoryRouter_getInstance(), size);
         p->unk04 = (short)size;
@@ -1280,7 +1280,7 @@ struct SpawnedFade
     void* vf;
     char pad[16];
 
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     SpawnedFade()
     {
         NiRTTI_UpdateState_00c6b910(this);
@@ -1601,7 +1601,7 @@ struct SpawnedNode
     void Finish();
     static void operator delete(void* p) throw()
     {}
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         hkMemoryRouter* h = (hkMemoryRouter*)hkMemoryRouter_getInstance();
         void* p = reinterpret_cast<hkMemoryAllocator*>(h->m_heap)->blockAlloc(size);
@@ -2980,7 +2980,7 @@ struct SpawnedObject
         m_vtbl = (void*)DAT_01066d44;
         DAT_012681b0++;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3072,7 +3072,7 @@ struct S_00cb8270_Array
     int unk08;
     unsigned int unk0C;
 
-    void* operator new(unsigned int sz)
+    void* operator new(size_t sz)
     {
         return DAT_011f6238.Game_DoHeapAlloc(sz);
     }

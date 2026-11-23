@@ -38,7 +38,7 @@ FUN_00e61720::FUN_00e61720(void* arg)
     UpdateState_00e61770(arg);
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

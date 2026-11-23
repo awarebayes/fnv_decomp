@@ -37,7 +37,7 @@ struct P03MM
     void* __thiscall Allocate(unsigned int);
 };
 extern P03MM g_memoryManager;
-__forceinline void* __cdecl operator new(unsigned int, void* p)
+__forceinline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

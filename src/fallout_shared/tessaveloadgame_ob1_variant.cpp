@@ -38,7 +38,7 @@ struct HelperL
 {
     unsigned int m_00, m_04, m_08, m_0c;
     HelperL(int, int, int);
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManagerL.Allocate(uiSize);
     }
@@ -201,11 +201,11 @@ struct HeapContextGuard
     }
 };
 
-inline void* operator new[](unsigned int n, MemoryManager*)
+inline void* operator new[](size_t n, MemoryManager*)
 {
     return g_memoryManager.Allocate(n);
 }
-inline void* operator new(unsigned int n, MemoryManager*)
+inline void* operator new(size_t n, MemoryManager*)
 {
     return g_memoryManager.Allocate(n);
 }
@@ -285,7 +285,7 @@ extern "C" void* __cdecl memset(void* pvDest, int iValue, unsigned int uiSize);
 
 extern MemoryManager g_kMemoryManagerC4;
 
-inline void* operator new[](unsigned int uiSize)
+inline void* operator new[](size_t uiSize)
 {
     return g_kMemoryManagerC4.Allocate(uiSize);
 }
@@ -307,7 +307,7 @@ class FUN_00c3e4f0;
 class WorkerC4
 {
   public:
-    inline static void* operator new(unsigned int uiSize)
+    inline static void* operator new(size_t uiSize)
     {
         return g_kMemoryManagerC4.Allocate(uiSize);
     }
@@ -386,7 +386,7 @@ class MemContextScopeC3
 
 extern MemoryManager g_kMemoryManagerC3;
 
-inline void* operator new[](unsigned int uiSize)
+inline void* operator new[](size_t uiSize)
 {
     return g_kMemoryManagerC3.Allocate(uiSize);
 }
@@ -394,7 +394,7 @@ inline void* operator new[](unsigned int uiSize)
 class IOQueueC3
 {
   public:
-    inline static void* operator new(unsigned int uiSize)
+    inline static void* operator new(size_t uiSize)
     {
         return g_kMemoryManagerC3.Allocate(uiSize);
     }

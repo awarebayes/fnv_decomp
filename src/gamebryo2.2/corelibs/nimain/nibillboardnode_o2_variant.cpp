@@ -84,7 +84,7 @@ void NiBillboardNode::OnVisible_00a7e610(NiCullingProcess* kCuller)
 
 // The shared NiNode lacks the unsigned-int constructor. Initialize its shared
 // layout here, retaining the original thiscall entry point without a local NiNode.
-inline void* __cdecl operator new(unsigned int, void* storage)
+inline void* __cdecl operator new(size_t, void* storage)
 {
     __assume(storage != 0);
     return storage;

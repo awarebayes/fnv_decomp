@@ -24,9 +24,9 @@
 class NiMemObjectAllocation_imagespacemodifierinstance
 {
 public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* pointer);
-    static void operator delete(void* pointer, unsigned int size);
+    static void operator delete(void* pointer, size_t size);
 };
 #include "../../include/BSSimpleList.h"
 extern TES* g_TES;

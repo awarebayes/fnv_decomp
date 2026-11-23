@@ -263,7 +263,7 @@ struct FUN_00ec78f1_t
     void* __thiscall FUN_00ec78f1(int* out);
 };
 void __stdcall FUN_00ec7894(FUN_00ec78f1_t* info, const char* fmt);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern int DAT_010176f8;
 extern int DAT_01140ef8;
 void* __cdecl Object_AllocateElementStorage_00b23980(unsigned int n);
@@ -763,7 +763,7 @@ Iter* __thiscall Iter::ProcessAndReturnValue_00b235e0(int _Off)
     return this;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // @fnv 0x00b23b50
 // src: GUESS 0x00b23b50 (confidence: low)
@@ -24898,7 +24898,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace std {
 class bad_alloc
 {
@@ -25424,7 +25424,7 @@ SA4830* __cdecl Object_ProcessAndReturnValue_00b23b00(SA4830* _First, SA4830* _L
 
 namespace fnv_00b24180 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -25485,7 +25485,7 @@ void Object_ConstructFilledRange(ElemQ* first, unsigned int n, const ElemQ& val)
 
 namespace fnv_00b243a0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -25537,7 +25537,7 @@ void Object_ProcessEntries_00b243a0(FUN_00b22f80* first, unsigned int n, const F
 
 namespace fnv_00b24580 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -26031,7 +26031,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace std {
 class bad_alloc
 {
@@ -26906,7 +26906,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace std {
 class bad_alloc
 {
@@ -27346,7 +27346,7 @@ E48C0* __cdecl Object_ProcessAndReturnValue_00b248c0(E48C0* _First, E48C0* _Last
 
 namespace fnv_00b25ba0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -27399,7 +27399,7 @@ FUN_00b22f80* Object_ProcessEntries_00b25ba0(FUN_00b22f80* first, FUN_00b22f80* 
 
 namespace fnv_00b25ca0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -27476,7 +27476,7 @@ ElemQ* Object_ProcessEntries_00b25ca0(ElemQ* first, ElemQ* last, ElemQ* dest)
 
 namespace fnv_00b25e20 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -27553,7 +27553,7 @@ ElemQ* Object_ProcessEntries_00b25e20(ElemQ* first, ElemQ* last, ElemQ* dest)
 
 namespace fnv_00b25fa0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -30347,7 +30347,7 @@ namespace FrondComputeCrt {
 extern "C" unsigned __cdecl strlen(const char*);
 }
 void __cdecl operator delete(void*);
-void* __cdecl operator new(unsigned);
+void* __cdecl operator new(size_t);
 int* __cdecl GetErrorNumber();
 char* __cdecl GetErrorText(int);
 inline IdvFileError::IdvFileError(const std::string& message, bool systemError)

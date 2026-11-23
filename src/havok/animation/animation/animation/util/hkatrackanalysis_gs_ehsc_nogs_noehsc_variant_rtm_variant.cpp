@@ -463,7 +463,7 @@ class TrackQuaternion
 class TrackTransform
 {
   public:
-    static __forceinline void* operator new(unsigned int, void* memory)
+    static __forceinline void* operator new(size_t, void* memory)
     {
         return memory;
     }

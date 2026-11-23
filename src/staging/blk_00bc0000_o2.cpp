@@ -379,7 +379,7 @@ void __cdecl BoltShader_ClearSegmentIndexArray()
     DAT_01201f4c = 0;
 }
 
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00bc1fa0_class
 {
@@ -419,7 +419,7 @@ void __cdecl Object_UpdateFields_00bc2960()
 
 extern int DAT_010ba730;
 void __cdecl FUN_00c5faa0();
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bc2c20_class
 {
@@ -489,8 +489,8 @@ void __thiscall FUN_00bc3780_Class::VolumetricFogShaderProperty_SaveBinary(NiStr
     ((void (__thiscall*)(NiColorA*, NiStream&))NiColorA_SaveBinary)((NiColorA*)((char*)this + 0x60), kStream);
 }
 
-extern void* __cdecl operator new(unsigned int);
-extern void __cdecl operator delete(void*, unsigned int);
+extern void* __cdecl operator new(size_t);
+extern void __cdecl operator delete(void*, size_t);
 extern int DAT_010bab28;
 void __fastcall FUN_00baa0e0(void*);
 struct FUN_00bc3800_Class
@@ -525,7 +525,7 @@ void __thiscall FUN_00bc4980_class::ParticleShader_SetCurrentPass(void* p, char 
 
 void __cdecl FUN_00bc5320();
 
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00bc5980_cls
 {
@@ -562,7 +562,7 @@ void* __thiscall FUN_00bd0440_class::FUN_00bd0440(int aiFlags)
 }
 
 void __cdecl FUN_00bd2c40();
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00bd2fd0_class
 {
     void* __thiscall SpeedTreeFrondShader_ScalarDtor(int flags);
@@ -623,7 +623,7 @@ int FUN_00bd6ab0_Class::ImageSpaceEffectDepthOfField_IsActive()
 }
 
 void __cdecl FUN_00bd74a0();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00bd8480_Class
 {
@@ -2487,7 +2487,7 @@ struct SpawnedBase_b10020
 struct SpawnedObj_b10020 : SpawnedBase_b10020
 {
     SpawnedObj_b10020();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -2901,7 +2901,7 @@ struct SpawnedObj_b9965
     unsigned int unkB8;
     unsigned int unkBC;
     SpawnedObj_b9965();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3017,7 +3017,7 @@ struct SpawnedBase_b9523
 
 struct SpawnedObj_b9523 : SpawnedBase_b9523
 {
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3078,7 +3078,7 @@ class BBC3370CloningProcess;
 class BBC3370Object
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -3131,7 +3131,7 @@ extern void* __cdecl Object_DispatchCommandFour(unsigned int size);
 extern void __fastcall FUN_00a57640(void* self);
 extern void* DAT_010ba948;
 
-void* __cdecl operator new(unsigned int size)
+void* __cdecl operator new(size_t size)
 {
     return Object_DispatchCommandFour(size);
 }
@@ -3196,7 +3196,7 @@ struct Obj_b9218 : Base_b9218
     int unk34;
     Obj_b9218()
     {}
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3277,7 +3277,7 @@ struct FUN_00bc37b0 : BSShaderProperty
     int unk64;
     int unk68;
     int unk6c;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }
@@ -3349,7 +3349,7 @@ struct SpawnedObj_b9755
     unsigned int unk68;
     unsigned int unk6C;
     SpawnedObj_b9755();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3794,7 +3794,7 @@ struct SpawnedObj9441
     unsigned int unk178;
     unsigned int unk17C;
     SpawnedObj9441();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -4010,7 +4010,7 @@ void* Object_DispatchCommandFour(unsigned int size);
 
 struct Spawned_t
 {
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(0x180);
     }
@@ -5591,7 +5591,7 @@ struct ShaderObj
     virtual void v53();
     virtual void Init84();
     ShaderObj(PassStub* p);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk04;
     int unk08;
@@ -8038,7 +8038,7 @@ struct Bd9120Allocator
 extern Bd9120Allocator DAT_011f6238;
 
 // Allocate unconstructed vector storage with the game's array allocator.
-inline void* operator new[](unsigned int size, Bd9120Allocator& allocator)
+inline void* operator new[](size_t size, Bd9120Allocator& allocator)
 {
     return allocator.Game_DoHeapAlloc(size);
 }
@@ -8047,7 +8047,7 @@ extern int DAT_011bf558;              // number of elements to build
 
 struct Bd9120Element
 {
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return DAT_011f6238.Game_DoHeapAlloc(bytes);
     }
@@ -8460,7 +8460,7 @@ struct Message
     unsigned int data;
     unsigned int state;
     __cdecl Message(void* actor, unsigned int code, int first, int second, int third, ...);
-    static void* operator new(unsigned int count)
+    static void* operator new(size_t count)
     {
         return DAT_011f6238.Game_DoHeapAlloc(count);
     }
@@ -11131,7 +11131,7 @@ NiD3DShaderDeclaration* __cdecl NiDX9ShaderDeclaration_Create(void* apRenderer, 
 class FUN_00bcf7f0
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFaceGenMorphData::operator new(size);
     }
@@ -11687,7 +11687,7 @@ struct CreatedShader
     int unke0;
     int unke4;
     int unke8;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     CreatedShader(ShaderLayout*, ShaderLayout*);
 };
@@ -12030,7 +12030,7 @@ struct ShaderDecl
 
 struct ShaderObj
 {
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* p);
     ShaderObj();
     void Setup();
@@ -12574,7 +12574,7 @@ template <class T> struct Ptr
 struct IntElement
 {
     void* value;
-    static void* operator new[](unsigned n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }
@@ -12601,7 +12601,7 @@ struct Source : Ref
 struct FUN_00ba63e0
 {
     FUN_00ba63e0(int, bool);
-    static void* operator new(unsigned size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -12681,7 +12681,7 @@ struct Geometry : Ref
     int unkcc;
     int unkd0;
     int unkd4;
-    static void* operator new(unsigned size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -12729,7 +12729,7 @@ struct FUN_00b57f90 : Ref
     Ptr<Ref> texture;
     int unk84, unk88;
     FUN_00b57f90();
-    static void* operator new(unsigned size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -16039,7 +16039,7 @@ extern int DAT_011ae61c;
 struct FloatElem
 {
     float v;
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return DAT_011f6238.Game_DoHeapAlloc(bytes);
     }
@@ -16761,7 +16761,7 @@ extern float DAT_01016410;
 class FUN_00aa13e0
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -19730,7 +19730,7 @@ struct Vec2A
 struct BoltAllocElem
 {
     float x, y, z, w;
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return DAT_011f6238.Game_DoHeapAlloc(bytes);
     }

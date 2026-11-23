@@ -528,7 +528,7 @@ struct FUN_00644350_Class
     bool IsGreaterThan(int a);
 };
 int CompareObjects(int a, int b);
-void* __cdecl operator new(unsigned int size, void* placement);
+void* __cdecl operator new(size_t size, void* placement);
 struct FUN_00644490_Class
 {
     void __thiscall BSSimpleArray_NavMeshTriangle_1024_ConstructItems(char* items, unsigned int count);
@@ -2340,8 +2340,8 @@ struct FUN_008c71b0
     unsigned int value;
     FUN_008c71b0(void* owner);
     ~FUN_008c71b0();
-    static void* operator new(unsigned int, unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t, size_t);
+    static void operator delete(void*, size_t);
 };
 struct FUN_0065dc90 : FUN_006815c0
 {
@@ -2662,7 +2662,7 @@ struct S_0065e550_Err
     S_0065e550_Err(int code);
     ~S_0065e550_Err();
 };
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void* __cdecl Runtime_AllocateElementArray52Checked(unsigned int n);
 struct LengthErrB9739
 {
@@ -3018,7 +3018,7 @@ class FUN_00657af0 : public E7AF0Base
     ~FUN_00657af0();
     void Clear();
 };
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 class C658CA0BadAlloc
 {
   public:
@@ -3562,8 +3562,8 @@ struct FUN_0065ea00_Class
     void __thiscall ForwardCall_0065ea00(void* a);
 };
 
-void* __cdecl operator new(unsigned int size, unsigned int allocation);
-void __cdecl operator delete(void* object, unsigned int allocation);
+void* __cdecl operator new(size_t size, size_t allocation);
+void __cdecl operator delete(void* object, size_t allocation);
 
 // @fnv 0x0065dc90
 FUN_0065dc90::FUN_0065dc90(FUN_0065de30 argument) : FUN_006815c0(), member(argument)

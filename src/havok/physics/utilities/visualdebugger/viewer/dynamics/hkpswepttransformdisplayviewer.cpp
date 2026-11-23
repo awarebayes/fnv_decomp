@@ -275,7 +275,7 @@ struct SweptWorldData
     SweptWorld* m_pOwningWorld;
     hkArray<unsigned long> m_kEntityIDs;
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkMemoryRouter_getInstance().heap().ReleaseBlock(p, nbytes);
     }

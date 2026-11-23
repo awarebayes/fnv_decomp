@@ -410,7 +410,7 @@ struct SpawnedObject
     SpawnedObject()
     {}
 
-    static void* operator new(unsigned int, void* apMemory)
+    static void* operator new(size_t, void* apMemory)
     {
         return apMemory;
     }
@@ -538,7 +538,7 @@ struct S_00cbbde0_RefObject
     short m_sReferenceCount;
 
     virtual ~S_00cbbde0_RefObject() throw();
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         S_00cbbde0_RefObject* b = static_cast<S_00cbbde0_RefObject*>(hkMemoryRouter_getInstance()->heap().blockAlloc(n));
         b->m_usMemSizeAndFlags = (unsigned short)n;

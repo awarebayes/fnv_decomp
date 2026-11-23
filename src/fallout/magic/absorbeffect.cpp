@@ -202,7 +202,7 @@ AbsorbEffect::AbsorbEffect(MagicCaster* apCaster, MagicItem* apSpell, EffectItem
     spSource = 0;
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 // @fnv 0x00802f40
 // pdb: AbsorbEffect::Copy | AbsorbEffect.obj | retail, upstream name already matches, high
@@ -808,7 +808,7 @@ struct BoltExtraData
 {
     int unk00, unk04, unk08, unk0c;
     BoltExtraData();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }

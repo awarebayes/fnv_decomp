@@ -57,7 +57,7 @@ struct BlendItem
     float m_fLastEvaluationTime;
     BlendItem() throw();
     ~BlendItem() throw();
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }

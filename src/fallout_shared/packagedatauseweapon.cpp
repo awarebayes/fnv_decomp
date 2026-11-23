@@ -286,7 +286,7 @@ TESUseWeaponPackageData::TESUseWeaponPackageData(Color kColor, Info kInfo, Range
 
 // Copy the optional extra data from another object: create ours on demand, or drop it when the source is null.
 
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 
 // @fnv 0x0067d470
 // pdb: TESUseWeaponPackageData::Copy | PackageDataUseWeapon.obj | retail, upstream name already matches, high

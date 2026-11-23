@@ -101,7 +101,7 @@ inline void* hkReferencedObject::operator new(std::size_t nbytes)
     p->m_memSizeAndFlags = static_cast<unsigned short>(nbytes);
     return p;
 }
-inline void hkReferencedObject::operator delete(void* p, unsigned int nbytes)
+inline void hkReferencedObject::operator delete(void* p, size_t nbytes)
 {
     hkMemoryRouter::getInstance().heap().blockFree(p, nbytes);
 }
@@ -2433,7 +2433,7 @@ void* WorldWatchDogHolder::hkpWorld_getMemoryWatchDog() {
     return m_memoryWatchDog;
 }
 
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 inline void __cdecl operator delete(void*, void*) { }
 
 
@@ -7669,7 +7669,7 @@ struct CFB240ContactMgrFactory {
     virtual ~CFB240ContactMgrFactory();
     unsigned short m_usMemSizeAndFlags;
     short m_sReferenceCount;
-    void* operator new(unsigned int n) {
+    void* operator new(size_t n) {
         CFB240ContactMgrFactory* b = static_cast<CFB240ContactMgrFactory*>(((hkMemoryAllocator*)c912::router()->m_heap)->blockAlloc(n));
         b->m_usMemSizeAndFlags = (unsigned short)n;
         return b;
@@ -9072,7 +9072,7 @@ struct FUN_00d065e0 {
     unsigned char active;
     unsigned char unk41, unk42, unk43;
     FUN_00d065e0() throw();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         MatchRouter* router = (MatchRouter*)::hkMemoryRouter_getInstance();
         FUN_00d065e0* memory = (FUN_00d065e0*)router->heap->allocate(size);
@@ -11836,7 +11836,7 @@ public:
     int unk28;
     int unk2C;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         hkReferencedObject* b = static_cast<hkReferencedObject*>(hkMemoryRouter_getInstance().heap().blockAlloc(nbytes));
         b->m_memSizeAndFlags = (unsigned short)nbytes;
@@ -12231,7 +12231,7 @@ void PoseUserDAD::hkDebugDisplay_displayLocalSpacePose(int numTransforms, const 
 
 namespace HingeAllocation { hkMemoryRouter& __cdecl hkMemoryRouter_getInstance();
 __forceinline hkMemoryAllocator& heap(hkMemoryRouter& router) { return *(hkMemoryAllocator*)router.m_heap; } }
-inline void* hkpLimitedHingeConstraintData::operator new(unsigned int size)
+inline void* hkpLimitedHingeConstraintData::operator new(size_t size)
 {
     void* p = HingeAllocation::heap(HingeAllocation::hkMemoryRouter_getInstance()).blockAlloc(size);
     static_cast<hkReferencedObject*>(p)->m_memSizeAndFlags = (unsigned short)size;
@@ -13279,7 +13279,7 @@ public:
 class ShapeCAA : public hkReferencedObject {
 public:
     ShapeCAA(); // FUN_00cb9090
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkReferencedObject::operator delete(p, nbytes);
     }

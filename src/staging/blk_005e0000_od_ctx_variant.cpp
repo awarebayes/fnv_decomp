@@ -123,7 +123,7 @@ struct FUN_005eefc0_class
 {
     FUN_005eefc0_class* __thiscall FUN_005eefc0();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_005ef150_class
 {
     void* __thiscall FUN_005ef150(int a);
@@ -1097,7 +1097,7 @@ struct FUN_005efa80_cls
     void Finish();
     void BSSimpleArray_PathingLocation_1024_ReallocateBuffer(void* a1, unsigned int a2);
 };
-void* operator new(unsigned int uiSize, void* pvMem);
+void* operator new(size_t uiSize, void* pvMem);
 void operator delete(void* pvMem, void* pvPlace);
 struct EFBC0Item
 {
@@ -1796,7 +1796,7 @@ struct Target005ed1e0
     EntryArray005ed1e0 entries_14;
     bool BGSRagdoll_GrabIK_Compare(Target005ed1e0* arData);
 };
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 struct SpawnItem : FUN_005ef7f0_Data
 {
     int unk20;
@@ -1807,7 +1807,7 @@ struct SpawnItem : FUN_005ef7f0_Data
     int unk34;
     SpawnItem();
 };
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 struct E5EF9A0Entry
 {

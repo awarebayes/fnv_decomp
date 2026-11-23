@@ -61,7 +61,7 @@ struct FUN_00e888c0_Class {
 struct FUN_00e891f0_Class {
     void __thiscall NiD3DTextureStageGroup_RemoveAllStageStates();
 };
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 extern int DAT_010efc34;
 void __cdecl FUN_00e68830();
 struct FUN_00e8aa40_Class {
@@ -155,7 +155,7 @@ void __cdecl NiFree(void*);
 struct FUN_00e941d0_Node { unsigned int pad[9]; unsigned int count; unsigned int pad2[5]; FUN_00e941d0_Node* next; FUN_00e941d0_Node* prev; };
 struct FUN_00e941d0_This { int pad[11]; FUN_00e941d0_Node* head; };
 FUN_00e941d0_Node* __fastcall RemoveFirstNodeAtLeast(FUN_00e941d0_This* self, int, unsigned int value);
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e98610_Node {
     void* m_next;
     void* m_auiShapeKeys;
@@ -259,7 +259,7 @@ extern int DAT_010efe54;
 extern int DAT_010efe74;
 extern MemoryManager _g_memoryManager;
 void __cdecl _NiFree(void*);
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 extern unsigned char DAT_010f02b0[];
 extern unsigned char DAT_010f02d0[];
 extern MemoryManager _g_memoryManager;
@@ -358,7 +358,7 @@ struct FUN_00e96c90_Class {
     void __thiscall FUN_00e89970();
     void __thiscall UpdateState_00e96c90();
 };
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 void __cdecl FUN_00e989c0();
 extern int DAT_010f1550;
 struct FUN_00e97870_Class {
@@ -368,7 +368,7 @@ struct FUN_00e97870_Class {
 extern unsigned int DAT_011c1118;
 extern int DAT_0126fa58;
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 void NiVBBlock_GetFreeChip();
 struct FUN_00e98b10_Class {
@@ -6428,7 +6428,7 @@ struct FUN_00e940a0_Class {
     void* m_00;
     void __thiscall ReleaseGlobalSlot();
 };
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 struct FUN_00e94150_Node {
     int m_00;
     int m_04;
@@ -6755,7 +6755,7 @@ struct E94B0Block {
             m_pkEntryArray = 0;
     }
 
-    static void* operator new(unsigned int uiSize) { return g_kE94B0MemoryManager.Allocate(uiSize); }
+    static void* operator new(size_t uiSize) { return g_kE94B0MemoryManager.Allocate(uiSize); }
 
     E94B0Entry* GetAt(unsigned int uiIndex)
     {
@@ -6980,7 +6980,7 @@ struct NiColor3 {
     float m_kPointB;
     __forceinline NiColor3() : m_r(0.0f), m_g(0.0f), m_kPointB(0.0f) {}
 };
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 extern volatile long DAT_011f4400;
 struct SubObjF8 {
     int m_00;
@@ -7331,7 +7331,7 @@ struct ArrayElementE80390 {
     unsigned int unk60;
     unsigned int unk64;
     ArrayElementE80390() throw(); ~ArrayElementE80390() throw();
-    static __forceinline void* __cdecl operator new[](unsigned int size, unsigned int count) { if (count == 0) return reinterpret_cast<MemoryManager*>(&DAT_011f6238)->Game_DoHeapAlloc(4); return FUN_00aa1420(size); }
+    static __forceinline void* __cdecl operator new[](size_t size, size_t count) { if (count == 0) return reinterpret_cast<MemoryManager*>(&DAT_011f6238)->Game_DoHeapAlloc(4); return FUN_00aa1420(size); }
 };
 
 // @fnv 0x00e80390

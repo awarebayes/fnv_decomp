@@ -145,7 +145,7 @@ struct FUN_00c32d80
     FUN_00c32d80();
 };
 extern int DAT_010c03cc;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

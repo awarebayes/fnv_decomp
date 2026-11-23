@@ -134,7 +134,7 @@ bool FUN_00891150_Class::TargetEntry_QHit()
     return ((FUN_008c1be0_Class*)((char*)this + 0x10))->bhkTTNode_TESObjectREFR_GetFlags(1) != 0;
 }
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 void* __fastcall Actor_ForceStopMoving(void*);
 

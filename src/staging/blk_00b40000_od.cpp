@@ -55,7 +55,7 @@ FUN_00b42980& FUN_00b42980::Set(unsigned int v, FUN_00b42980 const& src)
     return *this;
 }
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 // Allocates a new camera object, copies this camera into it via FUN_00b402d0, and returns the new object by reference.
 // @fnv 0x00b403a0
@@ -443,7 +443,7 @@ int FUN_00b420a0_cls::CompareAndGetDelta(FUN_00b42980 const& arg)
     return (m_obj.b - arg.b) >> 2;
 }
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 extern char DAT_010176f8[];
 extern char DAT_01140ef8[];

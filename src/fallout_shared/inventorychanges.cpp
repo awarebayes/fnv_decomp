@@ -2071,7 +2071,7 @@ void TESNPC::SetField1F0(TESNPC* aValue)
     m_pTemplateNPC = aValue;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __fastcall InventoryChanges_ResetCachedWeights(InventoryChanges*);
 // @fnv 0x004befb0
 // pdb: InventoryChanges::InventoryChanges | InventoryChanges.obj | retail, upstream name already matches, high
@@ -3429,7 +3429,7 @@ PlacedRef* Placement::InventoryChanges_DropItemIntoWorld(PlacedRef* apRef, void*
     return result3;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct Weapon;
 struct Extra;
 struct Item;
@@ -4486,7 +4486,7 @@ FUN_0076b630* Target::SelectBestWeapon(ActorStand* apActorBase, float* afvalue, 
     }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct ContainerView
 {
     unsigned int TESContainer_GetFilteredList();
@@ -7144,7 +7144,7 @@ struct W20Entry
     W20Form* form;
     W20Entry(W20Form*, int);
     ~W20Entry();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     W20Entry* _ref_00726070();
 };
@@ -7259,7 +7259,7 @@ struct W20Inventory
     void InventoryChanges_AddItem(W20Form*, int, int);
     void InventoryChanges_AddItem_0(W20Ref*, int, int, bool);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 void FNV_Warning(const char*, ...);
 int FUN_004873d0(W20Form*);
@@ -8912,7 +8912,7 @@ struct FUN_00410360
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c;
     FUN_00410360();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void* BaseExtraList_GetExtraData(int);
     void BaseExtraList_RemoveExtra(void*, int);
@@ -8933,7 +8933,7 @@ struct FUN_004bc550
     int count;
     TESBoundObject* form;
     FUN_004bc550(TESBoundObject*, int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int FUN_00726070();
     ExtraNode* Modelloader_GetReferencedThis();
@@ -9190,7 +9190,7 @@ struct MoveExtra
 {
     unsigned int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c;
     MoveExtra();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     unsigned int BaseExtraList_ItemsInList();
     void* ExtraDataList_GetOwner();
@@ -9216,7 +9216,7 @@ struct MoveItem
     int count;
     TESBoundObject* form;
     MoveItem(TESBoundObject*, int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     bool ItemChange_GetWorn(bool);
     bool FUN_004bcb70();
@@ -10387,7 +10387,7 @@ struct Extra
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c;
     Extra();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void* BaseExtraList_GetExtraData(int);
     void ExtraDataList_SetOriginalReferenceExtra(void*);
@@ -10402,7 +10402,7 @@ struct ExtraNode
     Extra* value;
     ExtraNode* next;
     ExtraNode();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Extra** FUN_006815c0();
     ExtraNode* FUN_00726070();
@@ -10416,7 +10416,7 @@ struct Item
     TESBoundObject* form;
     Item();
     ~Item();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int FUN_00726070();
     ExtraNode* Modelloader_GetReferencedThis();
@@ -12777,7 +12777,7 @@ void InvHost::PlayerCharacter_AddRockItAmmo(void* apObj, InvExtra* apExtra, int 
 }
 
 extern const char g_inventoryChangesSourceFilename[];
-void* operator new(unsigned int);
+void* operator new(size_t);
 struct Transfer4c37C37Form
 {
     virtual void Pad48_0();
@@ -15535,7 +15535,7 @@ struct FUN_0096a2d0
     char data[8];
     FUN_0096a2d0();
     ~FUN_0096a2d0();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     unsigned FUN_005ae380();
     Extra** FUN_006815c0();
@@ -15550,7 +15550,7 @@ struct FUN_004bc550
     int count;
     Object* form;
     FUN_004bc550(Object*, int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int FUN_00726070();
     FUN_0096a2d0* Modelloader_GetReferencedThis();
@@ -17198,7 +17198,7 @@ struct CleanRef
     unsigned int unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24, unk28, unk2c, unk30, unk34, unk38,
         unk3c, unk40, unk44, unk48, unk4c, unk50, unk54, unk58, unk5c, unk60, unk64;
     CleanRef();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void FUN_00484490();
 };
@@ -17211,7 +17211,7 @@ struct CleanExtra
     virtual ~CleanExtra();
     unsigned int unk04, unk08, unk0c, unk10, unk14, unk18, unk1c;
     CleanExtra();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     double ExtraDataList_GetHealth();
     void ExtraDataList_RemoveHealth();
@@ -18416,7 +18416,7 @@ void SaveInventory::ItemChange_SaveGameTES()
 }
 }  // namespace fnv_004be6f0
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct ExtraSetter_bdb40
 {
     void ExtraDataList_SetIsModding(int);

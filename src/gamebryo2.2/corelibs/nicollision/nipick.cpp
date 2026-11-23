@@ -385,7 +385,7 @@ class PooledPickRecord
     }
     void SetObject(int iParam);
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Game_DoHeapAlloc(uiSize);
     }

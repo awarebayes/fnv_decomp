@@ -186,7 +186,7 @@ void __thiscall PathingLOSGridMap::Reset()
     Initialize_006e0320(&m_1C, fRadius);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct SetAtHelper
 {
     void SetAt(unsigned int, unsigned int);
@@ -738,7 +738,7 @@ struct LockX
     void Unlock();
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Local PathingLOSGridMap fallback: the shared header lacks this update method and the lock at +0x4c.
 struct LOSGridUpdateState

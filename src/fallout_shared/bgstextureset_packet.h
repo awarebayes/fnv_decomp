@@ -60,7 +60,7 @@ struct TESDataHandlerForms
 class TESDataHandler;
 extern TESDataHandler* g_dataHandler;
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 struct TESFileChunkData16
 {

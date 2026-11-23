@@ -18,8 +18,8 @@
 #include "../../../include/BSFadeNode.h"
 #include "../../../include/NiFixedString.h"
 
-void* __cdecl operator new(unsigned int);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new(size_t);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete(void*);
 extern "C" void* __cdecl memset(void*, int, unsigned int);
 int __cdecl BSstricmp(const char*, const char*);

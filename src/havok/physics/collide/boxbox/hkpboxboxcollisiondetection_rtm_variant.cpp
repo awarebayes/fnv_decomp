@@ -1953,7 +1953,7 @@ extern const double DAT_010d5378;
 
 struct NFeature
 {
-    __forceinline static void* operator new(unsigned int, void* p)
+    __forceinline static void* operator new(size_t, void* p)
     {
         return p;
     }

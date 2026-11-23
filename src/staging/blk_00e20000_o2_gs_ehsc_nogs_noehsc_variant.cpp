@@ -1164,7 +1164,7 @@ struct FUN_00e2d0d0_cls
     E2d0Node* m_pNodes[100];
     int TraverseNode(E2d0Node* a1, int a2, int* a3, E2d0Ref** a4);
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

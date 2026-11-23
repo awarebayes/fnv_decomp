@@ -61,7 +61,7 @@ public:
 #include "../../../../../../include/hkpVehicleInstanceWheelInfo.h"
 #include "../../../../../../include/hkpVehicleSuspension.h"
 
-inline void* operator new(unsigned int, void* pvMem) throw();
+inline void* operator new(size_t, void* pvMem) throw();
 
 extern "C" LocalM128 _mm_xor_ps(LocalM128, LocalM128);
 extern "C" LocalM128 _mm_unpackhi_ps(LocalM128, LocalM128);
@@ -301,7 +301,7 @@ inline hkMemoryAllocator& GetHeapE36E(HavokAllocatorContext_hkpvehiclelinearcast
     return *reinterpret_cast<hkMemoryAllocator*>(context->m_alloc);
 }
 
-__forceinline void* hkpVehicleLinearCastWheelCollide::operator new(unsigned int uiSize) throw()
+__forceinline void* hkpVehicleLinearCastWheelCollide::operator new(size_t uiSize) throw()
 {
     hkReferencedObject* p = (hkReferencedObject*)GetHeapE36E(hkMemoryRouter_getInstance()).blockAlloc(uiSize);
     p->m_memSizeAndFlags = (unsigned short)uiSize;
@@ -643,7 +643,7 @@ __forceinline void hkVector4::set(float x, float y, float z, float w)
 HavokAllocatorContext_hkpvehiclelinearcastwheelcollide* GetContextE36120();
 struct ShapeE36120
 {
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         HavokAllocatorContext_hkpvehiclelinearcastwheelcollide* pkContext = GetContextE36120();
         ShapeE36120* pkShape = static_cast<ShapeE36120*>(reinterpret_cast<hkMemoryAllocator*>(pkContext->m_alloc)->blockAlloc(nbytes));
@@ -695,7 +695,7 @@ ShapeE36120* __stdcall hkpVehicleLinearCastWheelCollide_createWheelShape(float w
     return new CapsuleE36120(kTop, kBottom, radius, 0.0f);
 }
 
-inline void* operator new(unsigned int, void* pvMem) throw()
+inline void* operator new(size_t, void* pvMem) throw()
 {
     return pvMem;
 }

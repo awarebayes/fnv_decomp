@@ -790,7 +790,7 @@ void FUN_004b9d80_Class::ReleaseStorage_004b9d80(void* pObject)
     ((Unk6b*)((char*)this + 0xc))->FreeMemory(pObject);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_004b9de0
 {
@@ -2774,7 +2774,7 @@ struct ScanItem64
     int ClearToZero();
 };
 
-void* __cdecl operator new(unsigned int size, void* placement) throw();
+void* __cdecl operator new(size_t size, void* placement) throw();
 void __cdecl operator delete(void* p, void* placement) throw();
 
 struct FUN_004a9ab0_cls
@@ -3607,7 +3607,7 @@ NiTriShape* __cdecl CreateOctahedron(float size, const NiColorA* color, bool lig
     return vertices;
 }
 
-void* operator new[](unsigned int);
+void* operator new[](size_t);
 void operator delete[](void*);
 void* _NiMalloc_00aa1070(unsigned int);
 void FUN_00b57e30(NiTriShape*, int, int);

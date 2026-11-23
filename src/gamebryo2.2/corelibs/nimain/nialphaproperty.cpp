@@ -116,7 +116,7 @@ struct SdmBase
     }
     virtual ~SdmBase()
     {}
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }

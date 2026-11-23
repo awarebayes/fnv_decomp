@@ -18,7 +18,7 @@ inline hkMemoryAllocator& GetHeap(hkMemoryRouter& holder)
 
 namespace fnvc_adapt { hkMemoryRouter& __cdecl hkMemoryRouter_getInstance(); }
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 __forceinline hkMemoryAllocator& hkContainerHeapAllocator::get(const void*)
 {

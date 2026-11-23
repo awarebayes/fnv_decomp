@@ -1243,7 +1243,7 @@ class DFB550Object
 void Runtime_DestroySubobject_00dfb550(DFB550Object* pkObject);
 extern int hkaWaveletCompressedAnimationClass; // src: XBOX_RETAIL_PDB 0x0126ad90 (old: DAT_0126ad90/g_0126ad90)
 int* __cdecl Object_GetGlobalObjectAddress_00dfb560();
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }
@@ -2293,7 +2293,7 @@ class DFF2E0Object
   public:
     DFF2E0Object(DFF2E0FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -2329,7 +2329,7 @@ class DFF520Object
   public:
     DFF520Object(DFF520FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }

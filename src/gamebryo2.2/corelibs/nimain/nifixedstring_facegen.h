@@ -95,6 +95,6 @@ extern float DAT_01065b98;
 struct NiPoint3StartupTable;
 extern NiPoint3StartupTable gNiPoint3StartupSrc;
 extern "C" void* __cdecl memset(void*, int, unsigned int);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete[](void*);
 #endif

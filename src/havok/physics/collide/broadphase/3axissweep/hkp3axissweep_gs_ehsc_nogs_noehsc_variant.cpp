@@ -2777,7 +2777,7 @@ void S4ef0Owner::hkp3AxisSweep_querySingleAabb(const S4ef0Aabb& aabbIn,S4ef0Resu
  _querySingleAabb(aabbIn,0,&pairs_out,0,0);
 }
 
-inline void* __cdecl operator new(unsigned int, void* storage) { return storage; }
+inline void* __cdecl operator new(size_t, void* storage) { return storage; }
 
 extern float DAT_0104da48;
 extern float DAT_0104e148;

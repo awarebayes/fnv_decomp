@@ -34,7 +34,7 @@ bool __thiscall BSAnimNote::vf35(const TimedTextEntry* apTextKey)
 }
 
 extern int DAT_01097dd4;
-inline void* operator new(unsigned int, void* storage) { return storage; }
+inline void* operator new(size_t, void* storage) { return storage; }
 
 // Allocates a 0x10-byte BSFadeNode, calls Init on it, sets its vtable to DAT_01097dd4, and returns the pointer or 0.
 // @fnv 0x00a44940
@@ -166,7 +166,7 @@ void __fastcall LinkAnimNotes(BSAnimNotes* self, void*, NiStream& kStream)
 
 extern MemoryManager g_kA4AF0MemoryManager;
 
-inline void* __cdecl operator new[](unsigned int uiSize)
+inline void* __cdecl operator new[](size_t uiSize)
 {
     return g_kA4AF0MemoryManager.Allocate(uiSize);
 }

@@ -9,7 +9,7 @@
 #include "../../../include/SkyTextureManager.h"
 #include "AutoMemContext.h"
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* object);
 bool __cdecl CleanPath(const char* apInPath, char* output, unsigned int aiOutSize);
 extern IOManager* DAT_01202d98;

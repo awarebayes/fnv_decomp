@@ -41,7 +41,7 @@ template <class T, class A> class ObjectPoolBlock
     T* objects;
     unsigned int count;
     ObjectPoolBlock* next;
-    static void* operator new(unsigned int n) throw()
+    static void* operator new(size_t n) throw()
     {
         return g_memoryManager.Allocate(n);
     }

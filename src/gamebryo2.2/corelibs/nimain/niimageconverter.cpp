@@ -50,7 +50,7 @@ struct NiImageConverter2 : NiRefObject
     {
         s.FUN_00a8ae50();
     }
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -452,7 +452,7 @@ struct FUN_00a76bb0 : NiRefObject
 {
     char m_data[0x778];
     virtual ~FUN_00a76bb0();
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Frees and clears DAT_011f4a78, then calls FUN_00a8ada0 on the subobject at offset 0x80.
 // @fnv 0x00a76bb0

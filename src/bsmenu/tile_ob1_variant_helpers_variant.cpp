@@ -397,14 +397,14 @@ public:
         m_name = apName;
         m_pOwnerObject = apOwner;
     }
-    static void* operator new(unsigned int auiSize) { return g_mm.Allocate(auiSize); }
+    static void* operator new(size_t auiSize) { return g_mm.Allocate(auiSize); }
 };
 struct TemplateList_00a0ae70 {
     TileTemplate_00a0ae70* m_item;
     TemplateList_00a0ae70* m_pkNext;
 
     TemplateList_00a0ae70(TileTemplate_00a0ae70* apItem) : m_item(apItem), m_pkNext(0) {}
-    static void* operator new(unsigned int auiSize) { return g_mm.Allocate(auiSize); }
+    static void* operator new(size_t auiSize) { return g_mm.Allocate(auiSize); }
 
     void AddTail(TileTemplate_00a0ae70** apItem) {
         if (*apItem == 0) return;
@@ -507,7 +507,7 @@ struct TileTemplateNew_ac80 {
         m_kName = apName;
         m_pkOwnerManager = apOwner;
     }
-    static void* operator new(unsigned int auiSize) { return ((TilePool_ac80*)&DAT_011f6238)->Game_DoHeapAlloc(auiSize); }
+    static void* operator new(size_t auiSize) { return ((TilePool_ac80*)&DAT_011f6238)->Game_DoHeapAlloc(auiSize); }
     static void operator delete(void* apMem) { DAT_011f6238.MemoryManager_Deallocate(apMem); }
 };
 struct FUN_00a0ac80 {
@@ -632,7 +632,7 @@ struct TileWork {
 unsigned int BSStringLength(const char*);
 inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b) { return a > b ? a : b; }
 void* __cdecl memcpy(void*, const void*, unsigned int);
-void* operator new(unsigned int size);
+void* operator new(size_t size);
 void operator delete(void* memory);
 struct ReuseNode {
     int trait;
@@ -655,7 +655,7 @@ struct ReuseNode {
         owner = c;
     }
 };
-inline void* operator new(unsigned int size) { return g_mm.Allocate(size); }
+inline void* operator new(size_t size) { return g_mm.Allocate(size); }
 void operator delete(void* memory);
 ReuseNode* Tile_TileTemplate_GetItem(int aiCmd, float afVal, const char* apStr, int aiTA, int aiLine);
 struct Sub_00a0c020 {
@@ -1260,7 +1260,7 @@ struct S_00a04150_Class {
 
 #include <math.h>
 namespace fnv_00a09410 {
-void* __cdecl operator new(unsigned,void*);
+void* __cdecl operator new(size_t,void*);
 int __cdecl FUN_00ec6da0(const char*, const char*);
 unsigned int __cdecl strlen(const char*);
 int __cdecl strcpy_s(char*, unsigned int, const char*);
@@ -1476,7 +1476,7 @@ extern "C" unsigned int __cdecl FUN_00ec6130(const char*);
 extern void* __cdecl FormHeap_Allocate(unsigned);
 extern void __cdecl FormHeapFreeAndLog_00401030(void*);
 extern void* __cdecl FUN_00401460(void*, const void*, unsigned);
-__forceinline void* __cdecl operator new[](unsigned size) { return ((TilePool_ac80*)&DAT_011f6238)->Game_DoHeapAlloc(size); }
+__forceinline void* __cdecl operator new[](size_t size) { return ((TilePool_ac80*)&DAT_011f6238)->Game_DoHeapAlloc(size); }
 __forceinline void __cdecl operator delete[](void* data) { DAT_011f6238.MemoryManager_Deallocate(data); }
 __forceinline int RenderCopyData(char* dest, unsigned capacity, const char* source) { return FUN_00ec65a6(dest, capacity, source); }
 __forceinline void CopyPrefix(char* dest, const char* source, const char* begin) {

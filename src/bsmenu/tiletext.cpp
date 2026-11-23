@@ -501,7 +501,7 @@ struct NewTextNode
     int unkA8;
 
     NewTextNode(unsigned);
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 
@@ -582,7 +582,7 @@ struct TileExtra
         NameString extraName("Tileptr");
         AssignFixedString(extraName);
     }
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 

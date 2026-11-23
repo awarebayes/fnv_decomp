@@ -9,7 +9,7 @@
 
 class NiRenderer;
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 extern NiRenderer* DAT_011f9508;
 #endif

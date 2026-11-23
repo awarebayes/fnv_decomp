@@ -27,7 +27,7 @@ struct FUN_00c8f510
     FUN_00c8f510();
     ~FUN_00c8f510();
 };
-__forceinline void* __cdecl operator new(unsigned int size, AllocationManager& allocator)
+__forceinline void* __cdecl operator new(size_t size, AllocationManager& allocator)
 {
     unsigned char* storage = static_cast<unsigned char*>(allocator.Game_DoHeapAlloc(0xf0));
     unsigned char adjustment = static_cast<unsigned char>(16 - (reinterpret_cast<unsigned int>(storage) & 15));

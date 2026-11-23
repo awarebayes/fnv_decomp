@@ -96,7 +96,7 @@ struct ShaderExtraDataObject : NiAVObject
 };
 __forceinline NiFixedString::operator const char*() const { return m_kHandle; }
 
-inline void* operator new(unsigned int, void* location) { return location; }
+inline void* operator new(size_t, void* location) { return location; }
 
 class Direct3DDeviceInterface
 {
@@ -714,7 +714,7 @@ struct FUN_00a9beb0
 {
     unsigned int a, b;
     virtual ~FUN_00a9beb0();
-    static void operator delete(void* p, unsigned int n);
+    static void operator delete(void* p, size_t n);
 };
 // @fnv 0x00a9beb0
 FUN_00a9beb0::~FUN_00a9beb0()

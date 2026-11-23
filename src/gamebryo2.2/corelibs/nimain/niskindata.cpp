@@ -205,7 +205,7 @@ struct S_00a84e70_Elem
     int unk00;
     int unk04;
     int unk08;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }
@@ -474,7 +474,7 @@ struct SkinLoadWeight
     float weight;
     SkinLoadWeight() : vertex(0)
     {}
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }
@@ -486,7 +486,7 @@ struct ResetFields
     SkinLoadWeight* weights;
     unsigned short vertices;
     ResetFields() throw();
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }

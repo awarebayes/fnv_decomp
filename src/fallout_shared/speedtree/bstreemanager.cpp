@@ -932,8 +932,8 @@ void C6658::BSTreeManager_UpdateWindMatrices()
 
 struct xMemObj
 {
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* p, size_t);
 };
 
 

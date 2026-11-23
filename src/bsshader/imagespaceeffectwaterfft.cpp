@@ -49,7 +49,7 @@ struct ImageSpaceShaderParam : ImageSpaceEffectParam
     void SetFloats(int idx, const float* data, unsigned int count);
     void SetReferenceVector(int idx, float x, float y, float z, float w);
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

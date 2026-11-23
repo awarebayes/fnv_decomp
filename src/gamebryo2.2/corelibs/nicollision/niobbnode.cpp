@@ -890,7 +890,7 @@ struct S00eb9fa0_Node
     S00eb9fa0_Node* m_0x84;
     int m_0x88;
     virtual ~S00eb9fa0_Node();
-    static void* operator new(unsigned int s)
+    static void* operator new(size_t s)
     {
         return DAT_011f6238.Game_DoHeapAlloc(s);
     }

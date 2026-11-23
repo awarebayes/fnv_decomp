@@ -23,7 +23,7 @@ struct DismemberOperations : BSDismemberSkinInstance
 };
 
 extern int DAT_01069a84;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -62,7 +62,7 @@ struct P03MM
 
 extern P03MM _g_memoryManager;
 
-inline void* __cdecl operator new[](unsigned int size)
+inline void* __cdecl operator new[](size_t size)
 {
     return _g_memoryManager.Allocate(size);
 }

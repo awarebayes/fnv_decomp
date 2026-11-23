@@ -74,7 +74,7 @@ void ShieldEffect::Update(float afSecondsElapsed)
     }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Allocates and constructs a ShieldEffect with the three given arguments, returning it as a ShieldEffect pointer.
 // @fnv 0x008280a0

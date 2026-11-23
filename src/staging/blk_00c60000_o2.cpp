@@ -800,7 +800,7 @@ void* __fastcall DeleteRagdollMap(NiTMap<const char*, NiPointer<bhkRagdollShareD
 
 void __stdcall FUN_00c76240();
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c7a8b0_class
 {
@@ -1560,7 +1560,7 @@ void __cdecl SetTlsValueAndReset(int apObject, int aeMode)
     tls.value = oldValue;
 }
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 struct FUN_00c6c290_holder
 {
     void FUN_00c6c290();
@@ -1633,7 +1633,7 @@ void* __thiscall FUN_00c6cb70_class::FUN_00c6cb70(int aiFlags)
     return this;
 }
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 struct FUN_00cd2de0
 {
     int m_iWordAt00;
@@ -7230,7 +7230,7 @@ void FUN_00c6cef0_cls::CallTargetWithArgs(int a, int b)
 }
 
 extern void __cdecl FUN_00cabf50();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c6d010_Class
 {
@@ -7392,7 +7392,7 @@ void* __cdecl bhkListShape_GetRTTI()
     return &g_unk012681a8;
 }
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c6d320_class
 {
@@ -12829,13 +12829,13 @@ struct ChildBase
     virtual ~ChildBase();
     void removeReference();
     void Attach(WorldEntry* w, hkBoolArg runUpdateCollisionFilterOnWorld, int a, int updateShapeCollectionFilter);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         ChildBase* p = (ChildBase*)(&GetAllocHolder()->heap())->blockAlloc(n);
         p->m_usMemSizeAndFlags = (unsigned short)n;
         return p;
     }
-    static void operator delete(void* p, unsigned int n);
+    static void operator delete(void* p, size_t n);
 };
 
 struct Child : ChildBase
@@ -13445,7 +13445,7 @@ class C687B0Object : public C687B0ObjectBase, public C687B0Listener
   public:
     C687B0Object();
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         void* p = GetRouterHeap(hkMemoryRouter::getInstance()).blockAlloc(uiSize);
         static_cast<C687B0Object*>(p)->m_usMemSizeAndFlags = (unsigned short)uiSize;
@@ -13558,7 +13558,7 @@ template <> NiPointer<CC68B50Object>& NiPointer<CC68B50Object>::operator=(const 
 
 struct CC68B50Node
 {
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kC68B50Heap.Allocate(uiSize);
     }
@@ -14218,7 +14218,7 @@ hkMemoryRouter* BC6DF60GetRouter();
 class BC6DF60Phantom
 {
   public:
-    void* operator new(unsigned int uiNumBytes) throw()
+    void* operator new(size_t uiNumBytes) throw()
     {
         return GetRouterHeap(*BC6DF60GetRouter()).blockAlloc(uiNumBytes);
     }
@@ -14560,7 +14560,7 @@ template <> NiTMap<const char*, NiPointer<bhkPoseArray> >::~NiTMap()
     RemoveAll();
 }
 
-inline void* operator new(unsigned int, void* pvMem)
+inline void* operator new(size_t, void* pvMem)
 {
     return pvMem;
 }
@@ -21375,14 +21375,14 @@ struct AllocHeader
 };
 struct EntryBase
 {
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         hkMemoryRouter* h = hkMemoryRouter_getInstance();
         void* p = ((MyAlloc*)h->m_heap)->v04(n);
         ((AllocHeader*)p)->m_iElementCount = (unsigned short)n;
         return p;
     }
-    static void operator delete(void* p, unsigned int n);
+    static void operator delete(void* p, size_t n);
 };
 struct FUN_00cbc460 : EntryBase
 {
@@ -23281,7 +23281,7 @@ struct ResourceC73
     int unk10;
     int unk14;
     ResourceC73(DescriptorC73*);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void IncRefCount()
     {
@@ -28195,7 +28195,7 @@ struct __declspec(align(16)) C69960Node : NodeBase
     Vec4 m_20;
     Vec4 m_30;
     C69960Node(C69960Node* apBody);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 };
 struct ResObj

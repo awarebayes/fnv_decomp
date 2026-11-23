@@ -31,7 +31,7 @@ public:
     virtual void FinalizeWheelCollisionOutput(const hkpVehicleInstance*, unsigned char,
                                             WheelCollideResult&);
 
-    static void* operator new(unsigned int nbytes);
+    static void* operator new(size_t nbytes);
     static void operator delete(void* p);
     void SetUserInfo(int value);
     void UpdatePhantom(const hkpVehicleInstance* vehicle);

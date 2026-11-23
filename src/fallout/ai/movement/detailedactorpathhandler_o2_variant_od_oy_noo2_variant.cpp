@@ -45,7 +45,7 @@ struct AvoidArray75
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14;
     AvoidArray75();
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     void Add(const Area75&);
 };
 struct Request75

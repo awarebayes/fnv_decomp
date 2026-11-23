@@ -901,7 +901,7 @@ struct OwnerBase
     unsigned int m_04;
     unsigned int m_08;
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -1414,7 +1414,7 @@ struct bhkRefObjectBase
 
     bhkRefObjectBase();
 
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 
     static void operator delete(void* p);
 
@@ -2312,7 +2312,7 @@ struct FUN_00ca8c90
     FUN_00ca8c90(void* settings);
     void hkpRigidBody_setMotionType(int newState, int preferredActivationState, int collisionFilterUpdateMode);
     void FUN_00c905b0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FUN_00ca8c90* p = (FUN_00ca8c90*)hkMemoryRouter_getInstance()->AllocateBody(size);
         p->allocationSize = (unsigned short)size;

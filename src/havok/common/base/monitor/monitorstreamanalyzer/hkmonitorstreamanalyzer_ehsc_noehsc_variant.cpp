@@ -245,7 +245,7 @@ int __cdecl hkMonitorStreamAnalyzer_findMaxTimerNameIndent(E0C860Node* node, int
     }
     return width;
 }
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -1930,7 +1930,7 @@ struct S00e0d180_Node
 
     int unk54;
 
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
 
         return reinterpret_cast<FUN_00e0d000Heap&>(hkMemoryRouter_getInstance()->heap()).allocate(size);

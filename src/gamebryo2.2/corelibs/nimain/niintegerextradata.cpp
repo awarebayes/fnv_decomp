@@ -60,7 +60,7 @@ NiExtraData* NiIntegerExtraData_CreateObject()
     return 0;
 }
 
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 // @fnv 0x00a99d00
 // pdb: NiIntegerExtraData::`scalar deleting destructor' | BSXFlags.obj | debug, vtable slot, medium
 void* __fastcall DeleteIntegerExtraData(NiIntegerExtraData* data, void*, unsigned int auiFlags)

@@ -7,7 +7,7 @@ extern "C" void _ReadWriteBarrier(void);
 extern "C" unsigned __int64 __rdtsc(void);
 #include <xmmintrin.h>
 #include <windows.h>
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }

@@ -74,7 +74,7 @@ class TextureMapTransform
     float rotate;
     NiPoint2 scale;
     char pad[52];
-    static void* operator new(unsigned int, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }
@@ -373,7 +373,7 @@ void* __thiscall FUN_00a463e0_Holder::GetElementAt(unsigned int index)
     return 0;
 }
 
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -583,7 +583,7 @@ struct TextureTransformOwner : InterpolationControllerBase
         controllerID = 0;
     }
     void* FUN_00a46890(unsigned int flags);
-    static void operator delete(void* memory, unsigned int size)
+    static void operator delete(void* memory, size_t size)
     {
         FUN_00aa1460(memory, size);
     }

@@ -263,7 +263,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long*);
 struct ConstantMap
 {
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     static void operator delete(void*);
     ConstantMap(void*, int);
     virtual void ReportDiagnostic();
@@ -664,7 +664,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile lo
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
 unsigned int __cdecl ParticleShaderProperty_GetInstanceIndex();
 
-inline void* operator new[](unsigned int n, Q64_Pool& p)
+inline void* operator new[](size_t n, Q64_Pool& p)
 {
     return p.Game_DoHeapAlloc(n);
 }
@@ -684,7 +684,7 @@ inline Q64_Pt2* Q64_allocUv(unsigned short n)
 
 struct Q64_Obj
 {
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -1047,7 +1047,7 @@ struct PassPointer
 struct Particle
 {
     float x, y, z, w, a, b, c, d, e, f, g, h;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return particleMemoryManager.Game_DoHeapAlloc(size);
     }

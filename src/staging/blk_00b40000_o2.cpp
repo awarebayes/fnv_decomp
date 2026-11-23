@@ -189,7 +189,7 @@ NamedObjectMap* __fastcall DestroyNamedObjectMap(NamedObjectMap* map, void*, uns
     return map;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 void __cdecl FUN_00b581c0(void);
 
@@ -259,7 +259,7 @@ void FUN_00b5a9d0_class::SetTripleInts(int aiFirst, int aiSecond, int aiThird)
     *(int*)((char*)this + 0x108) = aiThird;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 void __cdecl FUN_00b5e5a0();
 
@@ -1214,7 +1214,7 @@ struct BlobObj : public BlobBase
         m_1c = 2;
     }
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -2943,7 +2943,7 @@ struct Frustum
     bool special;
     Frustum();
     ~Frustum() throw();
-    static void* operator new(unsigned size)
+    static void* operator new(size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -3489,7 +3489,7 @@ struct RTItem
 
     RTItem(RTTexture* tex, unsigned int key, int flags);
     void Setup(RTKey* key);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return reinterpret_cast<MemoryManagerAllocHelper*>(&g_memoryManager)->Allocate(size);
     }
@@ -3545,7 +3545,7 @@ struct RTEntry
 
     RTEntry()
     {}
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return reinterpret_cast<MemoryManagerAllocHelper*>(&g_memoryManager)->Allocate(size);
     }

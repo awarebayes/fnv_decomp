@@ -36,7 +36,7 @@ void* __thiscall BSLookIKNote::Destroy(unsigned int flags)
 }
 
 extern int DAT_01097c8c;
-inline void* operator new(unsigned int, void* storage) { return storage; }
+inline void* operator new(size_t, void* storage) { return storage; }
 
 // @fnv 0x00a43fb0
 // pdb: BSLookIKNote::CreateObject | BSLookIKNote.obj | retail, object-file run extension, low

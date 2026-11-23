@@ -49,7 +49,7 @@ class CloneableObj
     void FUN_00a6cfe0(NiBSBoneLODController*, CloningProcess*);
     void NiBSBoneLODController_CopyMembers(NiBSBoneLODController*, CloningProcess*);
 };
-void operator delete(void*, unsigned int);
+void operator delete(void*, size_t);
 struct S_00c53e10
 {
     void FUN_00c53e40();
@@ -292,7 +292,7 @@ struct ArrW
     void** m_pBase;
     unsigned int m_uiMax;
     unsigned int m_uiSize;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         int aiD[2];
         return DAT_011f6238.Game_DoHeapAlloc(n);
@@ -679,7 +679,7 @@ class BoneLODControllerArray : public NiMemObject
   public:
     // 0x00c53870 allocates the set with an inline call to the memory manager (0x00aa3e40), not through
     // NiMemObject::operator new (0x00aa13e0), so the class keeps its own inline allocator.
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kMemoryManager.Allocate(uiSize);
     }
@@ -860,7 +860,7 @@ class FUN_00c53d70 : public NiBSBoneLODController
   public:
     // NiMemObject::operator new (0x00aa13e0) as an inline-declared body: 0x00c53360 calls it out of line but its
     // frame keeps the slots of the inline candidate's two locals.
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         unsigned int requested = size ? size : 1;
         unsigned int alignment = 4;
@@ -909,7 +909,7 @@ struct FUN_00c53d70
     int unk40;
     int unk44;
     int unk48;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         int unused[2];
         (void)unused;

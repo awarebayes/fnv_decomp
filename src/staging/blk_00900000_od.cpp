@@ -496,7 +496,7 @@ struct SpawnedObject_b9530
 {
     char m00[8];
     SpawnedObject_b9530(int a);
-    static void* operator new(unsigned int size, void* heap)
+    static void* operator new(size_t size, void* heap)
     {
         return Memory_ReturnPlacementAddress(size, heap);
     }

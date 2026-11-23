@@ -397,7 +397,7 @@ unsigned int FUN_00853500_shell::BGSNumericIDIndex_GetNumericID()
     return ((FUN_00846d20_shell*)g_BGSSaveLoadGame->GetFormIDMap())->BGSSaveLoadFormIDMap_GetFormID(uiValue);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 int DAT_011d60cc;
 

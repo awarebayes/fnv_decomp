@@ -753,7 +753,7 @@ struct FUN_00526c90
     FUN_00526c90();
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // @fnv 0x00526e10
 // src: COMMUNITY 0x00526e10

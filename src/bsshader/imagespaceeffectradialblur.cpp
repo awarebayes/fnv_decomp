@@ -41,7 +41,7 @@ struct S_00b5a4a0_EffectParam
 struct S_00b5a4a0_Param : S_00b5a4a0_EffectParam
 {
     S_00b5a4a0_Param();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_00b5a4a0_mm.Allocate(size);
     }

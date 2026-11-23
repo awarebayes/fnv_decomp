@@ -16,7 +16,7 @@ struct TreadTransformEntry
     NiQuatTransform second;
     NiFixedString name;
     TreadTransformEntry();
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }

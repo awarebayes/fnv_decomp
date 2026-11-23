@@ -2358,7 +2358,7 @@ void F5920Ref::LoadRecord(void* pvLoadBuffer)
     pkTarget->MarkChanged(0x80000000);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct Vec122
 {

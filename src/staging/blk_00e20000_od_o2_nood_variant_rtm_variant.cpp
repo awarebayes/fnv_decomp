@@ -87,7 +87,7 @@ struct E29Item { LocalM128 a; LocalM128 b; char flag20; int val24; };
 struct E29Out1 { E29Item item; void* ptr30; int one34; int zero38; char unk3c; char flag3d; };
 struct E29Out2 { E29Item items[4]; int count; char flagC4; void* ptrs[4]; int unkD8; int unkDC; int zeros[4]; int unkF0; };
 void Runtime_ProcessEntries_00e29a10(E29SrcList* src, const LocalM128* posA, const LocalM128* posB, char* base, E29Out1* out1, int* outCount1, E29Out2* out2, int* outCount2);
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 void __cdecl ResizeAudioStream(void* mem, void* array, int sizeElem);
 struct __declspec(align(16)) Key_e3a1 {
     float m_ax, m_ay, m_az, m_aw;

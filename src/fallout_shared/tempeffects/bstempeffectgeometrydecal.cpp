@@ -783,8 +783,8 @@ struct Obj18c
     int m_08;
     int m_0c;
     Obj18c();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiSkinPartition_ReplacePartitions(void* pkPartitions, int uiPartitions);
 };
 void __cdecl FUN_00401460(void* dst, void* src, unsigned int n);
@@ -1592,8 +1592,8 @@ struct DNewPartition
 {
     int unk00, unk04, unk08, unk0c;
     DNewPartition();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiSkinPartition_ReplacePartitions(DPartition*, int);
 };
 extern GlobalObjectO2_00a7b610 g_011f49d8;
@@ -1604,7 +1604,7 @@ void __cdecl NiMatrix3_TransformVertices(DMatrix*, DPoint*, int, DPoint*, DPoint
 float __cdecl BSMAX_00404010(float, float);
 float __cdecl DecalPower(float, int);
 float __cdecl FloatAbs(float);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete[](void*);
 void* __cdecl NiMalloc(unsigned int);
 void* __cdecl memcpy(void*, const void*, unsigned int);
@@ -2092,8 +2092,8 @@ struct ObjB
     int wc8;
     int wcc;
     int wd0;
-    static void* operator new(unsigned int n);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t n);
+    static void operator delete(void*, size_t);
     ObjB();
     void BSShaderProperty_SetDepthBias(float f);
 };
@@ -2128,8 +2128,8 @@ struct ObjC
     int cf3c;
     int cf40;
     int cf44;
-    static void* operator new(unsigned int n);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t n);
+    static void operator delete(void*, size_t);
     ObjC(int partList, DBone* bone, int x);
 };
 
@@ -2139,8 +2139,8 @@ struct ObjE
     int ef04;
     int ef08;
     int ef0c;
-    static void* operator new(unsigned int n);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t n);
+    static void operator delete(void*, size_t);
     ObjE();
     unsigned char NiSkinPartition_MakePartitions(void* pkTriData);
 };

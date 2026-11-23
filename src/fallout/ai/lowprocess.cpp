@@ -7073,7 +7073,7 @@ SearchInventory* __cdecl GetInventory(SearchReference*);
 struct SearchResult
 {
     SearchResult();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     SearchReference* owner;
     TESBoundObject* object;

@@ -6,7 +6,7 @@
 class SunDamageEffect : public ActiveEffect
 {
 public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 
     SunDamageEffect(MagicCaster*, MagicItem*, EffectItem*);

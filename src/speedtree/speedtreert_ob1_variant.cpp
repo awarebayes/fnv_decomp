@@ -1261,11 +1261,11 @@ float* FUN_00b0b830_Class::CIndexedGeometry_GetVertexWindWeights()
 }
 
 extern MemoryManager DAT_011f6238;
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return DAT_011f6238.Allocate(n);
 }
-inline void* operator new[](unsigned int n)
+inline void* operator new[](size_t n)
 {
     return DAT_011f6238.Allocate(n);
 }
@@ -2001,7 +2001,7 @@ void __cdecl CSpeedTreeRT_SetError(const char* pError);
 extern MemoryManager g_kMemoryB05210;
 struct SpeedTreeRTB05210
 {
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kMemoryB05210.Allocate(uiSize);
     }
@@ -2213,7 +2213,7 @@ struct TreeHeapQ
     void MemoryManager_Deallocate(void*);
 };
 extern TreeHeapQ DAT_011f6238;
-inline void* operator new[](unsigned n)
+inline void* operator new[](size_t n)
 {
     return DAT_011f6238.Game_DoHeapAlloc(n);
 }
@@ -5246,7 +5246,7 @@ class ExceptionB07
 
 extern MemoryManager g_kMemoryManagerB07;
 
-inline void* operator new[](unsigned int uiSize)
+inline void* operator new[](size_t uiSize)
 {
     return g_kMemoryManagerB07.Allocate(uiSize);
 }
@@ -6623,7 +6623,7 @@ void* __cdecl memcpy(void*, const void*, unsigned int);
 void* __cdecl memmove(void*, const void*, unsigned int);
 int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct SpdCharTraits
 {
@@ -7039,7 +7039,7 @@ void SpdWindReader::CSpeedTreeRT_ParseWindInfo(SpdParser* pFile)
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -7332,7 +7332,7 @@ namespace fnv_00b09f90 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -9807,7 +9807,7 @@ struct Pool
     void* Game_DoHeapAlloc(unsigned n);
 };
 extern Pool DAT_011f6238;
-inline void* __cdecl operator new[](unsigned n)
+inline void* __cdecl operator new[](size_t n)
 {
     return DAT_011f6238.Game_DoHeapAlloc(n);
 }
@@ -9861,7 +9861,7 @@ class Track_b0cd
   public:
     Track_b0cd();
     void CProjectedShadow_Parse(int cFile);
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kPoolB0CD.Game_DoHeapAlloc(uiSize);
     }
@@ -10801,7 +10801,7 @@ ElemEBB0& FUN_00b0ebb0_Iterator::ProcessEntries_00b0ebb0() const
 }
 }  // namespace fnv_00b0ebb0
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -12287,7 +12287,7 @@ struct FUN_00b0dfb0
         Init();
     }
     void Init();
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         int aiA[41];
         aiA[0] = 0;
@@ -14713,7 +14713,7 @@ struct InnerQ
 struct FUN_00b036d0;
 struct WrapQ
 {
-    static void* operator new(unsigned int n, MemoryManager& h)
+    static void* operator new(size_t n, MemoryManager& h)
     {
         return h.Allocate(n);
     }
@@ -14967,7 +14967,7 @@ class ExceptionB07
 
 extern MemoryManager g_kMemoryManagerD04;
 
-inline void* operator new[](unsigned int uiSize)
+inline void* operator new[](size_t uiSize)
 {
     return g_kMemoryManagerD04.Allocate(uiSize);
 }

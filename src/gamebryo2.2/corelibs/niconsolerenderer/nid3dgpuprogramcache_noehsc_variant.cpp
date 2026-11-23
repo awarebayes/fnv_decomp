@@ -284,7 +284,7 @@ extern MemoryManager DAT_011f6238;
 
 }
 
-inline void* operator new[](unsigned int uiSize, MemoryManager& allocator)
+inline void* operator new[](size_t uiSize, MemoryManager& allocator)
 {
     return allocator.Game_DoHeapAlloc(uiSize);
 }

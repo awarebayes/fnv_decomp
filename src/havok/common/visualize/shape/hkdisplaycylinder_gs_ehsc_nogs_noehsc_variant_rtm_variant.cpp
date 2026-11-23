@@ -300,7 +300,7 @@ template <class T> struct List
 };
 struct Geometry
 {
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }

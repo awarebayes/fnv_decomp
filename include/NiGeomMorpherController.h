@@ -15,7 +15,7 @@ public:
 
         __declspec(nothrow) InterpItem();
         __declspec(nothrow) ~InterpItem();
-        static void* operator new[](unsigned int size) throw();
+        static void* operator new[](size_t size) throw();
         static void operator delete[](void* p) throw();
     };
 

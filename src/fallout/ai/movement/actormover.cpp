@@ -371,7 +371,7 @@ void ActorMover::FinishMoving(bool abClearHandler)
     ((TESForm*)this)->TESForm::ClearData();
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void* __fastcall FUN_009dff40(void*, int, void*, void*);
 
 struct Dummy_0xe4
@@ -3171,8 +3171,8 @@ struct Node
 };
 struct Solution
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Solution();
     int a00;
     int a04;

@@ -951,7 +951,7 @@ struct RTEntry
     bool m_bIsCubeMap;
     int m_iMultiSample;
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return DAT_011f6238.Allocate(uiSize);
     }

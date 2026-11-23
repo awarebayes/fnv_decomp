@@ -140,7 +140,7 @@ struct Spawned_b02010
     unsigned int unk34;
     unsigned int unk38;
     Spawned_b02010();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }

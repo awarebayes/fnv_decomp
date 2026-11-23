@@ -208,7 +208,7 @@ struct ParticleSystem
     unsigned int fieldc0;
     unsigned int fieldc4;
     unsigned int fieldc8;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_OurMemalign_Thunk(n);
     }

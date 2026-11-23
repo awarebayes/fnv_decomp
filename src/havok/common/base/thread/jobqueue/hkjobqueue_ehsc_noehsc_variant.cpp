@@ -878,7 +878,7 @@ struct PoolEntry
 };
 struct PoolTable
 {
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         return hkMemoryRouter::getInstance().heap().blockAlloc(nbytes);
     }

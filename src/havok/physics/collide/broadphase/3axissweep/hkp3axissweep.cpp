@@ -1534,7 +1534,7 @@ struct SweepEndpoint {
     SweepEndpoint(unsigned short val, unsigned short idx) : m_uiFilterValue(val), m_usIndex(idx) {}
 };
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 template <typename T>
 inline void S00d13950_constructWithCopy(T* p, int n, const T& t)
@@ -1620,7 +1620,7 @@ void hkp3AxisSweep::calcAabbCacheInternal(Blk* overlaps, unsigned int AabbCacheO
 }
 
 namespace fnv_00d13bd0 {
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct SweepBase {
     const void** vtable;
     int unk04, unk08, unk0c, unk10, unk14, unk18, unk1c;

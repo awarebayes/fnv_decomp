@@ -21,7 +21,7 @@ class TimedTextEntry
     NiFixedString m_kText;
     TimedTextEntry() throw();
     ~TimedTextEntry() {}
-    static void* operator new[](unsigned int uiSize) throw()
+    static void* operator new[](size_t uiSize) throw()
     {
         return g_allocator.Allocate(uiSize);
     }

@@ -188,7 +188,7 @@ inline unsigned char NiPixelFormat::GetBitsPerPixel()
     return reinterpret_cast<const unsigned char*>(&unk00)[1];
 }
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }
@@ -218,7 +218,7 @@ unsigned char FUN_00e7cdf0_shell::NiDX9DepthStencilBufferData_HasValidDepthBuffe
 
 void __cdecl ReleaseStorage_00e7d1b0();
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00e7d230_cls
 {
@@ -3612,7 +3612,7 @@ class BE7BBF0Source
 class BE7BBF0Item
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
 
     BE7BBF0Item(BE7BBF0Source* pkSource, unsigned int uiIndex, void* pvContext) throw();
 
@@ -7875,7 +7875,7 @@ __forceinline ModeItem404* const& GetNext(BlkListNodeView*& pos)
 struct FUN_00e7b260 : ModeItem404
 {
 
-    static void* operator new(unsigned int size) throw();
+    static void* operator new(size_t size) throw();
 
     FUN_00e7b260(S00e7b590_D3D* dev, int ctx, D3DDEVTYPE id, D3DFORMAT key, bool fullscreen, bool windowed) throw();
 };
@@ -9790,7 +9790,7 @@ struct DisplayModeInfo
         list.AddHead(d.refresh);
         unk08 = NiDX9SystemDesc_GetBPPFromFormat(d.format);
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -10453,7 +10453,7 @@ struct RTInfoZ : NiDX9RenderTargetInfo
         for (unsigned int n = 0; n < sizeof(*this) / sizeof(unsigned int); n++)
             puiData[n] = 0;
     }
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

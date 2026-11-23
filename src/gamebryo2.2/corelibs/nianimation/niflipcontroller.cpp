@@ -111,7 +111,7 @@ void __thiscall NiFlipController::CopyMembers_00a4f920(NiAlphaController* dst, C
 
 struct FUN_00a40520
 {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }
@@ -484,7 +484,7 @@ struct KeyPair
     ~KeyPair();
 };
 
-void* operator new[](unsigned int size)
+void* operator new[](size_t size)
 {
     return DAT_011f6238.Allocate(size);
 }

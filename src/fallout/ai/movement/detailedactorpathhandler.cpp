@@ -4098,7 +4098,7 @@ struct UpdateRequest
     int unka8;
     int unkac;
     UpdateRequest();
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     void CopyTo(UpdateRequest*);
     void SetDestination(PointLocation*);
     PointLocation* Destination();
@@ -5937,7 +5937,7 @@ struct AvoidArray
     void* vtable;
     void* data;
     unsigned int size, capacity, grow, flags;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     AvoidArray();
     void AppendNode(const AvoidElement*);
 };

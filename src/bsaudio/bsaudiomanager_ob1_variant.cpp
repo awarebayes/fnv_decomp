@@ -1057,7 +1057,7 @@ extern char g_empty_01202800[];
 struct Ent8
 {
     int a, b;
-    static void* operator new[](unsigned n)
+    static void* operator new[](size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }
@@ -1066,7 +1066,7 @@ struct FUN_00ae8650
 {
     int m[8];
     FUN_00ae8650();
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }
@@ -1075,7 +1075,7 @@ struct FUN_00ae77d0
 {
     int m[19];
     FUN_00ae77d0();
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }
@@ -2928,7 +2928,7 @@ class FUN_00ae6f50 : public BaseObj_b5112
     int m_30;
     unsigned int m_34;
     FUN_00ae6f50(int apSound);
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return ((MemoryManagerAllocHelper*)&_g_memoryManager)->Allocate(size);
     }
@@ -4841,7 +4841,7 @@ struct FUN_00ae8650
         m_fFrequency = 0.0f;
         m_fPan = 0.0f;
     }
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return DAT_011f6238.Game_DoHeapAlloc(uiSize);
     }
@@ -4917,7 +4917,7 @@ template <class T> struct BSSimpleList_00ae81e0
     {
         RemoveAll();
     }
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -7402,7 +7402,7 @@ struct Msg_00ae5a50
         Set10(0);
         Set14(0);
     }
-    static inline void* operator new(unsigned int n)
+    static inline void* operator new(size_t n)
     {
         return ((MemPool_00ae5a50*)&DAT_011f6238)->Game_DoHeapAlloc(n);
     }
@@ -8507,7 +8507,7 @@ struct AllocatorAda
 {
     void* Game_DoHeapAlloc(unsigned int);
 };
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return ((AllocatorAda*)&g_memoryManager)->Game_DoHeapAlloc(n);
 }
@@ -8832,7 +8832,7 @@ struct NodeQ4
     int unk4;
     WrapQ4* pData;
 };
-inline void* operator new(unsigned int, PoolX& kMgr)
+inline void* operator new(size_t, PoolX& kMgr)
 {
     return kMgr.Game_DoHeapAlloc(0x38);
 }
@@ -9082,7 +9082,7 @@ extern char str_010a3534[];
 extern char str_01063958[];
 extern char str_010639ec[];
 extern char str_01013444[];
-inline void* operator new[](unsigned int size) throw()
+inline void* operator new[](size_t size) throw()
 {
     return DAT_011f6238.Game_DoHeapAlloc(size);
 }
@@ -9091,7 +9091,7 @@ struct DebugList
 {
     SoundNode* item;
     DebugList* next;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }
@@ -9248,7 +9248,7 @@ struct DebugList
 };
 struct SoundNode
 {
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }

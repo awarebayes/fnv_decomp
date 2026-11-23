@@ -36,7 +36,7 @@ void NiPSysVortexFieldModifier::LoadBinary_00c267d0(NiStream& stream)
 }
 
 void __cdecl FUN_00c31750();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c26920_shell
 {
@@ -149,7 +149,7 @@ struct CloneItemBase
 
 struct CloneItem : CloneItemBase
 {
-    void* operator new(unsigned int) throw();
+    void* operator new(size_t) throw();
     CloneItem() throw()
     {
         m_30 = DAT_011f426c;

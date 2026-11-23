@@ -385,8 +385,8 @@ bool PrimitiveBoxContainment::IsPointInsideBox(NiPoint3& aPoint)
 
 struct FUN_00c335d0 : NiRefObject
 {
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void*, size_t);
     NiPoint3 kTargetCenter;
     NiPoint2 m_kPoint2;
     NiMatrix3 kRotationBasis;
@@ -1460,8 +1460,8 @@ void FUN_00c38220_shell::AddPropertyNames(NiTPrimitiveArray<unsigned int>* apStr
 namespace fnv_00c4f620 {
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t);
+    static void operator delete(void*, size_t);
     virtual ~A51BF0Base();
 };
 
@@ -2191,7 +2191,7 @@ struct SphereVertexPosition
 class PrimitiveSphereStrips : public NiGeometry
 {
   public:
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     PrimitiveSphereStrips(unsigned short usVertices, SphereVertexPosition* pkVertex, void* pkNormal, NiColorA* pkColor, void* pkTexture,
                   void* usNumTextureSets, void* eNBTMethod, unsigned short usTriangles, unsigned int usStrips, unsigned short* pusStripLengths,
                   unsigned short* pusStripLists);

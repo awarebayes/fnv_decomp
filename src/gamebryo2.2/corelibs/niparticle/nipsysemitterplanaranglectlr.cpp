@@ -54,7 +54,7 @@ void __thiscall NiPSysEmitterPlanarAngleCtlr::SetTargetFloatValue_00c2b570(float
 
 void* __cdecl Object_DispatchCommandFour(unsigned int);
 
-inline void* operator new(unsigned int, void* object) throw()
+inline void* operator new(size_t, void* object) throw()
 {
     return object;
 }

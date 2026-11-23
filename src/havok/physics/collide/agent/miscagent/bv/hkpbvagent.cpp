@@ -10,7 +10,7 @@ typedef ::__m128 LocalM128;
 #include "../../../../../../../include/hkpCdPointCollector.h"
 #include "../../../../../../../include/hkpSimpleClosestContactCollector.h"
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -471,7 +471,7 @@ extern "C" D45480MemoryRouter& __cdecl hkMemoryRouter_getInstance();
 class D45480ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D45480ReferencedObject* b =
             static_cast<D45480ReferencedObject*>(hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(nbytes));
@@ -2049,7 +2049,7 @@ struct SpawnedObject : SpawnedBase
     virtual void v1();
 };
 
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

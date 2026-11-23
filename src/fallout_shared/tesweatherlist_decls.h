@@ -52,8 +52,8 @@ extern "C" const char DAT_010318b4[];
 extern "C" const char DAT_01031858[];
 extern "C" const char DAT_0118629c[];
 
-void* __cdecl operator new(unsigned int);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new(size_t);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete(void* pointer);
 void __cdecl operator delete[](void* pointer);
 extern "C" const char DAT_01183028[];

@@ -385,7 +385,7 @@ void __thiscall FormNameEntry::BuildFormName(char* apName, unsigned int aiNameSi
     }
 }
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 int __cdecl Object_CompareSumsDescending(FUN_008547f0_shell*, FUN_008547f0_shell*);
 

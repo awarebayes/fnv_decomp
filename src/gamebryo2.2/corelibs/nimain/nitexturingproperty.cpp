@@ -128,7 +128,7 @@ class TextureMapTransform
     unsigned char data[0x48];
     TextureMapTransform() throw();
     void LoadBinary(NiStream&);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -913,7 +913,7 @@ struct TexMapStub
     int unk0C;
     TexMapStub(NiTexture* pkTexture, unsigned int uiIndex, int eClamp, int eFilter,
                TextureMapTransform* pkXform) throw();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

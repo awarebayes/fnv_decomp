@@ -108,12 +108,12 @@ void __cdecl NiMemObject_ReleaseStorage_00aa1490(void* pv, unsigned int uiSize);
 
 extern "C" void* __cdecl FUN_00aa1420(unsigned int size);
 // MSVC uses scalar allocation for the cookie of an empty polymorphic array.
-inline void* __cdecl operator new(unsigned int size)
+inline void* __cdecl operator new(size_t size)
 {
     return DAT_011f6238.Alloc(size);
 }
 
-inline void* NiPSysUpdateTask::operator new[](unsigned int size, unsigned int count)
+inline void* NiPSysUpdateTask::operator new[](size_t size, size_t count)
 {
     if (count == 0)
         return DAT_011f6238.Alloc(4);

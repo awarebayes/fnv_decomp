@@ -1712,7 +1712,7 @@ struct FUN_00d76ca0
     int unk08, unk0c;
     D78ea0Listener* m10;
     FUN_00d76ca0() throw();
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         FUN_00d76ca0* p = (FUN_00d76ca0*)fnvc_adapt::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(bytes);
         p->m_iElementCount = (unsigned short)bytes;

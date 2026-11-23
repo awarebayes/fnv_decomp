@@ -58,7 +58,7 @@ class NiD3DShaderConstantMap : public NiShaderConstantMap
     Direct3DDeviceInterface* m_pD3DDevice;  // +0x38, 4 bytes
     GraphicsRenderer* m_pShaderObject;      // +0x3C, 4 bytes
     ShaderPassRenderer* m_pRenderState;     // +0x40, 4 bytes
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     NiD3DShaderConstantMap(GraphicsRenderer*, unsigned int);
     // IsExactKindOf
     // DynamicCast

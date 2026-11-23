@@ -25,7 +25,7 @@ void* Dummy1690::FUN_004f1690(unsigned int flags)
     return this;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_004f16c0
 {
@@ -53,7 +53,7 @@ TESRegionData* FUN_004f1b60_shell::TESRegionDataGrass_Copy()
 FUN_004f16c0::FUN_004f16c0(const void* pSource)
 {}
 
-void* __cdecl operator new(unsigned int size)
+void* __cdecl operator new(size_t size)
 {
     return 0;
 }

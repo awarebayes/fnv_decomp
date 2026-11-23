@@ -69,7 +69,7 @@ struct KeyPair
     void* m_pFirst;
     void* m_pSecond;
 
-    static void* operator new(unsigned int auiSize) throw()
+    static void* operator new(size_t auiSize) throw()
     {
         return DAT_011f6238.Allocate(auiSize);
     }

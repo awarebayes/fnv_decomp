@@ -3355,7 +3355,7 @@ struct BoolBox
 struct Slot4
 {
     unsigned int value;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return FormHeap_Allocate(size);
     }

@@ -992,7 +992,7 @@ class hkBaseObjectD
 class hkReferencedObjectD : public hkBaseObjectD
 {
   public:
-    void* operator new(unsigned int uiBytes) throw()
+    void* operator new(size_t uiBytes) throw()
     {
         hkReferencedObjectD* b = static_cast<hkReferencedObjectD*>(heap(*(&hkMemoryRouter::getInstance())).AllocateMemoryBlock(uiBytes));
         b->m_usMemSizeAndFlags = static_cast<unsigned short>(uiBytes);

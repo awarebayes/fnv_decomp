@@ -19,7 +19,7 @@ void __cdecl EnsureINISettingCollection();
 void __cdecl EnsureINIPrefSettingCollection();
 
 // These are declarations only. The pack identifies the real global allocator.
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* pointer);
 
 FNV_STATIC_ASSERT(sizeof(INISettingCollection) == 0x114);

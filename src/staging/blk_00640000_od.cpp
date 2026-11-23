@@ -1431,7 +1431,7 @@ int CompareObjects(int aiLeft, int aiRight)
         return 0;
 }
 
-void* __cdecl operator new(unsigned int size, void* placement);
+void* __cdecl operator new(size_t size, void* placement);
 struct FUN_00644490_Class
 {
     void __thiscall BSSimpleArray_NavMeshTriangle_1024_ConstructItems(char* items, unsigned int count);
@@ -6328,7 +6328,7 @@ struct S_0065e550_Err
     ~S_0065e550_Err();
 };
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 // Clamps n to 0, throws S_0065e550_Err(0) if n * 0x34 would overflow, and returns operator new(n * 0x34).
 // @fnv 0x0065e550
@@ -7282,7 +7282,7 @@ FUN_00657af0::~FUN_00657af0()
     Clear();
 }
 
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 
 class C658CA0BadAlloc
 {

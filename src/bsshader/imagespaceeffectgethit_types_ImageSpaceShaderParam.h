@@ -35,7 +35,7 @@ class ImageSpaceShaderParam : public GetHitEffectParamLocalForm
 {
   public:
     ImageSpaceShaderParam();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }

@@ -24,7 +24,7 @@ bool DispelEffect::IsEffectValid(MagicTarget* apTarget)
     return dynamic_cast<Character*>(apTarget) != 0;
 }
 
-void* operator new(unsigned int size) throw();
+void* operator new(size_t size) throw();
 
 // @fnv 0x0080d950
 // pdb: DispelEffect::Copy | DispelEffect.obj | retail, upstream name already matches, high

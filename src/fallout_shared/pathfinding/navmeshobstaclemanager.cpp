@@ -207,7 +207,7 @@ struct FUN_006c07d0_shell : public NavMeshObstacleManager
     bool NavMeshObstacleManager_CreateListeners();
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 BSWin32TaskletManager& __cdecl GetTaskletManager(void);
 
@@ -1807,8 +1807,8 @@ struct Obj_006c2210
 // its allocation calls use the checked shared allocator declarations.
 struct FUN_006c23c0
 {
-    static void* operator new(unsigned int size) { return BSFadeNode::operator new(size); }
-    static void operator delete(void* pointer, unsigned int size) { BSFadeNode::operator delete(pointer, size); }
+    static void* operator new(size_t size) { return BSFadeNode::operator new(size); }
+    static void operator delete(void* pointer, size_t size) { BSFadeNode::operator delete(pointer, size); }
     FUN_006c23c0();
     char pad[0x8c];
 };
@@ -3805,8 +3805,8 @@ struct Holder_c1190
     int unk14;
     int unk18;
     Holder_c1190();
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
 };
 struct Task_c1190
 {
@@ -4638,8 +4638,8 @@ struct DebugSceneObject
     unsigned int unkA4;
     unsigned int unkA8;
     DebugSceneObject(unsigned short);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiNode_RemoveAllChildren();
     void AttachProperty(void*);
     void UpdateProperties();
@@ -4657,8 +4657,8 @@ struct DebugAlphaProperty
     unsigned int unk14;
     unsigned int unk18;
     DebugAlphaProperty();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiAlphaProperty_SetAlphaBlending(bool);
 };
 struct DebugMaterialProperty
@@ -4685,8 +4685,8 @@ struct DebugMaterialProperty
     unsigned int unk44;
     unsigned int unk48;
     DebugMaterialProperty();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void NiMaterialProperty_SetEmittance(const NiColor*);
     void NiMaterialProperty_SetAlpha(float);
 };
@@ -6149,11 +6149,11 @@ struct ElemX
 void* Object_DispatchCommandFour(unsigned n);
 struct NewX
 {
-    void* operator new(unsigned n)
+    void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     char pad[0x1c];
     NewX();
 };

@@ -857,7 +857,7 @@ struct TextureAllocationManagerB63
     void* Game_DoHeapAlloc(unsigned int bytes);
 };
 extern TextureAllocationManagerB63 DAT_011f6238;
-inline void* operator new(unsigned int bytes)
+inline void* operator new(size_t bytes)
 {
     return DAT_011f6238.Game_DoHeapAlloc(bytes);
 }

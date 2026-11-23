@@ -676,7 +676,7 @@ struct S_00d0d150_CollisionOutput {
     S_00d0d150_ProcessCdPoint m_akContactPoints[256];
     S_00d0d150_ToiInfo m_fTimeOfImpact;
 };
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 template <class T>
 static __forceinline T* S_00d0d150_Array_expandByUnchecked(hkArrayBase<T>& self, int n);
 

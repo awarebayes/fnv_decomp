@@ -551,7 +551,7 @@ struct hkPackfileSectionHeaderN
 
 void __cdecl hkMemCpyN(void* dst, const void* src, int n);
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

@@ -34,7 +34,7 @@
 #include "../../include/TESObjectREFR.h"
 #include "../../include/TESTopic.h"
 #include "../../include/ExtraDataList.h"
-void* __cdecl operator new[](unsigned int size);
+void* __cdecl operator new[](size_t size);
 void __cdecl operator delete[](void* pointer);
 extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
 // @fnv 0x00877a30

@@ -2159,7 +2159,7 @@ void FUN_004f6640_cls::TESRegionList_Clear()
 // FUN_004f6850 worker4 v2: v1 + real new-expr for the collection (EH frame + state stores)
 struct NiMemObject4f
 {
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct RDLItemX : RDLItem
 {
@@ -2566,7 +2566,7 @@ class FUN_00a5ecb0 : public AnimIdle
   public:
     char pad00[0xa4];
     FUN_00a5ecb0(unsigned int uiValue);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 class FUN_006815c0
@@ -3558,8 +3558,8 @@ FUN_004ffba0::~FUN_004ffba0()
 
 struct xMemObj
 {
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* p, size_t);
 };
 
 struct xPt3

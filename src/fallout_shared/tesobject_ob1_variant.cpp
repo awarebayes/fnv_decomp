@@ -203,7 +203,7 @@ inline void DeadB()
 struct ObjX : B1
 {
     G16 m8;
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return FormHeap_Allocate(n);
     }
@@ -715,7 +715,7 @@ FUN_00ac0530_cls* FUN_00ac0530_cls::EvaluateValue_00ac0530(int a)
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 void __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -1399,7 +1399,7 @@ FUN_00ac3df0::FUN_00ac3df0(BxString a_fileId)
 
 extern "C" int DAT_011f6238;
 void __cdecl operator delete(void* _Ptr) throw();
-inline void* operator new(unsigned int, void* _Where) throw()
+inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;
 }
@@ -3429,7 +3429,7 @@ namespace fnv_00ad3000 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -3723,7 +3723,7 @@ namespace fnv_00ad3e60 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -4124,7 +4124,7 @@ void StrQ_ad6bb0::UpdateState_00ad6bb0(StrQ_ad6bb0& _Right)
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace std {}
 extern "C" char* __cdecl strcpy(char* pcDst, const char* pcSrc);
 struct IdName_ac34
@@ -4143,7 +4143,7 @@ void __cdecl Object_UpdateFields_00ac34c0(IdName_ac34* pPtr, const IdName_ac34& 
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace std {}
 extern "C" char* __cdecl strcpy(char* pcDst, const char* pcSrc);
 struct FUN_00b2e740

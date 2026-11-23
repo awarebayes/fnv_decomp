@@ -2004,7 +2004,7 @@ struct ArchiveFileOpen;
 struct FUN_00afb300 : public ArchiveFile
 {
     FUN_00afb300(const char*, ArchiveFileOpen*, unsigned int, unsigned int, int);
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -2013,7 +2013,7 @@ struct FUN_00afb300 : public ArchiveFile
 struct FUN_00afc430 : public CompressedArchiveFile
 {
     FUN_00afc430(const char*, ArchiveFileOpen*, unsigned int, unsigned int, int);
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -2082,7 +2082,7 @@ struct ArchiveFileCreate;
 struct FUN_00afb300 : ArchiveFile
 {
     FUN_00afb300(unsigned int, ArchiveFileCreate*, unsigned int, unsigned int, unsigned int);
-    __forceinline static void* operator new(unsigned int s)
+    __forceinline static void* operator new(size_t s)
     {
         return g_memoryManager.Allocate(s);
     }
@@ -2090,7 +2090,7 @@ struct FUN_00afb300 : ArchiveFile
 struct FUN_00afc430 : CompressedArchiveFile
 {
     FUN_00afc430(unsigned int, ArchiveFileCreate*, unsigned int, unsigned int, unsigned int);
-    __forceinline static void* operator new(unsigned int s)
+    __forceinline static void* operator new(size_t s)
     {
         return g_memoryManager.Allocate(s);
     }
@@ -2331,7 +2331,7 @@ extern MemMgr_00affd80 _g_memoryManager;
 extern int DAT_010a2480;
 extern unsigned int DAT_011acff8;
 extern __declspec(thread) int DAT_tls_memctx;
-__forceinline void* operator new[](unsigned int auiSize)
+__forceinline void* operator new[](size_t auiSize)
 {
     return _g_memoryManager.Allocate(auiSize);
 }
@@ -2403,7 +2403,7 @@ extern MemMgrStand g_arcMemMgr;
 extern int DAT_011ace04;
 extern int DAT_010a2480;
 
-inline void* operator new[](unsigned int auiSize)
+inline void* operator new[](size_t auiSize)
 {
     return g_arcMemMgr.Allocate(auiSize);
 }
@@ -4362,7 +4362,7 @@ struct OpenNode
 {
     OpenPtr item;
     OpenNode* next;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return ((MemoryManagerAllocHelper*)&g_memoryManager)->Allocate(size);
     }
@@ -4587,7 +4587,7 @@ bool __cdecl ArchiveManager_GetFileNameForFileEntry(unsigned int aeArchiveTypeIn
 
 namespace fnv_00af7060 {
 extern MemoryManager _g_memoryManager;
-inline void* __cdecl operator new[](unsigned int n)
+inline void* __cdecl operator new[](size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
@@ -4617,7 +4617,7 @@ struct HashKey
         return order;
     }
     HashKey(const char*, int);
-    void* operator new(unsigned int n)
+    void* operator new(size_t n)
     {
         return _g_memoryManager.Allocate(n);
     }
@@ -4635,7 +4635,7 @@ inline void AppendPath(char* dest, unsigned int size, const char* src)
 {
     strcat_s(dest, size, src);
 }
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // ArchivePathList: unit-local list node of path strings (item +0, next +4; BSSimpleList<const char*> shape), not the
 // shared PathNode (NavMesh* at +0): 0x00af7060 walks it; its insert is 0x005ae3d0
 struct ArchivePathList
@@ -5699,7 +5699,7 @@ __if_not_exists(MemMgrStand)
 }
 extern MemMgrStand g_arcMemMgr;
 struct ArchiveArray;
-inline void* operator new(unsigned int, void* memory)
+inline void* operator new(size_t, void* memory)
 {
     return memory;
 }
@@ -5710,7 +5710,7 @@ struct FUN_00afd390
     unsigned int low;
     unsigned int high;
     FUN_00afd390(const char*, int);
-    inline void* operator new(unsigned int size)
+    inline void* operator new(size_t size)
     {
         return g_arcMemMgr.Allocate(size);
     }
@@ -5727,7 +5727,7 @@ struct FUN_00afcce0
     unsigned int count;
     unsigned int capacity;
     FUN_00afcce0();
-    inline void* operator new(unsigned int size)
+    inline void* operator new(size_t size)
     {
         return g_arcMemMgr.Allocate(size);
     }

@@ -186,7 +186,7 @@ struct FUN_00b8a9e0
     int unk84;
 
     FUN_00b8a9e0();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }

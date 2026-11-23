@@ -208,13 +208,13 @@ struct FUN_00c600c0_class
 {
     void* __thiscall UpdateState_00c5fd50();
     void* __thiscall FUN_00c600c0(unsigned int flags);
-    static void __cdecl operator delete(void* p, unsigned int size);
+    static void __cdecl operator delete(void* p, size_t size);
 };
 struct FUN_00c613a0_Class
 {
     void __thiscall FUN_00c613a0();
     void* __thiscall FUN_00c617e0(unsigned int flags);
-    void operator delete(void* p, unsigned int size);
+    void operator delete(void* p, size_t size);
 };
 extern "C" void NiFree(void*);
 extern MemoryManager g_memoryManager;
@@ -245,7 +245,7 @@ struct FUN_00c63970_class : NiPSysModifier
     void __thiscall BSParentVelocityModifier_SaveBinary(void* arStream);
 };
 void __cdecl FUN_00c63b40(void* p);
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64610_Class
 {
     void __thiscall FUN_00c63b40();
@@ -319,7 +319,7 @@ struct FUN_00c61b10
     char m_iWordAt00[0x6c];
     FUN_00c61b10();
     ~FUN_00c61b10();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 FUN_00c61b10* BSPSysArrayEmitter_CreateObject();
 extern "C" void* __cdecl NiMalloc(unsigned int);
@@ -416,7 +416,7 @@ struct FUN_00c60a10_Class
     bool __thiscall BSPSysSimpleColorModifier_IsEqual(NiObject*);
 };
 void __cdecl FUN_00c31750(void);
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c60d10_Class
 {
     void FUN_00c31750();
@@ -424,7 +424,7 @@ struct FUN_00c60d10_Class
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 struct FUN_00c612b0_Class : NiAVObject, A51BF0Base
 {
@@ -455,7 +455,7 @@ struct FUN_00c63900_class : NiPSysModifier
 {
     void LoadModifierData(NiStream& arStream);
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c31750_Class
 {
     void __thiscall FUN_00c31750();
@@ -493,7 +493,7 @@ struct FUN_00c64dc0_Class
     int m_10;
     FUN_0043ba10_shell* BSAttachPointPair_SetChild(unsigned int arChild);
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64e70_Class
 {
     void __thiscall FUN_00c64e70();
@@ -504,7 +504,7 @@ struct SpawnedObject_b9118
 {
     char m00[0x60];
     SpawnedObject_b9118();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -755,7 +755,7 @@ struct PositionModifierObject_b9439
 {
     char m00[0x3c];
     PositionModifierObject_b9439();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -2723,7 +2723,7 @@ struct FilterCast : WorldRayCaster
         hkpWorldRayCaster_castRay(world->field58, query, mode, cache, collector);
     }
 };
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -3397,7 +3397,7 @@ struct FUN_00ce14b0
     unsigned int unk28;
     unsigned int unk2c;
     FUN_00ce14b0(unsigned int a, unsigned int b, unsigned int c, Vec4* v);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     unsigned int hkaPoseMatchingUtility_addCandidatePose(unsigned char* poseModelSpace, unsigned int binding, float c);
 };
@@ -3406,7 +3406,7 @@ extern Glob_c7 DAT_011b02f0;
 extern "C" void* DAT_0109b220;
 
 Heap_c7* __cdecl hkMemoryRouter_getInstance();
-inline void* FUN_00ce14b0::operator new(unsigned int size)
+inline void* FUN_00ce14b0::operator new(size_t size)
 {
     Heap_c7* h = hkMemoryRouter_getInstance();
     Alloc_c7* a = h->alloc;
@@ -3944,7 +3944,7 @@ struct CompoundInfo
 struct FUN_00cab710 : ShapeRef
 {
     FUN_00cab710(ShapePoint3 const&, ShapePoint3 const&, float);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -3953,7 +3953,7 @@ struct FUN_00cab710 : ShapeRef
 struct FUN_00c6d290 : ShapeRef
 {
     FUN_00c6d290(CompoundInfo const&);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -3966,7 +3966,7 @@ struct FUN_00cd8160
     int unk08, unk0c;
     float radius;
     int unk14, unk18, unk1c;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         HeapContext* ctx = hkMemoryRouter_getInstance();
         FUN_00cd8160* result = (FUN_00cd8160*)ctx->allocator->Allocate(n);
@@ -3999,7 +3999,7 @@ struct FUN_00c6d1e0 : ShapeRef
 {
     int unk14, unk18, unk1c;
     FUN_00c6d1e0(AuxInfo const&, ShapeOwner*);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         unsigned char* p = (unsigned char*)DAT_011f6238.Allocate(n + 16);
         unsigned char offset = 16 - ((unsigned int)p & 15);

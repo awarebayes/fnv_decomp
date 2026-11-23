@@ -14,7 +14,7 @@ class NonActorMagicTarget : public BSExtraData, public MagicTarget
 public:
     NonActorMagicTarget(Owner* o);
     virtual ~NonActorMagicTarget();
-    void* operator new(unsigned int s);
+    void* operator new(size_t s);
     void operator delete(void* p);
 
     virtual bool AddEffectToTarget(MagicCaster* apCaster, MagicItem* apItem, ActiveEffect* apEffect, bool abImmediate);

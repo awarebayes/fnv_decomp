@@ -805,7 +805,7 @@ class C7B0ObjectNET : public C7B0Object
         DeleteExtraData();
     }
 
-    static void operator delete(void* pvMem, unsigned int uiSize);
+    static void operator delete(void* pvMem, size_t uiSize);
 
     void DeleteExtraData() throw();
     C7B0ObjectNET* DestroyObject(unsigned int uiFlags);

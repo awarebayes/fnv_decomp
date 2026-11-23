@@ -101,7 +101,7 @@ void* __cdecl Object_DispatchCommandFour(unsigned int size);
 struct SpawnedFloat
 {
     unsigned int unk00[6];
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

@@ -403,7 +403,7 @@ struct FUN_00626000
     unsigned int counter;
     unsigned int state;
     FUN_00626000(int index);
-    static __forceinline void* operator new(unsigned int nbytes)
+    static __forceinline void* operator new(size_t nbytes)
     {
         return Object_AllocateStorage_0056d280(nbytes);
     }
@@ -1086,7 +1086,7 @@ struct StreamObject : StreamBase
     BSFile* file;
     bool ownsFile;
     StreamObject(void* path);
-    static __forceinline void* operator new(unsigned int nbytes)
+    static __forceinline void* operator new(size_t nbytes)
     {
         return Object_AllocateStorage_0056d280(nbytes);
     }

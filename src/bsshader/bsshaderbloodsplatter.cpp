@@ -52,7 +52,7 @@ class BloodSplatterShaderLocal_00b80d30 : public BSShader
     NiPointer<NiD3DVertexShader> m_spTreeVertexShader[2];    // +0x74, 8 bytes
     NiPointer<NiD3DPixelShader> m_spPixelShaderVariants[2];  // +0x7C, 8 bytes
     BloodSplatterShaderLocal_00b80d30();
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     BSShader* BSShaderBloodSplatter_CreateShader();
     void BSShaderBloodSplatter_LoadShaders();
     bool BSShaderBloodSplatter_LoadStagesAndPasses();

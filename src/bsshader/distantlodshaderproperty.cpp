@@ -96,7 +96,7 @@ struct S_A
     }
     void FUN_00b6f0b0();
     void BSTextureManager_PrecreateTextures(unsigned int apRenderer);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Alloc(n);
     }
@@ -310,7 +310,7 @@ struct S_B
         DAT_011f6238.Free(this);
     }
     void FUN_00b97690();
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Alloc(n);
     }
@@ -720,7 +720,7 @@ FUN_00b6f0b0::~FUN_00b6f0b0()
 
 extern "C" void _ReadWriteBarrier();
 
-inline void* operator new[](unsigned int n)
+inline void* operator new[](size_t n)
 {
     MemoryManager* manager = ((MemoryManager*)&DAT_011f6238);
     void* result = manager->Allocate(n);
@@ -989,7 +989,7 @@ struct Resource : NiRefObject
 
     virtual void v00();
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct CacheEntry
@@ -1093,10 +1093,10 @@ struct UnsignedShortBuffer : NiRefObject
                         NiGeometryData__DataFlags, unsigned short, unsigned short, unsigned short*, unsigned short*,
                         unsigned short, unsigned short);
 
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return Resource::operator new(n);
 }

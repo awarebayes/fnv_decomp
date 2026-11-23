@@ -55,7 +55,7 @@ template <class T, class Allocator> inline hkArray<T, Allocator>::~hkArray() thr
 
 using ::_mm_setzero_ps;
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

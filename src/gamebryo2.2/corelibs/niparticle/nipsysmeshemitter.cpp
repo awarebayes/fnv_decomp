@@ -258,7 +258,7 @@ struct Partition_c1d170
     Partition_c1d170() throw();
     bool MakePartitions(void* pkTriData, SkinData_c1d170* pkSkinData, unsigned int ucBonesPerPartition,
                         unsigned int ucBonesPerVertex, unsigned int bForcePalette, bool apWArray, bool apusPartNumA, bool apbStateChangeA);
-    static void* __cdecl operator new(unsigned int s) throw()
+    static void* __cdecl operator new(size_t s) throw()
     {
         return Object_DispatchCommandFour(s);
     }
@@ -553,7 +553,7 @@ Emit_c1f880* Emit_c1f880::NiPSysMeshEmitter_CreateClone(unsigned int kCloning)
 // Factory: allocates a 0x88-byte NiPSysMeshEmitter and runs its out-of-line constructor (FUN_00c1f550).
 struct NiPSysMeshEmitterObject
 {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
     NiPSysMeshEmitterObject() throw();
     int unk00;
     int unk04;

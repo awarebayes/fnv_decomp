@@ -271,7 +271,7 @@ public:
     D85660Object() throw();
     virtual ~D85660Object();
 
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         D85660Object* p = static_cast<D85660Object*>(reinterpret_cast<D85660Allocator*>((&D85660GetMemoryRouter().heap()))->AllocateMemoryBlock(nbytes));
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -1128,7 +1128,7 @@ struct FUN_00dee750 {
     int unka8;
     int unkac;
 
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         hkMemoryRouter* holder = hkMemoryRouter_getInstance();
         AllocIface* alloc = reinterpret_cast<AllocIface*>(holder->m_heap);
@@ -1806,7 +1806,7 @@ struct DynamicsJobSubtype14 : public DynamicsJob {
         m_kHeader = job.m_kHeader;
     }
 };
-inline void* operator new(unsigned int, void* where) throw() { return where; }
+inline void* operator new(size_t, void* where) throw() { return where; }
 struct JobRecord {
     int m_iFirstValue;
     int unk04;

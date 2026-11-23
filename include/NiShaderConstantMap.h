@@ -25,7 +25,7 @@ public:
         ShaderConstantMapEntry(unsigned int id, const NiFixedString& name);
         ~ShaderConstantMapEntry();
         ShaderConstantMapEntry& operator=(const ShaderConstantMapEntry& other);
-        static void* operator new[](unsigned int size) throw();
+        static void* operator new[](size_t size) throw();
     };
 
     virtual ~NiShaderConstantMap();

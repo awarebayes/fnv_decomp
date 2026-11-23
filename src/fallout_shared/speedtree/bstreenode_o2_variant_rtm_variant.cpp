@@ -559,7 +559,7 @@ extern int DAT_01268274;
 extern int DAT_012683dc;
 struct S_00cb79d0_Base
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     S_00cb79d0_Base();
     virtual void v00();
@@ -1146,7 +1146,7 @@ struct S_00caaf40_Obj
     int unk08;
     int unk0c;
     int unk10;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     S_00caaf40_Obj();
 };
 struct S_00caaf40
@@ -1264,7 +1264,7 @@ struct FUN_00d22590
     int unk3C;
     FUN_00d22590(int vertexA, int vertexB, float c);
     void FUN_00c905b0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FUN_00d22590* p = (FUN_00d22590*)hkMemoryRouter_getInstance()->Alloc(size);
         p->unk04 = (short)size;

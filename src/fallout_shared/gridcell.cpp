@@ -975,8 +975,8 @@ struct Obj
     virtual void v53();
     virtual void v54();
 
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 
     Obj* GetTex();
     void GetTransformScale(const NiPoint3*);

@@ -58,7 +58,7 @@ struct FUN_00e3eaa0 : S_00e3eaa0_Base
 FUN_00e3eaa0::~FUN_00e3eaa0() throw()
 {}
 
-inline void* __cdecl operator new(unsigned int, void* where) throw()
+inline void* __cdecl operator new(size_t, void* where) throw()
 {
     return where;
 }

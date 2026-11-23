@@ -426,9 +426,9 @@ struct TargetClass
 
 // Based on another contributor's triangle-strip reconstruction supplied in packet.json.
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -486,7 +486,7 @@ struct FUN_00b39460
 
 extern "C" void* __cdecl memcpy(void*, const void*, unsigned int);
 
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new[](size_t);
 
 template <class T> struct ValueBase : FUN_00b39460
 {
@@ -4408,7 +4408,7 @@ void Target::CTreeEngine_Compute(float fLeafSizeIncreaseFactor)
 namespace fnv_00b2c890 {
 #include <string.h>
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 void FormHeapFreeAndLog_00401030(void*);
 namespace std {
 class exception

@@ -137,7 +137,7 @@ struct TextureInputRange
 // Four 8-byte texture/filter pairs allocated by 0x00ba3c00, separate from the effect object.
 struct TextureInputQuad
 {
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Game_DoHeapAlloc(uiSize);
     }

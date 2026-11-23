@@ -532,7 +532,7 @@ struct Manager
 };
 extern Manager* DAT_011c3b3c;
 void __cdecl MarkLoaded(Resource*);
-void* __cdecl operator new(unsigned);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct Camera : Resource
 {
@@ -541,7 +541,7 @@ struct Camera : Resource
     int f80, f84, f88, f8c, f90, f94, f98, f9c, fa0, fa4, fa8, fac, fb0, fb4, fb8, fbc;
     int fc0, fc4, fc8, fcc, fd0, fd4, fd8, fdc, fe0, fe4, fe8, fec, ff0, ff4, ff8, ffc;
     int f100, f104, f108, f10c, f110;
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     Camera();
     void SetViewport(const TerminalColorViewport_007feeb0&);
     void SetScale(float);
@@ -551,7 +551,7 @@ struct Camera : Resource
 struct Controller
 {
     int f00, f04, f08, f0c, f10, f14, f18;
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     Controller();
 };
 // Exe 0x007feeb0: unit-local ForenderedterminalInterfaceView view used by this matched implementation.

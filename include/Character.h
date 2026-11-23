@@ -22,7 +22,7 @@ public:
 
     Character(bool);
     virtual ~Character();
-    void* operator new(unsigned int);
+    void* operator new(size_t);
 
     MagicTarget* GetMagicTarget();
     void InitLoadGame(BGSLoadFormBuffer* buffer);

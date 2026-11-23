@@ -23,7 +23,7 @@ public:
     Pair(int aa, int bb);
     Pair(unsigned int group, unsigned int index);
 
-    static void* operator new(unsigned int size, void* p) throw();
+    static void* operator new(size_t size, void* p) throw();
 
     Pair& Imath_Vec2_int_Vec2_int(const Pair& other);
     __declspec(nothrow) Wrap GetMemberArrayValue();

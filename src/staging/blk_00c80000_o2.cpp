@@ -256,7 +256,7 @@ void FUN_00c87670_Class::bhkSerializable_LinkObject(NiStream& arStream)
             reinterpret_cast<void**>(this)[0])[44])(this, m_field_0xc);
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c88a20_cls
 {
     void __thiscall FUN_00c88930();
@@ -584,7 +584,7 @@ struct FUN_00c9aeb0_t
     char m_data[0x5c];
     FUN_00c9aeb0_t();
     ~FUN_00c9aeb0_t();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 // Allocates and constructs a new FUN_00c9aeb0_t object, returning its pointer.
 // @fnv 0x00c9b020
@@ -933,7 +933,7 @@ void H_00c8c810::bhkListShape_Link(bool abAttach)
 namespace fnv_00c8c090 {
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct S_00cb79d0_Base : public A51BF0Base
@@ -1028,7 +1028,7 @@ struct TemporaryArena
     unsigned int unk1C;
     unsigned int unk20;
     TemporaryArena();
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return static_cast<MemoryManager*>(&g_memoryManager)->Allocate(bytes);
     }
@@ -1258,7 +1258,7 @@ void AppendSpawnedPtr(void* a1, SpawnedPtrArray* arr)
     arr->m_uiCount++;
 }
 
-inline void* __cdecl operator new(unsigned int, void* placement)
+inline void* __cdecl operator new(size_t, void* placement)
 {
     return placement;
 }
@@ -3682,7 +3682,7 @@ struct FUN_00c894d0
     unsigned int unk24;
     unsigned int unk28;
     FUN_00c894d0(int, int, int, int, int);
-    static void* operator new(unsigned int count)
+    static void* operator new(size_t count)
     {
         return Object_DispatchCommandFour(count);
     }
@@ -7453,7 +7453,7 @@ class C11F0Material
     C11F0Material();
     virtual ~C11F0Material();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     void SetEmittance(const NiColor& kColor)
@@ -8263,7 +8263,7 @@ class BC88760CloningProcess;
 class BC88760Base
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     BC88760Base();
@@ -8587,7 +8587,7 @@ struct Base_00c8ae60
 };
 struct Object_00c8ae60 : Base_00c8ae60
 {
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return Object_DispatchCommandFour(bytes);
     }
@@ -8882,7 +8882,7 @@ extern MemoryManager g_kC8B9E0Heap;
 class C8B9E0Listener
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kC8B9E0Heap.Allocate(uiSize);
     }
@@ -10871,7 +10871,7 @@ struct FUN_00c87dc0_class
     unsigned int __thiscall FUN_00c87dc0(unsigned char param_2);
 };
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 // Calls FUN_00c87d20, then deletes this (0xC bytes) when bit 0 of param_2 is set, and returns this as an unsigned int.
 // @fnv 0x00c87dc0
@@ -11352,7 +11352,7 @@ struct hkRefObj_c8b090
     unsigned short m_usMemSizeAndFlags;
     unsigned short m_sReferenceCount;
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         hkMemoryRouter* holder = hkMemoryRouter_getInstance();
         Alloc8b_c8b090* alloc = (Alloc8b_c8b090*)holder->m_heap;
@@ -11360,7 +11360,7 @@ struct hkRefObj_c8b090
         b->m_usMemSizeAndFlags = (unsigned short)size;
         return b;
     }
-    static void operator delete(void* p, unsigned int size)
+    static void operator delete(void* p, size_t size)
     {
         hkMemoryRouter* holder = hkMemoryRouter_getInstance();
         Alloc8b_c8b090* alloc = (Alloc8b_c8b090*)holder->m_heap;
@@ -11961,7 +11961,7 @@ extern MemoryManager g_kMemoryManager0AA0;
 class ListNode0AA0
 {
   public:
-    static void* operator new(unsigned int uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return g_kMemoryManager0AA0.Allocate(uiSize);
     }
@@ -12039,7 +12039,7 @@ struct MeshMemoryScope
         g_tlsBlock.m_2b4 = saved;
     }
 };
-inline void* __cdecl operator new[](unsigned int size)
+inline void* __cdecl operator new[](size_t size)
 {
     return DAT_011f6238.Allocate(size);
 }
@@ -14494,7 +14494,7 @@ struct FUN_00cca4e0
     int m_0c;
     int m_10;
     FUN_00cca4e0(void* value);
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return Object_DispatchCommandFour(bytes);
     }
@@ -14844,7 +14844,7 @@ struct Base674
     virtual ~Base674();
     unsigned short size;
     unsigned short flags;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         hkMemoryRouter* r = hkMemoryRouter_getInstance();
         Heap674* heap = (Heap674*)r->m_heap;
@@ -15289,7 +15289,7 @@ struct NewShape
 {
     int* vtable;
     int field04, field08, field0c, field10;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -15377,7 +15377,7 @@ struct WrapperLocal
     int unk08;
     int unk0c;
     int unk10;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     WrapperLocal(ShapeLocal*);
 };
 

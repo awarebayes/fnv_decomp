@@ -339,7 +339,7 @@ class ObjDDF9
         hkMonitorStreamAnalyzer_Node_dtor();
     }
     void hkMonitorStreamAnalyzer_Node_dtor() throw();
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkRouterDDF9::heap(hkRouterDDF9::hkMemoryRouter_getInstance()).blockFree(p, nbytes);
     }
@@ -503,7 +503,7 @@ struct FUN_00ddeff0
     int unk4;
     FUN_00ddeff0();
     virtual ~FUN_00ddeff0();
-    void operator delete(void* p, unsigned int nbytes)
+    void operator delete(void* p, size_t nbytes)
     {
         if (p)
             ((hkMemoryAllocator*)holderGet()->m_heap)->blockFree(p, nbytes);

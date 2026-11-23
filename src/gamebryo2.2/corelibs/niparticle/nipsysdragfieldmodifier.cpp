@@ -55,7 +55,7 @@ struct NiPSysDragFieldModifier : NiPSysFieldModifier
 {
     NiPSysFieldModifier* __thiscall CreateClone_00c2c8d0(CloningProcess&);
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

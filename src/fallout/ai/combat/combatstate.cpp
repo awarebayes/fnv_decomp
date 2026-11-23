@@ -2972,7 +2972,7 @@ void FUN_009a0470_shell::CombatState_ClearSecondaryCoverLocation(bool abInvalida
 }  // namespace fnv_009a0470
 
 namespace fnv_009a06c0 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct TESObjectREFRHelper
 {

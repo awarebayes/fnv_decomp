@@ -175,7 +175,7 @@ struct FNVBuffers
 {
     FNVArray spare;
     FNVArray elements;
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         return hkMemoryRouter_getInstance()->GetAllocator()->Allocate(bytes);
     }

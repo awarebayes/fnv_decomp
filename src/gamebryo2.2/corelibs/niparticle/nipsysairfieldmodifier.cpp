@@ -547,7 +547,7 @@ struct Cls_00c2f650
     void UpdateParticleAirFriction(float fTime, NiPSysData* pkData);
 };
 
-inline void* operator new(unsigned int, void* pv)
+inline void* operator new(size_t, void* pv)
 {
     return pv;
 }

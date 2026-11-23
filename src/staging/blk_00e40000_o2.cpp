@@ -4732,7 +4732,7 @@ struct CopyEntry {
     CopyEntry& operator=(const CopyEntry& other) { m_00 = other.m_00; m_04.UpdateState_00cb0c30(&other.m_04); return *this; }
     ~CopyEntry() { m_04.Object_UpdateFields_00cb0c00(); }
 };
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct CopyAllocator { int m_00, m_04, m_08, m_0c; void* m_10; };
 CopyAllocator* __cdecl hkMemoryRouter_getInstance();
 void __cdecl hkArrayUtil__reserve(void*, void*, int, int);
@@ -6131,7 +6131,7 @@ struct Se5b160_RefObj {
     static Se5b160_Heap& heap() { return reinterpret_cast<Se5b160_Router*>(hkMemoryRouter_getInstance())->heap(); }
     unsigned short m_usAllocationSize;
     unsigned short m_iObjectReferenceCount;
-    static void* operator new(unsigned int nbytes) {
+    static void* operator new(size_t nbytes) {
         Se5b160_RefObj* b = static_cast<Se5b160_RefObj*>(Se5b160_Router::GetMonitorStream().heap().AllocateMemoryBlock(static_cast<int>(nbytes)));
         b->m_usAllocationSize = static_cast<unsigned short>(nbytes);
         return b;

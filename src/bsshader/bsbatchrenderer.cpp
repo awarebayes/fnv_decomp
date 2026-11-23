@@ -2700,7 +2700,7 @@ struct ItemValue
 };
 struct ActivePassNode
 {
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }

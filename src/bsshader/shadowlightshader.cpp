@@ -4465,7 +4465,7 @@ class FUN_00b79b00
     virtual void v082();
     virtual void v083();
     virtual void v084();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFaceGenMorphData::operator new(size);
     }

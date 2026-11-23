@@ -4087,7 +4087,7 @@ extern P12 DAT_011a946c;
 extern char DAT_0102cb00;
 void* __cdecl Object_DispatchCommandFour(unsigned int);
 struct XObj {
-    static void* __cdecl operator new(unsigned int size) { return Object_DispatchCommandFour(size); } static void operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t size) { return Object_DispatchCommandFour(size); } static void operator delete(void*, size_t);
     void* pEffect; void* pSource; void* pTransform; unsigned int flags; float intensity; float x; float y; float z; unsigned int lifetime;
     XObj(void*, float, int, Param*, P12*, Mat36*, P12*, P12*, float, int, int);
     void FUN_007e6580(int);

@@ -1184,7 +1184,7 @@ namespace fnv_00a44ff0 {
 struct ControllerAllocation : FUN_00a44f90_class
 
 {
-    static void* operator new(unsigned int size) { return NiObject::operator new(size); }
+    static void* operator new(size_t size) { return NiObject::operator new(size); }
     ControllerAllocation() throw();
 };
 
@@ -2586,7 +2586,7 @@ struct Result
     int unk28;
     int unk2c;
     int unk30;
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     Result(const char*, int, int) throw();
     void SetReferencedObject_00a47420(Obj*) throw();
     void AddSeq(void*, Obj*) throw();
@@ -3594,7 +3594,7 @@ inline bool S00a427e0_NiIsKindOf(const NiRTTI* r, NiObject* o)
 struct S00a427e0_Interp
 {
     unsigned int unk00, unk04, unk08, unk0c, unk10, unk14;
-    static void* operator new(unsigned int size) { return NiObject::operator new(size); }
+    static void* operator new(size_t size) { return NiObject::operator new(size); }
     S00a427e0_Interp(void*) throw();
 };
 struct S00a427e0_Track : NiObject

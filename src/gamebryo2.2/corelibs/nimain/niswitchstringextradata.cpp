@@ -389,7 +389,7 @@ struct SSE_Node
     unsigned char m_extraData[sizeof(NiExtraData)];
     unsigned int unk0C, unk10;
     int unk14;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }

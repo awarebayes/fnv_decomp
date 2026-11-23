@@ -41,7 +41,7 @@ public:
                            LCWheelCastOut* out, WheelCollideResult* results);
     virtual void noHit(hkpVehicleInstance* vehicle, unsigned char iWheel, WheelCollideResult* results);
 
-    static void* operator new(unsigned int uiSize) throw();
+    static void* operator new(size_t uiSize) throw();
     static void operator delete(void* p) throw();
 
     void InitializeWheelCollisions(const hkpVehicleInstance* vehicle) throw();

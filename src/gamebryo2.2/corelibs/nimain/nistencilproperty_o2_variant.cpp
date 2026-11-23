@@ -9,7 +9,7 @@
 #include "../../../../include/NiStencilProperty.h"
 #include "../../../../include/StrArr.h"
 
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 
 struct EqBase
 {

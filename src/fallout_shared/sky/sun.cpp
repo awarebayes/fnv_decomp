@@ -39,7 +39,7 @@
 struct SunAccumulatorAllocation : BSShaderAccumulator
 {
     SunAccumulatorAllocation(BSShaderManager::BATCHRENDERER_CREATION_MODE, unsigned int, unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 // Initializes the Sun object's fields to zero and creates a BSShaderAccumulator for SunMode, disabling occlusion tests.
@@ -217,7 +217,7 @@ struct C3;
 struct SunBillboardNode : NiBillboardNode
 {
     SunBillboardNode();
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     void NiAVObject_SetSelectiveUpdate(bool);
     void SetMode_0051d000(int);
 };
@@ -226,7 +226,7 @@ struct SunBillboardNode : NiBillboardNode
 template <class T> struct SunAllocated : T
 {
     SunAllocated();
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct QuantityData
 {

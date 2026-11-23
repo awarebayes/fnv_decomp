@@ -218,7 +218,7 @@ class TESNPCFileAccess : public TESFileFormVersion
 
 extern "C" void* __cdecl _alloca(unsigned int);
 extern "C" void* __cdecl memset(void*, int, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 void __cdecl operator delete[](void*);
 template <int N> struct EndianSizeTag

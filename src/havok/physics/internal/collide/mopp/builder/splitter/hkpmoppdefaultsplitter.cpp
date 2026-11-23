@@ -746,7 +746,7 @@ __forceinline void quickSortItems(SplitItem* items, int numItems)
     quickSortItems(items, numItems, SplitLess());
 }
 
-__forceinline void* __cdecl operator new(unsigned int, void* p)
+__forceinline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

@@ -58,7 +58,7 @@ extern "C"
     __m128 _mm_andnot_ps(__m128, __m128);
     __m128 _mm_shuffle_ps(__m128, __m128, unsigned int);
 }
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

@@ -3205,7 +3205,7 @@ struct Loader
 };
 extern Loader* loaderState;
 void warning(const char*, ...);
-void* __cdecl operator new(unsigned);
+void* __cdecl operator new(size_t);
 void* __cdecl memset(void*, int, unsigned);
 struct Loaded
 {
@@ -3690,7 +3690,7 @@ void Cls::ArrowProjectile_FinishInitLoadGame(int aiFlags, int aiOldFlags)
 }
 }  // namespace fnv_008cf440
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 struct SpinLock_931710

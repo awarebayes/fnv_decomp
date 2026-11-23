@@ -51,7 +51,7 @@ class ColorA807
 class Line807
 {
   public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
     Line807(int iType);
     void SetLocalRotation(Matrix807& kRot);

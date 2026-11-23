@@ -71,7 +71,7 @@ struct CpuVtableHolder
     CpuVtableHolder()
     {}
     virtual void Vf();
-    void* operator new(unsigned int, void* p)
+    void* operator new(size_t, void* p)
     {
         __assume(p != 0);
         return p;

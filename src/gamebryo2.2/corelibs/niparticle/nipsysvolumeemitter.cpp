@@ -110,7 +110,7 @@ char const* const* __cdecl NiPSysVolumeEmitter_GetRTTI()
 
 void __cdecl FUN_00c31750(void);
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 // @fnv 0x00c31c70
 void* NiPSysVolumeEmitter::DestroyIfFlagged(unsigned int flags)

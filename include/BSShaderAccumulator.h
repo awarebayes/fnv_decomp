@@ -78,7 +78,7 @@ public:
     BSShaderAccumulator(BSShaderManager::BATCHRENDERER_CREATION_MODE eMode, unsigned int uiA, unsigned int uiB);
     static void* __cdecl operator new(size_t uiSize);
     static void operator delete(void* pvMem);
-    static void operator delete(void* pvMem, unsigned int uiSize);
+    static void operator delete(void* pvMem, size_t uiSize);
 
     void ClearActivePasses();
     void SetupDepth(NiCamera* apWorldCamera, NiCamera* ap1stPersonCamera, BSRenderedTexture* apCurRenderTarget);

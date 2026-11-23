@@ -232,7 +232,7 @@ struct FUN_006f4b60_Class
     void __thiscall ResetAndWrite(void* a1, void* a2);
     void* __thiscall InitializeFields_006f4b60();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_006f4bb0_Class
 {
     void* __thiscall BSSimpleArray_Alloc16BytesMembers(int a1);
@@ -378,7 +378,7 @@ struct FUN_006e1250_Class
 {
     void* __thiscall FUN_006e1250(unsigned int a1);
 };
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 struct FUN_006e1280_Class
 {
     void __thiscall VisitPlacementAddresses(char* a1, unsigned int a2);
@@ -1517,7 +1517,7 @@ struct Child80_s
     void SetChild(Child84_s* a1);
 };
 void* __cdecl HeapAlloc_s(unsigned int acAlignment, unsigned int aSize);
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*, void*);
 struct PathObj_s
 {
@@ -1758,7 +1758,7 @@ class FUN_006e9570_cls
     B6E9570Point3 m_kPathOffset;
     int m_iFlags;
 };
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*, void*);
 struct FUN_006f4cd0
 {
@@ -1830,7 +1830,7 @@ struct FUN_006ec2e0_Class
     FUN_006ec2e0_Elem* head;
     bool __thiscall PopHead(FUN_006ec2e0_Out* aMessage);
 };
-void* operator new(unsigned int size, void* where);
+void* operator new(size_t size, void* where);
 void operator delete(void* p, void* where);
 class FUN_006ec4b0_item
 {
@@ -2029,7 +2029,7 @@ struct FUN_006edd30_shell
     void UpdateState_006edd30(const Position_006edd30* start, const Position_006edd30* finish);
 };
 extern unsigned int DAT_010a2720;
-void* __cdecl operator new(unsigned int size, void* place);
+void* __cdecl operator new(size_t size, void* place);
 void __cdecl operator delete(void* ptr, void* place);
 struct FUN_006ee050_Size28 : public FUN_006ee050_Class
 {
@@ -2061,7 +2061,7 @@ struct Heap_006ee070
 {
     void* __thiscall Allocate(unsigned int size, unsigned int flags);
 };
-void* __cdecl operator new(unsigned int size, void* where);
+void* __cdecl operator new(size_t size, void* where);
 void __cdecl operator delete(void* p, void* where);
 struct FUN_006ee070_obj
 {
@@ -3051,7 +3051,7 @@ struct S_006f9c20
     void ConstructElementsInPlace(S_006f9c20_Elem* p, int n);
     int AddElement(const S_006f9c20_Elem* a1);
 };
-void* __cdecl operator new(unsigned int size, void* place);
+void* __cdecl operator new(size_t size, void* place);
 void __cdecl operator delete(void* p, void* place);
 class FNVElem_cls
 {
@@ -4712,7 +4712,7 @@ class FUN_006f2630 : public Base6F2
     FUN_006f2630(unsigned int uiA, unsigned int uiB, ScrapHeapBuffer* pkHeap);
     virtual ~FUN_006f2630();
 };
-inline void* __cdecl operator new(unsigned int, void* pvWhere)
+inline void* __cdecl operator new(size_t, void* pvWhere)
 {
     return pvWhere;
 }
@@ -5368,7 +5368,7 @@ struct PathSmoother
     void BuildInternalArrays();
 };
 extern unsigned int DAT_010a2720;
-void* __cdecl operator new(unsigned int size, void* place);
+void* __cdecl operator new(size_t size, void* place);
 void __cdecl operator delete(void* object, void* place);
 struct Allocator_006edc40
 {

@@ -2344,7 +2344,7 @@ struct AllocBase12
 {
     typedef Record12 value_type;
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 extern "C" unsigned int __cdecl strlen(const char*);
 extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
@@ -2711,7 +2711,7 @@ FUN_00ac0640::FUN_00ac0640(const FUN_00ac0640& source) : Vector12(source.allocat
 }
 
 unsigned int __cdecl FUN_00ec7c56();
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 void __cdecl length_error_helper();
 struct AllocationException
@@ -8641,7 +8641,7 @@ GvNamedEntry* Object_ProcessAndReturnValue_00ac1780(GvNamedEntry* _First, GvName
 extern int DAT_010173f0;
 extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 namespace staging_std {
 struct input_iterator_tag
@@ -12877,7 +12877,7 @@ void __cdecl Runtime_ProcessEntries_00ac2290(FloatPair2290* first, unsigned int 
 }
 
 namespace fnv_00ac2440 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 namespace staging_std {
 template <class E> struct char_traits
@@ -23786,7 +23786,7 @@ struct VectorBadAlloc
     VectorBadAlloc(const char*);
     virtual ~VectorBadAlloc();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 inline char* allocate_bytes(unsigned int _Count, char*)
 {
     if (_Count <= 0)
@@ -28042,7 +28042,7 @@ namespace fnv_00ad5b00 {
 extern "C" int __cdecl memcpy_s(void*, unsigned, const void*, unsigned);
 extern "C" int __cdecl memmove_s(void*, unsigned, const void*, unsigned);
 void __cdecl operator delete(void*);
-void* __cdecl operator new(unsigned);
+void* __cdecl operator new(size_t);
 struct ErrBase
 {
     static void Xlen();
@@ -28452,7 +28452,7 @@ void __cdecl Object_ProcessEntries_00ad5cc0(S00ad5cc0_Elem* first, unsigned int 
 namespace fnv_00ad5ec0 {
 extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 extern "C" int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 namespace staging_std {
@@ -32158,7 +32158,7 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -32665,7 +32665,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace staging_std {
 class bad_alloc
 {
@@ -33110,7 +33110,7 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -33186,7 +33186,7 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -33507,7 +33507,7 @@ namespace fnv_00ac9bd0 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace staging_std {
 class bad_alloc
@@ -33799,7 +33799,7 @@ FUN_00ac9bd0::~FUN_00ac9bd0()
 
 namespace fnv_00acf900 {
 extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 struct Al
@@ -34268,7 +34268,7 @@ namespace fnv_00ad5490 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace staging_std {
 class bad_alloc
@@ -35003,7 +35003,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace staging_std {
 class bad_alloc
 {
@@ -35436,8 +35436,8 @@ extern "C" unsigned int __cdecl strlen(const char*);
 extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 extern "C" void __cdecl _invalid_parameter_noinfo();
 void __cdecl operator delete(void*);
-void* __cdecl operator new(unsigned int);
-inline void* __cdecl operator new(unsigned int, void* p)
+void* __cdecl operator new(size_t);
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }
@@ -36023,8 +36023,8 @@ extern "C" unsigned int __cdecl strlen(const char*);
 extern "C" int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 // VS2008 vector<string> assignment and its inline library helpers.
 void __cdecl operator delete(void*);
-void* __cdecl operator new(unsigned int);
-inline void* __cdecl operator new(unsigned int, void* _Where)
+void* __cdecl operator new(size_t);
+inline void* __cdecl operator new(size_t, void* _Where)
 {
     return _Where;
 }
@@ -37339,7 +37339,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
 };
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 namespace staging_std {
 class bad_alloc
 {
@@ -37772,7 +37772,7 @@ String* __cdecl Runtime_EvaluateValue_00ad6690(String* _First, String* _Last, St
 
 namespace fnv_00ad6e20 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

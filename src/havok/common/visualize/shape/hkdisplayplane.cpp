@@ -299,7 +299,7 @@ struct S_00de5110_Geometry
 
     S_00de5110_Geometry() throw()
     {}
-    static void* operator new(unsigned int n) throw()
+    static void* operator new(size_t n) throw()
     {
         return hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(n);
     }

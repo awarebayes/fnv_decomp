@@ -1067,7 +1067,7 @@ extern void* playerObject;
 extern int DAT_011da748, DAT_011da74c;
 float RoundHealth(float);
 int CompareText(const char*, const char*);
-void* operator new(unsigned int);
+void* operator new(size_t);
 struct ExtraList
 {
     void AddHead(Extra*&);

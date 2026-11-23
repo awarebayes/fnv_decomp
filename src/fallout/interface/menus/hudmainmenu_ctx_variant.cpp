@@ -766,7 +766,7 @@ struct SubtitleRecord
     int visibility;
     SubtitleRecord();
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 int __cdecl FUN_00406d30(char*, unsigned int, const char*);
 extern "C" unsigned int __cdecl strlen(const char*);
 template <class T> struct SubtitleArray

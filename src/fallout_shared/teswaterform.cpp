@@ -487,7 +487,7 @@ struct FUN_00589f50_shell
     void SetSound(void*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 int _sprintf_s(char*, unsigned int, const char*, ...);
 
 void FUN_00580310_t::SetFlag400(bool)

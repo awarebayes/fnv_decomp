@@ -6,7 +6,7 @@
 #include "dialogmenu_decls.h"
 class MediaSet;
 
-void* operator new(unsigned int) throw();
+void* operator new(size_t) throw();
 void operator delete(void*) throw();
 extern "C" int sprintf_s(char*, unsigned int, const char*, ...);
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members

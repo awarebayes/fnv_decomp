@@ -44,7 +44,7 @@ class BoltShader : public BSShader
     BoltShader(NiD3DVertexDeclaration*);
     BSShader* CreateShader();
     void UpdateShaderConstants();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     // const NiRTTI* __cdecl BoltShader::*()
     // BoltShader
     // void __cdecl BoltShader::*()

@@ -1888,7 +1888,7 @@ struct VectorBadAlloc
     bool ownsMessage;
     VectorBadAlloc(const char*);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // src: GUESS 0x0065f9e0 (confidence: medium)
 extern "C" inline ShortPoint* __cdecl Object_AllocateElementStorage_0065f9e0(unsigned int _Count, int)
 {
@@ -7425,7 +7425,7 @@ struct AllocationFailure : AllocationExceptionBase
     AllocationFailure(const char* _Message) throw() : AllocationExceptionBase(_Message)
     {}
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern "C" inline char* __cdecl AllocateChecked(unsigned int _Count, int)
 {
     if (_Count <= 0)
@@ -11719,7 +11719,7 @@ struct AllocationError
     int ownsMessage;
     AllocationError(const char* = 0);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // src: GUESS 0x0065e310 (confidence: medium)
 inline Vec3Item* __cdecl Array_AllocateElements12Checked(unsigned int _Count, int)
 {
@@ -19070,7 +19070,7 @@ struct FnvBadAlloc : FnvException
     virtual ~FnvBadAlloc() throw()
     {}
 };
-extern void* __cdecl operator new(unsigned int);
+extern void* __cdecl operator new(size_t);
 
 // src: GUESS 0x0064e430 (confidence: high)
 template <class T> inline T* __cdecl Array_AllocateElements16Checked(unsigned int count, T*)
@@ -19310,11 +19310,11 @@ void FnvBlockVector::InsertFilledElements_00abd2e0(FnvBlockIterator _Where, unsi
 }
 }  // namespace fnv_00abd2e0
 
-__forceinline void* operator new(unsigned int size)
+__forceinline void* operator new(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
-__forceinline void* operator new[](unsigned int size)
+__forceinline void* operator new[](size_t size)
 {
     return g_memoryManager.Allocate(size);
 }

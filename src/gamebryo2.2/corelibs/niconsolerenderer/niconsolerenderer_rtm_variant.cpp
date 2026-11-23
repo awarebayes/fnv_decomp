@@ -3673,7 +3673,7 @@ class E6EC20Cache {
 public:
     ~E6EC20Cache();
 
-    static void operator delete(void* pvMem, unsigned int uiSize) { operator_delete_sized(pvMem, uiSize); }
+    static void operator delete(void* pvMem, size_t uiSize) { operator_delete_sized(pvMem, uiSize); }
 
     int unk00; int unk04; int unk08; int unk0C; int unk10;
 };
@@ -7900,7 +7900,7 @@ struct ShaderMemMgr {
     void Deallocate(void* apMem);
 };
 extern ShaderMemMgr g_shaderMemMgr;
-inline void* operator new[](unsigned int size) { return g_shaderMemMgr.Allocate(size); }
+inline void* operator new[](size_t size) { return g_shaderMemMgr.Allocate(size); }
 inline void operator delete[](void* p) { g_shaderMemMgr.Deallocate(p); }
 struct ShaderVertexElement {
     unsigned short Stream;
@@ -8139,7 +8139,7 @@ class E7A6A0Bucket {
 public:
     __forceinline ~E7A6A0Bucket() { m_kEntries.RemoveAll(); }
 
-    static void operator delete(void* pvMem, unsigned int uiSize) { operator_delete_sized(pvMem, uiSize); }
+    static void operator delete(void* pvMem, size_t uiSize) { operator_delete_sized(pvMem, uiSize); }
 
     int m_iKey;
     NiTArray<E7A6A0Entry*, NiTMallocInterface<E7A6A0Entry*> > m_kEntries;
@@ -11039,7 +11039,7 @@ struct Node {
 
     Node* m_next;
 
-    static void operator delete(void* pvMem, unsigned int uiSize) {
+    static void operator delete(void* pvMem, size_t uiSize) {
 
         operator_delete_sized(pvMem, uiSize);
 
@@ -18693,7 +18693,7 @@ struct BridgeFields {
     unsigned int m_ui5d0;
 };
 struct NPFNew : NiPixelFormat {
-    static void* operator new(unsigned int size) { return g_memoryManager.Game_DoHeapAlloc(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Game_DoHeapAlloc(size); }
     NPFNew(const NiPixelFormat& o) : NiPixelFormat(o) {}
 };
 class DeviceE6DF {
@@ -23212,7 +23212,7 @@ struct Se745_StandinRenderer {
     bool NiDX9Renderer_IsHardwareSkinned(Se745_Src* a1, int a2);
     void NiDX9Renderer_RenderTriShape2(Se745_Src* a1);
 };
-inline void* operator new(unsigned int, void* p){return p;}
+inline void* operator new(size_t, void* p){return p;}
 namespace RendererReset {
 
 extern "C" void* __cdecl FUN_00ec61c0(void*,int,unsigned int);extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long*);
@@ -23467,7 +23467,7 @@ struct ScrDX9Renderer {
     NiPixelData* NiDX9Renderer_TakeScreenShot(const ScrRect* pkScreenRect, ScrTargetGroup* pkTarget);
 };
 enum ScrAllocationTag { ScrAllocatePixels };
-__forceinline void* operator new(unsigned int size, ScrAllocationTag) { return NiPixelData::operator new(size); }
+__forceinline void* operator new(size_t size, ScrAllocationTag) { return NiPixelData::operator new(size); }
 extern "C" void _ReadWriteBarrier();
 struct Xf {
     float m[3][3];
@@ -25207,11 +25207,11 @@ struct OuterSlot { OuterSlot() throw();
     unsigned int unk04;
     void* inner;
     unsigned int unk0c;
-    static void* operator new[](unsigned int size) throw() { return FUN_00aa1420(size); }
+    static void* operator new[](size_t size) throw() { return FUN_00aa1420(size); }
 };
 struct InnerRaw : FUN_00e76320 {
 
-    static void* operator new[](unsigned int size) throw() { return FUN_00aa1420(size); }
+    static void* operator new[](size_t size) throw() { return FUN_00aa1420(size); }
 };
 class DeclMap786 {
 public:

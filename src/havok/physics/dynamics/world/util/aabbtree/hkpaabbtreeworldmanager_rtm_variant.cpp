@@ -199,7 +199,7 @@ public:
     void hkpAabbTreeWorldManager_removeObjectFromTree(hkpEntity* object);
 };
 struct PlaceTagD088 {};
-inline void* operator new(unsigned int, void* p, PlaceTagD088) throw() { __assume(p != 0); return p; }
+inline void* operator new(size_t, void* p, PlaceTagD088) throw() { __assume(p != 0); return p; }
 inline void operator delete(void*, void*, PlaceTagD088) throw() {}
 template <typename T>
 __forceinline void hkArrayBase<T>::pushBackUnchecked(const T& e)
@@ -786,7 +786,7 @@ struct S00d094a0_Owner {
     S00d094a0_Helper* m_6c;
     void hkpAabbTreeWorldManager_buildKdTree(S00d094a0_Tree** tree, S00d094a0_Input* collidables, S00d094a0_Ctx* world, S00d094a0_Queue* jobQueue, S00d094a0_Sync* jobThreadPool);
 };
-inline void* operator new(unsigned int, void* location) { return location; }
+inline void* operator new(size_t, void* location) { return location; }
 struct Target {
     int unk00;
 };

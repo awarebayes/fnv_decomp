@@ -117,7 +117,7 @@ class BSShaderProperty::ShaderPassEntry
     {
         m_pShaderGeometry = value;
     }
-    static void* operator new(unsigned int size);  // the game heap (ShaderPassList::Add, 0x00ba9ee0)
+    static void* operator new(size_t size);  // the game heap (ShaderPassList::Add, 0x00ba9ee0)
 };
 
 // A property's render-pass list (0x14 bytes): the pass array and the number of passes in use.

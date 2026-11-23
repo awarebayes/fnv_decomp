@@ -3566,7 +3566,7 @@ struct AF1d80
     {
         UpdateAndReleaseTarget();
     }
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }
@@ -4998,7 +4998,7 @@ void ArchiveHeader::ProcessState_00afd9d0()
 }
 
 
-inline void* operator new[](unsigned int size)
+inline void* operator new[](size_t size)
 {
     return g_memoryManager.Allocate(size);
 }

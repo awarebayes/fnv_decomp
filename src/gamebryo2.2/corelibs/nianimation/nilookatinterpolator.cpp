@@ -130,7 +130,7 @@ bool __thiscall NiLookAtInterpolator::RegisterStreamables(NiStream& arStream)
 }
 
 // Placement construction uses the allocation already obtained from the game allocator.
-inline void* operator new(unsigned int, NiLookAtInterpolator* p) throw() { return p; }
+inline void* operator new(size_t, NiLookAtInterpolator* p) throw() { return p; }
 
 // @fnv 0x00a4c5a0
 // src: EXE 0x00a4c5a0

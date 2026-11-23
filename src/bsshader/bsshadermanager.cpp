@@ -2728,7 +2728,7 @@ struct Material : NiRefObject
     Color3* colorOverride;
     float value38, value3C, value40;
     unsigned int revision, unk48;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     Material();
     void SetColor1(const Color3& v)
     {
@@ -3686,7 +3686,7 @@ struct TextureManagerInit
     unsigned int unk0ac;
     TextureManagerInit();
     void SetShaderRenderer(NiRenderer*);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return _g_memoryManager.Allocate(n);
     }
@@ -3708,7 +3708,7 @@ struct TextureLoaderInit
     TextureLoaderInit(void*);
     ~TextureLoaderInit();
     void Load(void*);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return _g_memoryManager.Allocate(n);
     }
@@ -3920,7 +3920,7 @@ struct AccumulatorInit : NiRefObject
     unsigned int unk278;
     unsigned int unk27c;
     AccumulatorInit(int, unsigned int, unsigned int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 struct AccumPointerInit
@@ -3928,7 +3928,7 @@ struct AccumPointerInit
     AccumulatorInit* object;
     AccumPointerInit();
     ~AccumPointerInit();
-    static void* operator new[](unsigned int n)
+    static void* operator new[](size_t n)
     {
         return _g_memoryManager.Allocate(n);
     }
@@ -4083,7 +4083,7 @@ struct TangentPoint3
         return *this;
     }
     void Unitize_004a0c10();
-    static void* operator new[](unsigned int bytes)
+    static void* operator new[](size_t bytes)
     {
         return _g_memoryManager.Allocate(bytes);
     }
@@ -4094,7 +4094,7 @@ struct NativeB66810 : NiRefObject
     unsigned char unk09, unk0a, unk0b;
     TangentPoint3* first;
     TangentPoint3* second;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }

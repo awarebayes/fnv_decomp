@@ -119,7 +119,7 @@ extern "C" D2FA00MemoryRouter& __cdecl hkMemoryRouter_getInstance();
 class D2FA00ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D2FA00ReferencedObject* b =
             static_cast<D2FA00ReferencedObject*>(fnvc_adapt::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(nbytes));

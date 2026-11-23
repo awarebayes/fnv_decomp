@@ -2783,7 +2783,7 @@ record_model::FUN_00b2e680* __cdecl Object_ProcessAndReturnValue_00b2e500(record
 }
 
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -7726,7 +7726,7 @@ asgnb36::AsVector* __cdecl Object_ProcessAndReturnValue_00b35f60(asgnb36::AsVect
 
 namespace fnv_00b361b0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -7865,7 +7865,7 @@ S00b368d0_Elem* __cdecl Runtime_ProcessEntries_00b368d0(S00b368d0_Elem* first, S
 }  // namespace fnv_00b368d0
 
 namespace fnv_00b369f0 {
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -7953,7 +7953,7 @@ ElemQ* __cdecl Runtime_ProcessEntries_00b369f0(ElemQ* first, ElemQ* last, ElemQ*
 }  // namespace fnv_00b369f0
 
 namespace fnv_00b36bf0 {
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -8046,7 +8046,7 @@ ElemQ* __cdecl Runtime_ProcessEntries_00b36bf0(ElemQ* first, ElemQ* last, ElemQ*
 }  // namespace fnv_00b36bf0
 
 namespace fnv_00b36d70 {
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -10391,7 +10391,7 @@ record_model::FUN_00b2e680* __cdecl Object_ProcessAndReturnValue_00b3e520(record
 }  // namespace fnv_00b3e520
 
 namespace fnv_00b3e5b0 {
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -12338,7 +12338,7 @@ namespace fnv_00b3c3f0 {
 extern "C" unsigned int __cdecl strlen(const char* pcString);
 extern "C" int __cdecl memcpy_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
 extern "C" int __cdecl memmove_s(void* pvDst, unsigned int uiDstSize, const void* pvSrc, unsigned int ItemUpdateArray);
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 unsigned int __cdecl FUN_00ec7c56();
 namespace std {
 class bad_alloc
@@ -17542,7 +17542,7 @@ template <class T> struct Constructed
     T value;
     Constructed(const T& source) : value(source)
     {}
-    static void* operator new(unsigned int, void* storage)
+    static void* operator new(size_t, void* storage)
     {
         return storage;
     }

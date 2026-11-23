@@ -587,7 +587,7 @@ float __cdecl ComputeObjectAngleDelta(NiPoint3 apObjectLoc, NiPoint3 apPlayerLoc
 }
 }  // namespace fnv_00778b80
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern int DAT_011d96ac;
 
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members
@@ -2807,8 +2807,8 @@ struct CamObj
     int unk10C;
     int unk110;
     CamObj();
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     void SetViewPort(const CamRect& rect);
     void SetLODAdjust(float f);
     void UpdateViewFrustum(const CamFrustum& frustum);

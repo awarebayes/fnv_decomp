@@ -2240,7 +2240,7 @@ void FUN_006dbfc0_Class::UpdateFields_006dbfc0(char* aiNewSize, unsigned int aiC
     }
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 
 extern const char str_0106649c[];
 
@@ -4310,7 +4310,7 @@ unsigned int FUN_006dba30_Class::BSSimpleArray_NavMeshTriHandle_1024_Add(S0069a6
     return idx;
 }
 
-void* __cdecl operator new(unsigned int, void* ptr);
+void* __cdecl operator new(size_t, void* ptr);
 void __cdecl operator delete(void*, void*);
 
 struct FUN_006d5320
@@ -4340,7 +4340,7 @@ void FUN_006dbcf0_Class::BSSimpleArray_TeleportLink_1024_ConstructItems(FUN_006d
     }
 }
 
-void* __cdecl operator new(unsigned int size, void* where);
+void* __cdecl operator new(size_t size, void* where);
 void __cdecl operator delete(void* allocated, void* where);
 
 struct PlacementObject32 : FUN_006d4550_Class
@@ -4686,7 +4686,7 @@ FUN_006c6e00::~FUN_006c6e00()
     reinterpret_cast<BSSimpleArray_SandBoxChoiceListItem_1024_*>(this)->Clear(true);
 }
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 class Obj
 {
   public:
@@ -4711,7 +4711,7 @@ FUN_006c7370* Fac::CreateObj()
     return new FUN_006c7370;
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 struct FUN_006c8b30
 {
     int m0;
@@ -4762,7 +4762,7 @@ struct FUN_006e6da0
 {
     int a;
 };
-void* __cdecl operator new(unsigned int uiSize, FUN_006e6da0* pPlace);
+void* __cdecl operator new(size_t uiSize, FUN_006e6da0* pPlace);
 inline void __cdecl operator delete(void*, FUN_006e6da0*)
 {}
 class FUN_006f4f00
@@ -5122,7 +5122,7 @@ FUN_006db740::~FUN_006db740()
 }
 
 namespace fnv_006dbe40 {
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 void __cdecl operator delete(void*, void*);
 struct FUN_006d3200
 {
@@ -5148,7 +5148,7 @@ void FUN_006dbe40_Class::ConstructInPlace(FUN_006d3200* apFirstAddr, unsigned in
 }
 }  // namespace fnv_006dbe40
 
-void* __cdecl operator new(unsigned int size, void* place);
+void* __cdecl operator new(size_t size, void* place);
 void __cdecl operator delete(void* object, void* place);
 // Native BSSimpleArray<TwoUIntRecord,1024> elements have two words.
 struct TwoUIntRecord

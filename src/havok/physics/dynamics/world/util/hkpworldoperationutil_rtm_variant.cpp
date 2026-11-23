@@ -1603,7 +1603,7 @@ struct FUN_00cb7480_cls
 
     void hkpConstraintOwner_subConstraintInfo(FUN_00cb7480_holder* a1, FUN_00cb7480_delta* a2);
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -4109,14 +4109,14 @@ struct MotionBase : RefHeader31
     void SetFlagBits(int a, int b, int c);
     void getMotionStateAndVelocitiesAndDeactivationType(MotionBase* motionOut);
     float FUN_00c86430();
-    __forceinline static void* operator new(unsigned int nbytes)
+    __forceinline static void* operator new(size_t nbytes)
     {
         S_00c6aca0_Heap& h = hkMemoryRouter_getInstance()->heap();
         RefHeader31* b = static_cast<RefHeader31*>(((AllocObj*)&h)->v01(static_cast<int>(nbytes)));
         b->m_04 = static_cast<unsigned short>(nbytes);
         return b;
     }
-    __forceinline static void* operator new(unsigned int, void* p)
+    __forceinline static void* operator new(size_t, void* p)
     {
         return p;
     }

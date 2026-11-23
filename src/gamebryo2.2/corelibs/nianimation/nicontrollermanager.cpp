@@ -1691,7 +1691,7 @@ bool __stdcall NiControllerManager_BlendFromPose(NiControllerSequence* pkSequenc
 struct FUN_00a2e1f0 : NiRefObject
 {
     virtual ~FUN_00a2e1f0();
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // The destructor body is empty.
 // @fnv 0x00a2e1f0

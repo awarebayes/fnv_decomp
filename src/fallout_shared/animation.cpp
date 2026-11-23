@@ -283,7 +283,7 @@ class ModelLoader
 extern ModelLoader* g_modelLoader;
 extern const char* DAT_01199bcc[];
 extern char DAT_011a9448;
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 extern "C" void* memset(void*, int, unsigned int);
 int Warning(const char*, ...);
@@ -4835,8 +4835,8 @@ struct Root490
 };
 struct Seq490 : Root490
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Seq490(Group490*, Root490*);
     unsigned int GetCount();
     void GetTarget(unsigned int, char*);

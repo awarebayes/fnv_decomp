@@ -97,7 +97,7 @@ void CombatManager::FinishLoadGame(BGSLoadGameBuffer* apLoadGameBuffer)
     pThreatMap->ProcessAllProjectiles(apLoadGameBuffer);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 extern TESWorldSpace* BGSSaveLoadGlobalDataWorldspacePtr;
 

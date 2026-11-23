@@ -1024,7 +1024,7 @@ FUN_008c9a20_shell* FUN_008c9a20_shell::MobileObjectMessage_MobileObjectMessage(
     return this;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_008c9bd0 : BSThread
 {
     char e[0x48];

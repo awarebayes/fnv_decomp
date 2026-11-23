@@ -1716,7 +1716,7 @@ struct FUN_00418d50_shell : public ExtraDataList
     ExtraStartingPosition* GetOrCreateStartingPosition(TESObjectREFR*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 // Returns the ExtraStartingPosition extra data at index 0x0F, creating and adding a new one for apObject if none exists.
@@ -1850,7 +1850,7 @@ struct FUN_0041aa20_shell : public ExtraDataList
     void SetWornState(bool, bool);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 // Adds or removes the ExtraWorn or ExtraWornLeft extra data depending on the requested worn state and side.
@@ -1891,7 +1891,7 @@ struct FUN_0041ab70_shell : public ExtraDataList
     void ExtraDataList_SetCanNotWear(bool);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Adds an ExtraCannotWear extra when abCantWear is set and none exists, or removes extra type 0x3e when it is cleared and present.
 // @fnv 0x0041ab70
@@ -2704,7 +2704,7 @@ struct FUN_0041d280_shell : public ExtraDataList
     void SetLeveledItemIndex(int);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Finds or creates the ExtraLeveledItem extra data, sets its iIndex to aiIndex and clears m_bIsLeveledItem.
 // @fnv 0x0041d280
@@ -2845,7 +2845,7 @@ struct FUN_0041da40_shell : public ExtraDataList
     void ExtraDataList_SetEnableStateParent(TESObjectREFR*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 // Sets the enable-state-parent extra data to apParent, creating it if missing, or removes that extra when apParent is null.
@@ -2982,7 +2982,7 @@ struct FUN_0041e160_shell : public ExtraDataList
     void ExtraDataList_SetWaterType(TESWaterForm*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Sets the cell's water type extra data to apWater, creating it if absent, or removes the water type extra when apWater is null.
 // @fnv 0x0041e160
@@ -3054,7 +3054,7 @@ struct FUN_0041e440_shell : public ExtraDataList
     void ExtraDataList_SetLinkedRef(TESObjectREFR*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void* __fastcall FUN_00433640(void*);
 
 struct ExtraLinkedRef_dummy : public LegacyExtraData
@@ -3156,7 +3156,7 @@ struct FUN_0041ece0_shell : public ExtraDataList
     void SetTextOverride(char*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct DummyExtra0x53 : public LegacyExtraData
 {
@@ -3217,7 +3217,7 @@ struct FUN_0041edd0_shell : public ExtraDataList
     void ExtraDataList_AddActivateRefChild(TESObjectREFR*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct ReferenceFloatEntry
 {
@@ -3562,7 +3562,7 @@ struct FUN_00421310_shell : public ExtraDataList
     void ExtraDataList_AddGuard(Actor*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __fastcall FUN_00430f30(void*);
 
 // Gets the 0x7c extra data list entry, creating and adding an ExtraGuardedRefData if absent, then passes apActor to it.
@@ -3636,7 +3636,7 @@ struct FUN_00421540_shell : public ExtraDataList
     void ExtraDataList_SetLevCreaModifier(int);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 // @fnv 0x00421540
 // src: XBOX_PDB 0x00421540
 // pdb: ExtraDataList::SetLevCreaModifier | ExtraDataList.obj | retail, upstream name already matches, high
@@ -3794,7 +3794,7 @@ struct FUN_00421e40_shell : public ExtraDataList
     void ExtraDataList_SetMultiBoundRef(TESObjectREFR*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 
 
@@ -4025,7 +4025,7 @@ struct FUN_00422350_shell : public ExtraDataList
     void SetRadiation(float);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Sets the radiation extra data to afRadiation, removing it when zero, updating the existing extra, or allocating and adding a new one.
 // @fnv 0x00422350
@@ -4640,7 +4640,7 @@ struct FUN_0042e760_shell : public ExtraDataList
     void ExtraDataList_AddFactionChangesExtra();
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // Retrieves the extra data of type 0x5e, creating and adding a new ExtraFactionChanges if none exists.
 // @fnv 0x0042e760
@@ -9874,7 +9874,7 @@ void FUN_0041be10_Class::ExtraDataList_SetTerminalState(unsigned char acState)
 }  // namespace fnv_0041be10
 
 namespace fnv_0041c390 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct FUN_0040f1b0_shell : LegacyExtraData
 {
     void* m_pCellImpactSwapValue;
@@ -13824,7 +13824,7 @@ bool S_0041dc20_Cls::ExtraDataList_ShouldPopOutWhenDisabledByParent()
 
 // ExtraDataList: add an item to the type-0x3A extra's list, creating that extra on first use.
 
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 
 class E000Item;
 
@@ -16165,9 +16165,9 @@ void ExtraList::WriteToSave()
 }
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete[](void*);
 namespace loader {
 struct File
@@ -16487,8 +16487,8 @@ struct Plane
     int unkf0;
     int unkf4;
     int unkf8;
-    static void* __cdecl operator new(unsigned int);
-    static void __cdecl operator delete(void*, unsigned int);
+    static void* __cdecl operator new(size_t);
+    static void __cdecl operator delete(void*, size_t);
     Plane();
     void BSOcclusionPlane_SetHalfExtents(void*);
     void BSOcclusionPlane_SetCenter(void*);
@@ -17330,8 +17330,8 @@ struct ExtraSound : LegacyExtraData
 {
     BSSoundHandle pHandle; // src: XBOX_RETAIL_PDB +0xc (old: kHandle)
     ExtraSound(BSSoundHandle);
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 
 struct SoundExtraList41a : BaseExtraList
@@ -17683,7 +17683,7 @@ void WorkerExtraList::ExtraDataList_SetRefractsRef(TESObjectREFR* apRef, bool bV
     }
 }
 
-void* __cdecl operator new(unsigned int uiSize);
+void* __cdecl operator new(size_t uiSize);
 void __cdecl operator delete(void* pvMem);
 
 class C420160Values

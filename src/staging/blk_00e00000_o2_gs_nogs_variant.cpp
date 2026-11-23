@@ -478,7 +478,7 @@ class E00390Object
   public:
     E00390Object(E00390FinishFlag flag);
 
-    static void* operator new(unsigned int, void* p)
+    static void* operator new(size_t, void* p)
     {
         return p;
     }
@@ -907,7 +907,7 @@ extern int DAT_010ce4bc;
 void* Runtime_GetDAT010ce4bcAddress();
 extern int g_unk0126df40;
 void* __cdecl Runtime_GetUnk0126df40Address();
-inline void* operator new(unsigned int, void* pvWhere) throw()
+inline void* operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }

@@ -83,7 +83,7 @@ void NiBSBoneLODControllerMethods::NiBSBoneLODController_CopyMembers(NiBSBoneLOD
     pkDest->m_uiNumLODs = m_uiNumLODs;
 }
 
-void operator delete(void*, unsigned int);
+void operator delete(void*, size_t);
 // @fnv 0x00c53e10
 // pdb: NiBSBoneLODController::`scalar deleting destructor' | NiBSBoneLODController.obj | retail, vtable slot, high
 void* NiBSBoneLODControllerMethods::FUN_00c53e10(unsigned int flags)

@@ -260,7 +260,7 @@ struct FUN_004fa670_shell : public DebrisModelEntry
     void BGSDebrisData_SetFileName(char*);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 template <class T> unsigned int __cdecl BSStringLength(T const*);
 
 // pdb: class TaskQueueInterface, size 0x10 (here 0x1), 4 members
@@ -347,11 +347,11 @@ void* __cdecl Object_DispatchCommandFour(unsigned int);
 struct DebrisObj
 {
     char b[0x24];
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     DebrisObj(void* a1, float f, void* m, int z, NiPoint3* pos, NiPoint3* v1, NiPoint3* v2, NiPoint3* v3, float s, int z1, int z2);
 };
 extern const float DAT_01012054;

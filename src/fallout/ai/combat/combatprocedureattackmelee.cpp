@@ -4898,7 +4898,7 @@ struct Shape;
 struct Avoid
 {
     int data[6];
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
     Avoid();
     void AppendNode(Shape const&);

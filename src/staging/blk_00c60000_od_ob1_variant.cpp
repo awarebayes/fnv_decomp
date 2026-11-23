@@ -358,13 +358,13 @@ struct FUN_00c600c0_class
 {
     void* __thiscall UpdateState_00c5fd50();
     void* __thiscall FUN_00c600c0(unsigned int flags);
-    static void __cdecl operator delete(void* p, unsigned int size);
+    static void __cdecl operator delete(void* p, size_t size);
 };
 struct FUN_00c613a0_Class
 {
     void __thiscall FUN_00c613a0();
     void* __thiscall FUN_00c617e0(unsigned int flags);
-    void operator delete(void* p, unsigned int size);
+    void operator delete(void* p, size_t size);
 };
 extern "C" void NiFree(void*);
 extern MemoryManager g_memoryManager;
@@ -392,7 +392,7 @@ struct FUN_00c63970_class : NiPSysModifier
     void __thiscall BSParentVelocityModifier_SaveBinary(void* arStream);
 };
 void __cdecl FUN_00c63b40(void* p);
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64930_Class
 {
     void BSReference_LinkObject(int a);
@@ -453,7 +453,7 @@ struct FUN_00c61b10
     char m_iWordAt00[0x6c];
     FUN_00c61b10();
     ~FUN_00c61b10();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 };
 FUN_00c61b10* BSPSysArrayEmitter_CreateObject();
 extern "C" void* __cdecl NiMalloc(unsigned int);
@@ -528,7 +528,7 @@ struct FUN_00c60a10_Class
     bool __thiscall BSPSysSimpleColorModifier_IsEqual(NiObject*);
 };
 void __cdecl FUN_00c31750(void);
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c60d10_Class
 {
     void FUN_00c31750();
@@ -536,7 +536,7 @@ struct FUN_00c60d10_Class
 };
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 struct FUN_00c612b0_Class : NiAVObject, A51BF0Base
 {
@@ -567,7 +567,7 @@ struct FUN_00c63900_class : NiPSysModifier
 {
     void LoadModifierData(NiStream& arStream);
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c31750_Class
 {
     void __thiscall FUN_00c31750();
@@ -601,7 +601,7 @@ struct FUN_00c64dc0_Class
     int m_10;
     FUN_0043ba10_shell* BSAttachPointPair_SetChild(unsigned int arChild);
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c64e70_Class
 {
     void __thiscall FUN_00c64e70();
@@ -612,7 +612,7 @@ struct SpawnedObject_b9118
 {
     char m00[0x60];
     SpawnedObject_b9118();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -849,7 +849,7 @@ struct PositionModifierObject_b9439
 {
     char m00[0x3c];
     PositionModifierObject_b9439();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -1666,7 +1666,7 @@ struct FUN_00c64640
     NiPoint3 a[8];
     NiPoint3 b[8];
     FUN_00c64640();
-    static void* operator new(unsigned n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Allocate(n);
     }
@@ -1726,7 +1726,7 @@ struct FUN_00c64640
     NiPoint3 m_akA[8];
     NiPoint3 m_akB[8];
     FUN_00c64640();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         int aiD[5];
         return DAT_011f6238.Allocate(uiSize);
@@ -2781,7 +2781,7 @@ struct VecGroup
             m64[i].z = ZERO.z;
         }
     }
-    __forceinline static void* operator new(unsigned int n)
+    __forceinline static void* operator new(size_t n)
     {
         return g_mm630.Allocate(n);
     }
@@ -2804,7 +2804,7 @@ inline BSDecalPlacementVectorExtraData::BSDecalPlacementVectorExtraData(int iVal
         pDecalPlacementGroups[i] = 0;
 }
 
-inline void* BSDecalPlacementVectorExtraData::operator new(unsigned n)
+inline void* BSDecalPlacementVectorExtraData::operator new(size_t n)
 {
     unsigned size = n ? n : 1;
     unsigned alignment = 4;
@@ -2955,7 +2955,7 @@ extern int DAT_010c1364;
 class BSReference : public NiObject // src: EXE 0x010c1364 (vtable; old: FactoryObject)
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return BSFaceGenMorphData::operator new(size);
     }
@@ -3001,7 +3001,7 @@ class C649F0_Object : public NiObject
 {
   public:
     C649F0_Sub m_08;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3187,7 +3187,7 @@ struct FUN_00c64d10
     int m_pHeadNode;
     int m_iSecondInteger;
     FUN_00c64d10(int first, int second);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         int unused[4];
         (void)unused;

@@ -116,7 +116,7 @@ unsigned int FUN_008663e0_shell::BGSUnloadedFormBuffer_GetSize()
     return uiOut;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 unsigned int _data_011c16bc;
 
 

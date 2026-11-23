@@ -62,7 +62,7 @@ void DetectLifeEffect::Finish()
         DetectLifeEffect_CheckPlayerRunningDetectLife();
 }
 
-void* operator new(unsigned int size) throw();
+void* operator new(size_t size) throw();
 
 // @fnv 0x0080cdb0
 // pdb: DetectLifeEffect::Copy | DetectLifeEffect.obj | retail, upstream name already matches, high

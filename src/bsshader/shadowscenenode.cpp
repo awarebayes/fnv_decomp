@@ -1587,7 +1587,7 @@ template <class T> struct RefPtr
 struct ShadowRenderTarget : RefObj
 {
     ShadowRenderTarget(int a);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int unk08;
     int unk0c;
@@ -2387,7 +2387,7 @@ struct Fixed
 };
 struct Alloc
 {
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
 
@@ -4607,7 +4607,7 @@ extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volati
 class S00b5cd00_Light
 {
   public:
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -4918,7 +4918,7 @@ extern "C" void _ReadWriteBarrier();
 extern "C" void _ReadBarrier();
 extern "C" void _WriteBarrier();
 
-void* operator new(unsigned int, void* p)
+void* operator new(size_t, void* p)
 {
     return p;
 }

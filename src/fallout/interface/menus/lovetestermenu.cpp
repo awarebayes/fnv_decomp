@@ -1155,8 +1155,8 @@ struct FUN_00a712f0
     unsigned int unk108;
     unsigned int unk10c;
     unsigned int unk110;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     FUN_00a712f0();
     void FUN_00712e60(const NiColorA&);
     void NiCamera_SetMaxFarNearRatio(float);
@@ -1668,8 +1668,8 @@ struct Light109 : Scene109
     int unk0f4;
     int unk0f8;
     Light109();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct Loader109
 {

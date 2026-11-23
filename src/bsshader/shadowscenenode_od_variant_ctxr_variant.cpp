@@ -109,8 +109,8 @@ float tan_0057dd70(float);
 struct FUN_00a712f0
 {
     int bytes[0x114 / 4];
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     FUN_00a712f0();
     void FUN_00712e60(const Rect2180&);
     void NiCamera_SetMaxFarNearRatio(float);

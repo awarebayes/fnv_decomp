@@ -32,7 +32,7 @@ class SplatterNode : public NiNode
 {
   public:
     SplatterNode(unsigned short arraySize);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 extern unsigned int DAT_011c77dc;
 extern unsigned char DAT_011c77e8, DAT_011c77e9;

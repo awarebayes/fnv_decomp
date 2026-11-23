@@ -36,10 +36,10 @@ class FactionReaction
 FNV_STATIC_ASSERT(sizeof(FactionReaction) == 8);
 FNV_STATIC_ASSERT(offsetof(FactionReaction, pFaction) == 0);
 FNV_STATIC_ASSERT(offsetof(FactionReaction, m_ucRank) == 4);
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* pointer);
 
-void* __cdecl operator new[](unsigned int size);
+void* __cdecl operator new[](size_t size);
 void __cdecl operator delete[](void* pointer);
 extern "C" void* __cdecl memcpy(void* destination, const void* source, unsigned int size);
 

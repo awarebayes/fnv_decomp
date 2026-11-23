@@ -27,9 +27,9 @@ class TESActorBase;
 
 FNV_ASSERT(FormSize, sizeof(TESForm) == 0x18);
 FNV_ASSERT(FormIDOffset, offsetof(TESForm, iFormID) == 0x0c);
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* memory);
-void* __cdecl operator new[](unsigned int size);
+void* __cdecl operator new[](size_t size);
 void __cdecl operator delete[](void* memory);
 
 class PlayerQuestData;

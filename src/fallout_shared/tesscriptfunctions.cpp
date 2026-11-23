@@ -2871,7 +2871,7 @@ void* DelStandIn::FUN_00709a60(unsigned int flags)
 }
 }  // namespace fnv_00709a60
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_00a69dd0 {
     char pad[0x10];
@@ -31568,8 +31568,8 @@ struct FUN_00a746e0 {
     int unkc0;
     FUN_00a746e0(unsigned short usVertices, LinePoint* pkVertex, LineColor* pkColor, void* pkTexture,
                  unsigned short usNumTextureSets, int eNBTMethod, bool* pkFlags);
-    static void* operator new(unsigned int size);
-    static void operator delete(void* p, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void* p, size_t);
     void NiAVObject_SetTranslate(const LinePoint* pkPos);
 };
 struct LineDrawer {
@@ -33346,7 +33346,7 @@ struct Motion { void SetPosition_005620e0(NiPoint3*); };
 struct MoveRequest {
  World* world; Cell* cell; NiPoint3 position; float xRotation; float unk18; float zRotation;
  bool enabled; char unk21; short unk22; int unk24; int unk28; Reference* destination; int unk30;
- MoveRequest(); static void* operator new(unsigned int);
+ MoveRequest(); static void* operator new(size_t);
 };
 struct Process {
 virtual void v000();
@@ -34689,8 +34689,8 @@ public:
     unsigned int unk60;
     unsigned int unk64;
     unsigned int unk68;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     ShaderEffect(TESObjectREFR*, TESForm*, float);
 };
 struct ShaderEffectQueue { void ProcessLists_AddTempEffect(ShaderEffect*); };
@@ -34949,7 +34949,7 @@ struct FUN_0081c720 {
  int unk30;
  int unk34;
  int unk38;
- static void* operator new(unsigned int); static void operator delete(void*, unsigned int);
+ static void* operator new(size_t); static void operator delete(void*, size_t);
  FUN_0081c720(EffectReference*,void*,float);
 };
 struct EffectManager { void ProcessLists_AddTempEffect(FUN_0081c720*); };

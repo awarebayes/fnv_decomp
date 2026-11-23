@@ -128,7 +128,7 @@ struct CreatorHLSL
 {
     int vtbl;
     int field4;
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         return BSFadeNode::operator new(sz);
     }
@@ -381,7 +381,7 @@ struct BooleanKey
     int _4;
     ~BooleanKey();
     void LoadBinary(NiStream&);
-    void* operator new[](unsigned int s)
+    void* operator new[](size_t s)
     {
         return g_memoryManager.Allocate(s);
     }
@@ -1456,7 +1456,7 @@ void __cdecl RendererDiagnostic(const char*, ...);
 
 struct FUN_00e8a260
 {
-    static void* operator new(unsigned int size) { return BSFadeNode::operator new(size); }
+    static void* operator new(size_t size) { return BSFadeNode::operator new(size); }
     FUN_00e8a260(unsigned int, unsigned int) throw();
     char pad[0x70];
 };
@@ -2026,7 +2026,7 @@ struct TexRecord
     unsigned char m_70;
 };
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -3594,7 +3594,7 @@ struct RenderStateCache : RenderStateStorage
         m_b1114 = false;
         memcpy(&m_kCreateDesc, desc, sizeof(CreateDesc));
     }
-    static void* operator new(unsigned int sz)
+    static void* operator new(size_t sz)
     {
         return BSFadeNode::operator new(sz);
     }

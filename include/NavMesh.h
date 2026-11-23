@@ -92,7 +92,7 @@ public:
     bool MatchNavMesh(const NavMeshEdgeData&, NavMeshEdgeData&);
     unsigned int GetCurrentMoveModeType();
     bool ComputeTriangleZForLocation(unsigned short, const NiPoint3&, float, float, float&);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     static void Deallocate(void*);
 
     bool IsLocationOnNavMesh(const NiPoint3&, FindTriangleForLocationFilter*);

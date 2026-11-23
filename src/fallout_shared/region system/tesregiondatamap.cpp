@@ -107,7 +107,7 @@ TESRegionDataMap::~TESRegionDataMap()
 {
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // @fnv 0x004f3f80
 // pdb: TESRegionDataMap::Copy | TESRegionDataMap.obj | retail, vtable slot, high

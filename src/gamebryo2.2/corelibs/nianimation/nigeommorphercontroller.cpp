@@ -437,7 +437,7 @@ extern P03MM g_memoryManager;
 struct MorphPoint3
 {
     float x, y, z;
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

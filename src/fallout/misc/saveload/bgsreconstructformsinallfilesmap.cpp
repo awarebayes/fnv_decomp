@@ -1216,7 +1216,7 @@ void SetAtHelper::BGSReconstructCellSubBlocksMap_AddCellForm(TESObjectCELL* apCe
 }
 
 namespace fnv_008418b0 {
-void* operator new(unsigned int);
+void* operator new(size_t);
 
 int __cdecl TESObjectCELL_CalcExtGroupSubBlockKey(int, int);
 
@@ -1247,7 +1247,7 @@ void FUN_008418b0_shell::BGSReconstructCellSubBlocksMap_AddCellForm(unsigned int
 }  // namespace fnv_008418b0
 
 namespace fnv_00841fc0 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct DoorH
 {
@@ -1301,7 +1301,7 @@ struct CellBlockReconstructionOperations : BGSReconstructCellBlocksMap
     void BGSReconstructCellBlocksMap_AddCellForm(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int);
 };
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 unsigned int __fastcall _ref_0084e3a0(unsigned int);
 
@@ -1332,7 +1332,7 @@ void FUN_008420a0_class::BGSReconstructWorldSpacesMap_AddCellForm_008420a0(unsig
 }  // namespace fnv_008420a0
 
 namespace fnv_00842600 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct CellBlockReferenceOperations : BGSReconstructCellBlocksMap
 {
@@ -1383,7 +1383,7 @@ void FileCellReconstructionOperations::ProcessCell(TESObjectCELL* apCell, int ap
 }  // namespace fnv_00842600
 
 namespace fnv_00842730 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct WorldSpaceMapOperations : BGSReconstructWorldSpacesMap
 {
@@ -1414,7 +1414,7 @@ void FileWorldReconstructionOperations::EnsureObjectAndCall(int apWorldSpace, in
 }  // namespace fnv_00842730
 
 namespace fnv_00843630 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl _fnv_call_845cc0(char const*, ...);
 
 struct TESFormCallProxy
@@ -1551,7 +1551,7 @@ void FUN_00844c90_shell::BSSimpleArray_RemoveAt(unsigned int index, bool useArra
 }  // namespace fnv_00844c90
 
 namespace fnv_00841b20 {
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // The shared reference does not expose this save-state query.
 struct ReferenceSaveCheck : TESObjectREFR

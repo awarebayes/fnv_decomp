@@ -1175,8 +1175,8 @@ struct ShaderInitializer
     int unk9f8;
     int unk9fc;
     ShaderInitializer();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
 };
 struct Sub130
 {

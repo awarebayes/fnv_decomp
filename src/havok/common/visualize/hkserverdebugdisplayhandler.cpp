@@ -1157,7 +1157,7 @@ struct FUN_00dda660
     FUN_00dda660();
     virtual ~FUN_00dda660();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00dda660* b = static_cast<FUN_00dda660*>(p);
         hkMemoryRouter_getInstance().heap().ReleaseBlock(p, b->m_usMemSizeAndFlags);

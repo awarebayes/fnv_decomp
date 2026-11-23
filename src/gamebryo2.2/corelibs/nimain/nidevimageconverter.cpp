@@ -14,7 +14,7 @@
 #include "../../../../include/PixelDataExpander.h"
 #include "../../../../include/RecursiveSpinLock.h"
 
-__forceinline void* operator new(unsigned int, void* memory) throw() { return memory; }
+__forceinline void* operator new(size_t, void* memory) throw() { return memory; }
 
 inline NiPalette* NiPixelData::GetPalette() const throw()
 {
@@ -1318,7 +1318,7 @@ struct ReaderAllocator
 extern ReaderAllocator DAT_011f6238;
 struct ReaderStorage
 {
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return DAT_011f6238.Allocate(size);
     }

@@ -1052,7 +1052,7 @@ bool AudioMarkerData::Load(TESFile* apFile)
     return true;
 }
 
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl _fnv_zlib_memset(void* dst, int val, unsigned int count);
 // pdb: class ContainerItemExtra, size 0xc (here 0x10), 5 members
 struct ContainerItemExtra
@@ -1416,8 +1416,8 @@ struct Node_58cbc0
     int unkA0;
     int unkA4;
     int unkA8;
-    static void* operator new(unsigned int uiSize);
-    static void operator delete(void* pMem, unsigned int);
+    static void* operator new(size_t uiSize);
+    static void operator delete(void* pMem, size_t);
     Node_58cbc0(unsigned short usChildren);
     void SetLocalRotate(const Mat3& kRot);
     void AttachObject(void* pObj);

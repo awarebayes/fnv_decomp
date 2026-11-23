@@ -1233,7 +1233,7 @@ struct S_00d0d150_CollisionOutput {
     S_00d0d150_ToiInfo m_fTimeOfImpact;
 };
 
-inline void* __cdecl operator new(unsigned int, void* where) throw() { return where; }
+inline void* __cdecl operator new(size_t, void* where) throw() { return where; }
 
 template <class T>
 static __forceinline T* S_00d0d150_Array_expandByUnchecked(hkArrayBase<T>& self, int n);
@@ -3799,7 +3799,7 @@ struct FUN_00d10730 {
     FUN_00d10730();
     virtual ~FUN_00d10730();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00d10730* b = static_cast<FUN_00d10730*>(p);
         reinterpret_cast<D10730Allocator&>(hkMemoryRouter_getInstance().heap()).ReleaseBlock(p, b->m_usMemSizeAndFlags);

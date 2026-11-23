@@ -48,7 +48,7 @@ struct SpawnedObj404a80
 {
     char m00[0x120];
     SpawnedObj404a80();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return FormHeap_Allocate(size);
     }

@@ -242,7 +242,7 @@ struct LeafV
 struct FadeTag
 {
 };
-inline void* operator new(unsigned int sz, FadeTag*)
+inline void* operator new(size_t sz, FadeTag*)
 {
     return BSFadeNode::operator new(sz);
 }

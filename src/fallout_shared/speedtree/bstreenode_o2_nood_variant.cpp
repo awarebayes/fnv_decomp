@@ -136,7 +136,7 @@ struct FUN_00cf5990
     unsigned short w4;
     FUN_00cf5990(unsigned int, void*);
     void FUN_00c905b0();
-    static void* operator new(unsigned int)
+    static void* operator new(size_t)
     {
         hkMemoryRouter* h = hkMemoryRouter_getInstance();
         AllocObj* al = reinterpret_cast<AllocObj*>(h->m_heap);
@@ -472,7 +472,7 @@ struct FUN_00d22dc0
     int unk84;
     int unk88;
     int unk8c;
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void*);
 };
 struct Obj
@@ -542,7 +542,7 @@ extern unsigned int DAT_0126fd98;
 extern float DAT_010c72bc;
 extern float DAT_01267e30[];
 hkMemoryRouter* __cdecl hkMemoryRouter_getInstance();
-void* FUN_00d22dc0::operator new(unsigned int n)
+void* FUN_00d22dc0::operator new(size_t n)
 {
     hkMemoryRouter* h = hkMemoryRouter_getInstance();
     Alloc* allocator = reinterpret_cast<Alloc*>(h->m_heap);

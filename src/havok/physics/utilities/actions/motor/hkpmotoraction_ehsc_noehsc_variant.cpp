@@ -37,14 +37,14 @@ hkMemoryRouterMA& __cdecl hkMemoryRouter_getInstance();
 class hkpMotorActionMA : public hkpMotorAction
 {
   public:
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         hkReferencedObject* b =
             static_cast<hkReferencedObject*>(hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(static_cast<int>(nbytes)));
         b->m_memSizeAndFlags = static_cast<unsigned short>(nbytes);
         return b;
     }
-    void operator delete(void*, unsigned int);
+    void operator delete(void*, size_t);
 
     hkpMotorActionMA(hkpRigidBody* body, const hkVector4& axis, hkReal spinRate, hkReal gain);
 

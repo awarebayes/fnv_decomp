@@ -78,8 +78,8 @@ struct TCBKeyS {
     NiPoint3 out;
     float extra[6];
     ~TCBKeyS() {}
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
-    static void operator delete[](void* p, unsigned int) { g_memoryManager.Deallocate(p); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
+    static void operator delete[](void* p, size_t) { g_memoryManager.Deallocate(p); }
 };
 bool FindKeyIndex(float t, TCBKeyS* keys, unsigned int count, unsigned int* idx, unsigned int stride);
 NiPoint3 GetKeyPosAtTime(float t, TCBKeyS* keys, int type, unsigned int count, unsigned int stride);
@@ -185,11 +185,11 @@ struct TempArrayElement
     void* c;
     void* d;
     ~TempArrayElement() {}
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
-    static void operator delete[](void* p, unsigned int)
+    static void operator delete[](void* p, size_t)
     {
         g_memoryManager.Deallocate(p);
     }
@@ -205,8 +205,8 @@ struct BezFloatKey {
     float inTan;
     float outTan;
     ~BezFloatKey() {}
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
-    static void operator delete[](void* p, unsigned int) { g_memoryManager.Deallocate(p); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
+    static void operator delete[](void* p, size_t) { g_memoryManager.Deallocate(p); }
 };
 float GenInterpFloat(float t, BezFloatKey* keys, int type, unsigned int count, unsigned int stride);
 void NiInterpScalar_AdjustBezier(float p0, float t0, float* tan0, float p1, float t1, float* tan1, float t, float p, float* a, float* b);
@@ -244,7 +244,7 @@ class A27250FloatKey {
 public:
     ~A27250FloatKey();
 
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -335,7 +335,7 @@ struct Elem64 {
     int unk38;
     int unk3C;
 
-    static void* operator new[](unsigned int aSize) { return DAT_011f6238.Allocate(aSize); }
+    static void* operator new[](size_t aSize) { return DAT_011f6238.Allocate(aSize); }
     static void operator delete[](void* apBlock) { DAT_011f6238.Free(apBlock); }
     ~Elem64() {}
 };
@@ -374,7 +374,7 @@ class A281E0BezPosKey {
 public:
     ~A281E0BezPosKey();
 
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -1105,7 +1105,7 @@ struct VertexRecord {
     int x, y, z, w;
     ~VertexRecord() {}
     void LoadBinaryFields_00a27430(int);
-    static void* operator new[](unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new[](size_t size) { return g_memoryManager.Allocate(size); }
 };
 VertexRecord* __cdecl CreateVertexRecords(int v, unsigned int count);
 // MemoryManager and NiPoint3 come from the shared headers.
@@ -1121,7 +1121,7 @@ struct AnimKeyBase {
 };
 struct LinPosKey : AnimKeyBase {
     NiPoint3 pos;
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
     static void operator delete[](void* p) { g_memoryManager.Deallocate(p); }
 };
 bool InsertLinPosKey(float t, LinPosKey** pKeys, unsigned int* pCount);
@@ -1163,8 +1163,8 @@ struct BezierKeyS {
     NiPoint3 out;
     float extra[9];
     ~BezierKeyS() {}
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
-    static void operator delete[](void* p, unsigned int) { g_memoryManager.Deallocate(p); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
+    static void operator delete[](void* p, size_t) { g_memoryManager.Deallocate(p); }
 };
 BezierKeyS* __cdecl AllocateBezierKeys(unsigned int count);
 struct S_00a2af70_V { float x, y, z; };
@@ -2058,7 +2058,7 @@ struct KeyframeElement {
     float bias;
     ~KeyframeElement();
     void LoadBaseAndThreeValues(void* context);
-    static void* operator new[](unsigned int bytes) {
+    static void* operator new[](size_t bytes) {
         return g_memoryManager.Allocate(bytes);
     }
 };
@@ -2082,10 +2082,10 @@ struct Arr8 {
     float f;
     char c;
     ~Arr8() {}
-    __forceinline static void* operator new[](unsigned int n) {
+    __forceinline static void* operator new[](size_t n) {
         return g_memoryManager.Allocate(n);
     }
-    __forceinline static void operator delete[](void* p, unsigned int) {
+    __forceinline static void operator delete[](void* p, size_t) {
         g_memoryManager.Deallocate(p);
     }
 };
@@ -2321,7 +2321,7 @@ public:
     virtual void v40(int a, int b, int c, int d);
     void NiParallelUpdateTaskManager_AddTask(int pkTask, int ePriority);
 };
-inline void* __cdecl operator new(unsigned int, void* memory) throw() {
+inline void* __cdecl operator new(size_t, void* memory) throw() {
     return memory;
 }
 NiFloatInterpolator* __cdecl CreateNiFloatInterpolator();
@@ -2534,7 +2534,7 @@ struct FloatKey {
     float time;
     float value;
     ~FloatKey() throw() {}
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
 };
 void __cdecl FUN_00ec44d0(void* dst, const void* src, unsigned int count);
 float __cdecl GetValueAtTime(float t, TCBKeyS* keys, int type, unsigned int count, unsigned int stride);
@@ -2559,7 +2559,7 @@ struct BezPosKey {
     NiPoint3 unk34;
     NiPoint3 unk40;
     ~BezPosKey() {}
-    static void* operator new[](unsigned int n) { return g_memoryManager.Allocate(n); }
+    static void* operator new[](size_t n) { return g_memoryManager.Allocate(n); }
     static void operator delete[](void* p) { g_memoryManager.Deallocate(p); }
 };
 void BezSortKeys(BezPosKey* keys, unsigned int count, unsigned int stride);

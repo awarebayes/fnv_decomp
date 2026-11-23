@@ -217,7 +217,7 @@ void NiParticleMeshesData::UpdateParticleMeshes()
     }
 }
 
-inline void* __cdecl operator new(unsigned int, void* where)
+inline void* __cdecl operator new(size_t, void* where)
 {
     return where;
 }

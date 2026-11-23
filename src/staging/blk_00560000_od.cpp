@@ -1027,7 +1027,7 @@ struct FUN_0066d410_shell
 {
     void ForwardCall_0066d410();
 };
-void __cdecl operator delete(void* p, unsigned int flags);
+void __cdecl operator delete(void* p, size_t flags);
 struct FUN_0056d5c0_Class
 {
     void* __thiscall FUN_0056d5c0(unsigned int flags);
@@ -2218,8 +2218,8 @@ struct FUN_004f91b0
     unsigned int vtable, refCount, name;
     BSSoundHandle handle;
     FUN_004f91b0();
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     void IncRefCount();
     void DecRefCount();
 };

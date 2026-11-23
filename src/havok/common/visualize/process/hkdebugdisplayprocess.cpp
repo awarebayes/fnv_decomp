@@ -149,7 +149,7 @@ struct S_00ddcb90_RefObj
     short m_sReferenceCount;
     virtual ~S_00ddcb90_RefObj() throw()
     {}
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         S_00ddcb90_RefObj* b = static_cast<S_00ddcb90_RefObj*>(hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;

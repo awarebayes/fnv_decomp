@@ -16,6 +16,6 @@ class TESRegionLoadList
   public:
     void Remove(RegionPointList* const&);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 #endif

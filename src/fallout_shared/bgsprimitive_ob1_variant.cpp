@@ -1259,7 +1259,7 @@ struct FUN_00c4f8e0
     int unk0FC;
     int unk100;
     int unk104;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         int unused[4];
         (void)unused;
@@ -1645,7 +1645,7 @@ struct FUN_00c47660
     int unk09C;
     int unk0A0;
     FUN_00c47660();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         int unused[3];
         (void)unused;

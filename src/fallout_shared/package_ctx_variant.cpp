@@ -8,7 +8,7 @@
 #include "package_decls.h"
 #include "../../include/TESCombatStyle.h"
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 class PackageInit;
 class FUN_00670b30

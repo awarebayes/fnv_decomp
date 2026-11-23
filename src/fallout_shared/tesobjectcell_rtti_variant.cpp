@@ -408,7 +408,7 @@ void TESObjectCELL::SaveGameTest()
     CellRefLockLeave();
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // ExtraCell3D owns the reference count associated with the cell's loaded 3D.
 

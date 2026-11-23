@@ -37,7 +37,7 @@ template <int N> struct EndianSizeTag
 };
 
 void BSEndian(unsigned int* value, EndianSizeTag<4> tag);
-void* __cdecl operator new[](unsigned int size);
+void* __cdecl operator new[](size_t size);
 void __cdecl operator delete[](void* pointer);
 extern "C" void* __cdecl memset(void* destination, int value, unsigned int size);
 extern "C" void* __cdecl _alloca(unsigned int size);

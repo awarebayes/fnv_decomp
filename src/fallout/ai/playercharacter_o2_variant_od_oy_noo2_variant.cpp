@@ -502,7 +502,7 @@ struct GrabConstraint
 
     virtual void SetWorld(GrabWorld*);
     int unk04, unk08, unk0c;
-    static void* operator new(unsigned);
+    static void* operator new(size_t);
     GrabConstraint(const GrabConstraintData*);
 };
 struct GrabPointer

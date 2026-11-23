@@ -30,7 +30,7 @@ struct S_00e028e0_Obj : S_00e028e0_Base
     {
         hkStorageStringMap_int_struct_hkContainerHeapAllocator_clear();
     }
-    void operator delete(void* p, unsigned int n)
+    void operator delete(void* p, size_t n)
     {
         reinterpret_cast<S_00e028e0_Alloc*>((&hkMemoryRouter_getInstance()->heap()))->ReleaseBlock(p, n);
     }

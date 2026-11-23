@@ -279,7 +279,7 @@ char ToLowerAscii(char acChar)
 }
 
 void __cdecl FUN_00cc9640();
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00cb9b60_class
 {
@@ -768,7 +768,7 @@ extern int DAT_012686d0;
 
 struct A51BF0Base
 {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 
@@ -3133,7 +3133,7 @@ struct OwnerBase
     unsigned int m_04;
     unsigned int m_08;
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -3923,7 +3923,7 @@ extern FUN_00aa3e40_alloc DAT_011f6238;
 
 struct FUN_00ca4bc0_obj
 {
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         unsigned char* a = (unsigned char*)DAT_011f6238.Game_DoHeapAlloc(size);
         unsigned char pad = (unsigned char)(0x10 - ((unsigned int)a & 0xf));
@@ -4923,7 +4923,7 @@ struct SpawnedObject : SpawnedBase
 {
     SpawnedObject() : SpawnedBase()
     {}
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         hkMemoryRouter* holder = hkMemoryRouter_getInstance();
         void* p = ((SlotAllocator*)holder->m_heap)->vSlot04(size);
@@ -5190,7 +5190,7 @@ struct S_ca9f40_Counters
     int unk08;
     int unk0c;
     int unk10;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }
@@ -5935,7 +5935,7 @@ struct FUN_00cac250_obj
     int unk03D8;
     int unk03DC;
     FUN_00cac250_obj();
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct TlsGuard_b9283
@@ -6978,7 +6978,7 @@ struct FUN_00cbc550
     int unk10, unk14, unk18, unk1c;
     int unk20, unk24, unk28, unk2c;
     int unk30, unk34, unk38, unk3c;
-    static void* __cdecl operator new(unsigned int size)
+    static void* __cdecl operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -7122,7 +7122,7 @@ class CBDCB0Child
     CBDCB0Child();
     virtual ~CBDCB0Child();
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         void* p = hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(uiSize);
         static_cast<CBDCB0Child*>(p)->m_usMemSizeAndFlags = (unsigned short)uiSize;
@@ -8005,7 +8005,7 @@ class CA56B0RefObject
     CA56B0RefObject();
     virtual ~CA56B0RefObject();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk04;
@@ -8613,7 +8613,7 @@ struct CharacterProxyObject : public hkReferencedObject
 
     CharacterProxyObject(int arg);
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         FNVTaskMemoryRouter* router = hkMemoryRouter_getInstance();
         CharacterProxyObject* p = (CharacterProxyObject*)((CAC300Allocator*)router->allocator)->Alloc(size);
@@ -8702,7 +8702,7 @@ class BA2D0Object
   public:
     BA2D0Object();
 
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     int unk00;
@@ -8990,13 +8990,13 @@ struct ObjB
     int unk140;
     int unk144;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         ObjB* b = (ObjB*)hkAllocateChunkStub(nbytes);
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
         return b;
     }
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         GetRouterHeap(hkMemoryRouter_getInstance()).bufFree(p, ((ObjB*)p)->m_usMemSizeAndFlags);
     }
@@ -9139,11 +9139,11 @@ struct ObjD
     int unk1b8;
     int unk1bc;
 
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         return hkAllocateChunkStub(nbytes);
     }
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         hkDeallocateChunkStub(p, nbytes);
     }
@@ -9782,7 +9782,7 @@ FUN_00ca0ca0_Class* __thiscall FUN_00ca0ca0_Class::FUN_00ca0ca0(int flags)
 struct WalkPlacement
 {
 };
-inline void* operator new(unsigned int, WalkPlacement, void* p)
+inline void* operator new(size_t, WalkPlacement, void* p)
 {
     return p;
 }
@@ -10008,7 +10008,7 @@ class Node_ca57
     Node_ca57();
     static void operator delete(void*) throw()
     {}
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         unsigned char* raw = (unsigned char*)((Pool_ca57*)&DAT_011f6238)->Game_DoHeapAlloc(size);
         unsigned char lo = (unsigned char)raw;
@@ -10541,7 +10541,7 @@ struct FUN_00d2acf0
     FUN_00d2acf0(void* source, void* start, void* end, float nearValue, float farValue, int flags);
     void FUN_00c905b0();
 
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         FNVTaskMemoryRouter* router = hkMemoryRouter_getInstance();
         FUN_00d2acf0* object = (FUN_00d2acf0*)((CAC300Allocator*)router->allocator)->Alloc(bytes);
@@ -11026,7 +11026,7 @@ struct ShapeData : ShapePrefix
     ShapeStrips strips;
     ShapeVector scale;
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         char* p = (char*)g_heapAllocator.Allocate(size + 16);
         unsigned char off = (unsigned char)(16 - ((unsigned char)(unsigned int)p & 15));
@@ -11758,7 +11758,7 @@ extern int DAT_01268154;
 struct S00cb84f0_Obj : FUN_00c87c30
 {
     int unk0c;
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -11980,7 +11980,7 @@ struct FUN_00cbaf20_class
     int unk14;
     int unk18;
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -12203,7 +12203,7 @@ hkMemoryRouter* __cdecl GetMemoryRouterC520();
 class BufferC520
 {
   public:
-    static void* operator new(unsigned int uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return GetRouterHeap(GetMemoryRouterC520()).blockAlloc(uiSize);
     }
@@ -12594,7 +12594,7 @@ struct S00cb87e0_Node
         v20 = DAT_01267e30;
         f34 = DAT_0101e2bc;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         unsigned char* raw = (unsigned char*)((MemoryManager_t*)&DAT_011f6238)->Game_DoHeapAlloc(size);
         unsigned char lo = (unsigned char)raw;
@@ -14761,7 +14761,7 @@ struct CA3F10Triangle
 {
     unsigned int uiVerts01;
     unsigned int uiVert2Welding;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_kCA3F10MemMgr.Allocate(size);
     }
@@ -14782,7 +14782,7 @@ struct CA3F10Vertex
     float z;
     CA3F10Vertex()
     {}
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_kCA3F10MemMgr.Allocate(size);
     }
@@ -14793,7 +14793,7 @@ struct CA3F10Normal
     float x;
     float y;
     float z;
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return g_kCA3F10MemMgr.Allocate(size);
     }
@@ -14894,7 +14894,7 @@ struct Rec9bd0
     float score;
     void ahkpMalleableConstraintData_SetChild(Item9bd0*);
     void FUN_00ca9aa0();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         Rec9bd0* m = (Rec9bd0*)GetRouterHeap((hkMemoryRouter*)hkMemoryRouter_getInstance()).blockAlloc(size);
         m->cap = (unsigned short)size;
@@ -15741,7 +15741,7 @@ struct cb86f0_obj
         vtable = (void*)&DAT_010c8914;
     }
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
@@ -15898,7 +15898,7 @@ struct S_ca5870_Obj
     int unkAC;
     void FUN_00c905b0();
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         S_ca5870_Holder* h = (S_ca5870_Holder*)hkMemoryRouter_getInstance();
         void* p = h->m_10->Alloc(size);

@@ -113,7 +113,7 @@ void __thiscall NiD3DShaderProgram::SetCreator_00eea540(NiD3DShaderProgramCreato
     m_pkCreator = pkCreator;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 void __cdecl RemoveDeviceAndClearShader();
 
 
@@ -127,7 +127,7 @@ void* __fastcall DestroyVertexShader(NiD3DVertexShader* shader, void*, unsigned 
     return shader;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 // Calls FUN_00e96c90, frees this with operator delete when flags has bit 0 set, and returns this.
 // @fnv 0x00e95cd0
@@ -638,7 +638,7 @@ class HLSLVertexShaderConstructionView : public VertexShaderConstructionView
         m_pcShaderProfile = 0;
         m_pShaderConstantTable = 0;
     }
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     virtual void v01();
     virtual void v02();
     virtual void v03();
@@ -1471,7 +1471,7 @@ struct S00e96610_VS : S00e96610_VSMid
         m_i44 = 0;
     }
     virtual ~S00e96610_VS();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 
 struct S00e96610_Creator

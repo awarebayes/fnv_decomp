@@ -41,7 +41,7 @@ struct VisualDebuggerFactoryObject
     int m_8;
     int m_iThirdValue;
     int m_10;
-    static void* __cdecl operator new(unsigned int size)
+    static void* __cdecl operator new(size_t size)
     {
         return BSFadeNode::operator new(size);
     }
@@ -729,7 +729,7 @@ struct Process_cd14
     int unk44;
     int unk48;
     int unk4C;
-    static void* operator new(unsigned int nbytes) throw()
+    static void* operator new(size_t nbytes) throw()
     {
         Process_cd14* p = (Process_cd14*)routerHeap<hkMemoryAllocator>(hkMemoryRouter::getInstance()).blockAlloc(nbytes);
         p->m_usMemSizeAndFlags = (unsigned short)nbytes;

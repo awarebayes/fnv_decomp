@@ -404,7 +404,7 @@ extern MemoryManager _g_memoryManager;
 class CF4840Saver
 {
   public:
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -1357,7 +1357,7 @@ void zz_probe_cfdeb0(BlockStack_cfde* s);
 // Havok: build index maps for a selection and propagate it through records and links (hkArray<hkInt16> maps).
 typedef short hkInt16;
 typedef unsigned short hkUint16;
-inline void* __cdecl operator new(unsigned int, void* p)
+inline void* __cdecl operator new(size_t, void* p)
 {
     return p;
 }

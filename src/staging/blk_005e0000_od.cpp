@@ -312,7 +312,7 @@ BSSimpleArray<FootIK_DATA__FootIK_Leg_DATA, 1024>::~BSSimpleArray()
     Clear(true);
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 // @fnv 0x005ef150
 // pdb: BSSimpleArray<FootIK_DATA::FootIK_Leg_DATA,1024>::_Allocate | BGSRagdoll.obj | debug, vtable slot, medium
@@ -2466,7 +2466,7 @@ void FUN_005efa80_cls::BSSimpleArray_PathingLocation_1024_ReallocateBuffer(void*
     }
 }
 
-void* operator new(unsigned int uiSize, void* pvMem);
+void* operator new(size_t uiSize, void* pvMem);
 void operator delete(void* pvMem, void* pvPlace);
 
 struct EFBC0Item
@@ -3708,7 +3708,7 @@ bool Target005ed1e0::BGSRagdoll_GrabIK_Compare(Target005ed1e0* arData)
     return different;
 }
 
-void* __cdecl operator new(unsigned int, void*);
+void* __cdecl operator new(size_t, void*);
 
 struct SpawnItem : FUN_005ef7f0_Data
 {
@@ -3737,7 +3737,7 @@ void BSSimpleArray<FootIK_DATA__FootIK_Leg_DATA, 1024>::InitializeItems(FootIK_D
     }
 }
 
-void* __cdecl operator new(unsigned int uiSize, void* pvMem);
+void* __cdecl operator new(size_t uiSize, void* pvMem);
 void __cdecl operator delete(void* pvObject, void* pvMem);
 
 struct E5EF9A0Entry
@@ -5268,7 +5268,7 @@ bool SoundRecordOperations::Compare(TESForm* apCompare)
     return false;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_005e63f0 : s5e63f0::Derived
 {

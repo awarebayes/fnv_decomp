@@ -70,7 +70,7 @@ struct hkpShapeBase : public hkReferencedObject
 {
     void FUN_00c905b0();
 
-    __forceinline void* operator new(unsigned int nbytes)
+    __forceinline void* operator new(size_t nbytes)
     {
         hkReferencedObject* b = static_cast<hkReferencedObject*>(hkMemoryRouter::getInstance().heap().blockAlloc(nbytes));
         b->m_memSizeAndFlags = static_cast<hkUint16>(nbytes);

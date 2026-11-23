@@ -516,7 +516,7 @@ Tile* __thiscall HackingMenu::FindTile(int aiIndex, int aiCol)
     return 0;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct FUN_00768810
 {
@@ -1611,7 +1611,7 @@ void __cdecl Warning_005b5e40(const char*, ...);
 void* InterfaceManager_GetSingleton();
 bool InterfaceManager_Has360Controller();
 void operator delete(void*);
-void* operator new[](unsigned int);
+void* operator new[](size_t);
 void operator delete[](void*);
 // Clears the entry list, rebuilds the intro entries, generates a random password buffer from the word list, and creates one entry per 12-character chunk.
 // @fnv 0x00768aa0
@@ -3017,7 +3017,7 @@ void FUN_005e58f0(int, Player84*, float*);
 float BSMAX_00404010(float, float);
 float BSMIN(float, float);
 float FUN_004bd510(float, float);
-void* operator new(unsigned int);
+void* operator new(size_t);
 void operator delete(void*);
 extern Setting84 DAT_011d42d0;
 extern Setting84 DAT_011d2934;

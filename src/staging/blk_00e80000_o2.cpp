@@ -239,7 +239,7 @@ template class NiTPointerMap<const char*, NiD3DShaderProgramCreator*>;
 template class NiTStringTemplateMap<NiTPointerMap<const char*, NiD3DPixelShader*>, NiD3DPixelShader*>;
 template class NiTStringTemplateMap<NiTPointerMap<const char*, NiD3DShaderProgramCreator*>, NiD3DShaderProgramCreator*>;
 
-inline void* __cdecl operator new(unsigned int, void* p) { return p; }
+inline void* __cdecl operator new(size_t, void* p) { return p; }
 
 extern MemoryManager _g_memoryManager;
 void __cdecl _NiFree(void*);
@@ -394,7 +394,7 @@ void __thiscall FUN_00e891f0_Class::NiD3DTextureStageGroup_RemoveAllStageStates(
     *(int*)((char*)this + 4) = 0;
 }
 
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 extern int DAT_010efc34;
 void __cdecl FUN_00e68830();
 
@@ -897,7 +897,7 @@ FUN_00e941d0_Node* __fastcall RemoveFirstNodeAtLeast(FUN_00e941d0_This* self, in
     return node;
 }
 
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00e98610_Node {
     void* m_next;
@@ -1226,7 +1226,7 @@ void __cdecl _NiFree(void*);
 
 
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00e8ceb0_Class {
     void __thiscall ReleaseStorage_00e8ceb0();
     void* __thiscall FUN_00e8d200(bool flag);
@@ -1521,7 +1521,7 @@ void __thiscall FUN_00e96c90_Class::UpdateState_00e96c90()
     FUN_00e89970();
 }
 
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 void __cdecl FUN_00e989c0();
 extern int DAT_010f1550;
 
@@ -1542,7 +1542,7 @@ extern unsigned int DAT_011c1118;
 extern int DAT_0126fa58;
 
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 // Allocates DAT_011c1118 zero-initialised 0x20-byte nodes, links each to the previous head via offsets 0x1c and 0x18, and updates DAT_0126fa58 to the new head.
@@ -9170,7 +9170,7 @@ struct FUN_00e940a0_Class {
     void __thiscall ReleaseGlobalSlot();
 };
 
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 
 // If the global object exists and holds a pointer in unk_48, clears that slot, nulls m_00 when it matches, and deletes the pointer.
 // @fnv 0x00e940a0
@@ -9894,7 +9894,7 @@ struct E94B0Block {
             m_pkEntryArray = 0;
     }
 
-    static void* operator new(unsigned int uiSize) { return g_kE94B0MemoryManager.Allocate(uiSize); }
+    static void* operator new(size_t uiSize) { return g_kE94B0MemoryManager.Allocate(uiSize); }
 
     E94B0Entry* GetAt(unsigned int uiIndex)
     {
@@ -11828,13 +11828,13 @@ struct Chip8F6D0 {
     int unk30;
     int unk34;
     ~Chip8F6D0();
-    static void operator delete(void* pvMem, unsigned int uiSize);
+    static void operator delete(void* pvMem, size_t uiSize);
 };
 struct Entry8F6D0 {
     int unk00;
     int unk04;
     Chip8F6D0* m_apChips[5];
-    static void operator delete(void* pvMem, unsigned int uiSize);
+    static void operator delete(void* pvMem, size_t uiSize);
 };
 
 struct Map8F6D0 {

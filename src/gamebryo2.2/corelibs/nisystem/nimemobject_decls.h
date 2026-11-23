@@ -9,7 +9,7 @@ class Flag512Receiver
 class SNAEntry
 {
   public:
-    static void* operator new[](unsigned int size);
+    static void* operator new[](size_t size);
 };
 extern void* DAT_011f6080;
 

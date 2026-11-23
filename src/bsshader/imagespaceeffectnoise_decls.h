@@ -12,7 +12,7 @@ class ImageSpaceShaderParam : public ImageSpaceEffectParam
   public:
     ImageSpaceShaderParam();
     void AllocateShaderConstants(int, int);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return g_memoryManager.Allocate(n);
     }

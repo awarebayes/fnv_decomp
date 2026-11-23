@@ -112,7 +112,7 @@ class PathSmootherPOVPoint
 {
   public:
     PathSmootherPOVPoint();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     int eType;
     NiPoint3 Center;

@@ -920,7 +920,7 @@ struct FUN_00a5d3a0 : RefY
 };
 struct Z : FUN_00a5d3a0
 {
-    void* operator new(unsigned int n);
+    void* operator new(size_t n);
     void* m8;
     Z(void* p)
     {
@@ -1707,7 +1707,7 @@ class BSNodeReferences : public FUN_00a5d3a0 // src: EXE 0x010c13f4 (vtable; old
 {
   public:
     C3B270_Sub RefNodeA; // src: XBOX_RETAIL_PDB +0x8 (old: m_08)
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

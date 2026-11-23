@@ -306,7 +306,7 @@ char __thiscall FUN_00c3a130_Class::BSMultiBoundRoom_RegisterStreamables(void* a
     return 1;
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c3a140_Class
 {
     void __thiscall FUN_00c39770();
@@ -772,7 +772,7 @@ void BSStream_InitLoaders()
     NiStream::RegisterObjectLoader(g_01204388_arg0, CreatePositionModifierInstance);
 }
 
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c3ba80_Class
 {

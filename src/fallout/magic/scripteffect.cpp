@@ -56,7 +56,7 @@ void ScriptEffect::Revert(Actor* apActor)
         pEffectLocals->LoadGame();
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 
 struct SCRIPT_LOCAL_LIST
 {

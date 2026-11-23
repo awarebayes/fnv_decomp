@@ -256,7 +256,7 @@ OwnerMap* __fastcall DestroyOwnerMap(OwnerMap* self, void*, bool dealloc)
 }
 
 void __cdecl FUN_00b60d80(void);
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00b61220_class
 {
@@ -291,7 +291,7 @@ template <> RoomMapBase::~NiTMapBase()
 }
 
 void __cdecl FUN_00b656e0();
-extern "C" void __cdecl operator delete(void* p, unsigned int size);
+extern "C" void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b664f0_class
 {
@@ -333,7 +333,7 @@ int __cdecl Object_ComputeValue_00b66760(int a)
 
 void __cdecl FUN_00b6a520();
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00b6adb0_class
 {
@@ -351,7 +351,7 @@ void* FUN_00b6adb0_class::FUN_00b6adb0(int flags)
 }
 
 void __cdecl FUN_00b6aef0();
-void __cdecl operator delete(void* p, unsigned int) throw();
+void __cdecl operator delete(void* p, size_t) throw();
 
 struct FUN_00b6b160_class
 {
@@ -1714,7 +1714,7 @@ class RenderPassB66
   public:
     RenderPassB66(void* pvOwner, int iType, ...);
 
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -2884,7 +2884,7 @@ struct RenderTarget_b6d170
     int unk34;
     int unk38;
     int unk3C;
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     RenderTarget_b6d170(void* tex, int a, void* depth);
     static RenderTarget_b6d170* __cdecl BSRenderedTexture_Create(const NiFixedString& aName, unsigned int aiWidth,
                                                                   unsigned int aiHeight, TexPrefs_b6d170* arPrefs, int aeMultiSamplePreference,
@@ -3504,7 +3504,7 @@ class BlobBase_cls
     unsigned int unk58;
     unsigned int unk5c;
 
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -7129,7 +7129,7 @@ struct B6AE60Obj
     int unk148;
     int unk14c;
     B6AE60Obj();
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -7416,7 +7416,7 @@ void* __cdecl Object_DispatchCommandFour(unsigned int size);
 struct FUN_00b6abb0
 {
     FUN_00b6abb0();
-    static void* operator new(unsigned int size, unsigned int requestedSize)
+    static void* operator new(size_t size, size_t requestedSize)
     {
         return Object_DispatchCommandFour(requestedSize);
     }
@@ -10714,7 +10714,7 @@ struct FUN_00537bf0
 {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24, unk28;
     FUN_00537bf0(unsigned int);
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return Object_DispatchCommandFour(n);
     }
@@ -10759,7 +10759,7 @@ struct ShaderGeometryOwner
     }
     FUN_00537bf0* BuildShaderGeometry(GeometryInput* input);
 };
-inline void* __cdecl operator new[](unsigned int size)
+inline void* __cdecl operator new[](size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
@@ -11236,7 +11236,7 @@ struct B61Bound
 };
 struct B61Alloc
 {
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -11359,7 +11359,7 @@ class B61PropBase
     unsigned short m_usFlags;
     unsigned char m_ucTestRef;
     unsigned char unk1b;
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }
@@ -11419,7 +11419,7 @@ inline bool B61IsKindOf(const NiRTTI* pkRTTI, B61AVObject* pkObj)
 class B61TriShapeData : public B61Ref
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }
@@ -11455,7 +11455,7 @@ class B61TriShapeData : public B61Ref
 class B61TriStripsData : public B61Ref
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }
@@ -11880,7 +11880,7 @@ class B61Loaded : public FnvB60280Ref
         if (InterlockedDecrement(&m_ref) == 0)
             delete this;
     }
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }
@@ -11912,7 +11912,7 @@ class B61Entry : public B61Ref
     unsigned char m_ucKind;
     unsigned char m_ucPending;
     unsigned short m_usGroup;
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return Object_DispatchCommandFour(uiSize);
     }

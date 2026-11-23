@@ -263,7 +263,7 @@ struct S_00836470
     ContNode m_kNode;
     void UpdateSoundItems(int);
 };
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 TESForm* __cdecl GetFormByID(unsigned int formID);
 struct FUN_0083d1e0
 {

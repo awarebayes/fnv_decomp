@@ -127,7 +127,7 @@ extern "C" D6A140MemoryRouter& __cdecl hkMemoryRouter_getInstance();
 class D6A140ReferencedObject
 {
   public:
-    static void* operator new(unsigned int nbytes)
+    static void* operator new(size_t nbytes)
     {
         D6A140ReferencedObject* b =
             static_cast<D6A140ReferencedObject*>(hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(nbytes));

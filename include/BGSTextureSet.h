@@ -30,7 +30,7 @@ public:
     void SetHasSpecular(bool hasSpecular);
     BSShaderTextureSet* BuildShaderTextureSet();
 
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     static BGSTextureSet* GetEmptyTextureSet();
     static void CreateNullTextureSet();
     static BGSTextureSet* s_pNullTextureSet;

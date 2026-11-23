@@ -117,7 +117,7 @@ class NiShaderConstantMap
             m_kConstantName = other.m_kConstantName;
             return *this;
         }
-        static void* operator new[](unsigned int size) throw()
+        static void* operator new[](size_t size) throw()
         {
             return g_memoryManager.Allocate(size);
         }

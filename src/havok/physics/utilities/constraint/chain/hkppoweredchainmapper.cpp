@@ -84,7 +84,7 @@ void hkpPoweredChainMapper::CollectSlotValues(int range, int slot, hkArray<int>&
 struct FnPlacement
 {
 };
-inline void* operator new(unsigned int, FnPlacement* p)
+inline void* operator new(size_t, FnPlacement* p)
 {
     return p;
 }

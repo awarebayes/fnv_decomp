@@ -544,7 +544,7 @@ struct NodeHead
 struct LinkedNode : NodeHead, LinkBase
 {
     LinkedNode(int a, unsigned int b);
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void*);
     RefList refs;
 };
@@ -1231,7 +1231,7 @@ struct EventWater
     void* reference;
 };
 extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct WaterManager
 {
     int unk00;

@@ -34,7 +34,7 @@ class ImageSpaceTexture
     ~ImageSpaceTexture();                                  // 0x00ba3a00
 
     // heap objects go through the game's MemoryManager (MemoryManager::Allocate 0x00aa13e0, inlined at /O2)
-    static void* operator new(unsigned int size) { return g_memoryManager.Allocate(size); }
+    static void* operator new(size_t size) { return g_memoryManager.Allocate(size); }
     static void operator delete(void* pointer) { g_memoryManager.Deallocate(pointer); }
 
     BSRenderedTexture* GetRenderedTexture() const;         // 0x00ba3770

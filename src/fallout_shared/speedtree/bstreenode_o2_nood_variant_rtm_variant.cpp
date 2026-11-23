@@ -588,7 +588,7 @@ struct FUN_00d22dc0
     int unk84;
     int unk88;
     int unk8c;
-    static void* operator new(unsigned int n);
+    static void* operator new(size_t n);
     static void operator delete(void*);
 };
 struct Obj
@@ -658,7 +658,7 @@ extern unsigned int DAT_0126fd98;
 extern float DAT_010c72bc;
 extern float DAT_01267e30[];
 Holder* __cdecl hkMemoryRouter_getInstance();
-void* FUN_00d22dc0::operator new(unsigned int n)
+void* FUN_00d22dc0::operator new(size_t n)
 {
     Holder* h = hkMemoryRouter_getInstance();
     Alloc* allocator = h->unk10;

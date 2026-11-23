@@ -465,7 +465,7 @@ __forceinline float& hkVector4::operator()(int a)
 class Sdedf10_Aabb
 {
   public:
-    __forceinline static void* __cdecl operator new(unsigned int, Sdedf10_PlacementArg* p) throw()
+    __forceinline static void* __cdecl operator new(size_t, Sdedf10_PlacementArg* p) throw()
     {
         return p;
     }

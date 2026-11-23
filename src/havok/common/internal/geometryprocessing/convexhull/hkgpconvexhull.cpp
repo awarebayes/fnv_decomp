@@ -2567,7 +2567,7 @@ struct S00d7d1c0_Base {
     virtual void v2(void* p, int size);
     unsigned short m04;
 };
-inline void* operator new(unsigned int, void* p) { return p; }
+inline void* operator new(size_t, void* p) { return p; }
 struct S00d7d1c0_Derived : S00d7d1c0_Base {
     S00d7d1c0_M08 m08;
     QueuedElements_hkgpconvexhull m20;

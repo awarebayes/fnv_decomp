@@ -104,7 +104,7 @@ NiShaderConstantMap::ShaderConstantMapEntry::operator=(const ShaderConstantMapEn
     return *this;
 }
 
-inline void* NiShaderConstantMap::ShaderConstantMapEntry::operator new[](unsigned int size) throw()
+inline void* NiShaderConstantMap::ShaderConstantMapEntry::operator new[](size_t size) throw()
 {
     return g_memoryManager.Allocate(size);
 }

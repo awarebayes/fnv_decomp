@@ -34,7 +34,7 @@ public:
     unsigned int ItemsInList();
     // Per-unit allocation hooks: menu/filefinder inline these calls in the exe. No data layout change.
 #ifdef FNV64_BSSIMPLELIST_CUSTOM_NEW
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 #endif
 #ifdef FNV64_BSSIMPLELIST_CUSTOM_DELETE
     static void operator delete(void* pointer);

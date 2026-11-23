@@ -22,7 +22,7 @@ class BSDecalPlacementVectorExtraData : public NiIntegerExtraData
     void LinkToObject(void* apObject);
     // NiMemObject's operator new (0x00aa13e0), redeclared: blk_00c60000_od_ob1_variant's 0x00c63c30 inlines its body
     // for this class only, so that unit defines it inline here.
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
 
     unsigned short usGroupCount; // src: XBOX_RETAIL_PDB +0x10 (old: count)
     unsigned short unk12;

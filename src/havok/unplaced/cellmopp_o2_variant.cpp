@@ -1081,7 +1081,7 @@ struct SpawnedObject
         m_vtbl = (void*)"@$b";
         DAT_0126834c++;
     }
-    void* operator new(unsigned int size) throw()
+    void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -1239,13 +1239,13 @@ struct S00cb0820_Ref
     void* m_vtbl;
     unsigned short m_usAllocationSize;
     short m_iObjectReferenceCount;
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         S00cb0820_Ref* b = (S00cb0820_Ref*)((S00cb0820_Mem*)hkMemoryRouter_getInstance())->heap().Alloc(size);
         b->m_usAllocationSize = (unsigned short)size;
         return b;
     }
-    void operator delete(void* p, unsigned int size);
+    void operator delete(void* p, size_t size);
     void FUN_00c905b0();
 };
 

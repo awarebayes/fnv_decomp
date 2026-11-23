@@ -581,7 +581,7 @@ struct SpawnedMgr
 struct SpawnedObject
 {
     SpawnedObject();
-    void* operator new(unsigned int sz)
+    void* operator new(size_t sz)
     {
         return Object_DispatchCommandFour(sz);
     }
@@ -1585,7 +1585,7 @@ struct Pool_b899a0
     void __thiscall FUN_00aa3e90(void* p);
 };
 extern Pool_b899a0 DAT_011f6238;
-inline void* operator new[](unsigned int size, Pool_b899a0& pool)
+inline void* operator new[](size_t size, Pool_b899a0& pool)
 {
     return pool.Game_DoHeapAlloc(size);
 }
@@ -1626,7 +1626,7 @@ struct Shape_b899a0 : NiRefObject
 {
     Shape_b899a0(unsigned short usVertices, Pt3_b899a0* pkVertex, void* pkNormal, Col_b899a0* pkColor, void* pkTexture, unsigned short usNumTextureSets,
                  unsigned int eNBTMethod, unsigned short usTriangles, unsigned short* pusTriList);
-    void* operator new(unsigned int size)
+    void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

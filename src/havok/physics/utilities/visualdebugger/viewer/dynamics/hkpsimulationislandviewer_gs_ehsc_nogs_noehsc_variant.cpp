@@ -54,7 +54,7 @@ struct S_00d65180_RefObj
     short m_sReferenceCount;
     virtual ~S_00d65180_RefObj() throw()
     {}
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         S_00d65180_RefObj* b = static_cast<S_00d65180_RefObj*>(hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -371,7 +371,7 @@ Own_00d65210* make_00d65210()
 
 #include <xmmintrin.h>
 #include <windows.h>
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

@@ -24,7 +24,7 @@ typedef union __declspec(intrin_type) __declspec(align(16)) {
 extern "C" LocalM128 _mm_setzero_ps();
 extern "C" LocalM128 _mm_load_ps(const float*);
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

@@ -633,7 +633,7 @@ struct Property
     unsigned short size, unk12;
     int unk14, unk18, unk1c;
     LocalM128 vector;
-    static void* operator new(unsigned int bytes)
+    static void* operator new(size_t bytes)
     {
         AllocationService* service = reinterpret_cast<AllocationService*>(hkMemoryRouter_getInstance());
         return service->allocator->Allocate(bytes);

@@ -170,7 +170,7 @@ struct FUN_00d76f90_cls
     Inner* m_08;
     void ForwardCall_00d76f90();
 };
-inline void* operator new(unsigned int, void* pvMem)
+inline void* operator new(size_t, void* pvMem)
 {
     return pvMem;
 }

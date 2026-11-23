@@ -681,7 +681,7 @@ struct BoltProperty
 {
     int unk00, unk04, unk08, unk0c;
     BoltProperty();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void BSXFlags_SetFlags(bool, bool);
 };
@@ -731,7 +731,7 @@ struct BoltNode
     int unka4;
     int unka8;
     BoltNode(int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
     void NiAVObject_SetWorldTranslate(const BoltPoint&);
     void NiAVObject_SetTranslate(const BoltPoint&);
@@ -739,7 +739,7 @@ struct BoltNode
     void NiObjectNET_AddExtraData(const char*, BoltProperty*);
     void SetRotate_0043fa80(const BoltMatrix&);
 };
-__forceinline void* BoltNode::operator new(unsigned int n)
+__forceinline void* BoltNode::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -747,7 +747,7 @@ __forceinline void BoltNode::operator delete(void* p)
 {
     FUN_00aa13f0(p);
 }
-__forceinline void* BoltProperty::operator new(unsigned int n)
+__forceinline void* BoltProperty::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }
@@ -1312,7 +1312,7 @@ bool AimProjectile::UpdateProjectileAimNode()
     return true;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 struct Helper009f8770
 {
     void TESForm_LoadGameDataOLD(void*, int);
@@ -2932,10 +2932,10 @@ struct F139NewNode : F139Node
 {
     char data[0xa8];
     F139NewNode(int);
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 };
-__forceinline void* F139NewNode::operator new(unsigned int n)
+__forceinline void* F139NewNode::operator new(size_t n)
 {
     return Object_DispatchCommandFour(n);
 }

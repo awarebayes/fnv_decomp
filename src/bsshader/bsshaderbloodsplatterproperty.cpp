@@ -229,7 +229,7 @@ void __thiscall Self::ForEachChild(Callback apCallback, int arg)
 
 struct Item
 {
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
     Item();
     int unk00;

@@ -285,7 +285,7 @@ struct Skeleton : SkeletonHeader
     ArrayLocalForm<int> localFrames;
     __forceinline Skeleton() throw()
     {}
-    __forceinline void* operator new(unsigned int bytes)
+    __forceinline void* operator new(size_t bytes)
     {
         SpawnedGlobal* holder = hkMemoryRouter_getInstance();
         SpawnedAllocator* allocator = holder->m_pAllocator;

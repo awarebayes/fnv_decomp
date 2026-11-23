@@ -985,7 +985,7 @@ struct StripCloneC263 : S_00c26000_Strip
         unk7c = 0;
     }
 
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

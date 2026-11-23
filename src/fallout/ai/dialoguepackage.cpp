@@ -1541,7 +1541,7 @@ struct DialogueItemSelection : DialogueItem
 
 namespace fnv_009eff60 {
 TESForm* TESForm_GetFormByNumericID(unsigned int formID);
-void* __cdecl operator new(unsigned int size);
+void* __cdecl operator new(size_t size);
 void __cdecl operator delete(void* object);
 
 extern TESSaveLoadGame* g_TESSaveLoadGame;
@@ -1733,7 +1733,7 @@ struct List0083b830SV
 {
     int a, b, c;
     List0083b830SV();
-    void* operator new(unsigned);
+    void* operator new(size_t);
     void* GetDialogueItemByIndex(unsigned short i);
     void LoadGameBGS_0083c330(BGSLoadFormBuffer* buf);
 };

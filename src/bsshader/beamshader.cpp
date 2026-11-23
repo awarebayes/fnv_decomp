@@ -38,7 +38,7 @@ extern "C" const char DAT_010af454[];
 class BloodSplatterBeamShader : public BeamShader
 {
   public:
-    static void* operator new(unsigned int) throw();
+    static void* operator new(size_t) throw();
     BloodSplatterBeamShader(NiD3DVertexDeclaration*);
     static BSShader* BeamShader_CreateShader();
 };

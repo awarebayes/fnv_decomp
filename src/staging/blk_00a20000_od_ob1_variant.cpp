@@ -6031,7 +6031,7 @@ inline bool SettingIs(const unsigned char* apSetting, bool abValue)
     return apSetting ? apSetting[4] == abValue : false;
 }
 
-inline void* operator new(unsigned int size)
+inline void* operator new(size_t size)
 {
     return DAT_011f6238.Allocate(size);
 }
@@ -6261,7 +6261,7 @@ Mgr* Mgr::Controls_Controls(int arg)
 struct S_00a25920_Obj
 {
     int unk00;
-    static __forceinline void* operator new(unsigned int)
+    static __forceinline void* operator new(size_t)
     {
         return DAT_011f6238.Allocate(0x14280);
     }

@@ -100,7 +100,7 @@ inline NiPoint3 operator*(float scalar, const NiPoint3& point)
 
 class BSShaderPPLightingProperty;
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 
 class BipedNodeNames
@@ -3274,7 +3274,7 @@ class FUN_00b668b0 : public NiMemObject
   public:
     FUN_00b668b0();
     // This unit uses the sized allocation cleanup entry.
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
     unsigned int vtable;
     unsigned int referenceCount;
     unsigned int flags;

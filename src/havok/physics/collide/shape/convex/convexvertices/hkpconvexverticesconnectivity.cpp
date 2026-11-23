@@ -14,7 +14,7 @@ void __fastcall ResetConnectivity(hkpConvexVerticesConnectivity* connectivity, v
     connectivity->m_numVerticesPerFace.m_iElementCount = 0;
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

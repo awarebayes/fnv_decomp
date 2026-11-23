@@ -32,7 +32,7 @@ GlobalObjectO2_00a7b610* __cdecl NiPSysGrowFadeModifier_GetRTTI()
 }
 
 void __cdecl FUN_00c31750();
-void __cdecl operator delete(void*, unsigned int);
+void __cdecl operator delete(void*, size_t);
 struct FUN_00c2a370_shell : NiPSysGrowFadeModifier
 {
     FUN_00c2a370_shell* FUN_00c2a370(unsigned int flags);
@@ -198,7 +198,7 @@ void FUN_00c2a6e0_shell::AppendGrowFadeModifierStrings(StrArr* pkStrings)
     pkStrings->AppendReference(pcString);
 }
 
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

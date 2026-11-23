@@ -22,7 +22,7 @@ struct FUN_00b42980
     int b;
     FUN_00b42980& Set(unsigned int v, FUN_00b42980 const& src);
 };
-void* operator new(unsigned int);
+void* operator new(size_t);
 void FUN_00ec7c56();
 struct FUN_00b40800_t
 {
@@ -218,7 +218,7 @@ class FUN_00b420a0_cls
     FUN_00b42980 m_obj;
     int CompareAndGetDelta(FUN_00b42980 const& arg);
 };
-void* operator new(unsigned int);
+void* operator new(size_t);
 extern char DAT_010176f8[];
 extern char DAT_01140ef8[];
 struct FnvThrowObj
@@ -424,7 +424,7 @@ void FUN_00b40000_class::SIdvBranchInfo_SetAngleProfile(Sub_b40000* pSpline)
 // VC9 (Dinkumware, _SECURE_SCL=1) vector / vector<bool> subset, transcribed
 // into namespace stl so the checker can compile it without <vector>.
 extern "C" void __cdecl _invalid_parameter_noinfo(void);
-inline void* operator new(unsigned int, void* _Where) throw()
+inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;
 }
@@ -2417,7 +2417,7 @@ BoolIteratorB42& BoolIteratorB42::ProcessAndReturnValue_00b42a60(int _Off)
 }
 
 void operator delete(void*) throw();
-void* operator new(unsigned int);
+void* operator new(size_t);
 inline void operator delete(void*, void*) throw()
 {}
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, void* hint);
@@ -3044,8 +3044,8 @@ namespace fnv_00b40b30 {
 #include <string.h>
 
 void operator delete(void*) throw();
-void* operator new(unsigned int);
-inline void* operator new(unsigned int, void* _Where) throw()
+void* operator new(size_t);
+inline void* operator new(size_t, void* _Where) throw()
 {
     return _Where;
 }

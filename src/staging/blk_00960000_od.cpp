@@ -7561,7 +7561,7 @@ struct MoveBoolSetting
 };
 extern MoveBoolSetting g_011f1840;
 extern float DAT_011a56b4, DAT_011a5654;
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 struct IdleAction
 {

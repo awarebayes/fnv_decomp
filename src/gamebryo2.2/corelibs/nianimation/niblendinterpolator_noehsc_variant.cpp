@@ -90,7 +90,7 @@ class FUN_00a370a0 : public NiBlendInterpolator__InterpArrayItem
 {
   public:
     __declspec(nothrow) FUN_00a370a0();
-    static void* operator new[](unsigned int uiSize)
+    static void* operator new[](size_t uiSize)
     {
         return _g_memoryManager.Allocate(uiSize);
     }
@@ -145,7 +145,7 @@ struct FUN_00a370a0
     __declspec(nothrow) FUN_00a370a0();
     ~FUN_00a370a0()
     {}
-    static void* operator new[](unsigned int n) throw()
+    static void* operator new[](size_t n) throw()
     {
         return DAT_011f6238.Game_DoHeapAlloc(n);
     }

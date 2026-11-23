@@ -928,7 +928,7 @@ struct FUN_007a6310_Elem8
     int b;
     FUN_007a6310_Elem8();
 };
-void* __cdecl operator new(unsigned int size, void* where);
+void* __cdecl operator new(size_t size, void* where);
 void __cdecl operator delete(void* p, void* where);
 struct FUN_007a6310_cls
 {
@@ -2013,7 +2013,7 @@ class AGListItem
     AGListItem* m_pNext;
     AGListItem() : m_iIndex(2000), m_pNext(0)
     {}
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return DAT_011f6238.Game_DoHeapAlloc(uiSize);
     }

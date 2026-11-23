@@ -709,7 +709,7 @@ struct Movie
 {
     int pBink, dxDevice, pTextureSet, iFrameCount, iNumFramesSkipped, fScale, fXCoordOffset, fYCoordOffset, ePlayingState, bLoading; // src: XBOX_RETAIL_PDB pBink +0x0 (old: unk00); dxDevice +0x4 (old: unk04); pTextureSet +0x8 (old: unk08); iFrameCount +0xc (old: unk0C); iNumFramesSkipped +0x10 (old: unk10); fScale +0x14 (old: unk14); fXCoordOffset +0x18 (old: unk18); fYCoordOffset +0x1c (old: unk1C); ePlayingState +0x20 (old: unk20); bLoading +0x24 (old: unk24)
     Movie();
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return g_memoryManager.Allocate(size);
     }
@@ -768,7 +768,7 @@ struct SpawnedObject
     int unk24;
 
     SpawnedObject();
-    static __forceinline void* operator new(unsigned int size) throw()
+    static __forceinline void* operator new(size_t size) throw()
     {
         return DAT_011f6238.Allocate(size);
     }
@@ -1224,7 +1224,7 @@ inline AutoMemContext::~AutoMemContext()
 class PlaybackFileEC2200
 {
   public:
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_kMemoryEC2200.Allocate(uiSize);
     }
@@ -1301,7 +1301,7 @@ class BSMovieJob
   public:
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24;
     BSMovieJob();
-    static void* operator new(unsigned int uiSize)
+    static void* operator new(size_t uiSize)
     {
         return g_memoryManager.Allocate(uiSize);
     }

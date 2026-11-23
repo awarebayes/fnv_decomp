@@ -1969,7 +1969,7 @@ template <class I, class O, class C> inline O copyLoop(I _First, I _Last, O _Des
 }
 }
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

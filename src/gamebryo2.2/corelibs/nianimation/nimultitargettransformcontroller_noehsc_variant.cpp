@@ -18,7 +18,7 @@ void* NiMalloc(unsigned int);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned int);
 
-inline void* operator new(unsigned int n)
+inline void* operator new(size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
@@ -31,7 +31,7 @@ class BlendInterp
   public:
     BlendInterp() throw();
     virtual ~BlendInterp();
-    static void* operator new[](unsigned int);
+    static void* operator new[](size_t);
     static void operator delete[](void*);
     unsigned int m_uiRefCount;
     int unk08;
@@ -76,7 +76,7 @@ inline void operator delete(void* p) throw()
 
 struct SNAEntry
 {
-    static void* operator new[](unsigned int size) throw();
+    static void* operator new[](size_t size) throw();
 };
 
 struct FUN_00a409b0_class : public SNAEntry

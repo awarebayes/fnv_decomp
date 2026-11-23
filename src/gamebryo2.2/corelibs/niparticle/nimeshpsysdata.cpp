@@ -161,7 +161,7 @@ void* __cdecl NiMeshPSysData_GetRTTI()
     return &g_012027c0;
 }
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 // Calls FUN_00c309d0, then deletes this with size 0x98 when bit 0 of flags is set, and returns this.
 // @fnv 0x00c30bd0

@@ -11,6 +11,6 @@ public:
     hkBool m_bLockTranslation;
 
     hkaBone();
-    static void* operator new(unsigned int, void* p);
+    static void* operator new(size_t, void* p);
     static void operator delete(void*, void*);
 };

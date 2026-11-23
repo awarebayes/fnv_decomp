@@ -424,7 +424,7 @@ extern "C" void* __cdecl Object_DispatchCommandFour(unsigned int size);
 class NiTransformInitA
 {
   public:
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }
@@ -434,7 +434,7 @@ class NiTransformInitA
 class NiTransformInitB
 {
   public:
-    static void* operator new(unsigned int size) throw()
+    static void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }

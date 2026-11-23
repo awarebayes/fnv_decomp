@@ -242,7 +242,7 @@ struct NiMemorySystem
 };
 extern NiMemorySystem g_011f6238;
 
-inline void* __cdecl operator new[](unsigned int n)
+inline void* __cdecl operator new[](size_t n)
 {
     return g_011f6238.Game_DoHeapAlloc(n);
 }

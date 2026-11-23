@@ -656,20 +656,20 @@ float BSMIN(float a, float b);
 float BSMAX_00404010(float a, float b);
 void ImpactMixer_PlayWeaponBlock(int aUnused, TESObjectWEAP* a1, float x0, float y0, float z0, float x1, float y1, float z1);
 
-inline void* operator new(unsigned int, void* location)
+inline void* operator new(size_t, void* location)
 {
     return location;
 }
 inline void operator delete(void*, void*)
 {}
-inline void* operator new[](unsigned int, void* location)
+inline void* operator new[](size_t, void* location)
 {
     return location;
 }
 inline void operator delete[](void*, void*)
 {}
 extern MemoryManager DAT_011f6238;
-inline void* operator new[](unsigned int size)
+inline void* operator new[](size_t size)
 {
     return DAT_011f6238.Game_DoHeapAlloc(size);
 }
@@ -706,7 +706,7 @@ struct FilterData
     unsigned int flags;
     unsigned int subsystem;
 
-    static __forceinline void* operator new[](unsigned int size)
+    static __forceinline void* operator new[](size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }
@@ -721,7 +721,7 @@ extern void* __cdecl Object_DispatchCommandFour(unsigned int bytes);
 struct FilterArray
 {
     FilterData values[8];
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return DAT_011f6238.Game_DoHeapAlloc(size);
     }
@@ -843,7 +843,7 @@ struct CollisionGenerator : CollisionShape
     unsigned int unkb8;
     unsigned int unkbc;
     unsigned int unkc0;
-    static __forceinline void* operator new(unsigned int size)
+    static __forceinline void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }

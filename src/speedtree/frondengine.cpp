@@ -580,7 +580,7 @@ struct FUN_00ec78f1_t
     void* __thiscall FUN_00ec78f1(int* out);
 };
 void __stdcall FUN_00ec7894(FUN_00ec78f1_t* info, const char* fmt);
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 extern int DAT_010176f8;
 extern int DAT_01140ef8;
 
@@ -950,7 +950,7 @@ bool Pool_00b1f920::AllocateElementStorage_00b1f920(unsigned int aiNodeCount)
     return true;
 }
 
-void* __cdecl operator new(unsigned int);
+void* __cdecl operator new(size_t);
 void __cdecl operator delete(void*);
 __declspec(noreturn) void __cdecl __CxxThrowException(void* a, unsigned int b);
 struct FUN_0044d6c0_class

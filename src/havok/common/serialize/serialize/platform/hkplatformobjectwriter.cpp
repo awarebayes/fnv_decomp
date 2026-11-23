@@ -364,7 +364,7 @@ struct FUN_00e02e40
     FUN_00e02e40();
     virtual ~FUN_00e02e40();
 
-    static void operator delete(void* p, unsigned int nbytes)
+    static void operator delete(void* p, size_t nbytes)
     {
         FUN_00e02e40* b = static_cast<FUN_00e02e40*>(p);
         reinterpret_cast<E02E40Allocator*>((&hkMemoryRouter_getInstance().heap()))->ReleaseBlock(p, b->m_usMemSizeAndFlags);

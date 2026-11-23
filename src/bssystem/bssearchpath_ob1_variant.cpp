@@ -70,7 +70,7 @@ struct MemMgrSP
 };
 extern MemMgrSP g_memMgrSP;
 
-inline void* BSSearchPath::operator new(unsigned int uiSize)
+inline void* BSSearchPath::operator new(size_t uiSize)
 {
     return g_memMgrSP.Allocate(uiSize);
 }

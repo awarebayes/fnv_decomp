@@ -155,7 +155,7 @@ struct S_00ddfcd0_RefObj
     }
     virtual ~S_00ddfcd0_RefObj() throw()
     {}
-    void* operator new(unsigned int nbytes)
+    void* operator new(size_t nbytes)
     {
         S_00ddfcd0_RefObj* b = static_cast<S_00ddfcd0_RefObj*>(hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(nbytes));
         b->m_usMemSizeAndFlags = (unsigned short)nbytes;
@@ -438,7 +438,7 @@ template <class T> class ArrayBase
         capacity = 0x80000000;
     }
 };
-__forceinline void* operator new(unsigned int, void* p)
+__forceinline void* operator new(size_t, void* p)
 {
     return p;
 }
@@ -498,7 +498,7 @@ struct Mesh
     };
     Array<DisplayVectorCallLocal_00ddfd10> m_kVertices;
     Array<Triangle> m_uiTriangleCount;
-    __forceinline void* operator new(unsigned int n)
+    __forceinline void* operator new(size_t n)
     {
         return hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(n);
     }
@@ -529,7 +529,7 @@ struct RefObject
     virtual ~RefObject()
     {}
     unsigned short GetAllocationSize, refs;
-    __forceinline void* operator new(unsigned int n)
+    __forceinline void* operator new(size_t n)
     {
         RefObject* p = (RefObject*)hkMemoryRouter_getInstance()->heap().AllocateMemoryBlock(n);
         p->GetAllocationSize = (unsigned short)n;

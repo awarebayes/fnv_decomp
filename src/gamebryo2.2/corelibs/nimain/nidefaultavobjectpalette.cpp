@@ -261,7 +261,7 @@ extern "C" unsigned char DAT_0109618c;
 // The shared class has no initializing constructor declaration; this adapter adds initialization only.
 struct PaletteObject : NiDefaultAVObjectPalette
 {
-    static __forceinline void* operator new(unsigned int size) throw()
+    static __forceinline void* operator new(size_t size) throw()
     {
         return Object_DispatchCommandFour(size);
     }

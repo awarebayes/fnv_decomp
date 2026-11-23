@@ -12,7 +12,7 @@ class WaterAccumulatorAllocation : public BSShaderAccumulator
 {
 public:
     WaterAccumulatorAllocation(int mode, unsigned int first, unsigned int last); // exe 0x00b660d0
-    static void operator delete(void* memory, unsigned int bytes); // exe 0x00aa1460
+    static void operator delete(void* memory, size_t bytes); // exe 0x00aa1460
 };
 
 #include "../../include/BGSPlaceableWater.h"
@@ -2016,8 +2016,8 @@ void FUN_004e5640_shell::TESWaterSystem_ResetStencilBitRefs()
 namespace fnv_004e7680 {
 struct A51BF0Base
 {
-    static void* operator new(unsigned int size);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t size);
+    static void operator delete(void*, size_t);
 };
 
 struct FUN_00a74480 : A51BF0Base
@@ -5171,7 +5171,7 @@ struct Record
     int unka8;
     int unkac;
     Record();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 struct List
 {
@@ -5342,8 +5342,8 @@ struct Update61
 };
 struct Shader61
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Shader61();
     int unk000;
     int unk004;
@@ -5432,8 +5432,8 @@ struct Shader61
 };
 struct Material61
 {
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Material61();
     void NiStencilProperty_SetDrawMode(int);
     int unk00;
@@ -5560,8 +5560,8 @@ struct Node61
     int unk0d8;
     int unk0dc;
     int unk0e0;
-    static void* operator new(unsigned int);
-    static void operator delete(void*, unsigned int);
+    static void* operator new(size_t);
+    static void operator delete(void*, size_t);
     Node61();
     void NiAVObject_RemoveProperty(void*);
     void NiAVObject_AttachProperty(void*);
@@ -7029,7 +7029,7 @@ class FUN_00b6abb0 : public NiMemObject
 
     FUN_00b6abb0();
     // NiMemObject's operator delete (0x00aa1460) takes the size; the shared header also declares a one-argument form.
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 struct Prop4e8

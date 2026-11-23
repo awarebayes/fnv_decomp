@@ -293,7 +293,7 @@ bool __stdcall NiCollisionData_RegisterStreamables(void* kStream)
 extern unsigned char DAT_010f18bc;
 extern unsigned int DAT_011f426c;
 
-inline void* __cdecl operator new(unsigned int, void* memory) { return memory; }
+inline void* __cdecl operator new(size_t, void* memory) { return memory; }
 
 // Initialize the base, zero collision buffers and copy the default velocities.
 // @fnv 0x00eacd60
@@ -713,7 +713,7 @@ struct GeomObj : NiObject
 struct TriData
 {
     TriData(unsigned short usTriangles, unsigned short* pusTriList, void* pkVertex, void* pkWorldVertex, int iParam);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return _g_memoryManager.Allocate(size);
     }
@@ -1163,7 +1163,7 @@ struct Allocator
 {
     void* __thiscall Game_DoHeapAlloc(unsigned int bytes);
 };
-void* __cdecl operator new[](unsigned int n)
+void* __cdecl operator new[](size_t n)
 {
     return reinterpret_cast<Allocator&>(DAT_011f6238).Game_DoHeapAlloc(n);
 }

@@ -50,7 +50,7 @@ void __stdcall NiPSysFieldMaxDistanceCtlr_GetViewerStrings(StrArr* pkStrings)
 extern "C" void* __cdecl Object_DispatchCommandFour(unsigned int);
 extern char DAT_010bf354[];
 
-inline void* operator new(unsigned int, void* location)
+inline void* operator new(size_t, void* location)
 {
     return location;
 }

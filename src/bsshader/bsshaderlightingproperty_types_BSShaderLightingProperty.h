@@ -8,9 +8,9 @@
 class NiMemObjectAllocation_bsshaderlightingproperty_types_BSShaderLightingProperty
 {
 public:
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* pointer);
-    static void operator delete(void* pointer, unsigned int size);
+    static void operator delete(void* pointer, size_t size);
 };
 class ShadowSceneLight;
 class CloningProcess;

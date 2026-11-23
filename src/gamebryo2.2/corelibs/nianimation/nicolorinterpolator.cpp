@@ -409,7 +409,7 @@ void NiColorInterpolator::GetViewerStrings(NiViewerStringsArray* pkStrings)
 }
 
 extern "C" void* __cdecl Object_DispatchCommandFour(unsigned int);
-inline void* __cdecl operator new(unsigned int, void* p) throw()
+inline void* __cdecl operator new(size_t, void* p) throw()
 {
     return p;
 }

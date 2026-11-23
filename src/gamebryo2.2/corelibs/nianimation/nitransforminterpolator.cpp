@@ -437,7 +437,7 @@ struct CloningProcess
     char _pad_d[3];
 };
 typedef char _sizecheck_NiCloningProcess[1];
-inline void* operator new(unsigned int, void* pkMem)
+inline void* operator new(size_t, void* pkMem)
 {
     return pkMem;
 }
@@ -871,7 +871,7 @@ void NiTransformInterpolator::CopyMembers(NiTransformInterpolator* pkDest, Cloni
 
 namespace fnv_00a403f0 {
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
-inline void* __cdecl operator new(unsigned int, void* address)
+inline void* __cdecl operator new(size_t, void* address)
 {
     return address;
 }

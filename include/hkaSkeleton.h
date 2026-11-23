@@ -31,7 +31,7 @@ public:
     hkaSkeleton();
     virtual ~hkaSkeleton() throw();
 
-    static void* __cdecl operator new(unsigned int n);
+    static void* __cdecl operator new(size_t n);
     static void __cdecl operator delete(void* p);
 
     HavokArray<short>& getParents();

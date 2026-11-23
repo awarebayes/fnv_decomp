@@ -7,7 +7,7 @@
 #include "../../../../../include/hkArray.h"
 #include "../../../../../include/hkxAttribute.h"
 
-__forceinline void* __cdecl operator new(unsigned int, void* pvWhere) throw()
+__forceinline void* __cdecl operator new(size_t, void* pvWhere) throw()
 {
     return pvWhere;
 }

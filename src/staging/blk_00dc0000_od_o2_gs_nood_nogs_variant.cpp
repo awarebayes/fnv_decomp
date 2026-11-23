@@ -16,7 +16,7 @@
 #include <xmmintrin.h>
 #include <math.h>
 #include <string.h>
-inline void* __cdecl operator new(unsigned int, void* location) throw()
+inline void* __cdecl operator new(size_t, void* location) throw()
 {
     return location;
 }

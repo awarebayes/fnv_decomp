@@ -1217,7 +1217,7 @@ void __cdecl SetVtableAndProcessState_00c43070(void*);
 struct FUN_00c43620_Class {
     void __thiscall SetVtableAndProcessState_00c43070();
     void* __thiscall FUN_00c43620(unsigned int flags);
-    static void __cdecl operator delete(void* p, unsigned int size);
+    static void __cdecl operator delete(void* p, size_t size);
 };
 // @fnv 0x00c43620
 // pdb: NiIntegerExtraData::`scalar deleting destructor' | BSXFlags.obj | retail, object-file run extension, low
@@ -1563,7 +1563,7 @@ void* __thiscall FUN_00c51640_Class::UpdateMasterPsysTaskletData_UpdateMasterPsy
 struct FUN_00878690_shell {
     void __thiscall FUN_00c51df0();
 };
-void __cdecl operator delete(void* ptr, unsigned int size);
+void __cdecl operator delete(void* ptr, size_t size);
 struct FUN_00c52830_class {
     void* __thiscall FUN_00c52830(unsigned int flags);
 };
@@ -1619,7 +1619,7 @@ void __thiscall FUN_00c54ec0_class::BSBound_SaveBinary(NiStream& arStream)
 
 struct FUN_00c55330_class {
     void* __thiscall FUN_00c55330(unsigned int flags);
-    void operator delete(void* p, unsigned int size);
+    void operator delete(void* p, size_t size);
 };
 // @fnv 0x00c55330
 // pdb: BSBound::`scalar deleting destructor' | BSBound.obj | retail, vtable slot, high
@@ -1632,7 +1632,7 @@ void* __thiscall FUN_00c55330_class::FUN_00c55330(unsigned int flags)
 }
 
 namespace fnv_00c5bae0 {
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 
 struct FUN_00c5ac00_class {
     void __thiscall FUN_00c5ac00();
@@ -1733,7 +1733,7 @@ char FUN_00c1be60_StandIn::BSPSysMultiTargetEmitterCtlr_IsEqual(void* pkObject)
 }
 
 namespace fnv_00c5ce10 {
-extern "C" void __cdecl operator delete(void*, unsigned int);
+extern "C" void __cdecl operator delete(void*, size_t);
 struct FUN_00c5ce10_Class {
     void __thiscall Constructor();
     void* __thiscall FUN_00c5ce10(unsigned int a);
@@ -1873,7 +1873,7 @@ void __thiscall FUN_00c5e560_class::NiNode_CopyMembers(NiNode* pkDest, void* kCl
 struct FUN_00c5db90_Class {
     void __thiscall FUN_00c5db90();
 };
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 struct FUN_00c5eb20_Class {
     void* __thiscall FUN_00c5eb20(unsigned int flags);
 };
@@ -1910,7 +1910,7 @@ int* __thiscall FUN_00c5eca0_Class::FUN_00c5eca0(int aiFlags)
 }
 }  // namespace fnv_00c5eca0
 
-void __cdecl operator delete(void* p, unsigned int size);
+void __cdecl operator delete(void* p, size_t size);
 
 struct FUN_00c5ed60_Class {
     void __thiscall FUN_00c5ed60();
@@ -1955,7 +1955,7 @@ void __thiscall FUN_00c5f500_class::BSSimpleArray_NiAVObject_1024_CopyTo_1024(FU
 
 struct FUN_00c5fc20_class {
     void* __thiscall FUN_00c5fc20(unsigned int flags);
-    void __cdecl operator delete(void* p, unsigned int size);
+    void __cdecl operator delete(void* p, size_t size);
     void __thiscall FUN_00c5faa0();
 };
 // Calls FUN_00c5faa0, then frees this with operator delete when flags has bit 0 set, and returns this.
@@ -2263,7 +2263,7 @@ FUN_00c450d0::FUN_00c450d0()
 }
 
 struct FUN_00c465a0_class {
-    void* operator new(unsigned int);
+    void* operator new(size_t);
     FUN_00c465a0_class();
     char pad[0x1c];
 };
@@ -2293,7 +2293,7 @@ struct FUN_00c465a0 {
     int f;
     FUN_00c465a0();
     ~FUN_00c465a0();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
 };
 // Allocates and constructs a new FUN_00c465a0 object, returning its pointer.
 // @fnv 0x00c46740
@@ -2760,7 +2760,7 @@ void* FUN_00c46930_class::FUN_00c46930(unsigned int flags)
 struct A51BF0Base {
     char pad[0xb4];
 
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     A51BF0Base();
 
     void __thiscall BSMultiBoundNode_CopyMembers(A51BF0Base* copy, int arCloneData);
@@ -3067,7 +3067,7 @@ void NiTArray<unsigned int, NiTMallocInterface<unsigned int> >::SetSize(unsigned
 
 namespace fnv_00c4e160 {
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00a74480 : A51BF0Base {
@@ -3113,7 +3113,7 @@ void __thiscall FUN_00c4f270_Class::BSCullingProcess_PushCullMode(int aeType)
 
 namespace fnv_00c513f0 {
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct FUN_00c5da70 : public A51BF0Base {
@@ -3209,7 +3209,7 @@ FUN_00c5da70* __cdecl CreateAndInitObject(int a)
 
 namespace fnv_00c514c0 {
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 int _data_011c16bc;
@@ -3273,7 +3273,7 @@ int FUN_00c5ce40_Class::PopFrontNode()
 
 struct FUN_00c5d260_view {
     void __thiscall Destruct();
-    static void __cdecl operator delete(void* p, unsigned int sz);
+    static void __cdecl operator delete(void* p, size_t sz);
 };
 struct FUN_00c5d260 : FUN_00c5d260_view {
     void* __thiscall FUN_00c5d260_method(unsigned int flags);
@@ -3312,7 +3312,7 @@ float BSNoise1D_lerp(float afFactor, float afStart, float afEnd)
 
 namespace fnv_00c5e4d0 {
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct FUN_00c5da70 : public A51BF0Base {
@@ -3343,7 +3343,7 @@ FUN_00c5da70* __thiscall FUN_00c5e4d0_class::CreateNode(void* kCloning)
 
 namespace fnv_00c5e5a0 {
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int);
+    static void* __cdecl operator new(size_t);
 };
 
 struct FUN_00c5da70_Class : public A51BF0Base {
@@ -3422,7 +3422,7 @@ int FUN_00c5ede0_Class::GetEntryAt(int aiIndex)
 
 namespace fnv_00c5ee00 {
 struct A51BF0Base {
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 struct FUN_00c5ecf0 : A51BF0Base {
@@ -3614,7 +3614,7 @@ struct SpawnedObject_b9874 {
     char m00[0x10];
     SpawnedObject_b9874();
     void Init(int* arg);
-    static void* operator new(unsigned int size) { return Object_DispatchCommandFour(size); }
+    static void* operator new(size_t size) { return Object_DispatchCommandFour(size); }
 };
 
 // @fnv 0x00c43190
@@ -3629,7 +3629,7 @@ SpawnedObject_b9874* BSXFlags_CreateObject() {
 
 struct S_00c437c0_Obj {
     int unk00, unk04, unk08, unk0c, unk10, unk14, unk18, unk1c, unk20, unk24, unk28, unk2c, unk30, unk34, unk38, unk3c, unk40, unk44, unk48, unk4c, unk50, unk54, unk58, unk5c, unk60, unk64, unk68, unk6c, unk70, unk74, unk78, unk7c, unk80, unk84, unk88, unk8c, unk90, unk94, unk98, unk9c, unka0, unka4, unka8, unkac, unkb0, unkb4;
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     S_00c437c0_Obj();
 };
 struct S_00c437c0 : FUN_00c43850_Class {
@@ -3649,7 +3649,7 @@ S_00c437c0_Obj* S_00c437c0::CreateObject(unsigned int arCloneData)
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
 
 struct SpawnedObject_b9504 : FUN_00c43660 {
-    static void* operator new(unsigned int size) throw() { return Object_DispatchCommandFour(size); }
+    static void* operator new(size_t size) throw() { return Object_DispatchCommandFour(size); }
 };
 
 // Allocates and returns a new SpawnedObject_b9504 instance via its class-specific operator new.
@@ -4484,7 +4484,7 @@ struct NewObject_b9649 {
     unsigned int unkAC;
     unsigned int unkB0;
     NewObject_b9649();
-    static void* operator new(unsigned int size) { return Object_DispatchCommandFour(size); }
+    static void* operator new(size_t size) { return Object_DispatchCommandFour(size); }
 };
 
 // Allocates and constructs a NewObject_b9649 via its operator new and returns the pointer.
@@ -6994,7 +6994,7 @@ struct FUN_00c5c400 {
     unsigned int unk58;
     unsigned int m_0x5c;
     unsigned int m_0x60;
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
     FUN_00c5c400();
 };
 // The factory at 0x00c5ca90 constructs a 0x64-byte multi-target controller, including its +0x60 count.
@@ -7050,7 +7050,7 @@ void FUN_00c5cb50_cls::BSPSysMultiTargetEmitterCtlr_ProcessClone(int kCloning)
 
 class BC5CBB0Object {
 public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 };
 
@@ -7151,7 +7151,7 @@ struct EmitterObjectStub {
     int unkcc;
     int unkd0;
     EmitterObjectStub();
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 };
 
@@ -8413,7 +8413,7 @@ class BC45120CloningProcess;
 
 class BC45120Object {
 public:
-    static void* operator new(unsigned int uiSize);
+    static void* operator new(size_t uiSize);
     static void operator delete(void* pvMem);
 
     BC45120Object();
@@ -9257,7 +9257,7 @@ struct C45440_Obj : FUN_00c450d0 {
     int uA4;
     int uA8;
     int uAC;
-    static void* __cdecl operator new(unsigned int size);
+    static void* __cdecl operator new(size_t size);
 };
 
 // Allocates and returns a new C45440_Obj instance via its operator new.

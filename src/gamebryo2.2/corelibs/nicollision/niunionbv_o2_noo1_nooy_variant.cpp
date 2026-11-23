@@ -93,7 +93,7 @@ unsigned int A64330Obj::NiTArray_void_cdecl_NiStream_NiObject_NiTMallocInterface
     return uiSize;
 }
 
-inline void* operator new(unsigned int, void* p) throw()
+inline void* operator new(size_t, void* p) throw()
 {
     return p;
 }

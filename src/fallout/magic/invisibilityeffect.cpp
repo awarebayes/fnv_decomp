@@ -14,7 +14,7 @@ class __declspec(novtable) InvisibilityEffect;
 
 extern int DAT_0107a21c;
 void* __cdecl FormHeap_Allocate(unsigned int uiSize);
-inline void* InvisibilityEffect::operator new(unsigned int uiSize)
+inline void* InvisibilityEffect::operator new(size_t uiSize)
 {
     return FormHeap_Allocate(uiSize);
 }
@@ -236,7 +236,7 @@ struct MVActiveEffect
     int unk034;
     int unk038;
 
-    static void* __cdecl operator new(unsigned int auiSize);
+    static void* __cdecl operator new(size_t auiSize);
     MVActiveEffect(Actor* apTarget, int aiValue);
 };
 

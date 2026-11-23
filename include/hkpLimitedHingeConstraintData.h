@@ -25,7 +25,7 @@ public:
     virtual void vf14(int a);
     virtual void* vf15(int arg);
 
-    static void* operator new(unsigned int size);
+    static void* operator new(size_t size);
     static void operator delete(void* p);
 
     char padC[0x4];

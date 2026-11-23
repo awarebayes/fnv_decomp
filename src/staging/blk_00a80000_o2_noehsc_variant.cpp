@@ -333,7 +333,7 @@ struct FUN_00a5a390_shell
     void DestroyFogProperty();
     FUN_00a5a390_shell* FUN_00a950f0(bool bDel);
 };
-void __cdecl operator delete(void* p, unsigned int);
+void __cdecl operator delete(void* p, size_t);
 void __cdecl NiShaderConstantMapEntry_InitializeAttribTable();
 void __cdecl NiShaderConstantMapEntry_SDMInit_NiShaderConstantMapEntry_InitializeObjectTable();
 void __cdecl NiShaderConstantMapEntry__SDMInit();
@@ -756,7 +756,7 @@ struct S_00a8f2c0_Obj
     int unk08;
     int unk0c;
     S_00a8f2c0_Sub sub;
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return BSFadeNode::operator new(n);
     }
@@ -999,7 +999,7 @@ struct WeightArray
         m_iElementCount++;
     }
 
-    static void* operator new[](unsigned int size)
+    static void* operator new[](size_t size)
     {
         return static_cast<MemMgr&>(g_memoryManager).Allocate(size);
     }
@@ -1437,7 +1437,7 @@ NiPixelData* BmpReader::AllocateStorage_00a8e810(BmpStream& stream, NiPixelData*
     return dest;
 }
 
-inline void* operator new[](unsigned int size, int) throw()
+inline void* operator new[](size_t size, int) throw()
 {
     return static_cast<MemMgr&>(g_memoryManager).Allocate(size);
 }

@@ -14,8 +14,8 @@
 #include "../../../include/NiTexture.h"
 #include "../../../include/Sky.h"
 
-void* __cdecl operator new(unsigned int);
-void* __cdecl operator new[](unsigned int);
+void* __cdecl operator new(size_t);
+void* __cdecl operator new[](size_t);
 void __cdecl operator delete(void*);
 void __cdecl operator delete[](void*);
 // Hide the inherited unsized delete to preserve this path's sized exception cleanup.
@@ -23,7 +23,7 @@ class MoonSceneNodeAllocation : public NiNode
 {
   public:
     MoonSceneNodeAllocation(unsigned short);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // This initialization path also uses sized cleanup when a shape constructor throws.
 class MoonSceneShapeAllocation : public NiTriShape
@@ -31,7 +31,7 @@ class MoonSceneShapeAllocation : public NiTriShape
   public:
     MoonSceneShapeAllocation(unsigned short, NiPoint3*, NiPoint3*, void*, NiPoint2*, unsigned short,
                              unsigned int, unsigned short, unsigned short*);
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Preserve the out-of-line UV constructors used by this initialization path.
 class MoonTextureCoordinate

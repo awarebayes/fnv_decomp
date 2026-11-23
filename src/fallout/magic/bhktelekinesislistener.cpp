@@ -248,7 +248,7 @@ struct FNV_807c50
 
     // The game's own heap helper; the class-scope allocation function is
     // what the original's "push 0x10 / call 0x807bf0" pair is.
-    static void* operator new(unsigned int n)
+    static void* operator new(size_t n)
     {
         return (void*)(long)GetTopicResult((int)n);
     }

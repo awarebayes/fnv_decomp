@@ -16,7 +16,7 @@ public:
     void Finish() override;
 
     MagicCaster* FUN_0045cd60();
-    static void* operator new(unsigned int);
+    static void* operator new(size_t);
     static void operator delete(void*);
 
     unsigned char bTurned; // src: XBOX_RETAIL_PDB +0x48 (old: m_bDemoralized)

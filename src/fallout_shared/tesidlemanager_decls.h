@@ -85,7 +85,7 @@ extern "C" const char fnv_idle_1hp_fast_left[];
 extern "C" const char fnv_idle_1hp_left[];
 template <class T> unsigned int BSStringLength(const T* string);
 
-void* operator new(unsigned int);
+void* operator new(size_t);
 // pdb: class ModelLoader, size 0x30 (here 0x1), 12 members
 class ModelLoader
 {

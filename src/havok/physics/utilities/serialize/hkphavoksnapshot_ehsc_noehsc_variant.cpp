@@ -49,7 +49,7 @@ public:
         m_pClassName = m_pReferencedResource.hkRefVariant_getClass() ? m_pReferencedResource.hkRefVariant_getClass()->getName() : 0;
     }
 };
-inline void* operator new(unsigned int, void* p)
+inline void* operator new(size_t, void* p)
 {
     return p;
 }

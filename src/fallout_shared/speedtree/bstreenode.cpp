@@ -796,11 +796,11 @@ struct FUN_00a5ecb0
     unsigned int unka4;
     unsigned int unka8;
     FUN_00a5ecb0(int initial);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 
 struct FUN_0051cf00
@@ -853,11 +853,11 @@ struct FUN_0051cf00
     FUN_0051cf00();
     void SetMode_0051d000(int enabled);
     void FUN_006404b0(float fAngle, float a, float b, float c);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 struct FUN_0066b640
 {
@@ -900,11 +900,11 @@ struct FUN_0066b640
     unsigned int unk04, unk08, unk0c, unk10;
     FUN_0066b640();
     void bhkNiCollisionObject_SetWorldObject(void* apWorldObject);
-    static void* operator new(unsigned int size)
+    static void* operator new(size_t size)
     {
         return Object_DispatchCommandFour(size);
     }
-    static void operator delete(void*, unsigned int);
+    static void operator delete(void*, size_t);
 };
 // Initializes the tree controller: sets up slots, allocates arrays from the tree list counts, creates controllers and attaches the chosen object.
 // @fnv 0x0066b120

@@ -314,7 +314,7 @@ template <typename T> class S29cd0_hkLocalArray : public S29cd0_hkArray<T>
 
 struct S29cd0_int4
 {
-    __forceinline static void* operator new(unsigned int, void* p)
+    __forceinline static void* operator new(size_t, void* p)
     {
         return p;
     }

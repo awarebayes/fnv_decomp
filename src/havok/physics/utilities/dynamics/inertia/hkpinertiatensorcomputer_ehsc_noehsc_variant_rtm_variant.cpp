@@ -1290,7 +1290,7 @@ struct CapsuleMassBody
 };
 struct CapsuleMassElement
 {
-    static __forceinline void* operator new(unsigned int, void* p)
+    static __forceinline void* operator new(size_t, void* p)
     {
         return p;
     }
