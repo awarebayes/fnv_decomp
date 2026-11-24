@@ -73,6 +73,8 @@ def main():
         (out / d).mkdir(parents=True, exist_ok=True)
     units = json.load(open(repo / 'build' / 'units.json'))['units']
     units = [u for u in units if a.only in u['source'] and (repo / u['source']).exists()]
+    seen = set()  # a source listed under several recipes is compiled once, or the objects race
+    units = [u for u in units if not (u['source'] in seen or seen.add(u['source']))]
     if a.max_lines:
         units = [u for u in units if sum(1 for _ in open(repo / u['source'], errors='replace')) <= a.max_lines]
     if a.limit:
