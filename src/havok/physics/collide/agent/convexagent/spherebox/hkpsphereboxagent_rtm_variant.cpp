@@ -204,7 +204,7 @@ typedef float hkReal;
 typedef unsigned short hkUint16;
 typedef unsigned int hkUint32;
 
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef int hkBool32;
 
 extern "C"{

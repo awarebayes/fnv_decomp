@@ -658,7 +658,7 @@ template <int N> struct EndianSizeTag
 void BSEndian(int*, EndianSizeTag<4>);
 void BSEndian(unsigned short*, EndianSizeTag<2>);
 int Warning(const char*, ...);
-void* memcpy(void*, const void*, unsigned int);
+void* memcpy(void*, const void*, size_t);
 struct EdgeExtraInfoOLDNoPad
 {
     float m_fValue;

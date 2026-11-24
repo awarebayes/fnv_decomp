@@ -945,7 +945,7 @@ ParticlePositionModifierConstruction::ParticlePositionModifierConstruction()
     ((float*)this)[6] = 0.0f;
 }
 
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 size_t strlen(const char*);
 struct MemoryManagerAllocHelper
 {

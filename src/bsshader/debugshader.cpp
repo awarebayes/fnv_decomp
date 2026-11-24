@@ -361,7 +361,7 @@ struct ShaderDescX
 
 void* FUN_00ec61c0(void* apDst, int aiValue, unsigned int auiSize);
 void FUN_00be0c00(const char* apFile, char* apPath);
-int sprintf_s(char* apBuffer, unsigned int auiSize, const char* apFormat, ...);
+int sprintf_s(char* apBuffer, size_t auiSize, const char* apFormat, ...);
 
 class SpeedTreeFrondShaderX
 {

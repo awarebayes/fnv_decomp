@@ -842,7 +842,7 @@ bool TopicFlagStandIn::TESTopicInfo_IsSayOnceADay()
     return (flags & 1) ? true : false;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct SFTX
 {
     void SetFormType(int);

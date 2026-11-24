@@ -796,7 +796,7 @@ bool FUN_00403590_cls::AlchemyItem_CompareMagicItemData(int apCompare)
     return false;
 }
 
-void* memcpy(void* dst, const void* src, unsigned int size);
+void* memcpy(void* dst, const void* src, size_t size);
 
 class AlchemyItemMagic : public TESBoundObject, public MagicItem
 {

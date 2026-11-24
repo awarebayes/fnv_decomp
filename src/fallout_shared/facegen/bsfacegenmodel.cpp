@@ -868,8 +868,8 @@ FUN_00659a20::~FUN_00659a20()
         delete m_pTextureData;
 }
 
-int __cdecl strcpy_s(char*, unsigned int, const char*);
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 char* __cdecl strrchr_0040ab30(char*, int);
 struct FUN_0065a840_t : public BSFaceGenModel
 {

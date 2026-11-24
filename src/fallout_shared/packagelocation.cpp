@@ -606,7 +606,7 @@ struct FUN_0067f1c0_shell
     unsigned int PackageLocation_GetRadius();
 };
 
-void* __cdecl memset(void* buffer, int value, unsigned int count);
+void* __cdecl memset(void* buffer, int value, size_t count);
 unsigned char __cdecl _FUN_00401500();
 void __cdecl _FUN_00485990(unsigned int chunkId, ChunkPayloadHandler* location, unsigned int size);
 

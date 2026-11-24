@@ -9953,7 +9953,7 @@ using ::_mm_set_ss;
 using ::_mm_load_ss;
 using ::_mm_store_ss;
 double fabs(double);
-void* memcpy(void*,const void*,unsigned int);
+void* memcpy(void*,const void*,size_t);
 }
 extern const float DAT_010141cc;
 extern const float s_faderClearedAlpha;

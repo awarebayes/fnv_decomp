@@ -48,7 +48,7 @@ struct LocationDescriptor
 {
     void Save(int);
 };
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 }  // namespace fnv_0067bec0
 
 // @fnv 0x0067bec0

@@ -40,7 +40,7 @@ struct Time
 };
 extern Time DAT_011de7b8;
 extern Setting DAT_011d24fc, DAT_011d27f0;
-int __cdecl sprintf_s(char*, unsigned, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 // Builds a 12-hour clock string from the current game time and passes it to the tile via FUN_00a01350.
 // @fnv 0x007c0000
 // src: XBOX_RETAIL_PDB 0x007c0000

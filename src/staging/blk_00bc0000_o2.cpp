@@ -2031,7 +2031,7 @@ void S_00bc0920_Class::CallVTableSlots13cAnd140()
 }
 
 extern "C" void* __cdecl fnv_zlib_memset(void* dst, int value, size_t size);
-int __cdecl sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int __cdecl sprintf_s(char* buffer, size_t size, const char* format, ...);
 
 struct ShaderObject
 {
@@ -9757,7 +9757,7 @@ struct Config_bc5070
     }
 };
 void __cdecl FUN_00be0c00(const char*, char*);
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern bool DAT_011ad80e;
 struct FUN_00bc5070_shell
 {
@@ -10174,7 +10174,7 @@ struct PixelDesc
 };
 extern int DAT_011f91c0;
 void __cdecl FUN_00be0c00(const char*, char*);
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 struct PixelLoader
 {
     int unk000;

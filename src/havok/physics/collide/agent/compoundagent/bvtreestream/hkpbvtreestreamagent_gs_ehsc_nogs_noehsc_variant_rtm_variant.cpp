@@ -38,7 +38,7 @@
 #include "../../../../../../../include/hkpSymmetricAgentFlipCollector.h"
 
 typedef unsigned short hkUint16;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef int hkBool32;
 typedef unsigned short hkContactPointId;
 #include "../../../../../../../include/hkResult.h"

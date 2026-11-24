@@ -148,7 +148,7 @@ struct FUN_008224b0_Class
     ~FUN_008224b0_Class();
 };
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_0082eee0_class
 {
     void* __thiscall InitArray(int size);
@@ -558,7 +558,7 @@ struct DataHandler
     TESSound* LookupSound(unsigned int aiSearchID);
 };
 extern DataHandler* g_dataHandler;
-int strcpy_s(char* dest, unsigned int size, const char* src);
+int strcpy_s(char* dest, size_t size, const char* src);
 unsigned int __cdecl SoundFlagsToAudioFlags(unsigned int flags);
 bool GetSoundPathAndFlags(unsigned int formID, char* path, unsigned int* flags, TESSound** outSound);
 struct Base_82efb0

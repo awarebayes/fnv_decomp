@@ -741,7 +741,7 @@ void TESRace::SetBodyTextureModelPath(int aiIndex, const char* path)
     m_kFaceGenTextureModels[aiIndex].SetModelFilePath(path);
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern BGSVoiceType* DAT_011cb298;
 extern BGSVoiceType* DAT_011cb29c;
 extern const char* DAT_01199fe8[2][8];
@@ -1591,7 +1591,7 @@ struct RaceTexture : TESRace
     bool TESRace_GetBodyTexture(NiPointer<NiSourceTexture>&, NiPointer<NiTexture>&, TESNPC*, BIPED_OBJECT, bool);
     void* TESRace_GetMeanFaceCoord(int);
 };
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 void __cdecl FNV_Warning(const char*, ...);
 NiTexture* __cdecl GetFaceGenManagerValue();
 bool __cdecl FindTextureByPath(char*, NiPointer<NiTexture>*);

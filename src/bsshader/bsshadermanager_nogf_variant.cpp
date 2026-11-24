@@ -216,7 +216,7 @@ class B4F9A0ShaderManager
 
     static void ClearAllCachedStates();
 };
-int sprintf_s(char* apBuffer, unsigned int auiSize, const char* apFormat, ...);
+int sprintf_s(char* apBuffer, size_t auiSize, const char* apFormat, ...);
 const char* BSShaderManager_GetPassName(int passNo);
 struct ShaderListNode
 {

@@ -3241,7 +3241,7 @@ typedef unsigned short hkUint16;
 typedef unsigned int hkUint32;
 typedef unsigned long __w64 hkUlong;
 #include "../../../../../../../include/hkResult.h"
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef hkUint16 hkObjectIndex;
 typedef hkReal hkTime;template<typename TYPE>
 __forceinline TYPE __cdecl hkSelectOther(TYPE a,TYPE pairA,TYPE pairB)

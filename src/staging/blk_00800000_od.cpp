@@ -349,7 +349,7 @@ void* __thiscall FUN_00802b50_Class::Destroy(unsigned int flags)
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00802b80_t
 {
     void* __thiscall InitBuffer(int a);

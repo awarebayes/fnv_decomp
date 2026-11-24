@@ -1547,7 +1547,7 @@ FUN_00863640::~FUN_00863640()
 namespace fnv_008636d0 {
 extern int DAT_01081f18;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct FUN_008636d0
 {
@@ -1573,7 +1573,7 @@ FUN_008636d0::FUN_008636d0(int aiCount)
 
 namespace fnv_008637d0 {
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_01081f38;
 struct FUN_008637d0
 {
@@ -1646,7 +1646,7 @@ FUN_008638f0::FUN_008638f0(unsigned int uiSize)
 
 namespace fnv_008639f0 {
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_01081f78;
 struct FUN_008639f0
 {
@@ -2628,7 +2628,7 @@ extern TESObjectREFR* g_player_861f20;
 extern SaveLoadDataHandler* g_dh_861f20;
 extern int DAT_011de500;
 
-int sprintf_s(char*, unsigned int, const char*, ...);
+int sprintf_s(char*, size_t, const char*, ...);
 
 // @fnv 0x00861f20
 // pdb: TESSaveLoadGame::TestAllCells | TESSaveLoadGame.obj | retail, string-set bridge, high
@@ -3764,9 +3764,9 @@ struct SaveSetting
 extern SaveSetting g_011c3f74;
 const char* PrepareScriptMessage(const char*, bool);
 char* BSUtilities_GetPersonalPath();
-int strcpy_s(char*, unsigned int, const char*);
-int strcat_s(char*, unsigned int, const char*);
-int sprintf_s(char*, unsigned int, const char*, ...);
+int strcpy_s(char*, size_t, const char*);
+int strcat_s(char*, size_t, const char*);
+int sprintf_s(char*, size_t, const char*, ...);
 char* strrchr_0040ab30(char*, int);
 unsigned int BSStringLength(const char*);
 extern "C" int _strnicmp(const char*, const char*, size_t);
@@ -5538,7 +5538,7 @@ struct SaveFormatSetting
 extern SaveFormatSetting g_011d2028;
 extern SaveFormatSetting g_011d4624;
 extern unsigned int DAT_010a2480;
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 struct SaveMetadataReader
 {
     SaveMetadataFile* TESSaveLoadGame_PrepForLoadSave(const char*, int, int);

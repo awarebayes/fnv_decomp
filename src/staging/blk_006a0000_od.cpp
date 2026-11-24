@@ -1366,7 +1366,7 @@ void* __thiscall FUN_006a6340_class::FUN_006a6340(int flags)
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_006a6370_class
 {
     int* p;
@@ -1845,7 +1845,7 @@ void* __thiscall S_006b3d90::AllocateAndConstructObject68()
     return q;
 }
 
-void* memset(void* dest, int value, unsigned int count);
+void* memset(void* dest, int value, size_t count);
 
 struct FUN_006b3de0_Class
 {
@@ -2059,7 +2059,7 @@ void* FUN_006b7eb0_t::NiTMapBase_NiTPointerAllocator_unsigned_int_unsigned_int_N
 }
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 struct FUN_006b8060_class
 {
     void* __thiscall NiTMapBase_DFALL_NiTMapItem_unsigned_int_NiTMap_unsigned_int_BSSimpleArray_NavMeshInfo_1024_unsigned_int_NiTMap_unsigned_int_BSSimpleArray_NavMeshInfo_1024_NiTMapBase(int size);
@@ -2078,7 +2078,7 @@ void* FUN_006b8060_class::NiTMapBase_DFALL_NiTMapItem_unsigned_int_NiTMap_unsign
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_0106c1d4;
 struct FUN_006b8160_class
 {
@@ -3168,7 +3168,7 @@ void FUN_006a69b0_Class::BSSimpleArray_NiColorA_1024_InitialSetup(unsigned int a
     }
 }
 
-void* __cdecl memcpy(void* dst, const void* src, unsigned int count);
+void* __cdecl memcpy(void* dst, const void* src, size_t count);
 struct ScrapHeap2
 {
     void* Allocate(unsigned int a, unsigned int b);

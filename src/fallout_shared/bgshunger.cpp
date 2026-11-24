@@ -233,7 +233,7 @@ void* BGSHungerStage::FUN_00401a90(unsigned int flags)
     return this;
 }
 
-void* __cdecl memcpy(void* dest, const void* src, unsigned int size);
+void* __cdecl memcpy(void* dest, const void* src, size_t size);
 // @fnv 0x00401bf0
 // pdb: BGSHungerStage::Copy | BGSHunger.obj | retail, vtable slot, high
 // pdb params: apCopy

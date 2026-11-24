@@ -14442,7 +14442,7 @@ NodeX* xFUN_004aae30(NodeX* apRoot, const char* apName);
 void xFUN_004b7240(const char* apSrc, char* apDst, int aiSize);
 float __fastcall xFUN_00526ae0(CardSlotX* apSlot);
 static const char s_acAvailableShadowFmt[] = "Available_%i_Shadow:0";
-int sprintf_s(char* apBuffer, unsigned int auiSize, const char* apFormat, ...);
+int sprintf_s(char* apBuffer, size_t auiSize, const char* apFormat, ...);
 
 
 
@@ -14746,7 +14746,7 @@ struct DataHandler
 extern GlobalPtr DAT_011d91a8;
 extern ModelLoader* DAT_011c3b3c;
 extern DataHandler* DAT_011c3f2c;
-int __cdecl sprintf_s(char* v5, unsigned int n, const char* fmt, ...);
+int __cdecl sprintf_s(char* v5, size_t n, const char* fmt, ...);
 int __cdecl CopyCaravanString(char* v5, unsigned int n, const char* m26);
 
 struct Cell1

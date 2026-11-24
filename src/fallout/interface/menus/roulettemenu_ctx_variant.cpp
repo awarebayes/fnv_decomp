@@ -435,7 +435,7 @@ extern SceneHolder g_011da8d0;
 NiNode* __cdecl BSUtilities_GetObjectByName(NiNode*, const char*);
 NiNode* __cdecl FUN_00450b80(int);
 void __cdecl NiTimeController_StartAnimations(NiNode*);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 struct FUN_00733f50
 {
     int formID;

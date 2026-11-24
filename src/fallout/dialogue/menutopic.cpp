@@ -835,7 +835,7 @@ struct TopicLoader
 
 TESForm* GetFormByID(unsigned int);
 void FNV_Warning(const char*, ...);
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 struct TopicLoad : MenuTopic
 {
     void MenuTopic_LoadGame(void*);

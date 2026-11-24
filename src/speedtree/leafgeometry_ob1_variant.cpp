@@ -885,7 +885,7 @@ struct SLeafLod
     float* m_pOrigCoordCenterCoords;
 };
 
-void* memcpy(void* pDest, const void* pSrc, unsigned int uiSize);
+void* memcpy(void* pDest, const void* pSrc, size_t uiSize);
 
 class CLeafGeometryWind
 {

@@ -274,7 +274,7 @@ struct FUN_005a7870_cls
 {
     virtual ~FUN_005a7870_cls();
 };
-void* memset(void* destination, int value, unsigned int size);
+void* memset(void* destination, int value, size_t size);
 bool __cdecl Script_ParseString(int unused, char const* data, TESObjectREFR* reference1, TESObjectREFR* reference2,
                           Script* script, ScriptLocals* locals, int unused2, unsigned int& value, char const* format,
                           BSStringT<char>* string);

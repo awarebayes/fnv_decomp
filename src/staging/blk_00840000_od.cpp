@@ -1005,7 +1005,7 @@ void FUN_00853340::Init()
 }  // namespace fnv_00853340
 
 extern "C" void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 extern int DAT_0107ec88;
 
 struct FUN_00844590
@@ -1032,7 +1032,7 @@ FUN_00844590::FUN_00844590(unsigned int ItemUpdateArray)
 
 extern int DAT_0107eca8;
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 struct FUN_00844690_class
 {
     void* vtbl;
@@ -1071,7 +1071,7 @@ NiTMapBase<DFALL<NiTMapItem<unsigned int, BGSReconstructCellSubBlocksMap*> >,
 }
 
 void* __cdecl _NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int c, unsigned int count);
+void* __cdecl memset(void* dest, int c, size_t count);
 
 struct FUN_00844970_class
 {
@@ -1272,7 +1272,7 @@ void* __thiscall FUN_0084b510_class::FUN_0084b510(unsigned int flags)
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dest, int c, unsigned int count);
+void* __cdecl memset(void* dest, int c, size_t count);
 extern int DAT_0107f4c8;
 struct FUN_0084b650_t
 {
@@ -1298,7 +1298,7 @@ void* __thiscall FUN_0084b650_t::NiTMapBase_DFALL_NiTMapItem_unsigned_int_Actor_
 }
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int value, unsigned int count);
+void* __cdecl memset(void* dst, int value, size_t count);
 extern int DAT_0107f4e8;
 struct FUN_0084b750
 {
@@ -1582,7 +1582,7 @@ void* FUN_00853090_class::FUN_00853090(unsigned int flags)
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_008530c0_obj
 {
     int* vtbl;
@@ -1695,7 +1695,7 @@ void* __thiscall FUN_00854cb0_class::FUN_00854cb0(unsigned int flags)
 }
 
 extern "C" void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int value, unsigned int size);
+void* __cdecl memset(void* dest, int value, size_t size);
 extern int DAT_01080454;
 struct FUN_00854ce0_class
 {
@@ -1885,7 +1885,7 @@ struct FUN_0084ff30_shell
 {
     void CreateScriptMessageDirectory(char* a);
 };
-int __cdecl strcat_s(char* dst, unsigned int size, const char* src);
+int __cdecl strcat_s(char* dst, size_t size, const char* src);
 
 struct FUN_0084ff90_shell : FUN_0084fec0_shell
 {
@@ -3521,7 +3521,7 @@ void FUN_0085fe80_cls::SetPair(FUN_0085fe80_pair aPair)
     m_158 = 1;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct SaveMemberA
 {
     int a, b, c, d;
@@ -4802,7 +4802,7 @@ RestoredObject* ObjectRestorer::TESSaveLoadGame_CreateReferenceFromFile(unsigned
     return object5;
 }
 
-void* memset(void* dst, int val, unsigned int size);
+void* memset(void* dst, int val, size_t size);
 
 struct FileTimeStamp
 {
@@ -4940,7 +4940,7 @@ struct FUN_00851680_class
 // The game runtime binding is separate from the Windows SDK CRT declaration.
 namespace GameCRT
 {
-int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 }
 int __cdecl _stricmp(const char* a, const char* b);
 

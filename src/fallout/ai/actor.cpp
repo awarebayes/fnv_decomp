@@ -26850,7 +26850,7 @@ struct FUN_008b0bd0_shell : public Actor
     void Actor_InitLightingPropertyPtr(::NiAVObject*);
 };
 
-int __cdecl _strnicmp(const char*, const char*, unsigned int);
+int __cdecl _strnicmp(const char*, const char*, size_t);
 void* __cdecl FindPerPixelLighting(void*);
 namespace fnv_008b0bd0 {
 
@@ -44517,8 +44517,8 @@ void Warning_005b5e40(const char* s, const char* t);
 int FUN_00ec7750(int aActionDetail, const char* s);
 char* strrchr_0040ab30(char* s, int c);
 extern "C" int _sprintf_s(char* buf, unsigned int n, const char* fmt, ...);
-int strcpy_s(char* buf, unsigned int n, const char* s);
-int strcat_s(char* buf, unsigned int n, const char* s);
+int strcpy_s(char* buf, size_t n, const char* s);
+int strcat_s(char* buf, size_t n, const char* s);
 
 // @fnv 0x0087e130
 // src: XBOX_RETAIL_PDB 0x0087e130
@@ -113586,7 +113586,7 @@ struct InitQueue
 };
 InitQueue* __cdecl FUN_004537b0();
 bool __cdecl AILinearTaskThreadManager_ShouldQueue3DTask();
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 char* __cdecl strrchr_0040ab30(char*, int);
 void __cdecl FNV_Warning(const char*, ...);
 extern int DAT_0118a838[];

@@ -517,7 +517,7 @@ void __thiscall TESChallenge::Initialize()
 }
 
 
-void* __cdecl memcpy(void* dest, const void* src, unsigned int size);
+void* __cdecl memcpy(void* dest, const void* src, size_t size);
 
 
 // Copies the TESChallenge data block and both forms from apCopy into this challenge, then calls FUN_004851b0 with apCopy.

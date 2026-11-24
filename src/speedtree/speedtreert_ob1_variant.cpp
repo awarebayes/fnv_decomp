@@ -6615,8 +6615,8 @@ void S00b092a0_cls::CSpeedTreeRT_ParseLodInfo(S00b092a0_Reader* pFile)
 }
 
 unsigned int __cdecl _strlen(const char* s);
-void* __cdecl memcpy(void*, const void*, unsigned int);
-void* __cdecl memmove(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
+void* __cdecl memmove(void*, const void*, size_t);
 int __cdecl memcpy_s(void*, unsigned int, const void*, unsigned int);
 int __cdecl memmove_s(void*, unsigned int, const void*, unsigned int);
 struct SpdCharTraits
@@ -7732,7 +7732,7 @@ struct StringB0A2A0 : public StringValB0A2A0
 StringB0A2A0 __cdecl IdvFormatString(const char* pField, ...);
 void __cdecl CSpeedTreeRT_SetError(const char* pError);
 void __cdecl FUN_00ec7c56();
-void* __cdecl memcpy(void* pvDst, const void* pvSrc, unsigned int ItemUpdateArray);
+void* __cdecl memcpy(void* pvDst, const void* pvSrc, size_t ItemUpdateArray);
 inline void CopyFloat3B0A2A0(float* pDst, const float* pSrc)
 {
     memcpy(pDst, pSrc, 12);

@@ -365,7 +365,7 @@ struct FUN_00471e10_class
 {
     void __thiscall SetFlag40(bool set);
 };
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 extern int DAT_010a2480;
 extern unsigned int DAT_01187014;
 struct MyForm
@@ -398,7 +398,7 @@ struct FUN_00474500_Class
 };
 extern int DAT_0101a384;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00474660_class
 {
     void* vtbl;
@@ -472,7 +472,7 @@ struct S
     S* __thiscall ConstructShadowSceneArray();
 };
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void* p, int v, unsigned int n);
+void* __cdecl memset(void* p, int v, size_t n);
 struct FUN_004791f0_holder2
 {
     void* __thiscall InitArrayHolder(int a);

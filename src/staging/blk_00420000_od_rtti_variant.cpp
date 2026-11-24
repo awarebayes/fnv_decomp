@@ -384,7 +384,7 @@ struct FUN_0042fdc0_class
     NiAVObject* __thiscall AssignRetainedObject_0042fdc0(NiAVObject** arg);
 };
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dest, int c, unsigned int count);
+void* __cdecl memset(void* dest, int c, size_t count);
 struct FUN_0042fe10_class
 {
     void* m_pName;
@@ -573,7 +573,7 @@ struct FUN_0042e5a0_class
 };
 extern int DAT_01016038;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dest, int c, unsigned int count);
+void* __cdecl memset(void* dest, int c, size_t count);
 struct FUN_004386b0_Class
 {
     void* p;

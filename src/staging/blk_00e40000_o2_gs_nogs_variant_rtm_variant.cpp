@@ -3134,7 +3134,7 @@ namespace VehicleFrictionApply {
 typedef float hkReal;
 typedef unsigned char hkUint8;
 typedef unsigned int hkUint32;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkBoolR
 {
 public:

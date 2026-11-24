@@ -85,7 +85,7 @@ typedef unsigned int hkUint32;
 typedef unsigned long __w64 hkUlong;
 typedef signed long __w64 hkLong;
 #include "../../../../../../../../../include/hkResult.h"
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 __forceinline hkLong __cdecl hkGetByteOffset(const void* base, const void* pntr)
 {
     return hkLong(pntr) - hkLong(base);

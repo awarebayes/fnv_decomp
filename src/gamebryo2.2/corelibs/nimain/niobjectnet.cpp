@@ -566,7 +566,7 @@ extern "C" size_t __cdecl strlen(const char*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(long volatile*);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(long volatile*);
 extern char* _EmptyFS;
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 void NiFree(void*);
 struct FUN_00a5d450_holder
 {

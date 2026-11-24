@@ -508,7 +508,7 @@ struct CopyForm
     void CopyFrom(void*);
 };
 void* __cdecl FUN_00ec43fb(void*, int, void*, void*, int);
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 // Copies data from the form returned by FUN_00ec43fb into this form, cloning its two node lists and copying several fields.
 // @fnv 0x005a8660
 // pdb: TESRecipe::Copy | TESRecipe.obj | retail, vtable slot, high
@@ -771,7 +771,7 @@ struct FUN_005a7870_cls
 FUN_005a7870_cls::~FUN_005a7870_cls()
 {}
 
-void* memset(void* destination, int value, unsigned int size);
+void* memset(void* destination, int value, size_t size);
 
 // Reads a short count and that many values from data via Script::GetValue, then formats them into string using format; returns false if any read fails.
 // @fnv 0x005b4960

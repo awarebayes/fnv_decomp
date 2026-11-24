@@ -550,7 +550,7 @@ template <class T> inline void Load(LoadStream& stream, T& value)
 
 extern bool DAT_011f5f00;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 // @fnv 0x00e917e0
 // pdb: NiPersistentSrcTextureRendererData::LoadBinary | NiPersistentSrcTextureRendererData.obj | debug, upstream name already matches, high
 // pdb params: kStream

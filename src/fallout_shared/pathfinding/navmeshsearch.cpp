@@ -315,7 +315,7 @@ bool HX::AStarSearch_NavMeshSearchNode_NavMeshSearchLink_GetPathToNode(PNode* ap
     return true;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x006a84e0
 // src: XBOX_PDB 0x006a84e0

@@ -754,7 +754,7 @@ bhkShape* __thiscall FUN_004d8630_Class::GetShape()
 }  // namespace fnv_004d8630
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 
 struct FUN_004d8fa0_Class
 {

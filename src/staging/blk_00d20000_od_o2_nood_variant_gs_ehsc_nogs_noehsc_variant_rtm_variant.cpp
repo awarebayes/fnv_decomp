@@ -151,7 +151,7 @@ typedef unsigned char hkUchar;
 typedef unsigned char hkUint8;
 typedef unsigned short hkUint16;
 typedef unsigned int hkUint32;
-typedef unsigned __w64 hk_size_t;class hkClass;
+typedef size_t hk_size_t;class hkClass;
 typedef int hkBool32;
 
 class hkStatisticsCollector;

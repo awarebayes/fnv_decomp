@@ -1477,7 +1477,7 @@ MidCopy& MidCopy::AssignFrom(const MidCopy& other)
 
 extern void* DAT_0106b1f4;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct FUN_0069b360_shell
 {

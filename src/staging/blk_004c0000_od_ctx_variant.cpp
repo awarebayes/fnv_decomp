@@ -295,7 +295,7 @@ struct FUN_004d8560_StandIn
     void* __thiscall GetInnerVirtualResult();
 };
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 struct FUN_004d8fa0_Class
 {
     int* m_p0;
@@ -1505,7 +1505,7 @@ extern NiObject* DAT_011f36f8;
 bool NiObject_IsKindOf(const NiRTTI*, NiAVObject*);
 NiObject* NiObject_DynamicCast(const NiRTTI*, NiObject*);
 const char* PrepareScriptMessage(const char*, bool);
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 int __cdecl FUN_00406d50(char*, unsigned int, const char*);
 void BSstrncpy(char*, const char*, unsigned int);
 struct TreeItemFields

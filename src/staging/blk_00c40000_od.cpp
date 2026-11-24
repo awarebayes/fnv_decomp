@@ -9658,7 +9658,7 @@ struct SetView {
     char* name;
 };
 
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 extern "C" __declspec(dllimport) int __stdcall WritePrivateProfileStringA(const char*, const char*, const char*, const char*);
 
 // pdb: class IniFile, size 0x8 (here 0x10c), 2 members

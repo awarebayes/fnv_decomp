@@ -202,7 +202,7 @@ bool TESAmmoEffect::CompareAmmoEffect(TESForm* apCompare)
 // The game uses its own C++ string-copy wrapper rather than the CRT import.
 namespace AmmoEffectCRT
 {
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 }
 int _sprintf_s(char* dst, unsigned int size, const char* fmt, ...);
 

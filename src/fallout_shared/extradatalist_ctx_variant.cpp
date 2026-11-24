@@ -94,7 +94,7 @@
 #pragma include_alias("TESFullName.h", "TESFullName.h")
 #pragma include_alias("TESTexture.h", "TESTexture.h")
 
-void* memcpy(void* apDest, const void* apSrc, unsigned int auiSize);
+void* memcpy(void* apDest, const void* apSrc, size_t auiSize);
 
 class BGSPortal;
 class BGSAcousticSpace;

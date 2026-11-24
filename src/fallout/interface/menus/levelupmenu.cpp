@@ -1344,7 +1344,7 @@ const char* FUN_0066e950(int);
 void CompareActorValueNames();
 int MinInt(int, int);
 bool ActorValue_IsFlagSet(int, unsigned int);
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 int BSsprintf(char*, unsigned int, const char*, ...);
 unsigned int BSstrlen(const char*);
 struct SkillsMenu

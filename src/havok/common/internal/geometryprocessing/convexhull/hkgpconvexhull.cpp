@@ -4673,7 +4673,7 @@ typedef unsigned int hkUint32;
 typedef unsigned long __w64 hkUlong;
 #include "../../../../../../include/hkResult.h"
 typedef __int64 hkInt64;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkClass;
 #include "../../../../../../include/hkPadSpu.h"   // Havok 7.1 hkPadSpu (was a unit-local ValueWrapper copy)
 template<typename T> struct TypeSizeConstant { enum { val = sizeof(T) }; };

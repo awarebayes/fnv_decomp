@@ -2375,7 +2375,7 @@ void* DelStandIn::FUN_0048efc0(unsigned int flags)
 }
 }
 
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 struct NiFixedStr
 {
     operator const char*() const;
@@ -4210,7 +4210,7 @@ bool FUN_004981f0_shell::Animation_SpecialIdleLoaded()
 
 // The shared base has no nontrivial destructor, so it cannot emit this cleanup region.
 namespace fnv_0048f220 {
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 struct NiFixedStr
 {
     operator const char*() const;

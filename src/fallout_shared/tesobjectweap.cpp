@@ -2450,7 +2450,7 @@ struct WeaponCompareAccess : TESObjectWEAP {
 struct WeaponStringCompare {
     int CompareString(const BSStringT<char>*, bool);
 };
-int __cdecl memcmp(const void*, const void*, unsigned int);
+int __cdecl memcmp(const void*, const void*, size_t);
 // Compares this weapon against another TESObjectWEAP across many fields and accessors, returning true on the first difference or when the form is not a weapon.
 // @fnv 0x00522590
 // pdb: TESObjectWEAP::Compare | TESObjectWEAP.obj | retail, vtable slot, high

@@ -100,7 +100,7 @@ struct FUN_0047c540_shell : public FormComponentArray
     void FormComponentCollection_ClearFormComponentArray();
 };
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x0047c540
 // src: COMMUNITY 0x0047c540

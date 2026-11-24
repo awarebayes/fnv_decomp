@@ -555,7 +555,7 @@ FUN_004055d0::FUN_004055d0(int a, char b)
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern "C" void* DAT_01012278;
 struct FUN_00405630_s
 {

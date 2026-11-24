@@ -14623,7 +14623,7 @@ void FUN_00445570_cls::ModelLoader_CancelReference(unsigned int apRef)
 
 int ModelLoaderStrcpyS(char*, unsigned int, const char*);
 int ModelLoaderStrcatS(char*, unsigned int, const char*);
-int _strnicmp(const char*, const char*, unsigned int);
+int _strnicmp(const char*, const char*, size_t);
 int sprintf(char*, const char*, ...);
 char* strrchr_0040ab30(char*, int);
 unsigned int BSStringLength(const char*);

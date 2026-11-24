@@ -79,7 +79,7 @@ struct FUN_0067b100_Class
 
 typedef FUN_0067b100_Class FunctionObject;
 
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 bool _FUN_00401500();
 void _FUN_00485990(int, void*, unsigned int);
 

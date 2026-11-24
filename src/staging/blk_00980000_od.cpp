@@ -1050,7 +1050,7 @@ void __thiscall FUN_00982c20::Save(BGSSaveFormBuffer* buffer)
 extern "C" void __cdecl Deallocate(void*);
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int val, unsigned int len);
+void* __cdecl memset(void* dst, int val, size_t len);
 // @fnv 0x009837b0
 template <>
 NiTMapBase<DFALL<NiTMapItem<unsigned int, ReservedCoverLocation*> >, unsigned int, ReservedCoverLocation*>::NiTMapBase(unsigned int arg)
@@ -1453,7 +1453,7 @@ void __thiscall FUN_00994ea0_class::AppendPair(int aiFirst, int aiSecond)
     *(unsigned int*)((char*)this + 0xdc) += 1;
 }
 
-void* __cdecl memset(void* dst, int value, unsigned int count);
+void* __cdecl memset(void* dst, int value, size_t count);
 
 struct FUN_009958b0_Class
 {
@@ -1974,7 +1974,7 @@ void __cdecl CombatManager_FreeAll()
 
 extern int DAT_0108db5c;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int val, unsigned int len);
+void* __cdecl memset(void* dst, int val, size_t len);
 struct FUN_00993990
 {
     int* vtbl;
@@ -5197,7 +5197,7 @@ struct Elem
 };
 void* __cdecl FormHeap_Allocate(unsigned int n);
 void __cdecl FormHeapFreeAndLog_00401030(void* p);
-void* __cdecl memcpy(void* dst, const void* src, unsigned int n);
+void* __cdecl memcpy(void* dst, const void* src, size_t n);
 struct Arr994350
 {
     Elem** m_items;

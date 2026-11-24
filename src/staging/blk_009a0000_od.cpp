@@ -582,7 +582,7 @@ void* FUN_009a42c0_Class::FUN_009a42c0(unsigned int flags)
 }
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 struct FUN_009a4290_class2
 {
     void* __thiscall InitArray(int a);
@@ -657,7 +657,7 @@ void* __thiscall FUN_009a51b0_class::FUN_009a51b0(unsigned int flags)
 
 extern void* DAT_0108e328;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_009a5d80_class
 {
     void* vfn_00;

@@ -13778,7 +13778,7 @@ struct FUN_0055ac90_class : public FUN_0057c300_cls
     void TESObjectREFR_InitializeData();
 };
 
-void* memset(void* destination, int value, unsigned int count);
+void* memset(void* destination, int value, size_t count);
 
 extern float _DAT_01015f5c;
 extern BGSSaveLoadGame* g_BGSSaveLoadGame;
@@ -45937,7 +45937,7 @@ int __cdecl BSstrcmp(const char* a, const char* b);
 unsigned char __cdecl HasParticleSystem(NiNode* apObj);
 unsigned short __cdecl BSAnimGroupSequence_GetSequenceSaveSize();
 int __cdecl FUN_00406d30(char* dst, unsigned int size, const char* src);
-void* __cdecl memset(void* dst, int val, unsigned int n);
+void* __cdecl memset(void* dst, int val, size_t n);
 
 // Reads sequence identifiers from the save stream, matches them against p1's sequences, calls sequence helpers, and updates p2 when a match is found.
 // @fnv 0x0055ffa0

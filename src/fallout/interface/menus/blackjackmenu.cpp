@@ -945,7 +945,7 @@ struct SSNStub
     void RemoveAllLights();
 };
 
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 unsigned int BSStringLength(const char*);
 
 extern const char str_010709c0[];
@@ -1138,7 +1138,7 @@ extern const char str_0101996c[];
 extern const char str_01070a18[];
 extern const char str_01070a08[];
 extern const char str_010709f8[];
-int __cdecl strcpy_s(char* aDst, unsigned int aSize, const char* aSrc);
+int __cdecl strcpy_s(char* aDst, size_t aSize, const char* aSrc);
 unsigned int __cdecl BSstrlen(const char* aStr);
 char* __cdecl FUN_004812f0(const char* aStr, const char* aSub);
 extern const char DAT_01013444[];

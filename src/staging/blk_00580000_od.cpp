@@ -536,7 +536,7 @@ FUN_005890c0::FUN_005890c0(unsigned int size)
 
 namespace fnv_005891c0 {
 extern "C" void* __cdecl _NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 extern int DAT_0103202c;
 struct FUN_005891c0_Class
 {

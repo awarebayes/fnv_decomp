@@ -361,7 +361,7 @@ Script::~Script()
     ClearData();
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 __declspec(thread) extern char tls_pad[0x268];
 __declspec(thread) extern bool tls_bIsInitialized;
@@ -397,7 +397,7 @@ void Script::ClearVariableList()
     }
 }
 
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 
 // Copies the header, data, referenced objects, variables and text from another Script into this one, resetting the variable count.
 // @fnv 0x005aa420
@@ -661,7 +661,7 @@ void __cdecl CopyListToTail(void* pSourceList, SoundListView* pCopyToList)
 
 void __cdecl Deallocate(void*);
 unsigned int __cdecl strlen(const char*);
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 char* __cdecl ourCalloc(int, int);
 
 // Frees the stored string, then copies newText into a newly allocated buffer (or clears it when newText is null).

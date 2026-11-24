@@ -1006,7 +1006,7 @@ int __thiscall FUN_008442a0_shell::NiTMapBase_DFALL_NiTMapItem_unsigned_int_Reco
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_0107ed1c;
 
 struct FUN_00844db0_shell

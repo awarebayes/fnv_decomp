@@ -25,5 +25,5 @@ extern void(__stdcall* DAT_00fdf054)(void*);
 extern unsigned char kVtbl_NiD3DShaderFactory;
 extern MemoryManager g_memoryManager;
 extern "C" void* __cdecl NiMalloc(unsigned int);
-extern "C" void* __cdecl fnv_zlib_memset(void*, int, size_t long);
+extern "C" void* __cdecl fnv_zlib_memset(void*, int, unsigned long);
 #endif

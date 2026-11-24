@@ -50,7 +50,7 @@ typedef unsigned char hkUint8;
 typedef unsigned short hkUint16;
 typedef unsigned int hkUint32;
 typedef unsigned long __w64 hkUlong;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef hkReal hkTime;
 class hkClass;
 typedef int hkBool32;

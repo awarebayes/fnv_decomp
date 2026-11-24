@@ -466,7 +466,7 @@ int TriangleWelding::WeldContactPoint(unsigned short* featurePoints, unsigned ch
 typedef unsigned char hkUint8_S;
 typedef unsigned short hkUint16_S;
 typedef unsigned int hkUint32_S;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef int hkBool32;
 
 typedef float hkReal_S;

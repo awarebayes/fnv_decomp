@@ -1804,7 +1804,7 @@ struct ShaderDesc
 };
 
 void BuildShaderPath(const char* file, char* out);
-int sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
+int sprintf_s(char* buf, size_t size, const char* fmt, ...);
 
 struct ShaderOwner
 {

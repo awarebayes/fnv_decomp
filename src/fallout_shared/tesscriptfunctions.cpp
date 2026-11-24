@@ -6840,7 +6840,7 @@ bool Cmd_GetButtonPressed_Execute(const ScriptParameter* p1, const char* p2, TES
 
 namespace fnv_005b72f0 {
 void __cdecl _DebugLog(const char*, ...);
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 char* __cdecl BSUtilities_GetPersonalPath();
 extern const char* const DAT_011a2ff0;
 extern const char* const DAT_011a2ff4;
@@ -23450,7 +23450,7 @@ namespace fnv_005b6800 {
 class ScriptParameter;
 
 void* __cdecl _fnv_zlib_memset(void* dst, int value, unsigned int count);
-int __cdecl strcpy_s(char* dst, unsigned int size, const char* src);
+int __cdecl strcpy_s(char* dst, size_t size, const char* src);
 void __cdecl DebugLog(const char* format, ...);
 struct RefVirt {
     virtual void Slot000();
@@ -41294,7 +41294,7 @@ public:
     static bool __cdecl IsWorldSpaceEnabled(TESWorldSpace*);
 };
 
-int __cdecl strcat_s(char*, unsigned int, char const*);
+int __cdecl strcat_s(char*, size_t, char const*);
 char* __cdecl FUN_004812f0(char const*, char const*);
 void __cdecl _DebugLog(char const*, ...);
 
@@ -41480,7 +41480,7 @@ public:
     void DebugTextManager_SetScreenDebugPage();
 };
 
-int __cdecl strcat_s(char*, unsigned int, char const*);
+int __cdecl strcat_s(char*, size_t, char const*);
 char* __cdecl BSUtilities_GetPersonalPath(void);
 StringFormattingUtility* __stdcall DebugTextManager_GetSingleton(char*);
 StringFormattingUtility* __stdcall DebugTextManager_GetSingleton(char*, unsigned int);

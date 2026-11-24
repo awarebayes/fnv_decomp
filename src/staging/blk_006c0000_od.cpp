@@ -867,7 +867,7 @@ void* __thiscall FUN_006c6130_Class::FUN_006c6130(unsigned int flags)
 
 extern int DAT_0106c654;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 struct FUN_006c6260_Class
 {
     int m_vtbl;
@@ -906,7 +906,7 @@ bool __thiscall FUN_006c6400_Node::Contains(const NiPointer<NiAVObject>& a)
 }
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int c, unsigned int count);
+void* __cdecl memset(void* dst, int c, size_t count);
 extern int DAT_0106c68c;
 struct FUN_006c68b0_Class
 {
@@ -948,7 +948,7 @@ void __thiscall FUN_006c6ae0_S::NiTMapBase_DFALL_NiTMapItem_bhkRigidBody_NiPoint
 }
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int val, unsigned int count);
+void* __cdecl memset(void* dst, int val, size_t count);
 struct FUN_006c6b10_Class
 {
     int* m_vtbl;

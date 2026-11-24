@@ -163,7 +163,7 @@ struct FileNameComponents
     char m_acHead[0x303];
     char m_acTail[0x100];
 };
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 extern const char* DAT_011f4a78;
 extern char* EmptyFS;
 // @fnv 0x00a76960

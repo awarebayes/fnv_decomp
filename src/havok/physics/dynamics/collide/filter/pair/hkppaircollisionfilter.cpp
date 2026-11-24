@@ -749,7 +749,7 @@ typedef unsigned char hkUint8;
 typedef unsigned short hkUint16;
 typedef unsigned int hkUint32;
 typedef signed long __w64 hkLong;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 template <typename TYPE> __forceinline TYPE* __cdecl hkAddByteOffset(TYPE* base, hkLong offset)
 {
     return reinterpret_cast<TYPE*>(reinterpret_cast<char*>(base) + offset);

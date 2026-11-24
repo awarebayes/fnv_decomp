@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Mechanical source edits of the x64 port; each step is idempotent and prints how many files it touched.
 
-usage: python tools/x64/apply_port.py <step>...   (steps: asserts, asm, alloc, size_t, crt, decls)
+usage: python tools/x64/apply_port.py <step>...   (steps: asserts, asm, alloc, size_t, crt, decls, fixups)
 
 The edits are committed as ordinary source changes; this script exists so the same passes can be
 repeated when the branch is rebased onto newer upstream sources.
@@ -87,6 +87,18 @@ def step_crt(t):
     return t
 
 
+def step_fixups(t):
+    # the crt pass turned `unsigned long` into `size_t long`; the zlib helpers keep their 32-bit parameter
+    t = t.replace('size_t long', 'unsigned long')
+    t = re.sub(r'typedef\s+unsigned\s+__w64\s+hk_size_t\s*;', 'typedef size_t hk_size_t;', t)
+    # bare (non-extern "C") CRT declarations: the size parameter is size_t on x64
+    def size(m):
+        return re.sub(r'\bunsigned(?:\s+int)?\b(?!\s+long)', 'size_t', m.group(0))
+    t = re.sub(r'^(?:void\*|int|char\*)\s+(?:__cdecl\s+)?(?:memset|memcpy|memcmp|memmove|strcpy_s|strcat_s|sprintf_s|_strnicmp)\s*\([^()]*\);[ \t]*$',
+               size, t, flags=re.M)
+    return t
+
+
 def step_decls(t):
     # operator new/delete are declared by <new>; stand-alone redeclarations (some inside namespaces) are
     # rejected by the 64-bit front end, and extern "C" on them contradicts the C++ linkage
@@ -98,7 +110,7 @@ def step_decls(t):
     return t
 
 
-STEPS = {'asserts': step_asserts, 'asm': strip_asm, 'alloc': step_alloc, 'size_t': step_size_t, 'crt': step_crt, 'decls': step_decls}
+STEPS = {'asserts': step_asserts, 'asm': strip_asm, 'alloc': step_alloc, 'size_t': step_size_t, 'crt': step_crt, 'decls': step_decls, 'fixups': step_fixups}
 
 
 def main():

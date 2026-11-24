@@ -382,7 +382,7 @@ struct FUN_006e1280_Class
     void __thiscall VisitPlacementAddresses(char* a1, unsigned int a2);
 };
 void* __cdecl _NiMalloc(unsigned int);
-void* memset(void* p, int v, unsigned int n);
+void* memset(void* p, int v, size_t n);
 extern int DAT_0106cf88;
 struct FUN_006e20e0_Class
 {
@@ -1306,7 +1306,7 @@ struct LocalBSSimpleList
 void* __cdecl retn8();
 extern void* DAT_0106ced8;
 void* __cdecl _NiMalloc(unsigned int size);
-void* __cdecl memset(void* destination, int value, unsigned int size);
+void* __cdecl memset(void* destination, int value, size_t size);
 struct FUN_006e0f20_Class
 {
     void** m_ppVirtualMethodTable;

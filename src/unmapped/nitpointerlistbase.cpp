@@ -174,7 +174,7 @@ void NiTPointerListBase<NiTPointerAllocator<unsigned int>, Script*>::RemoveAll()
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct FUN_004ed960
 {
@@ -202,7 +202,7 @@ void* __thiscall FUN_004ed960::Init(unsigned int uiSize)
 
 extern int DAT_01023274;
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 struct FUN_004eda60_t
 {
     void* __thiscall NiTMapBase_NiTPointerAllocator_unsigned_int_TESWaterForm_bool_NiTMapBase_NiTPointerAllocator_unsigned_int_TESWaterForm_bool(unsigned int count);
@@ -224,7 +224,7 @@ void* __thiscall FUN_004eda60_t::NiTMapBase_NiTPointerAllocator_unsigned_int_TES
 
 extern int DAT_01023294;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_004edb60_t
 {
     int* __thiscall NiTMapBase_NiTPointerAllocator_unsigned_int_TESObjectREFR_WadingWaterData_NiTMapBase_NiTPointerAllocator_unsigned_int_TESObjectREFR_WadingWaterData(int size);

@@ -1389,7 +1389,7 @@ struct FUN_00534780_Class {
 extern int FNV_RTTI_TESForm;
 extern int FNV_RTTI_TESObjectLAND;
 extern "C" void* __cdecl FNV_DynamicCast(void*, int, const void*, const void*, int);
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 // LandCopyData_tesland_od_variant_ctx_variant: local type (was include/LandCopyData.h, which had no evidence of one real class); no method of it is bound to a named game function
 #include "../../include/NiPoint3.h"
 
@@ -1834,7 +1834,7 @@ struct Config53 {
 };
 struct TES53 { char GetUnk60Byte(); };
 extern TES53* g_TES;
-void* __cdecl memcpy(void*,const void*,unsigned int);
+void* __cdecl memcpy(void*,const void*,size_t);
 struct Worker53 {
  int unk00; int unk04; int unk08; int unk0c; int unk10; int unk14; int unk18; int unk1c; int unk20; int unk24;
  Config53* config;

@@ -293,7 +293,7 @@ struct FUN_00519500_class
     bool TESObjectDOOR_RandomlyTeleportsTo(int apSpace);
 };
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 struct FUN_00519b20
 {
     void* __thiscall ConstructArray(unsigned int n);

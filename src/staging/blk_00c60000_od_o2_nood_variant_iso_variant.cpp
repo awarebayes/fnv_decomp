@@ -330,7 +330,7 @@ struct FUN_00c63330 : NiPSysPositionModifier
 {
     FUN_00c63330();
 };
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 size_t strlen(const char*);
 struct FUN_00c64780_Class
 {

@@ -37,7 +37,7 @@
 // Keep the unit declarations here; the shared headers provide NiTPointerAllocator.
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long* value);
 extern void* __cdecl _NiMalloc(unsigned int size);
-extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, size_t long size);
+extern "C" void* __cdecl fnv_zlib_memset(void* destination, int value, unsigned long size);
 
 extern volatile long DAT_011f4400;
 extern unsigned char kVtbl_NiRefObject;

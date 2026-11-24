@@ -2374,7 +2374,7 @@ class FalloutAudioMedia
     static void __cdecl EndMediaUpdate();
     static bool __cdecl IsMediaPlaying(MEDIATYPE, bool);
 };
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 int _sprintf_s(char*, unsigned int, const char*, ...);
 void __cdecl FalloutAudio_SetMainMenuMusic(bool);
 extern TESGlobal* DAT_011c3f3c;

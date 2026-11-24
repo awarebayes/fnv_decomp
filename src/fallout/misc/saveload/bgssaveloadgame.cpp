@@ -190,7 +190,7 @@ void FUN_006665a0_shell::ClearBuffer_006665a0()
     pBuffer = 0;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x00847d50
 void* __fastcall ClearObject(void* apObject)
@@ -1625,7 +1625,7 @@ void Reference::TESObjectREFR_SetLocationOnReference(NiPoint3* apPosition)
     Mark(2);
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 int __cdecl CompareSaveFileNames(const char*, const char*);
 void __cdecl SaveGameWarning(const char*, ...);
 

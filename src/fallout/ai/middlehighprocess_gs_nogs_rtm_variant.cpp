@@ -379,7 +379,7 @@ struct FUN_0091fe80_shell : public MiddleHighProcess
 {
     void MiddleHighProcess_SetAnimation(Animation*);
 };
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 void __cdecl AddAnimationToGarbageCollector(Animation*);
 bool __cdecl SandBoxActorPackageData_IsTargetNeededForProcedure(int aeProcedure);
 struct FUN_0092c720_cls
@@ -1043,7 +1043,7 @@ struct FUN_0092c950
 };
 extern char DAT_011f426c;
 extern float DAT_01012054;
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00913fe0 : FUN_0092c950
 {
     void FUN_008d8140(int);

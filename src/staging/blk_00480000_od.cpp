@@ -1351,7 +1351,7 @@ void __cdecl TESForm_AddChunk_3(unsigned int aeChunkID, unsigned char aiData)
     AppendChunk((void*)aeChunkID, &aiData, 1);
 }
 
-int __cdecl strcpy_s(char*, unsigned int, char*);
+int __cdecl strcpy_s(char*, size_t, char*);
 void* __cdecl _NiMalloc(unsigned int);
 unsigned int __cdecl _strlen(const char*);
 

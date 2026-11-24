@@ -17480,7 +17480,7 @@ static inline void S00e783b0_Pad(unsigned char* pucPad, unsigned short usCopy)
 }
 unsigned int __cdecl NiD3DShaderDeclaration_Pack_UnsignedByteToUnsignedByte(StreamCopyInfo* kParams);
 unsigned int NiD3DShaderDeclaration_Pack_UnsignedShortToUByteColor(Stream_e78910* kParams);
-void* memcpy(void*,const void*,unsigned int);
+void* memcpy(void*,const void*,size_t);
 struct Stream78 {
  unsigned short type, unk02;
  unsigned short components, unk06;

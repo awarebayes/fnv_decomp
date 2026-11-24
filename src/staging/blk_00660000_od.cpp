@@ -379,7 +379,7 @@ void __thiscall FUN_00665f20_Holder::CallInnerFuncAndForward(int a)
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 extern int $SG6086;
 struct FUN_00665f50_Class
 {

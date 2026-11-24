@@ -643,7 +643,7 @@ bool ConsoleManager::Idle(int aiKey)
     return true;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern SettingT_GameSettingCollection_ g_011d8d44;
 extern SettingT_GameSettingCollection_ g_011d8d08;
 

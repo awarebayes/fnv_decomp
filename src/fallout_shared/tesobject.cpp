@@ -480,7 +480,7 @@ struct FUN_0050eaa0_shell : public TESBoundObject
     void TESBoundObject_CopyBoundData(TESBoundObject*);
 };
 
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 
 // Copies 0xc bytes from offset 0x24 of apCopy into offset 0x24 of this object.
 // @fnv 0x0050eaa0
@@ -648,7 +648,7 @@ struct FUN_0050fd90_stub
 };
 extern double g_d100;
 int __cdecl TruncateFloatToInt(float);
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 struct FUN_0050fdf0_cls
 {
     void FormatScaledName(PlayerCharacter* apRef, char* apScaledFileName);

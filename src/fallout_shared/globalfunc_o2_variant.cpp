@@ -689,7 +689,7 @@ bool ObjectCandidate::bhkUnaryAction_Add(Item* apWorld)
 
 extern __declspec(thread) int g_tlsHeapContext;
 
-int sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int sprintf_s(char* buffer, size_t size, const char* format, ...);
 char* __cdecl NiGetViewerString_00a7d5e0(const char* pcPrefix, const char* pcValue);
 
 struct HeapContextGuard

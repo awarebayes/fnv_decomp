@@ -299,7 +299,7 @@ void BGSSaveLoadChangesMap::SetChangeBuffer(unsigned int aiFormID, unsigned int 
 
 extern int DAT_0107eda8;
 void* __cdecl _NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int c, unsigned int count);
+void* __cdecl memset(void* dest, int c, size_t count);
 
 struct FUN_00845b90_shell
 {

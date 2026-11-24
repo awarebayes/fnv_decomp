@@ -301,7 +301,7 @@ extern NiPoint3 _NiPoint3_ZERO;
 extern int _DAT_011f4270;
 extern int _DAT_011f4274;
 extern int DAT_010c37fc;
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 size_t strlen(const char*);
 struct FUN_00c64780_Class
 {

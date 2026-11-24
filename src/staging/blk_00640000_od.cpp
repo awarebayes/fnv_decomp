@@ -3171,7 +3171,7 @@ void FUN_0064cc90_Class::BSFaceGenAnimationData_SetAnimHeadCulled(unsigned char 
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int value, unsigned int size);
+void* __cdecl memset(void* dst, int value, size_t size);
 struct FUN_00659490_cls2
 {
     void* m_vtbl;
@@ -3362,7 +3362,7 @@ struct FUN_00658ad0_class
     void __thiscall AssignString(FUN_00658ad0_arg* pkItem, char* pcKey, GO val);
 };
 
-int __cdecl strcpy_s(char*, unsigned int, char*);
+int __cdecl strcpy_s(char*, size_t, char*);
 int __cdecl strlen(char*);
 void* __cdecl _NiMalloc(unsigned int);
 extern unsigned int _data_011c16bc;

@@ -645,7 +645,7 @@ FUN_005408e0::~FUN_005408e0()
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int value, unsigned int count);
+void* __cdecl memset(void* dst, int value, size_t count);
 
 struct FUN_00540940_Class
 {

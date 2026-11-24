@@ -3205,7 +3205,7 @@ struct Loader
 };
 extern Loader* loaderState;
 void warning(const char*, ...);
-void* __cdecl memset(void*, int, unsigned);
+void* __cdecl memset(void*, int, size_t);
 struct Loaded
 {
     int unk00;

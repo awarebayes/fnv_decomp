@@ -10864,7 +10864,7 @@ struct FUN_00cca450_class
 };
 extern const char* g_01268658;
 char* __cdecl NiGetViewerString_00a7d5e0(const char*, const char*);
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 struct MoppCode570
 {
     int unk00, unk04, unk08, unk0c;

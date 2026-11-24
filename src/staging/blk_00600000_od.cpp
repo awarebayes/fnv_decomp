@@ -562,7 +562,7 @@ FUN_006010a0_Class* __thiscall FUN_006010a0_Class::NiTStringTemplateMap_NiTMap_c
 }
 
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dest, int c, unsigned int count);
+void* __cdecl memset(void* dest, int c, size_t count);
 struct FUN_00601100_cls
 {
     void* vtbl;

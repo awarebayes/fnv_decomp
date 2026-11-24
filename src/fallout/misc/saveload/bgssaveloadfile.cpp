@@ -319,8 +319,8 @@ struct MemoryManagerStatic
 {
     static void* __cdecl Allocate(unsigned int);
 };
-void* __cdecl memset(void*, int, unsigned int);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+void* __cdecl memset(void*, int, size_t);
+int __cdecl strcpy_s(char*, size_t, const char*);
 unsigned int __cdecl _strlen(const char*);
 struct FUN_008465b0_stub
 {
@@ -451,7 +451,7 @@ struct GlobalObject_0045cfe0
     int* Int();
 };
 extern GlobalObject_0045cfe0 DAT_011de2c8;
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 int __cdecl FUN_00ecbf05(const char*, int);
 int __cdecl FUN_00ec862c(const char*, const char*);
 __declspec(dllimport) int __stdcall DeleteFileA(const char*);

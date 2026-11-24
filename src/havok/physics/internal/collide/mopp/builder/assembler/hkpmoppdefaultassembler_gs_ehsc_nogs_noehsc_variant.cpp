@@ -1544,7 +1544,7 @@ typedef signed char hkInt8;
 typedef signed short hkInt16;
 typedef unsigned char hkUint8;
 typedef unsigned short hkUint16;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 class hkClass;
 template <typename T> struct TypeSizeConstant
 {

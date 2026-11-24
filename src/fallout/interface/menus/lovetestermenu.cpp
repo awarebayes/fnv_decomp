@@ -651,7 +651,7 @@ void Object_DecreaseCurrentLoveTesterActorValue()
 namespace fnv_00796100 {
 extern TES* g_TES;
 int __cdecl _sprintf_s(char* aBuf, int aSize, const char* aFmt, ...);
-int __cdecl strcpy_s(char* aDst, unsigned int aSize, const char* aSrc);
+int __cdecl strcpy_s(char* aDst, size_t aSize, const char* aSrc);
 void __cdecl FUN_004b7240(char* aDst, char* aSrc, unsigned int aSize);
 bool __cdecl Interface_Has360Controller();
 extern const char str_0101996c[];

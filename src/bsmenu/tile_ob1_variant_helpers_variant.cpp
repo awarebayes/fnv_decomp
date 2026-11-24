@@ -631,7 +631,7 @@ struct TileWork {
 };
 unsigned int BSStringLength(const char*);
 inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b) { return a > b ? a : b; }
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 struct ReuseNode {
     int trait;
     float value;
@@ -1259,8 +1259,8 @@ struct S_00a04150_Class {
 namespace fnv_00a09410 {
 int __cdecl FUN_00ec6da0(const char*, const char*);
 unsigned int __cdecl strlen(const char*);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
-int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+int __cdecl strcpy_s(char*, size_t, const char*);
+int __cdecl sprintf_s(char*, size_t, const char*, ...);
 double __cdecl FUN_00ec6940(double);
 double __cdecl FUN_00ec9e10(double);
 double __cdecl fabs(double);

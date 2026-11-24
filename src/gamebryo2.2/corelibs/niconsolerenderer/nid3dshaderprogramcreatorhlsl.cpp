@@ -147,7 +147,7 @@ void __thiscall NiD3DShaderProgram::SetShaderCode(unsigned int uiSize, void* pvC
 
 void* __cdecl NiMalloc(unsigned int);
 void __cdecl NiFreeAlias(void*);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 extern "C" size_t strlen(const char*);
 // Frees the stored string at offset 0x30 and replaces it with a newly allocated copy of pcEntryPoint, or null if empty.
 // @fnv 0x00e95cf0
@@ -308,7 +308,7 @@ extern "C" long __stdcall D3DXCompileShader(const char* pSrcData, unsigned int S
                                             unsigned long Flags, ID3DXBuffer** ppShader, ID3DXBuffer** ppErrorMsgs,
                                             ID3DXConstantTable** ppConstantTable);
 int __cdecl NiShaderFactory_ReportError(int, bool, const char*, ...);
-int __cdecl strcpy_s(char*, unsigned int, char*);
+int __cdecl strcpy_s(char*, size_t, char*);
 void NiFree(void*);
 void* _memmove(void*, const void*, unsigned int);
 extern unsigned int DAT_0126fa24;

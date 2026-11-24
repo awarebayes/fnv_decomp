@@ -506,7 +506,7 @@ struct FUN_005277d0_Class
     FUN_005277d0_Class* __thiscall InitBuffer(unsigned int size);
 };
 void* __cdecl NiMalloc(unsigned int size);
-void* __cdecl memset(void* dst, int value, unsigned int count);
+void* __cdecl memset(void* dst, int value, size_t count);
 // Sets the vtable, stores size, clears next, allocates size*4 bytes with NiMalloc, zeroes them, and returns this.
 // @fnv 0x005277d0
 // pdb: NiTMapBase<DFALL<NiTMapItem<unsigned int,TESObjectREFR *> >,unsigned int,TESObjectREFR *>::NiTMapBase<DFALL<NiTMapItem<unsigned int,TESObjectREFR *> >,unsigned int,TESObjectREFR *> | BGSLoadedReferenceCollection.obj | debug, object-file run extension, low

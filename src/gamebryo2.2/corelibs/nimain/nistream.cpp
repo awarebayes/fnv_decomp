@@ -1681,7 +1681,7 @@ void FUN_00a63ee0_shell::NiStream_SaveFixedStringTable()
 }  // namespace fnv_00a63ee0
 
 namespace fnv_00a640b0 {
-int strcpy_s(char* dest, unsigned int size, const char* src);
+int strcpy_s(char* dest, size_t size, const char* src);
 void _fnv_CopyFilePath(char* dest, unsigned int destSize, const char* src, unsigned int count);
 void _fnv_StandardizeFilePath(char* pcPath);
 

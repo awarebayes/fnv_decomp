@@ -4216,7 +4216,7 @@ extern "C" __declspec(dllimport) int __stdcall FindClose(void*);
 extern "C" __declspec(dllimport) char* __stdcall lstrcpy(char*, const char*);
 extern "C" __declspec(dllimport) char* __stdcall lstrcatA(char*, const char*);
 
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 bool __fastcall TESAnimGroup_GetDecal(BSFile*);
 int* __cdecl FUN_00ec85e3();
 extern double DAT_01019de8;
@@ -6838,7 +6838,7 @@ struct WorldView : TES
 extern unsigned char modelTypes[];
 extern const char* modelNames[];
 int _sprintf_s(char*, unsigned int, const char*, ...);
-int strcpy_s(char*, unsigned int, const char*);
+int strcpy_s(char*, size_t, const char*);
 extern "C" int sprintf(char*, const char*, ...);
 void LogFile(const char*, const char*, ...);
 void DebugLog(const char*, ...);

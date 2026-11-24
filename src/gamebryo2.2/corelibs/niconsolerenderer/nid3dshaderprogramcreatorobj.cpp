@@ -2,7 +2,7 @@
 // Functions are listed by their @fnv annotations; compile flags inferred from the PC code.
 
 void* __cdecl _NiMalloc_00aa1070(unsigned int a);
-void* __cdecl memmove(void* d, const void* s, unsigned int n);
+void* __cdecl memmove(void* d, const void* s, size_t n);
 int __cdecl NiShaderFactory_ReportError(int a, int b, const char* c);
 
 // Allocates a buffer of size b, copies a into it, stores the pointer and size in c and d, and returns false with an error if a or b is zero.

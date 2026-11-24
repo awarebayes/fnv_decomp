@@ -1482,7 +1482,7 @@ template <class T> class SpPtr
     SpPtr& operator=(const SpPtr&);
 };
 void* NiMalloc(unsigned int);
-void* memcpy(void*, const void*, unsigned int);
+void* memcpy(void*, const void*, size_t);
 extern double DAT_01012060;
 class TreeObj
 {

@@ -1076,8 +1076,8 @@ struct RecordList
     unsigned int count;
     void BGSSaveLoadManager_FreeSavesList();
 };
-int __cdecl strcpy_s(char*, unsigned int, const char*);
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 unsigned int __cdecl BSStringLength(const char*);
 struct InventoryEntry
 {

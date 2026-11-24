@@ -19,8 +19,8 @@ bool NiD3DShaderProgramFactory_ResolveShaderFileName(const char* pcOriginalName,
 int ShaderLog(int iLevel, int aiMemoryContext, const char* pcFormat, ...);
 void* NiMalloc(unsigned int uiSize);
 void NiFree(void* pvMem);
-int strcpy_s(char* dst, unsigned int size, char* src);
-void* memcpy(void* dst, const void* src, unsigned int size);
+int strcpy_s(char* dst, size_t size, char* src);
+void* memcpy(void* dst, const void* src, size_t size);
 
 extern unsigned int g_uiShaderAssembleFlags;
 inline void NiMemcpy(void* d, const void* s, unsigned int n)

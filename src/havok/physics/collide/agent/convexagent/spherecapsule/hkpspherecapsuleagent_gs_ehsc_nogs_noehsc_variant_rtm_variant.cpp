@@ -121,7 +121,7 @@ if (compareValue(S*S,lenSq)) return 0;
 typedef unsigned short hkUint16;
 typedef int hkBool32;
 #include "../../../../../../../include/hkResult.h"
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 typedef __m128 hkQuadReal;
 typedef const hkSimdReal& hkSimdRealParameter;
 inline hkMonitorStream& hkMonitorStream::getInstance()

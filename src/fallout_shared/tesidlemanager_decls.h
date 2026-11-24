@@ -78,7 +78,7 @@ extern "C" char* strrchr(const char* string, int character);
 extern "C" int _stricmp(const char* left, const char* right);
 }
 extern "C" char* strstr(const char* string, const char* substring);
-int strcat_s(char* destination, unsigned int size, const char* source);
+int strcat_s(char* destination, size_t size, const char* source);
 extern "C" const char fnv_idle_1hm_fast_left[];
 extern "C" const char fnv_idle_1hm_left[];
 extern "C" const char fnv_idle_1hp_fast_left[];

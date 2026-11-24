@@ -1435,8 +1435,8 @@ WStr& WStr::Append(const wchar_t* awcText)
 
 unsigned int strlen(const char* s);
 const char* strrchr(const char* s, int c);
-void* memcpy(void* d, const void* s, unsigned int n);
-int strcpy_s(char* d, unsigned int n, const char* s);
+void* memcpy(void* d, const void* s, size_t n);
+int strcpy_s(char* d, size_t n, const char* s);
 
 struct DirFileTime
 {

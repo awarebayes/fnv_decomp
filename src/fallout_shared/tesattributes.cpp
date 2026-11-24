@@ -20,7 +20,7 @@ void TESAttributes::InitializeComponent()
     }
 }
 
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 unsigned int __fastcall FUN_009d2510(void*);
 
 // Copies 7 bytes from apData into the object at offset 4, then calls FUN_009d2510 on this and returns its result.

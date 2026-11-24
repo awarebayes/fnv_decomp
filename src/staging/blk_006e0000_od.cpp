@@ -1405,7 +1405,7 @@ void __thiscall FUN_006e1280_Class::VisitPlacementAddresses(char* apBuffer, unsi
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* memset(void* p, int v, unsigned int n);
+void* memset(void* p, int v, size_t n);
 // @fnv 0x006e20e0
 // pdb: NiTMapBase<DFALL<NiTMapItem<unsigned int,unsigned int> >,unsigned int,unsigned int>::NiTMapBase<DFALL<NiTMapItem<unsigned int,unsigned int> >,unsigned int,unsigned int> | PathingLOSMap.obj | debug, object-file run extension, low
 // pdb params: uiHashSize
@@ -4335,7 +4335,7 @@ void FUN_006f28a0_Class::InsertPathingLocation(unsigned int index, PathingLocati
 
 extern void* DAT_0106ced8;
 void* __cdecl _NiMalloc(unsigned int size);
-void* __cdecl memset(void* destination, int value, unsigned int size);
+void* __cdecl memset(void* destination, int value, size_t size);
 
 struct FUN_006e0f20_Class
 {

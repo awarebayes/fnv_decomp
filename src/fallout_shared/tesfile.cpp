@@ -343,8 +343,8 @@ void TESFile::ClearMasterLists()
     iMasterCount = 0;
 }
 
-int __cdecl strcpy_s(char*, unsigned int, const char*);
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 char* __cdecl strchr(char*, int);
 bool __fastcall TESDataHandler_GetClearingData(TESDataHandler*);
 void __fastcall ProcessGroups(TESFile*);
@@ -460,7 +460,7 @@ unsigned int TESFile::GetIndexCount()
     return GetFieldAt3FC(this);
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_010a2480;
 
 // Seeks the stream to offset DAT_010a2480, zeroes the fields at 0x264-0x26c and the 0x18-byte block at 0x240, then calls GetTESForm if getform is set.
@@ -1828,7 +1828,7 @@ TESFile::~TESFile()
     ClearThreadSafeFiles();
 }
 
-int __cdecl sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int __cdecl sprintf_s(char* buffer, size_t size, const char* format, ...);
 
 // @fnv 0x00471af0
 // pdb: TESFile::GetFileIndex | TESFile.obj | debug, object-file run extension, low
@@ -2214,7 +2214,7 @@ int BSFile::NiBinaryStream_Write(const char* pvBuffer, unsigned int uiBytes)
     return uiRead;
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 int __fastcall BSFile_Tell(char*);
 void _FNV_Warning(const char*, ...);
 extern int DAT_010a2480;

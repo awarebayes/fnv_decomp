@@ -5,8 +5,8 @@
 #include "main.h"
 
 #include <stdio.h>
-int __cdecl strcpy_s(char*, unsigned int, const char*);
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 unsigned int __cdecl BSStringLength(const char*);
 char* __cdecl FUN_00ecc104(char*, int, FILE*);
 extern char DAT_01082cb8[];

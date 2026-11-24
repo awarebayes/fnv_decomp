@@ -5705,7 +5705,7 @@ bool Script_GetShouldAttackConditionFunction(TESObjectREFR* apRefObject, void* a
 
 
 
-int _strnicmp(const char*, const char*, unsigned int);
+int _strnicmp(const char*, const char*, size_t);
 void DebugLog(const char*, ...);
 extern TESObjectREFR* DAT_011caaf4;
 extern TESObjectCELL* DAT_011caaf8;

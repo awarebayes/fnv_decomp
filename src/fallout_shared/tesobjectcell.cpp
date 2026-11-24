@@ -2815,7 +2815,7 @@ void Map62d0::NiTMap_Ptr_GetNext(MapItem62d0*& pos, void*& key, Helper62d0& val)
 }
 
 extern unsigned int DAT_010a2720;
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 // pdb: structure ScrapHeapBuffer, size 0x8 (here 0x1), 2 members
 struct ScrapHeapBuffer
 {
@@ -5810,7 +5810,7 @@ FUN_00557d50::FUN_00557d50()
 
 extern int DAT_0102f358;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct FUN_00558eb0
 {
@@ -5844,7 +5844,7 @@ struct FUN_005590b0_s
 };
 
 void* __cdecl _NiMalloc(unsigned int aSize);
-void* __cdecl memset(void* aDest, int aVal, unsigned int aSize);
+void* __cdecl memset(void* aDest, int aVal, size_t aSize);
 
 // Sets the vtable, stores aCount and zeroes a newly allocated aCount*4-byte buffer.
 // @fnv 0x005590b0
@@ -10399,7 +10399,7 @@ void TESObjectCELL::SaveReferences(CellFileStub* apFile)
 extern int DAT_01183028;
 extern int DAT_01183fb4;
 void* __cdecl FNV_DynamicCast(void* obj, int vfDelta, void* srcType, void* dstType, int isRef);
-void* __cdecl memcpy(void* dst, const void* src, unsigned int n);
+void* __cdecl memcpy(void* dst, const void* src, size_t n);
 
 struct CellDataBlock;
 struct PtrPair

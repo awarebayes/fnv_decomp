@@ -180,7 +180,7 @@ void* FUN_004a9630_shell::FUN_004a9630(unsigned int flags)
 }
 
 extern int DAT_0101ec68;
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct FUN_004a7c40_shell
 {
@@ -199,7 +199,7 @@ void* FUN_004a7c40_shell::InitializeFields_004a7c40()
     return this;
 }
 
-void* __cdecl memset(void* dest, int c, unsigned int n);
+void* __cdecl memset(void* dest, int c, size_t n);
 
 struct FUN_004a7c80_shell
 {

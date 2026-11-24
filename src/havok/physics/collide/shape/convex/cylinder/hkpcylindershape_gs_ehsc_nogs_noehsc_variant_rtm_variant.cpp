@@ -565,7 +565,7 @@ typedef unsigned char hkUint8_S;
 typedef unsigned short hkUint16_S;
 typedef unsigned int hkUint32_S;
 typedef unsigned long __w64 hkUlong_S;
-typedef unsigned __w64 hk_size_t;
+typedef size_t hk_size_t;
 
 typedef float hkReal_S;
 

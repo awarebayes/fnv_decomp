@@ -1440,7 +1440,7 @@ unsigned int bhkNiCollisionObject_GetbhkNiCollisionObject(BGSBodyPart* apObject)
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_004a97e0_Class
 {
     void* m_vtbl;
@@ -1468,7 +1468,7 @@ void* __thiscall FUN_004a97e0_Class::NiTMapBase_DFALL_NiTMapItem_NiTexture_TEX_U
 
 extern int DAT_0101ed4c;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_004a98e0_class
 {
     int __thiscall NiTMapBase_DFALL_NiTMapItem_TESObjectCELL_bool_TESObjectCELL_bool_NiTMapBase_DFALL_NiTMapItem_TESObjectCELL_bool_TESObjectCELL_bool(int count);
@@ -1503,7 +1503,7 @@ void* __thiscall FUN_004a9a00_Class::FUN_004a9a00(unsigned int flags)
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* p, int c, unsigned int n);
+void* __cdecl memset(void* p, int c, size_t n);
 struct FUN_004a9c50_class
 {
     void* vtbl;
@@ -1609,7 +1609,7 @@ FUN_004aa210_class* __thiscall FUN_004aa210_class::NiTMapBase_DFALL_NiTMapItem_S
 
 extern int DAT_0101fbfc;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct FUN_004b0030_Class
 {
@@ -2182,7 +2182,7 @@ void FUN_004a9e00_Class::UpdateFields_004a9e00(unsigned int requested, unsigned 
 
 extern int DAT_0101ede0;
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_004a9ef0_Class
 {
     void* m_vtbl;
@@ -2209,7 +2209,7 @@ FUN_004a9ef0_Class* __thiscall FUN_004a9ef0_Class::NiTMapBase_DFALL_NiTMapItem_T
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_0101ee20;
 struct FUN_004aa080_t
 {
@@ -2237,7 +2237,7 @@ void* FUN_004aa080_t::NiTMapBase_DFALL_NiTMapItem_int_int_int_int_NiTMapBase_DFA
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_004aff30_Class
 {
     void* m_vtbl;
@@ -3400,7 +3400,7 @@ struct Base_4ba280
 };
 
 void GridCellArray_FixGridsToLoadINISetting();
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern char DAT_01189184;
 
 struct FUN_004ba280 : Base_4ba280

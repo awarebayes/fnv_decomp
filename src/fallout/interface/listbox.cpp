@@ -3170,8 +3170,8 @@ void RecordList::BGSSaveLoadManager_FreeSavesList()
 // with these names through the shared headers.
 namespace ListBoxStrings
 {
-int __cdecl strcpy_s(char*, unsigned int, const char*);
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 }
 unsigned int __cdecl BSStringLength(const char*);
 struct InventoryEntry

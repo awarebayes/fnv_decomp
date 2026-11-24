@@ -866,7 +866,7 @@ Tile* StatsMenu_Create()
 }
 
 namespace fnv_00404820 {
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 }
 
 // Appends text, growing the buffer when the combined length exceeds MaxLength.

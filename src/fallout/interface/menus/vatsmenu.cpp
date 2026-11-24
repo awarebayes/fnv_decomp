@@ -4775,7 +4775,7 @@ struct ActorBaseStandIn : ActorBaseX
     ActorSub30 sub30;
 };
 
-int sprintf_s(char* apBuffer, unsigned int auiSize, const char* apFormat, ...);
+int sprintf_s(char* apBuffer, size_t auiSize, const char* apFormat, ...);
 int MinInt(int a1, int a2);
 
 // @fnv 0x007f0ea0

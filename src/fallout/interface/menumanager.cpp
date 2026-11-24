@@ -363,7 +363,7 @@ FUN_0071fef0::~FUN_0071fef0()
 
 class NiNode;
 namespace fnv_00720170 {
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 struct FUN_007203c0
 {
     FUN_007203c0();

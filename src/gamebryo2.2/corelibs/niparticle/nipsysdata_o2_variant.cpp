@@ -16,7 +16,7 @@
 #include "../../../../include/NiColorA.h"
 extern MemoryManager g_memoryManager;
 void* _NiMalloc(unsigned int size);
-extern "C" void* fnv_zlib_memset(void* dst, int value, size_t long size);
+extern "C" void* fnv_zlib_memset(void* dst, int value, unsigned long size);
 
 // The default geometry constructor is not declared by the shared header.
 // Its no-argument thiscall ABI also accepts the object in ECX here.

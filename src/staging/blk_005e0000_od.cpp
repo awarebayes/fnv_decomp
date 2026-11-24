@@ -2243,7 +2243,7 @@ struct EntryArray
     void SetEntryCount(unsigned int, bool);
 };
 
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 
 // 0x005ecb30 also binds FootIKOperations::CopyData; its flag, seven floats and two arrays differ from Data.h.
 struct FootIKConfiguration
@@ -2299,7 +2299,7 @@ void FootIKConfiguration::FootIK_DATA_Copy(FootIKConfiguration* arData)
 }
 
 namespace fnv_005ecfd0 {
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 
 struct Entry28
 {
@@ -4162,8 +4162,8 @@ TESSound* __cdecl TESSound_FindSoundByFilename(char const* apFilename)
     return result;
 }
 
-int strcpy_s(char* dst, unsigned int size, const char* src);
-int strcat_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
+int strcat_s(char* dst, size_t size, const char* src);
 
 bool __cdecl ArchiveManager_GetInvalidateOlderFiles();
 bool __cdecl ArchiveManager_GetRandomFileNameForDirectory(const char*, char*, int);
@@ -5332,7 +5332,7 @@ char** NiTObjectArray_NiPointer_NiTexture_NiTObjectArray_NiPointer_NiTexture(uns
     return reinterpret_cast<char**>(new NiPointer<AnimIdle>[count]);
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct SaveManager
 {

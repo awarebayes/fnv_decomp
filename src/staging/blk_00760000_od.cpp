@@ -714,7 +714,7 @@ struct FUN_0076bb40 : Menu
     virtual ~FUN_0076bb40();
 };
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x0076bb40
 // pdb: HUDMainMenu::HUDMainMenu | HUDMainMenu.obj | debug, call graph, high
@@ -875,7 +875,7 @@ struct WeatherEntry
     int subtitleFont;
     char icon[260];
 };
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 void __cdecl Warning_005b5e40(int, const char*, ...);
 void __cdecl QuestUpdateManager_AddQuestNamesTail(char*);
 // Allocates a WeatherEntry, copies the title, subtitle and icon strings, validates the fonts, and queues the entry by priority.

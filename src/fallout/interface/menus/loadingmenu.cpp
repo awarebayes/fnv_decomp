@@ -1410,8 +1410,8 @@ extern double _gModifierZero;
 extern TES* g_TES;
 extern SettingT_GameSettingCollection_ g_011de740;
 extern SettingT_GameSettingCollection_ g_011da0f0;
-void* memset(void*, int, unsigned int);
-int sprintf_s(char*, unsigned int, const char*, ...);
+void* memset(void*, int, size_t);
+int sprintf_s(char*, size_t, const char*, ...);
 unsigned int BSStringLength(const char*);
 void BSClamp_float(float&, float, float);
 void FalloutAudio_SetMainMenuMusic(bool);
@@ -2117,7 +2117,7 @@ struct TileListX
 
 extern SettingT_GameSettingCollection_ g_011d2358_x;
 
-int sprintf_s(char* apBuffer, unsigned int auiSize, const char* apFormat, ...);
+int sprintf_s(char* apBuffer, size_t auiSize, const char* apFormat, ...);
 
 } // namespace fnv_0078c210
 

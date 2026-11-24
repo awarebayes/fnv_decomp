@@ -165,7 +165,7 @@ int GetIsControllerConnected_();
 LANGUAGE GetConfiguredLanguage();
 const char* LocateString(const char*, const char*);
 template <class T> unsigned int BSStringLength(const T*);
-int strcat_s(char*, unsigned int, const char*);
+int strcat_s(char*, size_t, const char*);
 extern "C" int memcpy_s(void*, size_t, const void*, size_t);
 extern "C" void* __cdecl memcpy(void*, const void*, size_t);
 #pragma intrinsic(memcpy)

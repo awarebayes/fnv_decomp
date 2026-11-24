@@ -668,7 +668,7 @@ extern SettingT_GameSettingCollection_ g_011d4f54;
 extern SettingT_GameSettingCollection_ g_011db37c;
 extern SettingT_GameSettingCollection_ g_011db458;
 extern PlayerCharacter* g_thePlayer;
-int sprintf_s(char*, unsigned int, const char*, ...);
+int sprintf_s(char*, size_t, const char*, ...);
 int _stricmp(const char*, const char*);
 void FalloutRadio_TunePipboyToStation(TESObjectREFR*, bool);
 bool MapMenu_ShouldHideNote(BGSNote*);

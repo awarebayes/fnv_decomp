@@ -60,7 +60,7 @@ struct Q4
 };
 
 extern void*(__stdcall* DAT_00fdf28c)(int, int, int, void*);
-int sprintf_s(char*, unsigned int, const char*, ...);
+int sprintf_s(char*, size_t, const char*, ...);
 const char* PrepareScriptMessage(const char*, bool);
 
 class LockCtx

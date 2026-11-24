@@ -1831,7 +1831,7 @@ class ATM
     void QueryPerformanceCounter(int);
     void WaitForTasksDuringRendering();
 };
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 BSFaceGenModel* __cdecl GetOrCreateFaceGenModel(void*, int, int, int, int, int, int);
 void* __cdecl BuildEgmFilename(BSStringT<char>*, const char*, int);
 struct FaceLoader : BipedAnim

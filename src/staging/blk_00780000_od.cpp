@@ -529,7 +529,7 @@ struct Renderer
 };
 Renderer* GetRenderer();
 bool extern DAT_011a0294;
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 struct FUN_00788440 : Menu
 {
     int unk028;

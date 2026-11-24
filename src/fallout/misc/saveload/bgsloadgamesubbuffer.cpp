@@ -441,7 +441,7 @@ void BGSLoadGameSubBuffer::LoadHavokData(TESForm* apForm)
 }
 
 extern void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_010822a8;
 struct FUN_008656c0_This
 {

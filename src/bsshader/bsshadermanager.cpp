@@ -604,7 +604,7 @@ void B4F9A0ShaderManager::ClearAllCachedStates()
     }
 }
 
-int sprintf_s(char* apBuffer, unsigned int auiSize, const char* apFormat, ...);
+int sprintf_s(char* apBuffer, size_t auiSize, const char* apFormat, ...);
 
 // @fnv 0x00b4f9d0
 // src: XBOX_PDB 0x00b4f9d0

@@ -152,7 +152,7 @@ void OwnQ::ExtraDataList_FinishInitLoadGame(unsigned int aiFlags, int aiOldFlags
     }
 }
 
-void* __cdecl memset(void* dst, int value, unsigned int size);
+void* __cdecl memset(void* dst, int value, size_t size);
 class type_info;
 // ExtraDataList::LoadGame (FUN_00428150)
 extern "C" void* __cdecl __RTDynamicCast(void* inptr, long vfdelta, void* srcType, void* targetType, int isReference);

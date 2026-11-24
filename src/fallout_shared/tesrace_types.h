@@ -70,7 +70,7 @@ class TaskQueueInterface
   public:
     static void CopyStringToBuffer(char*, unsigned int, const char*);
 };
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 char* __cdecl strrchr_0040ab30(char*, int);
 extern "C" const char* __cdecl strrchr(const char*, int);
 #endif

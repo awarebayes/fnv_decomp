@@ -1271,7 +1271,7 @@ void __thiscall FUN_0057c930_class::NiTMapBase_NiTPointerAllocator_unsigned_int_
 }
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_0057c960
 {
     void* vtable;

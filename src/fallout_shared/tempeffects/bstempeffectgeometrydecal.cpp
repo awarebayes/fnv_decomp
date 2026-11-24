@@ -1604,8 +1604,8 @@ float __cdecl BSMAX_00404010(float, float);
 float __cdecl DecalPower(float, int);
 float __cdecl FloatAbs(float);
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memcpy(void*, const void*, unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
+void* __cdecl memset(void*, int, size_t);
 extern "C" __declspec(dllimport) void __stdcall DebugBreak();
 
 // Projects the skin's vertices onto the decal plane, rebuilds the selected body-part partitions and bones, and passes the new geometry to CreateDecalGeometry.

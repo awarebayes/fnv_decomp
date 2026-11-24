@@ -283,8 +283,8 @@ extern char str_010a435c[];
 
 unsigned int __cdecl strlen(const char*);
 int __cdecl _stricmp(const char*, const char*);
-int __cdecl _strnicmp(const char*, const char*, unsigned int);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl _strnicmp(const char*, const char*, size_t);
+int __cdecl strcpy_s(char*, size_t, const char*);
 extern "C" int __cdecl strcat_s(char*, size_t, const char*);
 
 // Builds dst from src: prefixes "Trees" when src ends in "spt", prefixes str_010a435c unless src starts with "meshes\", else copies src.
@@ -308,7 +308,7 @@ void __cdecl StandardizeModelPath(const char* apFileName, char* apStandardizedFi
 }
 
 void __cdecl StandardizeModelPath(int, char*, int);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 struct FUN_00c3d090_shell2 {
     char pad[0x28];
     char* p;
@@ -1279,7 +1279,7 @@ void FUN_00a1b770_cls::InitializeCharacterData()
 }
 
 unsigned int __cdecl strlen(const char*);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 extern MemoryManager g_memoryManager;
 extern __declspec(thread) int g_tlsMode;
 

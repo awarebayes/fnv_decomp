@@ -2592,7 +2592,7 @@ UpdateTreeNode* UpdateTreeNode::Tile_FinalPostParse(int aiTrait, float afValue, 
 namespace fnv_00a0a300 {
 int __cdecl FUN_00ec6da0(const char*, const char*);
 unsigned int __cdecl strlen(const char*);
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 
 struct TileValueStr {
     int m_iValueId;

@@ -431,7 +431,7 @@ struct FactionReaction
     char _pad_5[3];
 };
 typedef char _sizecheck_FACTION_RANK[1];
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 struct SoundListView
 {
     void AddTail(char* const&);

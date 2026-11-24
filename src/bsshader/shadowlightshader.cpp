@@ -337,7 +337,7 @@ void ShadowLightShader::CreateConstantMaps()
     }
 }
 
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 #pragma function(memcpy)
 
 struct __declspec(align(16)) Mat16
@@ -1172,7 +1172,7 @@ bool FUN_00b78980_shell::InitializePasses()
 
 extern "C" void* _fnv_zlib_memset(void*, int, size_t);
 void __cdecl FUN_00be0c00(const char* param_1, char* param_2);
-int __cdecl sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
+int __cdecl sprintf_s(char* buf, size_t size, const char* fmt, ...);
 extern "C" __declspec(dllimport) long __stdcall InterlockedDecrement(volatile long* value);
 extern "C" __declspec(dllimport) long __stdcall InterlockedIncrement(volatile long* value);
 struct RefObj

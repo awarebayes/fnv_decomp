@@ -9,7 +9,7 @@
 class NiRenderer;
 extern NiRenderer* DAT_011f9508;
 extern "C" uintptr_t __security_cookie;
-extern "C" void* fnv_zlib_memset(void*, int, size_t long);
+extern "C" void* fnv_zlib_memset(void*, int, unsigned long);
 extern "C" int __cdecl sprintf_s(char*, size_t, const char*);
 extern "C" void __fastcall __security_check_cookie(uintptr_t);
 

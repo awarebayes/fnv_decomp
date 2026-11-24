@@ -1037,7 +1037,7 @@ struct EntryArray
     void Clear(bool);
     void SetEntryCount(unsigned int, bool);
 };
-int strcpy_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
 // 0x005ecb30 copies seven floats and two arrays (0x40 bytes); shared Data is a 0x10-byte skill/category record.
 struct FloatStringEntryRecord
 {
@@ -2003,8 +2003,8 @@ class DataHandler
 };
 extern DataHandler* g_dataHandler;
 TESSound* __cdecl TESSound_FindSoundByFilename(char const* apFilename);
-int strcpy_s(char* dst, unsigned int size, const char* src);
-int strcat_s(char* dst, unsigned int size, const char* src);
+int strcpy_s(char* dst, size_t size, const char* src);
+int strcat_s(char* dst, size_t size, const char* src);
 bool __cdecl ArchiveManager_GetInvalidateOlderFiles();
 bool __cdecl ArchiveManager_GetRandomFileNameForDirectory(const char*, char*, int);
 BSSimpleList<char*>* __cdecl FileFinder_BuildFileList(const char*, char*, int, int);

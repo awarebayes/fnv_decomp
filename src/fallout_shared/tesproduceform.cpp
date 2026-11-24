@@ -7,7 +7,7 @@
 #include "../../include/TESProduceForm.h"
 #include "../../include/TESRaceForm.h"
 
-void* __cdecl memset(void* p, int c, unsigned int n);
+void* __cdecl memset(void* p, int c, size_t n);
 
 // Sets the int at offset 4 to 0 and zeroes the 4 bytes at offset 8 of this object.
 // @fnv 0x0048b590

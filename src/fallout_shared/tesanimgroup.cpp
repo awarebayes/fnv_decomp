@@ -384,7 +384,7 @@ struct UShortArg
 {
     unsigned short v;
 };
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // @fnv 0x005f2450
 // pdb: TESAnimGroup::SetType | TESAnimGroup.obj | debug, object-file run extension, low
@@ -594,8 +594,8 @@ template <class T> unsigned int BSStringLength(const T* str);
 char* strchr(char* str, int ch);
 double atof(const char* str);
 long atol(const char* str);
-int strcpy_s(char* dest, unsigned int size, const char* src);
-int sprintf_s(char* buffer, unsigned int size, const char* format, ...);
+int strcpy_s(char* dest, size_t size, const char* src);
+int sprintf_s(char* buffer, size_t size, const char* format, ...);
 int TruncateFloatToInt(float f);
 void MessageHandler_IncDisableWarningCount(bool b);
 

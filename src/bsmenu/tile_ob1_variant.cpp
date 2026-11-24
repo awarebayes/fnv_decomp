@@ -1533,7 +1533,7 @@ void TileWork::Tile_ApplyRotationOnChildren() {
 }
 
 inline unsigned int BSStringCapacityMaximum(unsigned int a, unsigned int b) { return a > b ? a : b; }
-void* __cdecl memcpy(void*, const void*, unsigned int);
+void* __cdecl memcpy(void*, const void*, size_t);
 template <class T> inline BSStringT<T>::BSStringT() { Init(); }
 template <class T> inline void BSStringT<T>::Init() { pString = 0; SetLength(0); SetMaxLength(0); }
 template <class T> inline void BSStringT<T>::SetLength(unsigned int n) { sLen = n <= 65535 ? (unsigned short)n : 65535; }

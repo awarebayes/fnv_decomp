@@ -5607,7 +5607,7 @@ struct MemContextScope
     }
 };
 
-int __cdecl sprintf_s(char* buf, unsigned int size, const char* fmt, ...);
+int __cdecl sprintf_s(char* buf, size_t size, const char* fmt, ...);
 char* __cdecl CreateDebugString(const char* pcName);
 char* __cdecl CreateDebugString(const char* pcPrefix, int iValue);
 

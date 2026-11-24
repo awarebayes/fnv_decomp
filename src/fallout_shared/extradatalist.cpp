@@ -483,7 +483,7 @@ bool FUN_0040f700_shell::IsDifferentFrom(BSExtraData* apCompare)
 }
 
 extern int DAT_01014300;
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // Sets pThis[0] to the address of DAT_01014300, clears pThis[1], zeroes 0x15 bytes at offset 8, and returns pThis.
 // @fnv 0x0040f740
@@ -519,7 +519,7 @@ void __cdecl BaseExtraList_ClearLastExtra(void* apList, int aeType)
     }
 }
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 extern int DAT_011c38e4;
 
 __declspec(thread) int tls_pad_0;
@@ -16266,7 +16266,7 @@ struct EndianTag
 void __cdecl endian(void*, EndianTag);
 void __cdecl ResolveFormID(unsigned int*, File*);
 void __cdecl warning(const char*, ...);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 struct LinkedData
 {
@@ -21431,7 +21431,7 @@ struct Entry
 extern __declspec(thread) Owner* DAT_01272008;
 extern __declspec(thread) Entry* DAT_01272010[147];
 
-void* memset(void* pvDest, int iValue, unsigned int uiSize);
+void* memset(void* pvDest, int iValue, size_t uiSize);
 
 // @fnv 0x0040fa40
 // src: XBOX_PDB 0x0040fa40
@@ -21707,7 +21707,7 @@ struct ExtraDataNode
 
 extern RecursiveSpinLock g_011c3920;
 void __cdecl BaseExtraList_ClearLastExtraAll(const BaseExtraList*);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 // Locks g_011c3920, resets the TLS buffer, optionally deletes each extra in the list or clears pHead, then zeroes iFlags and unlocks.
 // @fnv 0x0040fae0
 // src: EXE 0x0040fae0

@@ -773,7 +773,7 @@ void TESActorBase::SaveGame_005f18c0(unsigned int aiFlags)
 
 
 namespace fnv_005f1b30 {
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 void __cdecl Warning_005b5e40(const char*, ...);
 
 struct LoadHdr

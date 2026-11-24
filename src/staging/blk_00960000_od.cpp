@@ -740,7 +740,7 @@ void* __thiscall FUN_0096a300_Class::FUN_0096a300(unsigned int flags)
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void* dst, int c, unsigned int n);
+void* __cdecl memset(void* dst, int c, size_t n);
 struct FUN_0096a390_Class
 {
     void* m_vtbl;
@@ -971,7 +971,7 @@ void* __thiscall FUN_00978f40_Class::FUN_00978f40(unsigned int flags)
     return this;
 }
 
-void* __cdecl memset(void* dest, int value, unsigned int count);
+void* __cdecl memset(void* dest, int value, size_t count);
 
 struct RegionObjectEntry
 {

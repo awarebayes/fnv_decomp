@@ -58,7 +58,7 @@ struct ByteArg
 bool TESForm_QEndianSwapOnSave();
 void BSEndian_00401080(int* p, ByteArg b);
 void BSEndian_00407a90(short* p, ByteArg b);
-void* memcpy(void* dst, const void* src, unsigned int n);
+void* memcpy(void* dst, const void* src, size_t n);
 
 struct Owner69c4c0
 {

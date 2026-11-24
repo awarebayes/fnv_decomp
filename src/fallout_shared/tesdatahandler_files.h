@@ -81,7 +81,7 @@ extern "C" void* _alloca(size_t);
 
 NiPointer<NavMesh> MakeNavMeshPointer(NavMesh*);
 
-int strcat_s(char*, unsigned int, const char*);
+int strcat_s(char*, size_t, const char*);
 char* strchr(char*, int);
 int FUN_00ec4835(const void*, const void*, unsigned int);
 extern "C" void* memcpy(void*, const void*, size_t);

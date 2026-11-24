@@ -710,7 +710,7 @@ void __thiscall FUN_00863db0_class::ClearItems()
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00863e30_struct
 {
     void* m_pVTable;

@@ -747,8 +747,8 @@ float floor(float);
 int TruncateFloatToInt(float);
 const char* ValueEffectName(int);
 int CopyText(char*, unsigned int, const char*);
-int strcat_s(char*, unsigned int, const char*);
-int sprintf_s(char*, unsigned int, const char*, ...);
+int strcat_s(char*, size_t, const char*);
+int sprintf_s(char*, size_t, const char*, ...);
 struct Description : ListBase
 {
     virtual bool First();

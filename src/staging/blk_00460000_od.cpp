@@ -1062,7 +1062,7 @@ void __thiscall FUN_00471e10_class::SetFlag40(bool set)
         *(unsigned int*)((char*)this + 0x3e8) &= ~0x40;
 }
 
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 extern int DAT_010a2480;
 extern unsigned int DAT_01187014;
 
@@ -1118,7 +1118,7 @@ void FUN_00471e60_shell::LoadFormAndUpdateFlag()
 // Scalar deleting destructor 0x00474500 is emitted for NiTPointerMap<unsigned int, TESFile*>.
 
 void* __cdecl NiMalloc(unsigned int);
-void* __cdecl memset(void* p, int value, unsigned int size);
+void* __cdecl memset(void* p, int value, size_t size);
 
 // @fnv 0x00474560
 template <>
@@ -1133,7 +1133,7 @@ NiTMapBase<NiTPointerAllocator<unsigned int>, unsigned int, TESFile*>::NiTMapBas
 
 extern int DAT_0101a384;
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 struct FUN_00474660_class
 {
     void* vtbl;
@@ -1327,7 +1327,7 @@ BSSimpleArray<NiNode*>::BSSimpleArray()
 }
 
 void* __cdecl _NiMalloc(unsigned int);
-void* __cdecl memset(void* p, int v, unsigned int n);
+void* __cdecl memset(void* p, int v, size_t n);
 struct FUN_004791f0_holder2
 {
     void* __thiscall InitArrayHolder(int a);

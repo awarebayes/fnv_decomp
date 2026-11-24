@@ -1060,7 +1060,7 @@ void __cdecl NiBinaryStream_DoByteSwap(char* pvData, unsigned int uiTotalBytes, 
 }
 
 namespace fnv_00aa2820 {
-int strcat_s(char* dst, unsigned int size, const char* src);
+int strcat_s(char* dst, size_t size, const char* src);
 char* SafeStrcat(char* dst, unsigned int size, const char* src);
 
 class FileNameComponents

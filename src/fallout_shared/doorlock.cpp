@@ -346,7 +346,7 @@ struct FUN_00996800_shell : public DoorAccessData
     void AStarMap_AStarNode_NavMeshSearchNode_NavMeshSearchLink_Clear();
 };
 
-void* __cdecl memset(void*, int, unsigned int);
+void* __cdecl memset(void*, int, size_t);
 
 // If the int at offset 0x1fdc is nonzero, zeroes the first 0x1fdc bytes of the object and resets that int to 0.
 // @fnv 0x00996800

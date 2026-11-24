@@ -195,7 +195,7 @@ bool TESUseWeaponPackageData::Compare_0067cfc0(TESPackageData* apCompare)
     return false;
 }
 
-void* memset(void*, int, unsigned int);
+void* memset(void*, int, size_t);
 bool __cdecl TESForm_QEndianSwapOnSave();
 void __cdecl AppendChunk(unsigned int, void*, unsigned int);
 

@@ -271,7 +271,7 @@ int FUN_00626390_class::HavokFileStreambufReader_tell()
     return pFile ? BSFile_Tell(reinterpret_cast<char*>(pFile)) : 0;
 }
 
-int __cdecl strcat_s(char*, unsigned int, const char*);
+int __cdecl strcat_s(char*, size_t, const char*);
 int __cdecl FUN_00462d40(const char*, int, int, int, int, char*, int, char*, int);
 char* __cdecl hkString_strDup_00cb1410(const char*);
 struct FUN_00626420_shell

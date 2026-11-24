@@ -4304,7 +4304,7 @@ extern const char DAT_010a443c[];
 extern const char DAT_010a4434[];
 extern const char DAT_010a442c[];
 extern bool DAT_011acdf8;
-int __cdecl strcpy_s(char*, unsigned int, const char*);
+int __cdecl strcpy_s(char*, size_t, const char*);
 unsigned int __cdecl strlen(const char*);
 const char* __cdecl FUN_00ec7750(const char*, const char*);
 void __cdecl FNV_Warning(const char*);
