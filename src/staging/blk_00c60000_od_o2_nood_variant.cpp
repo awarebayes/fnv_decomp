@@ -1,4 +1,3 @@
-#pragma function(cosf)
 #include <xmmintrin.h>
 typedef ::__m128 LocalM128;
 #define FNV64_HKVECTOR4_OWN_SETSUB4_consthkVector4_consthkVector4   // this unit defines its own form
@@ -2906,7 +2905,7 @@ using ::_mm_sub_ps;
 using ::_mm_sub_ss;
 }
 extern "C" double __cdecl cos(_In_ double _X);
-extern "C" inline float cosf(_In_ float _X)
+extern "C" inline float x64_local_cosf(_In_ float _X)
 {
     return ((float)cos((double)_X));
 }

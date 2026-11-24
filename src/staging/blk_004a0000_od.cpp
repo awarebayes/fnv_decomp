@@ -1,4 +1,3 @@
-#pragma function(atan2f)
 #include <new>
 #include "../../include/NiTListItem.h"
 #include "../../include/NiTMallocInterface.h"
@@ -709,7 +708,7 @@ extern "C" double __cdecl atan2(double, double);
 // src: COMMUNITY 0x004b5590
 // pdb: atan2f | GlobalFunc.obj | debug, upstream name already matches, high
 // pdb params: _Y, _X
-float atan2f(float _Y, float _X)
+float x64_local_atan2f(float _Y, float _X)
 {
     return (float)atan2((double)_Y, (double)_X);
 }

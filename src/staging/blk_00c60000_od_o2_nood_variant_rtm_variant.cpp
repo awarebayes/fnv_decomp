@@ -1,5 +1,3 @@
-#pragma function(cosf)
-#pragma function(sinf)
 #include <xmmintrin.h>
 typedef ::__m128 LocalM128;
 #define FNV64_HKVECTOR4_OWN_DEFAULT
@@ -1891,7 +1889,7 @@ using ::_mm_sub_ps;
 using ::_mm_sub_ss;
 }
 extern "C" double __cdecl cos(_In_ double _X);
-extern "C" inline float cosf(_In_ float _X)
+extern "C" inline float x64_local_cosf(_In_ float _X)
 {
     return ((float)cos((double)_X));
 }
@@ -8284,7 +8282,7 @@ namespace PitchRollIntrinsics {
 extern "C" ::LocalM128(_mm_setr_ps)(float, float, float, float);
 }
 extern "C" double __cdecl sin(_In_ double _X);
-extern "C" inline float sinf(_In_ float _X)
+extern "C" inline float x64_local_sinf(_In_ float _X)
 {
     return ((float)sin((double)_X));
 }

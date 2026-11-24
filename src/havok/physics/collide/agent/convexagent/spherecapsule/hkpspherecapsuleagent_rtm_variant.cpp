@@ -1,4 +1,3 @@
-#pragma function(sqrtf)
 // Keep this unit's original intrinsic representation: the CRT union also contains
 // byte arrays, which make VC9 insert /GS checks into this function.
 #define _INCLUDED_MM2
@@ -77,7 +76,7 @@ extern "C"{
 double __cdecl fabs(double _X);
 double __cdecl sqrt(double _X);__forceinline float fabsf(float _X)
 {return((float)fabs((double)_X));}
-__forceinline float sqrtf(float _X)
+__forceinline float x64_local_sqrtf(float _X)
 {return((float)sqrt((double)_X));}
 }
 namespace MathUtilities
