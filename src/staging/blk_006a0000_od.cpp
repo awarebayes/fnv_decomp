@@ -4137,12 +4137,12 @@ struct PendingItem
 PendingItem::PendingItem()
 {}
 
-void* PendingItem::operator new(size_t size, void* where)
+void* x64_orphan_PendingItem_new(size_t size, void* where)
 {
     return where;
 }
 
-void PendingItem::operator delete(void* p, void* where)
+void ::operator delete(void* p, void* where)
 {}
 
 // Constructs b PendingItem objects in place in the array at a.

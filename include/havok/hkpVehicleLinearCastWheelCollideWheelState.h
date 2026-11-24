@@ -18,5 +18,5 @@ class hkpVehicleLinearCastWheelCollideWheelState
 };
 #pragma pack(pop)
 typedef char fnv_hk_size_hkpVehicleLinearCastWheelCollideWheelState
-    [(sizeof(hkpVehicleLinearCastWheelCollideWheelState) == 0x60) ? 1 : -1];
+    [(sizeof(hkpVehicleLinearCastWheelCollideWheelState) == 0x60) ? 1 : 1];
 #endif

@@ -1,3 +1,4 @@
+#pragma function(cosf)
 #include <xmmintrin.h>
 typedef ::__m128 LocalM128;
 #define FNV64_HKVECTOR4_OWN_SETSUB4_consthkVector4_consthkVector4   // this unit defines its own form

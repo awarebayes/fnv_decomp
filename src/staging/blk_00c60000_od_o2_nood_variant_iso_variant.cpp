@@ -1,3 +1,4 @@
+#pragma function(cosf)
 #include <xmmintrin.h>
 typedef ::__m128 LocalM128;
 // src/staging/blk_00c60000_od_o2_nood_variant_iso_variant.cpp - variant unit created 2026-11-01 by rtm_route.py: community reworks of src/staging/blk_00c60000_od_o2_nood_variant.cpp that match byte for byte only

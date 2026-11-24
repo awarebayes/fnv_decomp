@@ -942,7 +942,7 @@ bool FUN_00692950_shell::NavMesh_Load(TESFile* apFile)
             case 0x4447564e:  // NVGD
             {
                 unsigned int ichunkSize = apFile->GetChunkSize();
-                void* pchunkData = fnv_00692950::operator new(ichunkSize);
+                void* pchunkData = ::operator new(ichunkSize);
                 apFile->GetChunkData(pchunkData, ichunkSize);
                 if (!((GridS*)((char*)this + 0xa8))->LoadRecord(pchunkData, ichunkSize, apFile))
                 {
@@ -958,7 +958,7 @@ bool FUN_00692950_shell::NavMesh_Load(TESFile* apFile)
             case 0x5845564e:  // NVEX
             {
                 unsigned int ichunksize = apFile->GetChunkSize();
-                void* pchunkdata = fnv_00692950::operator new(ichunksize);
+                void* pchunkdata = ::operator new(ichunksize);
                 apFile->GetChunkData(pchunkdata, ichunksize);
                 char* pchunkPointer = (char*)pchunkdata;
                 if (ifileVersionNumber < 5)

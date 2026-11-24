@@ -9,7 +9,7 @@
 
 struct _iobuf;
 extern "C" int __cdecl fseek(_iobuf*, long, int);
-extern "C" unsigned int __cdecl fread(void*, unsigned int, unsigned int, _iobuf*);
+
 extern "C" unsigned int __cdecl fwrite(const void*, unsigned int, unsigned int, _iobuf*);
 extern "C" __declspec(dllimport) unsigned long __stdcall WaitForSingleObject(void*, unsigned long);
 extern "C" __declspec(dllimport) int __stdcall ReleaseSemaphore(void*, long, long*);

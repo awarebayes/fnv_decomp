@@ -137,7 +137,7 @@ extern const char* DAT_011ad36c;
 extern unsigned int DAT_010173f0;
 void FUN_00ec7c56();
 void std_Traits_helper_copy_s_std_char_traits_char(char*, unsigned int, const char*, unsigned int);
-unsigned int __cdecl strlen(const char*);
+
 
 struct SptAllocator
 {

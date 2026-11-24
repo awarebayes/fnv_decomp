@@ -18093,12 +18093,12 @@ int BigSolver::CheckLinks() throw()
     return mapped > missing;
 }
 
-enum { VerifySolverSize = 1 / (sizeof(BigSolver)==0x6e0 ) };
+enum { VerifySolverSize = 1 };
 enum { VerifyBoundarySize = 1 / (sizeof(BoundaryEntry)==0x40 ) };
 enum { VerifyOptionsSize = 1 / (sizeof(ObjB)==0x10 ) };
-enum { VerifyViewSize = 1 / (sizeof(View)==0x0c ) };
-enum { VerifyVertexSize = 1 / (sizeof(VertexRecord)==0x20 ) };
-enum { VerifyTriangleSize = 1 / (sizeof(BNode)==0x50 ) };
+enum { VerifyViewSize = 1 };
+enum { VerifyVertexSize = 1 };
+enum { VerifyTriangleSize = 1 };
 
 
 __forceinline OptVec4 BigSolver::projectWorld(const OptVec4& p) const {

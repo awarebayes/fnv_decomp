@@ -102,7 +102,7 @@ extern "C"
     extern void(__stdcall* fnv_EnterCriticalSection)(void*);
     extern void(__stdcall* fnv_LeaveCriticalSection)(void*);
     __declspec(dllimport) void* __stdcall VirtualAlloc(void*, unsigned int, unsigned int, unsigned int);
-    int __cdecl sprintf_s(char*, unsigned int, const char*, ...);
+
 }
 
 FNV_STATIC_ASSERT(sizeof(MemoryBlockHeader) == 8);

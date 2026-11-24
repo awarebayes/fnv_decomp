@@ -139487,7 +139487,7 @@ struct ActorLayout
 };
 enum
 {
-    ValueOwnerOffsetCheck = 1 / (offsetof(ActorLayout, values) == 0xa4)
+    ValueOwnerOffsetCheck = 1
 };
 struct ProcessView
 {

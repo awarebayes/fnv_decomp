@@ -20,6 +20,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+# Some sources define a global `operator new(size_t, <integer>)` next to the sized `operator delete`, which
+# this compiler refuses to pair; those units are compiled again without sized deallocation.
+RETRY = {'C2956': ['/Zc:sizedDealloc-']}
 FLAGS = ['/nologo', '/c', '/O2', '/MD', '/GS-', '/EHsc', '/GR', '/fp:precise', '/Gy', '/w']
 
 
@@ -40,19 +43,26 @@ def compile_unit(cl, env, repo, out, unit, timeout):
     obj = out / 'obj' / (stem + '.obj')
     # preprocessor defines are part of what a unit means (zlib units rename the CRT copies); other flags are replaced
     defines = [f for f in unit.get('flags', []) if f.startswith('/D')]
-    cmd = [str(cl)] + FLAGS + defines + ['/FI', str(repo / 'include' / 'x64_compat.h'),
-                               '/I', str(repo / 'include'), '/I', str(repo / src.parent), '/I', str(repo / 'src'),
-                               '/Fo' + str(obj), str(repo / src)]
     start = time.time()
-    try:
-        p = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=timeout, stdin=subprocess.DEVNULL)
-        text, rc = p.stdout + p.stderr, p.returncode
-    except subprocess.TimeoutExpired:
-        text, rc = 'TIMEOUT', 99
+    extra, retried = [], []
+    while True:
+        cmd = [str(cl)] + FLAGS + extra + defines + ['/FI', str(repo / 'include' / 'x64_compat.h'),
+                                   '/I', str(repo / 'include'), '/I', str(repo / src.parent), '/I', str(repo / 'src'),
+                                   '/Fo' + str(obj), str(repo / src)]
+        try:
+            p = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=timeout, stdin=subprocess.DEVNULL)
+            text, rc = p.stdout + p.stderr, p.returncode
+        except subprocess.TimeoutExpired:
+            text, rc = 'TIMEOUT', 99
+        more = [f for code, flags in RETRY.items() if re.search(r'error ' + code, text) for f in flags if f not in extra]
+        if rc == 0 or not more:
+            break
+        extra += more
+        retried += more
     (out / 'logs' / (stem + '.log')).write_text(text)
     errors = [l.strip() for l in text.splitlines() if re.search(r'error C\d+|fatal error', l)]
     return {'source': unit['source'], 'ok': rc == 0 and obj.exists(), 'seconds': round(time.time() - start, 1),
-            'errors': errors[:5], 'nerrors': len(errors)}
+            'errors': errors[:5], 'nerrors': len(errors), 'extra_flags': retried}
 
 
 def main():

@@ -3661,7 +3661,7 @@ inline hkpCollidable*getCollidableB(){return reinterpret_cast<hkpCollidable*>(m_
 extern "C"
 {
 void __cdecl ProcessGskAgentInput(NarrowPhaseAgentEntry*entry,const GskAgentInput&input,WorldOperationEntry&output,hkpContactMgr*mgr);}
-__forceinline void* __cdecl hkStepInfo::operator new(size_t nbytes)
+__forceinline void* __cdecl x64_orphan_hkStepInfo_new(size_t nbytes)
 {
     return hkMemoryRouter::getInstance().heap().blockAlloc(static_cast<int>(nbytes));
 }

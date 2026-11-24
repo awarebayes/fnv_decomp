@@ -1,3 +1,5 @@
+#pragma function(cosf)
+#pragma function(sinf)
 #include <xmmintrin.h>
 typedef ::__m128 LocalM128;
 #define FNV64_HKVECTOR4_OWN_DEFAULT

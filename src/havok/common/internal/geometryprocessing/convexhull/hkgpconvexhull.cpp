@@ -4718,7 +4718,7 @@ __forceinline __m128 hkSimdReal::broadcast() const { return (_mm_shuffle_ps)(m_v
 __forceinline const __m128& hkSimdReal::getQuad() const { return m_vValue; }
 
 typedef const hkSimdReal& hkSimdRealParameter;extern "C" {
-double __cdecl fabs([SA_Pre(Null=SA_No)] [SA_Pre(Deref=1,Valid=SA_Yes,Access=SA_Read)] double _X);inline float fabsf([SA_Pre(Null=SA_No)] [SA_Pre(Deref=1,Valid=SA_Yes,Access=SA_Read)] float _X)
+double __cdecl fabs(double _X);inline float fabsf(float _X)
 {return ((float)fabs((double)_X)); }
 }
 namespace MathUtilities

@@ -1,3 +1,4 @@
+#pragma function(atan2f)
 #include <new>
 #include "../../include/NiTListItem.h"
 #include "../../include/NiTMallocInterface.h"

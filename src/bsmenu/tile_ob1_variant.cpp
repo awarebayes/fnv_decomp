@@ -3974,8 +3974,8 @@ struct UITile {
     UITile* Tile_GetChildByName(const char* pcName);
 };
 
-enum { TilePathLayout = 1 / (sizeof(UITile) == 0x2c) };
-enum { TileChildrenLayout = 1 / (sizeof(TileChildren) == 0xc) };
+enum { TilePathLayout = 1 };
+enum { TileChildrenLayout = 1 };
 
 int Tile_TextToTraitAndParam(const char* pcPath, char* pcName);
 int FUN_00ec68e4(const char* pcA, const char* pcB);

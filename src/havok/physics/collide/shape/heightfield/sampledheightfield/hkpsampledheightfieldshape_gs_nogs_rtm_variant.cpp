@@ -94,7 +94,7 @@ return fnv_FloatToInt(r);
 }
 }
 extern "C"{
-double __cdecl fabs([SA_Pre(Null=SA_No)][SA_Pre(Deref=1,Valid=SA_Yes,Access=SA_Read)]double _X);inline float fabsf([SA_Pre(Null=SA_No)][SA_Pre(Deref=1,Valid=SA_Yes,Access=SA_Read)]float _X)
+double __cdecl fabs(double _X);inline float fabsf(float _X)
 {return((float)fabs((double)_X));}
 }
 namespace MathUtilities

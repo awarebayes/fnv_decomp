@@ -104,7 +104,7 @@ unsigned int __cdecl GetPathHash(const char*, bool);
 unsigned int __cdecl BSTexturePalette_GetContainerNumber(const char*);
 bool __cdecl BSTexturePalette_ArePathsEqual(const char*, const char*);
 
-inline void* BSTexMapItem::operator new(size_t size)
+inline void* x64_orphan_BSTexMapItem_new(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }

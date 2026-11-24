@@ -813,7 +813,7 @@ struct hkArrayBaseDBBD
 };
 
 // Keep allocation inline so callers store the Havok allocation size before construction.
-inline void* hkDataArrayNative::operator new(size_t nbytes)
+inline void* x64_orphan_hkDataArrayNative_new(size_t nbytes)
 {
     void* memory = GetRouterHeap<hkMemoryAllocator>(hkMemoryRouter_getInstance()).blockAlloc(nbytes);
     reinterpret_cast<unsigned short*>(memory)[2] = static_cast<unsigned short>(nbytes);

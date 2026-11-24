@@ -660,7 +660,7 @@ void __cdecl CopyListToTail(void* pSourceList, SoundListView* pCopyToList)
 }
 
 void __cdecl Deallocate(void*);
-unsigned int __cdecl strlen(const char*);
+
 void* __cdecl memcpy(void*, const void*, size_t);
 char* __cdecl ourCalloc(int, int);
 
@@ -2264,7 +2264,7 @@ void __cdecl WriteReferenceLists(BGSSaveFormBuffer* buffer)
 }
 
 int _mbscmp(const unsigned char* _s1, const unsigned char* _s2);
-unsigned int __cdecl strlen(const char*);
+
 
 // @fnv 0x005ab240
 // src: XBOX_RETAIL_PDB 0x005ab240

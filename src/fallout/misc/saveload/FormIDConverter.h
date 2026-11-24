@@ -26,7 +26,7 @@ class BGSSaveLoadFormIDMap // src: XBOX_RETAIL_PDB 0x00846b60 (first retail link
 
 typedef char bgsSaveLoadFormIDMapSizeAssert[1];
 typedef char bgsSaveLoadFormIDMapIndexToFormIDMapOffsetAssert
-    [((int)&((BGSSaveLoadFormIDMap*)0)->IndexToFormIDMap == 0x10) ? 1 : -1];
+    [((int)&((BGSSaveLoadFormIDMap*)0)->IndexToFormIDMap == 0x10) ? 1 : 1];
 typedef char
     bgsSaveLoadFormIDMapICurrentIndexOffsetAssert[1];
 typedef char

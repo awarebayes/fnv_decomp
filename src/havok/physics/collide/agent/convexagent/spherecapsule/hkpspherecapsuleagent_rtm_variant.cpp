@@ -1,3 +1,4 @@
+#pragma function(sqrtf)
 // Keep this unit's original intrinsic representation: the CRT union also contains
 // byte arrays, which make VC9 insert /GS checks into this function.
 #define _INCLUDED_MM2

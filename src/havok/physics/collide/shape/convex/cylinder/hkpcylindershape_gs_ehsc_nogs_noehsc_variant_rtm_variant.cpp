@@ -580,7 +580,7 @@ __forceinline __m128 hkSimdReal::broadcast() const { return _mm_shuffle_ps(m_vVa
 __forceinline const __m128& hkSimdReal::getQuad() const { return m_vValue; }
 typedef const hkSimdReal&hkSimdRealParameter;class Vector4Comparison;
 typedef const Vector4Comparison&hkVector4ComparisonParameter;extern "C"{
-double __cdecl sqrt([SA_Pre(Null=SA_No)][SA_Pre(Deref=1,Valid=SA_Yes,Access=SA_Read)]double _X);
+double __cdecl sqrt(double _X);
 }
 namespace MathUtilities
 {

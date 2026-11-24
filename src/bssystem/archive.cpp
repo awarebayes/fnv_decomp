@@ -66,7 +66,7 @@ inline bool ArchivePointerNotEqual(const NiPointer<Archive>& pointer, Archive* o
 
 extern "C" int __cdecl _strnicmp(const char*, const char*, size_t);
 extern "C" int __cdecl strcat_s(char*, size_t, const char*);
-extern "C" int __cdecl _strlwr_s(char*, unsigned int);
+
 extern "C" const char kDataPrefix[];
 extern "C" const char kTexturePrefix[];
 
