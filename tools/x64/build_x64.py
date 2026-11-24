@@ -2,7 +2,7 @@
 """Compile every translation unit of this tree as x64 with MSVC 19.16 (/O2), on Windows.
 
 usage: python build_x64.py --msvc <dir holding VC/Tools/MSVC/<ver> and Windows Kits/10> [--jobs 6]
-                           [--out build-x64] [--only TEXT] [--limit N] [--max-lines N]
+                           [--out build-x64] [--only TEXT] [--list FILE] [--limit N] [--max-lines N]
 
 This is a port experiment, not a byte-matching build: the sources were written for a 32-bit
 compiler, and include/x64_compat.h (force-included) absorbs what x64 cannot express. Only the
@@ -61,6 +61,7 @@ def main():
     ap.add_argument('--jobs', type=int, default=6)
     ap.add_argument('--out', type=Path, default=Path('build-x64'))
     ap.add_argument('--only', default='')
+    ap.add_argument('--list', type=Path, help='file with one source path per line: compile only those')
     ap.add_argument('--limit', type=int, default=0)
     ap.add_argument('--max-lines', type=int, default=0)
     ap.add_argument('--timeout', type=int, default=600)
@@ -75,6 +76,9 @@ def main():
     units = [u for u in units if a.only in u['source'] and (repo / u['source']).exists()]
     seen = set()  # a source listed under several recipes is compiled once, or the objects race
     units = [u for u in units if not (u['source'] in seen or seen.add(u['source']))]
+    if a.list:
+        wanted = {l.strip().replace('\\', '/') for l in a.list.read_text().splitlines() if l.strip()}
+        units = [u for u in units if u['source'] in wanted]
     if a.max_lines:
         units = [u for u in units if sum(1 for _ in open(repo / u['source'], errors='replace')) <= a.max_lines]
     if a.limit:

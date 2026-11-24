@@ -5,5 +5,7 @@
 #ifdef _WIN64
 #define FNV_X64 1
 #include <stddef.h>
+// The compiler declares this name itself for classes with a vftable; the sources declare it by hand.
+#define __local_vftable_ctor_closure x64_local_vftable_ctor_closure
 #endif
 #endif
