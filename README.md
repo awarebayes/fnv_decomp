@@ -1,3 +1,30 @@
+# fnv_decomp: x64 port
+
+An x64 port of [momusdigital/fnv_decomp](https://github.com/momusdigital/fnv_decomp) (CC0 1.0), kept on the `x64-msvc1916` branch of this fork. All the
+decompiled source, names and structure are the upstream contributors' work. The port changes only what a 64-bit
+compiler cannot take, so the whole tree can be compiled natively as x64 with MSVC 19.16 `/O2`. It adds no new
+reconstruction, no game files, no compiled objects and no data from any other source.
+
+- **What it is for.** Compiling the tree with a newer, 64-bit compiler, for research on the 64-bit games built from
+  related code. The output is not byte-matched against any original; it is not the game's code.
+- **What changed.** `include/x64_compat.h` (force-included), mechanical source edits (32-bit size asserts disabled,
+  inline assembly stubbed, `operator new`/`delete` signatures widened to `size_t`, CRT redeclarations corrected,
+  `sizeof`-based array bounds clamped), each in its own commit and repeatable with `tools/x64/apply_port.py`.
+- **Build.** On Windows with the MSVC 19.16 x64 toolset and a Windows 10 SDK:
+  `python tools/x64/build_x64.py --msvc <dir holding VC/Tools/MSVC/<ver> and Windows Kits/10> --jobs 6`.
+  Flags: `/O2 /MD /GS- /EHsc /GR /fp:precise /Gy`; per-unit `/D` defines from `build/units.json` are kept. Only the
+  compile step runs; nothing is linked and no game file is needed. Units that still fail are listed in the build
+  output (about 6 to 8 percent at the time of writing).
+- **Reference.** How the whole tree is compiled (unit list, include order, driver) was checked against
+  [momusdigital/fnv_decomp_exe](https://github.com/momusdigital/fnv_decomp_exe) at `eb0e117ace9a8e4825a3838b213cbcb637568fec`. No code from it is used in the x64 build
+  script, which is original to this fork.
+- **Provenance.** Everything in the original README below applies unchanged, including the Legal section. Upstream notes that some names come from an Xbox 360 development-build PDB and that some material comes from Havok and Gamebryo source; CC0 does not cover those, and the upstream licence relicensed only the contributors' own work (42baf49a).
+  The port adds nothing new of that kind.
+
+The original README follows.
+
+---
+
 # FNV decompilation
 
 The decompilation of FNV, the Steam release for PC (version 1.4.0.525): C++ source code rebuilt function by function
