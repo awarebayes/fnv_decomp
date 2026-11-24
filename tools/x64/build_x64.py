@@ -10,6 +10,7 @@ compile step runs; objects land under --out. The flags are the ones the Skyrim S
 recipe uses so the generated code is comparable: /O2 /MD /GS- /EHsc /GR /fp:precise /Gy.
 """
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -34,6 +35,8 @@ def find_toolchain(root):
 def compile_unit(cl, env, repo, out, unit, timeout):
     src = Path(unit['source'])
     stem = re.sub(r'[^A-Za-z0-9_]', '_', str(src.with_suffix('')))
+    if len(stem) > 90:  # Windows path limit: keep names unique but short
+        stem = stem[:60] + '_' + hashlib.sha1(stem.encode()).hexdigest()[:10]
     obj = out / 'obj' / (stem + '.obj')
     # preprocessor defines are part of what a unit means (zlib units rename the CRT copies); other flags are replaced
     defines = [f for f in unit.get('flags', []) if f.startswith('/D')]
