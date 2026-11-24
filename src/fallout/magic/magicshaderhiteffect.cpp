@@ -1,3 +1,4 @@
+#include <new>
 #include "../../../include/TESTexture.h"
 // fallout/magic/magicshaderhiteffect.cpp: MagicShaderHitEffect, Effect, ThisHolder, Actor and more (45 functions)
 

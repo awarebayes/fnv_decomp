@@ -40,7 +40,7 @@
 void ProcessEntryPair();
 void hkAgent1nMachine_VisitAllAgents(int, int, void*);
 void hkAgent1nMachine_UpdateShapeCollectionFilter(int b, int a);
-typedef unsigned int BlockPoolsize_t;
+typedef size_t BlockPoolsize_t;
 struct BlockPoolAllocator {
     virtual void unk00();
     virtual void* AllocateMemoryBlock(int numBytes);
@@ -70,7 +70,7 @@ struct BlockPoolBlock {
     int unk18;
 
     BlockPoolBlock() { unk00 = 0; }
-    static void* operator new(BlockPoolsize_t, void* p) throw() { return p; }
+    static void* operator new(size_t, void* p) throw() { return p; }
 };
 typedef hkArrayBase<BlockPoolBlock*> BlockPoolArray;
 void __cdecl InitBlockPool(BlockPoolArray* blocks);

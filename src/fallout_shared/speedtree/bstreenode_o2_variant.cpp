@@ -461,7 +461,7 @@ void C8C330Owner::bhkTransformShape_LinkObject(C8C330Node* arStream)
     bhkShape_LinkObject(arStream);
 }
 
-typedef unsigned int C8CA60size_t;
+typedef size_t C8CA60size_t;
 
 struct C8CA60MemoryManager
 {
@@ -482,7 +482,7 @@ struct C8CA60Child
 {
     C8CA60Child();
 
-    static void* operator new(C8CA60size_t, void* pvMem)
+    static void* operator new(size_t, void* pvMem)
     {
         return pvMem;
     }

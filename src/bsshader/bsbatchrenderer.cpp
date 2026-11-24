@@ -1567,7 +1567,7 @@ void BSBatchRenderer_ForwardCall_00b998f0()
 }
 
 namespace fnv_00b9ac80 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }

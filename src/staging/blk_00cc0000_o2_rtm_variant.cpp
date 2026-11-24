@@ -1909,7 +1909,7 @@ struct FUN_00cc2f40_cls
     unsigned char m_3d;
     FUN_00cc2f40_cls();
 };
-typedef unsigned int CC2F90size_t;
+typedef size_t CC2F90size_t;
 struct CC2F90MemoryManager
 {
     void* Allocate(unsigned int uiSize);
@@ -1942,7 +1942,7 @@ struct CC2F90Child
 {
     CC2F90Child();
 
-    static void* operator new(CC2F90size_t, void* pvMem)
+    static void* operator new(size_t, void* pvMem)
     {
         return pvMem;
     }
@@ -5761,7 +5761,7 @@ struct FUN_00ccb3e0_Class
     virtual FUN_00ccb3e0_Data* bhkPlaneShape_CreateCinfo(unsigned char* value);
     void __thiscall bhkShape_SaveBinary(unsigned char* arStream);
 };
-typedef unsigned int CCB730size_t;
+typedef size_t CCB730size_t;
 struct CCB730MemoryManager
 {
     void* Allocate(unsigned int uiSize);
@@ -5814,7 +5814,7 @@ struct CCB730Child
     float m_f38;
     float m_f3C;
 
-    static void* operator new(CCB730size_t, void* pvMem)
+    static void* operator new(size_t, void* pvMem)
     {
         return pvMem;
     }
@@ -10729,7 +10729,7 @@ struct MoppOwner570
     void BaseOutput(StrArr*);
     void OutputMoppCodeInfo(StrArr*);
 };
-typedef unsigned int CCADB0size_t;
+typedef size_t CCADB0size_t;
 struct CCADB0MemoryManager
 {
     void* Allocate(unsigned int uiSize);
@@ -10775,7 +10775,7 @@ struct CCADB0Child
     float m_f38;
     float m_f3C;
 
-    static void* operator new(CCADB0size_t uiSize) throw()
+    static void* operator new(size_t uiSize) throw()
     {
         return g_CCADB0MemoryManager.Allocate(uiSize);
     }

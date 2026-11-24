@@ -10978,7 +10978,7 @@ typedef float TF32; typedef double TD64; typedef signed char TC; typedef signed 
 typedef signed short TI16; typedef signed int TI32; typedef unsigned char TU; typedef unsigned char TU8;
 typedef unsigned short TU16; typedef unsigned int TU32; typedef unsigned long __w64 TU1; typedef signed long __w64 TL;
 typedef void*Tvl; enum TR1{ KS=0,KF=1} ;
-typedef unsigned __int64 TU64; typedef __int64 TI64; typedef long TST2; typedef unsigned __w64 TS4;
+typedef unsigned __int64 TU64; typedef __int64 TI64; typedef long TST2; typedef size_t TS4;
 typedef TU16 TOI; typedef TR TT; __forceinline TL __cdecl TGBO(const void*base,const void*pntr)throw(){ return TL(pntr)-TL(base);
 } template<typename TYPE>__forceinline TYPE*__cdecl TABO(TYPE*base,TL offset)throw(){ return reinterpret_cast<TYPE*>(reinterpret_cast<char*>(base)+offset); }
 class TFLOF{ public:TFLOF()throw():vf1(0){ } int vf1;
@@ -11051,7 +11051,7 @@ typedef void(__cdecl*TERF)(const char*s,void*errorReportObject); namespace TCE2{
 template<bool b>struct TrueOnlyTrait; template<>struct TrueOnlyTrait<true>; } template<class TYPE>class TRP{
 public:__forceinline TYPE*val()const throw(); __forceinline operator TYPE*()const; private:TYPE*vp4; }
 ; template<class TYPE>__forceinline TYPE*TRP<TYPE>::val()const throw(){ return vp4; }
-struct TPNA; inline void*operator new(TS4,TPNA*p){ return p; }
+struct TPNA; inline void*operator new(size_t,TPNA*p){ return p; }
 template<bool N>struct TTB{ typedef TTB<N>type; enum{ result=N}
 ; } ; typedef TTB<true>TTIP;
 typedef TTB<false>TTIC; template<typename T>TB::CompileTimeFalseType operator==(const T&,const TTIP&)throw(); template<typename T>struct TIPT:public TTB<(sizeof(*static_cast<T*>(0)==*static_cast<const TTIP*>(0))==sizeof(TB::CompileTimeTrueType))>{ }
@@ -11459,8 +11459,8 @@ class TBPL{ public:virtual~TBPL()throw(); virtual void vs59()throw(); virtual vo
 class EntityBatchAccess; class TCI2; class TSI1; class TBP;
 class TW; class TCD; struct TWDSI; class TBPHP;
 struct TCI; struct TPCO; extern const TC1 FUN_00d07830Class; class FUN_00d07830:public TCO{
-public:__forceinline void*__cdecl operator new(TS4 nbytes){ ; TRO*b=static_cast<TRO*>(TMR::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(static_cast<int>(nbytes))); b->vmSAF=static_cast<TU16>(nbytes);
-; return b; } __forceinline void*__cdecl operator new(TS4,void*p){
+public:__forceinline void*__cdecl operator new(size_t nbytes){ ; TRO*b=static_cast<TRO*>(TMR::hkMemoryRouter_getInstance().heap().AllocateMemoryBlock(static_cast<int>(nbytes))); b->vmSAF=static_cast<TU16>(nbytes);
+; return b; } __forceinline void*__cdecl operator new(size_t,void*p){
 return p; } inline TB isFixed()const throw(); virtual void vs9()const throw();
 protected:friend class TW; friend class TWOU; friend class TWCU; friend class TS2;
 friend class TCS; friend class TAMU; FUN_00d07830(TW*world)throw(); ~FUN_00d07830()throw();

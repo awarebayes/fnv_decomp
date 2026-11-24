@@ -4918,7 +4918,7 @@ extern "C" void _ReadWriteBarrier();
 extern "C" void _ReadBarrier();
 extern "C" void _WriteBarrier();
 
-void* operator new(size_t, void* p)
+void* x64_ns_new(size_t, void* p)
 {
     return p;
 }

@@ -272,7 +272,7 @@ void FUN_00ce26f0_Class::hkaRagdollInstance_getApproxCurrentPoseWorldSpace(FUN_0
     this->ApplyValueToTransforms(target->hkpWorld_getCurrentTime(), poseWorldSpaceOut);
 }
 
-typedef unsigned int hk_size_tR;
+typedef size_t hk_size_tR;
 class hkMemoryAllocatorR
 {
   public:
@@ -389,7 +389,7 @@ class hkpConstraintInstanceR : public hkReferencedObjectR
 class hkaRagdollInstanceR : public hkReferencedObjectR
 {
   public:
-    __forceinline void* operator new(hk_size_tR uiBytes)
+    __forceinline void* operator new(size_t uiBytes)
     {
         hkReferencedObjectR* b =
             static_cast<hkReferencedObjectR*>(GetRagdollHeap(GetMemoryRouterR()).AllocateMemoryBlock(uiBytes));

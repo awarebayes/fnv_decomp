@@ -1,3 +1,4 @@
+#include <new>
 // Matched operands prove the original import slot named below.
 #define SteamUser fnv_Import_SteamUtils_00fdf49c
 

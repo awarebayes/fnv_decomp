@@ -7,5 +7,5 @@ extern BGSRadiationStage** DAT_011ca880;
 BGSRadiationStage* BGSRadiationStage_GetStage(unsigned int index);
 void BGSRadiationStage_AddStage(BGSRadiationStage* apNewStage);
 extern "C" void* __cdecl __RTDynamicCast(void* source, long vfDelta, void* sourceType, void* targetType,
-                                         int isReference);
+                                         int isReference) noexcept(false);
 #endif

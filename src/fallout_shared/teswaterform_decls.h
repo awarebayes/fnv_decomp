@@ -7,7 +7,7 @@
 
 TESForm* __cdecl GetFormByID(unsigned int);
 int __cdecl Warning(const char*, ...);
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 extern int DAT_01184118;
 
 extern float g_splatterDefaultSecond;

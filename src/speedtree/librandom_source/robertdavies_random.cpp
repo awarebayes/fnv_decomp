@@ -889,7 +889,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -1300,7 +1300,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {

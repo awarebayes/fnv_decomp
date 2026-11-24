@@ -2259,7 +2259,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -2703,7 +2703,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -3150,7 +3150,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -3553,7 +3553,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -3655,7 +3655,7 @@ ElemMOVE* __cdecl Idvspline_EvaluateValue_00b3b6f0(ElemMOVE* _First, ElemMOVE* _
 }  // namespace fnv_00b3b6f0
 
 namespace fnv_00b3b880 {
-inline void* __cdecl operator new(size_t, void* where)
+inline void* __cdecl x64_ns_new(size_t, void* where)
 {
     return where;
 }
@@ -3702,7 +3702,7 @@ template <class _Ty> class allocator
 {
   public:
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     pointer allocate(size_type _Count)
     {
         unsigned int x = _Count;
@@ -4937,7 +4937,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -5098,7 +5098,7 @@ void FUN_00b3b100_Iterator::ProcessAndReturnValue_00b3b100()
 
 namespace fnv_00b3b330 {
 extern const unsigned int DAT_010173f0;
-extern void __cdecl operator delete(void*) throw();
+extern void __cdecl x64_ns_delete(void*) throw();
 void __cdecl CopyChars(char*, unsigned int, const char*, unsigned int);
 void __cdecl MoveChars(char*, unsigned int, const char*, unsigned int);
 void __cdecl RangeError();
@@ -5242,14 +5242,14 @@ struct TreeNode
     {}
 };
 
-inline void* __cdecl operator new(size_t, void* _Where) throw()
+inline void* __cdecl x64_ns_new(size_t, void* _Where) throw()
 {
     return _Where;
 }
-inline void __cdecl operator delete(void*, void*) throw()
+inline void __cdecl x64_ns_delete(void*, void*) throw()
 {}
-extern void __cdecl operator delete(void*) throw();
-extern void* __cdecl operator new(size_t);
+extern void __cdecl x64_ns_delete(void*) throw();
+extern void* __cdecl x64_ns_new(size_t);
 namespace std {
 class exception
 {

@@ -16607,7 +16607,7 @@ struct CellPoint3
 
 
 
-inline void* operator new(size_t size, void* ptr)
+inline void* x64_ns_new(size_t size, void* ptr)
 {
     return ptr;
 }

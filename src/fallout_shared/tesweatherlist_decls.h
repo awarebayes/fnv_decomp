@@ -47,7 +47,7 @@ class ContainerItemExtraFileData
 int __cdecl CompareSecondElement(WeatherEntry* left, WeatherEntry* right);
 int __cdecl Warning(const char* format, ...);
 extern "C" void* __cdecl __RTDynamicCast(void* object, long vfDelta, void* sourceType, void* targetType,
-                                         int isReference);
+                                         int isReference) noexcept(false);
 extern "C" const char DAT_010318b4[];
 extern "C" const char DAT_01031858[];
 extern "C" const char DAT_0118629c[];

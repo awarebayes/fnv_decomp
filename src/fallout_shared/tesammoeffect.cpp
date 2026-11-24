@@ -34,7 +34,7 @@ TESAmmoEffect::TESAmmoEffect() : TESForm(), TESFullName()
 class NiTexture;
 
 
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 
 extern "C" void* __cdecl _alloca(size_t);
 

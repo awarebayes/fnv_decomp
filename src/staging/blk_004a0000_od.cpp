@@ -1,3 +1,4 @@
+#include <new>
 #include "../../include/NiTListItem.h"
 #include "../../include/NiTMallocInterface.h"
 #include "../../include/NiTArray.h"

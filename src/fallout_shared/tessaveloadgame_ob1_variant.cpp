@@ -385,7 +385,7 @@ class MemContextScopeC3
 
 extern MemoryManager g_kMemoryManagerC3;
 
-inline void* operator new[](size_t uiSize)
+inline void* x64_ns_new_array(size_t uiSize)
 {
     return g_kMemoryManagerC3.Allocate(uiSize);
 }

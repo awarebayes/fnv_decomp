@@ -24,7 +24,7 @@ class TaskQueueInterface
 
 extern unsigned char DAT_01183108;
 extern unsigned char DAT_011831e8;
-extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int);
+extern "C" void* __cdecl __RTDynamicCast(void*, long, void*, void*, int) noexcept(false);
 
 // pdb: class ModelLoader, size 0x30 (here 0x1), 12 members
 class ModelLoader

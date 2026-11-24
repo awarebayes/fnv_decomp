@@ -871,7 +871,7 @@ void NiTransformInterpolator::CopyMembers(NiTransformInterpolator* pkDest, Cloni
 
 namespace fnv_00a403f0 {
 void* __cdecl Object_DispatchCommandFour(unsigned int size);
-inline void* __cdecl operator new(size_t, void* address)
+inline void* __cdecl x64_ns_new(size_t, void* address)
 {
     return address;
 }

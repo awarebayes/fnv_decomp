@@ -1,3 +1,4 @@
+#include <new>
 // fallout_shared/pathfinding/pathfind.cpp: Pathing, ActorDeletionQueue_pathfind_decls, PathBuilder, ArrHelper and more (87 functions)
 
 #define FNV64_NIPOINTER_INLINE_BODIES

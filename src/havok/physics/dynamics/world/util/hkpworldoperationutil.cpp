@@ -1819,7 +1819,7 @@ void __cdecl hkpWorldOperationUtil_internalDeactivateIsland(hkpWorld* apOwner, h
 }
 
 namespace fnv_00cb5500 {
-inline void* __cdecl operator new(size_t, void* place)
+inline void* __cdecl x64_ns_new(size_t, void* place)
 {
     return place;
 }
@@ -2304,7 +2304,7 @@ void __cdecl Cb5750_Owner::hkpWorldOperationUtil_updateEntityBP(Cb5750_Param* pa
 }
 
 namespace fnv_00cb5dd0 {
-inline void* __cdecl operator new(size_t, void* place)
+inline void* __cdecl x64_ns_new(size_t, void* place)
 {
     return place;
 }
@@ -2736,7 +2736,7 @@ int keep_alive_b11420(ShapeList* list, int** flags, int*** indexMap, int** count
 }
 
 namespace fnv_00cb4790 {
-inline void* __cdecl operator new(size_t, void* place)
+inline void* __cdecl x64_ns_new(size_t, void* place)
 {
     return place;
 }

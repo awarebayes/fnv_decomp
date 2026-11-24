@@ -1,3 +1,4 @@
+#include <new>
 // Distinct original implementations share reconstructed identifiers.
 // Keep each matched body under its own address-qualified name.
 #define ConstructElements ConstructElements_fnv_009e9a50

@@ -2049,7 +2049,7 @@ struct SpawnedObject : SpawnedBase
     virtual void v1();
 };
 
-inline void* __cdecl operator new(size_t, void* p) throw()
+inline void* __cdecl x64_ns_new(size_t, void* p) throw()
 {
     return p;
 }

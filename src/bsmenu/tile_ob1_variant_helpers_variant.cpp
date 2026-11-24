@@ -1,3 +1,4 @@
+#include <new>
 #include "../../include/NiTMapItem.h"
 // src/bsmenu/tile_ob1_variant_helpers_variant.cpp - helper variant unit created 2026-11-01 by helper_variants.py: the reworked code of these functions uses the
 // approved helpers of fnv_asm_helpers.h, which src/bsmenu/tile_ob1_variant.cpp cannot include without changing its accepted functions.

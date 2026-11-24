@@ -1,3 +1,4 @@
+#include <new>
 // fallout_shared/pathfinding/pathinglocation.cpp: PathingLocation and pathfinding helpers (34 functions)
 
 #include "pathinglocation_decls.h"

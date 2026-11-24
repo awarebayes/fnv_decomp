@@ -1,3 +1,4 @@
+#include <new>
 #include "../../include/SettingT.h"
 
 // src/staging/blk_009a0000_od.cpp - STAGING unit created 2026-10-16 by stage_units.py for functions with no attributed unit

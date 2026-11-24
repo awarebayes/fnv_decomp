@@ -4281,8 +4281,8 @@ static __forceinline void InitEv(Ev* e, Ev* ev, unsigned char type, unsigned cha
     e->m_1c = ev->m_1c;
 }
 
-inline void* __cdecl operator new(size_t, void* p) throw() { return p; }
-inline void __cdecl operator delete(void*,void*) throw() {}
+inline void* __cdecl x64_ns_new(size_t, void* p) throw() { return p; }
+inline void __cdecl x64_ns_delete(void*,void*) throw() {}
 struct Placed2 : Ev { __forceinline Placed2(Ev* ev, State* s) {
                     InitEv(this, ev, 8, 1, 0x30);
                     *(Ev30*)this = *(Ev30*)ev;

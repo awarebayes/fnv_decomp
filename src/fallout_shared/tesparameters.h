@@ -41,7 +41,7 @@ extern const char DAT_01069608[];
 extern const char DAT_010695a8[];
 extern const char DAT_01069540[];
 extern "C" void* __cdecl __RTDynamicCast(void* source, long vfDelta, void* sourceType, void* targetType,
-                                         int isReference);
+                                         int isReference) noexcept(false);
 int __cdecl Warning(const char* format, ...);
 // src: COMMUNITY
 extern ScriptFunctionInfo g_scriptCommands[];

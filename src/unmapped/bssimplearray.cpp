@@ -1,3 +1,4 @@
+#include <new>
 #include "../../include/NiPoint3.h"
 #include "../../include/PathingLocation.h"
 #include "../../include/BSScrapArray.h"

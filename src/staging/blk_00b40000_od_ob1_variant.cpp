@@ -451,7 +451,7 @@ template <class _Ty> class allocator
     typedef _Ty& reference;
     typedef const _Ty* const_pointer;
     typedef const _Ty& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class _Other> struct rebind
     {
@@ -1251,7 +1251,7 @@ struct VbBase
 template <class T> struct VbAlloc
 {
     typedef T* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef VbAlloc<U> other;
@@ -1789,7 +1789,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -2881,7 +2881,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -3037,11 +3037,11 @@ EUMB* __cdecl Object_ProcessAndReturnValue_00b42da0(EUMB* _First, EUMB* _Last, E
 namespace fnv_00b40b30 {
 #include <string.h>
 
-inline void* operator new(size_t, void* _Where) throw()
+inline void* x64_ns_new(size_t, void* _Where) throw()
 {
     return _Where;
 }
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 template <class T> struct VecAlloc
 {

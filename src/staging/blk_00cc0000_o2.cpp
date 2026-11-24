@@ -3463,7 +3463,7 @@ FUN_00cc2f40_cls::FUN_00cc2f40_cls() {
     m_3d = 1;
 }
 
-typedef unsigned int CC2F90size_t;
+typedef size_t CC2F90size_t;
 
 struct CC2F90MemoryManager;
 extern CC2F90MemoryManager g_CC2F90MemoryManager;
@@ -3482,7 +3482,7 @@ inline void* CC2F90AlignedAlloc(unsigned int uiSize)
 struct CC2F90Child {
     CC2F90Child();
 
-    static void* operator new(CC2F90size_t, void* pvMem) { return pvMem; }
+    static void* operator new(size_t, void* pvMem) { return pvMem; }
 };
 
 struct CC2F90Owner {
@@ -9705,7 +9705,7 @@ SpawnC_cls* FUN_00ccb4e0_cls::CreateSpawnC(unsigned int arCloneData)
 }
 }  // namespace fnv_00ccb4e0
 
-typedef unsigned int CCB730size_t;
+typedef size_t CCB730size_t;
 
 struct CCB730MemoryManager;
 extern CCB730MemoryManager g_CCB730MemoryManager;
@@ -9745,7 +9745,7 @@ struct CCB730Child {
     float m_f38;
     float m_f3C;
 
-    static void* operator new(CCB730size_t, void* pvMem) { return pvMem; }
+    static void* operator new(size_t, void* pvMem) { return pvMem; }
 };
 
 struct CCB730Owner {
@@ -16184,7 +16184,7 @@ void MoppOwner570::OutputMoppCodeInfo(StrArr* apStrings) {
  AppendStringReference(apStrings, static_cast<const NiPoint3&>(point).FormatToBuffer("MoppCode Offset"));
 }
 
-typedef unsigned int CCADB0size_t;
+typedef size_t CCADB0size_t;
 
 struct CCADB0MemoryManager;
 extern CCADB0MemoryManager g_CCADB0MemoryManager;
@@ -16217,7 +16217,7 @@ struct CCADB0Child {
     float m_f38;
     float m_f3C;
 
-    static void* operator new(CCADB0size_t uiSize) throw() { return reinterpret_cast<MemoryManager&>(g_CCADB0MemoryManager).Allocate(uiSize); }
+    static void* operator new(size_t uiSize) throw() { return reinterpret_cast<MemoryManager&>(g_CCADB0MemoryManager).Allocate(uiSize); }
     static void operator delete(void* pvMem) {}
 };
 
@@ -18522,7 +18522,7 @@ void __cdecl bhkMoppBvTreeShape_IsEqual()
 }
 
 namespace fnv_00cca2a0 {
-inline void* __cdecl operator new(size_t, void* place) { return place; }
+inline void* __cdecl x64_ns_new(size_t, void* place) { return place; }
 
 struct Allocator {
     void* __thiscall Game_DoHeapAlloc(unsigned int bytes);

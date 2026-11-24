@@ -723,11 +723,11 @@ ScrapHeapBuffer* Menu_GetParsedXML(unsigned long apFilename)
 namespace fnv_00a1d280 {
 
 extern MemoryManager g_memoryManager;
-inline void* operator new[](size_t stSize)
+inline void* x64_ns_new_array(size_t stSize)
 {
     return g_memoryManager.Allocate(stSize);
 }
-inline void operator delete[](void* pvMem)
+inline void x64_ns_delete_array(void* pvMem)
 {
     g_memoryManager.Deallocate(pvMem);
 }

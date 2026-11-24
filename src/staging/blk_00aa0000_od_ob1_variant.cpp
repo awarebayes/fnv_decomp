@@ -2762,7 +2762,7 @@ template <class T> class allocator
   public:
     typedef T value_type;
     typedef T* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef allocator<U> other;
@@ -2786,7 +2786,7 @@ template <class E, class Tr, class A> class basic_string
 {
   public:
     typedef basic_string<E, Tr, A> Myt;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     enum
     {
         BUF_SIZE = 16
@@ -5590,7 +5590,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -5763,7 +5763,7 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 struct FUN_00aaec10
 {
@@ -6873,7 +6873,7 @@ void Ab0a30Owner::std_vector_FffModeGS_std_allocator_FffModeGS_resize(int a0)
 namespace fnv_00ab0a80 {
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int, int);
 void __cdecl FUN_0064df10(void*, unsigned int);
-inline void __cdecl operator delete(void*, void*)
+inline void __cdecl x64_ns_delete(void*, void*)
 {}
 struct AuxCont;
 struct ContainerBase
@@ -6896,7 +6896,7 @@ template <class T> struct GameAlloc
 {
     typedef T value_type;
     typedef T* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef GameAlloc<U> other;
@@ -6939,7 +6939,7 @@ struct Short3
 };
 template <class T, class Alloc> struct VectorVal : BaseAlloc<Alloc>
 {
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typename Alloc::template rebind<T>::other alval;
     T* first;
     T* last;
@@ -7183,7 +7183,7 @@ struct FUN_0065ecd0_class
         sub.FUN_0065fb10(o.sub);
     }
 };
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 // @fnv 0x00ab2490
 // src: GUESS 0x00ab2490 (confidence: low)
@@ -9640,7 +9640,7 @@ FUN_00aba060_It& FUN_00aba060_It::ProcessAndReturnValue_00aba060()
 
 namespace fnv_00aba0d0 {
 void* __cdecl std_allocator_SIdvLeafTexture_allocator_SIdvLeafTexture(unsigned int count, int hint);
-inline void __cdecl operator delete(void*, void*)
+inline void __cdecl x64_ns_delete(void*, void*)
 {}
 struct AbaAux
 {
@@ -9660,7 +9660,7 @@ template <class T> struct AbaAlloc
 {
     typedef T value_type;
     typedef T* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef AbaAlloc<U> other;
@@ -11566,7 +11566,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -12733,7 +12733,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -13173,7 +13173,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -13617,7 +13617,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -18681,7 +18681,7 @@ template <class T> struct ContainerAllocator
     typedef const T* const_pointer;
     typedef T& reference;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind
     {
@@ -18996,7 +18996,7 @@ template <> struct PrivateAllocator<FnvBlock16>
 {
     typedef FnvBlock16 value_type;
     typedef FnvBlock16* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     unsigned int state;
     void deallocate(pointer _Ptr, size_type)
     {
@@ -19065,7 +19065,7 @@ struct FnvBadAlloc : FnvException
     virtual ~FnvBadAlloc() throw()
     {}
 };
-extern void* __cdecl operator new(size_t);
+extern void* __cdecl x64_ns_new(size_t);
 
 // src: GUESS 0x0064e430 (confidence: high)
 template <class T> inline T* __cdecl Array_AllocateElements16Checked(unsigned int count, T*)
@@ -20809,7 +20809,7 @@ template <class T> struct Allocator
     typedef const T* const_pointer;
     typedef T& reference;
     typedef const T& const_reference;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef int difference_type;
     template <class U> struct rebind
     {
@@ -20900,7 +20900,7 @@ template <class T, class A> struct WriterVectorVal : ContainerBaseAuxAlloc<A>
 // Unit-local view of Vector for the code in namespace TriWriterRework: built on the shared Vector, that code does not compile or does not match.
 template <class T, class A = Allocator<T> > struct Vector_TriWriterRework : WriterVectorVal<T, A>
 {
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     explicit Vector_TriWriterRework(size_type count) : WriterVectorVal<T, A>()
     {
         ConstructN(count, T());
@@ -21055,7 +21055,7 @@ template <class T> class allocator
   public:
     typedef T value_type;
     typedef T* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef allocator<U> other;
@@ -21105,7 +21105,7 @@ class FUN_0044a4c0 : public StringVal<char, allocator<char> >
     typedef allocator<char> A;
     typedef FUN_0044a4c0 Myt;
     typedef StringVal<E, A> Mybase;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     enum
     {
         BUF_SIZE = 16,
@@ -21600,7 +21600,7 @@ template <class T> class allocator
   public:
     typedef T value_type;
     typedef T* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef allocator<U> other;
@@ -21649,7 +21649,7 @@ template <class E, class Tr, class A> class basic_string : public StringVal<E, A
   public:
     typedef basic_string<E, Tr, A> Myt;
     typedef StringVal<E, A> Mybase;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     enum
     {
         BUF_SIZE = 16,

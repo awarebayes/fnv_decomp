@@ -37,7 +37,7 @@ void hkAgent1nMachine_UpdateShapeCollectionFilter(int b, int a)
     hkAgent1nMachine_VisitAllAgents(b, a, (void*)&ProcessEntryPair);
 }
 
-typedef unsigned int BlockPoolsize_t;
+typedef size_t BlockPoolsize_t;
 
 struct BlockPoolAllocator
 {
@@ -80,7 +80,7 @@ struct BlockPoolBlock
     {
         unk00 = 0;
     }
-    static void* operator new(BlockPoolsize_t, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

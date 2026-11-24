@@ -2555,7 +2555,7 @@ ResObj* ThisC::Actor_ExplodeLimb(void* aeLimbIndex, A2* apOldLimb, A3* aTrans,
     return retValA;
 }
 
-typedef unsigned int size_t_;
+typedef size_t size_t_;
 
 struct RefObj;
 
@@ -3179,7 +3179,7 @@ struct ProcV
 struct NewObj
 {
     char pad[0x3c];
-    static void* operator new(size_t_ n);
+    static void* operator new(size_t n);
     NewObj(int, RefObj*, Actor*, int, int, TESForm*);
     void Actor_IncrementMinorCrimes();
     void Actor_AddFactionMinorCrime(int, int);

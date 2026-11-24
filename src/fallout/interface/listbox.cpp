@@ -1,3 +1,4 @@
+#include <new>
 // HighlightValue_listbox: local type (was include/HighlightValue.h, which had no evidence of one real class); its methods are 0x00a09130 Tile::Value::AddRefValueAction, 0x00a09410 Tile::Value::SetFloat
 #include "../../../include/Tile.h"
 #include "../../../include/BSSimpleArray.h"

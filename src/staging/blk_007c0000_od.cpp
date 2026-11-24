@@ -1,3 +1,4 @@
+#include <new>
 #include "../../include/NiColorA.h"
 
 // src/staging/blk_007c0000_od.cpp - STAGING unit created 2026-10-16 by stage_units.py for functions with no attributed unit

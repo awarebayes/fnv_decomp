@@ -3298,7 +3298,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -4342,7 +4342,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -4842,7 +4842,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -5340,7 +5340,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -5807,7 +5807,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -6218,7 +6218,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -8743,7 +8743,7 @@ template <class _Ty> class allocator : public _Allocator_base<_Ty>
 {
   public:
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     void deallocate(pointer _Ptr, size_type)
     {
         ::operator delete(_Ptr);
@@ -8776,7 +8776,7 @@ template <class _Elem, class _Traits, class _Ax> class basic_string : public _St
 {
   public:
     typedef basic_string<_Elem, _Traits, _Ax> _Myt;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     enum
     {
         _BUF_SIZE = 16 / sizeof(_Elem) < 1 ? 1 : 16 / sizeof(_Elem)
@@ -9301,7 +9301,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -9689,7 +9689,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -10133,7 +10133,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -10578,7 +10578,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -11022,7 +11022,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -11459,7 +11459,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -11847,7 +11847,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -12309,7 +12309,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -12697,7 +12697,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -12920,7 +12920,7 @@ inline typename Tr::char_type* move_s(typename Tr::char_type* d, unsigned n, con
 template <class T> class allocator
 {
   public:
-    typedef unsigned size_type;
+    typedef size_t size_type;
     typedef T* pointer;
     void deallocate(pointer p, size_type)
     {
@@ -12962,7 +12962,7 @@ template <class E, class Tr, class A> class basic_string : public _String_val<E,
 {
   public:
     typedef basic_string _Myt;
-    typedef unsigned size_type;
+    typedef size_t size_type;
     static const size_type npos = (size_type)-1;
     enum
     {
@@ -14074,7 +14074,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -14765,7 +14765,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -15167,7 +15167,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -15523,7 +15523,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -15879,7 +15879,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -17563,7 +17563,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -20813,7 +20813,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -23061,7 +23061,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -25095,7 +25095,7 @@ template <class _Ty> inline void _Destroy(_Ty* _Ptr)
 template <class _Ty> struct allocator
 {
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     void deallocate(pointer _Ptr, size_type)
     {
         ::operator delete(_Ptr);
@@ -27556,7 +27556,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -28074,7 +28074,7 @@ template <class T> class Al : public Ab<T>
 {
   public:
     typedef T* pointer;
-    typedef unsigned size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef Al<U> other;
@@ -28132,7 +28132,7 @@ template <class E> struct Tr
 template <class E, class A> class Str : public Val<E, A>
 {
   public:
-    typedef unsigned size_type;
+    typedef size_t size_type;
     union
     {
         E buf[16];
@@ -28535,7 +28535,7 @@ template <class _Ty> class allocator
 {
   public:
     typedef _Ty value_type;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty* pointer;
     template <class _Other> struct rebind
     {
@@ -28577,7 +28577,7 @@ template <class _Elem, class _Traits, class _Ax> class basic_string : public _St
   public:
     typedef basic_string<_Elem, _Traits, _Ax> _Myt;
     typedef _String_val<_Elem, _Ax> _Mybase;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     static const size_type npos;
     enum
     {
@@ -29036,7 +29036,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -29424,7 +29424,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -29698,7 +29698,7 @@ inline typename _Traits::char_type* move_s(typename _Traits::char_type* _First1,
 template <class _Ty> class allocator
 {
   public:
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class _Other> struct rebind
     {
         typedef allocator<_Other> other;
@@ -30466,7 +30466,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -31934,7 +31934,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -32134,11 +32134,11 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 struct FUN_00ac0530
 {
@@ -32580,7 +32580,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -33085,11 +33085,11 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 struct StrY
 {
@@ -33161,11 +33161,11 @@ struct PoolX
     void MemoryManager_Deallocate(void* apMem);
 };
 extern "C" PoolX g_pool_011f6238;
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 struct FUN_00ac0530
 {
@@ -34913,7 +34913,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -35405,11 +35405,11 @@ namespace fnv_00ad60c0 {
 extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 extern "C" void __cdecl _invalid_parameter_noinfo();
-inline void* __cdecl operator new(size_t, void* p)
+inline void* __cdecl x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void __cdecl operator delete(void*, void*)
+inline void __cdecl x64_ns_delete(void*, void*)
 {}
 namespace staging_std {
 class exception
@@ -35512,7 +35512,7 @@ template <class T> class allocator : public _Allocator_base<T>
     typedef T& reference;
     typedef const T& const_reference;
     typedef int difference_type;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     template <class U> struct rebind
     {
         typedef allocator<U> other;
@@ -35855,7 +35855,7 @@ template <class T, class Al = allocator<T> > class vector : public _Vector_val<T
 {
   public:
     typedef T* pointer;
-    typedef unsigned size_type;
+    typedef size_t size_type;
     typedef _Vector_iterator<T, Al> iterator;
     typedef _Vector_const_iterator<T, Al> const_iterator;
     pointer _Myfirst, _Mylast, _Myend;
@@ -35990,11 +35990,11 @@ namespace fnv_00ad61e0 {
 extern "C" size_t __cdecl strlen(const char*);
 extern "C" int __cdecl memcpy_s(void*, size_t, const void*, size_t);
 // VS2008 vector<string> assignment and its inline library helpers.
-inline void* __cdecl operator new(size_t, void* _Where)
+inline void* __cdecl x64_ns_new(size_t, void* _Where)
 {
     return _Where;
 }
-inline void __cdecl operator delete(void*, void*)
+inline void __cdecl x64_ns_delete(void*, void*)
 {}
 namespace staging_std {
 class exception
@@ -36110,7 +36110,7 @@ template <class _Ty> class allocator : public _Allocator_base<_Ty>
     typedef _Ty& reference;
     typedef const _Ty& const_reference;
     typedef int difference_type;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     void deallocate(pointer _Ptr, size_type)
     {
         ::operator delete(_Ptr);
@@ -36757,7 +36757,7 @@ template <class _Ty, class _Ax = allocator<_Ty> > class vector : public _Vector_
     _Ty* _Mylast;
     _Ty* _Myend;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     size_type size() const
     {
         return (_Mylast - _Myfirst);
@@ -37244,7 +37244,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -37737,11 +37737,11 @@ String* __cdecl Runtime_EvaluateValue_00ad6690(String* _First, String* _Last, St
 
 namespace fnv_00ad6e20 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 inline void FreeQ(void* p)
 {
@@ -40927,7 +40927,7 @@ inline void __cdecl S5540_Free(void* p)
 {
     ((GvHeap*)&DAT_011f6238)->MemoryManager_Deallocate(p);
 }
-inline void __cdecl operator delete(void* p)
+inline void __cdecl x64_ns_delete(void* p)
 {
     ((GvHeap*)&DAT_011f6238)->MemoryManager_Deallocate(p);
 }
@@ -42504,7 +42504,7 @@ template <class _Ty> class allocator
     {}
     typedef _Ty value_type;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     void deallocate(pointer _Ptr, size_type)
     {
         ::operator delete(_Ptr);
@@ -42718,7 +42718,7 @@ template <class _Elem, class _Traits, class _Ax> class InsertStringStorage : pub
     {
         _Tidy(true);
     }
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     enum
     {
         _BUF_SIZE = 16 / sizeof(_Elem) < 1 ? 1 : 16 / sizeof(_Elem)
@@ -42896,7 +42896,7 @@ template <class _Ty, class _Alloc> class Vector_s1c10 : public VectorVal<_Ty, _A
 {
   public:
     typedef _Alloc _Alty;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty* pointer;
     typedef ConstIter<_Ty> const_iterator;
 
@@ -45667,7 +45667,7 @@ class StringVectorStorage : public rstd::_Container_base_aux_alloc_real<rstd::al
 {
     typedef rstd::_Vector_val<rstd::string, rstd::allocator<rstd::string> > Storage;
     typedef rstd::string* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef rstd::_Vector_const_iterator<rstd::string, rstd::allocator<rstd::string> > const_iterator;
 
   protected:

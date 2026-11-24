@@ -5006,7 +5006,7 @@ enum TR1{ KS=0,KF=1} ;
 typedef unsigned __int64 TU64;
 typedef __int64 TI64;
 typedef long TST2;
-typedef unsigned __w64 TS4;
+typedef size_t TS4;
 typedef TU16 TOI;
 typedef TR TT;
 __forceinline TL __cdecl TGBO(const void*base,const void*pntr)throw(){ return TL(pntr)-TL(base);
@@ -5130,7 +5130,7 @@ public:__forceinline TYPE*val()const throw(); __forceinline operator TYPE*()cons
 ;
 template<class TYPE>__forceinline TYPE*TRP<TYPE>::val()const throw(){ return vp4; }
 struct TPNA;
-inline void*operator new(TS4,TPNA*p){ return p; }
+inline void*operator new(size_t,TPNA*p){ return p; }
 template<bool N>struct TTB{ typedef TTB<N>type; enum{ result=N}
 ; } ;
 typedef TTB<true>TTIP;

@@ -7498,7 +7498,7 @@ C55010Obj* BSBound_CreateObject()
 
 #pragma function(memcpy)
 namespace fnv_00c5f390 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -15715,7 +15715,7 @@ extern unsigned int DAT_011af714[];
 extern char DAT_010c1ad4[];
 extern int DAT_010c1af0[];
 int __cdecl BSsprintf(char*, unsigned int, const char*, ...);
-__forceinline void* operator new[](size_t size)
+__forceinline void* x64_ns_new_array(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
@@ -15874,7 +15874,7 @@ void OwnerC44::BSParallelTaskManager_dtor()
 }
 
 namespace fnv_00c45b20 {
-__forceinline void* operator new[](size_t size)
+__forceinline void* x64_ns_new_array(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
@@ -16822,7 +16822,7 @@ inline float TrigSin(float a)
 }
 
 
-__forceinline void* operator new[](size_t n)
+__forceinline void* x64_ns_new_array(size_t n)
 {
     return g_memoryManager.Allocate(n);
 }
@@ -17039,7 +17039,7 @@ struct MeshAllocator
     void* Allocate(unsigned int);
 };
 extern MeshAllocator meshMemory;
-__forceinline void* operator new[](size_t n)
+__forceinline void* x64_ns_new_array(size_t n)
 {
     return meshMemory.Allocate(n);
 }
@@ -17371,7 +17371,7 @@ __forceinline float CircleTrigB(float a)
 {
     return (double)(float)sin(a);
 }
-__forceinline void* operator new[](size_t size)
+__forceinline void* x64_ns_new_array(size_t size)
 {
     return ((FUN_00aa3e40_alloc*)&DAT_011f6238)->Game_DoHeapAlloc(size);
 }
@@ -17422,7 +17422,7 @@ struct Color4
     Color4() : r(0), g(0), b(0), a(0)
     {}
 };
-__forceinline void* operator new[](size_t size)
+__forceinline void* x64_ns_new_array(size_t size)
 {
     return g_memoryManager.Allocate(size);
 }
@@ -19629,11 +19629,11 @@ struct C42Node
         c42heap.MemoryManager_Deallocate(p);
     }
 };
-inline void* operator new[](size_t n)
+inline void* x64_ns_new_array(size_t n)
 {
     return c42heap.Game_DoHeapAlloc(n);
 }
-inline void operator delete[](void* p)
+inline void x64_ns_delete_array(void* p)
 {
     c42heap.MemoryManager_Deallocate(p);
 }

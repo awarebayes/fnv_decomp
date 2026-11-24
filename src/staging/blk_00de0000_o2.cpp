@@ -6820,7 +6820,7 @@ int* __cdecl Runtime_GetDAT0126d418Address()
 }
 
 namespace fnv_00dff3e0 {
-inline void* operator new(size_t, void* where) throw()
+inline void* x64_ns_new(size_t, void* where) throw()
 {
     return where;
 }
@@ -7461,7 +7461,7 @@ struct SpawnedDerived : SpawnedObject
     {}
 };
 
-inline void* operator new(size_t, void* where)
+inline void* x64_ns_new(size_t, void* where)
 {
     return where;
 }

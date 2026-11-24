@@ -2304,7 +2304,7 @@ struct IconSetting {
 };
 extern IconSetting g_011f3368;
 void __cdecl Tile_GetTextureAtlasInfo(const char*, const char*, BSStringT<char>*, IconRect*);
-void* operator new(size_t, void* address) { return address; }
+void* x64_ns_new(size_t, void* address) { return address; }
 struct IconArray {
     void** vtable;
     IconData* data;

@@ -1,3 +1,4 @@
+#include <new>
 #include "../../../../include/SettingT.h"
 #include "../../../../include/CombatState.h"
 #include "../../../../include/CombatManager.h"

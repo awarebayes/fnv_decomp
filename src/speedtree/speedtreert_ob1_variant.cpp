@@ -2213,11 +2213,11 @@ struct TreeHeapQ
     void MemoryManager_Deallocate(void*);
 };
 extern TreeHeapQ DAT_011f6238;
-inline void* operator new[](size_t n)
+inline void* x64_ns_new_array(size_t n)
 {
     return DAT_011f6238.Game_DoHeapAlloc(n);
 }
-inline void operator delete[](void* p)
+inline void x64_ns_delete_array(void* p)
 {
     DAT_011f6238.MemoryManager_Deallocate(p);
 }
@@ -5243,12 +5243,12 @@ class ExceptionB07
 
 extern MemoryManager g_kMemoryManagerB07;
 
-inline void* operator new[](size_t uiSize)
+inline void* x64_ns_new_array(size_t uiSize)
 {
     return g_kMemoryManagerB07.Allocate(uiSize);
 }
 
-inline void operator delete[](void* pvMem)
+inline void x64_ns_delete_array(void* pvMem)
 {
     g_kMemoryManagerB07.Deallocate(pvMem);
 }
@@ -5863,7 +5863,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -8235,7 +8235,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -9799,7 +9799,7 @@ struct Pool
     void* Game_DoHeapAlloc(unsigned n);
 };
 extern Pool DAT_011f6238;
-inline void* __cdecl operator new[](size_t n)
+inline void* __cdecl x64_ns_new_array(size_t n)
 {
     return DAT_011f6238.Game_DoHeapAlloc(n);
 }
@@ -10281,7 +10281,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -10709,7 +10709,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -11050,7 +11050,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -12032,7 +12032,7 @@ struct HeapQ
     void* Game_DoHeapAlloc(size_t n);
 };
 extern HeapQ DAT_011f6238;
-inline void* operator new[](size_t n)
+inline void* x64_ns_new_array(size_t n)
 {
     return DAT_011f6238.Game_DoHeapAlloc(n);
 }
@@ -14954,7 +14954,7 @@ class ExceptionB07
 
 extern MemoryManager g_kMemoryManagerD04;
 
-inline void* operator new[](size_t uiSize)
+inline void* x64_ns_new_array(size_t uiSize)
 {
     return g_kMemoryManagerD04.Allocate(uiSize);
 }

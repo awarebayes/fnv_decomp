@@ -81,7 +81,7 @@ template <class T> class InsertVector : public std::_Vector_val<T, std::allocato
 {
   public:
     typedef std::vector<T> V;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef T* pointer;
     typedef T value_type;
     typedef typename V::const_iterator const_iterator;

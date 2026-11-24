@@ -4732,7 +4732,7 @@ struct CopyEntry {
     CopyEntry& operator=(const CopyEntry& other) { m_00 = other.m_00; m_04.UpdateState_00cb0c30(&other.m_04); return *this; }
     ~CopyEntry() { m_04.Object_UpdateFields_00cb0c00(); }
 };
-inline void* operator new(size_t, void* p) { return p; }
+inline void* x64_ns_new(size_t, void* p) { return p; }
 struct CopyAllocator { int m_00, m_04, m_08, m_0c; void* m_10; };
 CopyAllocator* __cdecl hkMemoryRouter_getInstance();
 void __cdecl hkArrayUtil__reserve(void*, void*, int, int);

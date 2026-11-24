@@ -4717,7 +4717,7 @@ extern int DAT_011dea3c;
 extern bool __cdecl BGSDestructibleObjectForm_IsDestructible(void*);
 extern void __cdecl RecursiveSetPropertyFadeAlpha(unsigned int, float);
 
-extern void* __cdecl operator new(size_t);
+extern void* __cdecl x64_ns_new(size_t);
 struct ActionConsumer
 {
     void MarkGeometryDataMutable(ActionObject*);

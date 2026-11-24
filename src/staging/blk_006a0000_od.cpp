@@ -1,3 +1,4 @@
+#include <new>
 #include "../../include/NavMeshTriangle.h"
 #include "../../include/NiColorA.h"
 #include "../../include/NiPoint3.h"
@@ -8013,11 +8014,11 @@ bool PathTriangleCheck::NavMeshObstacleCutter_CheckTriangleAgainstObstacle(Local
 }
 
 namespace fnv_006bf3c0 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 
 class FUN_006bf3c0_cls

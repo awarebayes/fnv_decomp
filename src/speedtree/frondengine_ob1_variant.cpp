@@ -1195,7 +1195,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -2894,7 +2894,7 @@ VecQ& VecQ::UpdateState_00b1d130(const VecQ& _Right)
 }
 
 namespace fnv_00b1d8a0 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace vct1d8a0 {
 void FUN_00ec7c56();
@@ -4099,7 +4099,7 @@ void __thiscall FUN_00b1df10_obj::UpdateState_00b1df10()
 }
 
 namespace fnv_00b1e090 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace ctoraca {
 void FUN_00ec7c56();
@@ -5425,7 +5425,7 @@ void VcVector::ClearAllElements()
 }
 
 namespace fnv_00b1e3e0 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace vct1e3e0 {
 void FUN_00ec7c56();
@@ -9518,7 +9518,7 @@ void VecQ::InsertFilledElements_00b20360(CItQ _Where, unsigned _Count, const ElQ
 }  // namespace fnv_00b20360
 
 namespace fnv_00b20ba0 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace auxb20b {
 void FUN_00ec7c56();
@@ -11911,7 +11911,7 @@ FUN_00b23520_It& FUN_00b23520_It::ProcessAndReturnValue_00b23520(int _Off)
 }
 
 namespace fnv_00b23760 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace cpyb237 {
 void FUN_00ec7c56();
@@ -13225,7 +13225,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -13379,7 +13379,7 @@ EUMB* __cdecl Frondengine_EvaluateValue_00b23930(EUMB* _First, EUMB* _Last, EUMB
 }  // namespace fnv_00b23930
 
 namespace fnv_00b239e0 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace cbkb239 {
 template <class T> inline void swap(T& _Left, T& _Right)
@@ -14917,7 +14917,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -15281,7 +15281,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -15669,7 +15669,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -16057,7 +16057,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -16532,7 +16532,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -17704,7 +17704,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -18145,7 +18145,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -18591,7 +18591,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -18669,7 +18669,7 @@ Elem64a0* __cdecl Object_ProcessAndReturnValue_00b264a0(Elem64a0* _First, Elem64
 }  // namespace fnv_00b264a0
 
 namespace fnv_00b26ab0 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace swapb26a {
 void FUN_00ec7c56();
@@ -19706,7 +19706,7 @@ void __cdecl Frondengine_ProcessEntries_00b26b50(SFrondGuideEntry* first, int ho
 }
 
 namespace fnv_00b26ce0 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace cbkb26c {
 void FUN_00ec7c56();
@@ -20634,7 +20634,7 @@ ElQ* Frondengine_ProcessEntries_00b26db0(ElQ* first, ElQ* last, ElQ* dest)
 }  // namespace fnv_00b26db0
 
 namespace fnv_00b26e80 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace pushb26e {
 void FUN_00ec7c56();
@@ -21520,7 +21520,7 @@ void Object_ProcessEntries_00b26e80(GvElem* _First, int _Hole, int _Top, GvElem 
 }  // namespace fnv_00b26e80
 
 namespace fnv_00b26f90 {
-inline void operator delete(void*, void*) throw()
+inline void x64_ns_delete(void*, void*) throw()
 {}
 namespace popb26f {
 void FUN_00ec7c56();
@@ -23787,7 +23787,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -24819,7 +24819,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -25405,7 +25405,7 @@ SA4830* __cdecl Object_ProcessAndReturnValue_00b23b00(SA4830* _First, SA4830* _L
 
 namespace fnv_00b24180 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -25466,7 +25466,7 @@ void Object_ConstructFilledRange(ElemQ* first, unsigned int n, const ElemQ& val)
 
 namespace fnv_00b243a0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -25518,7 +25518,7 @@ void Object_ProcessEntries_00b243a0(FUN_00b22f80* first, unsigned int n, const F
 
 namespace fnv_00b24580 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -25951,7 +25951,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -26825,7 +26825,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -27325,7 +27325,7 @@ E48C0* __cdecl Object_ProcessAndReturnValue_00b248c0(E48C0* _First, E48C0* _Last
 
 namespace fnv_00b25ba0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -27378,7 +27378,7 @@ FUN_00b22f80* Object_ProcessEntries_00b25ba0(FUN_00b22f80* first, FUN_00b22f80* 
 
 namespace fnv_00b25ca0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -27455,7 +27455,7 @@ ElemQ* Object_ProcessEntries_00b25ca0(ElemQ* first, ElemQ* last, ElemQ* dest)
 
 namespace fnv_00b25e20 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
@@ -27532,7 +27532,7 @@ ElemQ* Object_ProcessEntries_00b25e20(ElemQ* first, ElemQ* last, ElemQ* dest)
 
 namespace fnv_00b25fa0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }

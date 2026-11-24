@@ -3314,8 +3314,8 @@ struct RenderGlobals
 extern RenderGlobals* DAT_011de45c;
 extern float DAT_01015f5c;
 extern double DAT_010240b0;
-extern void* __cdecl operator new(size_t);
-extern void __cdecl operator delete(void*);
+extern void* __cdecl x64_ns_new(size_t);
+extern void __cdecl x64_ns_delete(void*);
 extern Resource* __cdecl FindFirstCollisionObject(void*);
 extern int __cdecl bhkCollisionFilter_GetNewSystemGroup();
 extern bool __cdecl Main_GetSceneIsComplex();

@@ -1,3 +1,4 @@
+#include <new>
 #include "../../../include/NavMeshTriangle.h"
 #include "../../../include/NavMeshInfo.h"
 #include "../../../include/BSSimpleArray.h"

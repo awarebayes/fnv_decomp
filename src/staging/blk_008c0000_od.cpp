@@ -1,3 +1,4 @@
+#include <new>
 // Distinct original implementations share reconstructed identifiers.
 // Keep each matched body under its own address-qualified name.
 #define SetTaskFlag SetTaskFlag_fnv_008d6f10

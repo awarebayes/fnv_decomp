@@ -8,7 +8,7 @@
 #include "../../../../../include/hkBool.h"
 
 
-typedef unsigned int C68E30size_t;
+typedef size_t C68E30size_t;
 
 inline hkMemoryAllocator& GetAudioAllocator(hkMemoryRouter& holder)
 {
@@ -47,7 +47,7 @@ struct C68E30Pair
     C68E30Listener* m_kListener;
     int m_uiFilterValue;
 
-    static void* operator new(C68E30size_t, void* p) throw()
+    static void* operator new(size_t, void* p) throw()
     {
         return p;
     }

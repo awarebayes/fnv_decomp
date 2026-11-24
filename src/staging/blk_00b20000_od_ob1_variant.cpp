@@ -3940,7 +3940,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -7726,11 +7726,11 @@ asgnb36::AsVector* __cdecl Object_ProcessAndReturnValue_00b35f60(asgnb36::AsVect
 
 namespace fnv_00b361b0 {
 void FormHeapFreeAndLog_00401030(void* p);
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 inline void FreeQ(void* p)
 {
@@ -7788,11 +7788,11 @@ void Runtime_ProcessEntries_00b361b0(ElemQ* first, unsigned int n, const ElemQ& 
 }  // namespace fnv_00b361b0
 
 namespace fnv_00b368d0 {
-inline void* __cdecl operator new(size_t, void* p) throw()
+inline void* __cdecl x64_ns_new(size_t, void* p) throw()
 {
     return p;
 }
-inline void __cdecl operator delete(void*, void*) throw()
+inline void __cdecl x64_ns_delete(void*, void*) throw()
 {}
 void __cdecl FormHeapFreeAndLog_00401030(void* p);
 struct S00b368d0_Buf
@@ -7865,11 +7865,11 @@ S00b368d0_Elem* __cdecl Runtime_ProcessEntries_00b368d0(S00b368d0_Elem* first, S
 }  // namespace fnv_00b368d0
 
 namespace fnv_00b369f0 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 inline void FreeQ(void* p)
 {
@@ -7953,11 +7953,11 @@ ElemQ* __cdecl Runtime_ProcessEntries_00b369f0(ElemQ* first, ElemQ* last, ElemQ*
 }  // namespace fnv_00b369f0
 
 namespace fnv_00b36bf0 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 inline void FreeQ(void* p)
 {
@@ -8046,11 +8046,11 @@ ElemQ* __cdecl Runtime_ProcessEntries_00b36bf0(ElemQ* first, ElemQ* last, ElemQ*
 }  // namespace fnv_00b36bf0
 
 namespace fnv_00b36d70 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 inline void FreeQ(void* p)
 {
@@ -9504,7 +9504,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -9868,7 +9868,7 @@ template <class _Ty> class vectorS : public _Vector_valS<_Ty>
     typedef _Vector_iteratorS<_Ty> iterator;
     typedef _Vector_const_iteratorS<_Ty> const_iterator;
     typedef _Ty* pointer;
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef _Ty& reference;
     size_type size() const
     {
@@ -10391,11 +10391,11 @@ record_model::FUN_00b2e680* __cdecl Object_ProcessAndReturnValue_00b3e520(record
 }  // namespace fnv_00b3e520
 
 namespace fnv_00b3e5b0 {
-inline void* operator new(size_t, void* p)
+inline void* x64_ns_new(size_t, void* p)
 {
     return p;
 }
-inline void operator delete(void*, void*)
+inline void x64_ns_delete(void*, void*)
 {}
 struct StrQ
 {
@@ -17685,7 +17685,7 @@ struct ProxyStorage
 };
 struct InsertCountVector : ProxyStorage
 {
-    typedef unsigned int size_type;
+    typedef size_t size_type;
     typedef Element value_type;
     typedef Element* pointer;
     typedef Iterator const_iterator;

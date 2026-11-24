@@ -2403,11 +2403,11 @@ extern MemMgrStand g_arcMemMgr;
 extern int DAT_011ace04;
 extern int DAT_010a2480;
 
-inline void* operator new[](size_t auiSize)
+inline void* x64_ns_new_array(size_t auiSize)
 {
     return g_arcMemMgr.Allocate(auiSize);
 }
-inline void operator delete[](void* apMem)
+inline void x64_ns_delete_array(void* apMem)
 {
     g_arcMemMgr.Deallocate(apMem);
 }
@@ -4587,7 +4587,7 @@ bool __cdecl ArchiveManager_GetFileNameForFileEntry(unsigned int aeArchiveTypeIn
 
 namespace fnv_00af7060 {
 extern MemoryManager _g_memoryManager;
-inline void* __cdecl operator new[](size_t n)
+inline void* __cdecl x64_ns_new_array(size_t n)
 {
     return _g_memoryManager.Allocate(n);
 }
