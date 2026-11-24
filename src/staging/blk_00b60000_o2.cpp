@@ -1,3 +1,6 @@
+extern "C" unsigned __int64 __readgsqword(unsigned long);
+// fs:[0x2c] is the thread-local-storage array on x86; on x64 it is gs:[0x58].
+#define __readfsdword(offset) ((size_t)__readgsqword(0x58))
 
 // src/staging/blk_00b60000_o2.cpp - STAGING unit created 2026-10-16 by stage_units.py for functions with no attributed unit
 // (128 KB address window, o2 code style). Not a real source path: move functions to their real units once identified.

@@ -11,8 +11,5 @@
 // (forcing that header in conflicts with their own declarations).
 extern "C" long _InterlockedIncrement(long volatile*);
 extern "C" long _InterlockedDecrement(long volatile*);
-extern "C" unsigned __int64 __readgsqword(unsigned long);
-// fs:[0x2c] is the thread-local-storage array on x86; on x64 it is gs:[0x58].
-#define __readfsdword(offset) ((size_t)__readgsqword(0x58))
 #endif
 #endif

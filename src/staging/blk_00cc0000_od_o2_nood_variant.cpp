@@ -1,3 +1,6 @@
+extern "C" unsigned __int64 __readgsqword(unsigned long);
+// fs:[0x2c] is the thread-local-storage array on x86; on x64 it is gs:[0x58].
+#define __readfsdword(offset) ((size_t)__readgsqword(0x58))
 #define FNV64_HKVECTOR4_OWN_ADD4_consthkVector4   // this unit keeps the out-of-line hkVector4 form
 #define FNV64_HKVECTOR4_OWN_ADDMUL4_consthkVector4_consthkVector4   // this unit keeps the out-of-line hkVector4 form
 #define FNV64_HKVECTOR4_OWN_MUL4_consthkSimdReal   // this unit keeps the out-of-line hkVector4 form

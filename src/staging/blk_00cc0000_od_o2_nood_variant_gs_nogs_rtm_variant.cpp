@@ -1,3 +1,6 @@
+extern "C" unsigned __int64 __readgsqword(unsigned long);
+// fs:[0x2c] is the thread-local-storage array on x86; on x64 it is gs:[0x58].
+#define __readfsdword(offset) ((size_t)__readgsqword(0x58))
 #define FNV64_HKVECTOR4_OWN_ASSIGN   // this unit defines its own hkVector4 assign form
 #define FNV64_HKVECTOR4_OWN_COPY   // this unit defines its own hkVector4 copy form
 // src/staging/blk_00cc0000_od_o2_nood_variant_gs_nogs_rtm_variant.cpp - variant unit created 2026-11-01 by rtm_route.py: community reworks of src/staging/blk_00cc0000_od_o2_nood_variant.cpp that match byte for byte only
